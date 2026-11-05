@@ -83,7 +83,6 @@ describe('submitting a claim', () => {
       const { state, submit } = useInvestigation(source)
       return (
         <Home
-          canSubmit
           submitting={state.submitting}
           error={state.error}
           recordings={[]}

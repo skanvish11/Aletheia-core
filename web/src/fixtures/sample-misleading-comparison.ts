@@ -27,6 +27,7 @@ export const sampleMisleadingComparison: Recording = {
     finished_at: t(41),
     clarification_questions: null,
     error: null,
+    links: { self: `/investigations/${id}` },
     result: {
       overall_verdict: 'supported',
       summary: [

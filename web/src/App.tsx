@@ -1,4 +1,5 @@
 import { dataSource } from './api/source'
+import { unavailableReason, useBackendStatus } from './api/useBackendStatus'
 import { useInvestigation } from './api/useInvestigation'
 import { Home } from './components/Home'
 import { Report } from './components/Report'
@@ -7,6 +8,7 @@ const replay = dataSource.kind === 'replay'
 
 export default function App() {
   const { state, open, submit, retryLoad, close } = useInvestigation(dataSource)
+  const backend = useBackendStatus(dataSource)
   const { investigation, evidence, events, submitting, researchDone, finished, loadError, error } = state
   const recording = dataSource.recordings.find((r) => r.investigation.id === investigation?.id)
   const showingSample = recording ? recording.sample : dataSource.recordings.some((r) => r.sample)
@@ -53,7 +55,7 @@ export default function App() {
           </>
         ) : (
           <Home
-            canSubmit={dataSource.canSubmit}
+            unavailableReason={unavailableReason(backend)}
             submitting={submitting}
             error={error}
             recordings={dataSource.recordings}
