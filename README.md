@@ -25,36 +25,48 @@ V1 is a local, single-user Python backend. It excludes a frontend, user accounts
 
 ## 2. System design
 
+Read the design in three views: **which parts communicate** below, **the order of research steps** in section 3, and **one search request in detail** after that pipeline. A service connection is not a research step.
+
+### What each part means
+
+| Part | Plain-language responsibility |
+| --- | --- |
+| API | Accept a claim and return saved results or progress to the client. |
+| Background worker | Pick up a queued investigation and run it without making the client wait for one long request. |
+| Pipeline controller (`orchestrator.py`) | Decide which step runs next, enforce limits, and record what happened. |
+| Research steps | Understand the claim, choose research depth, plan queries, gather sources, check evidence, and build the result. |
+| Nebius connection (`providers/nebius.py`) | Send a task's instructions to the selected model and return its response. This connection code is also called an **adapter**. |
+| Model hosted on Nebius | Interpret the supplied claim or evidence and propose the structured output requested by that step. |
+| Tavily connection (`providers/tavily.py`) | Send approved search queries or page-extraction requests to Tavily and return the results. |
+| SQLite storage | Keep investigations, evidence, results, and ordered progress events so they can be retrieved later. |
+
+**Quick and deep are settings on the same pipeline**, not two agents or services. They change the research instructions, evidence requirements, and budget. **The Nebius connection is shared plumbing**, not another investigator: the planning module owns planning instructions; the hosted model proposes queries; Python validates them; Tavily executes them.
+
+### Which parts communicate
+
+This is a component diagram. Its labeled arrows describe requests and stored information, not chronological research steps. External services are shown separately from code we build.
+
 ```mermaid
 flowchart TD
-    Client[API client or future UI] --> API[FastAPI request layer]
-    API --> Lookup{Exact claim and context match?}
-    Lookup -->|Existing investigation| Saved[Return saved result or current status]
-    Lookup -->|New claim| Queue[Persist queued investigation]
-    API -->|Explicit research again| Refresh[Create linked version]
-    Refresh --> Queue
-    Queue --> Worker[Single background worker]
-    Worker --> Runner[Pipeline orchestrator]
-    Runner --> Claims[Interpret claim and select route]
-    Claims --> Research[Plan searches and gather evidence]
-    Research --> Verify[Check passages and claim support]
-    Verify -->|Evidence gap and budget remains| Research
-    Verify --> Verdict[Build and validate verdict]
-    Verdict --> Compare[Compare with prior version if present]
-    Compare --> Result[Persist final result]
-    Claims -.-> Nebius[Nebius inference adapter]
-    Research -.-> Nebius
-    Verify -.-> Nebius
-    Verdict -.-> Nebius
-    Research --> Tavily[Tavily search and extraction adapter]
-    Tavily --> Web[Public web sources]
-    Runner --> DB[(SQLite: runs, evidence, calls, events)]
-    Result --> DB
-    Saved --> DB
-    API --> DB
-    DB --> Events[Persisted event stream]
-    Events -->|Server-Sent Events| Client
+    Client["API client or future UI"] <-->|"Requests, results and progress"| API["FastAPI request layer"]
+    subgraph App["Our Python backend"]
+        API -->|"New investigation or explicit refresh"| Worker["Background worker"]
+        Worker -->|"Start investigation"| Controller["Pipeline controller"]
+        Controller -->|"Run the next permitted step"| Steps["Research step modules"]
+        Steps -->|"Instructions and response schema"| NC["Nebius connection code"]
+        Steps -->|"Approved queries or selected URLs"| TC["Tavily connection code"]
+        API <-->|"Read saved runs and events; enqueue work"| DB[("SQLite storage")]
+        Controller -->|"Save findings, results and events"| DB
+    end
+    subgraph Services["External services"]
+        Model["Selected model hosted on Nebius"]
+        Tavily["Tavily web search and extraction"]
+    end
+    NC <-->|"Model request and structured response"| Model
+    TC <-->|"Search or extraction request and response"| Tavily
 ```
+
+The connections return responses to the calling step; they never advance the pipeline themselves. Viewing a saved investigation uses only the API and database. Progress streams replay stored events through the API. Provider calls happen only inside a newly queued investigation or an explicit refresh.
 
 **Control boundary:** Python decides which steps may execute, validates data, enforces budgets, persists results, and calls providers. The model proposes queries and interprets evidence through narrow typed contracts. It cannot call arbitrary tools, write database rows, invent source URLs, or choose an unlimited loop.
 
@@ -62,31 +74,85 @@ flowchart TD
 
 **Dependencies:** FastAPI, Pydantic, SQLite with an async access layer, an HTTP client or verified provider SDKs, runtime dotenv loading, and pytest. Prefer explicit Python orchestration over adding an agent framework. Choose compatible versions during implementation and lock them.
 
-## 3. Request lifecycle
+## 3. Research pipeline and request lifecycle
+
+This flow starts only after a new investigation is queued. Both research depths follow these same steps. Each box states the work being done; there is no separate adapter branch competing with the planner.
 
 ```mermaid
 flowchart TD
-    Q[Queued] --> I[Interpret claim]
-    I -->|Material ambiguity| N[Needs clarification: stop]
-    I --> R{Research route}
-    R -->|Direct record can settle it| Quick[Quick check]
-    R -->|Interpretation or consequential claim| Deep[Deeper research]
-    Quick --> E[Collect and verify evidence]
-    Deep --> E
-    E --> G{Research gate}
-    G -->|Quick path needs more work| Deep
-    G -->|Specific gap and budget available| F[Follow-up search]
-    F --> E
-    G -->|Enough evidence or no useful search remains| V[Produce verdict]
-    G -->|Research budget exhausted| P[Finalize partial result if possible]
-    P --> V
-    V --> C[Compare with prior investigation]
-    C -->|Same evidence, different verdict| Review[One bounded recheck]
-    Review --> End[Complete or partial]
-    C -->|No unexplained inconsistency| End
-    I -.->|Unrecoverable error| Fail[Failed: no factual verdict]
-    E -.->|Cannot produce usable result| Fail
+    Start["Start queued investigation"] --> Understand["1. Understand the claim and its scope"]
+    Understand -->|"Material ambiguity"| Clarify["Ask for clarification and stop"]
+    Understand -->|"Scope is clear"| Route["2. Set quick or deep research requirements"]
+    Route --> Plan["3. Ask the model to propose search queries"]
+    Plan --> Validate["4. Python validates queries and checks budget"]
+    Validate --> Search["5. Execute approved searches through Tavily"]
+    Search --> Extract["6. Select pages, extract text and store sources"]
+    Extract --> Verify["7. Check quotations and assess claim support"]
+    Verify --> Gate{"8. Does the evidence need more investigation?"}
+    Gate -->|"Specific gap and budget remains"| Followup["Name the gap; escalate quick to deep if needed"]
+    Followup --> Plan
+    Gate -->|"Enough evidence or no useful next search"| Verdict["9. Build and validate an evidence-linked verdict"]
+    Gate -->|"Research budget reached"| Partial["Mark incomplete; use reserved finalization capacity"]
+    Partial --> Verdict
+    Verdict --> Compare["10. Compare with an earlier version if present"]
+    Compare -->|"Unchanged evidence but different verdict"| Recheck["One bounded consistency review"]
+    Recheck --> Save["11. Save result and terminal event"]
+    Compare -->|"No unexplained inconsistency or no baseline"| Save
 ```
+
+The controller checks errors and remaining budget at **every** step, including before each provider attempt. Invalid query plans get the bounded repair policy rather than proceeding to search. If work cannot continue, save a validated partial result where possible or fail with no final factual verdict. The diagram shows the normal and evidence-gap paths; these error rules apply to all boxes. Reaching the hard deadline starts no additional model calls, including finalization or consistency review.
+
+### Who owns each step, and what it produces
+
+| Step | Owner and use of the model | Output passed to the next step |
+| --- | --- | --- |
+| 1. Understand | `claims.py` asks the model to interpret the claim; Python validates the reply. | Scoped assertions, ambiguity questions, and claim characteristics. |
+| 2. Choose depth | `claims.py` applies routing policy to the interpreted characteristics and model recommendation. | Quick/deep route, evidence requirements, budget profile, and a short explanation. |
+| 3. Plan | `planning.py` prepares instructions and asks the model for queries through the Nebius connection. | A candidate `SearchPlan`: query text, assertion ID, and search purpose. |
+| 4. Validate | `planning.py` checks structure, assertion IDs, allowed purposes, and duplicate queries; the controller checks budget. | An approved `SearchPlan`, or a repair/failure outcome. |
+| 5. Search | `research.py` sends approved queries through the Tavily connection. No model is needed to execute a query. | Search results with URLs, titles, snippets, and per-query outcomes. |
+| 6. Collect | `research.py` selects pages under the declared relevance and page-limit rules; Tavily extracts them; `evidence.py` stores and deduplicates snapshots. | Retrieved text, source metadata, stable IDs, and extraction limitations. |
+| 7. Check | `verification.py` checks quotations/references in Python and asks the model to assess exact-claim support and source limitations. | Validated evidence assessments: support, contradiction, context, or irrelevance. |
+| 8. Continue or stop | `orchestrator.py` evaluates the assessments and budgets; `planning.py` can turn a named gap into a proposed follow-up. | Stop, one-way escalation to deep, or another bounded search round. |
+| 9. Conclude | `verdicts.py` applies the verdict policy, asks the model for a cited explanation, and validates that explanation. | Assertion findings, overall verdict, citations, conflicts, and limitations. |
+| 10. Compare | `comparison.py` compares stored evidence and findings; the controller can request one model-assisted consistency review. | Version differences and any unresolved inconsistency. |
+| 11. Save | `storage.py` atomically persists the final result, status, and terminal event. | A retrievable investigation and a completed progress stream. |
+
+### One search request, end to end
+
+The Nebius adapter forwards instructions; the model proposes the queries. The search executor sends only approved queries to Tavily. In this sequence diagram, solid arrows are requests and dashed arrows are returned data.
+
+```mermaid
+sequenceDiagram
+    participant Controller as Pipeline controller
+    participant Planner as Search planner
+    participant NC as Nebius connection
+    participant Model as Model on Nebius
+    participant Executor as Search executor
+    participant TC as Tavily connection
+    participant Tavily as Tavily service
+    Controller->>Planner: Claim, route, evidence gaps and remaining limits
+    Planner->>NC: Claim, route, gaps and required response schema
+    NC->>Model: Send model request
+    Model-->>NC: Proposed queries with assertion IDs and purposes
+    NC-->>Planner: Parsed response or typed error
+    Planner->>Planner: Validate query structure and task rules
+    Planner-->>Controller: Validated query plan
+    Controller->>Controller: Check budget before execution
+    Controller->>Executor: Approved queries
+    Executor->>TC: Execute approved query
+    TC->>Tavily: Search request
+    Tavily-->>TC: URLs, titles and snippets
+    TC-->>Executor: Normalized results or typed error
+    Executor->>TC: Extract selected source URLs
+    TC->>Tavily: Extraction request
+    Tavily-->>TC: Page text and per-URL outcomes
+    TC-->>Executor: Content for storage and evidence checking
+```
+
+For example, with “Paper X was published in 2023,” `claims.py` might select quick check. `planning.py` asks the model for queries locating the original publication record and relevant corrections. The Nebius connection transports that request and response. Python validates the proposed queries, `research.py` executes them using Tavily, and `verification.py` checks whether the retrieved publication record actually supports the date. No verdict is assumed in this example.
+
+For “Paper X proves that treatment Y works for everyone,” the route is deeper: the planner requests searches addressing methods, population, limitations, independent findings, and contradictions. The connections and pipeline are unchanged; the evidence requirements and research allowance differ.
 
 Store execution `status` separately from `stage` and factual `verdict`.
 
@@ -113,15 +179,16 @@ Planned package: `src/aletheia/`. The paths below are proposed files and do not 
 | `worker.py` | Consume persisted queued runs, execute one at a time, catch failures, and cooperate with shutdown. | Automatically retry an interrupted investigation after restart. |
 | `orchestrator.py` | Own the state machine, invoke modules in order, decide legal transitions, enforce follow-up limits, and finalize results. | Accept provider instructions that bypass application rules. |
 | `claims.py` | Convert claim/context into a validated `ClaimPlan`, detect ambiguity, identify up to three assertions, and assign a route with a brief explanation. | Supply missing dates, populations, or definitions without disclosure. |
-| `research.py` | Create/query a `SearchPlan`, run searches, select pages, follow source leads, collect counterevidence, and propose bounded follow-ups. | Treat search snippets as verified passages or reuse a previous verdict as a target. |
+| `planning.py` | Own search-planning instructions; ask the model for initial or follow-up queries using the claim, route, and named gaps; validate and return a `SearchPlan`. | Execute Tavily searches, invent evidence, or approve its own budget. |
+| `research.py` | Execute an approved `SearchPlan` through the Tavily connection, select relevant pages within limits, request extraction, and pass results to `evidence.py`. Return retrieval gaps to the controller. | Generate its own hidden search plan, treat snippets as verified passages, or reuse a previous verdict as a target. |
 | `evidence.py` | Normalize URLs conservatively, snapshot extracted content, hash it, assign IDs, remove exact duplicates, and record provenance/independence signals. | Treat different domains as proof of independent evidence. |
 | `verification.py` | Validate passage membership and evidence references in code; ask the model to assess relevance, support, contradiction, and limitations; return `EvidenceAssessment` records. | Mark a passage as supporting merely because keywords match. |
 | `verdicts.py` | Build assertion findings from admissible evidence, apply the overall-verdict policy, generate concise explanations, and validate final citations. | Cite uncollected URLs or publish unsupported factual additions. |
 | `comparison.py` | Compare versioned source snapshots, findings, verdicts, and configuration; flag inconsistencies and request at most one recheck. | Force agreement with the old result or infer content changes from failed retrievals. |
 | `events.py` | Define public event payloads, append ordered records, replay from a cursor, and serve sanitized progress. | Expose raw prompts, credentials, or private reasoning. |
 | `budgets.py` | Track elapsed time, provider attempts, searches, pages, and model usage; reserve capacity for finalization and cancel at hard limits. | Let retries escape accounting. |
-| `providers/nebius.py` | Map typed tasks to verified Nebius API calls, return validated outputs/usage, and translate errors into application error types. | Assume all models share settings or tool-call formats. |
-| `providers/tavily.py` | Search and extract pages, returning normalized results with per-item success/failure and provider metadata. | Decide the final verdict or hide empty/failed retrievals. |
+| `providers/nebius.py` | Connection code only: accept instructions/schema from the calling module, format the model request, parse/check the response shape, return usage, and translate provider errors. Task-specific meaning is checked by the calling module. | Own search strategy, select quick/deep routing, execute searches, or assume all models share settings. |
+| `providers/tavily.py` | Connection code only: accept approved queries or selected URLs, call Tavily search/extract, and return normalized content, per-item outcomes, and metadata. | Generate search strategy, determine source credibility, decide the verdict, or hide failures. |
 | `prompts/` | Versioned task prompts for interpretation, planning, evidence assessment, synthesis, and consistency review. Include schemas and clear untrusted-content boundaries. | Ask for user-visible private chain-of-thought. |
 
 These are modules in one application, not separate services. Pure transformation functions should be easy to test without a database or network.
@@ -138,7 +205,7 @@ These are modules in one application, not separate services. Pure transformation
 
 Batch assertions or passages when appropriate, while preserving IDs and input-size limits. Validate schemas and IDs after every model call. Allow one output-repair attempt per logical task within the global budget. A second malformed response becomes an explicit task failure.
 
-Use the selected model's supported output mechanism. Strict JSON validation in Python is required even when the provider offers structured outputs. Native model tool calling is optional; Python can execute validated search plans directly.
+Use the selected model's supported output mechanism. Strict JSON validation in Python is required even when the provider offers structured outputs. Native model tool calling is optional; Python can execute validated search plans directly. The adapter validates response shape; the calling task module validates meaning, referenced IDs, and task-specific rules. All model-assisted tasks share the same configured Nebius connection; they are task invocations, not separate agents.
 
 ## 5. Claim routing and research policy
 
@@ -290,7 +357,7 @@ Build in vertical increments. Each milestone must pass its relevant checks befor
 | --- | --- | --- |
 | 1. Foundation | Inspect repo/instructions, create package/config/contracts, SQLite schema, app lifecycle, and basic endpoints. | Valid requests persist; duplicates reuse a run; invalid inputs and configuration fail clearly. |
 | 2. Provider adapters | Verify current API docs; implement configurable Nebius inference and Tavily search/extract; add timeouts, redaction, and typed errors. | Offline adapter tests pass; small opt-in live calls confirm both integrations. |
-| 3. One-claim vertical slice | Implement interpretation, quick routing, search, extraction, passage checking, assessment, synthesis, and stored citations. | One real direct-record claim produces an inspectable result through both services. |
+| 3. One-claim vertical slice | Implement interpretation, quick routing, explicit query planning/validation, search execution, extraction, passage checking, assessment, synthesis, and stored citations. | One real direct-record claim produces an inspectable result through both services. |
 | 4. Deeper research | Add compound-claim handling, counterevidence, source grouping, follow-ups, escalation, budgets, and partial/insufficient outcomes. | Conflict, ambiguity, and budget cases follow the documented rules. |
 | 5. Saved versions | Add exact reuse, refresh idempotency, immutable snapshots, comparison, and bounded inconsistency review. | Saved reads make zero provider calls; refresh produces a separate version and meaningful differences. |
 | 6. Progress and recovery | Complete persisted event coverage, SSE replay, terminal transactions, interruption handling, and queue limits. | Reconnects miss no persisted events; interrupted runs cannot remain running indefinitely. |
@@ -305,7 +372,7 @@ Implement persistence and event emission from the early milestones; milestone 6 
 - Routing: direct record, causal claim, consequential interpretation, ambiguity, compound limit, and quick-to-deep escalation.
 - Evidence: fabricated ID, invented URL, quotation mismatch, whitespace-normalized quote, numeric/date/scope mismatch, snippet-only result, duplicate content, and shared-origin reporting.
 - Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, and every compound aggregation branch.
-- Control flow: repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
+- Control flow: planner outputs cannot bypass query validation; only approved plans reach Tavily; quick/deep use the same executor with different policies; repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, and partial versus failed outcomes.
 - Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, refresh idempotency, and immutable historical versions.
 - Refresh: changed evidence, unchanged evidence, source inaccessible, source not selected, interpretation changes, and differing verdicts on identical passages.
