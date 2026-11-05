@@ -1,13 +1,13 @@
 import { dataSource } from './api/source'
 import { useInvestigation } from './api/useInvestigation'
-import { LiveHome, ReplayHome } from './components/Home'
+import { Home } from './components/Home'
 import { Report } from './components/Report'
 
 const replay = dataSource.kind === 'replay'
 
 export default function App() {
-  const { state, open, submit, close } = useInvestigation(dataSource)
-  const { investigation, evidence, events, finished, error } = state
+  const { state, open, submit, retryLoad, close } = useInvestigation(dataSource)
+  const { investigation, evidence, events, submitting, researchDone, finished, loadError, error } = state
   const recording = dataSource.recordings.find((r) => r.investigation.id === investigation?.id)
   const showingSample = recording ? recording.sample : dataSource.recordings.some((r) => r.sample)
 
@@ -38,8 +38,12 @@ export default function App() {
               investigation={investigation}
               evidence={evidence}
               events={events}
+              researchDone={researchDone}
               finished={finished}
+              loadError={loadError}
               replay={replay}
+              onRetry={retryLoad}
+              onReplay={replay ? () => void open(investigation.id, { animate: true }) : undefined}
             />
             {error && (
               <p className="error" role="alert">
@@ -47,10 +51,15 @@ export default function App() {
               </p>
             )}
           </>
-        ) : replay ? (
-          <ReplayHome recordings={dataSource.recordings} onOpen={(id) => void open(id)} />
         ) : (
-          <LiveHome error={error} onSubmit={(claim) => void submit(claim, {})} />
+          <Home
+            canSubmit={dataSource.canSubmit}
+            submitting={submitting}
+            error={error}
+            recordings={dataSource.recordings}
+            onSubmit={(claim) => void submit(claim, {})}
+            onOpen={(id) => void open(id)}
+          />
         )}
       </main>
     </>

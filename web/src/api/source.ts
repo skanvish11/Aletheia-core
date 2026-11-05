@@ -22,6 +22,8 @@ export interface DataSource {
   submit(claim: string, context: ClaimContext): Promise<Investigation>
   getInvestigation(id: string): Promise<Investigation>
   getEvidence(id: string): Promise<EvidenceResponse>
+  /** All stored events at once. Replay only: lets a saved report open without animation. */
+  getEvents?(id: string): Promise<InvestigationEvent[]>
   subscribe(
     id: string,
     onEvent: (event: InvestigationEvent) => void,
@@ -96,6 +98,7 @@ export const replaySource: DataSource = {
   submit: () => Promise.reject(new Error('Recorded investigations cannot start new research.')),
   getInvestigation: async (id) => findRecording(id).investigation,
   getEvidence: async (id) => findRecording(id).evidence,
+  getEvents: async (id) => findRecording(id).events,
   subscribe(id, onEvent) {
     const { events } = findRecording(id)
     const timers = events.map((event, index) =>

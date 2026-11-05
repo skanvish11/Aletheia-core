@@ -6,20 +6,8 @@ import { Verdict } from './Findings'
 const INTRO =
   'Aletheia searches the web for a claim, checks every quotation against the stored source, and tells you whether the evidence supports it, including when a comparison is misleading.'
 
-export function LiveHome({ onSubmit, error }: { onSubmit: (claim: string) => void; error: string | null }) {
-  return (
-    <section className="home">
-      <h1 className="claim">Check a claim</h1>
-      <p className="lead">{INTRO}</p>
-      <ClaimForm onSubmit={onSubmit} busy={false} />
-      {error && (
-        <p className="error" role="alert">
-          {error}
-        </p>
-      )}
-    </section>
-  )
-}
+const REPLAY_UNAVAILABLE =
+  'Live investigation isn’t available in this demo yet: the Aletheia backend is still being built. Until then, explore the sample investigations below.'
 
 function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => void }) {
   const result = recording.investigation.result
@@ -41,27 +29,42 @@ function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => 
   )
 }
 
-export function ReplayHome({ recordings, onOpen }: { recordings: Recording[]; onOpen: (id: string) => void }) {
+interface Props {
+  canSubmit: boolean
+  submitting: boolean
+  error: string | null
+  recordings: Recording[]
+  onSubmit: (claim: string) => void
+  onOpen: (id: string) => void
+}
+
+export function Home({ canSubmit, submitting, error, recordings, onSubmit, onOpen }: Props) {
   return (
     <section className="home">
-      <h1 className="claim">See how Aletheia checks a claim</h1>
+      <h1 className="claim">Check a claim</h1>
       <p className="lead">{INTRO}</p>
 
-      <h2>Browse sample investigations</h2>
-      <ul className="samples">
-        {recordings.map((r) => (
-          <SampleRow key={r.investigation.id} recording={r} onOpen={() => onOpen(r.investigation.id)} />
-        ))}
-      </ul>
+      <ClaimForm
+        onSubmit={onSubmit}
+        submitting={submitting}
+        unavailableReason={canSubmit ? undefined : REPLAY_UNAVAILABLE}
+      />
+      {error && (
+        <p className="error" role="alert">
+          {error}
+        </p>
+      )}
 
-      <h2>Investigate your own claim</h2>
-      <p>
-        This page only replays saved investigations. To check a new claim, run the Aletheia backend and this client on
-        your own computer, then start the client in live mode:
-      </p>
-      <pre>
-        <code>VITE_DATA_SOURCE=live npm run dev</code>
-      </pre>
+      {recordings.length > 0 && (
+        <>
+          <h2>Sample investigations</h2>
+          <ul className="samples">
+            {recordings.map((r) => (
+              <SampleRow key={r.investigation.id} recording={r} onOpen={() => onOpen(r.investigation.id)} />
+            ))}
+          </ul>
+        </>
+      )}
     </section>
   )
 }

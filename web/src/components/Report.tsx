@@ -9,11 +9,24 @@ interface Props {
   investigation: Investigation
   evidence: EvidenceResponse | null
   events: InvestigationEvent[]
+  researchDone: boolean
   finished: boolean
+  loadError: string | null
   replay: boolean
+  onRetry: () => void
+  /** Replay only: play the recorded research steps again. */
+  onReplay?: () => void
 }
 
-function ClaimHeader({ investigation, finished }: { investigation: Investigation; finished: boolean }) {
+function ClaimHeader({
+  investigation,
+  finished,
+  onReplay,
+}: {
+  investigation: Investigation
+  finished: boolean
+  onReplay?: () => void
+}) {
   const meta = [
     finished ? STATUS_LABEL[investigation.status] : 'Researching',
     `researched ${formatTime(investigation.started_at ?? investigation.created_at)}`,
@@ -24,7 +37,17 @@ function ClaimHeader({ investigation, finished }: { investigation: Investigation
     <header className="claim-header">
       <p className="eyebrow">Claim</p>
       <h1 className="claim">{investigation.claim}</h1>
-      <p className="meta">{meta.join(' · ')}</p>
+      <p className="meta">
+        {meta.join(' · ')}
+        {finished && onReplay && (
+          <>
+            {' · '}
+            <button type="button" className="link-button" onClick={onReplay}>
+              Replay research steps
+            </button>
+          </>
+        )}
+      </p>
     </header>
   )
 }
@@ -63,14 +86,32 @@ function Limitations({ result }: { result: InvestigationResult }) {
   )
 }
 
-export function Report({ investigation, evidence, events, finished, replay }: Props) {
+export function Report(props: Props) {
+  const { investigation, evidence, events, researchDone, finished, loadError, replay, onRetry, onReplay } = props
   const result = finished ? investigation.result : null
   return (
     <EvidenceIndexContext.Provider value={buildEvidenceIndex(evidence)}>
       <article className="report">
-        <ClaimHeader investigation={investigation} finished={finished} />
+        <ClaimHeader investigation={investigation} finished={finished} onReplay={onReplay} />
 
-        {!finished && <ResearchInProgress events={events} replay={replay} />}
+        {!researchDone && <ResearchInProgress events={events} replay={replay} />}
+
+        {researchDone && !finished && !loadError && (
+          <p className="meta conclusion" role="status">
+            Research finished. Loading the results…
+          </p>
+        )}
+
+        {loadError && (
+          <section className="conclusion" role="alert">
+            <h2>Research finished, but the results didn’t load</h2>
+            <p className="meta">{loadError}</p>
+            <p className="meta">The investigation itself is saved; retrying only fetches it again.</p>
+            <button type="button" className="secondary-button" onClick={onRetry}>
+              Retry loading results
+            </button>
+          </section>
+        )}
 
         {finished && investigation.clarification_questions && (
           <section className="conclusion">
