@@ -2,7 +2,7 @@
 
 An evidence-first research agent that investigates factual claims, shows its work, and returns a verdict linked to inspectable sources.
 
-**Status: backend foundation implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. See [setup, implemented contracts, and acceptance checks](docs/backend-foundation.md). The architecture and research behavior below remain implementation targets unless explicitly covered by that milestone document. Step 1 makes no model-provider or web-search calls.
+**Status: backend foundation and provider connections implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. Nebius structured inference and Tavily search/extraction have passed explicit live checks. See [foundation setup and contracts](docs/backend-foundation.md) and [Step 2 configuration, checks, and measurements](docs/provider-adapters.md). The architecture and research behavior below remain implementation targets unless covered by those milestone documents. Normal API requests still make no model-provider or web-search calls.
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, a saved result, and a refreshed investigation with an explanation of what changed.
 
@@ -168,7 +168,7 @@ Clarification ends the current run. The response contains concise questions; the
 
 ## 4. Modules and ownership
 
-Planned package: `src/aletheia/`. The paths below are proposed files and do not exist yet.
+Package: `src/aletheia/`. The table describes the full target layout; the foundation and provider modules exist, while research modules remain planned. See the milestone documents for implemented scope.
 
 | Module | Responsibility and contract | Must not do |
 | --- | --- | --- |
