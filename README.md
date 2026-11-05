@@ -94,6 +94,7 @@ Store execution `status` separately from `stage` and factual `verdict`.
 - Stage: `interpreting`, `planning`, `searching`, `extracting`, `verifying`, `synthesizing`, `comparing`.
 - A completed investigation can legitimately have an `insufficient_evidence` verdict.
 - A partial investigation contains usable findings but did not finish its intended work; its explanation must identify the missing work.
+- `completed` means the research gate stopped the run (enough evidence, or no useful query remained). `partial` means a budget or deadline stopped it. An `insufficient_evidence` verdict reached because a budget cut research short is therefore `partial`, not `completed`, and its limitations name the unfinished work.
 - A failed investigation has a null final verdict and a sanitized error record. Provider failure is never evidence that a claim is false.
 - Terminal records are immutable. Retrying creates a new version rather than modifying an old one.
 
@@ -112,10 +113,10 @@ Planned package: `src/aletheia/`. The paths below are proposed files and do not 
 | `storage.py` | Schema initialization/versioning, transactions, exact lookup, run allocation, immutable snapshots, ordered events, and atomic finalization. | Infer credibility or change verdicts. |
 | `worker.py` | Consume persisted queued runs, execute one at a time, catch failures, and cooperate with shutdown. | Automatically retry an interrupted investigation after restart. |
 | `orchestrator.py` | Own the state machine, invoke modules in order, decide legal transitions, enforce follow-up limits, and finalize results. | Accept provider instructions that bypass application rules. |
-| `claims.py` | Convert claim/context into a validated `ClaimPlan`, detect ambiguity, identify up to three assertions, and assign a route with a brief explanation. | Supply missing dates, populations, or definitions without disclosure. |
+| `claims.py` | Convert claim/context into a validated `ClaimPlan`, detect ambiguity, identify up to three assertions, and assign a route with a brief explanation. The model recommends a route; code assigns it (see §5). | Supply missing dates, populations, or definitions without disclosure. |
 | `research.py` | Create/query a `SearchPlan`, run searches, select pages, follow source leads, collect counterevidence, and propose bounded follow-ups. | Treat search snippets as verified passages or reuse a previous verdict as a target. |
 | `evidence.py` | Normalize URLs conservatively, snapshot extracted content, hash it, assign IDs, remove exact duplicates, and record provenance/independence signals. | Treat different domains as proof of independent evidence. |
-| `verification.py` | Validate passage membership and evidence references in code; ask the model to assess relevance, support, contradiction, and limitations; return `EvidenceAssessment` records. | Mark a passage as supporting merely because keywords match. |
+| `verification.py` | Split extracted text into numbered sentence spans, validate cited span IDs and evidence references in code; ask the model to assess relevance, support, contradiction, and limitations; return `EvidenceAssessment` records. | Mark a passage as supporting merely because keywords match. |
 | `verdicts.py` | Build assertion findings from admissible evidence, apply the overall-verdict policy, generate concise explanations, and validate final citations. | Cite uncollected URLs or publish unsupported factual additions. |
 | `comparison.py` | Compare versioned source snapshots, findings, verdicts, and configuration; flag inconsistencies and request at most one recheck. | Force agreement with the old result or infer content changes from failed retrievals. |
 | `events.py` | Define public event payloads, append ordered records, replay from a cursor, and serve sanitized progress. | Expose raw prompts, credentials, or private reasoning. |
@@ -132,7 +133,7 @@ These are modules in one application, not separate services. Pure transformation
 | --- | --- | --- |
 | Interpret | Claim and user-supplied context | Assertions, scope, ambiguity questions, claim type, consequential-domain flag, route recommendation. |
 | Plan | Assertions, route, remaining budget, known evidence gaps | Bounded queries, each linked to an assertion and purpose: support, contradiction, or context. |
-| Assess | One assertion plus labeled retrieved passages and source metadata | Source observations, support relation, exact quotation, scope match, limitations, and short rationale. |
+| Assess | One assertion plus retrieved text as numbered sentence spans and source metadata | Source observations, support relation, cited span IDs, scope match, limitations, and short rationale. |
 | Synthesize | Validated assessments and application-computed verdict constraints | Concise explanation units, each with evidence IDs, conflicts, and limitations. |
 | Recheck | Same assertion, admissible evidence, and two differing assessments | A justified revised assessment or an explicit unresolved inconsistency. |
 
@@ -146,6 +147,8 @@ Use the selected model's supported output mechanism. Strict JSON validation in P
 
 **Deeper research:** causal, predictive, generalized, interpretive, or consequential claims; claims already known to involve conflicting evidence; and quick checks whose direct evidence does not settle the question. Consequential medical, legal, and financial interpretations take this route; merely mentioning a medical paper does not automatically make a publication-date lookup deep research.
 
+The model recommends a route; code assigns it. Code accepts a deep recommendation as given, and overrides a quick recommendation to deep when the consequential-domain flag is set. Code never downgrades deep to quick. The assigned route and any override are recorded with their reason.
+
 For compound claims, route each assertion and use the deepest required route as the run's budget profile. If the input exceeds three assertions, request a narrower claim. Relative timing such as “tomorrow” must be resolved into explicit user-confirmed context before exact saved-result reuse.
 
 For each assertion, search for direct support and counterevidence. Select relevant results, extract their content, and follow identifiable original sources where useful. Do not assume a domain allowlist, publisher prestige, or a search ranking proves truth.
@@ -156,7 +159,7 @@ Predictions and value judgments are not converted into established facts. Resear
 
 ### Initial budget defaults
 
-These are starting configuration values to validate during live testing, not promised latency or accuracy.
+These are starting configuration values to validate during live testing, not promised latency or accuracy. They are provisional: measure per-call latency of the selected Nebius model in milestone 2 and revise them before milestone 4. If sequential calls cannot fit the hard duration, batch passage assessments per assertion and run searches and extractions concurrently; the attempt counts stay the same.
 
 | Limit per run | Quick | Deep |
 | --- | ---: | ---: |
@@ -176,7 +179,7 @@ Reserve three model calls and a configurable time allowance for synthesis, final
 
 1. The URL comes from a retrieved result or traceable link, not a model-invented citation.
 2. Page extraction succeeded; publication dates are nullable and must not be confused with retrieval time.
-3. The quoted passage occurs in the stored extracted text after conservative whitespace normalization. Store its location in the normalized text.
+3. Before assessment, code splits the stored extracted text (after conservative whitespace normalization) into numbered sentence spans. The model cites span IDs, not quotation text; code reconstructs the quotation from the stored spans, so a quotation cannot be altered or invented. Unknown or out-of-range span IDs make the assessment inadmissible. Store the span IDs and their offsets in the normalized text.
 4. An assessment identifies whether it supports, contradicts, provides context for, or does not address the assertion.
 5. Any consequential mismatch in timeframe, quantity, population, jurisdiction, or definition is recorded and prevents treating that passage as direct support.
 
@@ -197,7 +200,7 @@ The model proposes evidence judgments; code enforces structural requirements. Th
 | `mixed` | Material supporting and contradicting evidence remains unresolved, or the assertion is only partly supported under materially different conditions. |
 | `insufficient_evidence` | Available admissible evidence does not justify any of the above. Missing support alone is not contradiction. |
 
-A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. If that bar cannot be met, return insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
+A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. Origins whose independence is `unknown` do not satisfy the two-origin bar; when that is the reason the bar is not met, the finding's limitations say so. If that bar cannot be met, return insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
 
 For a single assertion, the overall verdict matches its verdict. For a compound claim: all supported means supported; all contradicted means contradicted; any insufficient finding means overall insufficient evidence with established sub-findings retained; otherwise return mixed. This is a transparent summary convention, not a claim to evaluate arbitrary formal logic.
 
@@ -213,7 +216,7 @@ Use UUIDs for records and UTC timestamps. Store user-provided dates/timezones se
 | `investigations` | `id`, claim request ID, version, nullable parent ID, status, stage, route, start/end times, result JSON, clarification/error JSON, config/prompt/model/application versions, budget usage. Unique request/version. |
 | `assertions` | `id`, investigation ID, position, scoped text, claim type, route, finding JSON. |
 | `source_snapshots` | `id`, investigation ID, original/canonical URL, title, author/date if known, retrieved time, extraction status, extracted text, content hash, duplicate/origin group, provenance observations. |
-| `evidence_assessments` | `id`, assertion ID, snapshot ID, quotation, normalized offsets, passage-check status, relation, scope match, short rationale, limitations, admissibility. |
+| `evidence_assessments` | `id`, assertion ID, snapshot ID, cited span IDs, reconstructed quotation, normalized offsets, passage hash, passage-check status, relation, scope match, short rationale, limitations, admissibility. |
 | `provider_calls` | `id`, investigation ID, task/stage, attempt, sanitized request and visible response or snapshot references, model/provider, duration, usage, outcome/error, prompt hash. |
 | `events` | Investigation ID, monotonically increasing sequence, type, timestamp, safe payload. Unique investigation/sequence. |
 | `comparisons` | Current investigation ID, baseline ID, source/assessment/verdict/config deltas, consistency status, explanation. |
@@ -239,7 +242,7 @@ Compare sources by conservative canonical URL and content hashes; compare releva
 
 Compare scoped assertions exactly; if the model decomposed or interpreted the claim differently, mark a scope/interpretation change and avoid claiming an identical-evidence contradiction. Record prompt, model, settings, and code changes alongside evidence changes without assuming they caused the outcome.
 
-If matched assertions use the same relevant passages but have different verdicts, request one recheck, without treating the previous conclusion as correct. If unresolved, publish a visible inconsistency limitation. Persist both the initial new assessment and the recheck outcome in the audit record.
+Two assessments cite the same passage when the hashes of their normalized reconstructed quotations are equal, regardless of which snapshot or span numbering produced them. If matched assertions use the same relevant passages but have different verdicts, request one recheck, without treating the previous conclusion as correct. If unresolved, publish a visible inconsistency limitation. Persist both the initial new assessment and the recheck outcome in the audit record.
 
 Identical stored retrieval is guaranteed by persistence. Identical fresh research is not guaranteed: model outputs, search rankings, extracted content, and provider behavior can vary. Fixed prompts/settings and recorded snapshots help measure that variability.
 
@@ -303,7 +306,7 @@ Implement persistence and event emission from the early milestones; milestone 6 
 ### Offline tests — default, no secrets or network
 
 - Routing: direct record, causal claim, consequential interpretation, ambiguity, compound limit, and quick-to-deep escalation.
-- Evidence: fabricated ID, invented URL, quotation mismatch, whitespace-normalized quote, numeric/date/scope mismatch, snippet-only result, duplicate content, and shared-origin reporting.
+- Evidence: fabricated ID, invented URL, unknown or out-of-range span ID, sentence splitting of whitespace-variant text, numeric/date/scope mismatch, snippet-only result, duplicate content, and shared-origin reporting.
 - Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, and every compound aggregation branch.
 - Control flow: repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, and partial versus failed outcomes.
@@ -325,7 +328,7 @@ First give candidate models identical saved evidence to compare interpretation a
 
 Measure verdict accuracy, citation support, appropriate abstention, unsupported claims, tool/schema failures, verdict consistency, latency, and reported usage. Count partial/failed runs rather than excluding them. Record cost only when supported by documented pricing/usage; otherwise mark it unknown. Small-sample results are exploratory.
 
-GPT-6 Astra can be a comparison candidate if separately authorized and configured, but is not ground truth and is not required for the Nebius/Tavily application. Human-reviewed evidence is the reference. No comparative model-performance claim is made by this design document.
+Models from other providers can be comparison candidates if separately authorized and configured, but none is ground truth or required for the Nebius/Tavily application. Human-reviewed evidence is the reference. No comparative model-performance claim is made by this design document.
 
 ## 13. Definition of done
 
