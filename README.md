@@ -4,7 +4,7 @@ An evidence-first research agent that investigates factual claims, shows its wor
 
 **Status: design baseline — implementation has not started.** This README defines the proposed V1 architecture, module contracts, API, and implementation plan. Names, limits, and interface shapes below are implementation targets, not claims about working software. There are no install or run commands yet.
 
-Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, a saved result, and a refreshed investigation with an explanation of what changed.
+Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.
 
 ## 1. Product contract
 
@@ -76,7 +76,7 @@ The connections return responses to the calling step; they never advance the pip
 
 ## 3. Research pipeline and request lifecycle
 
-This flow starts only after a new investigation is queued. Both research depths follow these same steps. Each box states the work being done; there is no separate adapter branch competing with the planner.
+This flow starts only after a new investigation is queued. Refresh and comparison are follow-up features after the minimum works; initial investigations go directly from verdict to saving. Both research depths follow these same steps. Each box states the work being done; there is no separate adapter branch competing with the planner.
 
 ```mermaid
 flowchart TD
@@ -85,18 +85,19 @@ flowchart TD
     Understand -->|"Scope is clear"| Route["2. Set quick or deep research requirements"]
     Route --> Plan["3. Ask the model to propose search queries"]
     Plan --> Validate["4. Python validates queries and checks budget"]
-    Validate --> Search["5. Execute approved searches through Tavily"]
-    Search --> Extract["6. Select pages, extract text and store sources"]
-    Extract --> Verify["7. Check quotations and assess claim support"]
+    Validate --> Search["5. Execute approved searches through Tavily<br/>Page text is untrusted data, never instructions"]
+    Search --> Extract["6. Extract and store sources<br/>Deduplicate and group shared origins"]
+    Extract --> Verify["7. Check quotations and assess claim support<br/>Check misleading-comparison / narrow-scope flags"]
     Verify --> Gate{"8. Does the evidence need more investigation?"}
     Gate -->|"Specific gap and budget remains"| Followup["Name the gap; escalate quick to deep if needed"]
     Followup --> Plan
     Gate -->|"Enough evidence or no useful next search"| Verdict["9. Build and validate an evidence-linked verdict"]
     Gate -->|"Research budget reached"| Partial["Mark incomplete; use reserved finalization capacity"]
     Partial --> Verdict
-    Verdict --> Compare["10. Compare with an earlier version if present"]
+    Verdict -->|"Initial investigation"| Save["11. Save result and terminal event"]
+    Verdict -.-> Compare["10. Follow-up feature: compare with an earlier version"]
     Compare -->|"Unchanged evidence but different verdict"| Recheck["Optional bounded review; otherwise keep inconsistency flag"]
-    Recheck --> Save["11. Save result and terminal event"]
+    Recheck --> Save
     Compare -->|"No unexplained inconsistency or no baseline"| Save
 ```
 
@@ -317,6 +318,8 @@ Do not store private chain-of-thought in the public trace. Store task inputs and
 
 ## 8. Saved results and refresh behavior
 
+Saved reads and exact-request reuse belong to the initial minimum. Refresh versioning, comparison, and refresh-specific idempotency are the first follow-up after it works; the contracts below define their eventual behavior.
+
 Submitting an exact repeated claim returns the latest existing version/status without provider calls. Return its original timestamps and `reused: true`, including when it is partial or failed. The client must explicitly request another investigation to spend more provider calls. Concurrent identical submissions resolve to one queued/running version through database constraints.
 
 Viewing a saved result has no hidden freshness check or automatic refresh. It is labeled as historical evidence. This guarantees exact retrieval of a stored result, not correctness or freshness.
@@ -378,7 +381,9 @@ Persist before streaming. Reconnects may redeliver events; clients deduplicate b
 
 ## 11. Implementation plan
 
-Build in vertical increments. Each milestone must pass its relevant checks before extending the next layer.
+Build in vertical increments. Each milestone must pass its relevant checks before extending the next layer. Prioritize milestones 1–3, single-assertion deeper research from milestone 4, saved reads, core progress/recovery, and milestone 7. Then implement refresh and comparison from milestone 5. Milestone numbers identify work areas, not a requirement to finish every feature in numerical order.
+
+Target a working milestone 3 slice around **November 8, 2026**, subject to real provider latency and integration results. This is a checkpoint for one real end-to-end claim, not the complete system; use the remaining time to fix evaluation failures.
 
 | Milestone | Work | Exit condition |
 | --- | --- | --- |
@@ -386,15 +391,15 @@ Build in vertical increments. Each milestone must pass its relevant checks befor
 | 2. Provider adapters | Verify current API docs; implement configurable Nebius inference and Tavily search/extract; add timeouts, redaction, typed errors, and latency measurement. | Offline adapter tests pass; opt-in live calls confirm both integrations and measurements inform revised budgets. |
 | 3. One-claim vertical slice | Implement interpretation, routing, explicit query planning/validation, search execution, extraction, span-based citations, assessment, synthesis, and stored results. Start the reviewed claim set here. | One real direct-record claim produces an inspectable result through both services; initial evaluation failures are recorded. |
 | 4. Deeper research | Add counterevidence, bounded follow-ups, escalation, budgets, and partial/insufficient outcomes; extend to compound claims and richer source grouping as time permits. | Conflict, ambiguity, and budget cases follow the documented rules. |
-| 5. Saved versions | Add exact reuse, refresh idempotency, immutable snapshots, basic comparison, and inconsistency flags; automatic review is optional. | Saved reads make zero provider calls; refresh produces a separate version and meaningful differences. |
+| 5. Refresh and comparison — first follow-up | Add linked refresh versions, refresh idempotency, basic comparison, and inconsistency flags; automatic review is optional. Exact reuse, saved reads, and immutable snapshots ship in the earlier minimum. | Refresh produces a separate version and meaningful differences; retries reuse that version and saved reads still make zero provider calls. |
 | 6. Progress and recovery | Complete persisted event coverage, SSE replay, terminal transactions, interruption handling, and queue limits. | Reconnects miss no persisted events; interrupted runs cannot remain running indefinitely. |
-| 7. Evaluation and demo | Run the approximately 20 reviewed acceptance claims, add an opt-in live smoke script, and finish setup/run instructions and the live/replay demo walkthrough. | Report all acceptance-set results, failures, and limitations; demonstrate normal, insufficient, saved, and refreshed paths without hiding failed cases. |
+| 7. Evaluation and demo | Run the approximately 20 reviewed acceptance claims, add an opt-in live smoke script, and finish setup/run instructions and the live/replay demo walkthrough. | Report all acceptance-set results, failures, and limitations; demonstrate normal, insufficient, and saved paths without hiding failed cases. Demonstrate refresh after the follow-up is implemented. |
 
 Implement persistence and event emission from the early milestones; milestone 6 hardens the complete behavior rather than retrofitting all events at the end.
 
 ### Companion demo client (`web/`)
 
-Plan a separate client of the section 9 API; this PR only specifies it and does not implement or deploy it. The screen accepts a claim, shows actual progress, displays assertion findings and qualification flags, opens source excerpts/links, and offers saved-view and explicit-refresh actions.
+Plan a separate client of the section 9 API; this PR only specifies it and does not implement or deploy it. The screen accepts a claim, shows actual progress, displays assertion findings and qualification flags, opens source excerpts/links, and offers saved-view actions. Add the explicit-refresh action only when the follow-up backend feature is implemented.
 
 The live demo runs on localhost against the real backend. A hosted client (for example on Vercel) is replay-only: use exported, sanitized recorded results/events in the same response shapes, visibly label every view **Recorded investigation**, retain the original research timestamp, and disable arbitrary new-claim/refresh submissions. It must not pretend that replayed progress is a live provider call. Keep provider keys, private reasoning, and raw credential-bearing logs out of client assets; review exports before publishing. Do not host or tunnel the unauthenticated backend. Public hosting is a separate action, not authorized by this design document.
 
@@ -408,11 +413,11 @@ Milestones describe the full design; they are not all-or-nothing release gates. 
 | Both services working; quick/deep routing on one pipeline; counterevidence search and a bounded follow-up/escalation path. | More sophisticated search planning or larger research budgets. |
 | Snapshot-scoped span citations, semantic support checks, basic duplicate/shared-origin detection, conservative unknown-independence handling, and the credible-synthesis exception. | Automated discovery of complicated syndication/origin relationships. |
 | Four verdicts, qualification flags, visible limitations, time/call bounds, and correct completed/partial/failed outcomes. | More elaborate source-quality analysis. |
-| Ordered persisted progress, saved reads with zero provider calls, explicit refresh versions, basic evidence/metadata comparison, and visible inconsistency flags. | Automatic consistency rechecks. |
-| Exact-request deduplication, refresh idempotency, and basic startup cleanup so crashed runs cannot remain running forever. | Advanced recovery; automatic resumable execution remains outside V1. |
+| Ordered persisted progress, immutable saved results/snapshots, and saved reads with zero provider calls. | First follow-up: explicit refresh versions, basic evidence/metadata comparison, and visible inconsistency flags. Automatic consistency rechecks remain optional. |
+| Exact-request deduplication (including concurrent initial submissions) and basic startup cleanup so crashed runs cannot remain running forever. | Refresh-specific idempotency ships with refresh. Advanced recovery may follow; automatic resumable execution remains outside V1. |
 | Approximately 20 human-reviewed acceptance claims, transparent results, a real end-to-end demo, and navigable citations. | Expansion to 30–50 claims, external-model comparisons, and polished hosted replay presentation. |
 
-Document any deferred capability in the implementation report and client. Deferring advanced origin detection does not allow unknown sources to count as independent; deferring automatic rechecks does not allow unexplained verdict changes to disappear. Mandatory reliability basics remain necessary even when deeper hardening is deferred.
+Document any deferred capability in the implementation report and client. Deferring advanced origin detection does not allow unknown sources to count as independent; once refresh/comparison is implemented, deferring automatic rechecks does not allow unexplained verdict changes to disappear. Mandatory reliability basics remain necessary even when deeper hardening is deferred.
 
 ## 12. Test and evaluation plan
 
@@ -423,15 +428,15 @@ Document any deferred capability in the implementation report and client. Deferr
 - Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, coexisting qualification flags, dropped flags (unknown dimension, missing, inadmissible, or other-assertion evidence IDs), explicit contradicted-plus-insufficient findings, and every implemented compound aggregation branch.
 - Control flow: planner outputs cannot bypass query validation; only approved plans reach Tavily; quick/deep use the same executor with different policies; repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, normal-stop insufficient results versus budget-stop partial results, and deadline failure when no validated result exists.
-- Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, refresh idempotency, and immutable historical versions.
-- Refresh: equal quote hashes with changed provenance/context, full relevant-evidence set equality, added counterevidence, normalization-version mismatch, source inaccessible/not selected, interpretation changes, and differing verdicts with automatic recheck enabled, disabled, or budget-unavailable.
+- Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, and immutable saved results/snapshots. Add refresh idempotency and linked historical-version checks with the follow-up.
+- Refresh (required when the follow-up is implemented): equal quote hashes with changed provenance/context, full relevant-evidence set equality, added counterevidence, normalization-version mismatch, source inaccessible/not selected, interpretation changes, and differing verdicts with automatic recheck enabled, disabled, or budget-unavailable.
 - Progress: ordered sequences, reconnect replay, terminal stream closure, redaction, and startup interruption recovery.
 
 Use fixture-based provider adapters with realistic success and failure payloads. Add end-to-end API tests across a temporary database. Avoid tests that simply mirror a function's implementation.
 
 ### Live checks — explicit and bounded
 
-Load keys only through application runtime. Verify both services with a small real claim. Inspect final citation passages manually. Demonstrate a saved read without new provider calls and an explicit refresh. Label any fixture replay or injected failure honestly; it is not a live external failure.
+Load keys only through application runtime. Verify both services with a small real claim. Inspect final citation passages manually. Demonstrate a saved read without new provider calls. Add an explicit-refresh demonstration when the follow-up is implemented. Label any fixture replay or injected failure honestly; it is not a live external failure.
 
 ### Reviewed acceptance set — required for the demo
 
@@ -451,7 +456,7 @@ Models from other providers can be comparison candidates if separately authorize
 
 ## 13. Definition of done
 
-The minimum hackathon V1 is complete when a fresh local setup can run a claim through real Nebius and Tavily calls; inspect span-linked findings, qualification flags, and meaningful progress; handle insufficient evidence and provider failure honestly; retrieve a saved investigation without provider calls; create a refreshed version with a recorded comparison and visible inconsistency flags; and report the reviewed acceptance-set results. All must-haves in section 11 apply. The full design can extend this minimum with the explicitly deferrable features.
+The minimum hackathon V1 is complete when a fresh local setup can run a claim through real Nebius and Tavily calls; inspect span-linked findings, qualification flags, and meaningful progress; handle insufficient evidence and provider failure honestly; retrieve a saved investigation without provider calls; prevent duplicate initial submissions from launching duplicate research; and report the reviewed acceptance-set results. All must-haves in section 11 apply. The first follow-up adds refreshed versions with recorded comparisons, visible inconsistency flags, and refresh-specific idempotency. The full design can then extend this with the other explicitly deferrable features.
 
 Deliver code, locked dependencies, offline tests, opt-in live checks, updated setup/run instructions, and a short demo script. The implementation report must distinguish completed features, passing fixture tests, successful live checks, and remaining limitations.
 
