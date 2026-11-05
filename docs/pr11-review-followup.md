@@ -32,5 +32,6 @@ This update addresses each one. Regression coverage is in
   was performed. Permanent database unavailability still requires restart after
   bounded recovery fails; it is reported explicitly rather than retried forever.
 
-PR #13 is the approved Step 2 integration prerequisite. PR #11 remains subject to
+PR #13 has merged the reviewed Step 2 adapters into main. PR #11 now targets main
+and remains subject to
 review of these changes and the previously documented live-evaluation gates.
