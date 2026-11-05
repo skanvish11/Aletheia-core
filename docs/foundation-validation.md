@@ -53,3 +53,12 @@ or other model-provider integration was invoked.
 
 These results establish the tested foundation behaviors, not absence of all defects
 or accuracy of the future research agent.
+
+## Performance follow-up
+
+The [localhost benchmark report](benchmarks/README.md) records 14,400 measured
+requests across 100, 1,000, and 10,000 synthetic saved investigations, with zero
+HTTP errors or failed database-integrity assertions. The candidate fingerprint
+change did not show a consistent gain across workloads and was not applied.
+The unchanged backend and candidate each passed the 57-test offline suite.
+The benchmark is opt-in and does not add machine-dependent latency gates to CI.

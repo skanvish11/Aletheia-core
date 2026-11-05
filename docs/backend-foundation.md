@@ -125,6 +125,21 @@ submission/retrieval/reuse over HTTP, restarts the process, and checks persisten
 It uses a temporary working directory and database, loads no project dotenv file,
 and bypasses HTTP proxy settings for local requests. Neither script calls providers.
 
+## Performance baseline
+
+An opt-in benchmark exercises real localhost HTTP with disposable synthetic SQLite
+databases, including concurrent creation and duplicate protection:
+
+```sh
+uv run --locked python scripts/benchmark_foundation.py --output benchmark-results.json
+```
+
+See the [measured comparison and methodology](benchmarks/README.md). The retained
+four-repetition run covered 14,400 measured requests with zero observed HTTP errors
+or failed integrity assertions. A proposed fingerprint-preparation change produced
+mixed performance results and was not applied. The production backend is unchanged.
+Timing is deliberately not a CI pass/fail gate; correctness tests remain mandatory.
+
 ## Manual walkthrough
 
 With the server running:
