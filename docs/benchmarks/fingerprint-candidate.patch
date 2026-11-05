@@ -1,31 +1,13 @@
 --- a/src/aletheia/storage.py
 +++ b/src/aletheia/storage.py
-@@ -116,6 +116,8 @@
-         )
- 
-     async def submit(self, request: InvestigationRequest) -> Investigation:
+@@ -118,0 +119,2 @@
 +        request_key = request.request_key()
 +        context_json = json.dumps(request.context.supplied())
-         async with self.connection() as db:
-             await db.execute("BEGIN IMMEDIATE")
-             try:
-@@ -123,7 +125,7 @@
-                     await db.execute(
-                         SELECT_INVESTIGATION
-                         + " WHERE c.request_key = ? ORDER BY i.version DESC LIMIT 1",
+@@ -126 +128 @@
 -                        (request.request_key(),),
 +                        (request_key,),
-                     )
-                 ).fetchone()
-                 if row is not None:
-@@ -146,8 +148,8 @@
-                     (
-                         request_id,
-                         request.claim,
+@@ -149,2 +151,2 @@
 -                        json.dumps(request.context.supplied()),
 -                        request.request_key(),
 +                        context_json,
 +                        request_key,
-                         now,
-                     ),
-                 )
