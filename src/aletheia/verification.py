@@ -15,7 +15,7 @@ async def assess(tasks, assertion, source):
     if not selected:
         return [], "Source has no assessable spans within the input limit."
     supplied = {s.id for s in selected}
-    limited = len(selected) < len(source.spans)
+    limited = len(selected) < len(source.spans) or "page_text_truncated" in source.limitations
 
     def validate(batch):
         for assessment in batch.assessments:

@@ -10,10 +10,9 @@ from pathlib import Path
 from httpx import ASGITransport, AsyncClient
 
 from aletheia.api import create_app
-from aletheia.config import ConfigurationError, Settings
-from aletheia.providers.common import ProviderError
+from aletheia.config import ConfigurationError, ProviderSettings, Settings
+from aletheia.providers.errors import ProviderError
 from aletheia.providers.nebius import NebiusProvider
-from aletheia.providers.settings import ProviderSettings
 from aletheia.providers.tavily import TavilyProvider
 
 

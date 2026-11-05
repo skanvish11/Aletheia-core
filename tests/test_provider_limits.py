@@ -6,8 +6,9 @@ import httpx
 import pytest
 from pydantic import ValidationError
 
-from aletheia.providers.common import CallBudget, ProviderError
-from aletheia.providers.settings import ProviderSettings
+from aletheia.budgets import CallBudget
+from aletheia.config import ProviderSettings
+from aletheia.providers.errors import ProviderError
 from aletheia.providers.tavily import TavilyProvider
 
 
@@ -20,6 +21,8 @@ from aletheia.providers.tavily import TavilyProvider
         {"timeout_seconds": 0},
         {"max_output_tokens": 0},
         {"max_response_bytes": 0},
+        {"max_extracted_chars": 0},
+        {"max_extracted_chars": 1_000_001},
         {"nebius_api_key": "synthetic-secret\n"},
         {"nebius_model": " "},
         {"nebius_response_format": "text"},

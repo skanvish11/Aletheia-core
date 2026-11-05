@@ -25,6 +25,7 @@ def fingerprint(sources, evidence):
                     a.origin,
                     source.normalization_version,
                     source.splitter_version,
+                    tuple(sorted(set(source.limitations))),
                 )
             )
     if not items:

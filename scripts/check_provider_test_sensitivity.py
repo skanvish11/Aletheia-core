@@ -11,14 +11,14 @@ ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
         "provider budget disabled",
-        "common.py",
+        "budgets.py",
         "if self.used[operation] + units > limit:",
         "if False:",
-        "tests/test_providers.py::test_extraction_retry_reserves_all_urls_before_dispatch",
+        "tests/test_providers.py::test_retry_cannot_dispatch_after_budget_exhausted",
     ),
     (
         "model types silently coerced",
-        "nebius.py",
+        "providers/nebius.py",
         "parse_json(choice.message.content), strict=True",
         "parse_json(choice.message.content), strict=False",
         "tests/test_providers.py::test_json_object_mode_still_validates_locally",
@@ -35,7 +35,7 @@ def main() -> None:
                     ROOT / folder, work / folder, ignore=shutil.ignore_patterns("__pycache__")
                 )
             shutil.copy2(ROOT / "pyproject.toml", work / "pyproject.toml")
-            target = work / "src/aletheia/providers" / filename
+            target = work / "src/aletheia" / filename
             original = target.read_text()
             if original.count(old) != 1:
                 raise SystemExit("Expected exactly one mutation target.")

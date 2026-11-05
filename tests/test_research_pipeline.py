@@ -10,7 +10,7 @@ from research_fixtures import Providers, terminal
 
 from aletheia.api import create_app
 from aletheia.budgets import RunBudget
-from aletheia.providers.common import ErrorCode, ProviderError
+from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.research_contracts import Evidence
 
 
@@ -195,16 +195,55 @@ async def test_limits_preserve_valid_partial_and_no_unbudgeted_calls(settings):
         assert "/extract" not in providers.calls
 
 
+@pytest.mark.parametrize("status", [401, 402])
+async def test_extraction_provider_failure_stops_research(settings, status):
+    providers = Providers(extraction_status=status, source_count=2)
+    async with running(settings, providers) as (_, client):
+        saved = await submit(client)
+        assert saved["status"] == "failed"
+        assert saved["stop_reason"] == "provider_failure"
+        assert saved["result"] is None
+        assert providers.calls.count("/extract") == 1
+        assert [name for name, _ in providers.model_inputs] == ["ClaimPlan", "SearchPlan"]
+
+
+async def test_truncated_source_is_saved_and_changes_evidence_comparison(settings):
+    text = "The Archive opened in 2000.\n" + "x" * 1200
+    providers = Providers(deep=True, synthesis=True, max_extracted_chars=1024, text=text)
+    async with running(settings, providers) as (_, client):
+        first = await submit(client)
+        assert first["result"]["verdict"] is None
+        assert first["result"]["unable_to_decide_reason"] == "insufficient_evidence"
+        assert "page_text_truncated" in first["result"]["limitations"]
+        path = first["links"]["self"]
+        evidence = (await client.get(path + "/evidence")).json()
+        assert "page_text_truncated" in evidence["sources"][0]["limitations"]
+        assessments = [v for name, v in providers.model_inputs if name == "AssessmentBatch"]
+        assert assessments[0]["source_truncated"] is True
+
+        # The complete replacement happens to equal the old retained prefix. Equal
+        # content hashes must not hide that comprehensive coverage is now available.
+        providers.options["text"] = text[:1024]
+        refresh = await client.post(path + "/refresh", headers={"Idempotency-Key": "full-page"})
+        second = await terminal(client, refresh.json()["id"])
+        assert second["result"]["verdict"] == "true"
+        comparison = (await client.get(second["links"]["self"] + "/comparison")).json()
+        assert comparison["sources"][0]["change"] == "unchanged"
+        assert comparison["same_relevant_evidence"] is False
+        assert comparison["consistency_status"] == "not_comparable"
+        assert comparison["algorithm"] == "relevant-evidence-v2"
+
+
 def test_finalization_reserve_and_escalation_are_shared():
     budget = RunBudget()
     start = budget.started
-    for _ in range(7):
+    for _ in range(5):
         budget.reserve("nebius", "model", 1)
     with pytest.raises(ProviderError) as error:
         budget.reserve("nebius", "model", 1)
     assert error.value.code == ErrorCode.BUDGET
     budget.escalate()
-    assert budget.used["model"] == 7 and budget.deadline == start + 240
+    assert budget.used["model"] == 5 and budget.deadline == start + 240
     for _ in range(8):
         budget.reserve("nebius", "model", 1)
     with pytest.raises(ProviderError):

@@ -11,10 +11,11 @@ import httpx
 import pytest
 from pydantic import BaseModel, ConfigDict, SecretStr
 
-from aletheia.config import ConfigurationError
-from aletheia.providers.common import CallBudget, ErrorCode, ProviderError, retry_delay
+from aletheia.budgets import CallBudget
+from aletheia.config import ConfigurationError, ProviderSettings
+from aletheia.providers.common import retry_delay
+from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.providers.nebius import NebiusProvider
-from aletheia.providers.settings import ProviderSettings
 from aletheia.providers.tavily import TavilyProvider
 
 SECRET = "synthetic-secret-never-disclose"
@@ -83,7 +84,7 @@ async def test_nebius_wire_contract_and_validated_result():
         assert schema_format["name"] == "aletheia_response" and schema_format["strict"] is True
         assert schema_format["schema"]["properties"]["year"]["type"] == "integer"
         assert body["stream"] is False and body["store"] is False
-        assert body["max_tokens"] == 2048
+        assert body["max_tokens"] == 4096
         assert "JSON" in body["messages"][0]["content"]
         return httpx.Response(200, json=completion())
 
@@ -174,13 +175,14 @@ async def test_extract_preserves_content_order_partial_and_missing_results():
 
     def handle(request):
         body = json.loads(request.content)
-        assert body["urls"] == [URL_A, URL_B, url_c]
+        assert len(body["urls"]) == 1
+        url = body["urls"][0]
         assert "query" not in body and body["format"] == "markdown"
         return httpx.Response(
             200,
             json={
-                "results": [{"url": URL_B, "raw_content": original}],
-                "failed_results": [{"url": URL_A, "error": SECRET}],
+                "results": [{"url": URL_B, "raw_content": original}] if url == URL_B else [],
+                "failed_results": [{"url": URL_A, "error": SECRET}] if url == URL_A else [],
             },
         )
 
@@ -212,8 +214,9 @@ async def test_extract_rejects_untraceable_or_ambiguous_pages(results, failures)
             )
         ),
     ) as provider:
-        with pytest.raises(ProviderError, match="invalid_response"):
-            await provider.extract([URL_A], budget=budget())
+        result = await provider.extract([URL_A], budget=budget())
+    assert result.pages[0].error == "invalid_response"
+    assert result.pages[0].content is None
 
 
 async def test_empty_extraction_is_a_page_failure():
@@ -323,14 +326,42 @@ def test_retry_after_accepts_http_dates_and_ignores_invalid_values():
     assert 25 <= retry_delay(format_datetime(datetime.now(UTC) + timedelta(seconds=30))) <= 30
 
 
-async def test_extraction_retry_reserves_all_urls_before_dispatch():
-    allowance = budget(extraction_attempts=3)
+async def test_retry_cannot_dispatch_after_budget_exhausted():
+    calls = []
+
+    def handle(request):
+        calls.append(request)
+        return httpx.Response(503)
+
+    allowance = budget(search_attempts=1)
     async with TavilyProvider(
-        settings(max_retries=2), transport=httpx.MockTransport(lambda request: httpx.Response(503))
+        settings(max_retries=2), transport=httpx.MockTransport(handle)
     ) as provider:
         with pytest.raises(ProviderError, match="budget_exhausted"):
-            await provider.extract([URL_A, URL_B], budget=allowance)
-    assert allowance.used["extract"] == 2 and len(allowance.attempts) == 1
+            await provider.search("query", budget=allowance)
+    assert allowance.used["search"] == 1 and len(calls) == 1
+
+
+async def test_extraction_retries_charge_each_page_and_stop_at_budget(monkeypatch):
+    async def sleep(delay):
+        pass
+
+    monkeypatch.setattr("aletheia.providers.common.asyncio.sleep", sleep)
+    calls = []
+
+    def handle(request):
+        calls.append(json.loads(request.content)["urls"])
+        return httpx.Response(503)
+
+    allowance = budget(extraction_attempts=3)
+    async with TavilyProvider(
+        settings(max_retries=2), transport=httpx.MockTransport(handle)
+    ) as provider:
+        result = await provider.extract([URL_A, URL_B], budget=allowance)
+    assert calls == [[URL_A]] * 3
+    assert allowance.used["extract"] == 3
+    assert [page.error for page in result.pages] == ["unavailable", "budget_exhausted"]
+    assert result.usage is None
 
 
 async def test_deadline_blocks_new_attempts_and_cancels_slow_response():
@@ -456,7 +487,7 @@ def test_environment_configuration_does_not_load_dotenv_by_default(monkeypatch):
     monkeypatch.setenv("NEBIUS_MODEL", "fixture/model")
     monkeypatch.setenv("ALETHEIA_PROVIDER_MAX_RETRIES", "1")
     monkeypatch.setattr(
-        "aletheia.providers.settings.load_dotenv", lambda **kw: pytest.fail("No implicit dotenv")
+        "aletheia.config.load_dotenv", lambda **kw: pytest.fail("No implicit dotenv")
     )
     loaded = ProviderSettings.from_environment()
     assert loaded.max_retries == 1 and loaded.nebius_model == "fixture/model"
@@ -468,7 +499,155 @@ def test_environment_configuration_does_not_load_dotenv_by_default(monkeypatch):
 
 def test_explicit_runtime_dotenv_preserves_environment(monkeypatch, tmp_path):
     calls = []
-    monkeypatch.setattr("aletheia.providers.settings.load_dotenv", lambda **kw: calls.append(kw))
+    monkeypatch.setattr("aletheia.config.load_dotenv", lambda **kw: calls.append(kw))
     path = tmp_path / "runtime-config"
     ProviderSettings.from_environment(dotenv_path=path)
     assert calls == [{"dotenv_path": path, "override": False}]
+
+
+async def test_oversized_page_does_not_discard_other_pages():
+    url_c = "https://example.org/c"
+    calls = []
+
+    def handle(request):
+        url = json.loads(request.content)["urls"][0]
+        calls.append(url)
+        return httpx.Response(
+            200,
+            json={
+                "results": [{"url": url, "raw_content": "x" * 2000 if url == URL_B else "kept"}],
+                "failed_results": [],
+                "usage": {"credits": 1},
+            },
+        )
+
+    async with TavilyProvider(
+        settings(max_response_bytes=1024), transport=httpx.MockTransport(handle)
+    ) as provider:
+        result = await provider.extract([URL_A, URL_B, url_c], budget=budget())
+    assert calls == [URL_A, URL_B, url_c]
+    assert [page.content for page in result.pages] == ["kept", None, "kept"]
+    assert result.pages[1].error == "response_too_large"
+    assert result.pages[1].limitations == ("page_omitted",)
+    assert result.usage is None  # Unknown billed usage must not look like a complete total.
+
+
+async def test_page_text_cap_keeps_exact_prefix_and_marks_limitation():
+    original = "α\n" * 800
+    async with TavilyProvider(
+        settings(max_extracted_chars=1024),
+        transport=httpx.MockTransport(
+            lambda request: httpx.Response(
+                200,
+                json={
+                    "results": [{"url": URL_A, "raw_content": original}],
+                    "failed_results": [],
+                    "usage": {"credits": 1},
+                },
+            )
+        ),
+    ) as provider:
+        result = await provider.extract([URL_A], budget=budget())
+    page = result.pages[0]
+    assert page.content == original[:1024] and page.error is None
+    assert page.truncated and page.limitations == ("page_text_truncated",)
+    assert result.usage.credits == 1
+
+
+async def test_validated_result_survives_deadline_but_next_call_is_blocked(monkeypatch):
+    from aletheia.providers import tavily
+
+    allowance = budget()
+    parse = tavily.parse_search
+    calls = []
+
+    def finish_at_deadline(data, **kwargs):
+        result = parse(data, **kwargs)
+        allowance.deadline = time.monotonic() - 1
+        return result
+
+    def handle(request):
+        calls.append(request)
+        return httpx.Response(200, json={"results": []})
+
+    monkeypatch.setattr(tavily, "parse_search", finish_at_deadline)
+    async with TavilyProvider(settings(), transport=httpx.MockTransport(handle)) as provider:
+        result = await provider.search("query", budget=allowance)
+        with pytest.raises(ProviderError, match="deadline_exceeded"):
+            await provider.search("query", budget=allowance)
+    assert result.results == ()
+    assert len(calls) == 1 and allowance.attempts[0].outcome == "success"
+
+
+@pytest.mark.parametrize("stop", ["budget", "deadline", "authentication"])
+async def test_extraction_keeps_prior_success_when_remaining_work_stops(stop):
+    urls = [URL_A, URL_B, "https://example.org/c", "https://example.org/d"]
+    allowance = budget(extraction_attempts=1 if stop == "budget" else 6)
+    calls = []
+
+    def handle(request):
+        url = json.loads(request.content)["urls"][0]
+        calls.append(url)
+        if url == URL_A:
+            if stop == "deadline":
+                allowance.deadline = time.monotonic() - 1
+            return httpx.Response(
+                200,
+                json={
+                    "results": [{"url": URL_A, "raw_content": "keep me"}],
+                    "failed_results": [],
+                },
+            )
+        return httpx.Response(401)
+
+    async with TavilyProvider(settings(), transport=httpx.MockTransport(handle)) as provider:
+        result = await provider.extract(urls, budget=allowance)
+    assert result.pages[0].content == "keep me"
+    expected = {
+        "budget": "budget_exhausted",
+        "deadline": "deadline_exceeded",
+        "authentication": "authentication",
+    }[stop]
+    assert [page.error for page in result.pages[1:]] == [expected] * 3
+    assert len(calls) == (2 if stop == "authentication" else 1)
+    assert result.pages[-1].limitations == ("page_not_attempted",)
+
+
+def test_parsers_can_validate_without_http():
+    from aletheia.providers.nebius import parse_completion
+    from aletheia.providers.tavily import parse_extraction, parse_search
+
+    assert parse_completion(completion(), response_type=Answer).value.year == 2023
+    assert parse_search({"results": []}, max_results=1).results == ()
+    page = parse_extraction(
+        {"results": [{"url": URL_A, "raw_content": "text"}], "failed_results": []},
+        url=URL_A,
+        max_chars=4,
+    ).pages[0]
+    assert page.content == "text" and not page.truncated
+    with pytest.raises(ProviderError, match="invalid_response"):
+        parse_extraction(
+            {"results": [{"url": URL_B, "raw_content": "text"}], "failed_results": []},
+            url=URL_A,
+            max_chars=4,
+        )
+
+
+async def test_model_configurations_do_not_share_format_or_token_cap():
+    seen = []
+
+    def handle(request):
+        body = json.loads(request.content)
+        seen.append((body["model"], body["response_format"]["type"], body["max_tokens"]))
+        return httpx.Response(200, json=completion())
+
+    for model, mode, cap in (
+        ("fixture/one", "json_schema", 512),
+        ("fixture/two", "json_object", 1024),
+    ):
+        async with NebiusProvider(
+            settings(nebius_model=model, nebius_response_format=mode, max_output_tokens=cap),
+            transport=httpx.MockTransport(handle),
+        ) as provider:
+            await generate(provider, budget())
+    assert seen == [("fixture/one", "json_schema", 512), ("fixture/two", "json_object", 1024)]

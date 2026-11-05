@@ -1,6 +1,7 @@
 """Execute approved queries and save extracted sources before model assessment."""
 
 from aletheia.evidence import canonical_url, snapshot
+from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.verification import assess
 
 
@@ -58,6 +59,14 @@ async def gather(
                 {"url": url, "reason": page.error or "empty_content"},
                 stage="extracting",
             )
+            if page.error in {
+                ErrorCode.BUDGET,
+                ErrorCode.DEADLINE,
+                ErrorCode.AUTHENTICATION,
+                ErrorCode.QUOTA,
+                ErrorCode.CONFIGURATION,
+            }:
+                raise ProviderError("tavily", ErrorCode(page.error))
             gaps.append("Some selected sources could not be retrieved.")
             continue
         if len(page.content) > 100_000:
@@ -73,6 +82,7 @@ async def gather(
             retrieved_at=result.retrieved_at,
             text=page.content,
         )
+        source.limitations.extend(page.limitations)
         if len(source.spans) > 120 or sum(len(s.text) for s in source.spans) > 12000:
             source.limitations.append("Only the first bounded set of source spans was assessed.")
         duplicate = any(s.content_hash == source.content_hash for s in sources)

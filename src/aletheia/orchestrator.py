@@ -6,7 +6,7 @@ from aletheia.budgets import RunBudget
 from aletheia.claims import interpret, route
 from aletheia.comparison import compare
 from aletheia.planning import plan_search, query_key
-from aletheia.providers.common import ErrorCode, ProviderError
+from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.research import gather
 from aletheia.research_contracts import InvestigationResult, Snapshot
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
@@ -194,6 +194,7 @@ class Pipeline:
                 "provider_timeout_seconds": self.model.settings.timeout_seconds,
                 "max_request_bytes": self.model.settings.max_request_bytes,
                 "max_response_bytes": self.model.settings.max_response_bytes,
+                "max_extracted_chars": self.search.settings.max_extracted_chars,
                 "model_attempt_limit": budget.model_attempts,
                 "search_attempt_limit": budget.search_attempts,
                 "extraction_attempt_limit": budget.extraction_attempts,

@@ -68,19 +68,24 @@ providers may not report usage for malformed or failed attempts.
 
 | Limit | Quick | Deep after routing/escalation |
 | --- | ---: | ---: |
-| Model attempts, including retries/repairs | 10 | 18 |
+| Model attempts, including retries/repairs | 8 | 16 |
 | Search attempts, including retries | 4 | 8 |
 | Extracted URL attempts, including retries | 4 | 10 |
 | Hard provider-call deadline | 120 seconds | 240 seconds |
 
 Escalation keeps the original start time and all accumulated usage. Research leaves
-three model attempts and 20 seconds for finalization. Retry timeouts use that same
+three model attempts and 45 seconds for finalization. Retry timeouts use that same
 research deadline, so they cannot silently consume the time reserve. Finalization
 may use the reserve, but never start a call after the hard deadline. These remain
 provisional defaults; no full-pipeline live latency measurements have been made.
 
-Each search requests at most five results. Selected pages over 100,000 characters
-are rejected with an explicit event. Assessment receives at most 120 complete
+Calls execute sequentially, with at most one in flight. The provider output cap is
+4,096 tokens, following Step 2’s representative measurements.
+
+Each search requests at most five results. Extraction retains at most 100,000
+characters by default and exposes `page_text_truncated` in saved limitations. If
+a configured provider limit exceeds the pipeline’s 100,000-character storage cap,
+oversized pages are rejected with an explicit event. Assessment receives at most 120 complete
 spans totaling 12,000 characters per source; omitted material is a visible
 limitation. An oversized first block is not silently cut into a misleading quote.
 A truncated assessment cannot establish comprehensive synthesis coverage.
@@ -185,7 +190,8 @@ publication/title changes are exposed separately.
 Relevant-evidence fingerprints include all admitted supporting, contradicting and
 contextual passages, their source URL, full normalized content hash, individual
 quotation hashes, publication date, publisher, origin and normalization/splitter
-versions. They exclude run IDs, retrieval time and model-assigned relation labels.
+versions, plus source limitations (fingerprint algorithm `relevant-evidence-v2`).
+They exclude run IDs, retrieval time and model-assigned relation labels.
 Only equal nonempty sets and exact assertion text establish equal relevant evidence.
 Changed decisions over equal evidence always produce an unresolved inconsistency
 flag. Comparison exposes `verdict_changed` separately from `decision_changed`;
@@ -200,7 +206,8 @@ research evidence even when a displayed quotation is identical.
 The offline suite uses the real Nebius/Tavily HTTP adapters with synthetic responses,
 FastAPI lifespans and temporary SQLite files. It covers True/False/Almost and separate undecided
 outcomes, ambiguity, plan validation, invented citations, scope and
-origin rules, extraction failure, bounded repairs, deadline/reserve behavior,
+origin rules, extraction failure, provider-error propagation, retained-prefix limitations,
+bounded repairs, deadline/reserve behavior,
 refresh races, exact saved reuse, SSE replay/disconnect, interruption and migration.
 Transaction tests inject SQLite failures after earlier writes and verify rollback.
 The sensitivity script deliberately breaks citation, terminal-transaction, budget-reserve
@@ -237,7 +244,7 @@ Real-claim passage review, representative latency checks and the reviewed accept
 set remain release/demo gates. Advanced origin detection, compound assertions,
 automatic consistency rechecks and frontend integration remain outside this V1.
 
-Local verification after the verdict update: **228 tests passed** on Python 3.12; Ruff lint,
+Local verification after the verdict update: **244 tests passed** on Python 3.12; Ruff lint,
 format and whitespace checks passed. All four deliberate protection faults were
 detected. The localhost walkthrough passed submission/reuse and a fresh-process
 restart with identical saved records. No independent agent review or live research

@@ -226,6 +226,6 @@ class Comparison(Record):
     recheck_status: Literal["disabled"] = "disabled"
     baseline_fingerprint: str | None = None
     current_fingerprint: str | None = None
-    algorithm: str = "relevant-evidence-v1"
+    algorithm: str = "relevant-evidence-v2"
     configuration_changed: bool = False
     limitations: list[str] = Field(default_factory=list)

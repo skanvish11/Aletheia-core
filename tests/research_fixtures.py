@@ -7,8 +7,8 @@ from contextlib import asynccontextmanager
 import httpx
 from pydantic import SecretStr
 
+from aletheia.config import ProviderSettings
 from aletheia.providers.nebius import NebiusProvider
-from aletheia.providers.settings import ProviderSettings
 from aletheia.providers.tavily import TavilyProvider
 
 
@@ -33,6 +33,8 @@ class Providers:
         followups=False,
         flags=None,
         extraction_failure=False,
+        extraction_status=None,
+        max_extracted_chars=100_000,
         text="The Archive opened in 2000.",
     ):
         self.options = locals().copy()
@@ -204,6 +206,8 @@ class Providers:
                 },
             )
         if request.url.path == "/extract":
+            if self.options["extraction_status"]:
+                return httpx.Response(self.options["extraction_status"], json={})
             url = data["urls"][0]
             failed = self.options["extraction_failure"]
             text = self.options["text"]
@@ -225,6 +229,7 @@ class Providers:
             tavily_api_key=SecretStr("synthetic-tavily"),
             nebius_model="synthetic-model",
             max_retries=0,
+            max_extracted_chars=self.options["max_extracted_chars"],
         )
         transport = httpx.MockTransport(self.handle)
         async with (

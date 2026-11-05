@@ -7,8 +7,8 @@ from pathlib import Path
 import httpx
 import pytest
 
+from aletheia.config import ProviderSettings
 from aletheia.providers.nebius import NebiusProvider
-from aletheia.providers.settings import ProviderSettings
 from aletheia.providers.tavily import TavilyProvider
 
 spec = importlib.util.spec_from_file_location(
@@ -32,13 +32,18 @@ def test_missing_keys_stop_before_network(capsys):
     assert "NEBIUS_API_KEY" in output and "TAVILY_API_KEY" in output
 
 
-async def test_smoke_report_measures_actual_operations_without_content(monkeypatch):
+@pytest.mark.parametrize("profile", ["smoke", "representative"])
+async def test_smoke_report_measures_actual_operations_without_content(monkeypatch, profile):
     def handle(request):
         body = json.loads(request.content)
         if request.url.path.endswith("chat/completions"):
             value = {"label": "alpha", "year": 2023}
             if "12 items" in body["messages"][1]["content"]:
                 value = {"items": [{"label": f"item-{i}", "year": 2023} for i in range(1, 13)]}
+            if "40 items" in body["messages"][1]["content"]:
+                value = {"items": [{"label": f"item-{i}", "year": 2023} for i in range(1, 41)]}
+            if "publication year from the catalog" in body["messages"][1]["content"]:
+                value = {"label": "record-317", "year": 1917}
             return httpx.Response(
                 200,
                 json={
@@ -80,10 +85,20 @@ async def test_smoke_report_measures_actual_operations_without_content(monkeypat
         tavily_api_key="synthetic-secret",
         nebius_model="fixture/model",
     )
-    report = await smoke.measure(settings, samples=2, deadline_seconds=30)
+
+    async def retry_timing():
+        return {"source": "fixture"}
+
+    monkeypatch.setattr(smoke, "measure_retry_timing", retry_timing)
+    report = await smoke.measure(settings, samples=2, deadline_seconds=30, profile=profile)
     assert report["passed"] and len(report["checks"]) == 6
     assert report["attempt_units"] == {"model": 4, "search": 1, "extract": 1}
-    assert report["latency_seconds"]["nebius_long"]["count"] == 2
+    label = "nebius_large_output" if profile == "representative" else "nebius_long"
+    assert report["latency_seconds"][label]["count"] == 2
+    if profile == "representative":
+        assert report["checks"][0]["input_characters"] > 70_000
+        assert report["checks"][0]["output_characters"] > 0
+        assert report["offline_retry_timing"]["source"] == "fixture"
     serialized = json.dumps(report)
     assert "synthetic-secret" not in serialized and "private-response-body" not in serialized
 
@@ -98,3 +113,12 @@ def test_existing_output_file_is_not_overwritten_or_spent_against(monkeypatch, t
     output.write_text("keep")
     assert smoke.main(["--live", "--output", str(output)]) == 2
     assert output.read_text() == "keep"
+
+
+async def test_retry_measurement_is_offline_and_includes_backoff():
+    report = await smoke.measure_retry_timing()
+    assert report["elapsed_seconds"] >= 1.05
+    assert report["scheduled_backoff_seconds"] == 0.75
+    assert [a["status_code"] for a in report["attempts"]] == [503, 503, 200]
+    assert sum(a["units"] for a in report["attempts"]) == 3
+    assert "offline simulation" in report["source"]

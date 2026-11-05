@@ -2,10 +2,9 @@
 
 from contextlib import asynccontextmanager
 
-from aletheia.config import ConfigurationError
-from aletheia.providers.common import ProviderError
+from aletheia.config import ConfigurationError, ProviderSettings
+from aletheia.providers.errors import ProviderError
 from aletheia.providers.nebius import NebiusProvider
-from aletheia.providers.settings import ProviderSettings
 from aletheia.providers.tavily import TavilyProvider
 
 
