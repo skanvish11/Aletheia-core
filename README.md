@@ -2,7 +2,7 @@
 
 An evidence-first research agent that investigates factual claims, shows its work, and returns a verdict linked to inspectable sources.
 
-**Status: design baseline — implementation has not started.** This README defines the proposed V1 architecture, module contracts, API, and implementation plan. Names, limits, and interface shapes below are implementation targets, not claims about working software. There are no install or run commands yet.
+**Status: backend foundation implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. See [setup, implemented contracts, and acceptance checks](docs/backend-foundation.md). The architecture and research behavior below remain implementation targets unless explicitly covered by that milestone document. Step 1 makes no model-provider or web-search calls.
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.
 
@@ -460,4 +460,4 @@ The minimum hackathon V1 is complete when a fresh local setup can run a claim th
 
 Deliver code, locked dependencies, offline tests, opt-in live checks, updated setup/run instructions, and a short demo script. The implementation report must distinguish completed features, passing fixture tests, successful live checks, and remaining limitations.
 
-Until those milestones are implemented and verified, this repository is a design specification, not a working fact-checking service.
+The backend foundation is runnable, but this is not yet a working fact-checking service. Provider integration and the research pipeline remain to be implemented and verified.
