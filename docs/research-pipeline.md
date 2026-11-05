@@ -125,7 +125,42 @@ correction, supported corrected claim, preservation of the core, and no unresolv
 conflict. All must pass. If the deadline prevents that check, the candidate correction
 and generated prose are discarded; the previously validated finding is saved as partial.
 These are bounded model judgments, not guaranteed semantic truth; live evaluation
-is still required. UI wording and styling belong to the later frontend integration.
+is still required. The frontend must use the presentation mapping below; UI
+implementation and styling belong to the later frontend integration.
+
+### Frontend presentation and evaluation handoff
+
+Derive the visible result label from the saved decision fields, independently of
+execution status. API verdict values are strings, not JSON booleans.
+
+| `outcome` | `verdict` | `unable_to_decide_reason` | Visible result label |
+| --- | --- | --- | --- |
+| `decided` | `"true"` | `null` | **True** |
+| `decided` | `"false"` | `null` | **False** |
+| `decided` | `"almost"` | `null` | **Almost**, with the cited correction |
+| `unable_to_decide` | `null` | `insufficient_evidence` | **Insufficient evidence** |
+| `unable_to_decide` | `null` | `conflicting_evidence` | **Conflicting evidence** |
+
+Keep Almost as its own label; do not rename it Mixed or map unresolved conflict
+to Almost. Display its three cited correction parts: what is correct, what needs
+correction, and the corrected claim. Insufficient evidence is an explicit visible
+result even though it is not a truth verdict. Do not collapse the two undecided
+reasons into a generic Unknown label in the result view, saved history, or evaluation.
+
+Show execution status separately: a completed investigation can return either
+undecided label, and a partial investigation can retain a validated decision while
+showing its incomplete-coverage limitations. A failed investigation with no saved
+result must display its failure state, not an inferred Insufficient evidence label.
+
+PR #7's evaluation contract must represent and score these same five valid
+outcome/verdict/reason combinations, keeping insufficient and conflicting evidence
+distinct. Almost evaluation must also check the three cited correction parts and
+their grounding, preservation of the claim's core, and absence of unresolved
+conflict; matching the Almost label alone is not sufficient. Execution failures
+and partial coverage must be reported separately from decision-label correctness;
+PR #7's acceptance scoring still counts partial and failed runs as wrong.
+This documents the integration requirement; it does not implement or validate
+PR #7's evaluation changes or the frontend rendering.
 
 Example undecided decision fields:
 
