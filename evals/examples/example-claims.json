@@ -1,0 +1,31 @@
+[
+  {
+    "id": "example-northwind",
+    "split": "tuning",
+    "claim": "The Northwind X2 battery lasts three times as long as earlier Northwind laptops.",
+    "case_type": "comparison",
+    "expected_verdict": "supported",
+    "acceptable_verdicts": ["mixed"],
+    "expected_flags": [
+      {
+        "type": "misleading_comparison",
+        "dimension": "baseline",
+        "rationale": "The 3x figure compares the X2 with the 2019 X0, not the 2023 X1; against the X1 the gain is about 1.4x."
+      }
+    ],
+    "key_sources": [
+      {
+        "url": "https://example.com/northwind/x2-launch-notes",
+        "shows": "Maker's lab test: X2 18 hours vs the 2019 X0 at 6 hours."
+      },
+      {
+        "url": "https://example.org/reviews/northwind-x2-vs-x1",
+        "shows": "Independent test: X2 18 hours vs the 2023 X1 at 13 hours."
+      }
+    ],
+    "as_of": "2026-11-04",
+    "labelers": ["labeler-a", "labeler-b"],
+    "status": "reconciled",
+    "reviewer_note": "ILLUSTRATIVE ONLY: invented product and example-domain URLs, not part of the eval set. Literally true for 'earlier laptops' (the X0), so supported; mixed is acceptable because the natural reading is the direct predecessor."
+  }
+]

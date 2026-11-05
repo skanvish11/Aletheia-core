@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/skanvish11/Aletheia-core/evals/schema/claim.schema.json",
+  "title": "Aletheia eval claim",
+  "description": "One human-reviewed claim with its expected outcome. Verdicts, flag types and dimensions mirror README section 6. evals/validate.py reads the enums from this file, so this schema is the single source for them.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "split",
+    "claim",
+    "case_type",
+    "expected_verdict",
+    "acceptable_verdicts",
+    "expected_flags",
+    "key_sources",
+    "as_of",
+    "labelers",
+    "status",
+    "reviewer_note"
+  ],
+  "properties": {
+    "id": {
+      "description": "Stable identifier, e.g. t001. Never reused, even if the claim is dropped.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]{1,39}$"
+    },
+    "split": {
+      "description": "Only tuning claims live in this repository. Held-out claims are kept elsewhere.",
+      "enum": ["tuning"]
+    },
+    "claim": {
+      "description": "The claim exactly as a user would submit it.",
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 500
+    },
+    "context": {
+      "description": "Optional context submitted with the claim (README section 7 context fields).",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "timeframe": { "type": "string", "minLength": 1 },
+        "location": { "type": "string", "minLength": 1 },
+        "definitions": { "type": "string", "minLength": 1 },
+        "notes": { "type": "string", "minLength": 1 }
+      }
+    },
+    "case_type": {
+      "description": "What the claim tests, so the set covers each kind of case.",
+      "enum": ["direct_fact", "comparison", "causal", "interpretive", "conflict", "insufficient"]
+    },
+    "expected_verdict": {
+      "description": "The verdict a correct investigation should reach.",
+      "$ref": "#/$defs/verdict"
+    },
+    "acceptable_verdicts": {
+      "description": "Other verdicts that also count as correct, e.g. insufficient_evidence for a borderline claim. Must not repeat expected_verdict.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/verdict" },
+      "uniqueItems": true
+    },
+    "expected_flags": {
+      "description": "Qualification flags a correct investigation should raise. Empty means none expected.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/expected_flag" }
+    },
+    "key_sources": {
+      "description": "1 to 3 sources a correct run should find, and what each shows.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": { "$ref": "#/$defs/key_source" }
+    },
+    "as_of": {
+      "description": "Date (YYYY-MM-DD) the expected outcome was checked. Evidence can change after it.",
+      "type": "string",
+      "format": "date"
+    },
+    "labelers": {
+      "description": "Who labeled this record. One name in a blind label file; two in a reconciled record.",
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]{0,29}$" },
+      "uniqueItems": true
+    },
+    "status": {
+      "description": "draft: one labeler's blind label. reconciled: both labelers agree. contested: still disagree after discussion; the tie-breaker decided.",
+      "enum": ["draft", "reconciled", "contested"]
+    },
+    "reviewer_note": {
+      "description": "Why this outcome is expected. For contested records, also what the disagreement was.",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "$defs": {
+    "verdict": {
+      "enum": ["supported", "contradicted", "mixed", "insufficient_evidence"]
+    },
+    "flag_type": {
+      "enum": ["misleading_comparison", "narrow_scope"]
+    },
+    "dimension": {
+      "enum": [
+        "population",
+        "timeframe",
+        "units",
+        "baseline",
+        "condition",
+        "jurisdiction",
+        "definition",
+        "evaluation_setup",
+        "benchmark_subset"
+      ]
+    },
+    "expected_flag": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "dimension", "rationale"],
+      "properties": {
+        "type": { "$ref": "#/$defs/flag_type" },
+        "dimension": { "$ref": "#/$defs/dimension" },
+        "rationale": {
+          "description": "The specific difference, e.g. 'compares a 32-sample chain-of-thought score with a 5-shot score'.",
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    },
+    "key_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "shows"],
+      "properties": {
+        "url": { "type": "string", "pattern": "^https?://" },
+        "shows": {
+          "description": "What this source establishes for the claim.",
+          "type": "string",
+          "minLength": 10
+        }
+      }
+    }
+  }
+}
