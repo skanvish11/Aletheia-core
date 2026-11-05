@@ -2,14 +2,21 @@
 
 from dataclasses import dataclass
 from datetime import UTC, datetime
+from functools import partial
 from typing import Annotated, Literal
 from urllib.parse import urlsplit
 
 import httpx
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field
 
-from aletheia.providers.common import CallBudget, ErrorCode, ProviderError, ProviderHTTP
-from aletheia.providers.settings import ProviderSettings
+from aletheia.budgets import CallBudget
+from aletheia.config import ProviderSettings
+from aletheia.providers.common import ProviderHTTP
+from aletheia.providers.errors import ErrorCode, ProviderError
+
+MAX_URL_LENGTH = 8192
+Depth = Literal["basic", "advanced"]
+DEPTHS = ("basic", "advanced")
 
 
 def valid_url(value: str) -> str:
@@ -25,6 +32,11 @@ def valid_url(value: str) -> str:
     return value
 
 
+SourceURL = Annotated[
+    str, Field(min_length=1, max_length=MAX_URL_LENGTH), AfterValidator(valid_url)
+]
+
+
 class WireModel(BaseModel):
     model_config = ConfigDict(extra="ignore", strict=True, allow_inf_nan=False)
 
@@ -34,13 +46,11 @@ class CreditUsage(WireModel):
 
 
 class SearchHit(WireModel):
-    url: Annotated[str, Field(min_length=1, max_length=8192)]
+    url: SourceURL
     title: str
     content: str
     score: Annotated[float, Field(ge=0, le=1)]
     published_date: str | None = None
-
-    _url = field_validator("url")(valid_url)
 
 
 class SearchResponse(WireModel):
@@ -49,17 +59,13 @@ class SearchResponse(WireModel):
 
 
 class ExtractHit(WireModel):
-    url: Annotated[str, Field(min_length=1, max_length=8192)]
+    url: SourceURL
     raw_content: str
-
-    _url = field_validator("url")(valid_url)
 
 
 class ExtractFailure(WireModel):
-    url: Annotated[str, Field(min_length=1, max_length=8192)]
+    url: SourceURL
     # Intentionally do not retain provider-supplied error text.
-
-    _url = field_validator("url")(valid_url)
 
 
 class ExtractResponse(WireModel):
@@ -79,7 +85,9 @@ class SearchResult:
 class PageOutcome:
     url: str
     content: str | None
-    error: Literal["extraction_failed", "empty_content", "missing_result"] | None
+    error: str | None
+    truncated: bool = False
+    limitations: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)
@@ -89,11 +97,51 @@ class ExtractionResult:
     usage: CreditUsage | None
 
 
+def parse_search(data: dict, *, max_results: int) -> SearchResult:
+    response = SearchResponse.model_validate(data)
+    if len(response.results) > max_results:
+        raise ProviderError("tavily", ErrorCode.INVALID_RESPONSE)
+    return SearchResult(tuple(response.results), datetime.now(UTC), response.usage)
+
+
+def parse_extraction(data: dict, *, url: str, max_chars: int) -> ExtractionResult:
+    """Validate one page independently, retaining an explicitly marked prefix if oversized."""
+    response = ExtractResponse.model_validate(data)
+    records = [*response.results, *response.failed_results]
+    if len(records) > 1 or any(item.url != url for item in records):
+        raise ProviderError("tavily", ErrorCode.INVALID_RESPONSE)
+    if response.results:
+        content = response.results[0].raw_content
+        if not content.strip():
+            page = PageOutcome(url, None, "empty_content")
+        elif len(content) > max_chars:
+            page = PageOutcome(
+                url,
+                content[:max_chars],
+                None,
+                truncated=True,
+                limitations=("page_text_truncated",),
+            )
+        else:
+            page = PageOutcome(url, content, None)
+    else:
+        page = PageOutcome(
+            url, None, "extraction_failed" if response.failed_results else "missing_result"
+        )
+    return ExtractionResult((page,), datetime.now(UTC), response.usage)
+
+
 class TavilyProvider(ProviderHTTP):
     def __init__(
         self, settings: ProviderSettings, *, transport: httpx.AsyncBaseTransport | None = None
     ):
-        super().__init__("tavily", settings, transport=transport)
+        super().__init__(
+            "tavily",
+            settings,
+            api_key=settings.tavily_api_key,
+            base_url="https://api.tavily.com/",
+            transport=transport,
+        )
 
     async def search(
         self,
@@ -101,7 +149,7 @@ class TavilyProvider(ProviderHTTP):
         *,
         budget: CallBudget,
         max_results: int = 5,
-        depth: Literal["basic", "advanced"] = "advanced",
+        depth: Depth = "advanced",
     ) -> SearchResult:
         if (
             not isinstance(query, str)
@@ -109,9 +157,9 @@ class TavilyProvider(ProviderHTTP):
             or len(query) > 400
             or type(max_results) is not int
             or not 1 <= max_results <= 20
-            or depth not in ("basic", "advanced")
+            or depth not in DEPTHS
         ):
-            raise ProviderError("tavily", ErrorCode.INVALID_REQUEST)
+            raise ProviderError(self.provider, ErrorCode.INVALID_REQUEST)
         payload = {
             "query": query,
             "max_results": max_results,
@@ -124,37 +172,32 @@ class TavilyProvider(ProviderHTTP):
             "include_usage": True,
         }
 
-        def parse(data: dict) -> SearchResult:
-            response = SearchResponse.model_validate(data)
-            if len(response.results) > max_results:
-                raise ProviderError("tavily", ErrorCode.INVALID_RESPONSE)
-            return SearchResult(tuple(response.results), datetime.now(UTC), response.usage)
-
-        return await self.post("search", payload, budget=budget, operation="search", parse=parse)
+        return await self.post(
+            "search",
+            payload,
+            budget=budget,
+            operation="search",
+            parse=partial(parse_search, max_results=max_results),
+        )
 
     async def extract(
         self,
         urls: list[str],
         *,
         budget: CallBudget,
-        depth: Literal["basic", "advanced"] = "basic",
+        depth: Depth = "basic",
     ) -> ExtractionResult:
         try:
-            if (
-                not isinstance(urls, list)
-                or not 1 <= len(urls) <= 20
-                or depth not in ("basic", "advanced")
-            ):
+            if not isinstance(urls, list) or not 1 <= len(urls) <= 20 or depth not in DEPTHS:
                 raise ValueError
-            if any(not isinstance(url, str) or len(url) > 8192 for url in urls):
+            if any(not isinstance(url, str) or len(url) > MAX_URL_LENGTH for url in urls):
                 raise ValueError
             requested = tuple(valid_url(url) for url in urls)
             if len(set(requested)) != len(requested):
                 raise ValueError
         except (ValueError, TypeError):
-            raise ProviderError("tavily", ErrorCode.INVALID_REQUEST) from None
+            raise ProviderError(self.provider, ErrorCode.INVALID_REQUEST) from None
         payload = {
-            "urls": requested,
             "extract_depth": depth,
             "format": "markdown",
             "include_images": False,
@@ -162,34 +205,43 @@ class TavilyProvider(ProviderHTTP):
             "timeout": min(60.0, self.settings.timeout_seconds),
         }
 
-        def parse(data: dict) -> ExtractionResult:
-            response = ExtractResponse.model_validate(data)
-            pages = {}
-            for item in response.results:
-                if item.url not in requested or item.url in pages:
-                    raise ProviderError("tavily", ErrorCode.INVALID_RESPONSE)
-                pages[item.url] = PageOutcome(
-                    item.url,
-                    item.raw_content if item.raw_content.strip() else None,
-                    None if item.raw_content.strip() else "empty_content",
+        pages = []
+        credits = 0.0
+        complete_usage = True
+        stopped = None
+        # One request per URL isolates response byte limits; no whole-batch retry.
+        for url in requested:
+            if stopped is not None:
+                pages.append(PageOutcome(url, None, stopped, limitations=("page_not_attempted",)))
+                continue
+            try:
+                result = await self.post(
+                    "extract",
+                    {**payload, "urls": [url]},
+                    budget=budget,
+                    operation="extract",
+                    parse=partial(
+                        parse_extraction, url=url, max_chars=self.settings.max_extracted_chars
+                    ),
                 )
-            for item in response.failed_results:
-                if item.url not in requested or item.url in pages:
-                    raise ProviderError("tavily", ErrorCode.INVALID_RESPONSE)
-                pages[item.url] = PageOutcome(item.url, None, "extraction_failed")
-            return ExtractionResult(
-                tuple(
-                    pages.get(url, PageOutcome(url, None, "missing_result")) for url in requested
-                ),
-                datetime.now(UTC),
-                response.usage,
-            )
-
-        return await self.post(
-            "extract",
-            payload,
-            budget=budget,
-            operation="extract",
-            units=len(requested),
-            parse=parse,
+                pages.extend(result.pages)
+                if result.usage is None:
+                    complete_usage = False
+                else:
+                    credits += result.usage.credits
+            except ProviderError as exc:
+                complete_usage = False
+                pages.append(PageOutcome(url, None, exc.code.value, limitations=("page_omitted",)))
+                if exc.code in (
+                    ErrorCode.BUDGET,
+                    ErrorCode.DEADLINE,
+                    ErrorCode.AUTHENTICATION,
+                    ErrorCode.QUOTA,
+                    ErrorCode.CONFIGURATION,
+                ):
+                    stopped = exc.code.value
+        return ExtractionResult(
+            tuple(pages),
+            datetime.now(UTC),
+            CreditUsage(credits=credits) if complete_usage else None,
         )

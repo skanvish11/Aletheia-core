@@ -2,7 +2,7 @@ import pytest
 from httpx import ASGITransport, AsyncClient
 
 from aletheia.api import create_app
-from aletheia.config import Settings
+from aletheia.config import PROVIDER_ENV, Settings
 
 
 @pytest.fixture(autouse=True)
@@ -11,23 +11,12 @@ def forbid_dotenv(monkeypatch):
         raise AssertionError("Tests must not load real dotenv files.")
 
     monkeypatch.setattr("aletheia.config.load_dotenv", forbidden)
-    monkeypatch.setattr("aletheia.providers.settings.load_dotenv", forbidden)
 
 
 @pytest.fixture(autouse=True)
 def isolate_provider_environment(monkeypatch):
     # Never let real shell credentials/settings affect offline test outcomes.
-    for name in (
-        "NEBIUS_API_KEY",
-        "TAVILY_API_KEY",
-        "NEBIUS_MODEL",
-        "ALETHEIA_NEBIUS_RESPONSE_FORMAT",
-        "ALETHEIA_PROVIDER_TIMEOUT_SECONDS",
-        "ALETHEIA_PROVIDER_MAX_RETRIES",
-        "ALETHEIA_PROVIDER_MAX_REQUEST_BYTES",
-        "ALETHEIA_PROVIDER_MAX_RESPONSE_BYTES",
-        "ALETHEIA_MODEL_MAX_OUTPUT_TOKENS",
-    ):
+    for name in PROVIDER_ENV.values():
         monkeypatch.delenv(name, raising=False)
 
 

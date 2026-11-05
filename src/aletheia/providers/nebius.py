@@ -2,13 +2,16 @@
 
 import json
 from dataclasses import dataclass
+from functools import partial
 from typing import Annotated
 
 import httpx
 from pydantic import BaseModel, ConfigDict, Field
 
-from aletheia.providers.common import CallBudget, ErrorCode, ProviderError, ProviderHTTP, parse_json
-from aletheia.providers.settings import ProviderSettings
+from aletheia.budgets import CallBudget
+from aletheia.config import ProviderSettings
+from aletheia.providers.common import ProviderHTTP, parse_json
+from aletheia.providers.errors import ErrorCode, ProviderError
 
 TokenCount = Annotated[int, Field(strict=True, ge=0)]
 
@@ -45,13 +48,38 @@ class ModelResult[T: BaseModel]:
     usage: TokenUsage | None
 
 
+def parse_completion[T: BaseModel](data: dict, *, response_type: type[T]) -> ModelResult[T]:
+    completion = Completion.model_validate(data)
+    choice = completion.choices[0]
+    if choice.message.refusal or choice.finish_reason == "content_filter":
+        raise ProviderError("nebius", ErrorCode.REFUSAL)
+    if choice.finish_reason == "length":
+        raise ProviderError("nebius", ErrorCode.TRUNCATED)
+    if (
+        choice.finish_reason != "stop"
+        or choice.message.role != "assistant"
+        or not choice.message.content
+    ):
+        raise ProviderError("nebius", ErrorCode.INVALID_RESPONSE)
+    # Python validation is required even with provider-side schema constraints.
+    # JSON parsing first prevents Pydantic's permissive JSON type conversions.
+    value = response_type.model_validate(parse_json(choice.message.content), strict=True)
+    return ModelResult(value, completion.usage)
+
+
 class NebiusProvider(ProviderHTTP):
     def __init__(
         self, settings: ProviderSettings, *, transport: httpx.AsyncBaseTransport | None = None
     ):
         if settings.nebius_model is None:
             raise ProviderError("nebius", ErrorCode.CONFIGURATION)
-        super().__init__("nebius", settings, transport=transport)
+        super().__init__(
+            "nebius",
+            settings,
+            api_key=settings.nebius_api_key,
+            base_url="https://api.tokenfactory.nebius.com/v1/",
+            transport=transport,
+        )
 
     async def generate[T: BaseModel](
         self,
@@ -68,10 +96,10 @@ class NebiusProvider(ProviderHTTP):
             or not isinstance(input_text, str)
             or not input_text.strip()
         ):
-            raise ProviderError("nebius", ErrorCode.INVALID_REQUEST)
+            raise ProviderError(self.provider, ErrorCode.INVALID_REQUEST)
         tokens = self.settings.max_output_tokens if max_output_tokens is None else max_output_tokens
         if type(tokens) is not int or not 1 <= tokens <= self.settings.max_output_tokens:
-            raise ProviderError("nebius", ErrorCode.INVALID_REQUEST)
+            raise ProviderError(self.provider, ErrorCode.INVALID_REQUEST)
         schema = response_type.model_json_schema()
         response_format = {"type": self.settings.nebius_response_format}
         if self.settings.nebius_response_format == "json_schema":
@@ -99,24 +127,10 @@ class NebiusProvider(ProviderHTTP):
             "store": False,
         }
 
-        def parse(data: dict) -> ModelResult[T]:
-            completion = Completion.model_validate(data)
-            choice = completion.choices[0]
-            if choice.message.refusal or choice.finish_reason == "content_filter":
-                raise ProviderError("nebius", ErrorCode.REFUSAL)
-            if choice.finish_reason == "length":
-                raise ProviderError("nebius", ErrorCode.TRUNCATED)
-            if (
-                choice.finish_reason != "stop"
-                or choice.message.role != "assistant"
-                or not choice.message.content
-            ):
-                raise ProviderError("nebius", ErrorCode.INVALID_RESPONSE)
-            # Python validation is required even with provider-side schema constraints.
-            # JSON parsing first prevents Pydantic's permissive JSON type conversions.
-            value = response_type.model_validate(parse_json(choice.message.content), strict=True)
-            return ModelResult(value, completion.usage)
-
         return await self.post(
-            "chat/completions", payload, budget=budget, operation="model", parse=parse
+            "chat/completions",
+            payload,
+            budget=budget,
+            operation="model",
+            parse=partial(parse_completion, response_type=response_type),
         )
