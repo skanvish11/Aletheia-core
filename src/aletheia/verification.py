@@ -1,0 +1,52 @@
+"""Assess bounded source passages; validate every supplied reference before admission."""
+
+from aletheia.evidence import admit
+from aletheia.research_contracts import AssessmentBatch
+
+
+async def assess(tasks, assertion, source):
+    selected = []
+    size = 0
+    for span in source.spans:
+        if size + len(span.text) > 12000 or len(selected) >= 120:
+            break
+        selected.append(span)
+        size += len(span.text)
+    if not selected:
+        return [], "Source has no assessable spans within the input limit."
+    supplied = {s.id for s in selected}
+    limited = len(selected) < len(source.spans)
+
+    def validate(batch):
+        for assessment in batch.assessments:
+            admit(assessment, source, supplied)
+
+    result = await tasks.call(
+        "assess",
+        "Assess the exact assertion against the supplied numbered source spans. Cite only "
+        "this snapshot and supplied span IDs, in increasing order without duplicates. "
+        "Never write quotations. Distinguish support, contradiction, context and irrelevance. "
+        "A material mismatch in quantity, dates, population, jurisdiction or definition means "
+        "scope_match=false. A publisher name or different domain alone is not proof of "
+        "independence. Set independence=unknown unless cited provenance establishes an "
+        "identifiable distinct underlying evidence origin; give origin, provenance_span_ids "
+        "and provenance_note. Set authoritative_record only for a relevant original record. "
+        "Use credible_synthesis only for an appropriate synthesis and explain relevance and "
+        "coverage. Report documented limitations. Propose flags misleading_comparison "
+        "or narrow_scope with dimension population/timeframe/units/baseline/condition/"
+        "jurisdiction/definition. Name a concrete remaining gap, or null. "
+        "A truncated source cannot establish comprehensive coverage.",
+        {
+            "assertion": assertion.model_dump(),
+            "snapshot_id": source.id,
+            "url": source.url,
+            "title": source.title,
+            "published_date": source.published_date,
+            "source_truncated": limited,
+            "spans": [s.model_dump() for s in selected],
+        },
+        AssessmentBatch,
+        validate,
+    )
+    evidence = [admit(a, source, supplied) for a in result.assessments]
+    return evidence, result.gap

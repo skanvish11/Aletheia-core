@@ -15,10 +15,13 @@ class ConfigurationError(Exception):
 class Settings:
     database_path: Path = Path("data/aletheia.sqlite3")
     queue_limit: int = 100
+    research_enabled: bool = False
     # All 24,000 allowed characters may use 12-byte escaped surrogate pairs in JSON.
     max_body_bytes: int = 327_680
 
     def __post_init__(self) -> None:
+        if type(self.research_enabled) is not bool:
+            raise ConfigurationError("ALETHEIA_RESEARCH_ENABLED must be true or false.")
         if (
             not isinstance(self.database_path, Path)
             or str(self.database_path) in (".", ":memory:")
@@ -34,8 +37,12 @@ class Settings:
     def from_environment(cls) -> "Settings":
         # Only application runtime loads dotenv. Explicit Settings in tests bypass it.
         load_dotenv(dotenv_path=Path(".env"), override=False)
+        enabled = os.environ.get("ALETHEIA_RESEARCH_ENABLED", "false").lower()
+        if enabled not in {"true", "false"}:
+            raise ConfigurationError("ALETHEIA_RESEARCH_ENABLED must be true or false.")
         try:
             return cls(
+                research_enabled=enabled == "true",
                 database_path=Path(
                     os.environ.get("ALETHEIA_DATABASE_PATH", "data/aletheia.sqlite3")
                 ),
