@@ -255,7 +255,7 @@ Reserve three model calls and a configurable time allowance for synthesis, final
 
 Keep cited spans in source order, reject duplicate or reversed IDs, and group adjacent spans into contiguous excerpts. Display non-adjacent excerpts separately with their own references; never stitch them into an apparently continuous quotation. Preserve surrounding blocks for semantic assessment. The guarantee is that displayed quotations come from stored extracted text, not that extraction perfectly reproduced the page or that the text proves the claim. Semantic support still requires a separate assessment.
 
-Source observations include author/publisher when available, source type, underlying evidence, relevance, timeliness, conflicts of interest when documented, and limitations. Use descriptive labels and explanations, not a numerical trust score. “Unknown” is a valid value.
+Source observations include author/publisher when available, source type, underlying evidence, relevance, timeliness, conflicts of interest when documented (including whether a result is self-reported by the vendor or independently reproduced), and limitations. Use descriptive labels and explanations, not a numerical trust score. “Unknown” is a valid value.
 
 Exact normalized-content matches share a duplicate group. Sources explicitly attributing the same underlying study/report share an origin group when identifiable. Independence remains `unknown` when it cannot be established; syndication detection is best-effort.
 
@@ -278,12 +278,15 @@ Add `qualification_flags` to each assertion finding, independently of its verdic
 
 | Flag | Meaning |
 | --- | --- |
-| `misleading_comparison` | The claim compares materially different populations, dates, units, baselines, or conditions as though they were equivalent. |
-| `narrow_scope` | Evidence applies to a materially narrower population, timeframe, or condition than the claim implies. |
+| `misleading_comparison` | The claim compares materially different populations, dates, units, baselines, conditions, evaluation setups, or benchmark subsets as though they were equivalent. |
+| `narrow_scope` | Evidence applies to a materially narrower population, timeframe, condition, or benchmark subset than the claim implies. |
 
 Each flag is a record of `{type, dimension, explanation, evidence_ids}`:
 
-- `dimension` names what differs: `population`, `timeframe`, `units`, `baseline`, `condition`, `jurisdiction`, or `definition`. These cover the comparison terms above and the scope mismatches recorded under evidence admission rule 5.
+- `dimension` names what differs: `population`, `timeframe`, `units`, `baseline`, `condition`, `jurisdiction`, `definition`, `evaluation_setup`, or `benchmark_subset`. These cover the comparison terms above and the scope mismatches recorded under evidence admission rule 5.
+  - `evaluation_setup`: results obtained under different evaluation methods, such as prompting strategy (5-shot vs chain-of-thought with 32 samples), sampling, tool access, or scoring harness.
+  - `benchmark_subset`: a result on part of a benchmark, or a modified version, presented as a result on the full or standard benchmark.
+  - Vendor self-reporting is a source observation, and possible benchmark contamination is a limitation; neither is a comparison dimension.
 - `evidence_ids` is nonempty and refers only to admissible evidence assessments of the same assertion.
 - `explanation` states the specific difference, for example "compares 2025 output with a 2019 baseline", not a generic warning.
 
