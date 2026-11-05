@@ -26,6 +26,8 @@ export const DIMENSION_LABEL: Record<FlagDimension, string> = {
   condition: 'conditions',
   jurisdiction: 'jurisdiction',
   definition: 'definition',
+  evaluation_setup: 'evaluation setup',
+  benchmark_subset: 'benchmark subset',
 }
 
 export const STATUS_LABEL: Record<InvestigationStatus, string> = {

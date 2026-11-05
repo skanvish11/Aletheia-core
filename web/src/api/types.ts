@@ -42,6 +42,8 @@ export type FlagDimension =
   | 'condition'
   | 'jurisdiction'
   | 'definition'
+  | 'evaluation_setup'
+  | 'benchmark_subset'
 
 export interface QualificationFlag {
   type: FlagType
