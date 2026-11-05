@@ -1,0 +1,146 @@
+{
+  "checked_at": "2026-11-05T03:33:15.263955+00:00",
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "response_format": "json_schema",
+  "profile": "representative",
+  "max_output_tokens": 2048,
+  "timeout_seconds": 45.0,
+  "samples_per_model_task": 2,
+  "deadline_seconds": 180,
+  "checks": [
+    {
+      "check": "nebius_source_heavy",
+      "sample": 1,
+      "input_characters": 75563,
+      "passed": true,
+      "output_characters": 34,
+      "usage": {
+        "prompt_tokens": 16000,
+        "completion_tokens": 835,
+        "total_tokens": 16835
+      },
+      "elapsed_seconds": 8.115453042002628
+    },
+    {
+      "check": "nebius_large_output",
+      "sample": 1,
+      "input_characters": 72,
+      "passed": false,
+      "error": "truncated_output",
+      "elapsed_seconds": 7.818053458991926
+    },
+    {
+      "check": "tavily_search",
+      "passed": true,
+      "result_count": 2,
+      "elapsed_seconds": 4.274875249975594,
+      "usage": {
+        "credits": 2.0
+      }
+    },
+    {
+      "check": "tavily_extract",
+      "passed": true,
+      "characters": 6765,
+      "truncated": false,
+      "error": null,
+      "elapsed_seconds": 0.43000412499532104,
+      "usage": {
+        "credits": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "Small synthetic integration sample; not a latency SLA or research-quality evaluation.",
+    "Live failures are not deliberately induced; retry timing is simulated offline.",
+    "Usage is reported when supplied; failed requests may still incur provider charges."
+  ],
+  "attempts": [
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 8.113983582996298,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 7.815860250004334,
+      "status_code": 200,
+      "outcome": "truncated_output"
+    },
+    {
+      "provider": "tavily",
+      "operation": "search",
+      "units": 1,
+      "elapsed_seconds": 4.27477683298639,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "extract",
+      "units": 1,
+      "elapsed_seconds": 0.4295595829898957,
+      "status_code": 200,
+      "outcome": "success"
+    }
+  ],
+  "attempt_units": {
+    "model": 2,
+    "search": 1,
+    "extract": 1
+  },
+  "passed": false,
+  "latency_seconds": {
+    "nebius_source_heavy": {
+      "count": 1,
+      "median": 8.115453042002628,
+      "max": 8.115453042002628
+    },
+    "tavily_search": {
+      "count": 1,
+      "median": 4.274875249975594,
+      "max": 4.274875249975594
+    },
+    "tavily_extract": {
+      "count": 1,
+      "median": 0.43000412499532104,
+      "max": 0.43000412499532104
+    }
+  },
+  "offline_retry_timing": {
+    "source": "offline simulation: two HTTP 503 responses then success; 0.1s per response",
+    "elapsed_seconds": 1.0650028749951161,
+    "scheduled_backoff_seconds": 0.75,
+    "attempts": [
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.1038223750074394,
+        "status_code": 503,
+        "outcome": "unavailable"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.1018845840007998,
+        "status_code": 503,
+        "outcome": "unavailable"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.10558804197353311,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  }
+}
