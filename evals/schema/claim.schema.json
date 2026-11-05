@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/skanvish11/Aletheia-core/evals/schema/claim.schema.json",
   "title": "Aletheia eval claim",
-  "description": "One human-reviewed claim with its expected outcome. Verdicts, flag types and dimensions mirror README section 6. evals/validate.py reads the enums from this file, so this schema is the single source for them.",
+  "description": "One human-reviewed claim with its expected decision. The decision shape (outcome, verdict, undecided reason, Almost correction) mirrors the research decision contract; flag types and dimensions mirror README section 6. evals/validate.py reads the enums from this file, so this schema is the single source for them.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -10,8 +10,8 @@
     "split",
     "claim",
     "case_type",
-    "expected_verdict",
-    "acceptable_verdicts",
+    "expected",
+    "acceptable_alternatives",
     "expected_flags",
     "key_sources",
     "as_of",
@@ -50,15 +50,14 @@
       "description": "What the claim tests, so the set covers each kind of case.",
       "enum": ["direct_fact", "comparison", "causal", "interpretive", "conflict", "insufficient"]
     },
-    "expected_verdict": {
-      "description": "The verdict a correct investigation should reach.",
-      "$ref": "#/$defs/verdict"
+    "expected": {
+      "description": "The decision a correct investigation should reach.",
+      "$ref": "#/$defs/decision"
     },
-    "acceptable_verdicts": {
-      "description": "Other verdicts that also count as correct, e.g. insufficient_evidence for a borderline claim. Must not repeat expected_verdict.",
+    "acceptable_alternatives": {
+      "description": "Other decisions that also count as correct. May be empty; must not repeat the expected decision.",
       "type": "array",
-      "items": { "$ref": "#/$defs/verdict" },
-      "uniqueItems": true
+      "items": { "$ref": "#/$defs/decision" }
     },
     "expected_flags": {
       "description": "Qualification flags a correct investigation should raise. Empty means none expected.",
@@ -73,7 +72,7 @@
       "items": { "$ref": "#/$defs/key_source" }
     },
     "as_of": {
-      "description": "Date (YYYY-MM-DD) the expected outcome was checked. Evidence can change after it.",
+      "description": "Date (YYYY-MM-DD) the expected decision was checked. Evidence can change after it.",
       "type": "string",
       "format": "date"
     },
@@ -89,14 +88,33 @@
       "enum": ["draft", "reconciled", "contested"]
     },
     "reviewer_note": {
-      "description": "Why this outcome is expected. For contested records, also what the disagreement was.",
+      "description": "Why this decision is expected. For contested records, also what the disagreement was.",
       "type": "string",
       "minLength": 1
     }
   },
   "$defs": {
-    "verdict": {
-      "enum": ["supported", "contradicted", "mixed", "insufficient_evidence"]
+    "decision": {
+      "description": "Decided: a verdict and no reason. Unable to decide: a reason and a null verdict. Almost, and only Almost, needs an expected correction.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outcome", "verdict", "unable_to_decide_reason", "expected_correction"],
+      "properties": {
+        "outcome": { "enum": ["decided", "unable_to_decide"] },
+        "verdict": { "enum": ["true", "false", "almost", null] },
+        "unable_to_decide_reason": { "enum": ["insufficient_evidence", "conflicting_evidence", null] },
+        "expected_correction": {
+          "description": "Reviewed expectation for an Almost correction, so a matching label can't hide a wrong correction.",
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "required": ["what_is_correct", "what_needs_correction", "corrected_claim"],
+          "properties": {
+            "what_is_correct": { "type": "string", "minLength": 10 },
+            "what_needs_correction": { "type": "string", "minLength": 10 },
+            "corrected_claim": { "type": "string", "minLength": 10 }
+          }
+        }
+      }
     },
     "flag_type": {
       "enum": ["misleading_comparison", "narrow_scope"]
