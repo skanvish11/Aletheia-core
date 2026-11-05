@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aletheia-core"
+version = "0.1.0"
+description = "Local evidence-first investigation service"
+requires-python = ">=3.12"
+dependencies = [
+  "aiosqlite>=0.21,<1",
+  "fastapi>=0.115,<1",
+  "pydantic>=2.10,<3",
+  "python-dotenv>=1.0,<2",
+  "uvicorn>=0.34,<1",
+]
+
+[project.scripts]
+aletheia = "aletheia.main:run"
+
+[dependency-groups]
+dev = [
+  "httpx>=0.28,<1",
+  "pytest>=8.3,<10",
+  "pytest-asyncio>=1.0,<2",
+  "pytest-socket>=0.7,<1",
+  "ruff>=0.11,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/aletheia"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+addopts = "-ra --disable-socket --allow-unix-socket"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]

@@ -1,0 +1,31 @@
+name: Backend checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install locked dependencies
+        run: |
+          python -m pip install uv==0.13.7
+          uv sync --locked --dev
+      - name: Lint and format
+        run: |
+          uv run --locked ruff check .
+          uv run --locked ruff format --check .
+      - name: Offline behavior tests
+        run: uv run --locked pytest

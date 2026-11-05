@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aletheia Testing"
+  short_description: "Verify Aletheia API and persistence behavior"
+  default_prompt: "Use $aletheia-testing to implement and verify tests for the current Aletheia backend change."
