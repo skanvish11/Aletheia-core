@@ -35,7 +35,10 @@ async def assess(tasks, assertion, source):
         "coverage. Report documented limitations. Propose flags misleading_comparison "
         "or narrow_scope with dimension population/timeframe/units/baseline/condition/"
         "jurisdiction/definition. Name a concrete remaining gap, or null. "
-        "A truncated source cannot establish comprehensive coverage.",
+        "When evidence establishes a relevant narrower or corrected fact, retain it as context "
+        "and explain the scope/quantity difference in the rationale. Do not call it direct "
+        "support for the original broader claim. A truncated source cannot establish "
+        "comprehensive coverage.",
         {
             "assertion": assertion.model_dump(),
             "snapshot_id": source.id,

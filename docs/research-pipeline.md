@@ -38,24 +38,28 @@ message. A disabled server still exposes saved results, evidence and comparisons
 4. `verification.py` supplies bounded numbered spans to the model. Python validates
    snapshot and span references, reconstructs exact excerpts, and rejects invented,
    unsupplied, repeated or reversed references. Non-adjacent quotations stay separate.
-5. `verdicts.py` computes the four possible verdicts. A direct check can use an
+5. `verdicts.py` computes a preliminary True/False decision, or an unable-to-decide
+   outcome for insufficient or conflicting evidence. A direct check can use an
    authoritative record. Deep definitive findings require two documented distinct
    origins with distinct content, or a relevant synthesis with explained coverage.
-   Unknown independence never counts as established independence. Material support
-   and contradiction produce `mixed`; missing support is not contradiction.
+   Unknown independence never counts as established independence. Missing support
+   is not contradiction, and unresolved conflict is never Almost.
 6. If the evidence does not settle the claim, the controller escalates quick to
    deep once and requests new queries for a named gap. There are at most two
    follow-up rounds. An empty follow-up plan ends normally with the available finding.
-7. The model proposes cited explanation units. Code checks their evidence IDs;
-   another bounded model task checks whether each unit is grounded in its cited
-   passages. A failed final check publishes no factual verdict. This remains a
-   model-assisted semantic check, not a proof of truth.
+7. The model proposes cited explanation units and, only when eligible, an Almost
+   correction. Code checks references and evidence sufficiency for each correction
+   part. The existing final-check model task verifies the explanation and whether
+   the correction is grounded, preserves a substantially true core and leaves no
+   unresolved conflict. A failed check publishes no factual verdict. This remains
+   a model-assisted semantic check, not a proof of truth. No extra provider calls
+   are introduced into the normal synthesis/check sequence.
 8. The result and terminal event are committed together. Refresh comparison happens
    after the new finding and explanation; old verdicts never enter research prompts.
 
 All model input is marked untrusted, including user text and extracted pages.
 Models cannot execute tools or write storage. Instructions and schemas live with
-these task modules and are labeled `one-claim-v1`. Results record the model,
+these task modules and are labeled `one-claim-v2`. Results record the model,
 application/prompt versions, allowlisted configuration, call attempts and available
 token usage. Token totals include usage from successfully parsed model responses;
 providers may not report usage for malformed or failed attempts.
@@ -82,7 +86,7 @@ limitation. An oversized first block is not silently cut into a misleading quote
 A truncated assessment cannot establish comprehensive synthesis coverage.
 
 - `completed`: the research stopped normally, including an honest
-  `insufficient_evidence` answer when no useful next search was identified.
+  `unable_to_decide` outcome when no useful next search was identified.
 - `partial`: a time/call/follow-up limit stopped the investigation. Validated
   findings remain available, with incomplete coverage disclosed. If finalization
   runs out of capacity, unchecked generated prose is discarded.
@@ -95,6 +99,39 @@ Narrower evidence cannot count as direct support for a broader assertion. Releva
 context can retain qualification flags even when it does not match the entire
 scope. Invalid flags are dropped with an audit event. Source-quality and scope
 judgments are still model-generated and can be wrong.
+
+## Decision contract
+
+The only truth labels are `true`, `false`, and `almost` (JSON strings). `outcome`
+is `decided` or `unable_to_decide`. An undecided result has a null verdict and a
+reason of `insufficient_evidence` or `conflicting_evidence`. This is independent
+of the execution status: completed work may honestly be unable to decide.
+
+Almost always includes `almost_correction` with three cited `{text, evidence_ids}`
+parts: `what_is_correct`, `what_needs_correction`, and `corrected_claim`. Each part
+must pass the same evidence threshold as a definitive finding for the route. The
+corrected claim must differ from the original while retaining its essential subject
+and proposition. A missing part, blank text, invented reference, insufficient evidence,
+unsupported correction or unresolved conflict cannot produce Almost. False remains
+False unless the full correction passes validation. Unknown remains a separate outcome.
+
+The final check independently evaluates five conditions: supported core, supported
+correction, supported corrected claim, preservation of the core, and no unresolved
+conflict. All must pass. If the deadline prevents that check, the candidate correction
+and generated prose are discarded; the previously validated finding is saved as partial.
+These are bounded model judgments, not guaranteed semantic truth; live evaluation
+is still required. UI wording and styling belong to the later frontend integration.
+
+Example undecided decision fields:
+
+```json
+{
+  "outcome": "unable_to_decide",
+  "verdict": null,
+  "unable_to_decide_reason": "conflicting_evidence",
+  "almost_correction": null
+}
+```
 
 ## API and persistence
 
@@ -114,11 +151,22 @@ returns the same run, even after completion; using it for a different parent ret
 versions. Allocation, capacity check, key reservation and the queued event share
 one transaction. Original results and snapshots are never modified by refresh.
 
-SQLite schema 2 adds append-only `research_records` and `idempotency_keys` tables.
-Research records store typed snapshot/span, evidence and comparison JSON, rather
-than adding a relational table for each artifact in this initial single-user build.
-Only the exact owned schema 1 can migrate; the migration is transactional. Original
-requests/events survive. A schema-2 database must not be opened with Step 2 code.
+SQLite schema 3 retains the `research_records` and `idempotency_keys` tables added
+in schema 2. Research records contain typed snapshot/span, evidence and comparison
+JSON. The exact owned schemas 1 and 2 migrate transactionally; foreign schemas are
+rejected. Requests, timestamps, source/evidence records and progress events survive.
+
+For existing schema-2 results, the migration archives the original result JSON
+verbatim in `research_records` as `legacy_result/schema-2`. It maps `supported` to
+`true`, `contradicted` to `false`, `mixed` to unable-to-decide/conflicting-evidence,
+and `insufficient_evidence` to unable-to-decide/insufficient-evidence. It never
+infers Almost from an old result. Explanation text and original prompt/application
+versions stay unchanged; the old response is retained in the archive. No research
+is triggered by migration. Prior comparison JSON is also archived as `legacy_comparison`;
+its verdict-change flag is translated separately from its decision-change flag so
+conflict versus insufficient-evidence remains distinguishable. Malformed historical
+data rolls back the entire migration.
+A schema-3 database requires the updated application; old code fails its version guard.
 
 The worker claims one queued row transactionally, makes provider calls outside DB
 transactions, and stops claiming new work on shutdown. It allows five seconds for
@@ -139,20 +187,24 @@ contextual passages, their source URL, full normalized content hash, individual
 quotation hashes, publication date, publisher, origin and normalization/splitter
 versions. They exclude run IDs, retrieval time and model-assigned relation labels.
 Only equal nonempty sets and exact assertion text establish equal relevant evidence.
-Changed verdicts over equal evidence always produce an unresolved inconsistency
-flag. Automatic rechecks are disabled; the initial new finding remains visible.
+Changed decisions over equal evidence always produce an unresolved inconsistency
+flag. Comparison exposes `verdict_changed` separately from `decision_changed`;
+the latter also detects a changed undecided reason or changed Almost correction
+text. New run-specific evidence IDs alone do not change the decision. Exact text
+comparison may flag a harmless rewording; semantic equivalence is not inferred. Automatic rechecks are disabled; the initial new finding remains visible.
 Harmless page edits and changed provenance can conservatively count as changed
 research evidence even when a displayed quotation is identical.
 
 ## Verification and remaining evaluation
 
 The offline suite uses the real Nebius/Tavily HTTP adapters with synthetic responses,
-FastAPI lifespans and temporary SQLite files. It covers supported/contradicted/mixed/
-insufficient outcomes, ambiguity, plan validation, invented citations, scope and
+FastAPI lifespans and temporary SQLite files. It covers True/False/Almost and separate undecided
+outcomes, ambiguity, plan validation, invented citations, scope and
 origin rules, extraction failure, bounded repairs, deadline/reserve behavior,
 refresh races, exact saved reuse, SSE replay/disconnect, interruption and migration.
 Transaction tests inject SQLite failures after earlier writes and verify rollback.
-The sensitivity script deliberately breaks critical protections in temporary copies.
+The sensitivity script deliberately breaks citation, terminal-transaction, budget-reserve
+and Almost-validation protections in temporary copies.
 
 ```sh
 uv run --locked ruff check .
@@ -185,8 +237,8 @@ Real-claim passage review, representative latency checks and the reviewed accept
 set remain release/demo gates. Advanced origin detection, compound assertions,
 automatic consistency rechecks and frontend integration remain outside this V1.
 
-Local verification for this PR: **197 tests passed** on Python 3.12; Ruff lint,
-format and whitespace checks passed. All three deliberate protection faults were
+Local verification after the verdict update: **228 tests passed** on Python 3.12; Ruff lint,
+format and whitespace checks passed. All four deliberate protection faults were
 detected. The localhost walkthrough passed submission/reuse and a fresh-process
 restart with identical saved records. No independent agent review or live research
 quality evaluation was performed. GitHub Actions results are separate from these

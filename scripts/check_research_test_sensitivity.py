@@ -10,6 +10,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "Almost semantic correction check bypassed",
+        "verdicts.py",
+        "        if not all(\n",
+        "        if False and not all(\n",
+        "tests/test_verdict_labels.py::test_each_failed_correction_check_prevents_almost[corrected_claim_supported]",
+    ),
+    (
         "cross-snapshot citation accepted",
         "evidence.py",
         "if assessment.citation.snapshot_id != source.id:",

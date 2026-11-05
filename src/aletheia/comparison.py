@@ -32,6 +32,25 @@ def fingerprint(sources, evidence):
     return digest(json.dumps(sorted(items, key=lambda v: json.dumps(v)), ensure_ascii=False))
 
 
+def decision_key(result):
+    correction = result.almost_correction
+    return (
+        result.verdict,
+        result.outcome,
+        result.unable_to_decide_reason,
+        tuple(
+            unit.text
+            for unit in (
+                correction.what_is_correct,
+                correction.what_needs_correction,
+                correction.corrected_claim,
+            )
+        )
+        if correction
+        else None,
+    )
+
+
 async def compare(storage, investigation, result, sources, evidence):
     if not investigation.parent_id:
         return None
@@ -75,6 +94,7 @@ async def compare(storage, investigation, result, sources, evidence):
     scope_changed = parent.result.assertion.text != result.assertion.text
     same = bool(before and before == after and not scope_changed)
     verdict_changed = parent.result.verdict != result.verdict
+    decision_changed = decision_key(parent.result) != decision_key(result)
     config_fields = ("model", "prompt_version", "application_version", "configuration")
     return Comparison(
         comparison_status="complete",
@@ -82,9 +102,10 @@ async def compare(storage, investigation, result, sources, evidence):
         scope_changed=scope_changed,
         sources=changes,
         verdict_changed=verdict_changed,
+        decision_changed=decision_changed,
         same_relevant_evidence=same,
         consistency_status="inconsistent"
-        if same and verdict_changed
+        if same and decision_changed
         else ("no_inconsistency_detected" if same else "not_comparable"),
         baseline_fingerprint=before,
         current_fingerprint=after,

@@ -10,8 +10,9 @@ from uuid import UUID, uuid4
 import aiosqlite
 
 from aletheia.contracts import Investigation, InvestigationEvent, InvestigationRequest
+from aletheia.result_migration import migrate_results
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 SCHEMA = (
     """CREATE TABLE claim_requests (
         id TEXT PRIMARY KEY, original_claim TEXT NOT NULL, context_json TEXT NOT NULL,
@@ -95,7 +96,7 @@ class Storage:
             await db.execute("BEGIN IMMEDIATE")
             try:
                 version = (await (await db.execute("PRAGMA user_version")).fetchone())[0]
-                if version not in (0, 1, SCHEMA_VERSION):
+                if version not in (0, 1, 2, SCHEMA_VERSION):
                     raise StorageError(
                         "Unsupported database schema version; use a compatible application."
                     )
@@ -122,6 +123,11 @@ class Storage:
                 if version == 1:
                     for statement in RESEARCH_SCHEMA:
                         await db.execute(statement)
+                if version in (1, 2):
+                    try:
+                        await migrate_results(db)
+                    except (ValueError, TypeError, KeyError):
+                        raise StorageError("Historical research result migration failed.") from None
                     await db.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
                 await db.commit()
             except BaseException:

@@ -158,9 +158,9 @@ Store execution `status` separately from `stage` and factual `verdict`.
 
 - Status: `queued`, `running`, `needs_clarification`, `completed`, `partial`, `failed`.
 - Stage: `interpreting`, `planning`, `searching`, `extracting`, `verifying`, `synthesizing`, `comparing`.
-- A completed investigation can legitimately have an `insufficient_evidence` verdict.
+- A completed investigation can legitimately have an `unable_to_decide` outcome with a null verdict.
 - A partial investigation contains usable findings but did not finish its intended work; its explanation must identify the missing work.
-- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `insufficient_evidence` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
+- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `unable_to_decide` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
 - A failed investigation has a null final verdict and a sanitized error record. Provider failure is never evidence that a claim is false.
 - Terminal records are immutable. Retrying creates a new version rather than modifying an old one.
 
@@ -264,14 +264,17 @@ Quotes from rejected passages remain available in the audit record but cannot su
 
 The model proposes evidence judgments; code enforces structural requirements. These requirements improve reliability without proving a source true or a semantic assessment correct.
 
-| Assertion verdict | Meaning |
+| Verdict label (API value) | Meaning |
 | --- | --- |
-| `supported` | Admissible evidence directly supports the scoped claim, with no unresolved material contradiction. |
-| `contradicted` | Admissible evidence directly contradicts the scoped claim, with no unresolved material support that would make the conclusion disputed. |
-| `mixed` | Material supporting and contradicting evidence remains unresolved, or the assertion is only partly supported under materially different conditions. |
-| `insufficient_evidence` | Available admissible evidence does not justify any of the above. Missing support alone is not contradiction. |
+| True (`true`) | Admissible evidence supports the scoped claim as written, without unresolved material contradiction. |
+| False (`false`) | Admissible evidence contradicts the scoped claim as written; no validated Almost correction has established a substantially correct core. |
+| Almost (`almost`) | A substantially correct core needs a specific correction or qualification. Requires cited explanations of what is correct, what needs changing, and an evidence-backed corrected claim, plus a separate semantic validation. |
 
-A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. Origins whose independence is `unknown` do not satisfy the two-origin bar; record the evidence for any claimed independence and explain in the finding's limitations when unknown independence prevents a definitive result. This does not remove the separate credible-synthesis exception: record why that synthesis is appropriate and what underlying evidence it covers. If that bar cannot be met, return insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
+`outcome` is separate from the verdict. Use `outcome: unable_to_decide`, `verdict: null`, and `unable_to_decide_reason: insufficient_evidence` or `conflicting_evidence` when research cannot establish an answer. A decided outcome has one of the three verdict strings and a null undecided reason. Execution `status` still describes queued/running/completed/partial/failed/needs-clarification work; it is not a truth label.
+
+Almost is not uncertainty, numeric proximity, or a renamed conflict category. The synthesis task may propose a complete `almost_correction`, with `what_is_correct`, `what_needs_correction`, and `corrected_claim`; each is a `{text, evidence_ids}` unit. Every unit must reference admitted evidence and independently meet the route's evidence requirements. A separate final check verifies each unit, preservation of the essential proposition, and the absence of unresolved conflict. The code assigns Almost only after those checks. A wholly false premise rewritten as a different fact cannot qualify. Conflicting evidence never enters the Almost path. A failed correction validation fails the final answer; an interrupted check discards the unchecked candidate and preserves only the previously validated finding as partial.
+
+A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. Origins whose independence is `unknown` do not satisfy the two-origin bar; record the evidence for any claimed independence and explain in the finding's limitations when unknown independence prevents a definitive result. This does not remove the separate credible-synthesis exception: record why that synthesis is appropriate and what underlying evidence it covers. If that bar cannot be met, return unable to decide for insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
 
 Add `qualification_flags` to each assertion finding, independently of its verdict. This is a list, not a mutually exclusive extra verdict:
 
@@ -286,9 +289,9 @@ Each flag is a record of `{type, dimension, explanation, evidence_ids}`:
 - `evidence_ids` is nonempty and refers only to admissible evidence assessments of the same assertion.
 - `explanation` states the specific difference, for example "compares 2025 output with a 2019 baseline", not a generic warning.
 
-The model proposes flags during assessment; code drops any flag with an unknown type or dimension, missing or inadmissible evidence IDs, or IDs from another assertion, and records the dropped flag in the audit trace. Multiple flags can coexist, including two flags of the same type on different dimensions. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without adding a fifth verdict.
+The model proposes flags during assessment; code drops any flag with an unknown type or dimension, missing or inadmissible evidence IDs, or IDs from another assertion, and records the dropped flag in the audit trace. Multiple flags can coexist, including two flags of the same type on different dimensions. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without conflating qualification with uncertainty.
 
-For a single assertion, the overall verdict matches its verdict. For a compound claim: all supported means supported; all contradicted means contradicted; any insufficient finding means overall insufficient evidence with established sub-findings retained; otherwise return mixed. This is a transparent summary convention, not a claim to evaluate arbitrary formal logic. In particular, one contradicted assertion plus one insufficient assertion remains overall `insufficient_evidence`; the summary must explicitly identify the contradicted part, and the client must display every assertion finding.
+For V1, the result's outcome, verdict, undecided reason and Almost correction must match its single assertion finding. Compound claims ask for clarification; aggregation of several assertions is deferred and must receive an explicit policy before implementation.
 
 Build explanations as typed units with evidence IDs. The application maps those IDs to public source URLs and local evidence endpoints. Validate final units against the assessed passages; repair once or remove invalid units and downgrade the finding if necessary. A failed final validation must not publish an apparently verified conclusion.
 
@@ -407,7 +410,7 @@ Milestones describe the full design; they are not all-or-nothing release gates. 
 | One scoped assertion per request; honest clarification/rejection for unsupported input shapes. | Up to three assertions and richer compound handling. |
 | Both services working; quick/deep routing on one pipeline; counterevidence search and a bounded follow-up/escalation path. | More sophisticated search planning or larger research budgets. |
 | Snapshot-scoped span citations, semantic support checks, basic duplicate/shared-origin detection, conservative unknown-independence handling, and the credible-synthesis exception. | Automated discovery of complicated syndication/origin relationships. |
-| Four verdicts, qualification flags, visible limitations, time/call bounds, and correct completed/partial/failed outcomes. | More elaborate source-quality analysis. |
+| Three verdict labels plus a separate unable-to-decide outcome, qualification flags, visible limitations, time/call bounds, and correct completed/partial/failed outcomes. | More elaborate source-quality analysis. |
 | Ordered persisted progress, saved reads with zero provider calls, explicit refresh versions, basic evidence/metadata comparison, and visible inconsistency flags. | Automatic consistency rechecks. |
 | Exact-request deduplication, refresh idempotency, and basic startup cleanup so crashed runs cannot remain running forever. | Advanced recovery; automatic resumable execution remains outside V1. |
 | Approximately 20 human-reviewed acceptance claims, transparent results, a real end-to-end demo, and navigable citations. | Expansion to 30–50 claims, external-model comparisons, and polished hosted replay presentation. |
@@ -420,7 +423,7 @@ Document any deferred capability in the implementation report and client. Deferr
 
 - Routing: direct record, medical-paper publication date versus treatment-effect claim, model-recommended quick with a consequential flag, no deep-to-quick downgrade, causal claims, ambiguity, compound limit, and evidence-driven escalation.
 - Evidence: fabricated IDs/URLs; unknown, out-of-range, cross-snapshot, unsupplied, duplicate, or reversed span IDs; quotation reconstruction; separate non-adjacent excerpts; prose/list/table segmentation; normalized-text offsets and versioning; numeric/date/scope mismatch; snippet-only results; duplicate/shared-origin reporting; unknown independence and the credible-synthesis exception.
-- Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, coexisting qualification flags, dropped flags (unknown dimension, missing, inadmissible, or other-assertion evidence IDs), explicit contradicted-plus-insufficient findings, and every implemented compound aggregation branch.
+- Decisions: True, False, and Almost with a validated cited correction; separate unable-to-decide reasons for conflict and insufficient evidence; malformed/missing corrections, preserved core, deadline before validation, and qualification flags. Compound claims remain outside V1.
 - Control flow: planner outputs cannot bypass query validation; only approved plans reach Tavily; quick/deep use the same executor with different policies; repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, normal-stop insufficient results versus budget-stop partial results, and deadline failure when no validated result exists.
 - Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, refresh idempotency, and immutable historical versions.

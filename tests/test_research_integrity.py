@@ -137,7 +137,7 @@ def test_unknown_shared_and_duplicate_origins_do_not_meet_deep_bar():
     )
     e1, e2 = admit(a1, s1, {1}), admit(a2, s2, {1})
     computed, _ = finding(assertion, "deep", [e1, e2], [s1, s2])
-    assert computed.verdict == "insufficient_evidence"  # two URLs, identical extracted content
+    assert computed.verdict is None  # two URLs, identical extracted content
     s2 = source("Different body.")
     a2 = judgment(
         s2,
@@ -147,10 +147,10 @@ def test_unknown_shared_and_duplicate_origins_do_not_meet_deep_bar():
         provenance_note="Same study.",
     )
     e2 = admit(a2, s2, {1})
-    assert finding(assertion, "deep", [e1, e2], [s1, s2])[0].verdict == "insufficient_evidence"
+    assert finding(assertion, "deep", [e1, e2], [s1, s2])[0].verdict is None
     a2.origin = "Study Two"
     e2 = admit(a2, s2, {1})
-    assert finding(assertion, "deep", [e1, e2], [s1, s2])[0].verdict == "supported"
+    assert finding(assertion, "deep", [e1, e2], [s1, s2])[0].verdict == "true"
 
 
 def test_fingerprint_excludes_run_ids_and_relation_but_includes_context_and_provenance():
@@ -252,7 +252,7 @@ async def test_migration_v1_preserves_claims_and_is_transactional(tmp_path):
     await old.initialize()
     assert await old.get(original.id) == original.model_copy(update={"reused": True})
     async with old.connection() as db:
-        assert (await (await db.execute("PRAGMA user_version")).fetchone())[0] == 2
+        assert (await (await db.execute("PRAGMA user_version")).fetchone())[0] == 3
         assert (await (await db.execute("SELECT COUNT(*) FROM research_records")).fetchone())[
             0
         ] == 0
@@ -342,6 +342,6 @@ def test_narrow_scope_is_context_not_support_for_a_broader_claim():
         text="All populations", kind="generalized", consequential=False, recommended_route="deep"
     )
     computed, dropped = finding(assertion, "deep", [contextual], [s])
-    assert computed.verdict == "insufficient_evidence"
+    assert computed.verdict is None
     assert computed.qualification_flags[0].dimension == "population"
     assert not dropped

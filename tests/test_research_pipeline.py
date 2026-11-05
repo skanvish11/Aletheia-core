@@ -37,7 +37,7 @@ async def test_complete_evidence_saved_reads_and_sse(settings):
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
         assert saved["status"] == "completed", saved
-        assert saved["result"]["verdict"] == "supported"
+        assert saved["result"]["verdict"] == "true"
         assert saved["route"] == "quick"
         assert saved["result"]["budget_used"] == {"model": 5, "search": 2, "extract": 1}
         assert saved["result"]["token_usage"]["total_tokens"] == 150
@@ -81,14 +81,14 @@ async def test_complete_evidence_saved_reads_and_sse(settings):
 @pytest.mark.parametrize(
     ("options", "status", "verdict"),
     [
-        ({"relation": "contradicts"}, "completed", "contradicted"),
-        ({"relation": "mixed", "source_count": 2}, "completed", "mixed"),
-        ({"deep": True}, "completed", "insufficient_evidence"),
-        ({"deep": True, "synthesis": True}, "completed", "supported"),
-        ({"deep": True, "independent": True, "source_count": 2}, "completed", "supported"),
-        ({"empty": True}, "completed", "insufficient_evidence"),
-        ({"extraction_failure": True}, "completed", "insufficient_evidence"),
-        ({"scope_match": False}, "completed", "insufficient_evidence"),
+        ({"relation": "contradicts"}, "completed", "false"),
+        ({"relation": "mixed", "source_count": 2}, "completed", None),
+        ({"deep": True}, "completed", None),
+        ({"deep": True, "synthesis": True}, "completed", "true"),
+        ({"deep": True, "independent": True, "source_count": 2}, "completed", "true"),
+        ({"empty": True}, "completed", None),
+        ({"extraction_failure": True}, "completed", None),
+        ({"scope_match": False}, "completed", None),
         ({"ambiguous": True}, "needs_clarification", None),
         ({"invalid_citation": True}, "failed", None),
         ({"invalid_plan": True}, "failed", None),
@@ -102,6 +102,20 @@ async def test_outcomes(settings, options, status, verdict):
         saved = await submit(client)
         assert saved["status"] == status, saved
         assert (saved["result"]["verdict"] if saved["result"] else None) == verdict
+        if saved["result"]:
+            result = saved["result"]
+            assert result["outcome"] == ("decided" if verdict else "unable_to_decide")
+            expected_reason = (
+                None
+                if verdict
+                else (
+                    "conflicting_evidence"
+                    if options.get("relation") == "mixed"
+                    else "insufficient_evidence"
+                )
+            )
+            assert result["unable_to_decide_reason"] == expected_reason
+            assert result["almost_correction"] is None
         if options.get("invalid_plan") or options.get("ambiguous"):
             assert "/search" not in providers.calls
         if options.get("invalid_citation"):
@@ -148,7 +162,7 @@ async def test_refresh_idempotency_comparison_and_no_old_verdict_in_prompts(sett
         assert len(ids) == 1
         second = await terminal(client, ids.pop())
         assert second["version"] == 2 and second["parent_id"] == first["id"]
-        assert second["result"]["verdict"] == "contradicted"
+        assert second["result"]["verdict"] == "false"
         assert (await client.get(path)).json() == first
         comparison = (await client.get(second["links"]["self"] + "/comparison")).json()
         assert comparison["same_relevant_evidence"] is True
@@ -158,7 +172,7 @@ async def test_refresh_idempotency_comparison_and_no_old_verdict_in_prompts(sett
             if name not in {"Synthesis", "ExplanationCheck"}:
                 assert "verdict" not in json.dumps(data)
             else:
-                assert data["finding"]["verdict"] == "contradicted"
+                assert data["finding"]["verdict"] == "false"
         mismatch = await client.post(
             second["links"]["self"] + "/refresh", headers={"Idempotency-Key": "refresh-one"}
         )
@@ -176,7 +190,7 @@ async def test_limits_preserve_valid_partial_and_no_unbudgeted_calls(settings):
         saved = await submit(client)
         assert saved["status"] == "partial", saved
         assert saved["stop_reason"] == "budget_exhausted"
-        assert saved["result"]["verdict"] == "insufficient_evidence"
+        assert saved["result"]["verdict"] is None
         assert providers.calls.count("/search") == 1
         assert "/extract" not in providers.calls
 
@@ -273,7 +287,7 @@ async def test_finalization_deadline_keeps_finding_but_discards_unchecked_prose(
         saved = await submit(client)
         assert saved["status"] == "partial"
         assert saved["stop_reason"] == "deadline_exceeded"
-        assert saved["result"]["verdict"] == "supported"
+        assert saved["result"]["verdict"] == "true"
         assert saved["result"]["explanation"] == []
         assert not any(name == "ExplanationCheck" for name, _ in providers.model_inputs)
 

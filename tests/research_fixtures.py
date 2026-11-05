@@ -17,6 +17,8 @@ class Providers:
         self,
         *,
         relation="supports",
+        almost=False,
+        invalid_correction=False,
         deep=False,
         empty=False,
         ambiguous=False,
@@ -113,16 +115,47 @@ class Providers:
                 "gap": None,
             }
         if schema == "Synthesis":
+            evidence_id = data["evidence"][0]["id"]
+            correction = (
+                {
+                    "what_is_correct": {
+                        "text": "The Archive did open around that time.",
+                        "evidence_ids": [evidence_id],
+                    },
+                    "what_needs_correction": {
+                        "text": "Its opening year was 2001, not 2000.",
+                        "evidence_ids": [evidence_id],
+                    },
+                    "corrected_claim": {
+                        "text": "The Archive opened in 2001.",
+                        "evidence_ids": [evidence_id],
+                    },
+                }
+                if o["almost"]
+                else None
+            )
             return {
+                "almost_correction": correction,
                 "units": [
                     {
-                        "text": "The record states that the Archive opened in 2000.",
+                        "text": (
+                            "The opening occurred in 2001; the claim needs its year corrected."
+                            if o["almost"]
+                            else "The record states that the Archive opened in 2000."
+                        ),
                         "evidence_ids": [data["evidence"][0]["id"]],
                     }
-                ]
+                ],
             }
         if schema == "ExplanationCheck":
-            return {"supported_units": [] if o["invalid_explanation"] else [0]}
+            return {
+                "supported_units": [] if o["invalid_explanation"] else [0],
+                "core_supported": o["almost"],
+                "correction_supported": o["almost"],
+                "corrected_claim_supported": o["almost"] and not o["invalid_correction"],
+                "preserves_core": o["almost"],
+                "no_unresolved_conflict": o["almost"],
+            }
         raise AssertionError(schema)
 
     async def handle(self, request):

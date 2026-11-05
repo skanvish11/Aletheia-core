@@ -12,7 +12,7 @@ from aletheia.research_contracts import InvestigationResult, Snapshot
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v1"
+APPLICATION_VERSION = "research-v2"
 
 
 class Pipeline:
@@ -84,7 +84,7 @@ class Pipeline:
                     baseline_sources if round_index == 0 else (),
                 )
                 computed, _ = finding(assertion, assigned_route, evidence, sources)
-                if computed.verdict in {"supported", "contradicted"}:
+                if computed.verdict in {"true", "false"}:
                     stop_reason = "evidence_sufficient"
                     break
                 if assigned_route == "quick":
@@ -97,7 +97,7 @@ class Pipeline:
                     )
                 gap = gap or (
                     "Resolve supporting and contradicting evidence."
-                    if computed.verdict == "mixed"
+                    if computed.unable_to_decide_reason == "conflicting_evidence"
                     else "Find direct records or independent evidence for the exact scope."
                 )
             else:
@@ -137,7 +137,6 @@ class Pipeline:
         computed, dropped = finding(assertion, assigned_route, evidence, sources)
         for evidence_id in dropped:
             await emit("qualification_flag_dropped", {"evidence_id": evidence_id})
-        limitations.extend(computed.limitations)
         limitations.extend(note for s in sources for note in s.limitations)
         limitations.extend(note for e in evidence for note in e.assessment.limitations)
         if any(e.type == "source_rejected" for e in await self.storage.events(investigation.id)):
@@ -146,7 +145,9 @@ class Pipeline:
         if budget.remaining_seconds() > 0:
             await emit("stage_started", {"stage": "synthesizing"}, stage="synthesizing")
             try:
-                explanation = await synthesize(tasks, assertion, computed, evidence)
+                computed, explanation = await synthesize(
+                    tasks, assertion, computed, evidence, assigned_route, sources
+                )
             except ProviderError as exc:
                 if exc.code not in {ErrorCode.BUDGET, ErrorCode.DEADLINE}:
                     await self.storage.finish(
@@ -172,10 +173,14 @@ class Pipeline:
         else:
             partial, stop_reason = True, "deadline_exceeded"
             limitations.append("The hard deadline prevented a generated explanation.")
+        limitations.extend(computed.limitations)
         result = InvestigationResult(
             assertion=assertion,
             scope_note=plan.scope_note,
+            outcome=computed.outcome,
             verdict=computed.verdict,
+            unable_to_decide_reason=computed.unable_to_decide_reason,
+            almost_correction=computed.almost_correction,
             finding=computed,
             explanation=explanation,
             limitations=list(dict.fromkeys(limitations)),

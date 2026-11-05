@@ -2,7 +2,7 @@
 
 > This document records the earlier milestone. [Step 3](research-pipeline.md) adds
 > opt-in research execution, saved evidence/results, refresh, comparisons and progress.
-> Its scope document describes current behavior and the schema-2 migration.
+> Its scope document describes current behavior and the schema-3 migration.
 
 This milestone implements local claim submission, persisted queued investigations,
 exact-request reuse, retrieval, health, and startup interruption cleanup. It does not
