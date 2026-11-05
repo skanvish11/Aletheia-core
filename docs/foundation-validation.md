@@ -13,6 +13,9 @@ Validated November 4, 2026 (America/Los_Angeles).
 
 ## Observed local results
 
+This section records the original foundation validation. The PR review follow-up
+below records the newer 80-test suite; the earlier 57-test result is retained as history.
+
 | Check | Result |
 | --- | --- |
 | `ruff check .` | Passed. |
@@ -62,3 +65,23 @@ HTTP errors or failed database-integrity assertions. The candidate fingerprint
 change did not show a consistent gain across workloads and was not applied.
 The unchanged backend and candidate each passed the 57-test offline suite.
 The benchmark is opt-in and does not add machine-dependent latency gates to CI.
+
+## PR #8 review follow-up
+
+The [review disposition](pr8-review-followup.md) records six fixes, two intentional
+milestone limitations, and two optional suggestions. The revised suite passes all
+80 tests locally, including maximum raw/escaped Unicode bodies, unchanged rejected
+foreign databases, original V1 compatibility, bounded readiness retries, explicit
+SQLite cleanup, and precisely scoped fault injection.
+
+An independent reviewer reran all 80 tests and both fault-injection checks. Its
+schema-prefix finding was corrected (`GLOB 'sqlite_*'` avoids SQL LIKE's underscore
+wildcard), with a regression proving a foreign `sqliteuser` table is not overlooked.
+No remaining blocking findings were reported. Ruff lint and format checks pass.
+
+Both deliberate faults are still detected, and the real localhost walkthrough
+passes submission/retrieval/reuse and restart persistence with child-owned sockets.
+A small benchmark correctness run covers 100, 1,000, and 10,000 saved records. The
+historical 14,400-request performance report is unchanged; no new latency claim is made.
+CI adds Linux and Windows script runs without performance thresholds. Remote outcomes
+must be checked on the current PR commit, independently of these local results.

@@ -1,5 +1,6 @@
 """Confirm two critical regression tests reject deliberate faults in temporary copies."""
 
+import ast
 import os
 import shutil
 import subprocess
@@ -24,6 +25,28 @@ MUTATIONS = (
 )
 
 
+def mutate_submission(source: str, old: str, new: str) -> str:
+    """Alter exactly one intended expression inside Storage.submit, or fail closed."""
+    tree = ast.parse(source)
+    storage = next(
+        node for node in tree.body if isinstance(node, ast.ClassDef) and node.name == "Storage"
+    )
+    submission = next(
+        node
+        for node in storage.body
+        if isinstance(node, ast.AsyncFunctionDef) and node.name == "submit"
+    )
+    lines = source.splitlines(keepends=True)
+    body = "".join(lines[submission.lineno - 1 : submission.end_lineno])
+    if body.count(old) != 1:
+        raise ValueError("Mutation must match exactly once inside Storage.submit.")
+    return (
+        "".join(lines[: submission.lineno - 1])
+        + body.replace(old, new, 1)
+        + "".join(lines[submission.end_lineno :])
+    )
+
+
 def main() -> None:
     for name, old, new, test in MUTATIONS:
         with tempfile.TemporaryDirectory(prefix="aletheia-mutation-") as directory:
@@ -35,9 +58,7 @@ def main() -> None:
             shutil.copy2(ROOT / "pyproject.toml", work / "pyproject.toml")
             target = work / "src/aletheia/storage.py"
             original = target.read_text()
-            if old not in original:
-                raise SystemExit(f"Mutation target changed: {name}")
-            target.write_text(original.replace(old, new))
+            target.write_text(mutate_submission(original, old, new))
             environment = {**os.environ, "PYTHONPATH": str(work / "src")}
             result = subprocess.run(
                 [sys.executable, "-m", "pytest", "-q", test],

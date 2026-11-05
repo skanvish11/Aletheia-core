@@ -6,26 +6,22 @@ Compare sources with --variant baseline=/path/to/baseline/src --variant candidat
 
 import argparse
 import asyncio
-import hashlib
 import json
 import math
-import os
 import platform
 import random
-import socket
 import sqlite3
 import statistics
-import subprocess
-import sys
 import tempfile
 import time
-from contextlib import contextmanager
+from contextlib import closing
 from datetime import UTC, datetime
 from importlib.metadata import version
 from pathlib import Path
 from uuid import NAMESPACE_URL, uuid5
 
 import httpx
+from local_server import server, source_digest
 
 from aletheia.contracts import InvestigationRequest
 from aletheia.storage import Storage
@@ -49,7 +45,7 @@ def identity(index):
 async def seed(path, size):
     await Storage(path).initialize()
     # Setup is excluded from timings. Terminal fixtures leave active-queue capacity free.
-    with sqlite3.connect(path) as db:
+    with closing(sqlite3.connect(path)) as db, db:
         db.execute("PRAGMA foreign_keys = ON")
         for index in range(size):
             payload = fixture(index)
@@ -83,46 +79,6 @@ async def seed(path, size):
                     (record_id, 2, STAMP, "investigation_failed"),
                 ],
             )
-
-
-def source_digest(source):
-    digest = hashlib.sha256()
-    for file in sorted((source / "aletheia").glob("*.py")):
-        digest.update(file.name.encode())
-        digest.update(file.read_bytes())
-    return digest.hexdigest()
-
-
-@contextmanager
-def server(directory, source):
-    with socket.socket() as probe:
-        probe.bind(("127.0.0.1", 0))
-        port = probe.getsockname()[1]
-    process = subprocess.Popen(
-        [
-            sys.executable,
-            str(Path(__file__).resolve()),
-            "--serve",
-            str(directory / "bench.db"),
-            "--port",
-            str(port),
-            "--expected-source",
-            source_digest(source),
-        ],
-        cwd=directory,
-        env={**os.environ, "PYTHONPATH": str(source)},
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL,
-    )
-    try:
-        yield process, f"http://127.0.0.1:{port}"
-    finally:
-        process.terminate()
-        try:
-            process.wait(timeout=5)
-        except subprocess.TimeoutExpired:
-            process.kill()
-            process.wait(timeout=5)
 
 
 async def ready(client, process):
@@ -209,7 +165,7 @@ async def scenario(client, name, size, samples, warmup, concurrency):
 
 
 def verify_database(path, seeded, created):
-    with sqlite3.connect(path) as db:
+    with closing(sqlite3.connect(path)) as db, db:
         for table in ("claim_requests", "investigations"):
             assert db.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0] == seeded + created
         assert db.execute("SELECT COUNT(*) FROM events").fetchone()[0] == 2 * seeded + created
@@ -260,7 +216,10 @@ async def benchmark(args):
                     directory = Path(temporary)
                     await seed(directory / "bench.db", size)
                     total_created = 0
-                    with server(directory, source) as (process, base_url):
+                    with server(directory, source, "bench.db", queue_limit=10000) as (
+                        process,
+                        base_url,
+                    ):
                         async with httpx.AsyncClient(
                             base_url=base_url,
                             trust_env=False,
@@ -272,7 +231,7 @@ async def benchmark(args):
                         ) as client:
                             await ready(client, process)
                             for name in SCENARIOS:
-                                with sqlite3.connect(directory / "bench.db") as db:
+                                with closing(sqlite3.connect(directory / "bench.db")) as db:
                                     starting_rows = db.execute(
                                         "SELECT COUNT(*) FROM investigations"
                                     ).fetchone()[0]
@@ -327,27 +286,7 @@ def main():
     parser.add_argument("--repetitions", type=int, default=3)
     parser.add_argument("--variant", action="append", help="label=/absolute/path/to/src")
     parser.add_argument("--output", type=Path, default=Path("benchmark-results.json"))
-    parser.add_argument("--serve", type=Path, help=argparse.SUPPRESS)
-    parser.add_argument("--port", type=int, help=argparse.SUPPRESS)
-    parser.add_argument("--expected-source", help=argparse.SUPPRESS)
     args = parser.parse_args()
-    if args.serve:
-        import uvicorn
-
-        import aletheia
-        from aletheia.api import create_app
-        from aletheia.config import Settings
-
-        if source_digest(Path(aletheia.__file__).resolve().parents[1]) != args.expected_source:
-            raise RuntimeError("Server imported a different source variant than requested.")
-        uvicorn.run(
-            create_app(Settings(database_path=args.serve, queue_limit=10000)),
-            host="127.0.0.1",
-            port=args.port,
-            workers=1,
-            access_log=False,
-        )
-        return
     if (
         args.samples < 1
         or args.warmup < 1

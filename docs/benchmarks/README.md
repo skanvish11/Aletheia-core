@@ -1,5 +1,10 @@
 # Foundation performance baseline
 
+This is a historical measurement of the revisions listed below. PR #8 review fixes
+subsequently changed request-size/database guards and the benchmark's connection
+cleanup and server startup. The small post-fix checks validate correctness and cleanup;
+they do not update these latency measurements or establish a new performance result.
+
 ## Decision
 
 Keep the current backend design and implementation. No application cache, flat-array rewrite, packed IDs, or connection-pool redesign was added. The proposed fingerprint/serialization change showed mixed results across workloads and database sizes, so it remains an unapplied experiment. The measurements do not justify a larger optimization project before provider integration.
@@ -79,4 +84,4 @@ uv run --locked python scripts/benchmark_foundation.py --repetitions 4 \
   --output benchmark-comparison.json
 ```
 
-Temporary benchmark databases and server processes are removed automatically. The two source copies made in the reproduction example can be removed after inspection. Keep timing runs separate from tests and other heavy work. The script is opt-in and is not a latency gate in CI.
+Temporary benchmark databases and server processes are removed automatically. SQLite connections close explicitly, and the child keeps its chosen localhost socket open from binding through serving. The two source copies made in the reproduction example can be removed after inspection. Keep timing runs separate from tests and other heavy work. Full timing runs are opt-in; CI runs only a small correctness/cleanup check on Linux and Windows, without a latency gate.

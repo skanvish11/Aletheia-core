@@ -84,10 +84,25 @@ class Storage:
                     raise StorageError(
                         "Unsupported database schema version; use a compatible application."
                     )
+                schema = await (
+                    await db.execute("SELECT sql FROM sqlite_schema WHERE name NOT GLOB 'sqlite_*'")
+                ).fetchall()
                 if version == 0:
+                    if schema:
+                        raise StorageError(
+                            "Database is not empty; choose a new Aletheia database file."
+                        )
                     for statement in SCHEMA:
                         await db.execute(statement)
                     await db.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
+                elif {" ".join(row[0].split()) for row in schema} != {
+                    " ".join(statement.split()) for statement in SCHEMA
+                }:
+                    # Version alone does not establish ownership. Accept the original V1
+                    # schema, including databases created before this guard was added.
+                    raise StorageError(
+                        "Database schema does not match Aletheia; no initialization performed."
+                    )
                 await db.commit()
             except BaseException:
                 await db.rollback()

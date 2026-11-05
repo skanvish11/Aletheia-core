@@ -32,12 +32,17 @@ belong in documentation, tests, logs, or commits.
 | --- | --- | --- |
 | `ALETHEIA_DATABASE_PATH` | `data/aletheia.sqlite3` | Persistent file path; parent directories created on startup. |
 | `ALETHEIA_QUEUE_LIMIT` | `100` | Integer 1–10000; counts queued and running investigations. |
-| `ALETHEIA_MAX_BODY_BYTES` | `65536` | Integer 1024–1048576; actual streamed bytes are bounded. |
+| `ALETHEIA_MAX_BODY_BYTES` | `327680` (320 KiB) | Integer 1024–1048576; actual streamed bytes are bounded. |
 
 Database paths are relative to the server's working directory unless absolute.
 Database files, journals, environments, and test artifacts are ignored by Git.
 Schema version 1 is recorded in SQLite's `user_version`; unsupported versions fail
 startup without being downgraded. Future schema changes must add explicit migrations.
+Initialization accepts an empty, unversioned database or the exact existing Aletheia
+version-1 schema. It rejects unrelated tables, views, indexes, and triggers before
+schema creation, version changes, WAL configuration, or restart recovery. Custom
+schema additions require an explicit migration; `user_version = 1` alone does not
+establish that a database belongs to Aletheia.
 
 ## API behavior
 
@@ -62,6 +67,10 @@ or explicitly null. Unknown fields and non-string values are rejected. A null co
 object is invalid; omit it or provide `{}`. Oversized bodies return `413`, validation
 errors `422`, and database/queue failures `503`. Error responses do not echo submitted
 values or internal database paths.
+The default byte limit accommodates all allowed fields at their maximum lengths,
+including non-BMP Unicode encoded as JSON surrogate escapes. Extra JSON whitespace
+still counts toward the limit, and an explicitly configured smaller limit can reject
+a request whose individual fields otherwise satisfy the schema.
 
 The matching key hashes outer-trimmed, Unicode-NFC claim text plus canonical JSON
 context. Case, punctuation, numbers, dates, internal whitespace, and context values
@@ -74,6 +83,17 @@ creates the request, investigation, and sequence-1 queued event. Reuse works eve
 the queue is full and appends no event. Events are persisted internally, not streamed yet.
 On restart, queued records remain queued; leftover running records become failed with
 an interruption reason and a terminal event in the same transaction. No work is resumed.
+
+The Step 1 queue does not drain: after 100 distinct submissions at the default limit,
+new submissions return `503`, including after a restart. Reads and exact reuse remain
+available. Step 3 adds the worker that consumes queued work. For repeated experiments,
+point `ALETHEIA_DATABASE_PATH` at a new disposable database rather than deleting saved
+investigations or silently evicting queued work.
+
+Resubmitting an interrupted/failed request returns its existing terminal record; it
+does not retry research. Explicit retry/refresh must create a new version and remains
+future work. Optional context normalization and transaction-helper cleanup are tracked
+in the [PR review follow-up](pr8-review-followup.md).
 
 ## Acceptance checklist
 
@@ -90,6 +110,9 @@ an interruption reason and a terminal event in the same transaction. No work is 
 | Recovery is transactional and happens once | `test_recovery_is_atomic_ordered_and_idempotent` |
 | Schema guard, uniqueness, non-database safety | `test_schema_version_and_unique_constraints`, `test_non_database_file_is_not_overwritten` |
 | Streamed body bound cannot trust Content-Length | `test_body_limit_checks_stream_even_with_false_content_length` |
+| Maximum Unicode input fits the default; total byte bound remains enforced | `test_maximum_unicode_request_fits_default_body_limit`, `test_total_body_limit_still_rejects_excess_whitespace` |
+| Foreign databases remain unchanged; existing V1 databases reopen | `test_foreign_database_rejected_without_changes`, `test_original_v1_database_is_accepted` |
+| Development checks close connections, retry briefly, and mutate only submissions | `tests/test_review_regressions.py` |
 | DB health failures and errors are sanitized | `test_health_and_database_failure`, `test_sqlite_failure_redacted` |
 | Settings, missing credentials, privacy | `tests/test_config.py`, `test_validation_does_not_echo_supplied_secrets` |
 | No network or real dotenv access in suite | pytest-socket default settings; autouse `forbid_dotenv` fixture |
@@ -124,6 +147,9 @@ that targeted tests fail. The second starts a temporary localhost server, exerci
 submission/retrieval/reuse over HTTP, restarts the process, and checks persistence.
 It uses a temporary working directory and database, loads no project dotenv file,
 and bypasses HTTP proxy settings for local requests. Neither script calls providers.
+Each server child binds port 0 and keeps that socket open through Uvicorn startup;
+it publishes the chosen address without a release/rebind race. CI also runs the
+localhost walkthrough and a small benchmark correctness check on Linux and Windows.
 
 ## Performance baseline
 
@@ -137,7 +163,8 @@ uv run --locked python scripts/benchmark_foundation.py --output benchmark-result
 See the [measured comparison and methodology](benchmarks/README.md). The retained
 four-repetition run covered 14,400 measured requests with zero observed HTTP errors
 or failed integrity assertions. A proposed fingerprint-preparation change produced
-mixed performance results and was not applied. The production backend is unchanged.
+mixed performance results and was not applied. The historical report predates the
+PR review fixes; those fixes do not apply the performance candidate.
 Timing is deliberately not a CI pass/fail gate; correctness tests remain mandatory.
 
 ## Manual walkthrough

@@ -15,7 +15,8 @@ class ConfigurationError(Exception):
 class Settings:
     database_path: Path = Path("data/aletheia.sqlite3")
     queue_limit: int = 100
-    max_body_bytes: int = 65_536
+    # All 24,000 allowed characters may use 12-byte escaped surrogate pairs in JSON.
+    max_body_bytes: int = 327_680
 
     def __post_init__(self) -> None:
         if (
@@ -39,7 +40,7 @@ class Settings:
                     os.environ.get("ALETHEIA_DATABASE_PATH", "data/aletheia.sqlite3")
                 ),
                 queue_limit=int(os.environ.get("ALETHEIA_QUEUE_LIMIT", "100")),
-                max_body_bytes=int(os.environ.get("ALETHEIA_MAX_BODY_BYTES", "65536")),
+                max_body_bytes=int(os.environ.get("ALETHEIA_MAX_BODY_BYTES", "327680")),
             )
         except (ValueError, TypeError):
             raise ConfigurationError(
