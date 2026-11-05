@@ -280,7 +280,13 @@ Add `qualification_flags` to each assertion finding, independently of its verdic
 | `misleading_comparison` | The claim compares materially different populations, dates, units, baselines, or conditions as though they were equivalent. |
 | `narrow_scope` | Evidence applies to a materially narrower population, timeframe, or condition than the claim implies. |
 
-Each flag includes a short explanation and evidence IDs. Multiple flags can coexist. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without adding a fifth verdict.
+Each flag is a record of `{type, dimension, explanation, evidence_ids}`:
+
+- `dimension` names what differs: `population`, `timeframe`, `units`, `baseline`, `condition`, `jurisdiction`, or `definition`. These cover the comparison terms above and the scope mismatches recorded under evidence admission rule 5.
+- `evidence_ids` is nonempty and refers only to admissible evidence assessments of the same assertion.
+- `explanation` states the specific difference, for example "compares 2025 output with a 2019 baseline", not a generic warning.
+
+The model proposes flags during assessment; code drops any flag with an unknown type or dimension, missing or inadmissible evidence IDs, or IDs from another assertion, and records the dropped flag in the audit trace. Multiple flags can coexist, including two flags of the same type on different dimensions. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without adding a fifth verdict.
 
 For a single assertion, the overall verdict matches its verdict. For a compound claim: all supported means supported; all contradicted means contradicted; any insufficient finding means overall insufficient evidence with established sub-findings retained; otherwise return mixed. This is a transparent summary convention, not a claim to evaluate arbitrary formal logic. In particular, one contradicted assertion plus one insufficient assertion remains overall `insufficient_evidence`; the summary must explicitly identify the contradicted part, and the client must display every assertion finding.
 
@@ -414,7 +420,7 @@ Document any deferred capability in the implementation report and client. Deferr
 
 - Routing: direct record, medical-paper publication date versus treatment-effect claim, model-recommended quick with a consequential flag, no deep-to-quick downgrade, causal claims, ambiguity, compound limit, and evidence-driven escalation.
 - Evidence: fabricated IDs/URLs; unknown, out-of-range, cross-snapshot, unsupplied, duplicate, or reversed span IDs; quotation reconstruction; separate non-adjacent excerpts; prose/list/table segmentation; normalized-text offsets and versioning; numeric/date/scope mismatch; snippet-only results; duplicate/shared-origin reporting; unknown independence and the credible-synthesis exception.
-- Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, coexisting qualification flags, explicit contradicted-plus-insufficient findings, and every implemented compound aggregation branch.
+- Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, coexisting qualification flags, dropped flags (unknown dimension, missing, inadmissible, or other-assertion evidence IDs), explicit contradicted-plus-insufficient findings, and every implemented compound aggregation branch.
 - Control flow: planner outputs cannot bypass query validation; only approved plans reach Tavily; quick/deep use the same executor with different policies; repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, normal-stop insufficient results versus budget-stop partial results, and deadline failure when no validated result exists.
 - Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, refresh idempotency, and immutable historical versions.
