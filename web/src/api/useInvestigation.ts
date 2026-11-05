@@ -107,5 +107,12 @@ export function useInvestigation(source: DataSource) {
     [source, open],
   )
 
-  return { state, open, submit }
+  /** Leave the current investigation (stops following its progress). */
+  const close = useCallback(() => {
+    stop()
+    currentId.current = null
+    setState(EMPTY)
+  }, [stop])
+
+  return { state, open, submit, close }
 }

@@ -31,8 +31,18 @@ export interface DataSource {
 
 const API_BASE = import.meta.env.VITE_API_BASE ?? '/api'
 
+const UNREACHABLE =
+  'Couldn’t reach the Aletheia backend. Start it on this computer (see the README), then try again.'
+
 async function getJson<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, init)
+  let response: Response
+  try {
+    response = await fetch(`${API_BASE}${path}`, init)
+  } catch {
+    throw new Error(UNREACHABLE)
+  }
+  // The dev proxy answers 502/504 when nothing is listening behind it.
+  if (response.status === 502 || response.status === 504) throw new Error(UNREACHABLE)
   if (!response.ok) {
     throw new Error(`${init?.method ?? 'GET'} ${path} failed with ${response.status}`)
   }

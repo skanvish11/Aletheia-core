@@ -1,69 +1,62 @@
-import type {
-  AssertionFinding,
-  EvidenceResponse,
-  ExplanationUnit,
-  InvestigationResult,
-} from '../api/types'
+import type { AssertionFinding, ExplanationUnit, QualificationFlag } from '../api/types'
 import { DIMENSION_LABEL, FLAG_LABEL, VERDICT_LABEL } from '../labels'
+import { Citations } from './Cite'
 
-/** Citation numbers follow the order of assessments in the evidence response. */
-function citationNumbers(evidence: EvidenceResponse | null): Map<string, number> {
-  return new Map((evidence?.assessments ?? []).map((a, i) => [a.id, i + 1]))
-}
-
-function Citations({ ids, numbers }: { ids: string[]; numbers: Map<string, number> }) {
-  return (
-    <>
-      {ids.map((id) => (
-        <a key={id} className="cite" href={`#evidence-${id}`} title={`Evidence ${id}`}>
-          [{numbers.get(id) ?? '?'}]
-        </a>
-      ))}
-    </>
-  )
-}
-
-function Units({ units, numbers }: { units: ExplanationUnit[]; numbers: Map<string, number> }) {
+export function Units({ units }: { units: ExplanationUnit[] }) {
   return (
     <>
       {units.map((unit, i) => (
         <p key={i}>
-          {unit.text} <Citations ids={unit.evidence_ids} numbers={numbers} />
+          {unit.text}
+          <Citations ids={unit.evidence_ids} />
         </p>
       ))}
     </>
   )
 }
 
-export function VerdictBadge({ verdict }: { verdict: AssertionFinding['verdict'] }) {
-  return <span className={`badge verdict-${verdict}`}>{VERDICT_LABEL[verdict]}</span>
+export function Verdict({ verdict }: { verdict: AssertionFinding['verdict'] }) {
+  return <span className={`verdict verdict-${verdict}`}>{VERDICT_LABEL[verdict]}</span>
 }
 
-function FindingCard({ finding, numbers }: { finding: AssertionFinding; numbers: Map<string, number> }) {
+/** A qualification: the one tinted surface on the page. */
+export function Flag({ flag }: { flag: QualificationFlag }) {
   return (
-    <article className="card finding">
-      <header className="finding-head">
-        <VerdictBadge verdict={finding.verdict} />
-        <span className="muted">{finding.route === 'deep' ? 'Deeper research' : 'Quick check'}</span>
-      </header>
-      <p className="scoped">{finding.scoped_text}</p>
+    <div className="flag" role="note">
+      <p className="flag-title">
+        {FLAG_LABEL[flag.type]} <span className="flag-dimension">· {DIMENSION_LABEL[flag.dimension]}</span>
+      </p>
+      <p>
+        {flag.explanation}
+        <Citations ids={flag.evidence_ids} />
+      </p>
+    </div>
+  )
+}
 
-      {finding.qualification_flags.map((flag, i) => (
-        <div key={i} className="flag" role="note">
-          <strong>
-            {FLAG_LABEL[flag.type]} · {DIMENSION_LABEL[flag.dimension]}
-          </strong>
-          <p>
-            {flag.explanation} <Citations ids={flag.evidence_ids} numbers={numbers} />
-          </p>
-        </div>
-      ))}
-      {finding.qualification_check === 'unknown' && (
-        <p className="muted">Comparison and scope were not assessed for this finding.</p>
+/**
+ * One assertion's finding. With a single assertion the conclusion above already
+ * shows its verdict and flags, so they are repeated here only for compound claims.
+ */
+function Finding({ finding, compound }: { finding: AssertionFinding; compound: boolean }) {
+  const route = finding.route === 'deep' ? 'Deeper research' : 'Quick check'
+  return (
+    <article className="finding">
+      {compound ? (
+        <p className="finding-head">
+          <span className="meta">Assertion {finding.position} · </span>
+          <Verdict verdict={finding.verdict} />
+          <span className="meta"> · {route}</span>
+        </p>
+      ) : (
+        <p className="meta">{route}</p>
       )}
-
-      <Units units={finding.explanation} numbers={numbers} />
-
+      <p className="scoped">{finding.scoped_text}</p>
+      {compound && finding.qualification_flags.map((flag, i) => <Flag key={i} flag={flag} />)}
+      {finding.qualification_check === 'unknown' && (
+        <p className="meta">Comparison and scope were not assessed for this finding.</p>
+      )}
+      <Units units={finding.explanation} />
       {finding.limitations.length > 0 && (
         <ul className="limitations">
           {finding.limitations.map((l, i) => (
@@ -75,36 +68,14 @@ function FindingCard({ finding, numbers }: { finding: AssertionFinding; numbers:
   )
 }
 
-export function Findings({
-  result,
-  evidence,
-}: {
-  result: InvestigationResult
-  evidence: EvidenceResponse | null
-}) {
-  const numbers = citationNumbers(evidence)
+export function Findings({ findings }: { findings: AssertionFinding[] }) {
+  const sorted = findings.slice().sort((a, b) => a.position - b.position)
   return (
-    <section aria-labelledby="findings-heading">
-      <h2 id="findings-heading">Findings</h2>
-      <div className="summary">
-        <Units units={result.summary} numbers={numbers} />
-      </div>
-      {result.findings
-        .slice()
-        .sort((a, b) => a.position - b.position)
-        .map((finding) => (
-          <FindingCard key={finding.assertion_id} finding={finding} numbers={numbers} />
-        ))}
-      {result.conflicts.length + result.limitations.length > 0 && (
-        <div className="card">
-          <h3>Limitations</h3>
-          <ul className="limitations">
-            {[...result.conflicts, ...result.limitations].map((l, i) => (
-              <li key={i}>{l}</li>
-            ))}
-          </ul>
-        </div>
-      )}
+    <section className="section" aria-labelledby="findings-heading">
+      <h2 id="findings-heading">How we reached this</h2>
+      {sorted.map((finding) => (
+        <Finding key={finding.assertion_id} finding={finding} compound={sorted.length > 1} />
+      ))}
     </section>
   )
 }

@@ -1,4 +1,5 @@
 import type {
+  EvidenceRelation,
   FlagDimension,
   FlagType,
   InvestigationEvent,
@@ -28,6 +29,13 @@ export const DIMENSION_LABEL: Record<FlagDimension, string> = {
   definition: 'definition',
   evaluation_setup: 'evaluation setup',
   benchmark_subset: 'benchmark subset',
+}
+
+export const RELATION_LABEL: Record<EvidenceRelation, string> = {
+  supports: 'Supports the claim',
+  contradicts: 'Contradicts the claim',
+  context: 'Context',
+  not_relevant: 'Not relevant',
 }
 
 export const STATUS_LABEL: Record<InvestigationStatus, string> = {
