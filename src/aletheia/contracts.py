@@ -81,6 +81,7 @@ class Investigation(Contract):
             "budget_exhausted",
             "deadline_exceeded",
             "provider_failure",
+            "storage_failure",
             "interrupted",
         ]
         | None

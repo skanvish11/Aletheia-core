@@ -208,8 +208,9 @@ async def test_atomic_completion_rollback_and_append_only_records(settings):
         await store.save_records(claimed.id, "snapshot", [source()])
 
 
-async def test_refresh_transaction_failure_and_independent_connections(settings):
-    async with running(settings, Providers()) as (app, client):
+@pytest.mark.parametrize("failed_parent", [False, True])
+async def test_refresh_transaction_failure_and_independent_connections(settings, failed_parent):
+    async with running(settings, Providers(authentication_failure=failed_parent)) as (app, client):
         saved = await submit(client)
     store = Storage(settings.database_path)
     parent_id = UUID(saved["id"])

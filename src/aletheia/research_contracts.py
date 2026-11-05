@@ -54,21 +54,24 @@ class Span(Record):
     kind: Literal["sentence", "block"]
 
 
-class Snapshot(Record):
+class SnapshotMetadata(Record):
     id: str
     url: str
     canonical_url: str
     title: str
     published_date: str | None
     retrieved_at: AwareDatetime
-    original_text: str
-    normalized_text: str
     normalization_version: str = "whitespace-v1"
     splitter_version: str = "blocks-sentences-v1"
     content_hash: str
-    spans: list[Span]
     duplicate_group: str
     limitations: list[str]
+
+
+class Snapshot(SnapshotMetadata):
+    original_text: str
+    normalized_text: str
+    spans: list[Span]
 
 
 class Citation(Record):

@@ -12,7 +12,7 @@ from aletheia.research_contracts import InvestigationResult, Snapshot
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v2"
+APPLICATION_VERSION = "research-v3"
 
 
 class Pipeline:
@@ -57,9 +57,12 @@ class Pipeline:
             await emit(
                 "route_selected", {"route": assigned_route, "reason": reason}, route=assigned_route
             )
+            parent = (
+                await self.storage.get(investigation.parent_id) if investigation.parent_id else None
+            )
             baseline_sources = (
                 await self.storage.records(investigation.parent_id, "snapshot", Snapshot)
-                if investigation.parent_id
+                if parent and parent.result
                 else []
             )
             gap = None
@@ -199,6 +202,7 @@ class Pipeline:
                 "search_attempt_limit": budget.search_attempts,
                 "extraction_attempt_limit": budget.extraction_attempts,
                 "finalization_reserve_seconds": budget.reserve_seconds,
+                "finalization_reserve_model_attempts": budget.reserve_model_attempts,
                 "duration_limit_seconds": budget.deadline - budget.started,
             },
             budget_used=dict(budget.used),

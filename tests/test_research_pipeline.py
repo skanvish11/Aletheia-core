@@ -237,19 +237,19 @@ async def test_truncated_source_is_saved_and_changes_evidence_comparison(setting
 def test_finalization_reserve_and_escalation_are_shared():
     budget = RunBudget()
     start = budget.started
-    for _ in range(5):
+    for _ in range(4):
         budget.reserve("nebius", "model", 1)
     with pytest.raises(ProviderError) as error:
         budget.reserve("nebius", "model", 1)
     assert error.value.code == ErrorCode.BUDGET
     budget.escalate()
-    assert budget.used["model"] == 5 and budget.deadline == start + 240
+    assert budget.used["model"] == 4 and budget.deadline == start + 240
     for _ in range(8):
         budget.reserve("nebius", "model", 1)
     with pytest.raises(ProviderError):
         budget.reserve("nebius", "model", 1)
     budget.finalizing = True
-    for _ in range(3):
+    for _ in range(4):
         budget.reserve("nebius", "model", 1)
     with pytest.raises(ProviderError):
         budget.reserve("nebius", "model", 1)

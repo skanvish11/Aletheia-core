@@ -63,12 +63,7 @@ async def compare(storage, investigation, result, sources, evidence):
     old = {s.canonical_url: s for s in old_sources}
     new = {s.canonical_url: s for s in sources}
     events = await storage.events(investigation.id)
-    failed = {
-        canonical_url(e.payload["url"])
-        for e in events
-        if e.type == "source_rejected"
-        and e.payload.get("reason") in {"extraction_failed", "missing_result", "empty_content"}
-    }
+    failed = {canonical_url(e.payload["url"]) for e in events if e.type == "source_rejected"}
     changes = []
     for url in sorted(old.keys() | new.keys()):
         if url not in new:

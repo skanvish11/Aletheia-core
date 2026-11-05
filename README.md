@@ -160,7 +160,7 @@ Store execution `status` separately from `stage` and factual `verdict`.
 - Stage: `interpreting`, `planning`, `searching`, `extracting`, `verifying`, `synthesizing`, `comparing`.
 - A completed investigation can legitimately have an `unable_to_decide` outcome with a null verdict.
 - A partial investigation contains usable findings but did not finish its intended work; its explanation must identify the missing work.
-- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `unable_to_decide` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
+- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, `storage_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `unable_to_decide` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
 - A failed investigation has a null final verdict and a sanitized error record. Provider failure is never evidence that a claim is false.
 - Terminal records are immutable. Retrying creates a new version rather than modifying an old one.
 
@@ -236,11 +236,11 @@ These are starting configuration values to validate during live testing, not pro
 | Follow-up rounds | 1 | 2 |
 | Hard duration | 120 seconds | 240 seconds |
 
-Step 2's [representative measurements and budget decision](docs/provider-adapters.md#revised-budget-decision) revised model attempts from 10/18 to 8/16 and the implemented output cap from 2,048 to 4,096 tokens. The 40-record answer exceeded the old output cap. Step 3 implements those run profiles and the three-call/45-second finalization reserve. Its calls execute sequentially, so at most one is in flight; the adapters enforce the shared attempt counts and deadline.
+Step 2's [representative measurements and budget decision](docs/provider-adapters.md#revised-budget-decision) revised model attempts from 10/18 to 8/16 and the implemented output cap from 2,048 to 4,096 tokens. The 40-record answer exceeded the old output cap. Step 3 implements those run profiles and the four-call/45-second finalization reserve. Its calls execute sequentially, so at most one is in flight; the adapters enforce the shared attempt counts and deadline.
 
 Count every attempted query, extracted URL, and model call, including retries. An escalation switches to the deep ceiling without resetting accumulated usage or elapsed time. Set explicit per-call timeouts and bounded input/output sizes; surface truncation as a limitation.
 
-Reserve three model calls and 45 seconds (configurable) for synthesis, final checks, and comparison review within the totals above. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
+Reserve four model calls and 45 seconds for synthesis and explanation checking, including one repair per task, within the totals above. The reserve does not guarantee completion if transport retries or the deadline exhaust it. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
 
 ## 6. Evidence, citations, and verdicts
 
@@ -324,7 +324,7 @@ Do not store private chain-of-thought in the public trace. Store task inputs and
 
 ## 8. Saved results and refresh behavior
 
-Submitting an exact repeated claim returns the latest existing version/status without provider calls. Return its original timestamps and `reused: true`, including when it is partial or failed. The client must explicitly request another investigation to spend more provider calls. Concurrent identical submissions resolve to one queued/running version through database constraints.
+Submitting an exact repeated claim returns the latest existing version/status without provider calls. Return its original timestamps and `reused: true`, including when it is partial or failed. The client must explicitly request another investigation to spend more provider calls. A failed run exposes `/refresh` as an idempotent retry that creates a new linked version, preserves the failure, and starts interpretation again; no comparison is inferred from a parent without a result. Concurrent identical submissions resolve to one queued/running version through database constraints.
 
 Viewing a saved result has no hidden freshness check or automatic refresh. It is labeled as historical evidence. This guarantees exact retrieval of a stored result, not correctness or freshness.
 

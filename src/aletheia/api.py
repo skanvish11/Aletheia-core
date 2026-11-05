@@ -11,7 +11,7 @@ from fastapi.responses import JSONResponse, StreamingResponse
 
 from aletheia.config import Settings
 from aletheia.contracts import ACTIVE_STATUSES, Investigation, InvestigationRequest
-from aletheia.research_contracts import Comparison, Evidence, Snapshot
+from aletheia.research_contracts import Comparison, Evidence
 from aletheia.runtime import research_providers
 from aletheia.storage import Conflict, QueueFull, Storage, StorageError
 from aletheia.worker import Worker
@@ -69,15 +69,23 @@ def create_app(
                 worker = Worker(storage, model, search, model_name, budget_factory=budget_factory)
                 app.state.worker = worker
                 worker.start()
+                app.state.initialized = True
                 try:
                     yield
                 finally:
+                    app.state.initialized = False
                     await worker.stop()
         else:
-            yield
+            app.state.initialized = True
+            try:
+                yield
+            finally:
+                app.state.initialized = False
 
     app = FastAPI(title="Aletheia", version="0.2.0", lifespan=lifespan)
     app.state.storage = storage
+    app.state.worker = None
+    app.state.initialized = False
     app.add_middleware(BodyLimitMiddleware, max_bytes=settings.max_body_bytes)
 
     @app.exception_handler(RequestValidationError)
@@ -150,13 +158,10 @@ def create_app(
     async def evidence(investigation_id: UUID):
         if await storage.get(investigation_id) is None:
             raise HTTPException(404, "Investigation not found.")
-        sources = await storage.records(investigation_id, "snapshot", Snapshot)
+        sources = await storage.snapshot_metadata(investigation_id)
         assessments = await storage.records(investigation_id, "evidence", Evidence)
         return {
-            "sources": [
-                s.model_dump(mode="json", exclude={"original_text", "normalized_text", "spans"})
-                for s in sources
-            ],
+            "sources": [s.model_dump(mode="json") for s in sources],
             "evidence": [e.model_dump(mode="json") for e in assessments],
         }
 
@@ -179,7 +184,7 @@ def create_app(
     async def events(
         investigation_id: UUID,
         request: Request,
-        after: Annotated[int, Query(ge=0)] = 0,
+        after: Annotated[int, Query(ge=0, le=9_223_372_036_854_775_807)] = 0,
         last_event_id: Annotated[str | None, Header()] = None,
     ):
         if await storage.get(investigation_id) is None:
@@ -197,17 +202,22 @@ def create_app(
         async def stream():
             nonlocal cursor
             while not await request.is_disconnected():
+                worker = app.state.worker
+                worker_stopped = worker is not None and worker.task.done()
                 # Read status BEFORE events: a terminal transition between reads cannot
                 # make us close before its committed terminal event has been replayed.
                 saved = await storage.get(investigation_id)
-                for event in await storage.events(investigation_id):
-                    if event.sequence > cursor:
-                        yield (
-                            f"id: {event.sequence}\nevent: {event.type}\n"
-                            f"data: {event.model_dump_json()}\n\n"
-                        )
-                        cursor = event.sequence
+                for event in await storage.events(investigation_id, after=cursor):
+                    yield (
+                        f"id: {event.sequence}\nevent: {event.type}\n"
+                        f"data: {event.model_dump_json()}\n\n"
+                    )
+                    cursor = event.sequence
                 if saved.status not in ACTIVE_STATUSES:
+                    return
+                if worker_stopped:
+                    # Permanent storage failure cannot append a terminal event.
+                    # Close the stream; health exposes the unavailable worker.
                     return
                 yield ": heartbeat\n\n"
                 await asyncio.sleep(0.5)
@@ -220,9 +230,18 @@ def create_app(
 
     @app.get("/health")
     async def health():
+        if not app.state.initialized:
+            return JSONResponse(
+                status_code=503,
+                content={
+                    "status": "unavailable",
+                    "database": "not_initialized",
+                    "research_enabled": settings.research_enabled,
+                },
+            )
         await storage.health()
         worker = app.state.worker
-        if worker and worker.task.done():
+        if worker and (worker.task.done() or worker.recovering):
             return JSONResponse(
                 status_code=503,
                 content={"status": "unavailable", "database": "ok", "research_enabled": True},

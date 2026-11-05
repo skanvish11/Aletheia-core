@@ -3,7 +3,7 @@
 import asyncio
 
 from aletheia.orchestrator import Pipeline
-from aletheia.storage import StorageError
+from aletheia.storage import Conflict, StorageError
 
 
 class Worker:
@@ -14,13 +14,29 @@ class Worker:
         self.stopping = asyncio.Event()
         self.task = None
         self.current = None
+        self.recovering = False
 
     def start(self):
         self.task = asyncio.create_task(self.run(), name="aletheia-research-worker")
 
+    async def recover_storage(self):
+        # Never replay partially executed provider work. Reconcile the durable
+        # state first, then resume claiming queued jobs after storage recovers.
+        self.recovering = True
+        for attempt in range(3):
+            if attempt:
+                await asyncio.sleep(0.1 * attempt)
+            try:
+                await self.storage.recover_interrupted(storage_failure=True)
+            except StorageError:
+                continue
+            self.recovering = False
+            return True
+        return False
+
     async def run(self):
-        try:
-            while not self.stopping.is_set():
+        while not self.stopping.is_set():
+            try:
                 self.current = await self.storage.claim_next()
                 if self.current is None:
                     try:
@@ -30,45 +46,48 @@ class Worker:
                     continue
                 try:
                     await self.pipeline.run(self.current)
-                except asyncio.CancelledError:
-                    await self.storage.finish(
-                        self.current.id,
-                        status="failed",
-                        stop_reason="interrupted",
-                        error="Investigation interrupted by application shutdown.",
-                    )
-                    raise
-                except StorageError:
-                    # Leave the durable running state for startup recovery; stop claiming jobs.
+                except (asyncio.CancelledError, StorageError):
                     raise
                 except Exception:
-                    await self.storage.finish(
-                        self.current.id,
-                        status="failed",
-                        stop_reason="provider_failure",
-                        error="The investigation could not be completed.",
-                    )
-                finally:
-                    self.current = None
-        except StorageError:
-            # Health reports the stopped worker; never log raw DB/provider exceptions.
-            return
+                    try:
+                        await self.storage.finish(
+                            self.current.id,
+                            status="failed",
+                            stop_reason="provider_failure",
+                            error="The investigation could not be completed.",
+                        )
+                    except Conflict:
+                        # A terminal commit may already have succeeded.
+                        pass
+            except StorageError:
+                if not await self.recover_storage():
+                    # Bounded recovery failed. Health exposes this and startup
+                    # recovery reconciles running records when storage returns.
+                    return
+            finally:
+                self.current = None
 
     async def stop(self, grace_seconds=5):
         self.stopping.set()
-        if self.task is None or self.task.cancelled():
+        if self.task is None:
             return
         try:
-            await asyncio.wait_for(asyncio.shield(self.task), timeout=grace_seconds)
-        except TimeoutError:
-            self.task.cancel()
             try:
-                await self.task
+                await asyncio.wait_for(asyncio.shield(self.task), timeout=grace_seconds)
+            except TimeoutError:
+                self.task.cancel()
+                try:
+                    await self.task
+                except asyncio.CancelledError:
+                    pass
             except asyncio.CancelledError:
-                pass
-            # Cancellation can land after claim_next commits but before it returns.
-            # Single-worker ownership lets shutdown reconcile that narrow race too.
-            try:
-                await self.storage.recover_interrupted()
-            except StorageError:
-                pass  # Startup recovery will retry once storage is available.
+                if not self.task.cancelled():
+                    raise
+        finally:
+            # Reconcile only after the worker stopped. Covers cancellation after
+            # claim commit and after terminal commit without overwriting results.
+            if self.task.done():
+                try:
+                    await self.storage.recover_interrupted()
+                except StorageError:
+                    pass  # Startup recovery retries once storage is available.

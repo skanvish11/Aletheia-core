@@ -67,6 +67,7 @@ class RunBudget(CallBudget):
         self.finalizing = False
         self.route = "quick"
         self.reserve_seconds = 45.0
+        self.reserve_model_attempts = 4
         super().__init__(8, 4, 4, self.started + 120)
 
     def escalate(self):
@@ -83,7 +84,7 @@ class RunBudget(CallBudget):
 
     def check(self, provider, operation, units):
         if not self.finalizing and operation == "model":
-            if self.used["model"] + units > self.model_attempts - 3:
+            if self.used["model"] + units > self.model_attempts - self.reserve_model_attempts:
                 raise ProviderError(provider, ErrorCode.BUDGET)
         # Profiles may escalate, but counters and the original clock never reset.
         self.limits.update(

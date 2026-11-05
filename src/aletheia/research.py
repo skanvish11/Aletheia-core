@@ -69,12 +69,6 @@ async def gather(
                 raise ProviderError("tavily", ErrorCode(page.error))
             gaps.append("Some selected sources could not be retrieved.")
             continue
-        if len(page.content) > 100_000:
-            await tasks.emit(
-                "source_rejected", {"url": url, "reason": "page_size_limit"}, stage="extracting"
-            )
-            gaps.append("A selected page exceeded the stored text limit.")
-            continue
         source = snapshot(
             url=url,
             title=title,

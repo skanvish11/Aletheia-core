@@ -10,6 +10,7 @@ from uuid import UUID, uuid4
 import aiosqlite
 
 from aletheia.contracts import Investigation, InvestigationEvent, InvestigationRequest
+from aletheia.research_contracts import SnapshotMetadata
 from aletheia.result_migration import migrate_results
 
 SCHEMA_VERSION = 3
@@ -223,12 +224,13 @@ class Storage:
             ).fetchone()
             return self._record(row, reused=True) if row else None
 
-    async def events(self, investigation_id: UUID) -> list[InvestigationEvent]:
+    async def events(self, investigation_id: UUID, *, after: int = 0) -> list[InvestigationEvent]:
         async with self.connection() as db:
             rows = await (
                 await db.execute(
-                    "SELECT * FROM events WHERE investigation_id = ? ORDER BY sequence",
-                    (str(investigation_id),),
+                    "SELECT * FROM events WHERE investigation_id = ? AND sequence > ? "
+                    "ORDER BY sequence",
+                    (str(investigation_id), after),
                 )
             ).fetchall()
         return [
@@ -243,7 +245,13 @@ class Storage:
             for row in rows
         ]
 
-    async def recover_interrupted(self) -> None:
+    async def recover_interrupted(self, *, storage_failure=False) -> None:
+        reason = "storage_failure" if storage_failure else "interrupted"
+        message = (
+            "Investigation interrupted by a database failure. Retry explicitly."
+            if storage_failure
+            else "Investigation interrupted by application shutdown."
+        )
         async with self.connection() as db:
             await db.execute("BEGIN IMMEDIATE")
             try:
@@ -252,15 +260,15 @@ class Storage:
                 ).fetchall()
                 for row in rows:
                     now = utc_now()
-                    error = {"message": "Investigation interrupted by application shutdown."}
+                    error = {"message": message}
                     await db.execute(
                         """UPDATE investigations SET status = 'failed', stage = NULL,
-                           stop_reason = 'interrupted', finished_at = ?, error_json = ?,
+                           stop_reason = ?, finished_at = ?, error_json = ?,
                            result_json = NULL WHERE id = ?""",
-                        (now, json.dumps(error), row["id"]),
+                        (reason, now, json.dumps(error), row["id"]),
                     )
                     await self._append_event(
-                        db, row["id"], "investigation_failed", now, {"stop_reason": "interrupted"}
+                        db, row["id"], "investigation_failed", now, {"stop_reason": reason}
                     )
                 await db.commit()
             except BaseException:
@@ -360,6 +368,20 @@ class Storage:
                 )
             ).fetchall()
         return [model.model_validate_json(row[0]) for row in rows]
+
+    async def snapshot_metadata(self, investigation_id):
+        # Project in SQLite so page bodies/spans are not transferred to Python or
+        # validated on public metadata reads. Stored snapshots remain unchanged.
+        async with self.connection() as db:
+            rows = await (
+                await db.execute(
+                    "SELECT json_remove(payload_json, '$.original_text', '$.normalized_text', "
+                    "'$.spans') FROM research_records "
+                    "WHERE investigation_id=? AND kind='snapshot' ORDER BY rowid",
+                    (str(investigation_id),),
+                )
+            ).fetchall()
+        return [SnapshotMetadata.model_validate_json(row[0]) for row in rows]
 
     async def finish(
         self,
@@ -462,9 +484,11 @@ class Storage:
                 if parent is None:
                     await db.commit()
                     return None
-                if parent["status"] not in {"completed", "partial"} or not parent["result_json"]:
+                if parent["status"] != "failed" and not (
+                    parent["status"] in {"completed", "partial"} and parent["result_json"]
+                ):
                     raise Conflict(
-                        "Refresh requires a completed or partial investigation with resolved scope."
+                        "Refresh requires a failed investigation or a completed/partial result."
                     )
                 pending = (
                     await (
@@ -532,7 +556,8 @@ class Storage:
                 "evidence": f"/investigations/{row['id']}/evidence",
                 "comparison": f"/investigations/{row['id']}/comparison",
                 "refresh": f"/investigations/{row['id']}/refresh"
-                if row["status"] in {"completed", "partial"} and row["result_json"]
+                if row["status"] == "failed"
+                or (row["status"] in {"completed", "partial"} and row["result_json"])
                 else None,
             },
         )

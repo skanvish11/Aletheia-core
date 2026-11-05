@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "finalization reserve cannot cover both repairs",
+        "budgets.py",
+        "self.reserve_model_attempts = 4",
+        "self.reserve_model_attempts = 3",
+        "tests/test_research_review.py::test_finalization_reserve_covers_repairs_to_both_model_tasks",
+    ),
+    (
+        "explicit retry rejects failed investigations",
+        "storage.py",
+        'if parent["status"] != "failed" and not (',
+        "if not (",
+        "tests/test_research_review.py::test_failed_run_has_explicit_idempotent_retry[False]",
+    ),
+    (
         "Almost semantic correction check bypassed",
         "verdicts.py",
         "        if not all(\n",
