@@ -2,7 +2,7 @@
 
 An evidence-first research agent that investigates factual claims, shows its work, and returns a verdict linked to inspectable sources.
 
-**Status: backend foundation implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. See [setup, implemented contracts, and acceptance checks](docs/backend-foundation.md). The architecture and research behavior below remain implementation targets unless explicitly covered by that milestone document. Step 1 makes no model-provider or web-search calls.
+**Status: backend foundation and provider connections implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. Nebius structured inference and Tavily search/extraction have passed explicit live checks. See [foundation setup and contracts](docs/backend-foundation.md) and [Step 2 configuration, checks, and measurements](docs/provider-adapters.md). The architecture and research behavior below remain implementation targets unless covered by those milestone documents. Normal API requests still make no model-provider or web-search calls.
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.
 
@@ -169,7 +169,7 @@ Clarification ends the current run. The response contains concise questions; the
 
 ## 4. Modules and ownership
 
-Planned package: `src/aletheia/`. The paths below are proposed files and do not exist yet.
+Package: `src/aletheia/`. The table describes the full target layout; the foundation and provider modules exist, while research modules remain planned. See the milestone documents for implemented scope.
 
 | Module | Responsibility and contract | Must not do |
 | --- | --- | --- |
@@ -225,7 +225,7 @@ The research gate receives the assessments and remaining budget. It can stop, es
 
 Predictions and value judgments are not converted into established facts. Research their premises where useful and explain what cannot presently be established.
 
-### Initial budget defaults
+### Revised starting budget defaults
 
 These are starting configuration values to validate during live testing, not promised latency or accuracy. They are provisional: measure per-call latency of the selected Nebius model in milestone 2 and revise them before milestone 4. Measure representative calls, including longer responses and retries; the call ceilings are maximums, not work that must be performed. Batch assessments where useful and use bounded concurrency only for independent queries or extractions (initial limit: two in flight). Reserve attempts atomically before dispatch; dependent steps wait for their inputs. Store and process results in stable query/source order even if they finish out of order. Every attempt still counts toward the same limits. Revise limits or simplify the run if measurements show the planned work will not fit.
 
@@ -233,13 +233,15 @@ These are starting configuration values to validate during live testing, not pro
 | --- | ---: | ---: |
 | Search-query attempts | 4 | 8 |
 | Page-extraction attempts | 4 | 10 |
-| Model-call attempts | 10 | 18 |
+| Model-call attempts | 8 | 16 |
 | Follow-up rounds | 1 | 2 |
 | Hard duration | 120 seconds | 240 seconds |
 
+Step 2's [representative measurements and budget decision](docs/provider-adapters.md#revised-budget-decision) revised model attempts from 10/18 to 8/16 and the implemented output cap from 2,048 to 4,096 tokens. The 40-record answer exceeded the old output cap. The run profiles, three-call/45-second finalization reserve, and shared two-in-flight limit remain explicit Step 3 controller work; the adapters currently enforce the caller-supplied attempt counts and deadline.
+
 Count every attempted query, extracted URL, and model call, including retries. An escalation switches to the deep ceiling without resetting accumulated usage or elapsed time. Set explicit per-call timeouts and bounded input/output sizes; surface truncation as a limitation.
 
-Reserve three model calls and a configurable time allowance for synthesis, final checks, and comparison review. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
+Reserve three model calls and 45 seconds (configurable) for synthesis, final checks, and comparison review within the totals above. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
 
 ## 6. Evidence, citations, and verdicts
 

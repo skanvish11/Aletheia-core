@@ -1,0 +1,84 @@
+{
+  "checked_at": "2026-11-05T02:30:51.515695+00:00",
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "response_format": "json_schema",
+  "samples_per_model_task": 2,
+  "deadline_seconds": 180,
+  "checks": [
+    {
+      "check": "nebius_short",
+      "sample": 1,
+      "passed": false,
+      "error": "invalid_request",
+      "elapsed_seconds": 0.5603165000211447
+    },
+    {
+      "check": "tavily_search",
+      "passed": true,
+      "result_count": 2,
+      "elapsed_seconds": 3.0332017080218066,
+      "usage": {
+        "credits": 2.0
+      }
+    },
+    {
+      "check": "tavily_extract",
+      "passed": true,
+      "characters": 6765,
+      "error": null,
+      "elapsed_seconds": 0.17081070799031295,
+      "usage": {
+        "credits": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "Small integration sample; not a latency SLA or research-quality evaluation.",
+    "Live failures are not deliberately induced; retry timing is tested offline.",
+    "Usage is reported when supplied; failed requests may still incur provider charges."
+  ],
+  "attempts": [
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 0.5593861249799374,
+      "status_code": 422,
+      "outcome": "invalid_request"
+    },
+    {
+      "provider": "tavily",
+      "operation": "search",
+      "units": 1,
+      "elapsed_seconds": 3.033135833014967,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "extract",
+      "units": 1,
+      "elapsed_seconds": 0.17072333398391493,
+      "status_code": 200,
+      "outcome": "success"
+    }
+  ],
+  "attempt_units": {
+    "model": 1,
+    "search": 1,
+    "extract": 1
+  },
+  "passed": false,
+  "latency_seconds": {
+    "tavily_search": {
+      "count": 1,
+      "median": 3.0332017080218066,
+      "max": 3.0332017080218066
+    },
+    "tavily_extract": {
+      "count": 1,
+      "median": 0.17081070799031295,
+      "max": 0.17081070799031295
+    }
+  }
+}
