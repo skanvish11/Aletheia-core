@@ -113,6 +113,8 @@ class InvestigationEvent(Contract):
         "search_completed",
         "source_extracted",
         "source_rejected",
+        "sources_deferred",
+        "research_gate",
         "evidence_checked",
         "route_escalated",
         "followup_planned",
