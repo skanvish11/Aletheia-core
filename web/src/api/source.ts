@@ -28,7 +28,8 @@ export interface DataSource {
   /** All stored events at once. Replay only: lets a saved report open without animation. */
   getEvents?(id: string): Promise<InvestigationEvent[]>
   /** Live only: backend reachability and whether research is enabled. */
-  health?(): Promise<HealthStatus>
+  /** The signal aborts a request the caller has given up on (for example after a timeout). */
+  health?(signal?: AbortSignal): Promise<HealthStatus>
   subscribe(
     id: string,
     onEvent: (event: InvestigationEvent) => void,
@@ -81,7 +82,7 @@ export const liveSource: DataSource = {
     }),
   getInvestigation: (id) => getJson<Investigation>(`/investigations/${id}`),
   getEvidence: (id) => getJson<EvidenceResponse>(`/investigations/${id}/evidence`),
-  health: () => getJson<HealthStatus>('/health'),
+  health: (signal) => getJson<HealthStatus>('/health', { signal }),
   subscribe(id, onEvent, onError) {
     // EventSource resends Last-Event-ID on reconnect; the server replays from there.
     const stream = new EventSource(`${API_BASE}/investigations/${id}/events`)

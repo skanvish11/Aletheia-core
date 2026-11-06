@@ -3,7 +3,7 @@ import { act, cleanup, renderHook } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { STREAM_UNAVAILABLE, UNREACHABLE, liveSource, type DataSource } from './source'
 import type { InvestigationEvent } from './types'
-import { unavailableReason, useBackendStatus } from './useBackendStatus'
+import { HEALTH_TIMEOUT_MS, unavailableReason, useBackendStatus } from './useBackendStatus'
 
 afterEach(() => {
   cleanup() // unmount hooks so their focus/online listeners don't leak between tests
@@ -150,6 +150,62 @@ describe('backend status', () => {
     expect(result.current.status).toBe('ready')
     await act(async () => void window.dispatchEvent(new Event('focus')))
     expect(health).toHaveBeenCalledTimes(2)
+  })
+
+  describe('stalled health check', () => {
+    afterEach(() => vi.useRealTimers())
+
+    it('times out to a retryable state, aborts the request, and recovers on retry', async () => {
+      vi.useFakeTimers()
+      const signals: AbortSignal[] = []
+      const health = vi
+        .fn()
+        .mockImplementationOnce((signal: AbortSignal) => {
+          signals.push(signal)
+          return new Promise(() => {}) // connection accepted, response never finishes
+        })
+        .mockResolvedValue(ENABLED)
+      const source = withHealth(health)
+      const { result } = renderHook(() => useBackendStatus(source))
+      expect(result.current.status).toBe('checking')
+
+      await act(async () => void vi.advanceTimersByTime(HEALTH_TIMEOUT_MS))
+      expect(result.current.status).toBe('unreachable')
+      expect(signals[0].aborted).toBe(true)
+
+      act(() => result.current.recheck())
+      await act(async () => {})
+      expect(result.current.status).toBe('ready')
+    })
+
+    it('ignores a late answer from an abandoned attempt', async () => {
+      vi.useFakeTimers()
+      let lateAnswer: (value: unknown) => void = () => {}
+      const health = vi
+        .fn()
+        .mockImplementationOnce(() => new Promise((resolve) => (lateAnswer = resolve)))
+        .mockRejectedValue(new Error('down'))
+      const source = withHealth(health)
+      const { result } = renderHook(() => useBackendStatus(source))
+      await act(async () => void vi.advanceTimersByTime(HEALTH_TIMEOUT_MS))
+      act(() => result.current.recheck())
+      await act(async () => {})
+      expect(result.current.status).toBe('unreachable')
+
+      await act(async () => lateAnswer(ENABLED))
+      expect(result.current.status).toBe('unreachable')
+    })
+
+    it('aborts the pending request when the page unmounts', () => {
+      const signals: AbortSignal[] = []
+      const source = withHealth((signal) => {
+        if (signal) signals.push(signal)
+        return new Promise(() => {})
+      })
+      const { unmount } = renderHook(() => useBackendStatus(source))
+      unmount()
+      expect(signals[0].aborted).toBe(true)
+    })
   })
 
   it('only allows submitting when research is enabled', () => {
