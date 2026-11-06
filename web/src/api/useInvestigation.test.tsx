@@ -5,7 +5,7 @@ import { Home } from '../components/Home'
 import { RECORDINGS } from '../fixtures'
 import type { DataSource } from './source'
 import type { EvidenceResponse, Investigation, InvestigationEvent } from './types'
-import { useInvestigation } from './useInvestigation'
+import { LOAD_TIMEOUT_MS, LOAD_TIMED_OUT, useInvestigation } from './useInvestigation'
 
 const sample = RECORDINGS[0]
 const terminal = sample.events.at(-1) as InvestigationEvent
@@ -24,6 +24,7 @@ function deferred<T>() {
 /** A live-style source whose calls the test controls. */
 function fakeSource(overrides: Partial<DataSource> = {}) {
   let push: ((event: InvestigationEvent) => void) | null = null
+  let fail: ((message: string) => void) | null = null
   const source: DataSource = {
     kind: 'live',
     canSubmit: true,
@@ -31,15 +32,21 @@ function fakeSource(overrides: Partial<DataSource> = {}) {
     submit: vi.fn(async () => sample.investigation),
     getInvestigation: vi.fn(async () => sample.investigation),
     getEvidence: vi.fn(async () => sample.evidence),
-    subscribe: vi.fn((_id, onEvent) => {
+    subscribe: vi.fn((_id, onEvent, onError) => {
       push = onEvent
+      fail = onError
       return () => {
         push = null
+        fail = null
       }
     }),
     ...overrides,
   }
-  return { source, emit: (event: InvestigationEvent) => push?.(event) }
+  return {
+    source,
+    emit: (event: InvestigationEvent) => push?.(event),
+    streamError: (message: string) => fail?.(message),
+  }
 }
 
 afterEach(cleanup)
@@ -138,6 +145,90 @@ describe('loading the final report', () => {
     expect(result.current.state.finished).toBe(true)
     expect(result.current.state.loadError).toBeNull()
     expect(source.submit).not.toHaveBeenCalled()
+  })
+})
+
+describe('a stalled report load', () => {
+  afterEach(() => vi.useRealTimers())
+
+  /** getEvidence calls each return a promise the test settles by hand; their signals are kept. */
+  function stallingEvidence() {
+    const calls: { pending: ReturnType<typeof deferred<EvidenceResponse>>; signal?: AbortSignal }[] = []
+    const getEvidence = vi.fn((_id: string, signal?: AbortSignal) => {
+      const pending = deferred<EvidenceResponse>()
+      calls.push({ pending, signal })
+      return pending.promise
+    })
+    return { calls, getEvidence }
+  }
+
+  it('times out, offers retry, and the retry loads the report without new research', async () => {
+    vi.useFakeTimers()
+    const { calls, getEvidence } = stallingEvidence()
+    const { source, emit } = fakeSource({ getEvidence })
+    const { result } = renderHook(() => useInvestigation(source))
+    await act(async () => result.current.open(sample.investigation.id))
+    await act(async () => emit(terminal))
+    expect(result.current.state.loadError).toBeNull()
+
+    await act(async () => vi.advanceTimersByTime(LOAD_TIMEOUT_MS))
+    expect(result.current.state.loadError).toBe(LOAD_TIMED_OUT)
+    expect(result.current.state.finished).toBe(false)
+    expect(calls[0].signal?.aborted).toBe(true)
+
+    act(() => result.current.retryLoad())
+    expect(result.current.state.loadError).toBeNull()
+    await act(async () => calls[1].pending.resolve(sample.evidence))
+    expect(result.current.state.finished).toBe(true)
+    expect(source.submit).not.toHaveBeenCalled()
+    expect(source.subscribe).toHaveBeenCalledTimes(1)
+  })
+
+  it('ignores the late answer of an abandoned load', async () => {
+    vi.useFakeTimers()
+    const { calls, getEvidence } = stallingEvidence()
+    const { source, emit } = fakeSource({ getEvidence })
+    const { result } = renderHook(() => useInvestigation(source))
+    await act(async () => result.current.open(sample.investigation.id))
+    await act(async () => emit(terminal))
+    await act(async () => vi.advanceTimersByTime(LOAD_TIMEOUT_MS))
+
+    act(() => result.current.retryLoad())
+    await act(async () => calls[1].pending.reject(new Error('The backend returned an error (500).')))
+    await act(async () => calls[0].pending.resolve(sample.evidence))
+    expect(result.current.state.finished).toBe(false)
+    expect(result.current.state.loadError).toContain('500')
+  })
+
+  it('aborts a pending load when the user leaves the investigation', async () => {
+    const { calls, getEvidence } = stallingEvidence()
+    const { source, emit } = fakeSource({ getEvidence })
+    const { result } = renderHook(() => useInvestigation(source))
+    await act(async () => result.current.open(sample.investigation.id))
+    await act(async () => emit(terminal))
+
+    act(() => result.current.close())
+    expect(calls[0].signal?.aborted).toBe(true)
+    await act(async () => calls[0].pending.resolve(sample.evidence))
+    expect(result.current.state.investigation).toBeNull()
+  })
+})
+
+describe('a progress stream that drops and recovers', () => {
+  it('clears the reconnecting notice once events resume, through to completion', async () => {
+    const { source, emit, streamError } = fakeSource()
+    const { result } = renderHook(() => useInvestigation(source))
+    await act(async () => result.current.open(sample.investigation.id))
+    await act(async () => emit(sample.events[0]))
+
+    act(() => streamError('Lost the progress stream; the browser is reconnecting.'))
+    expect(result.current.state.error).toContain('reconnecting')
+
+    await act(async () => emit(sample.events[1]))
+    expect(result.current.state.error).toBeNull()
+    await act(async () => emit(terminal))
+    expect(result.current.state.finished).toBe(true)
+    expect(result.current.state.error).toBeNull()
   })
 })
 
