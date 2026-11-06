@@ -8,6 +8,8 @@ from uuid import UUID
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, field_validator
 
+from aletheia.research_contracts import InvestigationResult
+
 Status = Literal["queued", "running", "needs_clarification", "completed", "partial", "failed"]
 Stage = Literal[
     "interpreting", "planning", "searching", "extracting", "verifying", "synthesizing", "comparing"
@@ -57,6 +59,10 @@ class PublicError(Contract):
 
 class InvestigationLinks(Contract):
     self: str
+    events: str | None = None
+    evidence: str | None = None
+    comparison: str | None = None
+    refresh: str | None = None
 
 
 class Investigation(Contract):
@@ -75,6 +81,7 @@ class Investigation(Contract):
             "budget_exhausted",
             "deadline_exceeded",
             "provider_failure",
+            "storage_failure",
             "interrupted",
         ]
         | None
@@ -83,8 +90,7 @@ class Investigation(Contract):
     created_at: AwareDatetime
     started_at: AwareDatetime | None = None
     finished_at: AwareDatetime | None = None
-    # This milestone has no synthesis or public write path for results.
-    result: None = None
+    result: InvestigationResult | None = None
     clarification_questions: list[str] | None = None
     error: PublicError | None = None
     links: InvestigationLinks
@@ -94,6 +100,28 @@ class InvestigationEvent(Contract):
     investigation_id: UUID
     sequence: int = Field(ge=1)
     timestamp: AwareDatetime
-    type: Literal["investigation_queued", "investigation_failed"]
+    type: Literal[
+        "investigation_queued",
+        "investigation_started",
+        "investigation_failed",
+        "investigation_completed",
+        "investigation_partial",
+        "clarification_required",
+        "claim_interpreted",
+        "route_selected",
+        "search_started",
+        "search_completed",
+        "source_extracted",
+        "source_rejected",
+        "evidence_checked",
+        "route_escalated",
+        "followup_planned",
+        "budget_reached",
+        "comparison_completed",
+        "consistency_flagged",
+        "task_output_rejected",
+        "qualification_flag_dropped",
+        "stage_started",
+    ]
     stage: Stage | None = None
     payload: dict[str, str]
