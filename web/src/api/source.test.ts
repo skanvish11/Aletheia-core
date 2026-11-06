@@ -35,20 +35,29 @@ describe('backend error responses', () => {
 })
 
 /** Minimal EventSource stand-in the test drives by hand. */
+/**
+ * Mirrors the browser: a named SSE event (`event: <type>`, as the backend sends)
+ * reaches only listeners for that name, never onmessage.
+ */
 class FakeEventSource {
   static CLOSED = 2
   static last: FakeEventSource
   readyState = 0
   onmessage: ((e: { data: string }) => void) | null = null
   onerror: (() => void) | null = null
+  listeners = new Map<string, ((e: { data: string }) => void)[]>()
   constructor() {
     FakeEventSource.last = this
+  }
+  addEventListener(type: string, listener: (e: { data: string }) => void) {
+    this.listeners.set(type, [...(this.listeners.get(type) ?? []), listener])
   }
   close() {
     this.readyState = FakeEventSource.CLOSED
   }
-  emit(event: Partial<InvestigationEvent>) {
-    this.onmessage?.({ data: JSON.stringify(event) })
+  /** Deliver an event the way the backend does: named after its type. */
+  emit(event: Partial<InvestigationEvent> & { type: string }) {
+    for (const listener of this.listeners.get(event.type) ?? []) listener({ data: JSON.stringify(event) })
   }
   fail(closed: boolean) {
     this.readyState = closed ? FakeEventSource.CLOSED : 0
@@ -57,6 +66,22 @@ class FakeEventSource {
 }
 
 describe('progress stream', () => {
+  it('receives the named events the backend sends', () => {
+    vi.stubGlobal('EventSource', FakeEventSource)
+    const onEvent = vi.fn()
+    liveSource.subscribe('id', onEvent, () => {})
+    FakeEventSource.last.emit({ sequence: 1, type: 'investigation_queued' })
+    FakeEventSource.last.emit({ sequence: 2, type: 'stage_started' })
+    expect(onEvent.mock.calls.map(([e]) => e.type)).toEqual(['investigation_queued', 'stage_started'])
+  })
+
+  it('closes the stream after the terminal event so it does not reconnect and replay', () => {
+    vi.stubGlobal('EventSource', FakeEventSource)
+    liveSource.subscribe('id', () => {}, () => {})
+    FakeEventSource.last.emit({ sequence: 1, type: 'investigation_completed' })
+    expect(FakeEventSource.last.readyState).toBe(FakeEventSource.CLOSED)
+  })
+
   it('reports an unavailable stream when it closes before research finishes', () => {
     vi.stubGlobal('EventSource', FakeEventSource)
     const onError = vi.fn()

@@ -20,6 +20,7 @@ function renderWith(decision: Decision, status: Investigation['status'] = 'compl
       finished
       loadError={null}
       replay
+      reused={false}
       onRetry={() => {}}
     />,
   )

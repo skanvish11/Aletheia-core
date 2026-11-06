@@ -22,6 +22,12 @@ export interface InvestigationState {
   loadError: string | null
   /** Submitting, opening or following progress failed. */
   error: string | null
+  /**
+   * True when submitting returned an existing investigation of the same claim instead
+   * of starting research. Only the submit response defines this; a plain GET always
+   * reports reused, so the investigation's own field is not used for display.
+   */
+  reused: boolean
 }
 
 const EMPTY: InvestigationState = {
@@ -33,6 +39,7 @@ const EMPTY: InvestigationState = {
   finished: false,
   loadError: null,
   error: null,
+  reused: false,
 }
 
 export interface OpenOptions {
@@ -146,7 +153,7 @@ export function useInvestigation(source: DataSource) {
       try {
         const created = await source.submit(claim, context)
         if (!isCurrent(token)) return // the user left or submitted again
-        setState((s) => ({ ...s, submitting: false }))
+        setState((s) => ({ ...s, submitting: false, reused: created.reused }))
         await follow(created.id, token, true)
       } catch (err) {
         if (isCurrent(token)) setState({ ...EMPTY, error: message(err, 'Could not submit the claim.') })

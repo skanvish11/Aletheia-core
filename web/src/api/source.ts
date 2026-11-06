@@ -1,4 +1,5 @@
 import {
+  EVENT_TYPES,
   TERMINAL_EVENTS,
   type ClaimContext,
   type EvidenceResponse,
@@ -85,15 +86,24 @@ export const liveSource: DataSource = {
     // EventSource resends Last-Event-ID on reconnect; the server replays from there.
     const stream = new EventSource(`${API_BASE}/investigations/${id}/events`)
     let finished = false
-    stream.onmessage = (message) => {
+    const receive = (message: MessageEvent<string>) => {
       try {
         const event = JSON.parse(message.data) as InvestigationEvent
-        if (TERMINAL_EVENTS.has(event.type)) finished = true
+        if (TERMINAL_EVENTS.has(event.type)) {
+          finished = true
+          // The server ends the response after the terminal event; without closing,
+          // EventSource would reconnect and replay the whole run.
+          stream.close()
+        }
         onEvent(event)
       } catch {
         onError('Received a progress event the client could not read.')
       }
     }
+    // The backend names every event (`event: <type>`), and EventSource only routes
+    // unnamed events to onmessage, so listen for each name.
+    for (const type of EVENT_TYPES) stream.addEventListener(type, receive)
+    stream.onmessage = receive
     stream.onerror = () => {
       if (stream.readyState === EventSource.CLOSED) {
         // Closing after the terminal event is normal. Closing before it means the

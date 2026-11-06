@@ -45,6 +45,18 @@ function fakeSource(overrides: Partial<DataSource> = {}) {
 afterEach(cleanup)
 
 describe('submitting a claim', () => {
+  it('takes reused from the submit response, not from later reads', async () => {
+    // The backend's GET always reports reused: true; only POST defines it.
+    const { source } = fakeSource({
+      submit: vi.fn(async () => ({ ...sample.investigation, reused: false })),
+      getInvestigation: vi.fn(async () => ({ ...sample.investigation, reused: true })),
+    })
+    const { result } = renderHook(() => useInvestigation(source))
+    await act(async () => void (await result.current.submit('Claim one', {})))
+    expect(result.current.state.investigation).not.toBeNull()
+    expect(result.current.state.reused).toBe(false)
+  })
+
   it('ignores repeated submissions while one is pending', async () => {
     const pending = deferred<Investigation>()
     const { source } = fakeSource({ submit: vi.fn(() => pending.promise) })
