@@ -23,12 +23,12 @@ export interface DataSource {
   canSubmit: boolean
   recordings: Recording[]
   submit(claim: string, context: ClaimContext): Promise<Investigation>
-  getInvestigation(id: string): Promise<Investigation>
-  getEvidence(id: string): Promise<EvidenceResponse>
+  /** The signal aborts a request the caller has given up on (for example after a timeout). */
+  getInvestigation(id: string, signal?: AbortSignal): Promise<Investigation>
+  getEvidence(id: string, signal?: AbortSignal): Promise<EvidenceResponse>
   /** All stored events at once. Replay only: lets a saved report open without animation. */
   getEvents?(id: string): Promise<InvestigationEvent[]>
-  /** Live only: backend reachability and whether research is enabled. */
-  /** The signal aborts a request the caller has given up on (for example after a timeout). */
+  /** Live only: backend reachability and whether research is enabled. Takes an abort signal. */
   health?(signal?: AbortSignal): Promise<HealthStatus>
   subscribe(
     id: string,
@@ -80,8 +80,8 @@ export const liveSource: DataSource = {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ claim, context }),
     }),
-  getInvestigation: (id) => getJson<Investigation>(`/investigations/${id}`),
-  getEvidence: (id) => getJson<EvidenceResponse>(`/investigations/${id}/evidence`),
+  getInvestigation: (id, signal) => getJson<Investigation>(`/investigations/${id}`, { signal }),
+  getEvidence: (id, signal) => getJson<EvidenceResponse>(`/investigations/${id}/evidence`, { signal }),
   health: (signal) => getJson<HealthStatus>('/health', { signal }),
   subscribe(id, onEvent, onError) {
     // EventSource resends Last-Event-ID on reconnect; the server replays from there.
