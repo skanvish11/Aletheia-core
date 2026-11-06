@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "first round consumes follow-up page capacity",
+        "orchestrator.py",
+        'page_limit=2 if assigned_route == "quick" or round_index else 4,',
+        "page_limit=None,",
+        "tests/test_deeper_research.py::test_large_source_lists_leave_capacity_for_two_followups_and_finalization",
+    ),
+    (
+        "conflict hidden by a retrieval gap",
+        "research_gate.py",
+        'if computed.unable_to_decide_reason == "conflicting_evidence":',
+        'if computed.unable_to_decide_reason == "conflicting_evidence" and not retrieval_gap:',
+        "tests/test_deeper_research.py::test_conflict_takes_priority_over_retrieval_gap_and_can_stop_honestly",
+    ),
+    (
         "finalization reserve cannot cover both repairs",
         "budgets.py",
         "self.reserve_model_attempts = 4",

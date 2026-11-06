@@ -16,6 +16,8 @@ async def gather(
     evidence,
     seen_urls,
     baseline_sources=(),
+    *,
+    page_limit=None,
 ):
     batches = []
     for query in plan.queries:
@@ -28,25 +30,49 @@ async def gather(
             {"query": query.text, "result_count": str(len(result.results))},
             stage="searching",
         )
-        batches.append(sorted(result.results, key=lambda hit: -hit.score))
-    # Include a bounded set of old URLs for refresh, then alternate query result lists so
-    # counterevidence gets selection opportunities rather than only support-search hits.
-    candidates = [(s.url, s.title, s.published_date) for s in baseline_sources[:2]]
+        batches.append((query.purpose, sorted(result.results, key=lambda hit: -hit.score)))
+    # Alternate purposes before alternating result ranks. Two support queries must not
+    # crowd the counterevidence query out of a two-page round.
+    groups = [
+        [hits for purpose, hits in batches if purpose == wanted]
+        for wanted in ("support", "contradiction", "context")
+    ]
+    ordered = [
+        group[index]
+        for index in range(max((len(group) for group in groups), default=0))
+        for group in groups
+        if index < len(group)
+    ]
+    candidates = []
     for index in range(5):
-        for batch in batches:
+        for batch in ordered:
             if index < len(batch):
                 hit = batch[index]
                 candidates.append((hit.url, hit.title[:2000], hit.published_date))
+    # Old URLs are fallback leads. Never let two baseline pages displace all fresh
+    # support/counterevidence hits in a quick refresh.
+    candidates.extend((s.url, s.title, s.published_date) for s in baseline_sources[:2])
     selected = []
+    candidate_keys = set()
     remaining = tasks.budget.extraction_attempts - tasks.budget.used["extract"]
+    if page_limit is not None:
+        remaining = min(remaining, page_limit)
     for url, title, published in candidates:
         key = canonical_url(url)
-        if key in seen_urls:
+        if key in seen_urls or key in candidate_keys:
             continue
+        candidate_keys.add(key)
         if len(selected) >= remaining:
-            break
+            continue
         seen_urls.add(key)
         selected.append((url, title, published))
+    deferred = len(candidate_keys) - len(selected)
+    if deferred:
+        await tasks.emit(
+            "sources_deferred",
+            {"count": str(deferred), "reason": "Per-round page or remaining extraction limit."},
+            stage="extracting",
+        )
     if not selected:
         return "No new extractable sources were found."
     gaps = []
