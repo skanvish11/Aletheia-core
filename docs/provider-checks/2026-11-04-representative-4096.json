@@ -1,0 +1,198 @@
+{
+  "checked_at": "2026-11-05T03:34:05.488225+00:00",
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "response_format": "json_schema",
+  "profile": "representative",
+  "max_output_tokens": 4096,
+  "timeout_seconds": 45.0,
+  "samples_per_model_task": 2,
+  "deadline_seconds": 180,
+  "checks": [
+    {
+      "check": "nebius_source_heavy",
+      "sample": 1,
+      "input_characters": 75563,
+      "passed": true,
+      "output_characters": 34,
+      "usage": {
+        "prompt_tokens": 16000,
+        "completion_tokens": 1663,
+        "total_tokens": 17663
+      },
+      "elapsed_seconds": 10.674695416004397
+    },
+    {
+      "check": "nebius_large_output",
+      "sample": 1,
+      "input_characters": 72,
+      "passed": true,
+      "output_characters": 1282,
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 2158,
+        "total_tokens": 2360
+      },
+      "elapsed_seconds": 8.370646208000835
+    },
+    {
+      "check": "nebius_source_heavy",
+      "sample": 2,
+      "input_characters": 75563,
+      "passed": true,
+      "output_characters": 34,
+      "usage": {
+        "prompt_tokens": 16000,
+        "completion_tokens": 1881,
+        "total_tokens": 17881
+      },
+      "elapsed_seconds": 10.360196583002107
+    },
+    {
+      "check": "nebius_large_output",
+      "sample": 2,
+      "input_characters": 72,
+      "passed": true,
+      "output_characters": 1282,
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 2557,
+        "total_tokens": 2759
+      },
+      "elapsed_seconds": 9.289306082995608
+    },
+    {
+      "check": "tavily_search",
+      "passed": true,
+      "result_count": 2,
+      "elapsed_seconds": 2.2593524170224555,
+      "usage": {
+        "credits": 2.0
+      }
+    },
+    {
+      "check": "tavily_extract",
+      "passed": true,
+      "characters": 6765,
+      "truncated": false,
+      "error": null,
+      "elapsed_seconds": 0.7703621669788845,
+      "usage": {
+        "credits": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "Small synthetic integration sample; not a latency SLA or research-quality evaluation.",
+    "Live failures are not deliberately induced; retry timing is simulated offline.",
+    "Usage is reported when supplied; failed requests may still incur provider charges."
+  ],
+  "attempts": [
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 10.672949625004549,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 8.369497417006642,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 10.359030166000593,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 9.28802908299258,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "search",
+      "units": 1,
+      "elapsed_seconds": 2.2591841249959543,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "extract",
+      "units": 1,
+      "elapsed_seconds": 0.7702357500093058,
+      "status_code": 200,
+      "outcome": "success"
+    }
+  ],
+  "attempt_units": {
+    "model": 4,
+    "search": 1,
+    "extract": 1
+  },
+  "passed": true,
+  "latency_seconds": {
+    "nebius_source_heavy": {
+      "count": 2,
+      "median": 10.517445999503252,
+      "max": 10.674695416004397
+    },
+    "nebius_large_output": {
+      "count": 2,
+      "median": 8.829976145498222,
+      "max": 9.289306082995608
+    },
+    "tavily_search": {
+      "count": 1,
+      "median": 2.2593524170224555,
+      "max": 2.2593524170224555
+    },
+    "tavily_extract": {
+      "count": 1,
+      "median": 0.7703621669788845,
+      "max": 0.7703621669788845
+    }
+  },
+  "offline_retry_timing": {
+    "source": "offline simulation: two HTTP 503 responses then success; 0.1s per response",
+    "elapsed_seconds": 1.05754920799518,
+    "scheduled_backoff_seconds": 0.75,
+    "attempts": [
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.10163824999472126,
+        "status_code": 503,
+        "outcome": "unavailable"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.1019899999955669,
+        "status_code": 503,
+        "outcome": "unavailable"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 0.1017520840105135,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  }
+}

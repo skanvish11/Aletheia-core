@@ -1,0 +1,155 @@
+{
+  "checked_at": "2026-11-05T02:31:59.431989+00:00",
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "response_format": "json_schema",
+  "samples_per_model_task": 2,
+  "deadline_seconds": 180,
+  "checks": [
+    {
+      "check": "nebius_short",
+      "sample": 1,
+      "passed": true,
+      "elapsed_seconds": 3.2658724170178175,
+      "usage": {
+        "prompt_tokens": 103,
+        "completion_tokens": 673,
+        "total_tokens": 776
+      }
+    },
+    {
+      "check": "nebius_long",
+      "sample": 1,
+      "passed": true,
+      "elapsed_seconds": 4.191828999988502,
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 1195,
+        "total_tokens": 1397
+      }
+    },
+    {
+      "check": "nebius_short",
+      "sample": 2,
+      "passed": true,
+      "elapsed_seconds": 2.95590287502273,
+      "usage": {
+        "prompt_tokens": 103,
+        "completion_tokens": 765,
+        "total_tokens": 868
+      }
+    },
+    {
+      "check": "nebius_long",
+      "sample": 2,
+      "passed": true,
+      "elapsed_seconds": 4.797701584000606,
+      "usage": {
+        "prompt_tokens": 202,
+        "completion_tokens": 1379,
+        "total_tokens": 1581
+      }
+    },
+    {
+      "check": "tavily_search",
+      "passed": true,
+      "result_count": 2,
+      "elapsed_seconds": 0.9188552499981597,
+      "usage": {
+        "credits": 2.0
+      }
+    },
+    {
+      "check": "tavily_extract",
+      "passed": true,
+      "characters": 6765,
+      "error": null,
+      "elapsed_seconds": 0.5347662919957656,
+      "usage": {
+        "credits": 0.0
+      }
+    }
+  ],
+  "limitations": [
+    "Small integration sample; not a latency SLA or research-quality evaluation.",
+    "Live failures are not deliberately induced; retry timing is tested offline.",
+    "Usage is reported when supplied; failed requests may still incur provider charges."
+  ],
+  "attempts": [
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 3.263913125003455,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 4.189163166971412,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 2.9546938330167904,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "nebius",
+      "operation": "model",
+      "units": 1,
+      "elapsed_seconds": 4.795736416010186,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "search",
+      "units": 1,
+      "elapsed_seconds": 0.9184313339937944,
+      "status_code": 200,
+      "outcome": "success"
+    },
+    {
+      "provider": "tavily",
+      "operation": "extract",
+      "units": 1,
+      "elapsed_seconds": 0.5346584579965565,
+      "status_code": 200,
+      "outcome": "success"
+    }
+  ],
+  "attempt_units": {
+    "model": 4,
+    "search": 1,
+    "extract": 1
+  },
+  "passed": true,
+  "latency_seconds": {
+    "nebius_short": {
+      "count": 2,
+      "median": 3.1108876460202737,
+      "max": 3.2658724170178175
+    },
+    "nebius_long": {
+      "count": 2,
+      "median": 4.494765291994554,
+      "max": 4.797701584000606
+    },
+    "tavily_search": {
+      "count": 1,
+      "median": 0.9188552499981597,
+      "max": 0.9188552499981597
+    },
+    "tavily_extract": {
+      "count": 1,
+      "median": 0.5347662919957656,
+      "max": 0.5347662919957656
+    }
+  }
+}

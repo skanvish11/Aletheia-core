@@ -1,10 +1,16 @@
 # Backend foundation: implemented scope and acceptance
 
+> This document records the earlier milestone. [Step 3](research-pipeline.md) adds
+> opt-in research execution, saved evidence/results, refresh, comparisons and progress.
+> Its scope document describes current behavior and the schema-3 migration.
+
 This milestone implements local claim submission, persisted queued investigations,
 exact-request reuse, retrieval, health, and startup interruption cleanup. It does not
 execute research. No Nebius, Tavily, OpenAI SDK, or provider credentials are required.
 New investigations remain queued; there is no worker, inference, search, verdict,
-SSE endpoint, evidence endpoint, refresh, or comparison implementation yet.
+SSE endpoint, evidence endpoint, refresh, or comparison implementation in Step 1.
+Step 2 adds separately invoked [provider connections](provider-adapters.md); it does
+not change this API's queued-only behavior or require credentials for foundation use.
 
 The accepted PR #5 build order places refresh/comparison after the working minimum.
 This branch starts from main; PR #5 was still open when implementation began.

@@ -1,0 +1,19 @@
+# Reviewers are requested automatically for changes under these paths.
+# Later rules override earlier ones.
+
+*                   @skanvish11 @csalive
+
+/src/               @skanvish11
+/tests/             @skanvish11
+/scripts/           @skanvish11
+/pyproject.toml     @skanvish11
+/uv.lock            @skanvish11
+/.github/workflows/backend.yml  @skanvish11
+
+/web/               @csalive
+/evals/             @csalive
+/design/            @csalive
+/.github/workflows/web.yml      @csalive
+/.github/workflows/evals.yml    @csalive
+
+/README.md          @skanvish11 @csalive

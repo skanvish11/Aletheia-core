@@ -166,7 +166,7 @@ async def test_schema_version_and_unique_constraints(app, settings):
     storage = app.state.storage
     saved = await storage.submit(InvestigationRequest(claim="Unique"))
     async with storage.connection() as db:
-        assert (await (await db.execute("PRAGMA user_version")).fetchone())[0] == 1
+        assert (await (await db.execute("PRAGMA user_version")).fetchone())[0] == 3
         with pytest.raises(sqlite3.IntegrityError):
             await db.execute(
                 "INSERT INTO claim_requests SELECT ?, original_claim, context_json, "

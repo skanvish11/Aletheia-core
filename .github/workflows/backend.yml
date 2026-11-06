@@ -29,6 +29,8 @@ jobs:
           uv run --locked ruff format --check .
       - name: Offline behavior tests
         run: uv run --locked pytest
+      - name: Research protection sensitivity
+        run: uv run --locked python scripts/check_research_test_sensitivity.py
 
   local-scripts:
     runs-on: ${{ matrix.os }}
