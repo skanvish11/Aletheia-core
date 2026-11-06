@@ -72,11 +72,13 @@ def planning_context(evidence, sources):
                 "relation": assessment.relation,
                 "admissible": item.admissible,
                 "scope_match": assessment.scope_match,
-                "origin": assessment.origin,
+                "origin": assessment.origin if item.admissible else None,
                 "independence": assessment.independence,
                 "duplicate_group": source.duplicate_group,
-                "rationale": assessment.rationale[:600],
-                "excerpts": [excerpt.text[:600] for excerpt in item.excerpts[:2]],
+                "rationale": assessment.rationale[:600] if item.admissible else None,
+                "excerpts": [excerpt.text[:600] for excerpt in item.excerpts[:2]]
+                if item.admissible
+                else [],
             }
         )
     return {"summaries": summaries, "omitted_assessments": len(evidence) - len(selected)}

@@ -28,8 +28,9 @@ async def plan_search(tasks, assertion, route, seen, gap=None, evidence_context=
         "both support and contradiction searches; look for primary records and corrections. "
         "Follow-up queries must address the named evidence gap and must not repeat previous "
         "queries. Use the supplied evidence summaries to target missing scope, original sources "
-        "and disagreements. Summaries may be truncated and include inadmissible passages; they "
-        "are search leads, not new evidence. Stay within remaining search and extraction attempts. "
+        "and disagreements. Summaries may be truncated; rejected evidence contributes metadata "
+        "only. These are search leads, not new evidence. Stay within remaining search and "
+        "extraction attempts. "
         "Return no queries if there is no useful new search. Never use prior verdicts.",
         {
             "assertion": assertion.model_dump(),

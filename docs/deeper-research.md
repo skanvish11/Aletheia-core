@@ -13,9 +13,11 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   It uses the existing verdict policy; it adds no extra model calls.
 - Follow-up planning receives up to twelve evidence summaries, alternating support,
   contradiction, context and irrelevant assessments. Each summary carries its URL,
-  evidence ID, admissibility, scope match, origin/independence, duplicate group,
-  a rationale prefix (600 characters) and up to two excerpt prefixes (600 characters
-  each). The omitted-assessment count is explicit. This is bounded search-planning
+  evidence ID, admissibility, scope match, independence and duplicate group.
+  Only admissible evidence includes origin, a rationale prefix (600 characters)
+  and up to two excerpt prefixes (600 characters each). Rejected evidence contributes
+  metadata only; rejected rationale, origin text and passages are excluded.
+  The omitted-assessment count is explicit. This is bounded search-planning
   context, not new evidence or a replacement for full saved excerpts. All text stays
   inside the existing untrusted-data boundary. Previous verdicts never enter planning.
 - The planner also sees used queries and remaining search, page, model and time
@@ -26,13 +28,21 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   These are page-selection ceilings, not extra provider allowances: failed requests
   and retries still consume the existing global limits. Multiple support queries
   do not crowd out the first counterevidence query in page selection.
-- Fresh search candidates precede up to two historical URL leads on refresh.
-  Old sources that do not fit remain `not_selected`, never falsely `retrieval_failed`
-  or deleted. Every page actually used as current evidence is freshly extracted.
+- Refresh reserves recheck slots for up to two sources cited by the saved result,
+  prioritizing supporting/contradicting evidence over context and excluding rejected
+  or uncited snapshots. Rechecks precede fresh search candidates and sit outside
+  the per-round fresh-page ceiling, but consume the same global attempt/time budgets.
+  A quick refresh that cannot finish both sets reports `partial`, preserves validated
+  findings, and still finalizes/computes comparison within its reserve. No budget
+  increases or cached assessments are used. Old sources that do not fit remain
+  `not_selected`, never falsely `retrieval_failed` or deleted.
 - Quick research escalates to deep once when the initial evidence cannot settle
   the claim. Accumulated attempts and the original clock remain intact. No planner
   call is started for a follow-up when no search or extraction capacity remains.
-- `research_gate` events explain continuation/stopping. `sources_deferred` events
+- `research_gate` announces a follow-up only after a nonempty plan passes remaining
+  search, extraction and assessment capacity checks, immediately before
+  `followup_planned`. Empty plans and exhausted capacity emit a stop instead.
+  `sources_deferred` events
   report pages omitted under selection limits; they do not imply retrieval failure.
   The result discloses that some candidates were deferred during research, even if
   a later round happens to retrieve them. Existing `followup_planned` events now
@@ -46,7 +56,7 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   A greedy first choice previously could hide a valid later pair. Shared or unknown
   origins and duplicate content still cannot count as two independent observations.
 
-Prompt/application versions are `one-claim-v4` and `research-v4`. Result configuration
+Prompt/application versions are `one-claim-v4.1` and `research-v4.1`. Result configuration
 records the page and follow-up limits. Existing saved records remain readable;
 no database schema migration is needed. Clients consuming the event-type enumeration
 should accept the two additional progress events.
@@ -60,7 +70,7 @@ and temporary SQLite files. They never call paid providers or load real dotenv f
 | --- | --- |
 | Narrow-scope evidence triggers one escalation and a useful follow-up that settles the claim | `test_followup_uses_scope_gap_and_new_evidence_to_finish` |
 | Counterevidence gets page capacity even with two support queries | `test_counterevidence_gets_page_capacity_beside_a_long_support_list` |
-| Refresh includes fresh candidates despite old baseline pages | `test_refresh_prioritizes_fresh_search_results_over_old_pages` |
+| Refresh reserves old evidence rechecks and fresh candidates within global limits | `test_refresh_reserves_old_evidence_and_fresh_search_slots` |
 | Conflict takes priority over unavailable pages; empty follow-up ends honestly | `test_conflict_takes_priority_over_retrieval_gap_and_can_stop_honestly` |
 | New counterevidence blocks an otherwise sufficient supporting finding | `test_counterevidence_in_followup_prevents_true_even_with_more_support` |
 | Large candidate lists preserve both follow-ups and finalization | `test_large_source_lists_leave_capacity_for_two_followups_and_finalization` |
@@ -86,14 +96,26 @@ uv run --locked pytest
 uv run --locked python scripts/check_research_test_sensitivity.py
 ```
 
-Observed local results: **281 tests passed** (including twelve Step 4 cases), Ruff
-lint/format and `git diff --check` passed, and all eight deliberate faults were
-detected. Execution used the locked dependencies on Python 3.15.2 with the existing
-offline cache. A Python 3.12 setup attempt could not obtain the required wheel:
-it was absent from the cache and the package host could not be resolved. The
-configured Python 3.12/3.13 CI matrix has not been run for this increment. No
-independent agent review, live provider call or human research-quality evaluation
-was performed. This validation concerns local behavior, not remote CI or accuracy.
+Historical local results before review: **281 tests passed**, lint/format checks
+passed, and all eight deliberate faults were detected on Python 3.15.2 with locked
+dependencies. GitHub subsequently passed both Python 3.12/3.13 test jobs and the
+Linux/Windows local-script jobs on commit `b77d282` in
+[run 42155213334](https://github.com/skanvish11/Aletheia-core/actions/runs/42155213334).
+The review supplied new failing cases beyond that original suite.
+
+PR #17 follow-up adds `tests/test_step4_review.py`: ranking shifts must preserve old
+cited evidence and same-evidence consistency checks; rejected text must stay out
+of planning; and follow-up events must match actual planned work. Five new
+regression cases failed on the original PR and passed after correction. Additional
+coverage checks cited-source priority and successful follow-up event ordering.
+The old fresh-only refresh test now checks both old and new sources with explicit
+extra test capacity; default-budget regressions require an honest partial result.
+Two new sensitivity checks deliberately remove refresh rechecks or leak rejected
+rationale and require failure. Updated local verification: **288 tests passed**,
+Ruff lint/format and whitespace checks passed, and all **ten** deliberate faults
+were detected on Python 3.15.2 with locked dependencies. No live provider calls or
+human passage review were performed. CI status for the updated commit is recorded
+on the PR; earlier green runs do not establish the status of a later revision.
 
 ## Scope and remaining validation
 

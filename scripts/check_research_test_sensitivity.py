@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "refresh drops cited baseline evidence",
+        "orchestrator.py",
+        "baseline_sources if round_index == 0 else (),",
+        "(),",
+        "tests/test_step4_review.py::test_refresh_rechecks_cited_pages_when_rankings_shift[False]",
+    ),
+    (
+        "rejected rationale reaches planning",
+        "research_gate.py",
+        '"rationale": assessment.rationale[:600] if item.admissible else None,',
+        '"rationale": assessment.rationale[:600],',
+        "tests/test_step4_review.py::test_planning_context_excludes_rejected_passage_and_rationale",
+    ),
+    (
         "first round consumes follow-up page capacity",
         "orchestrator.py",
         'page_limit=2 if assigned_route == "quick" or round_index else 4,',

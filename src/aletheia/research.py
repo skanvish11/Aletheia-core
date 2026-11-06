@@ -5,6 +5,18 @@ from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.verification import assess
 
 
+def refresh_sources(sources, evidence, cited_ids):
+    """Recheck cited evidence, prioritizing direct support/contradiction over context."""
+    cited = [e for e in evidence if e.admissible and e.id in cited_ids]
+    relevant = {e.assessment.citation.snapshot_id for e in cited}
+    direct = {
+        e.assessment.citation.snapshot_id
+        for e in cited
+        if e.assessment.relation in {"supports", "contradicts"}
+    }
+    return sorted((s for s in sources if s.id in relevant), key=lambda s: s.id not in direct)[:2]
+
+
 async def gather(
     tasks,
     search,
@@ -43,20 +55,19 @@ async def gather(
         for group in groups
         if index < len(group)
     ]
-    candidates = []
+    # Cited old evidence gets reserved recheck slots, outside the fresh-page ceiling
+    # but still inside every shared attempt/deadline limit.
+    candidates = [(s.url, s.title, s.published_date) for s in baseline_sources[:2]]
     for index in range(5):
         for batch in ordered:
             if index < len(batch):
                 hit = batch[index]
                 candidates.append((hit.url, hit.title[:2000], hit.published_date))
-    # Old URLs are fallback leads. Never let two baseline pages displace all fresh
-    # support/counterevidence hits in a quick refresh.
-    candidates.extend((s.url, s.title, s.published_date) for s in baseline_sources[:2])
     selected = []
     candidate_keys = set()
     remaining = tasks.budget.extraction_attempts - tasks.budget.used["extract"]
     if page_limit is not None:
-        remaining = min(remaining, page_limit)
+        remaining = min(remaining, page_limit + len(baseline_sources[:2]))
     for url, title, published in candidates:
         key = canonical_url(url)
         if key in seen_urls or key in candidate_keys:

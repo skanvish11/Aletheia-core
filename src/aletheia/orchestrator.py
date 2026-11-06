@@ -7,13 +7,13 @@ from aletheia.claims import interpret, route
 from aletheia.comparison import compare
 from aletheia.planning import plan_search, query_key
 from aletheia.providers.errors import ErrorCode, ProviderError
-from aletheia.research import gather
-from aletheia.research_contracts import InvestigationResult, Snapshot
+from aletheia.research import gather, refresh_sources
+from aletheia.research_contracts import Evidence, InvestigationResult, Snapshot
 from aletheia.research_gate import evaluate, planning_context
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v4"
+APPLICATION_VERSION = "research-v4.1"
 MAX_FOLLOWUP_ROUNDS = 2
 
 
@@ -34,6 +34,7 @@ class Pipeline:
         plan = None
         assigned_route = "quick"
         stop_reason, partial = "no_useful_query", False
+        round_index = 0
         try:
             await emit("stage_started", {"stage": "interpreting"}, stage="interpreting")
             plan = await interpret(tasks, investigation)
@@ -67,7 +68,14 @@ class Pipeline:
                 if parent and parent.result
                 else []
             )
+            if parent and parent.result:
+                baseline_sources = refresh_sources(
+                    baseline_sources,
+                    await self.storage.records(parent.id, "evidence", Evidence),
+                    set(parent.result.finding.evidence_ids),
+                )
             gap = None
+            gap_reason = "missing_evidence"
             for round_index in range(MAX_FOLLOWUP_ROUNDS + 1):
                 if round_index:
                     # Do not spend a planning call when its searches/pages cannot execute.
@@ -89,6 +97,20 @@ class Pipeline:
                     )
                     break
                 if round_index:
+                    # Announce a follow-up only once a nonempty plan exists and its
+                    # next search, extraction and assessment still have capacity.
+                    budget.check("tavily", "search", 1)
+                    budget.check("tavily", "extract", 1)
+                    budget.check("nebius", "model", 1)
+                    await emit(
+                        "research_gate",
+                        {
+                            "action": "followup",
+                            "reason": gap_reason,
+                            "gap": gap,
+                            "round": str(round_index - 1),
+                        },
+                    )
                     await emit("followup_planned", {"gap": gap, "round": str(round_index)})
                 seen.update(query_key(q.text) for q in search_plan.queries)
                 gap = await gather(
@@ -105,17 +127,16 @@ class Pipeline:
                     page_limit=2 if assigned_route == "quick" or round_index else 4,
                 )
                 gate = evaluate(assertion, assigned_route, evidence, sources, gap)
-                await emit(
-                    "research_gate",
-                    {
-                        "action": "stop"
-                        if gate.sufficient or round_index == MAX_FOLLOWUP_ROUNDS
-                        else "followup",
-                        "reason": gate.reason,
-                        "gap": gate.gap or "",
-                        "round": str(round_index),
-                    },
-                )
+                if gate.sufficient or round_index == MAX_FOLLOWUP_ROUNDS:
+                    await emit(
+                        "research_gate",
+                        {
+                            "action": "stop",
+                            "reason": gate.reason if gate.sufficient else "followup_round_limit",
+                            "gap": gate.gap or "",
+                            "round": str(round_index),
+                        },
+                    )
                 if gate.sufficient:
                     stop_reason = "evidence_sufficient"
                     break
@@ -128,6 +149,7 @@ class Pipeline:
                         route="deep",
                     )
                 gap = gate.gap
+                gap_reason = gate.reason
             else:
                 stop_reason, partial = "budget_exhausted", True
                 limitations.append("The follow-up round limit was reached.")
@@ -151,6 +173,10 @@ class Pipeline:
                 return
             stop_reason, partial = exc.code.value, True
             limitations.append("Research stopped at a time or call limit; coverage is incomplete.")
+            await emit(
+                "research_gate",
+                {"action": "stop", "reason": stop_reason, "round": str(round_index)},
+            )
             await emit("budget_reached", {"reason": stop_reason})
         except InvalidTask:
             await self.storage.finish(
@@ -239,6 +265,7 @@ class Pipeline:
                 "quick_initial_page_limit": 2,
                 "deep_initial_page_limit": 4,
                 "followup_page_limit": 2,
+                "refresh_recheck_page_limit": 2,
             },
             budget_used=dict(budget.used),
             provider_attempts=[asdict(a) for a in budget.attempts],

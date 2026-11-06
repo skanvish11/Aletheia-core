@@ -151,7 +151,12 @@ async def test_counterevidence_gets_page_capacity_beside_a_long_support_list(
         assert assessed == ["https://source.test/0", "https://source.test/1"]
 
 
-async def test_refresh_prioritizes_fresh_search_results_over_old_pages(settings):
+async def test_refresh_reserves_old_evidence_and_fresh_search_slots(settings):
+    class CompleteRefreshBudget(RunBudget):
+        def __init__(self):
+            super().__init__()
+            self.model_attempts = 10
+
     class NewEvidence(Providers):
         async def handle(self, request):
             response = await super().handle(request)
@@ -163,20 +168,23 @@ async def test_refresh_prioritizes_fresh_search_results_over_old_pages(settings)
             return response
 
     providers = NewEvidence(source_count=2)
-    async with running(settings, providers) as (_, client):
+    async with running(settings, providers, budget_factory=CompleteRefreshBudget) as (_, client):
         first = await submit(client)
         assert first["result"]["verdict"] == "true"
         providers.options["relation"] = "contradicts"
         refreshed = await client.post(first["links"]["refresh"], headers={"Idempotency-Key": "new"})
         second = await terminal(client, refreshed.json()["id"])
         assert second["result"]["verdict"] == "false"
+        assert second["status"] == "completed"
         evidence = (await client.get(second["links"]["evidence"])).json()
         assert {s["url"] for s in evidence["sources"]} == {
+            "https://source.test/0",
+            "https://source.test/1",
             "https://source.test/new/0",
             "https://source.test/new/1",
         }
         comparison = (await client.get(second["links"]["comparison"])).json()
-        assert {s["change"] for s in comparison["sources"]} == {"new", "not_selected"}
+        assert {s["change"] for s in comparison["sources"]} == {"new", "unchanged"}
 
 
 async def test_conflict_takes_priority_over_retrieval_gap_and_can_stop_honestly(settings):
