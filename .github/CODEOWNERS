@@ -14,5 +14,6 @@
 /evals/             @csalive
 /design/            @csalive
 /.github/workflows/web.yml      @csalive
+/.github/workflows/evals.yml    @csalive
 
 /README.md          @skanvish11 @csalive
