@@ -50,6 +50,9 @@ class Worker:
                     raise
                 except Exception:
                     try:
+                        await self.storage.progress(
+                            self.current.id, "pipeline_failed", {"reason": "internal_error"}
+                        )
                         await self.storage.finish(
                             self.current.id,
                             status="failed",

@@ -91,20 +91,20 @@ def correction_eligible(computed, evidence, route, sources):
 
 def validate_correction(correction, assertion, computed, available, route, sources):
     if not correction_eligible(computed, list(available.values()), route, sources):
-        raise ValueError("Almost cannot replace truth, unresolved conflict or inadequate evidence.")
+        raise TaskValidationError("correction_ineligible")
     if " ".join(correction.corrected_claim.text.casefold().split()) == " ".join(
         assertion.text.casefold().split()
     ):
-        raise ValueError("Almost must actually correct the claim.")
+        raise TaskValidationError("correction_unchanged")
     for unit in (
         correction.what_is_correct,
         correction.what_needs_correction,
         correction.corrected_claim,
     ):
         if not set(unit.evidence_ids) <= available.keys():
-            raise ValueError("A correction cites unknown or inadmissible evidence.")
+            raise TaskValidationError("correction_reference")
         if not sufficient([available[i] for i in set(unit.evidence_ids)], route, sources):
-            raise ValueError("Every part of a correction must meet the evidence requirements.")
+            raise TaskValidationError("correction_insufficient")
 
 
 async def synthesize(tasks, assertion, computed, evidence, route, sources):
@@ -116,7 +116,7 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
     def validate(value):
         for unit in value.units:
             if not unit.text.strip() or not set(unit.evidence_ids) <= available.keys():
-                raise ValueError("Explanation cites unknown or inadmissible evidence.")
+                raise TaskValidationError("explanation_reference")
         if value.almost_correction:
             validate_correction(
                 value.almost_correction, assertion, computed, available, route, sources

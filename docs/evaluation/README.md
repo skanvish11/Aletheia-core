@@ -6,6 +6,7 @@ human labeling, passage review, and the private held-out evaluation remain requi
 
 - [Findings, all 20 outcomes, and proposed fix order](review-and-fix-plan.md)
 - [First repairs, all seven follow-up attempts, and remaining failures](repairs.md)
+- [Adversarial review: before/fix/open-gap comparison and trace guide](adversarial-review.md)
 - [Proposed claims and references](proposed-claims.md)
 - [Machine-readable proposals](proposed-claims.json)
 - [Results and limitations](results.md)

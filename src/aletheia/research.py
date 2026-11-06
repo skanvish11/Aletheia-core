@@ -48,17 +48,24 @@ async def gather(
     page_limit=None,
 ):
     batches = []
+    discovered_by = {}
     for query in plan.queries:
+        query_id = tasks.budget.trace_id("q")
         await tasks.emit(
-            "search_started", {"query": query.text, "purpose": query.purpose}, stage="searching"
+            "search_started",
+            {"query": query.text, "purpose": query.purpose, "query_id": query_id},
+            stage="searching",
         )
-        result = await search.search(query.text, budget=tasks.budget, max_results=5)
+        with tasks.budget.tracing(query_id=query_id):
+            result = await search.search(query.text, budget=tasks.budget, max_results=5)
         await tasks.emit(
             "search_completed",
-            {"query": query.text, "result_count": str(len(result.results))},
+            {"query": query.text, "query_id": query_id, "result_count": str(len(result.results))},
             stage="searching",
         )
         batches.append((query.purpose, sorted(result.results, key=lambda hit: -hit.score)))
+        for hit in result.results:
+            discovered_by.setdefault(canonical_url(hit.url), []).append(query_id)
     # Alternate purposes before alternating result ranks. Two support queries must not
     # crowd the counterevidence query out of a two-page round.
     groups = [
@@ -123,13 +130,29 @@ async def gather(
     if not selected:
         return "No new extractable sources were found."
     gaps = []
-    for url, title, published in selected:
-        result = await search.extract([url], budget=tasks.budget)
+    for slot, (url, title, published) in enumerate(selected, start=1):
+        candidate_id = tasks.budget.trace_id("c")
+        await tasks.emit(
+            "source_selected",
+            {
+                "candidate_id": candidate_id,
+                "url": url,
+                "slot": str(slot),
+                "query_ids": ",".join(discovered_by.get(canonical_url(url), [])),
+                "selection_rule": "baseline_recheck"
+                if any(s.canonical_url == canonical_url(url) for s in baseline_sources[:2])
+                else "purpose_balanced_search_rank",
+            },
+            stage="extracting",
+        )
+        await tasks.emit("stage_started", {"stage": "extracting"}, stage="extracting")
+        with tasks.budget.tracing(candidate_id=candidate_id):
+            result = await search.extract([url], budget=tasks.budget)
         page = result.pages[0]
         if page.error or not page.content:
             await tasks.emit(
                 "source_rejected",
-                {"url": url, "reason": page.error or "empty_content"},
+                {"url": url, "candidate_id": candidate_id, "reason": page.error or "empty_content"},
                 stage="extracting",
             )
             if page.error in {
@@ -157,7 +180,12 @@ async def gather(
         sources.append(source)
         await tasks.emit(
             "source_extracted",
-            {"snapshot_id": source.id, "url": url, "duplicate": str(duplicate).lower()},
+            {
+                "snapshot_id": source.id,
+                "url": url,
+                "candidate_id": candidate_id,
+                "duplicate": str(duplicate).lower(),
+            },
             stage="extracting",
         )
         if duplicate:

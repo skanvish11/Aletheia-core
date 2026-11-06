@@ -8,15 +8,15 @@ def validate_claim(plan):
     if plan.clarification_reason == "factual_uncertainty":
         raise TaskValidationError("factual_uncertainty")
     if plan.questions and (plan.assertions or plan.clarification_reason is None):
-        raise ValueError("Clarification requires a scope reason and no assertions.")
+        raise TaskValidationError("clarification_shape")
     if not plan.questions and plan.clarification_reason is not None:
-        raise ValueError("A clear claim must not have a clarification reason.")
+        raise TaskValidationError("clear_claim_reason")
     if any(not q.strip() for q in plan.questions) or any(
         not a.text.strip() for a in plan.assertions
     ):
-        raise ValueError("Claim and clarification text must not be blank.")
+        raise TaskValidationError("blank_claim")
     if not plan.questions and len(plan.assertions) != 1:
-        raise ValueError("A clear claim requires one assertion.")
+        raise TaskValidationError("claim_shape")
 
 
 async def interpret(tasks, investigation):

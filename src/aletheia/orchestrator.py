@@ -13,7 +13,7 @@ from aletheia.research_gate import evaluate, planning_context
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v4.3"
+APPLICATION_VERSION = "research-v4.4"
 MAX_FOLLOWUP_ROUNDS = 2
 
 
@@ -26,8 +26,32 @@ class Pipeline:
         budget = self.budget_factory()
 
         async def emit(event, payload, **kwargs):
+            if kwargs.get("stage"):
+                budget.trace_stage = kwargs["stage"]
             await self.storage.progress(investigation.id, event, payload, **kwargs)
 
+        async def observe(event, payload):
+            await emit(event, payload, stage=budget.trace_stage)
+
+        budget.observer = observe
+        await budget.observe(
+            "run_configured",
+            {
+                "model": self.model_name,
+                "prompt_version": PROMPT_VERSION,
+                "application_version": APPLICATION_VERSION,
+                "response_format": self.model.settings.nebius_response_format,
+                "thinking": self.model.settings.nebius_thinking,
+                "max_output_tokens": str(self.model.settings.max_output_tokens),
+                "provider_timeout_seconds": str(self.model.settings.timeout_seconds),
+                "provider_max_retries": str(self.model.settings.max_retries),
+                "max_request_bytes": str(self.model.settings.max_request_bytes),
+                "max_response_bytes": str(self.model.settings.max_response_bytes),
+                "max_extracted_chars": str(self.search.settings.max_extracted_chars),
+                "reserve_seconds": str(budget.reserve_seconds),
+                "reserve_model_attempts": str(budget.reserve_model_attempts),
+            },
+        )
         tasks = Tasks(self.model, budget, emit)
         sources, evidence, seen, seen_urls = [], [], set(), set()
         limitations = []
@@ -39,6 +63,13 @@ class Pipeline:
             await emit("stage_started", {"stage": "interpreting"}, stage="interpreting")
             plan = await interpret(tasks, investigation)
             if plan.questions:
+                await budget.observe(
+                    "clarification_decision",
+                    {
+                        "reason": plan.clarification_reason,
+                        "question_count": str(len(plan.questions)),
+                    },
+                )
                 await self.storage.finish(
                     investigation.id, status="needs_clarification", questions=plan.questions
                 )
@@ -155,6 +186,14 @@ class Pipeline:
                 limitations.append("The follow-up round limit was reached.")
                 await emit("budget_reached", {"reason": "followup_round_limit"})
         except ProviderError as exc:
+            await budget.observe(
+                "research_stopped",
+                {
+                    "provider": exc.provider,
+                    "outcome": exc.code.value,
+                    "limit_reason": exc.limit_reason,
+                },
+            )
             if exc.code not in {ErrorCode.BUDGET, ErrorCode.DEADLINE}:
                 await self.storage.finish(
                     investigation.id,
@@ -209,6 +248,14 @@ class Pipeline:
                     tasks, assertion, computed, evidence, assigned_route, sources
                 )
             except ProviderError as exc:
+                await budget.observe(
+                    "research_stopped",
+                    {
+                        "provider": exc.provider,
+                        "outcome": exc.code.value,
+                        "limit_reason": exc.limit_reason,
+                    },
+                )
                 if exc.code not in {ErrorCode.BUDGET, ErrorCode.DEADLINE}:
                     await self.storage.finish(
                         investigation.id,

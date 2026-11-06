@@ -6,7 +6,7 @@ from functools import partial
 from typing import Annotated
 
 import httpx
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from aletheia.budgets import CallBudget
 from aletheia.config import ProviderSettings
@@ -46,28 +46,84 @@ class Completion(BaseModel):
 class ModelResult[T: BaseModel]:
     value: T
     usage: TokenUsage | None
+    reasoning_tokens: int | None = None
+    output_chars: int | None = None
 
 
 def parse_completion[T: BaseModel](data: dict, *, response_type: type[T]) -> ModelResult[T]:
-    completion = Completion.model_validate(data)
+    try:
+        completion = Completion.model_validate(data)
+    except ValidationError:
+        error = ProviderError("nebius", ErrorCode.INVALID_RESPONSE)
+        error.validation_code = "response_envelope"
+        raise error from None
     choice = completion.choices[0]
-    if choice.message.refusal or choice.finish_reason == "content_filter":
-        raise ProviderError("nebius", ErrorCode.REFUSAL)
-    if choice.finish_reason == "length":
-        error = ProviderError("nebius", ErrorCode.TRUNCATED)
-        error.finish_reason = "length"
+    details = (data.get("usage") or {}).get("completion_tokens_details")
+    reasoning = details.get("reasoning_tokens") if isinstance(details, dict) else None
+    if (
+        type(reasoning) is not int
+        or completion.usage is None
+        or not 0 <= reasoning <= completion.usage.completion_tokens
+    ):
+        reasoning = None
+    output_chars = len(choice.message.content) if choice.message.content is not None else 0
+
+    def failure(code, validation="unknown"):
+        error = ProviderError("nebius", code)
+        error.validation_code = validation
+        error.reasoning_tokens, error.output_chars = reasoning, output_chars
+        if choice.finish_reason in {"length", "content_filter", "stop"}:
+            error.finish_reason = choice.finish_reason
         error.token_usage = completion.usage.model_dump() if completion.usage else None
-        raise error
+        return error
+
+    if choice.message.refusal or choice.finish_reason == "content_filter":
+        raise failure(ErrorCode.REFUSAL)
+    if choice.finish_reason == "length":
+        raise failure(ErrorCode.TRUNCATED)
     if (
         choice.finish_reason != "stop"
         or choice.message.role != "assistant"
         or not choice.message.content
     ):
-        raise ProviderError("nebius", ErrorCode.INVALID_RESPONSE)
+        raise failure(ErrorCode.INVALID_RESPONSE, "response_shape")
     # Python validation is required even with provider-side schema constraints.
     # JSON parsing first prevents Pydantic's permissive JSON type conversions.
-    value = response_type.model_validate(parse_json(choice.message.content), strict=True)
-    return ModelResult(value, completion.usage)
+    try:
+        decoded = parse_json(choice.message.content)
+    except (ValueError, RecursionError):
+        raise failure(ErrorCode.INVALID_RESPONSE, "response_json") from None
+    try:
+        value = response_type.model_validate(decoded, strict=True)
+    except ValidationError as exc:
+        error = failure(ErrorCode.INVALID_RESPONSE, "response_schema")
+        # Never export error messages, input values, context, or untrusted extra keys.
+        errors = exc.errors(include_input=False, include_context=False, include_url=False)
+        fields = {
+            e["loc"][0] for e in errors if e["loc"] and e["loc"][0] in response_type.model_fields
+        }
+        allowed_types = {
+            "missing",
+            "extra_forbidden",
+            "string_type",
+            "string_too_long",
+            "string_too_short",
+            "int_type",
+            "bool_type",
+            "literal_error",
+            "too_long",
+            "too_short",
+            "list_type",
+            "model_type",
+            "greater_than_equal",
+            "less_than_equal",
+            "value_error",
+        }
+        types = {e["type"] if e["type"] in allowed_types else "other" for e in errors}
+        error.schema_fields = ",".join(sorted(fields)[:8]) or "unknown"
+        error.schema_error_types = ",".join(sorted(types)[:8]) or "unknown"
+        raise error from None
+    return ModelResult(value, completion.usage, reasoning, output_chars)
 
 
 class NebiusProvider(ProviderHTTP):

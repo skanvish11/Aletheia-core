@@ -2,6 +2,8 @@
 
 This PR begins the repair plan; it does not close Step 7. The original [20-case baseline](results.md) remains **13 failed, 2 partial, 5 clarification requests, 0 completed**. The [review worksheet](review-and-fix-plan.md) lists every claim, observed outcome, issue and proposed next step. All expected labels remain proposals awaiting independent human review.
 
+The subsequent [adversarial review](adversarial-review.md) reproduces two unresolved semantic defects and expands instrumentation across providers, retries, budget stops and source selection. This page preserves the original repair probes; it is not a claim that the review's remaining defects were fixed.
+
 ## Implemented changes
 
 1. **Durable model diagnostics (F01/F03).** Model HTTP attempts and task outcomes now enter the persisted event stream before termination, including failures with no result. Records contain task/schema, duration, status, safe outcome, available token counts and finish reason. Missing usage remains `unknown`. Truncated completions retain validated usage metadata. Known citation/semantic failures have fixed rejection codes; prompts, raw responses, reasoning text and exception messages are never copied into diagnostics. Existing provider failure responses remain generic.
