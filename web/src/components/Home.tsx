@@ -6,9 +6,6 @@ import { Verdict } from './Findings'
 const INTRO =
   'Aletheia searches the web for a claim, checks every quotation against the stored source, and tells you whether the evidence supports it, including when a comparison is misleading.'
 
-const REPLAY_UNAVAILABLE =
-  'Live investigation isn’t available in this demo yet: the Aletheia backend is still being built. Until then, explore the sample investigations below.'
-
 function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => void }) {
   const result = recording.investigation.result
   const flags = [...new Set(result?.findings.flatMap((f) => f.qualification_flags.map((x) => x.type)) ?? [])]
@@ -30,7 +27,9 @@ function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => 
 }
 
 interface Props {
-  canSubmit: boolean
+  /** Why claims can't be submitted right now; undefined when they can. */
+  unavailableReason?: string
+  onRetryBackend?: () => void
   submitting: boolean
   error: string | null
   recordings: Recording[]
@@ -38,7 +37,7 @@ interface Props {
   onOpen: (id: string) => void
 }
 
-export function Home({ canSubmit, submitting, error, recordings, onSubmit, onOpen }: Props) {
+export function Home({ unavailableReason, onRetryBackend, submitting, error, recordings, onSubmit, onOpen }: Props) {
   return (
     <section className="home">
       <h1 className="claim">Check a claim</h1>
@@ -47,7 +46,8 @@ export function Home({ canSubmit, submitting, error, recordings, onSubmit, onOpe
       <ClaimForm
         onSubmit={onSubmit}
         submitting={submitting}
-        unavailableReason={canSubmit ? undefined : REPLAY_UNAVAILABLE}
+        unavailableReason={unavailableReason}
+        onRetry={onRetryBackend}
       />
       {error && (
         <p className="error" role="alert">

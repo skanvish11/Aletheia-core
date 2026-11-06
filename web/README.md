@@ -7,7 +7,7 @@ Companion demo client for the backend described in the root [README](../README.m
 | Mode | How to run | What it does |
 | --- | --- | --- |
 | Replay (default) | `npm run dev` | Plays bundled recordings from `src/fixtures/`. No backend calls; every view is labeled **Recorded investigation**. This is the only mode allowed on a hosted deploy. |
-| Live | `VITE_DATA_SOURCE=live npm run dev` | Talks to the local backend through the dev-server proxy at `/api`. Set `ALETHEIA_API_URL` if the backend is not on `http://127.0.0.1:8000`. Localhost only. **Requires the Aletheia backend, which is still being built**; this command starts only the client. |
+| Live | `VITE_DATA_SOURCE=live npm run dev` | Talks to the local backend through the dev-server proxy at `/api`. Set `ALETHEIA_API_URL` if the backend is not on `http://127.0.0.1:8000`. Localhost only. This command starts only the client; run the backend separately (root README). On load the client calls `GET /health`, and the claim field is enabled only when the backend answers **and** reports `research_enabled: true`. Otherwise it explains why (unreachable, or research not enabled yet). |
 
 ## Commands
 
@@ -29,7 +29,8 @@ npm test         # hook and form behavior (Vitest + jsdom)
 
 ## Status and caveats
 
-- `src/api/types.ts` is **provisional**. Field names are inferred from the design doc; reconcile them with `src/aletheia/contracts.py` once it exists.
+- `src/api/types.ts` is **reconciled** with `src/aletheia/contracts.py` and the backend's `/openapi.json` for investigations, context, links, errors and `/health`. Results, evidence and most event payloads are still provisional because the backend doesn't serve them yet.
+- If the progress stream closes before research finishes (for example, `/events` returns 404 on a backend without the research pipeline), the page says live progress isn't available instead of staying on "Researching".
 - The only recording is invented sample data (`sample: true`), and the page says so. Replace it with sanitized exports of real runs before any hosted demo, and review exports for secrets first.
 - Clarification, failed and partial results render in the shared layout, but their full designs and sample recordings come in a follow-up.
 - The refresh, saved-view and comparison screens are not built yet.

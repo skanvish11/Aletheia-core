@@ -1,7 +1,12 @@
-// Client-side view of the backend contract in README.md sections 3, 6 and 9.
-// PROVISIONAL: field names are inferred from the design doc. When
-// src/aletheia/contracts.py exists, regenerate or reconcile these types
-// against it and treat the Python models as the source of truth.
+// Client-side view of the backend contract.
+//
+// RECONCILED with src/aletheia/contracts.py and the running backend's
+// /openapi.json at dcb4179 (backend foundation, #8): Investigation, ClaimContext,
+// InvestigationLinks, the error body and /health.
+//
+// STILL PROVISIONAL (not served by the backend yet): InvestigationResult and its
+// findings, the /evidence response, and most event types and payloads. Those
+// follow README sections 6 and 9 until the research pipeline ships them.
 
 export type InvestigationStatus =
   | 'queued'
@@ -78,11 +83,17 @@ export interface InvestigationResult {
   limitations: string[]
 }
 
+/** Each field may be omitted or explicitly null; at most 4,000 characters (contracts.py). */
 export interface ClaimContext {
-  timeframe?: string
-  location?: string
-  definitions?: string
-  notes?: string
+  timeframe?: string | null
+  location?: string | null
+  definitions?: string | null
+  notes?: string | null
+}
+
+export interface InvestigationLinks {
+  /** API path of this investigation, e.g. /investigations/{id}. */
+  self: string
 }
 
 export interface Investigation {
@@ -99,9 +110,23 @@ export interface Investigation {
   created_at: string
   started_at: string | null
   finished_at: string | null
+  /** Always null in the backend foundation; populated once synthesis ships. */
   result: InvestigationResult | null
   clarification_questions: string[] | null
   error: { message: string } | null
+  links: InvestigationLinks
+}
+
+/** GET /health. research_enabled is false until the research worker exists. */
+export interface HealthStatus {
+  status: string
+  database: string
+  research_enabled: boolean
+}
+
+/** Every 4xx/5xx body from the backend: a sanitized message that never echoes input. */
+export interface ErrorBody {
+  detail: string
 }
 
 export interface SourceSnapshot {
@@ -140,25 +165,37 @@ export interface EvidenceResponse {
   assessments: EvidenceAssessment[]
 }
 
-export type EventType =
-  | 'investigation_queued'
-  | 'investigation_started'
-  | 'claim_interpreted'
-  | 'clarification_required'
-  | 'route_selected'
-  | 'search_started'
-  | 'search_completed'
-  | 'source_extracted'
-  | 'source_rejected'
-  | 'evidence_checked'
-  | 'route_escalated'
-  | 'followup_planned'
-  | 'budget_reached'
-  | 'comparison_completed'
-  | 'consistency_flagged'
-  | 'investigation_completed'
-  | 'investigation_partial'
-  | 'investigation_failed'
+/**
+ * Every event type the backend emits (contracts.py InvestigationEvent.type). The
+ * backend sends each as a named SSE event, so the client must listen for each name.
+ */
+export const EVENT_TYPES = [
+  'investigation_queued',
+  'investigation_started',
+  'stage_started',
+  'claim_interpreted',
+  'clarification_required',
+  'route_selected',
+  'search_started',
+  'search_completed',
+  'source_extracted',
+  'source_rejected',
+  'sources_deferred',
+  'research_gate',
+  'evidence_checked',
+  'route_escalated',
+  'followup_planned',
+  'budget_reached',
+  'task_output_rejected',
+  'qualification_flag_dropped',
+  'comparison_completed',
+  'consistency_flagged',
+  'investigation_completed',
+  'investigation_partial',
+  'investigation_failed',
+] as const
+
+export type EventType = (typeof EVENT_TYPES)[number]
 
 export const TERMINAL_EVENTS: ReadonlySet<EventType> = new Set([
   'investigation_completed',

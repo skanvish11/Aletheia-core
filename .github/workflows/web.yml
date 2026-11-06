@@ -4,11 +4,13 @@ on:
   pull_request:
     paths:
       - "web/**"
+      - "src/aletheia/contracts.py" # web tests check the client against the API contract
       - ".github/workflows/web.yml"
   push:
     branches: [main]
     paths:
       - "web/**"
+      - "src/aletheia/contracts.py" # web tests check the client against the API contract
       - ".github/workflows/web.yml"
 
 permissions:
