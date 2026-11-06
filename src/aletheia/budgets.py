@@ -59,3 +59,35 @@ class CallBudget:
     def reserve(self, provider: Provider, operation: Operation, units: int) -> None:
         self.check(provider, operation, units)
         self.used[operation] += units
+
+
+class RunBudget(CallBudget):
+    def __init__(self):
+        self.started = time.monotonic()
+        self.finalizing = False
+        self.route = "quick"
+        self.reserve_seconds = 45.0
+        self.reserve_model_attempts = 4
+        super().__init__(8, 4, 4, self.started + 120)
+
+    def escalate(self):
+        self.route = "deep"
+        self.model_attempts = 16
+        self.search_attempts = 8
+        self.extraction_attempts = 10
+        self.deadline = self.started + 240
+
+    def remaining_seconds(self):
+        # The HTTP adapter also clips retries/timeouts against this research deadline.
+        deadline = self.deadline - (0 if self.finalizing else self.reserve_seconds)
+        return max(0.0, deadline - time.monotonic())
+
+    def check(self, provider, operation, units):
+        if not self.finalizing and operation == "model":
+            if self.used["model"] + units > self.model_attempts - self.reserve_model_attempts:
+                raise ProviderError(provider, ErrorCode.BUDGET)
+        # Profiles may escalate, but counters and the original clock never reset.
+        self.limits.update(
+            model=self.model_attempts, search=self.search_attempts, extract=self.extraction_attempts
+        )
+        super().check(provider, operation, units)

@@ -1,5 +1,9 @@
 # Step 2: provider connections
 
+> This document records the earlier milestone. [Step 3](research-pipeline.md) adds
+> opt-in research execution, saved evidence/results, refresh, comparisons and progress.
+> Its scope document describes current behavior and the schema-3 migration.
+
 The backend can now make explicit, bounded calls to Nebius for structured model
 responses and to Tavily for search and page extraction. Both integrations passed
 live checks on November 4, 2026 (America/Los_Angeles).
