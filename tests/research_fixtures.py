@@ -60,6 +60,7 @@ class Providers:
                     }
                 ],
                 "questions": ["Which archive do you mean?"] if o["ambiguous"] else [],
+                "clarification_reason": "missing_scope" if o["ambiguous"] else None,
                 "scope_note": "Opening year of the named Archive.",
             }
         if schema == "SearchPlan":

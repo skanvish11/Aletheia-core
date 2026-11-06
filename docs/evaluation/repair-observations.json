@@ -1,0 +1,974 @@
+{
+  "human_review": "pending",
+  "runs": [
+    {
+      "variant": "compact tasks; default thinking",
+      "local_artifact_directory": "evaluation-repairs-pilot-2026-11-05",
+      "manifest": {
+        "started_at": "2026-11-06T04:32:33.477495+00:00",
+        "revision": "817dd70fcf9566c24e92a0c7a3bd0bc8feb06df1",
+        "working_tree_dirty": true,
+        "dataset_sha256": "7be56c7e2096fe74c2ca0e31f0f394e090ab15cc19be042d259e2b6cc69b05d7",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "response_format": "json_schema",
+        "max_output_tokens": 4096,
+        "provider_timeout_seconds": 45.0,
+        "max_retries": 2,
+        "case_ids": [
+          "t001"
+        ],
+        "refresh_first": false,
+        "cost": "unknown; no pricing estimate substituted for billed cost",
+        "human_review": "pending",
+        "live": true,
+        "finished_at": "2026-11-06T04:33:06.036486+00:00",
+        "network_attempts": 7,
+        "restart_checks": [
+          {
+            "id": "t001",
+            "unchanged": true
+          }
+        ],
+        "restart_zero_provider_calls": true
+      },
+      "cases": [
+        {
+          "id": "t001",
+          "claim": "Apollo 11 landed on the Moon on July 20, 1969.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 32.512,
+          "network_attempts": 7,
+          "source_count": 1,
+          "evidence_count": 0,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.368",
+                "finish_reason": "stop",
+                "prompt_tokens": "806",
+                "completion_tokens": "450",
+                "total_tokens": "1256"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.952",
+                "finish_reason": "stop",
+                "prompt_tokens": "602",
+                "completion_tokens": "759",
+                "total_tokens": "1361"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "truncated_output",
+                "elapsed_seconds": "17.608",
+                "finish_reason": "length",
+                "prompt_tokens": "9304",
+                "completion_tokens": "4096",
+                "total_tokens": "13400"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "97d0025ec03b2fa2a1675c6b18050a87dd21a0705798e7038f28ff1f02e708fa"
+        }
+      ]
+    },
+    {
+      "variant": "compact tasks; thinking disabled",
+      "local_artifact_directory": "evaluation-repairs-direct-2026-11-05",
+      "manifest": {
+        "started_at": "2026-11-06T04:34:27.931781+00:00",
+        "revision": "817dd70fcf9566c24e92a0c7a3bd0bc8feb06df1",
+        "working_tree_dirty": true,
+        "dataset_sha256": "2033d72769794948757f743ccad6653a3527f7525fc0967aed1e76377ce2fc44",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_timeout_seconds": 45.0,
+        "max_retries": 2,
+        "case_ids": [
+          "t001",
+          "t002",
+          "t005"
+        ],
+        "refresh_first": false,
+        "cost": "unknown; no pricing estimate substituted for billed cost",
+        "human_review": "pending",
+        "live": true,
+        "finished_at": "2026-11-06T04:35:58.210208+00:00",
+        "network_attempts": 46,
+        "restart_checks": [
+          {
+            "id": "t001",
+            "unchanged": true
+          },
+          {
+            "id": "t002",
+            "unchanged": true
+          },
+          {
+            "id": "t005",
+            "unchanged": true
+          }
+        ],
+        "restart_zero_provider_calls": true
+      },
+      "cases": [
+        {
+          "id": "t001",
+          "claim": "Apollo 11 landed on the Moon on July 20, 1969.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 18.804,
+          "network_attempts": 8,
+          "source_count": 1,
+          "evidence_count": 0,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "1.398",
+                "finish_reason": "stop",
+                "prompt_tokens": "806",
+                "completion_tokens": "114",
+                "total_tokens": "920"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.978",
+                "finish_reason": "stop",
+                "prompt_tokens": "601",
+                "completion_tokens": "161",
+                "total_tokens": "762"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "3.891",
+                "finish_reason": "stop",
+                "prompt_tokens": "9639",
+                "completion_tokens": "665",
+                "total_tokens": "10304"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "assess",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "2",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "3.931",
+                "finish_reason": "stop",
+                "prompt_tokens": "9660",
+                "completion_tokens": "600",
+                "total_tokens": "10260"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "assess",
+                "attempt": "2"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "d6b3a24790862dea3bda5b5eb4459376fce2a11370cb7ff742addcccf37ed77f"
+        },
+        {
+          "id": "t002",
+          "claim": "Marie Curie won the Nobel Prize in Chemistry in 1903.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 16.701,
+          "network_attempts": 12,
+          "source_count": 2,
+          "evidence_count": 1,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "0.786",
+                "finish_reason": "stop",
+                "prompt_tokens": "781",
+                "completion_tokens": "113",
+                "total_tokens": "894"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "interpret",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "2",
+                "outcome": "success",
+                "elapsed_seconds": "0.935",
+                "finish_reason": "stop",
+                "prompt_tokens": "802",
+                "completion_tokens": "134",
+                "total_tokens": "936"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.833",
+                "finish_reason": "stop",
+                "prompt_tokens": "596",
+                "completion_tokens": "139",
+                "total_tokens": "735"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.949",
+                "finish_reason": "stop",
+                "prompt_tokens": "8306",
+                "completion_tokens": "415",
+                "total_tokens": "8721"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "budget_exhausted",
+                "elapsed_seconds": "0.002",
+                "finish_reason": "unknown",
+                "prompt_tokens": "unknown",
+                "completion_tokens": "unknown",
+                "total_tokens": "unknown"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "synthesize",
+                "schema": "Synthesis",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "1.071",
+                "finish_reason": "stop",
+                "prompt_tokens": "1714",
+                "completion_tokens": "114",
+                "total_tokens": "1828"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "check_explanation",
+                "schema": "ExplanationCheck",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "0.527",
+                "finish_reason": "stop",
+                "prompt_tokens": "1586",
+                "completion_tokens": "51",
+                "total_tokens": "1637"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "check_explanation",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "check_explanation",
+                "schema": "ExplanationCheck",
+                "attempt": "2",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "0.585",
+                "finish_reason": "stop",
+                "prompt_tokens": "1607",
+                "completion_tokens": "51",
+                "total_tokens": "1658"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "check_explanation",
+                "attempt": "2"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "5f1a64413a71fa4745be0d95a7d7fd1307d59c19adbb8bad5b721eb28fc44f07"
+        },
+        {
+          "id": "t005",
+          "claim": "Albert Einstein\u2019s 1921 Nobel Prize in Physics was awarded specifically for his theory of relativity.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 54.662,
+          "network_attempts": 26,
+          "source_count": 5,
+          "evidence_count": 8,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.724",
+                "finish_reason": "stop",
+                "prompt_tokens": "787",
+                "completion_tokens": "104",
+                "total_tokens": "891"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.930",
+                "finish_reason": "stop",
+                "prompt_tokens": "602",
+                "completion_tokens": "133",
+                "total_tokens": "735"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.386",
+                "finish_reason": "stop",
+                "prompt_tokens": "2521",
+                "completion_tokens": "415",
+                "total_tokens": "2936"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "4.935",
+                "finish_reason": "stop",
+                "prompt_tokens": "6905",
+                "completion_tokens": "1037",
+                "total_tokens": "7942"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "1.102",
+                "finish_reason": "stop",
+                "prompt_tokens": "1581",
+                "completion_tokens": "199",
+                "total_tokens": "1780"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.914",
+                "finish_reason": "stop",
+                "prompt_tokens": "6205",
+                "completion_tokens": "493",
+                "total_tokens": "6698"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.999",
+                "finish_reason": "stop",
+                "prompt_tokens": "1847",
+                "completion_tokens": "188",
+                "total_tokens": "2035"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "elapsed_seconds": "4.325",
+                "finish_reason": "stop",
+                "prompt_tokens": "10217",
+                "completion_tokens": "855",
+                "total_tokens": "11072"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "assess",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "2",
+                "outcome": "success",
+                "elapsed_seconds": "2.561",
+                "finish_reason": "stop",
+                "prompt_tokens": "10238",
+                "completion_tokens": "490",
+                "total_tokens": "10728"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "2.335",
+                "finish_reason": "stop",
+                "prompt_tokens": "6926",
+                "completion_tokens": "369",
+                "total_tokens": "7295"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "synthesize",
+                "schema": "Synthesis",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "1.091",
+                "finish_reason": "stop",
+                "prompt_tokens": "1957",
+                "completion_tokens": "164",
+                "total_tokens": "2121"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "check_explanation",
+                "schema": "ExplanationCheck",
+                "attempt": "1",
+                "outcome": "success",
+                "elapsed_seconds": "0.592",
+                "finish_reason": "stop",
+                "prompt_tokens": "1879",
+                "completion_tokens": "51",
+                "total_tokens": "1930"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "6d869dea8df80e6fc89c4d3667f8b73e7c0599bd989c79b3855556daa8c4b5f4"
+        }
+      ]
+    },
+    {
+      "variant": "thinking disabled; explicit indices and targeted repairs",
+      "local_artifact_directory": "evaluation-repairs-contract-2026-11-05",
+      "manifest": {
+        "started_at": "2026-11-06T04:36:30.263035+00:00",
+        "revision": "817dd70fcf9566c24e92a0c7a3bd0bc8feb06df1",
+        "working_tree_dirty": true,
+        "dataset_sha256": "2033d72769794948757f743ccad6653a3527f7525fc0967aed1e76377ce2fc44",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_timeout_seconds": 45.0,
+        "max_retries": 2,
+        "case_ids": [
+          "t001",
+          "t002",
+          "t005"
+        ],
+        "refresh_first": false,
+        "cost": "unknown; no pricing estimate substituted for billed cost",
+        "human_review": "pending",
+        "live": true,
+        "finished_at": "2026-11-06T04:37:11.224510+00:00",
+        "network_attempts": 24,
+        "restart_checks": [
+          {
+            "id": "t001",
+            "unchanged": true
+          },
+          {
+            "id": "t002",
+            "unchanged": true
+          },
+          {
+            "id": "t005",
+            "unchanged": true
+          }
+        ],
+        "restart_zero_provider_calls": true
+      },
+      "cases": [
+        {
+          "id": "t001",
+          "claim": "Apollo 11 landed on the Moon on July 20, 1969.",
+          "status": "completed",
+          "stop_reason": "evidence_sufficient",
+          "verdict": "true",
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 18.717,
+          "network_attempts": 11,
+          "source_count": 2,
+          "evidence_count": 4,
+          "clarification_questions": null,
+          "explanation": [
+            {
+              "text": "The Amphilsoc transcript directly confirms the July 20, 1969 landing and Armstrong's first walk, but the social media posts provide only secondary, non-authoritative reinforcement.",
+              "evidence_ids": [
+                "698371c1-a4f2-4f70-b3b1-20beb984adbc",
+                "1a0606f7-5dc3-41b5-b4e7-1ed5b085827f",
+                "8c9b0eef-bb0a-46f7-8c72-9eb2a7a69e98"
+              ]
+            },
+            {
+              "text": "No source records the precise lunar module touchdown timestamp; the date is derived from mission documentation, not a single quoted timestamp.",
+              "evidence_ids": [
+                "698371c1-a4f2-4f70-b3b1-20beb984adbc"
+              ]
+            },
+            {
+              "text": "The Amphilsoc transcript spans 5-7 and the Amphilsoc-hosted text together attest to the July 20, 1969 landing as a verified historical event.",
+              "evidence_ids": [
+                "698371c1-a4f2-4f70-b3b1-20beb984adbc"
+              ]
+            }
+          ],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "1.096",
+                "finish_reason": "stop",
+                "prompt_tokens": "806",
+                "completion_tokens": "95",
+                "total_tokens": "901"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.856",
+                "finish_reason": "stop",
+                "prompt_tokens": "602",
+                "completion_tokens": "138",
+                "total_tokens": "740"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "3.411",
+                "finish_reason": "stop",
+                "prompt_tokens": "3375",
+                "completion_tokens": "557",
+                "total_tokens": "3932"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "2.578",
+                "finish_reason": "stop",
+                "prompt_tokens": "2683",
+                "completion_tokens": "607",
+                "total_tokens": "3290"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "synthesize",
+                "schema": "Synthesis",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "1.528",
+                "finish_reason": "stop",
+                "prompt_tokens": "2907",
+                "completion_tokens": "315",
+                "total_tokens": "3222"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "check_explanation",
+                "schema": "ExplanationCheck",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.516",
+                "finish_reason": "stop",
+                "prompt_tokens": "3028",
+                "completion_tokens": "57",
+                "total_tokens": "3085"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "b8e267a2ff74bfa30d1161e5135a57c97b09c576c0a6f1579cb8b2bec72af61f"
+        },
+        {
+          "id": "t002",
+          "claim": "Marie Curie won the Nobel Prize in Chemistry in 1903.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 20.381,
+          "network_attempts": 11,
+          "source_count": 2,
+          "evidence_count": 3,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.875",
+                "finish_reason": "stop",
+                "prompt_tokens": "781",
+                "completion_tokens": "121",
+                "total_tokens": "902"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "plan",
+                "schema": "SearchPlan",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.859",
+                "finish_reason": "stop",
+                "prompt_tokens": "596",
+                "completion_tokens": "125",
+                "total_tokens": "721"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "4.732",
+                "finish_reason": "stop",
+                "prompt_tokens": "8310",
+                "completion_tokens": "994",
+                "total_tokens": "9304"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "validation_code": "citation_spans",
+                "elapsed_seconds": "3.859",
+                "finish_reason": "stop",
+                "prompt_tokens": "10612",
+                "completion_tokens": "844",
+                "total_tokens": "11456"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "assess",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "assess",
+                "schema": "AssessmentBatch",
+                "attempt": "2",
+                "outcome": "budget_exhausted",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.002",
+                "finish_reason": "unknown",
+                "prompt_tokens": "unknown",
+                "completion_tokens": "unknown",
+                "total_tokens": "unknown"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "synthesize",
+                "schema": "Synthesis",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.973",
+                "finish_reason": "stop",
+                "prompt_tokens": "2981",
+                "completion_tokens": "187",
+                "total_tokens": "3168"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "check_explanation",
+                "schema": "ExplanationCheck",
+                "attempt": "1",
+                "outcome": "success",
+                "validation_code": "unknown",
+                "elapsed_seconds": "0.524",
+                "finish_reason": "stop",
+                "prompt_tokens": "2962",
+                "completion_tokens": "49",
+                "total_tokens": "3011"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "eb294cbbb5aec6e8fd14a27bf29ea42366eb89a903fad121e1008e76a8ca8180"
+        },
+        {
+          "id": "t005",
+          "claim": "Albert Einstein\u2019s 1921 Nobel Prize in Physics was awarded specifically for his theory of relativity.",
+          "status": "failed",
+          "stop_reason": "provider_failure",
+          "verdict": null,
+          "unable_to_decide_reason": null,
+          "elapsed_seconds": 1.793,
+          "network_attempts": 2,
+          "source_count": 0,
+          "evidence_count": 0,
+          "clarification_questions": null,
+          "explanation": [],
+          "task_events": [
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "1",
+                "outcome": "invalid_task_output",
+                "validation_code": "factual_uncertainty",
+                "elapsed_seconds": "0.743",
+                "finish_reason": "stop",
+                "prompt_tokens": "787",
+                "completion_tokens": "114",
+                "total_tokens": "901"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "interpret",
+                "attempt": "1"
+              }
+            },
+            {
+              "type": "task_finished",
+              "payload": {
+                "task": "interpret",
+                "schema": "ClaimPlan",
+                "attempt": "2",
+                "outcome": "invalid_task_output",
+                "validation_code": "factual_uncertainty",
+                "elapsed_seconds": "0.829",
+                "finish_reason": "stop",
+                "prompt_tokens": "825",
+                "completion_tokens": "144",
+                "total_tokens": "969"
+              }
+            },
+            {
+              "type": "task_output_rejected",
+              "payload": {
+                "task": "interpret",
+                "attempt": "2"
+              }
+            }
+          ],
+          "saved_checks": {
+            "same_saved_response": true,
+            "zero_provider_calls": true,
+            "ordered_events": true,
+            "reconnect_replay": true
+          },
+          "artifact_sha256": "96fad63d26cd210ce9740d1ae600ed42a08989eedc16a8e27534213a4bed41e5"
+        }
+      ]
+    }
+  ]
+}

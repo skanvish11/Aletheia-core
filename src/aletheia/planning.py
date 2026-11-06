@@ -1,6 +1,7 @@
 """Only validated, non-repeated queries can reach search."""
 
 from aletheia.research_contracts import SearchPlan
+from aletheia.tasks import TaskValidationError
 
 
 def query_key(text):
@@ -10,15 +11,15 @@ def query_key(text):
 def validate_plan(plan, seen, initial):
     keys = [query_key(q.text) for q in plan.queries]
     if any(not key or key in seen for key in keys) or len(set(keys)) != len(keys):
-        raise ValueError("Queries must be nonblank, distinct and new.")
+        raise TaskValidationError("query_identity")
     if (
         initial
         and plan.queries
         and not {"support", "contradiction"} <= {q.purpose for q in plan.queries}
     ):
-        raise ValueError("Initial plan requires support and counterevidence searches.")
+        raise TaskValidationError("query_coverage")
     if not initial and plan.queries and (not plan.gap or not plan.gap.strip()):
-        raise ValueError("Follow-up needs a named evidence gap.")
+        raise TaskValidationError("query_gap")
 
 
 async def plan_search(tasks, assertion, route, seen, gap=None, evidence_context=None):

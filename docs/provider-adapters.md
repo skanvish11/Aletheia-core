@@ -48,6 +48,7 @@ copy, or commit a real settings file or its credentials.
 | `TAVILY_API_KEY` | unset | Required when constructing the Tavily connection. |
 | `NEBIUS_MODEL` | unset | Exact available model ID; no guessed model or automatic fallback. |
 | `ALETHEIA_NEBIUS_RESPONSE_FORMAT` | `json_schema` | `json_schema` or explicitly selected `json_object`; both require local validation. |
+| `ALETHEIA_NEBIUS_THINKING` | `default` | `default` sends no control; `enabled`/`disabled` explicitly sets `chat_template_kwargs.enable_thinking` for exact model `nvidia/Nemotron-3_5-Lightning`. Other models reject non-default values before network access. |
 | `ALETHEIA_PROVIDER_TIMEOUT_SECONDS` | `45` | Maximum seconds per attempt, clipped to the caller's remaining time; range 1–120. |
 | `ALETHEIA_PROVIDER_MAX_RETRIES` | `2` | Maximum additional transient-error attempts; range 0–2. |
 | `ALETHEIA_PROVIDER_MAX_REQUEST_BYTES` | `262144` | Encoded request limit, including instructions and schema; range 1024–1048576. |

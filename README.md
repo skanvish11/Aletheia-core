@@ -429,6 +429,10 @@ Document any deferred capability in the implementation report and client. Deferr
 
 ## 12. Test and evaluation plan
 
+Step 7 now has a [proposed claim set, bounded live runner, and demo walkthrough](docs/evaluation/README.md).
+See its results report for observed failures and pending human review; the proposals are not approved acceptance labels.
+
+
 ### Offline tests — default, no secrets or network
 
 - Routing: direct record, medical-paper publication date versus treatment-effect claim, model-recommended quick with a consequential flag, no deep-to-quick downgrade, causal claims, ambiguity, compound limit, and evidence-driven escalation.

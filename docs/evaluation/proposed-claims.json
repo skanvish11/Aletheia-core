@@ -1,0 +1,541 @@
+[
+  {
+    "id": "t001",
+    "split": "tuning",
+    "claim": "Apollo 11 landed on the Moon on July 20, 1969.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.nasa.gov/wp-content/uploads/static/history/SP-4029/Apollo_11a_Summary.htm",
+        "shows": "The lunar module landed on 20 July 1969, using GMT."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. ",
+    "context": {
+      "definitions": "Use UTC/GMT for the landing date, not the later first moonwalk."
+    }
+  },
+  {
+    "id": "t002",
+    "split": "tuning",
+    "claim": "Marie Curie won the Nobel Prize in Chemistry in 1903.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.nobelprize.org/nomination/archive/show_people.php?id=2051&lang=en",
+        "shows": "Physics award in 1903; Chemistry award in 1911."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. The award category is central, not a minor correction."
+  },
+  {
+    "id": "t003",
+    "split": "tuning",
+    "claim": "Tim Berners-Lee invented the World Wide Web at CERN in 1989.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://home.cern/science/computing/the-birth-of-the-web",
+        "shows": "British scientist Tim Berners-Lee invented the Web at CERN in 1989."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t004",
+    "split": "tuning",
+    "claim": "The James Webb Space Telescope launched on December 25, 2021.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://svs.gsfc.nasa.gov/14060",
+        "shows": "Launch occurred on 25 December 2021 aboard an Ariane 5."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t005",
+    "split": "tuning",
+    "claim": "Albert Einstein’s 1921 Nobel Prize in Physics was awarded specifically for his theory of relativity.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.nobelprize.org/prizes/physics/1921/ceremony-speech/",
+        "shows": "The award emphasizes the photoelectric effect, not relativity."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Distinguish award year from the 1922 announcement."
+  },
+  {
+    "id": "t006",
+    "split": "tuning",
+    "claim": "Mercury is hotter on average at its surface than Venus.",
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/mercury/facts/",
+        "shows": "Mercury is nearest the Sun but Venus is hotter."
+      },
+      {
+        "url": "https://science.nasa.gov/venus/venus-facts/",
+        "shows": "A dense atmosphere traps heat; Venus is hotter than Mercury."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Do not confuse distance to the Sun with surface temperature."
+  },
+  {
+    "id": "t007",
+    "split": "tuning",
+    "claim": "Venus’s dense atmosphere makes its surface hotter through a greenhouse effect.",
+    "case_type": "causal",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/venus/venus-facts/",
+        "shows": "A dense atmosphere traps heat; Venus is hotter than Mercury."
+      },
+      {
+        "url": "https://science.nasa.gov/mercury/facts/",
+        "shows": "Mercury is nearest the Sun but Venus is hotter."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t008",
+    "split": "tuning",
+    "claim": "Northern Hemisphere summer is primarily caused by Earth being closer to the Sun.",
+    "case_type": "causal",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://aa.usno.navy.mil/faq/seasons_orbit",
+        "shows": "Axial tilt explains seasons; distance also varies during the orbit."
+      },
+      {
+        "url": "https://www.weather.gov/fsd/season",
+        "shows": "Earth is closest to the Sun in January, not Northern Hemisphere summer."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t009",
+    "split": "tuning",
+    "claim": "Earth’s axial tilt is the primary cause of its annual seasons.",
+    "case_type": "causal",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://aa.usno.navy.mil/faq/seasons_orbit",
+        "shows": "Axial tilt explains seasons; distance also varies during the orbit."
+      },
+      {
+        "url": "https://www.weather.gov/fsd/season",
+        "shows": "Earth is closest to the Sun in January, not Northern Hemisphere summer."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t010",
+    "split": "tuning",
+    "claim": "At higher elevations, lower atmospheric pressure makes water boil at a lower temperature.",
+    "case_type": "causal",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://extension.colostate.edu/resource/high-elevation-food-preparation-guide/",
+        "shows": "At higher elevations lower air pressure lowers the boiling point."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t011",
+    "split": "tuning",
+    "claim": "Mount Everest is Earth’s highest mountain measured above mean sea level.",
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+        "shows": "Everest leads above sea level; Chimborazo leads from Earth’s center."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. The measurement is explicitly scoped. No automatic flag just because another metric exists."
+  },
+  {
+    "id": "t012",
+    "split": "tuning",
+    "claim": "Mount Everest’s summit is the point on Earth’s surface farthest from Earth’s center.",
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+        "shows": "Everest leads above sea level; Chimborazo leads from Earth’s center."
+      },
+      {
+        "url": "https://blogs.loc.gov/maps/2020/11/extremities-of-the-earth-farthest-point-from-the-center-of-the-earth/",
+        "shows": "The equatorial bulge explains why Chimborazo is farther from the center."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Changing the measurement changes the answer."
+  },
+  {
+    "id": "t013",
+    "split": "tuning",
+    "claim": "Chimborazo’s summit is farther from Earth’s center than Mount Everest’s summit.",
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [
+      {
+        "type": "misleading_comparison",
+        "dimension": "definition",
+        "rationale": "The poster uses tallest while comparing distance from the center rather than elevation above sea level."
+      }
+    ],
+    "key_sources": [
+      {
+        "url": "https://oceanservice.noaa.gov/facts/highestpoint.html",
+        "shows": "Everest leads above sea level; Chimborazo leads from Earth’s center."
+      },
+      {
+        "url": "https://blogs.loc.gov/maps/2020/11/extremities-of-the-earth-farthest-point-from-the-center-of-the-earth/",
+        "shows": "The equatorial bulge explains why Chimborazo is farther from the center."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Check whether the context deserves a definition flag.",
+    "context": {
+      "notes": "A poster calls Chimborazo the tallest mountain; its footnote defines height as distance from Earth’s center."
+    }
+  },
+  {
+    "id": "t014",
+    "split": "tuning",
+    "claim": "Antarctica is a desert because it receives very little precipitation.",
+    "case_type": "interpretive",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.bas.ac.uk/about/education-and-schools/antarctic-factsheet/",
+        "shows": "Low precipitation makes Antarctica a desert despite its ice."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Desert is a precipitation classification, not a temperature classification."
+  },
+  {
+    "id": "t015",
+    "split": "tuning",
+    "claim": "A light-year is a unit of time.",
+    "case_type": "interpretive",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/exoplanets/what-is-a-light-year/",
+        "shows": "A light-year measures how far light travels in a year."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. "
+  },
+  {
+    "id": "t016",
+    "split": "tuning",
+    "claim": "American scientist Tim Berners-Lee invented the World Wide Web at CERN in 1989.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "Tim Berners-Lee invented the World Wide Web at CERN in 1989.",
+        "what_needs_correction": "He is British, not American.",
+        "corrected_claim": "British scientist Tim Berners-Lee invented the World Wide Web at CERN in 1989."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://home.cern/science/computing/the-birth-of-the-web",
+        "shows": "British scientist Tim Berners-Lee invented the Web at CERN in 1989."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Proposed Almost boundary case: invention is the core, nationality a secondary qualifier. Human reviewers must resolve the classification before acceptance scoring."
+  },
+  {
+    "id": "t017",
+    "split": "tuning",
+    "claim": "The James Webb Space Telescope was launched successfully in December 2021 aboard an Ariane 4 rocket.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "The James Webb Space Telescope launched successfully in December 2021.",
+        "what_needs_correction": "The launch vehicle was an Ariane 5, not an Ariane 4.",
+        "corrected_claim": "The James Webb Space Telescope was launched successfully in December 2021 aboard an Ariane 5 rocket."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://svs.gsfc.nasa.gov/14060",
+        "shows": "Launch occurred on 25 December 2021 aboard an Ariane 5."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Proposed Almost boundary case: successful launch is the core and rocket designation the bounded correction. Do not pre-accept False to hide disagreement."
+  },
+  {
+    "id": "t018",
+    "split": "tuning",
+    "claim": "The present-day cosmic expansion rate is approximately 73 kilometers per second per megaparsec.",
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/mission/hubble/science/science-behind-the-discoveries/hubble-constant-and-tension/",
+        "shows": "Local and early-universe methods disagree on the expansion rate."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Proposed conflict case; human review must assess model dependence and whether one scalar claim is sufficiently scoped.",
+    "context": {
+      "timeframe": "Assess the measurement evidence available through December 31, 2024.",
+      "definitions": "Consider both local distance-ladder measurements and early-universe inferences under the standard cosmological model."
+    }
+  },
+  {
+    "id": "t019",
+    "split": "tuning",
+    "claim": "Phosphine gas was present in Venus’s clouds during the observations reported by Greaves and colleagues in 2020.",
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://arxiv.org/abs/2009.06593",
+        "shows": "Greaves and colleagues report a phosphine signature in Venus observations."
+      },
+      {
+        "url": "https://arxiv.org/abs/2010.14305",
+        "shows": "Independent reanalysis disputes phosphine detection."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Opposed analyses concern the same observations. Later measurements must not silently replace the historical question.",
+    "context": {
+      "timeframe": "Evaluate the original observations using the published detection and independent reanalyses through December 31, 2021."
+    }
+  },
+  {
+    "id": "t020",
+    "split": "tuning",
+    "claim": "The 1977 Wow! radio signal was produced by an extraterrestrial civilization.",
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.seti.org/research/seti-101/the-wow-signal",
+        "shows": "The signal’s origin remains unresolved; no repeat has established its cause."
+      },
+      {
+        "url": "https://seti.berkeley.edu/wow/",
+        "shows": "A targeted follow-up found no technosignature candidate; that does not identify the original cause."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "AI-proposed, source-referenced; not a blind human label. Unknown origin is not evidence of aliens and not proof against them. Avoid substituting a False verdict for lack of evidence."
+  }
+]

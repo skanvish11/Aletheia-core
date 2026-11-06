@@ -1,0 +1,110 @@
+{
+  "updated_at": "2026-11-06T04:21:31.229319+00:00",
+  "backend_revision": "5d4c1586736d808516dd1033b1118728bcf4ca06",
+  "dataset_sha256": "0017e73af9dc81e78afe6035217e94bbd0a58c1caa2b143ae85d4f229a5978fa",
+  "proposed_cases": 20,
+  "recorded": 20,
+  "not_run": 0,
+  "statuses": {
+    "failed": 13,
+    "partial": 2,
+    "needs_clarification": 5
+  },
+  "baseline_network_attempts_including_refresh": 118,
+  "saved_checks_passed": {
+    "same_saved_response": 20,
+    "zero_provider_calls": 20,
+    "ordered_events": 20,
+    "reconnect_replay": 20
+  },
+  "restart_checks": [
+    {
+      "id": "t001",
+      "unchanged": true
+    },
+    {
+      "id": "t002",
+      "unchanged": true
+    },
+    {
+      "id": "t003",
+      "unchanged": true
+    },
+    {
+      "id": "t004",
+      "unchanged": true
+    },
+    {
+      "id": "t005",
+      "unchanged": true
+    },
+    {
+      "id": "t006",
+      "unchanged": true
+    },
+    {
+      "id": "t007",
+      "unchanged": true
+    },
+    {
+      "id": "t008",
+      "unchanged": true
+    },
+    {
+      "id": "t009",
+      "unchanged": true
+    },
+    {
+      "id": "t010",
+      "unchanged": true
+    },
+    {
+      "id": "t011",
+      "unchanged": true
+    },
+    {
+      "id": "t012",
+      "unchanged": true
+    },
+    {
+      "id": "t013",
+      "unchanged": true
+    },
+    {
+      "id": "t014",
+      "unchanged": true
+    },
+    {
+      "id": "t015",
+      "unchanged": true
+    },
+    {
+      "id": "t016",
+      "unchanged": true
+    },
+    {
+      "id": "t017",
+      "unchanged": true
+    },
+    {
+      "id": "t018",
+      "unchanged": true
+    },
+    {
+      "id": "t019",
+      "unchanged": true
+    },
+    {
+      "id": "t020",
+      "unchanged": true
+    }
+  ],
+  "restart_zero_provider_calls": true,
+  "human_labels_reviewed": false,
+  "human_citations_reviewed": false,
+  "held_out_run": false,
+  "offline_tests_passed": 307,
+  "model": "nvidia/Nemotron-3_5-Lightning",
+  "max_output_tokens": 4096,
+  "acceptance_complete": false
+}

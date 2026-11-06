@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "provider trace is not persisted",
+        "orchestrator.py",
+        "budget.observer = observe",
+        "budget.observer = None",
+        "tests/test_adversarial_evaluation_trace.py::test_non_model_failure_trace_survives_restart[search-503]",
+    ),
+    (
+        "schema diagnostics leak untrusted extra field names",
+        "providers/nebius.py",
+        'and e["loc"][0] in response_type.model_fields',
+        "",
+        "tests/test_adversarial_evaluation_trace.py::test_invalid_completion_keeps_usage_and_safe_reason_not_private_keys[schema]",
+    ),
+    (
         "duplicate search hits consume counterevidence selection turns",
         "research.py",
         "if key in ranked_keys:",

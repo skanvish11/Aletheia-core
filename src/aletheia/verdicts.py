@@ -5,8 +5,9 @@ from typing import Annotated
 
 from pydantic import Field, ValidationError
 
-from aletheia.research_contracts import Finding, QualificationFlag, Record, Synthesis
-from aletheia.tasks import InvalidTask
+from aletheia.research_contracts import Finding, QualificationFlag, Record
+from aletheia.task_contracts import Synthesis
+from aletheia.tasks import InvalidTask, TaskValidationError
 
 
 class ExplanationCheck(Record):
@@ -90,20 +91,20 @@ def correction_eligible(computed, evidence, route, sources):
 
 def validate_correction(correction, assertion, computed, available, route, sources):
     if not correction_eligible(computed, list(available.values()), route, sources):
-        raise ValueError("Almost cannot replace truth, unresolved conflict or inadequate evidence.")
+        raise TaskValidationError("correction_ineligible")
     if " ".join(correction.corrected_claim.text.casefold().split()) == " ".join(
         assertion.text.casefold().split()
     ):
-        raise ValueError("Almost must actually correct the claim.")
+        raise TaskValidationError("correction_unchanged")
     for unit in (
         correction.what_is_correct,
         correction.what_needs_correction,
         correction.corrected_claim,
     ):
         if not set(unit.evidence_ids) <= available.keys():
-            raise ValueError("A correction cites unknown or inadmissible evidence.")
+            raise TaskValidationError("correction_reference")
         if not sufficient([available[i] for i in set(unit.evidence_ids)], route, sources):
-            raise ValueError("Every part of a correction must meet the evidence requirements.")
+            raise TaskValidationError("correction_insufficient")
 
 
 async def synthesize(tasks, assertion, computed, evidence, route, sources):
@@ -115,7 +116,7 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
     def validate(value):
         for unit in value.units:
             if not unit.text.strip() or not set(unit.evidence_ids) <= available.keys():
-                raise ValueError("Explanation cites unknown or inadmissible evidence.")
+                raise TaskValidationError("explanation_reference")
         if value.almost_correction:
             validate_correction(
                 value.almost_correction, assertion, computed, available, route, sources
@@ -134,7 +135,10 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
         "alone do not establish Almost. Uncertainty, missing evidence and unresolved source "
         "disagreement are never Almost. Otherwise return almost_correction=null and explain "
         "the preliminary decision. Each explanation unit must cite supplied evidence IDs. "
-        "If proposing Almost, explain that qualified result in the units too. Never add facts.",
+        "If proposing Almost, explain that qualified result in the units too. Never add facts. "
+        "Return one to three concise explanation units, each at most 300 characters and "
+        "citing at most six essential evidence IDs. Correction parts also have a 300-character "
+        "limit. Do not repeat the same fact across units or reproduce full source passages.",
         {
             "assertion": assertion.model_dump(),
             "finding": computed.model_dump(),
@@ -149,13 +153,15 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
         if value.supported_units != sorted(set(value.supported_units)) or any(
             i >= len(result.units) for i in value.supported_units
         ):
-            raise ValueError("Invalid explanation unit indices.")
+            raise TaskValidationError("explanation_indices")
 
     check = await tasks.call(
         "check_explanation",
         "Check every numbered explanation unit against ONLY its cited evidence passages "
         "and the preliminary decision or proposed Almost correction. Return fully grounded "
-        "unit indices. If almost_correction is present, independently verify ALL of: its "
+        "unit indices using each unit's explicit ZERO-BASED index (first unit is 0). "
+        "Return sorted unique indices, never evidence IDs or one-based positions. "
+        "If almost_correction is present, independently verify ALL of: its "
         "what_is_correct is supported by its citations; the identified error/qualification "
         "is supported by its citations; the whole corrected claim is supported by its citations; "
         "the core proposition remains substantially true with a bounded correction (not a "
@@ -166,7 +172,7 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
         {
             "assertion": assertion.model_dump(),
             "finding": computed.model_dump(),
-            "units": [u.model_dump() for u in result.units],
+            "units": [{"index": index, **u.model_dump()} for index, u in enumerate(result.units)],
             "almost_correction": result.almost_correction.model_dump()
             if result.almost_correction
             else None,
@@ -176,6 +182,10 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
         check_indices,
     )
     if check.supported_units != list(range(len(result.units))):
+        await tasks.emit(
+            "task_output_rejected",
+            {"task": "final_explanation", "reason": "unsupported_explanation"},
+        )
         raise InvalidTask("Final explanation failed evidence validation.")
     if result.almost_correction:
         if not all(
@@ -187,6 +197,10 @@ async def synthesize(tasks, assertion, computed, evidence, route, sources):
                 check.no_unresolved_conflict,
             )
         ):
+            await tasks.emit(
+                "task_output_rejected",
+                {"task": "final_correction", "reason": "unsupported_correction"},
+            )
             raise InvalidTask("Proposed Almost correction failed evidence validation.")
         # Construct a validated new finding only after BOTH reference and semantic checks.
         computed = Finding(

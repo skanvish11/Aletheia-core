@@ -2,6 +2,8 @@
 
 import math
 import time
+from collections.abc import Awaitable, Callable
+from contextlib import contextmanager
 from dataclasses import dataclass, field
 
 from aletheia.providers.errors import ErrorCode, Operation, Provider, ProviderError
@@ -32,6 +34,46 @@ class CallBudget:
     limits: dict[Operation, int] = field(init=False)
     used: dict[Operation, int] = field(init=False)
     attempts: list[Attempt] = field(default_factory=list, init=False)
+    observer: Callable[[str, dict[str, str]], Awaitable[None]] | None = field(
+        default=None, init=False, repr=False
+    )
+    trace_context: dict[str, str] = field(default_factory=dict, init=False)
+    trace_stage: str = field(default="interpreting", init=False)
+    trace_sequence: int = field(default=0, init=False)
+
+    def trace_id(self, prefix):
+        self.trace_sequence += 1
+        return f"{prefix}{self.trace_sequence}"
+
+    @contextmanager
+    def tracing(self, **context):
+        previous = self.trace_context
+        self.trace_context = {**previous, **context}
+        try:
+            yield
+        finally:
+            self.trace_context = previous
+
+    def trace_budget(self):
+        reserve = getattr(self, "reserve_model_attempts", 0)
+        finalizing = getattr(self, "finalizing", False)
+        return {
+            "stage": self.trace_stage,
+            "phase": "finalization" if finalizing else "research",
+            "model_used": str(self.used["model"]),
+            "model_limit": str(self.model_attempts),
+            "model_available_limit": str(self.model_attempts - (0 if finalizing else reserve)),
+            "search_used": str(self.used["search"]),
+            "search_limit": str(self.search_attempts),
+            "extract_used": str(self.used["extract"]),
+            "extract_limit": str(self.extraction_attempts),
+            "remaining_seconds": f"{self.remaining_seconds():.3f}",
+            "hard_remaining_seconds": f"{max(0, self.deadline - time.monotonic()):.3f}",
+        }
+
+    async def observe(self, event, payload):
+        if self.observer is not None:
+            await self.observer(event, {**self.trace_context, **self.trace_budget(), **payload})
 
     def __post_init__(self):
         if any(
@@ -51,10 +93,16 @@ class CallBudget:
 
     def check(self, provider: Provider, operation: Operation, units: int) -> None:
         if self.remaining_seconds() <= 0:
-            raise ProviderError(provider, ErrorCode.DEADLINE)
+            error = ProviderError(provider, ErrorCode.DEADLINE)
+            error.limit_reason = (
+                "research_deadline" if self.deadline > time.monotonic() else "hard_deadline"
+            )
+            raise error
         limit = self.limits[operation]
         if self.used[operation] + units > limit:
-            raise ProviderError(provider, ErrorCode.BUDGET)
+            error = ProviderError(provider, ErrorCode.BUDGET)
+            error.limit_reason = operation + "_limit"
+            raise error
 
     def reserve(self, provider: Provider, operation: Operation, units: int) -> None:
         self.check(provider, operation, units)
@@ -85,7 +133,9 @@ class RunBudget(CallBudget):
     def check(self, provider, operation, units):
         if not self.finalizing and operation == "model":
             if self.used["model"] + units > self.model_attempts - self.reserve_model_attempts:
-                raise ProviderError(provider, ErrorCode.BUDGET)
+                error = ProviderError(provider, ErrorCode.BUDGET)
+                error.limit_reason = "model_finalization_reserve"
+                raise error
         # Profiles may escalate, but counters and the original clock never reset.
         self.limits.update(
             model=self.model_attempts, search=self.search_attempts, extract=self.extraction_attempts
