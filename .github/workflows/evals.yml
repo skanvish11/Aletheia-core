@@ -1,0 +1,31 @@
+name: Eval checks
+
+on:
+  pull_request:
+    paths:
+      - "evals/**"
+      - ".github/workflows/evals.yml"
+  push:
+    branches: [main]
+    paths:
+      - "evals/**"
+      - ".github/workflows/evals.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # The validator and its tests use the standard library only; nothing to install.
+      - name: Validator tests
+        run: python -m unittest discover -s evals -v
+      - name: Validate claims.json and blind labels
+        run: python evals/validate.py
+      - name: Validate the illustrative examples
+        run: python evals/validate.py evals/examples/example-claims.json

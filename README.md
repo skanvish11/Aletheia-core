@@ -2,7 +2,7 @@
 
 An evidence-first research agent that investigates factual claims, shows its work, and returns a verdict linked to inspectable sources.
 
-**Status: backend foundation implemented; research is not connected yet.** The local API accepts claims, persists queued investigations, reuses exact requests, and retrieves saved records. See [setup, implemented contracts, and acceptance checks](docs/backend-foundation.md). The architecture and research behavior below remain implementation targets unless explicitly covered by that milestone document. Step 1 makes no model-provider or web-search calls.
+**Status: Step 4 deeper research implemented for one scoped claim, with offline validation.** Research-enabled runs interpret a claim, plan support/counterevidence searches, save source passages, check evidence and produce a cited finding. Follow-ups now use bounded evidence summaries and preserve page capacity for later rounds. Saved reads, explicit refresh versions, comparison flags and replayable progress are implemented. Research remains opt-in through `ALETHEIA_RESEARCH_ENABLED=true`; the default API requires no credentials and leaves new work queued. See [Step 4 behavior and acceptance checks](docs/deeper-research.md), [Step 3 setup and live-evaluation gates](docs/research-pipeline.md), [foundation contracts](docs/backend-foundation.md) and [provider connections](docs/provider-adapters.md). The broader architecture below remains a design target where the milestone scope documents mark features deferred.
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.
 
@@ -159,9 +159,9 @@ Store execution `status` separately from `stage` and factual `verdict`.
 
 - Status: `queued`, `running`, `needs_clarification`, `completed`, `partial`, `failed`.
 - Stage: `interpreting`, `planning`, `searching`, `extracting`, `verifying`, `synthesizing`, `comparing`.
-- A completed investigation can legitimately have an `insufficient_evidence` verdict.
+- A completed investigation can legitimately have an `unable_to_decide` outcome with a null verdict.
 - A partial investigation contains usable findings but did not finish its intended work; its explanation must identify the missing work.
-- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `insufficient_evidence` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
+- Record `stop_reason` separately: `evidence_sufficient`, `no_useful_query`, `budget_exhausted`, `deadline_exceeded`, `provider_failure`, `storage_failure`, or `interrupted`. `completed` requires that the planned checks finished and the research gate stopped normally. A budget/deadline stop produces `partial` only when a usable validated result exists, including an `unable_to_decide` result; its limitations name unfinished work. If no validated result exists, status is `failed` and the final verdict is null. An unrecovered provider failure that prevents required work likewise cannot be labeled completed.
 - A failed investigation has a null final verdict and a sanitized error record. Provider failure is never evidence that a claim is false.
 - Terminal records are immutable. Retrying creates a new version rather than modifying an old one.
 
@@ -169,7 +169,7 @@ Clarification ends the current run. The response contains concise questions; the
 
 ## 4. Modules and ownership
 
-Planned package: `src/aletheia/`. The paths below are proposed files and do not exist yet.
+Package: `src/aletheia/`. The table describes the full target layout; the foundation and provider modules exist, while research modules remain planned. See the milestone documents for implemented scope.
 
 | Module | Responsibility and contract | Must not do |
 | --- | --- | --- |
@@ -225,7 +225,7 @@ The research gate receives the assessments and remaining budget. It can stop, es
 
 Predictions and value judgments are not converted into established facts. Research their premises where useful and explain what cannot presently be established.
 
-### Initial budget defaults
+### Revised starting budget defaults
 
 These are starting configuration values to validate during live testing, not promised latency or accuracy. They are provisional: measure per-call latency of the selected Nebius model in milestone 2 and revise them before milestone 4. Measure representative calls, including longer responses and retries; the call ceilings are maximums, not work that must be performed. Batch assessments where useful and use bounded concurrency only for independent queries or extractions (initial limit: two in flight). Reserve attempts atomically before dispatch; dependent steps wait for their inputs. Store and process results in stable query/source order even if they finish out of order. Every attempt still counts toward the same limits. Revise limits or simplify the run if measurements show the planned work will not fit.
 
@@ -233,13 +233,15 @@ These are starting configuration values to validate during live testing, not pro
 | --- | ---: | ---: |
 | Search-query attempts | 4 | 8 |
 | Page-extraction attempts | 4 | 10 |
-| Model-call attempts | 10 | 18 |
+| Model-call attempts | 8 | 16 |
 | Follow-up rounds | 1 | 2 |
 | Hard duration | 120 seconds | 240 seconds |
 
+Step 2's [representative measurements and budget decision](docs/provider-adapters.md#revised-budget-decision) revised model attempts from 10/18 to 8/16 and the implemented output cap from 2,048 to 4,096 tokens. The 40-record answer exceeded the old output cap. Step 3 implements those run profiles and the four-call/45-second finalization reserve. Its calls execute sequentially, so at most one is in flight; the adapters enforce the shared attempt counts and deadline.
+
 Count every attempted query, extracted URL, and model call, including retries. An escalation switches to the deep ceiling without resetting accumulated usage or elapsed time. Set explicit per-call timeouts and bounded input/output sizes; surface truncation as a limitation.
 
-Reserve three model calls and a configurable time allowance for synthesis, final checks, and comparison review. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
+Reserve four model calls and 45 seconds for synthesis and explanation checking, including one repair per task, within the totals above. The reserve does not guarantee completion if transport retries or the deadline exhaust it. Stop research before using that reserve. At the hard deadline, make no further calls: persist an already-valid partial result if possible, otherwise fail explicitly. Transient provider errors get at most two retries within all limits; authentication/configuration errors are not retried.
 
 ## 6. Evidence, citations, and verdicts
 
@@ -255,7 +257,7 @@ Reserve three model calls and a configurable time allowance for synthesis, final
 
 Keep cited spans in source order, reject duplicate or reversed IDs, and group adjacent spans into contiguous excerpts. Display non-adjacent excerpts separately with their own references; never stitch them into an apparently continuous quotation. Preserve surrounding blocks for semantic assessment. The guarantee is that displayed quotations come from stored extracted text, not that extraction perfectly reproduced the page or that the text proves the claim. Semantic support still requires a separate assessment.
 
-Source observations include author/publisher when available, source type, underlying evidence, relevance, timeliness, conflicts of interest when documented, and limitations. Use descriptive labels and explanations, not a numerical trust score. “Unknown” is a valid value.
+Source observations include author/publisher when available, source type, underlying evidence, relevance, timeliness, conflicts of interest when documented (including whether a result is self-reported by the vendor or independently reproduced), and limitations. Use descriptive labels and explanations, not a numerical trust score. “Unknown” is a valid value.
 
 Exact normalized-content matches share a duplicate group. Sources explicitly attributing the same underlying study/report share an origin group when identifiable. Independence remains `unknown` when it cannot be established; syndication detection is best-effort.
 
@@ -265,31 +267,39 @@ Quotes from rejected passages remain available in the audit record but cannot su
 
 The model proposes evidence judgments; code enforces structural requirements. These requirements improve reliability without proving a source true or a semantic assessment correct.
 
-| Assertion verdict | Meaning |
+| Verdict label (API value) | Meaning |
 | --- | --- |
-| `supported` | Admissible evidence directly supports the scoped claim, with no unresolved material contradiction. |
-| `contradicted` | Admissible evidence directly contradicts the scoped claim, with no unresolved material support that would make the conclusion disputed. |
-| `mixed` | Material supporting and contradicting evidence remains unresolved, or the assertion is only partly supported under materially different conditions. |
-| `insufficient_evidence` | Available admissible evidence does not justify any of the above. Missing support alone is not contradiction. |
+| True (`true`) | Admissible evidence supports the scoped claim as written, without unresolved material contradiction. |
+| False (`false`) | Admissible evidence contradicts the scoped claim as written; no validated Almost correction has established a substantially correct core. |
+| Almost (`almost`) | A substantially correct core needs a specific correction or qualification. Requires cited explanations of what is correct, what needs changing, and an evidence-backed corrected claim, plus a separate semantic validation. |
 
-A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. Origins whose independence is `unknown` do not satisfy the two-origin bar; record the evidence for any claimed independence and explain in the finding's limitations when unknown independence prevents a definitive result. This does not remove the separate credible-synthesis exception: record why that synthesis is appropriate and what underlying evidence it covers. If that bar cannot be met, return insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
+`outcome` is separate from the verdict. Use `outcome: unable_to_decide`, `verdict: null`, and `unable_to_decide_reason: insufficient_evidence` or `conflicting_evidence` when research cannot establish an answer. A decided outcome has one of the three verdict strings and a null undecided reason. Execution `status` still describes queued/running/completed/partial/failed/needs-clarification work; it is not a truth label.
+
+The visible result labels are **True**, **False**, **Almost** (with its cited correction), **Insufficient evidence**, and **Conflicting evidence**. Preserve both undecided reasons in saved results, presentation, and evaluation. Almost must not be renamed Mixed or used for unresolved conflict. The [frontend presentation and evaluation handoff](docs/research-pipeline.md#frontend-presentation-and-evaluation-handoff) defines the exact field-to-label mapping and the alignment required in PR #7.
+
+Almost is not uncertainty, numeric proximity, or a renamed conflict category. The synthesis task may propose a complete `almost_correction`, with `what_is_correct`, `what_needs_correction`, and `corrected_claim`; each is a `{text, evidence_ids}` unit. Every unit must reference admitted evidence and independently meet the route's evidence requirements. A separate final check verifies each unit, preservation of the essential proposition, and the absence of unresolved conflict. The code assigns Almost only after those checks. A wholly false premise rewritten as a different fact cannot qualify. Conflicting evidence never enters the Almost path. A failed correction validation fails the final answer; an interrupted check discards the unchecked candidate and preserves only the previously validated finding as partial.
+
+A quick check can be settled by one relevant authoritative record. A deeper definitive finding should normally have two demonstrably independent evidence origins, or an appropriate credible synthesis whose relevance and coverage are explained. Origins whose independence is `unknown` do not satisfy the two-origin bar; record the evidence for any claimed independence and explain in the finding's limitations when unknown independence prevents a definitive result. This does not remove the separate credible-synthesis exception: record why that synthesis is appropriate and what underlying evidence it covers. If that bar cannot be met, return unable to decide for insufficient evidence rather than silently weakening it. Source counts alone never determine a verdict.
 
 Add `qualification_flags` to each assertion finding, independently of its verdict. This is a list, not a mutually exclusive extra verdict:
 
 | Flag | Meaning |
 | --- | --- |
-| `misleading_comparison` | The claim compares materially different populations, dates, units, baselines, or conditions as though they were equivalent. |
-| `narrow_scope` | Evidence applies to a materially narrower population, timeframe, or condition than the claim implies. |
+| `misleading_comparison` | The claim compares materially different populations, dates, units, baselines, conditions, evaluation setups, or benchmark subsets as though they were equivalent. |
+| `narrow_scope` | Evidence applies to a materially narrower population, timeframe, condition, or benchmark subset than the claim implies. |
 
 Each flag is a record of `{type, dimension, explanation, evidence_ids}`:
 
-- `dimension` names what differs: `population`, `timeframe`, `units`, `baseline`, `condition`, `jurisdiction`, or `definition`. These cover the comparison terms above and the scope mismatches recorded under evidence admission rule 5.
+- `dimension` names what differs: `population`, `timeframe`, `units`, `baseline`, `condition`, `jurisdiction`, `definition`, `evaluation_setup`, or `benchmark_subset`. These cover the comparison terms above and the scope mismatches recorded under evidence admission rule 5.
+  - `evaluation_setup`: results obtained under different evaluation methods, such as prompting strategy (5-shot vs chain-of-thought with 32 samples), sampling, tool access, or scoring harness.
+  - `benchmark_subset`: a result on part of a benchmark, or a modified version, presented as a result on the full or standard benchmark.
+  - Vendor self-reporting is a source observation, and possible benchmark contamination is a limitation; neither is a comparison dimension.
 - `evidence_ids` is nonempty and refers only to admissible evidence assessments of the same assertion.
 - `explanation` states the specific difference, for example "compares 2025 output with a 2019 baseline", not a generic warning.
 
-The model proposes flags during assessment; code drops any flag with an unknown type or dimension, missing or inadmissible evidence IDs, or IDs from another assertion, and records the dropped flag in the audit trace. Multiple flags can coexist, including two flags of the same type on different dimensions. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without adding a fifth verdict.
+The model proposes flags during assessment; code drops any flag with an unknown type or dimension, missing or inadmissible evidence IDs, or IDs from another assertion, and records the dropped flag in the audit trace. Multiple flags can coexist, including two flags of the same type on different dimensions. Also record `qualification_check: assessed/unknown`; an empty flag list means no issue was identified, not a guarantee of validity. Flags explain the verdict; they do not replace support checking or turn a broad claim into a supported narrow one. This lets the UI distinguish conflicting sources from scope or comparison problems without conflating qualification with uncertainty.
 
-For a single assertion, the overall verdict matches its verdict. For a compound claim: all supported means supported; all contradicted means contradicted; any insufficient finding means overall insufficient evidence with established sub-findings retained; otherwise return mixed. This is a transparent summary convention, not a claim to evaluate arbitrary formal logic. In particular, one contradicted assertion plus one insufficient assertion remains overall `insufficient_evidence`; the summary must explicitly identify the contradicted part, and the client must display every assertion finding.
+For V1, the result's outcome, verdict, undecided reason and Almost correction must match its single assertion finding. Compound claims ask for clarification; aggregation of several assertions is deferred and must receive an explicit policy before implementation.
 
 Build explanations as typed units with evidence IDs. The application maps those IDs to public source URLs and local evidence endpoints. Validate final units against the assessed passages; repair once or remove invalid units and downgrade the finding if necessary. A failed final validation must not publish an apparently verified conclusion.
 
@@ -318,9 +328,7 @@ Do not store private chain-of-thought in the public trace. Store task inputs and
 
 ## 8. Saved results and refresh behavior
 
-Saved reads and exact-request reuse belong to the initial minimum. Refresh versioning, comparison, and refresh-specific idempotency are the first follow-up after it works; the contracts below define their eventual behavior.
-
-Submitting an exact repeated claim returns the latest existing version/status without provider calls. Return its original timestamps and `reused: true`, including when it is partial or failed. The client must explicitly request another investigation to spend more provider calls. Concurrent identical submissions resolve to one queued/running version through database constraints.
+Submitting an exact repeated claim returns the latest existing version/status without provider calls. Return its original timestamps and `reused: true`, including when it is partial or failed. The client must explicitly request another investigation to spend more provider calls. A failed run exposes `/refresh` as an idempotent retry that creates a new linked version, preserves the failure, and starts interpretation again; no comparison is inferred from a parent without a result. Concurrent identical submissions resolve to one queued/running version through database constraints.
 
 Viewing a saved result has no hidden freshness check or automatic refresh. It is labeled as historical evidence. This guarantees exact retrieval of a stored result, not correctness or freshness.
 
@@ -412,9 +420,9 @@ Milestones describe the full design; they are not all-or-nothing release gates. 
 | One scoped assertion per request; honest clarification/rejection for unsupported input shapes. | Up to three assertions and richer compound handling. |
 | Both services working; quick/deep routing on one pipeline; counterevidence search and a bounded follow-up/escalation path. | More sophisticated search planning or larger research budgets. |
 | Snapshot-scoped span citations, semantic support checks, basic duplicate/shared-origin detection, conservative unknown-independence handling, and the credible-synthesis exception. | Automated discovery of complicated syndication/origin relationships. |
-| Four verdicts, qualification flags, visible limitations, time/call bounds, and correct completed/partial/failed outcomes. | More elaborate source-quality analysis. |
-| Ordered persisted progress, immutable saved results/snapshots, and saved reads with zero provider calls. | First follow-up: explicit refresh versions, basic evidence/metadata comparison, and visible inconsistency flags. Automatic consistency rechecks remain optional. |
-| Exact-request deduplication (including concurrent initial submissions) and basic startup cleanup so crashed runs cannot remain running forever. | Refresh-specific idempotency ships with refresh. Advanced recovery may follow; automatic resumable execution remains outside V1. |
+| Three verdict labels plus a separate unable-to-decide outcome, qualification flags, visible limitations, time/call bounds, and correct completed/partial/failed outcomes. | More elaborate source-quality analysis. |
+| Ordered persisted progress, saved reads with zero provider calls, explicit refresh versions, basic evidence/metadata comparison, and visible inconsistency flags. | Automatic consistency rechecks. |
+| Exact-request deduplication, refresh idempotency, and basic startup cleanup so crashed runs cannot remain running forever. | Advanced recovery; automatic resumable execution remains outside V1. |
 | Approximately 20 human-reviewed acceptance claims, transparent results, a real end-to-end demo, and navigable citations. | Expansion to 30–50 claims, external-model comparisons, and polished hosted replay presentation. |
 
 Document any deferred capability in the implementation report and client. Deferring advanced origin detection does not allow unknown sources to count as independent; once refresh/comparison is implemented, deferring automatic rechecks does not allow unexplained verdict changes to disappear. Mandatory reliability basics remain necessary even when deeper hardening is deferred.
@@ -425,7 +433,7 @@ Document any deferred capability in the implementation report and client. Deferr
 
 - Routing: direct record, medical-paper publication date versus treatment-effect claim, model-recommended quick with a consequential flag, no deep-to-quick downgrade, causal claims, ambiguity, compound limit, and evidence-driven escalation.
 - Evidence: fabricated IDs/URLs; unknown, out-of-range, cross-snapshot, unsupplied, duplicate, or reversed span IDs; quotation reconstruction; separate non-adjacent excerpts; prose/list/table segmentation; normalized-text offsets and versioning; numeric/date/scope mismatch; snippet-only results; duplicate/shared-origin reporting; unknown independence and the credible-synthesis exception.
-- Verdicts: supported, contradicted, unresolved conflict, insufficient evidence, coexisting qualification flags, dropped flags (unknown dimension, missing, inadmissible, or other-assertion evidence IDs), explicit contradicted-plus-insufficient findings, and every implemented compound aggregation branch.
+- Decisions: True, False, and Almost with a validated cited correction; separate unable-to-decide reasons for conflict and insufficient evidence; malformed/missing corrections, preserved core, deadline before validation, and qualification flags. Compound claims remain outside V1.
 - Control flow: planner outputs cannot bypass query validation; only approved plans reach Tavily; quick/deep use the same executor with different policies; repeated-query rejection, follow-up limits, deadline handling, retry accounting, malformed model output, and finalization reserve.
 - Failures: timeouts, authentication/rate-limit errors, empty results, extraction failure, failed final validation, normal-stop insufficient results versus budget-stop partial results, and deadline failure when no validated result exists.
 - Persistence: atomic result/terminal event, exact reuse, concurrent duplicate submission, and immutable saved results/snapshots. Add refresh idempotency and linked historical-version checks with the follow-up.

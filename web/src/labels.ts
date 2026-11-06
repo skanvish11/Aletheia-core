@@ -42,6 +42,7 @@ const REASON_LABEL: Record<string, string> = {
   storage_failure: 'storage failed',
   interrupted: 'interrupted',
   empty_content: 'no readable text',
+  followup_round_limit: 'follow-up limit reached',
 }
 
 export function reason(code: string | null): string | null {
@@ -109,6 +110,12 @@ export function describeEvent(event: InvestigationEvent): string {
       return `Read ${text(p.url) ?? 'a source'}${p.duplicate === 'true' ? ' (duplicate of a page already read)' : ''}`
     case 'source_rejected':
       return `Couldn’t use ${text(p.url) ?? 'a source'}${reason(text(p.reason)) ? `: ${reason(text(p.reason))}` : ''}`
+    case 'sources_deferred':
+      return `Left ${text(p.count) ?? 'some'} search results unread to stay within page limits`
+    case 'research_gate':
+      return p.action === 'followup'
+        ? `Decided to search further${text(p.gap) ? `: ${p.gap}` : ''}`
+        : `Decided to stop searching${reason(text(p.reason)) ? `: ${reason(text(p.reason))}` : ''}`
     case 'evidence_checked': {
       const relation = RELATION_LABEL[p.relation as EvidenceRelation]
       const verdict = p.admissible === 'true' ? 'admitted' : 'not admitted'
