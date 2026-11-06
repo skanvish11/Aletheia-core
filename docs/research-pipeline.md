@@ -63,7 +63,7 @@ message. A disabled server still exposes saved results, evidence and comparisons
 
 All model input is marked untrusted, including user text and extracted pages.
 Models cannot execute tools or write storage. Instructions and schemas live with
-these task modules; Step 4 labels them `one-claim-v4.2`. Results record the model,
+these task modules; they are currently labeled `one-claim-v4.3`. Results record the model,
 application/prompt versions, allowlisted configuration, call attempts and available
 token usage. Token totals include usage from successfully parsed model responses;
 providers may not report usage for malformed or failed attempts.

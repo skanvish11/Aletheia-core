@@ -134,12 +134,28 @@ async def test_flags_drop_invalid_and_preserve_multiple(settings):
             "dimension": "baseline",
             "explanation": "Different baselines.",
         },
+        {
+            "type": "misleading_comparison",
+            "dimension": "evaluation_setup",
+            "explanation": "5-shot against chain-of-thought with 32 samples.",
+        },
+        {
+            "type": "narrow_scope",
+            "dimension": "benchmark_subset",
+            "explanation": "Verified subset reported as the full benchmark.",
+        },
         {"type": "unknown", "dimension": "timeframe", "explanation": "Invalid flag."},
     ]
     providers = Providers(flags=flags, relation="context", scope_match=False)
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
-        assert len(saved["result"]["finding"]["qualification_flags"]) == 2
+        kept = saved["result"]["finding"]["qualification_flags"]
+        assert [f["dimension"] for f in kept] == [
+            "timeframe",
+            "baseline",
+            "evaluation_setup",
+            "benchmark_subset",
+        ]
         events = await app.state.storage.events(UUID(saved["id"]))
         assert sum(e.type == "qualification_flag_dropped" for e in events) == 1
 

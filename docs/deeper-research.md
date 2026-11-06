@@ -62,7 +62,7 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   A greedy first choice previously could hide a valid later pair. Shared or unknown
   origins and duplicate content still cannot count as two independent observations.
 
-Prompt/application versions are `one-claim-v4.2` and `research-v4.2`. Result configuration
+Prompt/application versions are `one-claim-v4.3` and `research-v4.2` (v4.3 adds the two AI-claim flag dimensions). Result configuration
 records the page and follow-up limits. Existing saved records remain readable;
 no database schema migration is needed. Clients consuming the event-type enumeration
 should accept the two additional progress events.
