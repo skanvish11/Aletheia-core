@@ -13,7 +13,7 @@ from aletheia.research_gate import evaluate, planning_context
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v4.2"
+APPLICATION_VERSION = "research-v4.3"
 MAX_FOLLOWUP_ROUNDS = 2
 
 
@@ -249,6 +249,7 @@ class Pipeline:
             application_version=APPLICATION_VERSION,
             configuration={
                 "response_format": self.model.settings.nebius_response_format,
+                "nebius_thinking": self.model.settings.nebius_thinking,
                 "max_output_tokens": self.model.settings.max_output_tokens,
                 "provider_max_retries": self.model.settings.max_retries,
                 "provider_timeout_seconds": self.model.settings.timeout_seconds,

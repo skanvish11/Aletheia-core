@@ -122,6 +122,8 @@ class InvestigationEvent(Contract):
         "comparison_completed",
         "consistency_flagged",
         "task_output_rejected",
+        "model_attempt_finished",
+        "task_finished",
         "qualification_flag_dropped",
         "stage_started",
     ]

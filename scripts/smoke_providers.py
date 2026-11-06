@@ -109,6 +109,7 @@ async def measure(
         "checked_at": datetime.now(UTC).isoformat(),
         "model": settings.nebius_model,
         "response_format": settings.nebius_response_format,
+        "nebius_thinking": settings.nebius_thinking,
         "profile": profile,
         "max_output_tokens": settings.max_output_tokens,
         "timeout_seconds": settings.timeout_seconds,

@@ -7,6 +7,7 @@ from uuid import uuid4
 
 from aletheia.providers.tavily import valid_url
 from aletheia.research_contracts import Evidence, Excerpt, Snapshot, Span
+from aletheia.tasks import TaskValidationError
 
 
 def digest(text: str) -> str:
@@ -66,10 +67,10 @@ def snapshot(*, url, title, published_date, retrieved_at, text) -> Snapshot:
 
 def excerpts(source: Snapshot, ids: list[int], supplied_ids: set[int]) -> list[Excerpt]:
     if not ids or ids != sorted(set(ids)) or not set(ids) <= supplied_ids:
-        raise ValueError("Citation references invalid or unsupplied spans.")
+        raise TaskValidationError("citation_spans")
     spans = {s.id: s for s in source.spans}
     if not set(ids) <= spans.keys():
-        raise ValueError("Citation references unknown spans.")
+        raise TaskValidationError("citation_spans")
     groups = []
     for span_id in ids:
         if groups and groups[-1][-1] + 1 == span_id:
@@ -88,22 +89,22 @@ def excerpts(source: Snapshot, ids: list[int], supplied_ids: set[int]) -> list[E
 
 def admit(assessment, source: Snapshot, supplied_ids: set[int]) -> Evidence:
     if assessment.citation.snapshot_id != source.id:
-        raise ValueError("Citation references another snapshot.")
+        raise TaskValidationError("citation_snapshot")
     quotes = excerpts(source, assessment.citation.span_ids, supplied_ids)
     if assessment.provenance_span_ids:
         excerpts(source, assessment.provenance_span_ids, supplied_ids)
     if assessment.independence == "established" and not (
         assessment.origin and assessment.provenance_note and assessment.provenance_span_ids
     ):
-        raise ValueError("Established independence requires cited provenance.")
+        raise TaskValidationError("provenance")
     if assessment.credible_synthesis and not assessment.synthesis_coverage:
-        raise ValueError("A synthesis requires an explanation of relevance and coverage.")
+        raise TaskValidationError("synthesis_coverage")
     if (
         assessment.relation == "supports"
         and assessment.scope_match
         and any(flag.type == "narrow_scope" for flag in assessment.flags)
     ):
-        raise ValueError("Narrower evidence cannot directly support the full claim scope.")
+        raise TaskValidationError("scope_flag")
     # Scope-mismatched passages can still provide context and explain a qualification;
     # they must never count as direct support or contradiction.
     admissible = assessment.relation == "context" or (

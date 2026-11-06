@@ -39,6 +39,9 @@ class ProviderError(Exception):
         self.code = code
         self.status_code = status_code
         self.retry_after = retry_after
+        # Set only from validated completion metadata, never from remote error text.
+        self.token_usage: dict[str, int] | None = None
+        self.finish_reason: Literal["length", "content_filter", "stop"] | None = None
         super().__init__(f"{provider}: {code.value}")
 
     @property

@@ -101,6 +101,7 @@ async def run(args, cases):
         "dataset_sha256": dataset_hash(cases),
         "model": settings.nebius_model,
         "response_format": settings.nebius_response_format,
+        "nebius_thinking": settings.nebius_thinking,
         "max_output_tokens": settings.max_output_tokens,
         "provider_timeout_seconds": settings.timeout_seconds,
         "max_retries": settings.max_retries,

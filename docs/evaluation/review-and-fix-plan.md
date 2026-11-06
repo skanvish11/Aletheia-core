@@ -1,6 +1,6 @@
 # Evaluation review and proposed repair plan
 
-Prepared from the frozen November 5, 2026 run. This is a findings and planning document; no production fixes were made in this pass.
+Prepared from the frozen November 5, 2026 run. This preserves the original findings and repair plan. Implementation progress and all follow-up attempts are tracked separately in [first repairs](repairs.md); the baseline below has not been rewritten to match newer outcomes.
 
 **This is a useful first baseline, and it exposes substantial live execution problems.** We ran 20 proposed claims: 13 failed, 2 were partial, 5 asked for clarification, and 0 completed. Those are execution outcomes—not evidence that the system answered 20 factual questions incorrectly.
 

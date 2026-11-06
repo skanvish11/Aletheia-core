@@ -5,6 +5,7 @@ It does not certify research quality. The candidate answers are AI proposals;
 human labeling, passage review, and the private held-out evaluation remain required.
 
 - [Findings, all 20 outcomes, and proposed fix order](review-and-fix-plan.md)
+- [First repairs, all seven follow-up attempts, and remaining failures](repairs.md)
 - [Proposed claims and references](proposed-claims.md)
 - [Machine-readable proposals](proposed-claims.json)
 - [Results and limitations](results.md)

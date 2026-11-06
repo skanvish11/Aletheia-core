@@ -62,6 +62,7 @@ PROVIDER_ENV = {
     "tavily_api_key": "TAVILY_API_KEY",
     "nebius_model": "NEBIUS_MODEL",
     "nebius_response_format": "ALETHEIA_NEBIUS_RESPONSE_FORMAT",
+    "nebius_thinking": "ALETHEIA_NEBIUS_THINKING",
     "timeout_seconds": "ALETHEIA_PROVIDER_TIMEOUT_SECONDS",
     "max_retries": "ALETHEIA_PROVIDER_MAX_RETRIES",
     "max_request_bytes": "ALETHEIA_PROVIDER_MAX_REQUEST_BYTES",
@@ -80,6 +81,7 @@ class ProviderSettings(BaseModel):
     tavily_api_key: SecretStr | None = Field(default=None, repr=False)
     nebius_model: str | None = Field(default=None, min_length=1, max_length=200)
     nebius_response_format: Literal["json_schema", "json_object"] = "json_schema"
+    nebius_thinking: Literal["default", "enabled", "disabled"] = "default"
     timeout_seconds: float = Field(default=45.0, ge=1, le=120, allow_inf_nan=False)
     max_retries: int = Field(default=2, ge=0, le=2, strict=True)
     max_request_bytes: int = Field(default=262_144, ge=1024, le=1_048_576, strict=True)

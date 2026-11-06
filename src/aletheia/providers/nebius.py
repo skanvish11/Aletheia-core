@@ -54,7 +54,10 @@ def parse_completion[T: BaseModel](data: dict, *, response_type: type[T]) -> Mod
     if choice.message.refusal or choice.finish_reason == "content_filter":
         raise ProviderError("nebius", ErrorCode.REFUSAL)
     if choice.finish_reason == "length":
-        raise ProviderError("nebius", ErrorCode.TRUNCATED)
+        error = ProviderError("nebius", ErrorCode.TRUNCATED)
+        error.finish_reason = "length"
+        error.token_usage = completion.usage.model_dump() if completion.usage else None
+        raise error
     if (
         choice.finish_reason != "stop"
         or choice.message.role != "assistant"
@@ -72,6 +75,13 @@ class NebiusProvider(ProviderHTTP):
         self, settings: ProviderSettings, *, transport: httpx.AsyncBaseTransport | None = None
     ):
         if settings.nebius_model is None:
+            raise ProviderError("nebius", ErrorCode.CONFIGURATION)
+        if (
+            settings.nebius_thinking != "default"
+            and settings.nebius_model != "nvidia/Nemotron-3_5-Lightning"
+        ):
+            # Template controls are model-specific. Do not send an unverified control
+            # to other models or silently ignore an explicit configuration.
             raise ProviderError("nebius", ErrorCode.CONFIGURATION)
         super().__init__(
             "nebius",
@@ -126,6 +136,10 @@ class NebiusProvider(ProviderHTTP):
             "stream": False,
             "store": False,
         }
+        if self.settings.nebius_thinking != "default":
+            payload["chat_template_kwargs"] = {
+                "enable_thinking": self.settings.nebius_thinking == "enabled"
+            }
 
         return await self.post(
             "chat/completions",

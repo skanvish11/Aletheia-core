@@ -1,7 +1,7 @@
 """Assess bounded source passages; validate every supplied reference before admission."""
 
 from aletheia.evidence import admit
-from aletheia.research_contracts import AssessmentBatch
+from aletheia.task_contracts import AssessmentBatch
 
 
 async def assess(tasks, assertion, source):
@@ -38,7 +38,12 @@ async def assess(tasks, assertion, source):
         "When evidence establishes a relevant narrower or corrected fact, retain it as context "
         "and explain the scope/quantity difference in the rationale. Do not call it direct "
         "support for the original broader claim. A truncated source cannot establish "
-        "comprehensive coverage.",
+        "comprehensive coverage. Return at most three concise assessments, grouping spans "
+        "that establish the same point. Preserve material support AND contradiction when "
+        "both occur; never produce one assessment per span. Use short factual rationales "
+        "of at most 300 characters, at most six essential span IDs per citation, at most "
+        "three limitations and three flags per assessment. Use null or empty lists for "
+        "inapplicable fields; do not fill them with repetitive explanations.",
         {
             "assertion": assertion.model_dump(),
             "snapshot_id": source.id,
