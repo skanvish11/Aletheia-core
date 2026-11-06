@@ -14,6 +14,9 @@ const REASONS: Record<Exclude<BackendStatus, 'ready'>, string> = {
   unreachable: UNREACHABLE,
 }
 
+/** A health check that hasn't answered by then counts as unreachable, so retry is offered. */
+export const HEALTH_TIMEOUT_MS = 8000
+
 /** Why the claim field is disabled, or undefined when it can submit. */
 export function unavailableReason(status: BackendStatus): string | undefined {
   return status === 'ready' ? undefined : REASONS[status]
@@ -44,17 +47,29 @@ export function useBackendStatus(source: DataSource): BackendStatusState {
 
   useEffect(() => {
     if (!source.health) return
-    let current = true
+    // One attempt: a response, a failure, or the timeout settles it, whichever comes
+    // first. Later results from this attempt are ignored, so a stalled request can
+    // neither leave the page on "Checking" nor overwrite a newer attempt.
+    let settled = false
+    const controller = new AbortController()
+    const settle = (next: BackendStatus) => {
+      if (settled) return
+      settled = true
+      clearTimeout(timer)
+      setStatus(next)
+    }
+    const timer = setTimeout(() => {
+      settle('unreachable')
+      controller.abort()
+    }, HEALTH_TIMEOUT_MS)
     source
-      .health()
-      .then((health) => {
-        if (current) setStatus(health.research_enabled ? 'ready' : 'research_disabled')
-      })
-      .catch(() => {
-        if (current) setStatus('unreachable')
-      })
+      .health(controller.signal)
+      .then((health) => settle(health.research_enabled ? 'ready' : 'research_disabled'))
+      .catch(() => settle('unreachable'))
     return () => {
-      current = false
+      settled = true
+      clearTimeout(timer)
+      controller.abort()
     }
   }, [source, attempt])
 
