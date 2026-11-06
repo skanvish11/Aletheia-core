@@ -1,21 +1,23 @@
 import { createContext, useContext } from 'react'
-import type { EvidenceAssessment, EvidenceResponse, SourceSnapshot } from './api/types'
+import type { Evidence, EvidenceResponse, SourceSnapshot } from './api/types'
 
-/** One citable evidence entry, numbered in the order the evidence endpoint returns it. */
+/** One citable evidence entry. Admitted evidence is numbered first, in endpoint order. */
 export interface EvidenceEntry {
   number: number
-  assessment: EvidenceAssessment
+  evidence: Evidence
   source: SourceSnapshot | undefined
 }
 
 export type EvidenceIndex = Map<string, EvidenceEntry>
 
-export function buildEvidenceIndex(evidence: EvidenceResponse | null): EvidenceIndex {
-  const sources = new Map((evidence?.sources ?? []).map((s) => [s.id, s]))
+export function buildEvidenceIndex(response: EvidenceResponse | null): EvidenceIndex {
+  const sources = new Map((response?.sources ?? []).map((s) => [s.id, s]))
+  const all = response?.evidence ?? []
+  const ordered = [...all.filter((e) => e.admissible), ...all.filter((e) => !e.admissible)]
   return new Map(
-    (evidence?.assessments ?? []).map((assessment, i) => [
-      assessment.id,
-      { number: i + 1, assessment, source: sources.get(assessment.snapshot_id) },
+    ordered.map((evidence, i) => [
+      evidence.id,
+      { number: i + 1, evidence, source: sources.get(evidence.assessment.citation.snapshot_id) },
     ]),
   )
 }
