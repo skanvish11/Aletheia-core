@@ -13,6 +13,8 @@ interface Props {
   finished: boolean
   loadError: string | null
   replay: boolean
+  /** The submission returned an existing investigation rather than starting one. */
+  reused: boolean
   onRetry: () => void
   /** Replay only: play the recorded research steps again. */
   onReplay?: () => void
@@ -21,16 +23,18 @@ interface Props {
 function ClaimHeader({
   investigation,
   finished,
+  reused,
   onReplay,
 }: {
   investigation: Investigation
   finished: boolean
+  reused: boolean
   onReplay?: () => void
 }) {
   const meta = [
     finished ? STATUS_LABEL[investigation.status] : 'Researching',
     `researched ${formatTime(investigation.started_at ?? investigation.created_at)}`,
-    investigation.reused ? 'saved result' : null,
+    reused ? 'saved result' : null,
     investigation.version > 1 ? `version ${investigation.version}` : null,
   ].filter(Boolean)
   return (
@@ -87,12 +91,12 @@ function Limitations({ result }: { result: InvestigationResult }) {
 }
 
 export function Report(props: Props) {
-  const { investigation, evidence, events, researchDone, finished, loadError, replay, onRetry, onReplay } = props
+  const { investigation, evidence, events, researchDone, finished, loadError, replay, reused, onRetry, onReplay } = props
   const result = finished ? investigation.result : null
   return (
     <EvidenceIndexContext.Provider value={buildEvidenceIndex(evidence)}>
       <article className="report">
-        <ClaimHeader investigation={investigation} finished={finished} onReplay={onReplay} />
+        <ClaimHeader investigation={investigation} finished={finished} reused={reused} onReplay={onReplay} />
 
         {!researchDone && <ResearchInProgress events={events} replay={replay} />}
 

@@ -63,6 +63,12 @@ export function describeEvent(event: InvestigationEvent): string {
       const n = text(p.assertion_count)
       return n ? `Interpreted the claim as ${n} checkable assertion${n === '1' ? '' : 's'}` : 'Interpreted the claim'
     }
+    case 'stage_started':
+      return `Started ${text(p.stage) ?? 'the next step'}`
+    case 'task_output_rejected':
+      return 'Rejected a malformed model answer'
+    case 'qualification_flag_dropped':
+      return 'Dropped a qualification flag that didn’t pass validation'
     case 'clarification_required':
       return 'Needs clarification before researching'
     case 'route_selected':

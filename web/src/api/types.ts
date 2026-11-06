@@ -165,25 +165,35 @@ export interface EvidenceResponse {
   assessments: EvidenceAssessment[]
 }
 
-export type EventType =
-  | 'investigation_queued'
-  | 'investigation_started'
-  | 'claim_interpreted'
-  | 'clarification_required'
-  | 'route_selected'
-  | 'search_started'
-  | 'search_completed'
-  | 'source_extracted'
-  | 'source_rejected'
-  | 'evidence_checked'
-  | 'route_escalated'
-  | 'followup_planned'
-  | 'budget_reached'
-  | 'comparison_completed'
-  | 'consistency_flagged'
-  | 'investigation_completed'
-  | 'investigation_partial'
-  | 'investigation_failed'
+/**
+ * Every event type the backend emits (contracts.py InvestigationEvent.type). The
+ * backend sends each as a named SSE event, so the client must listen for each name.
+ */
+export const EVENT_TYPES = [
+  'investigation_queued',
+  'investigation_started',
+  'stage_started',
+  'claim_interpreted',
+  'clarification_required',
+  'route_selected',
+  'search_started',
+  'search_completed',
+  'source_extracted',
+  'source_rejected',
+  'evidence_checked',
+  'route_escalated',
+  'followup_planned',
+  'budget_reached',
+  'task_output_rejected',
+  'qualification_flag_dropped',
+  'comparison_completed',
+  'consistency_flagged',
+  'investigation_completed',
+  'investigation_partial',
+  'investigation_failed',
+] as const
+
+export type EventType = (typeof EVENT_TYPES)[number]
 
 export const TERMINAL_EVENTS: ReadonlySet<EventType> = new Set([
   'investigation_completed',
