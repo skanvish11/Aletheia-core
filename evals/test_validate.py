@@ -15,10 +15,11 @@ import validate
 EXAMPLES = json.loads(
     (validate.EVALS / "examples" / "example-claims.json").read_text(encoding="utf-8")
 )
-EXAMPLE = EXAMPLES[0]
-ALMOST = EXAMPLE["acceptable_alternatives"][0]
-UNDECIDED = EXAMPLES[1]["expected"]
+BY_ID = {record["id"]: record for record in EXAMPLES}
+EXAMPLE = BY_ID["example-northwind-x0"]  # True with a misleading-comparison flag
 TRUE = EXAMPLE["expected"]
+ALMOST = BY_ID["example-northwind-release"]["expected"]
+UNDECIDED = BY_ID["example-cycles"]["expected"]
 
 
 def reconciled(**changes):
@@ -185,7 +186,7 @@ class MalformedTypeTests(Checks):
             path.parent.mkdir(parents=True)
             record = reconciled(status="draft", expected_flags=None, labelers=None)
             path.write_text(json.dumps(record), encoding="utf-8")
-            errors = " | ".join(validate.validate_path(path, self.checker))
+            errors = " | ".join(validate.validate_path(path, self.checker, Path(tmp)))
         self.assertIn("expected_flags", errors)
         self.assertIn("labelers", errors)
 
@@ -202,14 +203,18 @@ class FileTests(Checks):
         return path
 
     def run_main(self, *paths):
+        """Run the entry point with self.tmp as the evals folder; no paths = default discovery."""
         out = io.StringIO()
         with redirect_stdout(out):
-            code = validate.main([str(p) for p in paths])
+            code = validate.main([str(p) for p in paths], self.tmp)
         return code, out.getvalue()
 
+    def check(self, path):
+        return validate.validate_path(path, self.checker, self.tmp)
+
     def test_valid_label_file(self):
-        path = self.write("labels/pari/example-northwind.json", draft())
-        self.assertEqual(validate.validate_path(path, self.checker), [])
+        path = self.write("labels/pari/example-northwind-x0.json", draft())
+        self.assertEqual(self.check(path), [])
 
     def test_array_under_labels_is_rejected_through_main(self):
         # Regression: content-based dispatch let an array in labels/ skip the label rules.
@@ -220,13 +225,13 @@ class FileTests(Checks):
 
     def test_label_file_name_and_folder_must_match(self):
         path = self.write("labels/sai/other-id.json", draft(labeler="pari"))
-        errors = " | ".join(validate.validate_path(path, self.checker))
+        errors = " | ".join(self.check(path))
         self.assertIn("must match the file name", errors)
         self.assertIn("to match the folder", errors)
 
     def test_label_file_must_be_draft(self):
-        path = self.write("labels/pari/example-northwind.json", reconciled(labelers=["pari"]))
-        self.assertIn("must be 'draft'", " | ".join(validate.validate_path(path, self.checker)))
+        path = self.write("labels/pari/example-northwind-x0.json", reconciled(labelers=["pari"]))
+        self.assertIn("must be 'draft'", " | ".join(self.check(path)))
 
     def test_claims_file_must_be_an_array(self):
         path = self.write("claims.json", reconciled())
@@ -236,19 +241,98 @@ class FileTests(Checks):
 
     def test_claims_file_duplicate_ids(self):
         path = self.write("claims.json", [reconciled(), reconciled()])
-        self.assertIn("duplicate id", " | ".join(validate.validate_path(path, self.checker)))
+        self.assertIn("duplicate id", " | ".join(self.check(path)))
 
     def test_invalid_json_reported(self):
         path = self.tmp / "claims.json"
         path.write_text("[{", encoding="utf-8")
-        self.assertIn("cannot read JSON", " | ".join(validate.validate_path(path, self.checker)))
+        self.assertIn("cannot read JSON", " | ".join(self.check(path)))
 
     def test_main_passes_on_valid_files(self):
         code, out = self.run_main(
             self.write("claims.json", EXAMPLES),
-            self.write("labels/pari/example-northwind.json", draft()),
+            self.write("labels/pari/example-northwind-x0.json", draft()),
         )
         self.assertEqual(code, 0, out)
+
+    def test_misplaced_label_files_are_found_and_rejected(self):
+        # Regression: a */*.json glob silently skipped these, even with invalid JSON.
+        self.write("claims.json", [])
+        (self.tmp / "labels").mkdir()
+        (self.tmp / "labels" / "example.json").write_text("{", encoding="utf-8")
+        self.write("labels/pari/nested/example-northwind-x0.json", draft())
+        code, out = self.run_main()
+        self.assertEqual(code, 1, out)
+        self.assertEqual(out.count("must be at labels/<labeler>/<id>.json"), 2, out)
+        self.assertIn("3 file(s) checked", out)
+
+    def test_explicit_nested_label_path_is_rejected(self):
+        # Regression: membership came from the grandparent's name, so this passed as a set.
+        path = self.write("labels/pari/nested/claims.json", [reconciled()])
+        code, out = self.run_main(path)
+        self.assertEqual(code, 1)
+        self.assertIn("must be at labels/<labeler>/<id>.json", out)
+
+    def test_folder_named_labels_elsewhere_is_not_a_label(self):
+        path = self.write("examples/labels/x/claims.json", EXAMPLES)
+        self.assertEqual(self.check(path), [])
+
+    def test_missing_claims_file_fails(self):
+        code, out = self.run_main()
+        self.assertEqual(code, 1)
+        self.assertIn("claims.json: required file is missing", out)
+
+    def test_empty_claims_file_passes(self):
+        self.write("claims.json", [])
+        code, out = self.run_main()
+        self.assertEqual(code, 0, out)
+
+    def test_default_run_validates_labels(self):
+        self.write("claims.json", [])
+        self.write("labels/pari/example-northwind-x0.json", draft())
+        code, out = self.run_main()
+        self.assertEqual(code, 0, out)
+        self.assertIn("2 file(s) checked", out)
+
+
+class NestedTypeTests(Checks):
+    """Regression: mistyped nested values crashed duplicate checking (unhashable list/dict)."""
+
+    def mutated(self, where, field, value):
+        record = reconciled(acceptable_alternatives=[copy.deepcopy(ALMOST)])
+        if where == "alternative":
+            record["acceptable_alternatives"][0][field] = value
+        else:
+            record["expected_flags"][0][field] = value
+        return record
+
+    def test_nested_values_are_reported_without_crashing(self):
+        cases = [("alternative", f) for f in ("outcome", "verdict", "unable_to_decide_reason")]
+        cases += [("flag", f) for f in ("type", "dimension")]
+        for where, field in cases:
+            for value in ([], {}):
+                with self.subTest(where=where, field=field, value=value):
+                    errors = self.joined(self.mutated(where, field, value))
+                    self.assertIn(field, errors)
+
+    def test_later_records_are_still_checked(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "claims.json"
+            first = self.mutated("alternative", "verdict", [])
+            first["expected_flags"][0]["dimension"] = {}
+            path.write_text(
+                json.dumps([first, reconciled(id="second", as_of="bad")]), encoding="utf-8"
+            )
+            errors = " | ".join(validate.validate_path(path, self.checker, Path(tmp)))
+        self.assertIn("second: as_of", errors)
+
+
+class CorrectionTests(Checks):
+    def test_corrected_claim_must_change_the_claim(self):
+        alternative = copy.deepcopy(ALMOST)
+        alternative["expected_correction"]["corrected_claim"] = "  " + EXAMPLE["claim"].upper()
+        errors = self.joined(reconciled(acceptable_alternatives=[alternative]))
+        self.assertIn("corrected_claim repeats the claim", errors)
 
 
 if __name__ == "__main__":

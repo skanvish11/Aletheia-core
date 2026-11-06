@@ -1,14 +1,15 @@
 """Validate Aletheia eval claim records. Standard library only.
 
 Usage:
-    python evals/validate.py            # claims.json and every file under labels/
+    python evals/validate.py            # claims.json (required) and every JSON file under labels/
     python evals/validate.py FILE...    # specific files
 
 Structural rules come from schema/claim.schema.json, which this script interprets
 (it supports the subset of JSON Schema that file uses). Rules a schema can't
 express, such as labeler counts per status or decision consistency, are checked in
-code below. A file's location decides its kind: anything under labels/ is one
-labeler's single draft record; every other file is an array of reconciled records.
+code below. A file's location decides its kind: anything under evals/labels/ is one
+labeler's single draft record and must sit at labels/<labeler>/<id>.json; every
+other file is an array of reconciled records.
 Exit status is 1 if any record is invalid.
 """
 
@@ -23,8 +24,6 @@ from typing import Any
 
 EVALS = Path(__file__).resolve().parent
 SCHEMA_PATH = EVALS / "schema" / "claim.schema.json"
-CLAIMS_PATH = EVALS / "claims.json"
-LABELS_DIR = EVALS / "labels"
 
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
@@ -159,10 +158,29 @@ def decision_rules(decision: Any, where: str) -> list[str]:
     return errors
 
 
+def _scalar(value: Any) -> bool:
+    return value is None or isinstance(value, (str, int, float, bool))
+
+
 def _decision_key(decision: Any) -> tuple[Any, ...] | None:
+    """A decision's comparable identity, or None if a part is mistyped (the schema reports it)."""
     if not isinstance(decision, dict):
         return None
-    return tuple(decision.get(k) for k in ("outcome", "verdict", "unable_to_decide_reason"))
+    key = tuple(decision.get(k) for k in ("outcome", "verdict", "unable_to_decide_reason"))
+    return key if all(_scalar(part) for part in key) else None
+
+
+def _normalized(text: str) -> str:
+    return " ".join(text.split()).casefold()
+
+
+def _unchanged_correction(decision: Any, claim: Any) -> bool:
+    """An Almost correction whose corrected claim just restates the claim corrects nothing."""
+    if not isinstance(decision, dict) or not isinstance(claim, str):
+        return False
+    correction = decision.get("expected_correction")
+    corrected = correction.get("corrected_claim") if isinstance(correction, dict) else None
+    return isinstance(corrected, str) and _normalized(corrected) == _normalized(claim)
 
 
 def record_rules(record: dict[str, Any], *, in_claims_file: bool) -> list[str]:
@@ -175,6 +193,12 @@ def record_rules(record: dict[str, Any], *, in_claims_file: bool) -> list[str]:
     alternatives = _list(record.get("acceptable_alternatives"))
     for i, alternative in enumerate(alternatives):
         errors += decision_rules(alternative, f"acceptable_alternatives[{i}]")
+    named = [("expected", record.get("expected"))] + [
+        (f"acceptable_alternatives[{i}]", a) for i, a in enumerate(alternatives)
+    ]
+    for where, decision in named:
+        if _unchanged_correction(decision, record.get("claim")):
+            errors.append(f"{where}: expected_correction.corrected_claim repeats the claim")
     expected_key = _decision_key(record.get("expected"))
     keys = [_decision_key(a) for a in alternatives]
     if expected_key is not None and expected_key in keys:
@@ -185,6 +209,7 @@ def record_rules(record: dict[str, Any], *, in_claims_file: bool) -> list[str]:
 
     flags = [f for f in _list(record.get("expected_flags")) if isinstance(f, dict)]
     pairs = [(f.get("type"), f.get("dimension")) for f in flags]
+    pairs = [p for p in pairs if all(_scalar(part) for part in p)]
     if len(pairs) != len(set(pairs)):
         errors.append("expected_flags: the same type and dimension appears twice")
 
@@ -248,7 +273,10 @@ def validate_claims_file(path: Path, checker: SchemaChecker) -> list[str]:
     return out
 
 
-def validate_label_file(path: Path, checker: SchemaChecker) -> list[str]:
+def validate_label_file(path: Path, checker: SchemaChecker, labels_dir: Path) -> list[str]:
+    shown = _shown(path)
+    if len(path.relative_to(labels_dir).parts) != 2:
+        return [f"{shown}: label files must be at labels/<labeler>/<id>.json"]
     record, errors = load_json(path)
     if not errors:
         if not isinstance(record, dict):
@@ -257,29 +285,37 @@ def validate_label_file(path: Path, checker: SchemaChecker) -> list[str]:
             errors = checker.check(record, checker.root, "")
             errors += record_rules(record, in_claims_file=False)
             errors += label_file_rules(record, path)
-    return [f"{_shown(path)}: {e}" for e in errors]
+    return [f"{shown}: {e}" for e in errors]
 
 
-def is_label_file(path: Path) -> bool:
-    """Location, not content, decides the kind: labels/<labeler>/<id>.json."""
-    return path.parent.parent.name == "labels"
-
-
-def validate_path(path: Path, checker: SchemaChecker) -> list[str]:
-    if is_label_file(path):
-        return validate_label_file(path, checker)
+def validate_path(path: Path, checker: SchemaChecker, evals_dir: Path = EVALS) -> list[str]:
+    """Location, not content, decides the kind: anything under <evals>/labels/ is a label."""
+    labels_dir = (evals_dir / "labels").resolve()
+    path = path.resolve()
+    if path.is_relative_to(labels_dir):
+        return validate_label_file(path, checker, labels_dir)
     return validate_claims_file(path, checker)
 
 
-def main(argv: list[str]) -> int:
+def default_files(evals_dir: Path) -> tuple[list[Path], list[str]]:
+    """claims.json (required, may be []) and every JSON file anywhere under labels/."""
+    claims = evals_dir / "claims.json"
+    labels = evals_dir / "labels"
+    files = [claims] if claims.exists() else []
+    missing = [] if claims.exists() else ["claims.json: required file is missing (use [] if empty)"]
+    if labels.is_dir():
+        files += sorted(p for p in labels.rglob("*") if p.is_file() and p.suffix.lower() == ".json")
+    return files, missing
+
+
+def main(argv: list[str], evals_dir: Path = EVALS) -> int:
     checker = SchemaChecker(load_schema())
     if argv:
-        paths = [Path(a).resolve() for a in argv]
+        paths, errors = [Path(a) for a in argv], []
     else:
-        claims = [CLAIMS_PATH] if CLAIMS_PATH.exists() else []
-        paths = claims + sorted(LABELS_DIR.glob("*/*.json"))
+        paths, errors = default_files(evals_dir)
 
-    errors = [line for path in paths for line in validate_path(path, checker)]
+    errors += [line for path in paths for line in validate_path(path, checker, evals_dir)]
     for line in errors:
         print(line)
     print(f"{len(paths)} file(s) checked, {len(errors)} problem(s).")

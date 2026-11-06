@@ -2,7 +2,7 @@
 
 Human-reviewed claims with expected decisions, used to measure whether Aletheia reaches the right decision, raises the right qualification flags, proposes a correct correction when a claim is Almost true, and cites evidence that actually supports what it says. This is the acceptance set described in the root [README](../README.md) section 12. It is evidence for the rubric's "sourced and verifiable answers" criterion, not a separate score.
 
-**Status:** format and validator only. The tuning claims are added in a later PR. The decision shape follows the research decision contract introduced with the research pipeline (#11).
+**Status:** format, validator and CI checks only. The tuning claims are added in a later PR. The decision shape follows the research decision contract introduced with the research pipeline (#11).
 
 ## Layout
 
@@ -13,9 +13,9 @@ Human-reviewed claims with expected decisions, used to measure whether Aletheia 
 | `test_validate.py` | Tests for the validator. |
 | `labels/<labeler>/<id>.json` | One labeler's blind label for one claim: a single `draft` record. |
 | `claims.json` | The reconciled tuning set: an array of `reconciled` or `contested` records. |
-| `examples/example-claims.json` | Two illustrative records (Almost-or-True, and unable to decide). Invented, and not part of the set. |
+| `examples/example-claims.json` | Four illustrative records: True with a flag, False, Almost, and unable to decide. Invented, and not part of the set. |
 
-A file's **location** decides its kind: anything under `labels/` must be one draft object; every other file is an array of reconciled records.
+A file's **location** decides its kind: any JSON file under `evals/labels/` is a blind label and must sit exactly at `labels/<labeler>/<id>.json` as one draft object; every other file is an array of reconciled records. `claims.json` is required; it may be `[]`.
 
 ## The record
 
@@ -56,7 +56,8 @@ Flag types are `misleading_comparison` and `narrow_scope`. Dimensions are `popul
 - The same flag `type` + `dimension` appears at most once per record.
 - `draft` has exactly one labeler; `reconciled` and `contested` have at least two.
 - `claims.json` holds no drafts, and its IDs are unique.
-- A label file lives at `labels/<labeler>/<id>.json`, with `labelers: [<labeler>]` and `status: draft`.
+- A label file lives exactly at `labels/<labeler>/<id>.json`, with `labelers: [<labeler>]` and `status: draft`. JSON files anywhere else under `labels/` are errors, not skipped.
+- An Almost `corrected_claim` must differ from the claim (ignoring case and spacing).
 - `as_of` is exactly `YYYY-MM-DD` and not in the future.
 - Fields with the wrong type are reported; they never stop validation of the rest of the file.
 
@@ -70,11 +71,21 @@ Flag types are `misleading_comparison` and `narrow_scope`. Dimensions are `popul
 
 ### Choosing the decision
 
-- **True / False:** the evidence supports or contradicts the claim as written.
-- **Almost:** the claim has a substantially correct core that needs a specific, evidence-backed correction. Write all three correction parts. Almost is **not** "uncertain", "close enough", or a stand-in for conflicting evidence.
-- **Unable to decide, `insufficient_evidence`:** the available evidence can't settle it. Missing support is not contradiction, so this is not `false`.
-- **Unable to decide, `conflicting_evidence`:** credible evidence points both ways and can't be resolved. Never label this Almost.
-- **Open question:** when a claim is literally true but its comparison misleads (for example, "3× as long as earlier models", true only against an old model), whether the expected decision is `true` with a `misleading_comparison` flag or `almost` with a correction. Until the team settles this, label one as expected, list the other as an acceptable alternative, and say so in `reviewer_note`, as the first example does.
+Work in this order: **scope the assertion, then choose the decision, then the flags.** Flags are a separate axis: any decision can carry them.
+
+1. **Scope first.** Settle what the claim actually asserts, especially its comparator ("earlier models": which?). Don't silently narrow it to whatever reading makes the numbers work. If it can't be resolved, scope it explicitly in `claim` or `context` before labeling, or leave it out of the set.
+2. **Decide:**
+   - **True:** the scoped claim is supported as written.
+   - **False:** its core is materially wrong. Changing a central quantity (3x when the evidence says 1.4x) is a material correction, so it is False, not Almost.
+   - **Almost:** the core is substantially correct and needs one specific, bounded, evidence-backed correction. Write all three correction parts. Almost is **not** "uncertain", "close enough", numerically near, or a stand-in for conflicting evidence.
+   - **Unable to decide, `insufficient_evidence`:** the available evidence can't settle it. Missing support is not contradiction, so this is not `false`.
+   - **Unable to decide, `conflicting_evidence`:** credible evidence points both ways and can't be resolved. Never label this Almost.
+3. **Flags** add context to the decision (a misleading baseline, a narrower scope than the wording suggests). A flag never repairs a claim that needs a correction.
+
+`acceptable_alternatives` are for genuinely defensible readings of one specific case, explained in `reviewer_note`. Never pre-accept a second verdict for a whole category: then the eval can't catch the pipeline getting the distinction wrong.
+
+The examples show the distinction on one product: "3x vs the 2019 X0" is True with a `misleading_comparison` flag on how it's presented; "3x vs the 2023 X1" is False; a correct battery figure with a wrong release month is Almost.
+
 - There is no automatic mapping from the old `mixed` verdict: re-judge each case against its evidence.
 
 ### Agreement rate
@@ -106,3 +117,5 @@ python evals/validate.py                      # claims.json and all label files
 python evals/validate.py path/to/file.json    # specific files
 python -m unittest discover -s evals          # validator tests
 ```
+
+CI (`.github/workflows/evals.yml`) runs all three, with the examples as the specific file, on every PR that touches `evals/`. The backend's `pytest` run doesn't collect these tests.
