@@ -6,7 +6,7 @@ import type {
   QualificationFlag,
   Route,
 } from '../api/types'
-import { DIMENSION_LABEL, FLAG_LABEL, UNDECIDED_LABEL, VERDICT_LABEL } from '../labels'
+import { DIMENSION_LABEL, FLAG_LABEL, UNDECIDED_FALLBACK, UNDECIDED_LABEL, VERDICT_LABEL } from '../labels'
 import { Citations } from './Cite'
 
 export function Units({ units }: { units: ExplanationUnit[] }) {
@@ -22,10 +22,13 @@ export function Units({ units }: { units: ExplanationUnit[] }) {
   )
 }
 
-/** True / False / Almost, or Unable to decide. Never a score. */
+/** True / False / Almost, or Insufficient / Conflicting evidence. Never a score. */
 export function DecisionLabel({ decision }: { decision: Decision }) {
   if (decision.outcome === 'unable_to_decide' || !decision.verdict) {
-    return <span className="verdict verdict-undecided">{UNDECIDED_LABEL}</span>
+    const reason = decision.unable_to_decide_reason
+    return (
+      <span className="verdict verdict-undecided">{reason ? UNDECIDED_LABEL[reason] : UNDECIDED_FALLBACK}</span>
+    )
   }
   return <span className={`verdict verdict-${decision.verdict}`}>{VERDICT_LABEL[decision.verdict]}</span>
 }

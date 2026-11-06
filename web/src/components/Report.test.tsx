@@ -1,4 +1,4 @@
-﻿// @vitest-environment jsdom
+// @vitest-environment jsdom
 import { cleanup, render, screen, within } from '@testing-library/react'
 import { afterEach, describe, expect, it } from 'vitest'
 import type { Decision, Investigation, InvestigationResult } from '../api/types'
@@ -59,7 +59,7 @@ describe('Report conclusion', () => {
     expect(conclusion.textContent).toContain('about 1.4 times as long as the X1')
   })
 
-  it('shows Unable to decide with its reason and the partial-run note', () => {
+  it('shows Conflicting evidence with its reason and a neutral partial-run note', () => {
     const conclusion = renderWith(
       {
         outcome: 'unable_to_decide',
@@ -70,10 +70,20 @@ describe('Report conclusion', () => {
       'partial',
     )
     const heading = within(conclusion).getByRole('heading', { level: 2 })
-    expect(heading.textContent).toContain('Unable to decide')
-    expect(heading.textContent).not.toMatch(/True|False|Almost/)
+    expect(heading.textContent).toMatch(/^Conflicting evidence/)
     expect(conclusion.textContent).toContain('sources disagree')
     expect(conclusion.textContent).toContain('Partial result')
+    expect(conclusion.textContent).not.toContain('fewer sources')
+  })
+
+  it('labels insufficient evidence distinctly from conflicting evidence', () => {
+    const conclusion = renderWith({
+      outcome: 'unable_to_decide',
+      verdict: null,
+      unable_to_decide_reason: 'insufficient_evidence',
+      almost_correction: null,
+    })
+    expect(within(conclusion).getByRole('heading', { level: 2 }).textContent).toMatch(/^Insufficient evidence/)
   })
 })
 

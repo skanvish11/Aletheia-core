@@ -2,6 +2,7 @@ import type { EvidenceResponse, Investigation, InvestigationEvent, Investigation
 import { EvidenceIndexContext, buildEvidenceIndex } from '../evidenceIndex'
 import { STATUS_LABEL, UNDECIDED_REASON, formatTime, reason } from '../labels'
 import { Evidence } from './Evidence'
+import { Citations } from './Cite'
 import { Correction, DecisionLabel, Findings, Flag, Units } from './Findings'
 import { ResearchActivity, ResearchInProgress } from './Progress'
 
@@ -56,6 +57,22 @@ function ClaimHeader({
   )
 }
 
+/**
+ * Keeps the decision checkable when the explanation cites nothing, for example a
+ * partial result saved with an empty explanation: link the finding's own evidence.
+ */
+function DecisionEvidence({ result }: { result: InvestigationResult }) {
+  const ids = result.finding.evidence_ids
+  if (ids.length === 0 || result.explanation.some((unit) => unit.evidence_ids.length > 0)) return null
+  return (
+    <p>
+      {result.explanation.length === 0 ? 'No written explanation was saved. ' : ''}
+      The decision rests on this evidence:
+      <Citations ids={ids} />
+    </p>
+  )
+}
+
 /** The answer and its essential caveat, before any detail. */
 function Conclusion({ investigation, result }: { investigation: Investigation; result: InvestigationResult }) {
   const flags = result.finding.qualification_flags
@@ -70,9 +87,9 @@ function Conclusion({ investigation, result }: { investigation: Investigation; r
       )}
       {investigation.status === 'partial' && (
         <p className="meta">
-          Partial result: research stopped early
-          {reason(investigation.stop_reason) ? ` (${reason(investigation.stop_reason)})` : ''}, so this decision rests
-          on fewer sources than planned.
+          Partial result: the run stopped before every step finished
+          {reason(investigation.stop_reason) ? ` (${reason(investigation.stop_reason)})` : ''}. The decision comes from
+          the steps that completed; Limitations says what was left unfinished.
         </p>
       )}
       {result.almost_correction && <Correction correction={result.almost_correction} />}
@@ -81,6 +98,7 @@ function Conclusion({ investigation, result }: { investigation: Investigation; r
       ))}
       <div className="summary">
         <Units units={result.explanation} />
+        <DecisionEvidence result={result} />
       </div>
     </section>
   )

@@ -15,7 +15,14 @@ export const VERDICT_LABEL: Record<Verdict, string> = {
   almost: 'Almost',
 }
 
-export const UNDECIDED_LABEL = 'Unable to decide'
+/** The visible result label for each undecided reason (docs/research-pipeline.md). */
+export const UNDECIDED_LABEL: Record<UndecidedReason, string> = {
+  insufficient_evidence: 'Insufficient evidence',
+  conflicting_evidence: 'Conflicting evidence',
+}
+
+/** Only for a malformed decision with no reason; the contract never produces one. */
+export const UNDECIDED_FALLBACK = 'Unable to decide'
 
 export const UNDECIDED_REASON: Record<UndecidedReason, string> = {
   insufficient_evidence: 'There wasn’t enough admissible evidence to decide either way.',
