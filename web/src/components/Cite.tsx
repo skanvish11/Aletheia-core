@@ -14,7 +14,7 @@ function Cite({ id }: { id: string }) {
   const popover = useRef<HTMLDivElement>(null)
 
   if (!entry) return <span className="cite cite-missing">[?]</span>
-  const { number, assessment, source } = entry
+  const { number, evidence, source } = entry
 
   function open(event: MouseEvent<HTMLAnchorElement>) {
     const el = popover.current
@@ -50,7 +50,7 @@ function Cite({ id }: { id: string }) {
           <div>
             <p className="cite-preview-title">{source?.title ?? source?.url ?? 'Source'}</p>
             <p className="meta">
-              {[source?.publisher, source?.published_date].filter(Boolean).join(' · ')}
+              {[evidence.assessment.publisher, source?.published_date].filter(Boolean).join(' · ')}
             </p>
           </div>
           <button
@@ -63,8 +63,8 @@ function Cite({ id }: { id: string }) {
             ×
           </button>
         </div>
-        <p className="meta">{RELATION_LABEL[assessment.relation]}</p>
-        {assessment.excerpts.map((excerpt) => (
+        <p className="meta">{RELATION_LABEL[evidence.assessment.relation]}</p>
+        {evidence.excerpts.map((excerpt) => (
           <blockquote key={excerpt.span_ids.join('-')}>{excerpt.text}</blockquote>
         ))}
         <a

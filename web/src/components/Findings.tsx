@@ -1,5 +1,12 @@
-import type { AssertionFinding, ExplanationUnit, QualificationFlag } from '../api/types'
-import { DIMENSION_LABEL, FLAG_LABEL, VERDICT_LABEL } from '../labels'
+import type {
+  AlmostCorrection,
+  Decision,
+  ExplanationUnit,
+  InvestigationResult,
+  QualificationFlag,
+  Route,
+} from '../api/types'
+import { DIMENSION_LABEL, FLAG_LABEL, UNDECIDED_LABEL, VERDICT_LABEL } from '../labels'
 import { Citations } from './Cite'
 
 export function Units({ units }: { units: ExplanationUnit[] }) {
@@ -15,8 +22,12 @@ export function Units({ units }: { units: ExplanationUnit[] }) {
   )
 }
 
-export function Verdict({ verdict }: { verdict: AssertionFinding['verdict'] }) {
-  return <span className={`verdict verdict-${verdict}`}>{VERDICT_LABEL[verdict]}</span>
+/** True / False / Almost, or Unable to decide. Never a score. */
+export function DecisionLabel({ decision }: { decision: Decision }) {
+  if (decision.outcome === 'unable_to_decide' || !decision.verdict) {
+    return <span className="verdict verdict-undecided">{UNDECIDED_LABEL}</span>
+  }
+  return <span className={`verdict verdict-${decision.verdict}`}>{VERDICT_LABEL[decision.verdict]}</span>
 }
 
 /** A qualification: the one tinted surface on the page. */
@@ -34,48 +45,44 @@ export function Flag({ flag }: { flag: QualificationFlag }) {
   )
 }
 
-/**
- * One assertion's finding. With a single assertion the conclusion above already
- * shows its verdict and flags, so they are repeated here only for compound claims.
- */
-function Finding({ finding, compound }: { finding: AssertionFinding; compound: boolean }) {
-  const route = finding.route === 'deep' ? 'Deeper research' : 'Quick check'
+/** Almost: what holds, what doesn't, and the claim as the evidence supports it. */
+export function Correction({ correction }: { correction: AlmostCorrection }) {
+  const parts: [string, ExplanationUnit][] = [
+    ['What’s correct', correction.what_is_correct],
+    ['What needs correcting', correction.what_needs_correction],
+    ['Corrected claim', correction.corrected_claim],
+  ]
   return (
-    <article className="finding">
-      {compound ? (
-        <p className="finding-head">
-          <span className="meta">Assertion {finding.position} · </span>
-          <Verdict verdict={finding.verdict} />
-          <span className="meta"> · {route}</span>
-        </p>
-      ) : (
-        <p className="meta">{route}</p>
-      )}
-      <p className="scoped">{finding.scoped_text}</p>
-      {compound && finding.qualification_flags.map((flag, i) => <Flag key={i} flag={flag} />)}
-      {finding.qualification_check === 'unknown' && (
-        <p className="meta">Comparison and scope were not assessed for this finding.</p>
-      )}
-      <Units units={finding.explanation} />
-      {finding.limitations.length > 0 && (
-        <ul className="limitations">
-          {finding.limitations.map((l, i) => (
-            <li key={i}>{l}</li>
-          ))}
-        </ul>
-      )}
-    </article>
+    <dl className="correction">
+      {parts.map(([label, unit]) => (
+        <div key={label} className={label === 'Corrected claim' ? 'correction-claim' : undefined}>
+          <dt>{label}</dt>
+          <dd>
+            {unit.text}
+            <Citations ids={unit.evidence_ids} />
+          </dd>
+        </div>
+      ))}
+    </dl>
   )
 }
 
-export function Findings({ findings }: { findings: AssertionFinding[] }) {
-  const sorted = findings.slice().sort((a, b) => a.position - b.position)
+const ROUTE_LABEL: Record<Route, string> = { quick: 'Quick check', deep: 'Deeper research' }
+
+/** What was actually checked: the scoped assertion and how it was researched. */
+export function Findings({ result, route }: { result: InvestigationResult; route: Route | null }) {
+  const { assertion, finding } = result
   return (
     <section className="section" aria-labelledby="findings-heading">
-      <h2 id="findings-heading">How we reached this</h2>
-      {sorted.map((finding) => (
-        <Finding key={finding.assertion_id} finding={finding} compound={sorted.length > 1} />
-      ))}
+      <h2 id="findings-heading">What we checked</h2>
+      <article className="finding">
+        <p className="meta">{ROUTE_LABEL[route ?? assertion.recommended_route]}</p>
+        <p className="scoped">{assertion.text}</p>
+        {result.scope_note && <p className="meta">{result.scope_note}</p>}
+        {finding.qualification_check === 'unknown' && (
+          <p className="meta">Comparisons and scope were not assessed for this claim.</p>
+        )}
+      </article>
     </section>
   )
 }

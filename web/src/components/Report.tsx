@@ -1,8 +1,8 @@
 import type { EvidenceResponse, Investigation, InvestigationEvent, InvestigationResult } from '../api/types'
 import { EvidenceIndexContext, buildEvidenceIndex } from '../evidenceIndex'
-import { STATUS_LABEL, formatTime } from '../labels'
+import { STATUS_LABEL, UNDECIDED_REASON, formatTime, reason } from '../labels'
 import { Evidence } from './Evidence'
-import { Findings, Flag, Units, Verdict } from './Findings'
+import { Correction, DecisionLabel, Findings, Flag, Units } from './Findings'
 import { ResearchActivity, ResearchInProgress } from './Progress'
 
 interface Props {
@@ -53,26 +53,37 @@ function ClaimHeader({
 }
 
 /** The answer and its essential caveat, before any detail. */
-function Conclusion({ result }: { result: InvestigationResult }) {
-  const flags = result.findings.flatMap((f) => f.qualification_flags)
+function Conclusion({ investigation, result }: { investigation: Investigation; result: InvestigationResult }) {
+  const flags = result.finding.qualification_flags
   return (
     <section className="conclusion" aria-labelledby="conclusion-heading">
       <h2 id="conclusion-heading" className="conclusion-verdict">
-        <Verdict verdict={result.overall_verdict} />
+        <DecisionLabel decision={result} />
         {flags.length > 0 && <span className="conclusion-but">, with a caveat</span>}
       </h2>
+      {result.unable_to_decide_reason && (
+        <p className="meta">{UNDECIDED_REASON[result.unable_to_decide_reason]}</p>
+      )}
+      {investigation.status === 'partial' && (
+        <p className="meta">
+          Partial result: research stopped early
+          {reason(investigation.stop_reason) ? ` (${reason(investigation.stop_reason)})` : ''}, so this decision rests
+          on fewer sources than planned.
+        </p>
+      )}
+      {result.almost_correction && <Correction correction={result.almost_correction} />}
       {flags.map((flag, i) => (
         <Flag key={i} flag={flag} />
       ))}
       <div className="summary">
-        <Units units={result.summary} />
+        <Units units={result.explanation} />
       </div>
     </section>
   )
 }
 
 function Limitations({ result }: { result: InvestigationResult }) {
-  const items = [...result.conflicts, ...result.limitations]
+  const items = [...new Set([...result.limitations, ...result.finding.limitations])]
   if (items.length === 0) return null
   return (
     <section className="section" aria-labelledby="limitations-heading">
@@ -126,7 +137,7 @@ export function Report(props: Props) {
 
         {finished && investigation.error && (
           <section className="conclusion" role="alert">
-            <h2>No verdict</h2>
+            <h2>No decision</h2>
             <p>{investigation.error.message}</p>
             <p className="meta">A failed investigation is not evidence that the claim is false.</p>
           </section>
@@ -134,8 +145,8 @@ export function Report(props: Props) {
 
         {result && (
           <>
-            <Conclusion result={result} />
-            <Findings findings={result.findings} />
+            <Conclusion investigation={investigation} result={result} />
+            <Findings result={result} route={investigation.route} />
             <Limitations result={result} />
             <Evidence />
           </>
