@@ -1,5 +1,6 @@
 """True/False/Almost decisions; uncertainty is an outcome, never a truth verdict."""
 
+from itertools import combinations
 from typing import Annotated
 
 from pydantic import Field, ValidationError
@@ -29,20 +30,15 @@ def sufficient(items, route, sources):
         for e in items
     ):
         return True
-    origins, hashes = set(), set()
+    origins = set()
     for e in items:
         a = e.assessment
         content_hash = by_id[a.citation.snapshot_id].content_hash
         origin = " ".join(a.origin.casefold().split()) if a.origin else None
-        if (
-            a.independence == "established"
-            and origin
-            and origin not in origins
-            and content_hash not in hashes
-        ):
-            origins.add(origin)
-            hashes.add(content_hash)
-    return len(origins) >= 2
+        if a.independence == "established" and origin:
+            origins.add((origin, content_hash))
+    # Check all pairs: a greedy first choice can hide a later valid independent pair.
+    return any(a != b and x != y for (a, x), (b, y) in combinations(origins, 2))
 
 
 def finding(assertion, route, evidence, sources):

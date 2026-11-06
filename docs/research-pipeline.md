@@ -1,5 +1,8 @@
 # Step 3: one-claim research pipeline
 
+> [Step 4](deeper-research.md) extends this pipeline with evidence-aware planning,
+> per-round page limits, balanced source selection and explicit research-gate events.
+
 This branch builds on the reviewed Step 2 adapters (PR #10), brought to `main`
 through integration PR #13. It implements
 one scoped assertion per investigation, with the basic progress, refresh and saved
@@ -60,7 +63,7 @@ message. A disabled server still exposes saved results, evidence and comparisons
 
 All model input is marked untrusted, including user text and extracted pages.
 Models cannot execute tools or write storage. Instructions and schemas live with
-these task modules and are labeled `one-claim-v3`. Results record the model,
+these task modules; they are currently labeled `one-claim-v4.3`. Results record the model,
 application/prompt versions, allowlisted configuration, call attempts and available
 token usage. Token totals include usage from successfully parsed model responses;
 providers may not report usage for malformed or failed attempts.
@@ -236,8 +239,11 @@ initialization. Disconnecting an SSE client does not cancel research.
 
 ## Refresh comparisons
 
-Refresh attempts up to two previous source URLs within the page budget and runs
-new support/counterevidence searches. Pages not selected and pages that could not
+Refresh runs new support/counterevidence searches and reserves rechecks for up to
+two previously cited sources, prioritizing supporting/contradicting evidence.
+These slots precede fresh candidates and sit outside the per-round fresh-page
+ceiling while still consuming the same global call/time budgets. Limited refreshes
+remain partial. Pages not selected and pages that could not
 be retrieved are distinguished; every `source_rejected` event, including transient
 provider errors and historical size rejections, counts as a retrieval failure
 when its selected source is absent. Neither case is labeled deleted. Content hashes and

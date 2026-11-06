@@ -1,0 +1,123 @@
+[
+  {
+    "id": "example-northwind-x0",
+    "split": "tuning",
+    "claim": "The Northwind X2 battery lasts three times as long as the 2019 Northwind X0.",
+    "context": {
+      "notes": "From a launch ad headlined '3x the battery life of earlier Northwinds'; the 2019 X0 is named only in the footnote."
+    },
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [
+      {
+        "type": "misleading_comparison",
+        "dimension": "baseline",
+        "rationale": "Accurate against the 2019 X0, but presented as 'earlier Northwinds'; against the 2023 X1, the direct predecessor, the gain is about 1.4x."
+      }
+    ],
+    "key_sources": [
+      {
+        "url": "https://example.com/northwind/x2-launch-notes",
+        "shows": "Maker's lab test: X2 18 hours vs the 2019 X0 at 6 hours."
+      },
+      {
+        "url": "https://example.org/reviews/northwind-x2-vs-x1",
+        "shows": "Independent test: X2 18 hours vs the 2023 X1 at 13 hours."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": ["labeler-a", "labeler-b"],
+    "status": "reconciled",
+    "reviewer_note": "ILLUSTRATIVE ONLY: invented product and example-domain URLs, not part of the eval set. The comparator is scoped to the X0, and the claim holds as written, so True. The flag records the presentation caveat; it does not repair the claim."
+  },
+  {
+    "id": "example-northwind-x1",
+    "split": "tuning",
+    "claim": "The Northwind X2 battery lasts three times as long as the 2023 Northwind X1, its direct predecessor.",
+    "case_type": "comparison",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://example.org/reviews/northwind-x2-vs-x1",
+        "shows": "Independent test: X2 18 hours vs the 2023 X1 at 13 hours, about 1.4x."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": ["labeler-a", "labeler-b"],
+    "status": "reconciled",
+    "reviewer_note": "ILLUSTRATIVE ONLY: invented. The ratio is the claim's central quantity, and 3x versus about 1.4x changes it materially, so False, not Almost. Numerical closeness alone never makes a claim Almost."
+  },
+  {
+    "id": "example-northwind-release",
+    "split": "tuning",
+    "claim": "The Northwind X2, released in September 2026, runs for 18 hours on a single charge.",
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "The X2 runs for 18 hours on a charge in both the maker's and an independent test.",
+        "what_needs_correction": "It went on sale on 2 October 2026, not in September.",
+        "corrected_claim": "The Northwind X2, released in October 2026, runs for 18 hours on a single charge."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://example.com/northwind/x2-launch-notes",
+        "shows": "Maker's lab test: 18 hours; on sale from 2 October 2026."
+      },
+      {
+        "url": "https://example.org/reviews/northwind-x2-vs-x1",
+        "shows": "Independent test: 18 hours."
+      }
+    ],
+    "as_of": "2026-11-05",
+    "labelers": ["labeler-a", "labeler-b"],
+    "status": "reconciled",
+    "reviewer_note": "ILLUSTRATIVE ONLY: invented. The central quantity (18 hours) holds; only a secondary detail needs a specific, sourced correction, so Almost. All three correction parts are supported."
+  },
+  {
+    "id": "example-cycles",
+    "split": "tuning",
+    "claim": "The Northwind X2 battery keeps 95% of its capacity after 1,000 charge cycles.",
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://example.com/northwind/x2-specs",
+        "shows": "The maker states the figure without describing its test."
+      },
+      {
+        "url": "https://example.org/reviews/northwind-x2-six-months",
+        "shows": "The only independent test stops at 300 cycles."
+      }
+    ],
+    "as_of": "2026-11-04",
+    "labelers": ["labeler-a", "labeler-b"],
+    "status": "reconciled",
+    "reviewer_note": "ILLUSTRATIVE ONLY: invented. Only the maker reports 1,000 cycles and no independent test reaches it, so the evidence is insufficient. Not false: missing support is not contradiction."
+  }
+]
