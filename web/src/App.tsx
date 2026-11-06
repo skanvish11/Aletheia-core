@@ -1,5 +1,5 @@
 import { dataSource } from './api/source'
-import { unavailableReason, useBackendStatus } from './api/useBackendStatus'
+import { canRecheck, unavailableReason, useBackendStatus } from './api/useBackendStatus'
 import { useInvestigation } from './api/useInvestigation'
 import { Home } from './components/Home'
 import { Report } from './components/Report'
@@ -55,7 +55,8 @@ export default function App() {
           </>
         ) : (
           <Home
-            unavailableReason={unavailableReason(backend)}
+            unavailableReason={unavailableReason(backend.status)}
+            onRetryBackend={canRecheck(backend.status) ? backend.recheck : undefined}
             submitting={submitting}
             error={error}
             recordings={dataSource.recordings}

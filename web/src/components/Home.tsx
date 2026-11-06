@@ -29,6 +29,7 @@ function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => 
 interface Props {
   /** Why claims can't be submitted right now; undefined when they can. */
   unavailableReason?: string
+  onRetryBackend?: () => void
   submitting: boolean
   error: string | null
   recordings: Recording[]
@@ -36,7 +37,7 @@ interface Props {
   onOpen: (id: string) => void
 }
 
-export function Home({ unavailableReason, submitting, error, recordings, onSubmit, onOpen }: Props) {
+export function Home({ unavailableReason, onRetryBackend, submitting, error, recordings, onSubmit, onOpen }: Props) {
   return (
     <section className="home">
       <h1 className="claim">Check a claim</h1>
@@ -46,6 +47,7 @@ export function Home({ unavailableReason, submitting, error, recordings, onSubmi
         onSubmit={onSubmit}
         submitting={submitting}
         unavailableReason={unavailableReason}
+        onRetry={onRetryBackend}
       />
       {error && (
         <p className="error" role="alert">

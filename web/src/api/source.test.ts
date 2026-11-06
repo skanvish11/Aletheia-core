@@ -1,11 +1,14 @@
 // @vitest-environment jsdom
-import { act, renderHook } from '@testing-library/react'
+import { act, cleanup, renderHook } from '@testing-library/react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { STREAM_UNAVAILABLE, UNREACHABLE, liveSource, type DataSource } from './source'
 import type { InvestigationEvent } from './types'
 import { unavailableReason, useBackendStatus } from './useBackendStatus'
 
-afterEach(() => vi.unstubAllGlobals())
+afterEach(() => {
+  cleanup() // unmount hooks so their focus/online listeners don't leak between tests
+  vi.unstubAllGlobals()
+})
 
 function respond(status: number, body: unknown = { detail: 'Sanitized backend message.' }) {
   vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify(body), { status })))
@@ -80,20 +83,53 @@ describe('backend status', () => {
     ['research disabled', async () => ({ status: 'ok', database: 'ok', research_enabled: false }), 'research_disabled'],
     ['unreachable', async () => Promise.reject(new Error('down')), 'unreachable'],
   ])('%s', async (_label, health, expected) => {
-    const { result } = renderHook(() => useBackendStatus(withHealth(health)))
-    expect(result.current).toBe('checking')
+    const source = withHealth(health)
+    const { result } = renderHook(() => useBackendStatus(source))
+    expect(result.current.status).toBe('checking')
     await act(async () => {})
-    expect(result.current).toBe(expected)
+    expect(result.current.status).toBe(expected)
   })
 
   it('stays on replay when the source has no health check', () => {
     const { result } = renderHook(() => useBackendStatus({ ...liveSource, health: undefined }))
-    expect(result.current).toBe('replay')
+    expect(result.current.status).toBe('replay')
+  })
+
+  const ENABLED = { status: 'ok', database: 'ok', research_enabled: true }
+
+  it('recovers on retry once the backend starts (backend started after the page)', async () => {
+    const health = vi.fn().mockRejectedValueOnce(new Error('down')).mockResolvedValue(ENABLED)
+    const source = withHealth(health)
+    const { result } = renderHook(() => useBackendStatus(source))
+    await act(async () => {})
+    expect(result.current.status).toBe('unreachable')
+
+    act(() => result.current.recheck())
+    expect(result.current.status).toBe('checking')
+    await act(async () => {})
+    expect(result.current.status).toBe('ready')
+    expect(health).toHaveBeenCalledTimes(2)
+  })
+
+  it('rechecks on window focus while unavailable, and stops once ready', async () => {
+    const health = vi
+      .fn()
+      .mockResolvedValueOnce({ ...ENABLED, research_enabled: false })
+      .mockResolvedValue(ENABLED)
+    const source = withHealth(health)
+    const { result } = renderHook(() => useBackendStatus(source))
+    await act(async () => {})
+    expect(result.current.status).toBe('research_disabled')
+
+    await act(async () => void window.dispatchEvent(new Event('focus')))
+    expect(result.current.status).toBe('ready')
+    await act(async () => void window.dispatchEvent(new Event('focus')))
+    expect(health).toHaveBeenCalledTimes(2)
   })
 
   it('only allows submitting when research is enabled', () => {
     expect(unavailableReason('ready')).toBeUndefined()
-    expect(unavailableReason('research_disabled')).toContain('research isn’t enabled')
+    expect(unavailableReason('research_disabled')).toContain('research is turned off')
     expect(unavailableReason('checking')).toContain('Checking')
   })
 })
