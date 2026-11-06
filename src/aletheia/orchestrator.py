@@ -13,7 +13,7 @@ from aletheia.research_gate import evaluate, planning_context
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
 from aletheia.verdicts import finding, synthesize
 
-APPLICATION_VERSION = "research-v4.1"
+APPLICATION_VERSION = "research-v4.2"
 MAX_FOLLOWUP_ROUNDS = 2
 
 

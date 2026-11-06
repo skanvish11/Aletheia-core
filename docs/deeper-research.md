@@ -12,7 +12,9 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   inadequate evidence quality/independence, scope mismatch and missing evidence.
   It uses the existing verdict policy; it adds no extra model calls.
 - Follow-up planning receives up to twelve evidence summaries, alternating support,
-  contradiction, context and irrelevant assessments. Each summary carries its URL,
+  contradiction, context and irrelevant assessments. Within each relation, admitted
+  evidence precedes rejected metadata so rejection floods cannot hide a real conflict.
+  Each summary carries its URL,
   evidence ID, admissibility, scope match, independence and duplicate group.
   Only admissible evidence includes origin, a rationale prefix (600 characters)
   and up to two excerpt prefixes (600 characters each). Rejected evidence contributes
@@ -27,10 +29,14 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   selects at most four initially and two per follow-up, with at most two follow-ups.
   These are page-selection ceilings, not extra provider allowances: failed requests
   and retries still consume the existing global limits. Multiple support queries
-  do not crowd out the first counterevidence query in page selection.
+  do not crowd out the first counterevidence query in page selection. Each query's
+  selection turn advances past already-seen or duplicate URLs to its next distinct
+  candidate before moving to another query.
 - Refresh reserves recheck slots for up to two sources cited by the saved result,
   prioritizing supporting/contradicting evidence over context and excluding rejected
-  or uncited snapshots. Rechecks precede fresh search candidates and sit outside
+  or uncited snapshots. When both sides were cited, reserve a source covering each
+  side before filling remaining slots. Current search metadata replaces old metadata
+  when the same URL is rediscovered. Rechecks precede fresh search candidates and sit outside
   the per-round fresh-page ceiling, but consume the same global attempt/time budgets.
   A quick refresh that cannot finish both sets reports `partial`, preserves validated
   findings, and still finalizes/computes comparison within its reserve. No budget
@@ -56,7 +62,7 @@ loop evidence-aware and preserves capacity for useful follow-ups.
   A greedy first choice previously could hide a valid later pair. Shared or unknown
   origins and duplicate content still cannot count as two independent observations.
 
-Prompt/application versions are `one-claim-v4.1` and `research-v4.1`. Result configuration
+Prompt/application versions are `one-claim-v4.2` and `research-v4.2`. Result configuration
 records the page and follow-up limits. Existing saved records remain readable;
 no database schema migration is needed. Clients consuming the event-type enumeration
 should accept the two additional progress events.
@@ -116,6 +122,34 @@ Ruff lint/format and whitespace checks passed, and all **ten** deliberate faults
 were detected on Python 3.15.2 with locked dependencies. No live provider calls or
 human passage review were performed. CI status for the updated commit is recorded
 on the PR; earlier green runs do not establish the status of a later revision.
+
+## Adversarial review before the next push
+
+The requested adversarial review of commit `91f8032` used synthetic provider
+responses through the real API and adapters, plus bounded-context unit tests.
+This was a review by the implementing assistant, not an independent reviewer or
+live research evaluation. Four new failing tests confirmed these findings:
+
+| Finding | Reproduction and correction |
+| --- | --- |
+| High: overlapping top results hid counterevidence | Two support queries and a counter-query sharing the same top URL selected two supporting pages and returned True. Each query now advances to its next distinct URL before another query gets its turn; the fixture now returns conflicting evidence. |
+| High: asymmetric refresh dropped a known contradicting source | A baseline with two supporting sources and one contradicting source refreshed only the first two when new search results were empty, changing conflict to True. Reserved rechecks now cover both cited sides. |
+| Medium: rejected assessments hid an admitted conflict in planner context | Twelve rejected contradictions preceded a genuine contradiction and displaced it from the twelve-summary input. Admitted assessments now take priority within each relation. |
+| Medium: baseline metadata masked fresh metadata | Refresh rediscovered a URL with an updated title/date but retained the old metadata. Current search metadata now takes precedence and the comparison exposes the change. |
+
+All four cases failed before correction and passed afterward. A separate adversarial
+case exhausted model capacity in the planning call itself: the existing implementation
+correctly emitted a stop, preserved finalization capacity and announced no follow-up.
+The new cases are in `tests/test_adversarial_step4.py`. Two selective mutations restore
+the source-selection failures and must be detected by the regression tests. Existing
+tests also exercise rejection-text isolation, duplicate/shared origins, deadline and
+retry accounting, partial outcomes, saved-result immutability and citation validation.
+The review does not establish resistance to every prompt injection or semantic
+misjudgment; admitted source text remains untrusted model input.
+
+Before pushing the adversarial fixes, **293 tests passed**, all **twelve** deliberate
+faults were detected, and lint, formatting and whitespace checks passed locally
+with the locked dependencies on Python 3.15.2. CI for the new revision is separate.
 
 ## Scope and remaining validation
 

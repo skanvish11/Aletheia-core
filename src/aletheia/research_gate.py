@@ -51,10 +51,14 @@ def planning_context(evidence, sources):
     """Balance both sides, including rejected scope matches, without copying whole pages."""
     by_id = {s.id: s for s in sources}
     groups = [
-        [e for e in evidence if e.assessment.relation == relation]
+        sorted(
+            (e for e in evidence if e.assessment.relation == relation),
+            key=lambda e: not e.admissible,
+        )
         for relation in ("supports", "contradicts", "context", "irrelevant")
     ]
-    # At most twelve summaries; round-robin keeps a long support list from hiding dissent.
+    # At most twelve summaries. Balance relations and put admitted evidence before
+    # rejected metadata so a flood of rejections cannot hide a real contradiction.
     selected = [
         group[index]
         for index in range(max((len(group) for group in groups), default=0))

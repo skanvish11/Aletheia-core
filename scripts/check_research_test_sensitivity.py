@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "duplicate search hits consume counterevidence selection turns",
+        "research.py",
+        "if key in ranked_keys:",
+        "if key in seen_urls:",
+        "tests/test_adversarial_step4.py::test_overlapping_top_hits_do_not_crowd_out_counterevidence",
+    ),
+    (
+        "refresh selection omits the contradicting side",
+        "research.py",
+        'for relation in ("supports", "contradicts"):',
+        'for relation in ("supports",):',
+        "tests/test_adversarial_step4.py::test_refresh_rechecks_both_sides_of_a_previously_conflicting_finding",
+    ),
+    (
         "refresh drops cited baseline evidence",
         "orchestrator.py",
         "baseline_sources if round_index == 0 else (),",

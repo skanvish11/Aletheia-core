@@ -6,7 +6,7 @@ from aletheia.verification import assess
 
 
 def refresh_sources(sources, evidence, cited_ids):
-    """Recheck cited evidence, prioritizing direct support/contradiction over context."""
+    """Recheck both cited sides before filling remaining slots with direct/context sources."""
     cited = [e for e in evidence if e.admissible and e.id in cited_ids]
     relevant = {e.assessment.citation.snapshot_id for e in cited}
     direct = {
@@ -14,7 +14,23 @@ def refresh_sources(sources, evidence, cited_ids):
         for e in cited
         if e.assessment.relation in {"supports", "contradicts"}
     }
-    return sorted((s for s in sources if s.id in relevant), key=lambda s: s.id not in direct)[:2]
+    chosen, chosen_ids = [], set()
+    for relation in ("supports", "contradicts"):
+        side = {
+            e.assessment.citation.snapshot_id for e in cited if e.assessment.relation == relation
+        }
+        if chosen_ids & side:
+            continue
+        for candidate in sources:
+            if candidate.id in side:
+                chosen.append(candidate)
+                chosen_ids.add(candidate.id)
+                break
+    remaining = sorted(
+        (s for s in sources if s.id in relevant and s.id not in chosen_ids),
+        key=lambda s: s.id not in direct,
+    )
+    return (chosen + remaining)[:2]
 
 
 async def gather(
@@ -55,14 +71,34 @@ async def gather(
         for group in groups
         if index < len(group)
     ]
+    # Prefer current search metadata when a rechecked URL also appears in fresh hits.
+    fresh_metadata = {}
+    for batch in ordered:
+        for hit in batch:
+            fresh_metadata.setdefault(
+                canonical_url(hit.url), (hit.url, hit.title[:2000], hit.published_date)
+            )
     # Cited old evidence gets reserved recheck slots, outside the fresh-page ceiling
     # but still inside every shared attempt/deadline limit.
-    candidates = [(s.url, s.title, s.published_date) for s in baseline_sources[:2]]
-    for index in range(5):
-        for batch in ordered:
-            if index < len(batch):
-                hit = batch[index]
-                candidates.append((hit.url, hit.title[:2000], hit.published_date))
+    candidates = [
+        fresh_metadata.get(s.canonical_url, (s.url, s.title, s.published_date))
+        for s in baseline_sources[:2]
+    ]
+    ranked_keys = seen_urls | {canonical_url(url) for url, _, _ in candidates}
+    streams = [iter(batch) for batch in ordered]
+    while True:
+        added = False
+        for stream in streams:
+            for hit in stream:
+                key = canonical_url(hit.url)
+                if key in ranked_keys:
+                    continue
+                ranked_keys.add(key)
+                candidates.append(fresh_metadata[key])
+                added = True
+                break
+        if not added:
+            break
     selected = []
     candidate_keys = set()
     remaining = tasks.budget.extraction_attempts - tasks.budget.used["extract"]
