@@ -87,6 +87,12 @@ export function describeEvent(event: InvestigationEvent): string {
       return 'Escalated to deeper research'
     case 'followup_planned':
       return `Planned a follow-up search${text(p.gap) ? ` for: ${text(p.gap)}` : ''}`
+    case 'sources_deferred':
+      return `Left ${text(p.count) ?? 'some'} search results unread to stay within page limits`
+    case 'research_gate':
+      return p.action === 'followup'
+        ? `Decided to search further${text(p.gap) ? `: ${p.gap}` : ''}`
+        : 'Decided to stop searching'
     case 'budget_reached':
       return `Reached the ${text(p.budget) ?? 'research'} limit`
     case 'comparison_completed':
