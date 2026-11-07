@@ -132,13 +132,7 @@ class NebiusProvider(ProviderHTTP):
     ):
         if settings.nebius_model is None:
             raise ProviderError("nebius", ErrorCode.CONFIGURATION)
-        if (
-            settings.nebius_thinking != "default"
-            and settings.nebius_model != "nvidia/Nemotron-3_5-Lightning"
-        ):
-            # Template controls are model-specific. Do not send an unverified control
-            # to other models or silently ignore an explicit configuration.
-            raise ProviderError("nebius", ErrorCode.CONFIGURATION)
+        settings.validate_model_controls()
         super().__init__(
             "nebius",
             settings,

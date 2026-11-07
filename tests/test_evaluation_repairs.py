@@ -36,13 +36,12 @@ async def test_thinking_control_is_explicit_and_model_specific(mode):
 
 def test_unverified_thinking_control_fails_before_network_and_env_is_explicit(monkeypatch):
     from aletheia.config import ConfigurationError, ProviderSettings
-    from aletheia.providers.errors import ProviderError
     from aletheia.providers.nebius import NebiusProvider
 
     assert ProviderSettings.from_environment().nebius_thinking == "default"
     monkeypatch.setenv("ALETHEIA_NEBIUS_THINKING", "disabled")
     monkeypatch.setenv("NEBIUS_MODEL", "unverified-model")
-    with pytest.raises(ProviderError, match="configuration"):
+    with pytest.raises(ConfigurationError, match="verified thinking controls"):
         NebiusProvider(ProviderSettings.from_environment())
     monkeypatch.setenv("NEBIUS_MODEL", "nvidia/Nemotron-3_5-Lightning")
     assert ProviderSettings.from_environment().nebius_thinking == "disabled"
@@ -95,7 +94,11 @@ async def test_truncated_task_retains_safe_diagnostics_and_replays(settings, tas
         assert payload["finish_reason"] == "length"
         assert payload["completion_tokens"] == "4096"
         assert float(payload["elapsed_seconds"]) >= 0
-        attempts = [e for e in events if e.type == "model_attempt_finished"]
+        attempts = [
+            e
+            for e in events
+            if e.type == "provider_attempt_finished" and e.payload["operation"] == "model"
+        ]
         assert attempts[-1].payload["outcome"] == "truncated_output"
         assert attempts[-1].payload["status_code"] == "200"
         assert tasks[0].sequence < events[-1].sequence

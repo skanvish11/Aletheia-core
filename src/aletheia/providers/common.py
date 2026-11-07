@@ -142,7 +142,7 @@ class ProviderHTTP:
             try:
                 timeout = min(self.settings.timeout_seconds, budget.remaining_seconds())
                 if timeout <= 0:
-                    raise ProviderError(self.provider, ErrorCode.DEADLINE)
+                    raise budget.deadline_error(self.provider)
                 async with asyncio.timeout(timeout):
                     async with self._client.stream(
                         "POST",
@@ -170,8 +170,11 @@ class ProviderHTTP:
                         outcome = "success"
                         return result
             except (TimeoutError, httpx.TimeoutException):
-                code = ErrorCode.DEADLINE if budget.remaining_seconds() <= 0 else ErrorCode.TIMEOUT
-                error = ProviderError(self.provider, code, status_code=status)
+                error = (
+                    budget.deadline_error(self.provider, status_code=status)
+                    if budget.remaining_seconds() <= 0
+                    else ProviderError(self.provider, ErrorCode.TIMEOUT, status_code=status)
+                )
             except httpx.DecodingError:
                 error = ProviderError(self.provider, ErrorCode.INVALID_RESPONSE, status_code=status)
             except httpx.TransportError:
@@ -184,12 +187,6 @@ class ProviderHTTP:
                 outcome = "internal_error"
                 raise
             finally:
-                if error and error.code == ErrorCode.DEADLINE:
-                    error.limit_reason = (
-                        "research_deadline"
-                        if budget.deadline > time.monotonic()
-                        else "hard_deadline"
-                    )
                 budget.attempts.append(
                     Attempt(
                         self.provider,
@@ -237,17 +234,21 @@ class ProviderHTTP:
                 )
                 raise
             delay = max(0.25 * 2**attempt, error.retry_after or 0)
-            # Do not shorten Retry-After, or sleep through the caller's deadline.
-            if delay >= budget.remaining_seconds():
-                await budget.observe(
-                    "provider_retry_stopped",
-                    {
-                        **trace,
-                        "reason": "backoff_exceeds_deadline",
-                        "delay_seconds": str(delay),
-                    },
-                )
-                raise error from None
+
+            async def check_backoff(delay, trace, error):
+                # Trace persistence consumes time, so check both before and after it.
+                if delay >= budget.remaining_seconds():
+                    await budget.observe(
+                        "provider_retry_stopped",
+                        {
+                            **trace,
+                            "reason": "backoff_exceeds_deadline",
+                            "delay_seconds": str(delay),
+                        },
+                    )
+                    raise error from None
+
+            await check_backoff(delay, trace, error)
             await budget.observe(
                 "provider_retry_scheduled",
                 {
@@ -256,16 +257,6 @@ class ProviderHTTP:
                     "delay_seconds": str(delay),
                 },
             )
-            # Persisting the trace also takes time; recheck before sleeping.
-            if delay >= budget.remaining_seconds():
-                await budget.observe(
-                    "provider_retry_stopped",
-                    {
-                        **trace,
-                        "reason": "backoff_exceeds_deadline",
-                        "delay_seconds": str(delay),
-                    },
-                )
-                raise error from None
+            await check_backoff(delay, trace, error)
             await asyncio.sleep(delay)
         raise AssertionError("Unreachable retry state")

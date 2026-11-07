@@ -70,7 +70,7 @@ For exact wording, context, proposed answers and every baseline outcome, use the
 - **Which limit stopped progress?** Events record phase, used/total/available attempt limits, current and hard remaining time, and reasons such as `model_finalization_reserve`, `research_deadline` or `hard_deadline`.
 - **Can we inspect it after failure or restart?** The ordered events are persisted in SQLite and replay through the existing events API. No new research is launched by reading them. The evaluation runner already exports these events into each case artifact.
 
-The earlier `model_attempt_finished` event is retained as a task-level summary. **Do not add it to the generic provider-attempt count** or calls will be double-counted. Provider attempt records represent local reserved attempts; a crash/deadline may occur before delivery, and they are not billing receipts. The live evaluation's transport counter is a separate network-attempt measure.
+New runs emit one `provider_attempt_finished` event per attempt and retain task usage and validation metadata in `task_finished`. Historical `model_attempt_finished` events remain readable, but are no longer emitted. **Do not add historical model events to the provider-attempt count** or calls will be double-counted. Provider attempt records represent local reserved attempts; a crash/deadline may occur before delivery, and they are not billing receipts. The live evaluation's transport counter is a separate network-attempt measure.
 
 ## Concrete example
 

@@ -33,6 +33,16 @@ class Pipeline:
         async def observe(event, payload):
             await emit(event, payload, stage=budget.trace_stage)
 
+        async def research_stopped(exc):
+            await budget.observe(
+                "research_stopped",
+                {
+                    "provider": exc.provider,
+                    "outcome": exc.code.value,
+                    "limit_reason": exc.limit_reason,
+                },
+            )
+
         budget.observer = observe
         await budget.observe(
             "run_configured",
@@ -186,14 +196,7 @@ class Pipeline:
                 limitations.append("The follow-up round limit was reached.")
                 await emit("budget_reached", {"reason": "followup_round_limit"})
         except ProviderError as exc:
-            await budget.observe(
-                "research_stopped",
-                {
-                    "provider": exc.provider,
-                    "outcome": exc.code.value,
-                    "limit_reason": exc.limit_reason,
-                },
-            )
+            await research_stopped(exc)
             if exc.code not in {ErrorCode.BUDGET, ErrorCode.DEADLINE}:
                 await self.storage.finish(
                     investigation.id,
@@ -248,14 +251,7 @@ class Pipeline:
                     tasks, assertion, computed, evidence, assigned_route, sources
                 )
             except ProviderError as exc:
-                await budget.observe(
-                    "research_stopped",
-                    {
-                        "provider": exc.provider,
-                        "outcome": exc.code.value,
-                        "limit_reason": exc.limit_reason,
-                    },
-                )
+                await research_stopped(exc)
                 if exc.code not in {ErrorCode.BUDGET, ErrorCode.DEADLINE}:
                     await self.storage.finish(
                         investigation.id,

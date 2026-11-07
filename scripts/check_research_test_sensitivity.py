@@ -10,6 +10,20 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "diagnostic storage failure replaces a successful provider result",
+        "diagnostics.py",
+        "except Exception:",
+        "except LookupError:",
+        "tests/test_pr18_reliability.py::test_diagnostic_failure_preserves_provider_result_and_error[200-StorageError]",
+    ),
+    (
+        "dataset text uses the platform encoding",
+        "evaluation.py",
+        'path.read_text(encoding="utf-8")',
+        "path.read_text()",
+        "tests/test_evaluation.py::test_utf8_dataset_and_artifacts_ignore_platform_default",
+    ),
+    (
         "provider trace is not persisted",
         "orchestrator.py",
         "budget.observer = observe",
@@ -114,7 +128,7 @@ def main():
     for name, filename, old, new, test in MUTATIONS:
         with tempfile.TemporaryDirectory(prefix="aletheia-research-mutation-") as directory:
             work = Path(directory)
-            for folder in ("src", "tests"):
+            for folder in ("src", "tests", "scripts"):
                 shutil.copytree(
                     ROOT / folder, work / folder, ignore=shutil.ignore_patterns("__pycache__")
                 )

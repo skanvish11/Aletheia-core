@@ -34,6 +34,7 @@ class ProviderError(Exception):
         *,
         status_code: int | None = None,
         retry_after: float | None = None,
+        limit_reason: str = "unknown",
     ):
         self.provider = provider
         self.code = code
@@ -44,7 +45,7 @@ class ProviderError(Exception):
         self.validation_code = "unknown"
         self.schema_fields = "unknown"
         self.schema_error_types = "unknown"
-        self.limit_reason = "unknown"
+        self.limit_reason = limit_reason
         self.reasoning_tokens: int | None = None
         self.output_chars: int | None = None
         self.finish_reason: Literal["length", "content_filter", "stop"] | None = None

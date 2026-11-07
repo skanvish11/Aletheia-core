@@ -71,6 +71,9 @@ PROVIDER_ENV = {
     "max_output_tokens": "ALETHEIA_MODEL_MAX_OUTPUT_TOKENS",
 }
 
+# Add a model only after verifying its chat-template control contract.
+NEBIUS_THINKING_MODELS = frozenset({"nvidia/Nemotron-3_5-Lightning"})
+
 
 class ProviderSettings(BaseModel):
     """One immutable model/format/output-cap selection; never a cross-model fallback."""
@@ -88,6 +91,13 @@ class ProviderSettings(BaseModel):
     max_response_bytes: int = Field(default=2_097_152, ge=1024, le=10_485_760, strict=True)
     max_extracted_chars: int = Field(default=100_000, ge=1024, le=1_000_000, strict=True)
     max_output_tokens: int = Field(default=4096, ge=64, le=16_384, strict=True)
+
+    def validate_model_controls(self):
+        if self.nebius_thinking != "default" and self.nebius_model not in NEBIUS_THINKING_MODELS:
+            raise ConfigurationError(
+                "ALETHEIA_NEBIUS_THINKING requires a model with verified thinking controls; "
+                "use default for other models."
+            )
 
     @field_validator("nebius_api_key", "tavily_api_key")
     @classmethod

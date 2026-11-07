@@ -115,7 +115,7 @@ class EvaluationCase(EvaluationRecord):
 
 
 def load_cases(path: Path):
-    data = json.loads(path.read_text())
+    data = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(data, list) or not data:
         raise ValueError("Evaluation requires a nonempty array")
     cases = [EvaluationCase.model_validate(item) for item in data]
@@ -205,7 +205,7 @@ def summarize(rows, planned):
 
 def write_json(path, value):
     temporary = path.with_suffix(path.suffix + ".tmp")
-    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     temporary.replace(path)
 
 

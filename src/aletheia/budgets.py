@@ -6,6 +6,7 @@ from collections.abc import Awaitable, Callable
 from contextlib import contextmanager
 from dataclasses import dataclass, field
 
+from aletheia.diagnostics import emit_diagnostic
 from aletheia.providers.errors import ErrorCode, Operation, Provider, ProviderError
 
 
@@ -73,7 +74,9 @@ class CallBudget:
 
     async def observe(self, event, payload):
         if self.observer is not None:
-            await self.observer(event, {**self.trace_context, **self.trace_budget(), **payload})
+            await emit_diagnostic(
+                self.observer, event, {**self.trace_context, **self.trace_budget(), **payload}
+            )
 
     def __post_init__(self):
         if any(
@@ -91,13 +94,19 @@ class CallBudget:
     def remaining_seconds(self) -> float:
         return max(0.0, self.deadline - time.monotonic())
 
+    def deadline_error(self, provider, *, status_code=None):
+        return ProviderError(
+            provider,
+            ErrorCode.DEADLINE,
+            status_code=status_code,
+            limit_reason="research_deadline"
+            if self.deadline > time.monotonic()
+            else "hard_deadline",
+        )
+
     def check(self, provider: Provider, operation: Operation, units: int) -> None:
         if self.remaining_seconds() <= 0:
-            error = ProviderError(provider, ErrorCode.DEADLINE)
-            error.limit_reason = (
-                "research_deadline" if self.deadline > time.monotonic() else "hard_deadline"
-            )
-            raise error
+            raise self.deadline_error(provider)
         limit = self.limits[operation]
         if self.used[operation] + units > limit:
             error = ProviderError(provider, ErrorCode.BUDGET)

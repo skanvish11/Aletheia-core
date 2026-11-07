@@ -66,6 +66,7 @@ async def run(args, cases):
         )
     if not settings.nebius_api_key or not settings.tavily_api_key or not settings.nebius_model:
         raise ConfigurationError("Provider configuration is incomplete")
+    settings.validate_model_controls()
     # A fresh directory means no overwrite and no silent reuse of earlier evaluations.
     args.output.mkdir(parents=True, exist_ok=False)
     attempts = []
@@ -112,80 +113,115 @@ async def run(args, cases):
         "live": True,
     }
     write_json(args.output / "manifest.json", manifest)
-    write_json(args.output / "cases.json", [c.model_dump() for c in cases])
-    rows = []
-    database = args.output / "investigations.sqlite3"
-    app = create_app(
-        Settings(database_path=database, research_enabled=True), provider_factory=providers
-    )
-    artifacts = []
-    async with (
-        app.router.lifespan_context(app),
-        httpx.AsyncClient(transport=httpx.ASGITransport(app=app), base_url="http://test") as client,
-    ):
-        for index, case in enumerate(cases):
-            before = len(attempts)
-            budget_start = len(budgets)
-            try:
-                artifact = await capture(
-                    client,
-                    case,
-                    call_count=lambda: len(attempts),
-                    refresh=args.refresh_first and index == 0,
+    rows, artifacts, restart_checks = [], [], []
+    manifest["restart_zero_provider_calls"] = None
+    try:
+        write_json(args.output / "cases.json", [c.model_dump() for c in cases])
+        database = args.output / "investigations.sqlite3"
+        app = create_app(
+            Settings(database_path=database, research_enabled=True), provider_factory=providers
+        )
+        async with (
+            app.router.lifespan_context(app),
+            httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=app), base_url="http://test"
+            ) as client,
+        ):
+            for index, case in enumerate(cases):
+                before = len(attempts)
+                budget_start = len(budgets)
+                try:
+                    artifact = await capture(
+                        client,
+                        case,
+                        call_count=lambda: len(attempts),
+                        refresh=args.refresh_first and index == 0,
+                    )
+                except Exception:
+                    # Retain attempted cases without exception text or provider bodies.
+                    artifact = {"id": case.id, "live": True, "runner_error": "capture_failed"}
+                artifact["network_attempts"] = attempts[before:]
+                artifact["budget_attempts"] = [
+                    [asdict(attempt) for attempt in budget.attempts]
+                    for budget in budgets[budget_start:]
+                ]
+                artifacts.append(artifact)
+                try:
+                    row = score(case, artifact)
+                except Exception:
+                    artifact["runner_error"] = "scoring_failed"
+                    row = score(case, {})
+                rows.append(row)
+                write_json(args.output / f"{case.id}.json", artifact)
+                write_json(args.output / "scores.json", rows)
+                write_json(args.output / "summary.json", summarize(rows, len(cases)))
+                print(
+                    json.dumps(
+                        {
+                            "id": case.id,
+                            "status": rows[-1]["status"],
+                            "network_attempts": len(attempts) - before,
+                        }
+                    ),
+                    flush=True,
                 )
-            except (TimeoutError, httpx.HTTPError, RuntimeError):
-                # Retain every attempted case. Never serialize exception text or provider bodies.
-                artifact = {"id": case.id, "live": True, "runner_error": "capture_failed"}
-            artifact["network_attempts"] = attempts[before:]
-            artifact["budget_attempts"] = [
-                [asdict(attempt) for attempt in budget.attempts]
-                for budget in budgets[budget_start:]
-            ]
-            write_json(args.output / f"{case.id}.json", artifact)
-            artifacts.append(artifact)
-            rows.append(score(case, artifact))
-            write_json(args.output / "scores.json", rows)
-            write_json(args.output / "summary.json", summarize(rows, len(cases)))
-            print(
-                json.dumps(
-                    {
-                        "id": case.id,
-                        "status": rows[-1]["status"],
-                        "network_attempts": len(attempts) - before,
-                    }
-                ),
-                flush=True,
-            )
-            # Do not keep charging after an account/configuration failure or lost control.
-            if artifact.get("runner_error") or any(
-                a["status_code"] in {400, 401, 402, 403, 404, 422, 432, 433}
-                for a in attempts[before:]
-            ):
-                manifest["stopped_early"] = "runner_or_provider_configuration_failure"
-                break
-    # Read-only restart verifies persistence, with no provider factory and no credentials.
-    before = len(attempts)
-    reopened = create_app(Settings(database_path=database))
-    restart_checks = []
-    async with (
-        reopened.router.lifespan_context(reopened),
-        httpx.AsyncClient(
-            transport=httpx.ASGITransport(app=reopened), base_url="http://test"
-        ) as client,
-    ):
-        for artifact in artifacts:
-            if saved := artifact.get("investigation"):
-                response = await client.get(saved["links"]["self"])
-                response.raise_for_status()
-                restart_checks.append({"id": artifact["id"], "unchanged": response.json() == saved})
-    manifest.update(
-        finished_at=datetime.now(UTC).isoformat(),
-        network_attempts=len(attempts),
-        restart_checks=restart_checks,
-        restart_zero_provider_calls=len(attempts) == before,
+                # Do not keep charging after an account/configuration failure or lost control.
+                if artifact.get("runner_error") or any(
+                    a["status_code"] in {400, 401, 402, 403, 404, 422, 432, 433}
+                    for a in attempts[before:]
+                ):
+                    manifest["stopped_early"] = "runner_or_provider_configuration_failure"
+                    break
+        # Read-only restart verifies persistence, with no provider factory and no credentials.
+        restart_before = len(attempts)
+        reopened = create_app(Settings(database_path=database))
+        async with (
+            reopened.router.lifespan_context(reopened),
+            httpx.AsyncClient(
+                transport=httpx.ASGITransport(app=reopened), base_url="http://test"
+            ) as client,
+        ):
+            for artifact in artifacts:
+                if saved := artifact.get("investigation"):
+                    response = await client.get(saved["links"]["self"])
+                    response.raise_for_status()
+                    restart_checks.append(
+                        {"id": artifact["id"], "unchanged": response.json() == saved}
+                    )
+        manifest["restart_zero_provider_calls"] = len(attempts) == restart_before
+    except asyncio.CancelledError:
+        manifest["stopped_early"] = "cancelled"
+        raise
+    except Exception:
+        # Includes artifact I/O, scoring, application lifetime, and restart failures.
+        # Stop further paid work; retain fixed codes without private exception text.
+        manifest["stopped_early"] = "runner_error"
+    finally:
+        manifest.update(
+            finished_at=datetime.now(UTC).isoformat(),
+            network_attempts=len(attempts),
+            restart_checks=restart_checks,
+            recorded=len(rows),
+            not_run=len(cases) - len(rows),
+        )
+        # Try each output independently: a failed case/score write must not prevent
+        # final accounting. A persistently unwritable filesystem cannot be repaired here.
+        for filename, value in (
+            ("scores.json", rows),
+            ("summary.json", summarize(rows, len(cases))),
+            ("manifest.json", manifest),
+        ):
+            try:
+                write_json(args.output / filename, value)
+            except Exception:
+                manifest["stopped_early"] = "artifact_write_failed"
+                print("Evaluation artifact could not be saved; check output storage.", flush=True)
+    return (
+        "stopped_early" not in manifest
+        and len(rows) == len(cases)
+        and all(r["status"] == "completed" for r in rows)
+        and all(check["unchanged"] for check in restart_checks)
     )
-    write_json(args.output / "manifest.json", manifest)
-    return len(rows) == len(cases) and all(r["status"] == "completed" for r in rows)
 
 
 def main(argv=None):
@@ -217,7 +253,11 @@ def main(argv=None):
         if args.output is None:
             parser.error("--live requires a new --output directory")
         return 0 if asyncio.run(run(args, cases)) else 1
-    except (ValueError, ValidationError, ConfigurationError, ProviderError, OSError):
+    except ConfigurationError as exc:
+        # ConfigurationError contains fixed guidance, never supplied values.
+        print(f"Evaluation stopped: {exc}")
+        return 2
+    except (ValueError, ValidationError, ProviderError, OSError):
         print(
             "Evaluation stopped: check input paths, dataset, and runtime configuration. "
             "No private diagnostics printed."

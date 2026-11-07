@@ -6,6 +6,7 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
+from aletheia.diagnostics import emit_diagnostic
 from aletheia.providers.errors import ErrorCode, ProviderError
 
 PROMPT_VERSION = "one-claim-v4.4"
@@ -82,23 +83,24 @@ class Tasks:
             return await self._call(name, instructions, data, schema, validate)
 
     async def _call(self, name, instructions, data, schema, validate):
+        input_text = json.dumps(data, ensure_ascii=False)
         repair_guidance = ""
         for attempt in range(2):
             started = time.monotonic()
-            offset = len(self.budget.attempts)
             outcome = "cancelled"
             usage = None
             finish_reason = None
             validation_code = "unknown"
             schema_fields = schema_error_types = limit_reason = "unknown"
             reasoning_tokens = output_chars = None
-            await self.emit(
+            await emit_diagnostic(
+                self.emit,
                 "task_started",
                 {
                     **self.budget.trace_context,
                     **self.budget.trace_budget(),
                     "attempt": str(attempt + 1),
-                    "input_chars": str(len(json.dumps(data))),
+                    "input_chars": str(len(input_text)),
                 },
             )
             try:
@@ -113,7 +115,7 @@ class Tasks:
                         if attempt
                         else ""
                     ),
-                    input_text=json.dumps(data, ensure_ascii=False),
+                    input_text=input_text,
                     response_type=schema,
                     budget=self.budget,
                 )
@@ -147,27 +149,9 @@ class Tasks:
                 outcome = "internal_error"
                 raise
             finally:
-                # Persist allowlisted metadata before the pipeline marks a failed run
-                # terminal. No prompts, response bodies or exception strings are saved.
-                for index, record in enumerate(self.budget.attempts[offset:], start=1):
-                    await self.emit(
-                        "model_attempt_finished",
-                        {
-                            **self.budget.trace_context,
-                            **self.budget.trace_budget(),
-                            "task": name,
-                            "schema": schema.__name__,
-                            "task_attempt": str(attempt + 1),
-                            "provider_attempt": str(index),
-                            "provider": record.provider,
-                            "outcome": record.outcome,
-                            "status_code": str(record.status_code)
-                            if record.status_code is not None
-                            else "unknown",
-                            "elapsed_seconds": f"{record.elapsed_seconds:.3f}",
-                        },
-                    )
-                await self.emit(
+                # Optional telemetry cannot replace a result, error, or cancellation.
+                await emit_diagnostic(
+                    self.emit,
                     "task_finished",
                     {
                         **self.budget.trace_context,
@@ -191,5 +175,7 @@ class Tasks:
                         **{key: str(usage[key]) if usage else "unknown" for key in self.tokens},
                     },
                 )
-            await self.emit("task_output_rejected", {"task": name, "attempt": str(attempt + 1)})
+            await emit_diagnostic(
+                self.emit, "task_output_rejected", {"task": name, "attempt": str(attempt + 1)}
+            )
         raise InvalidTask("Research task output failed validation.")

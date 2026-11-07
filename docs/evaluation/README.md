@@ -79,6 +79,22 @@ freezes the submitted set. `scores.json` and `summary.json` update after each ca
 so earlier outcomes survive a later failure. Newer runner diagnostics also preserve
 safe budget-attempt outcome codes when a failed run has no final result.
 
+Dataset and artifact text is explicitly UTF-8 on every platform. Unexpected capture
+or scoring errors stop further cases and retain a sanitized runner-error record.
+Final accounting is attempted after artifact, application-lifecycle, and restart
+failures; each summary/manifest write is attempted independently. A persistently
+unwritable output directory can still prevent saving reports and produces a safe
+console message. `restart_zero_provider_calls: null` means the restart check did
+not complete, rather than claiming it passed.
+
+Optional provider/task diagnostics cannot replace a result or the original error.
+They skip writes during cancellation and log a fixed warning if a write fails;
+required evidence and terminal-result storage still propagates failures. Historical
+duplicate model-attempt events remain readable, but new runs emit only the provider
+attempt event plus task-level usage/validation metadata. Thinking controls remain
+limited to verified models; an unsupported explicit setting fails before evaluation
+starts with guidance to use `ALETHEIA_NEBIUS_THINKING=default`.
+
 Scoring follows PR #7's decision contract:
 
 - Compare outcome, verdict, and undecided reason separately. Insufficient evidence
