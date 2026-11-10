@@ -17,7 +17,9 @@ Both are drawn on the result page (state 2.5 with 2.6 in [inventory.md](inventor
 **Why B:**
 - **Checking a source never leaves the report.** A citation fills the evidence pane beside the sentence: relation, source, the exact excerpt, why it counts, its origin and the link. That is Aletheia's central promise, shown as a working tool rather than a footnote.
 - **It shows the numbers behind a caveat.** The percentile-by-comparison-group table makes a misleading comparison visible at a glance.
-- **It reads as an instrument, not a chat.** Its mono metadata, status tags and timed research log say "measured and traceable". There are no chat bubbles or generic cards.
+- **It reads as an instrument, not a chat.** Its mono metadata and timed research log say "measured and traceable". There are no chat bubbles or generic cards.
+
+**Revised after review:** B looked cluttered, so the result now leads with a large written label like A's ("True, with a caveat") instead of TRUE and 1 CAVEAT tags. The text is cut to what the decision needs: one conclusion paragraph, a two-line caveat with a three-row table, one line each for what was checked and the limitation, and a leaner evidence pane (relation, source, excerpt, link).
 
 **What B has to solve, carried into the screen reviews:**
 - **Narrow screens:** the side pane only fits on wide screens. Below about 900px it stacks under the report, and a citation scrolls to it and highlights it. Whether a bottom sheet works better is a question for the result-page review.
@@ -51,18 +53,18 @@ The hue for each label is a product decision, so it would stay the same under ei
 | Conflicting evidence | `#6E4A86` / `#CBA8E2` | `#EEE5F3` / `#2A2232` |
 | Caveat | `#2D4E7A` / `#9FBCE6` | `#E4EBF4` / `#1C2536` |
 
-In B, labels are status tags: uppercase Plex Mono, the label colour on its tint. Almost is ochre and a caveat is ink blue, so a qualified True is never mistaken for Almost.
+The label is written large in its colour, followed by ", with a caveat" in `text-2` when a flag applies. Almost is ochre and a caveat is ink blue, so a qualified True is never mistaken for Almost.
 
-**Contrast (WCAG 2.1):** every text pair passes AA for normal text. The lowest is the Almost tag in light mode, at 4.8:1. Body text on the page background is 16.5:1 in light mode and 15.4:1 in dark. A selected citation (surface on accent) is 6.8:1 in light mode and 7.3:1 in dark.
+**Contrast (WCAG 2.1):** every text pair passes AA for normal text. The lowest is the Almost correction's labels on their tint, at 4.8:1 in light mode. Body text on the page background is 16.5:1 in light mode and 15.4:1 in dark. A selected citation (surface on accent) is 6.8:1 in light mode and 7.3:1 in dark.
 
 ### Type
 
 | Role | Face | Size / line height |
 | --- | --- | --- |
-| Claim | Plex Sans 600 | 30 / 1.25 |
-| Result tag (TRUE, 1 CAVEAT) | Plex Mono 600, +0.06em | 14 |
+| Claim | Plex Sans 500 | 26 / 1.3 |
+| Result label | Plex Sans 600, label colour | 52 / 1.05 (", with a caveat": 32, regular, `text-2`) |
 | Section label (CONCLUSION, WHAT WE CHECKED) | Plex Mono 500, uppercase, +0.08em | 12, `text-2` |
-| Conclusion, caveat text | Plex Sans 400 | 16–17 / 1.6 |
+| Conclusion, caveat text | Plex Sans 400 | 18 and 16 / 1.6 |
 | Body | Plex Sans 400 | 15 / 1.55 |
 | Evidence title | Plex Sans 600 | 17 / 1.35 |
 | Excerpt | Plex Sans 400 italic | 15 / 1.6 |
@@ -71,8 +73,8 @@ In B, labels are status tags: uppercase Plex Mono, the label colour on its tint.
 ### Layout
 
 - **Width:** content up to 1240px. The report column grows (at least 560px, reading width at most 680px). The evidence pane is 360–460px on the right, with a 28px gap.
-- **Order of the report:** claim and status row (result tag, caveat tag, run metadata, Refresh), then the conclusion, the caveat with any numbers table, what we checked (a label and value list), limitations, and the research log.
-- **Evidence pane:** shows one piece of evidence at a time, numbered as cited. It has tabs for each number, and choosing a citation in the text selects it. The selected citation is solid accent and the others are accent tint, with `aria-pressed` set.
+- **Order of the report:** the claim, then the result label, then one metadata line with Refresh. Below that: the conclusion, the caveat with any numbers table, what we checked, limitations, and the collapsed research log.
+- **Evidence pane:** shows one piece of evidence at a time, numbered as cited: its relation, source, excerpt and a link to the original. It has tabs for each number, and choosing a citation in the text selects it. The selected citation is solid accent and the others are accent tint, with `aria-pressed` set.
 - **Surfaces:** white panels with a 1px rule and 6px radius for the header and the evidence pane. Tints only for result tags, a caveat, an Almost correction and quotations. No shadows or coloured side borders.
 - **Interaction:** focus rings use `accent`, and touch targets are at least 44px. The mock-up's 22px citation chips are their visual size; the build gives each a 44px hit area. The research log and rejected passages are collapsed `<details>`.
 
