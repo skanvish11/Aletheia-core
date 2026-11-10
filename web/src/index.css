@@ -10,10 +10,10 @@
   --muted: #6b675e;
   --rule: #e4e0d6;
   --accent: #24489c;
-  --supported: #1d6b43;
-  --contradicted: #a3261d;
-  --mixed: #8a5a00;
-  --insufficient: #5c5951;
+  --true: #1d6b43;
+  --false: #a3261d;
+  --almost: #8a5a00;
+  --undecided: #5c5951;
   --flag-bg: #fbf1dc;
   --flag-rule: #c98a12;
   --code-bg: #f1eee7;
@@ -36,10 +36,10 @@
     --muted: #a29f96;
     --rule: #34322d;
     --accent: #93adf5;
-    --supported: #6fd39a;
-    --contradicted: #ff8f86;
-    --mixed: #f0b752;
-    --insufficient: #b8b5ad;
+    --true: #6fd39a;
+    --false: #ff8f86;
+    --almost: #f0b752;
+    --undecided: #b8b5ad;
     --flag-bg: #33290f;
     --flag-rule: #d39a2a;
     --code-bg: #262521;
@@ -199,20 +199,20 @@ blockquote {
   font-weight: 600;
 }
 
-.verdict-supported {
-  color: var(--supported);
+.verdict-true {
+  color: var(--true);
 }
 
-.verdict-contradicted {
-  color: var(--contradicted);
+.verdict-false {
+  color: var(--false);
 }
 
-.verdict-mixed {
-  color: var(--mixed);
+.verdict-almost {
+  color: var(--almost);
 }
 
-.verdict-insufficient_evidence {
-  color: var(--insufficient);
+.verdict-undecided {
+  color: var(--undecided);
 }
 
 .flag {
@@ -235,6 +235,34 @@ blockquote {
 .flag-dimension {
   font-weight: 400;
   color: var(--muted);
+}
+
+.correction {
+  margin: 0 0 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.correction dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.correction dd {
+  margin: 2px 0 0;
+}
+
+.correction-claim {
+  border-left: 3px solid var(--almost);
+  padding-left: 12px;
+}
+
+.correction-claim dd {
+  font-family: var(--serif);
+  font-size: 1.1rem;
 }
 
 .finding + .finding {
@@ -388,15 +416,15 @@ blockquote {
 }
 
 .relation-supports {
-  color: var(--supported);
+  color: var(--true);
 }
 
 .relation-contradicts {
-  color: var(--contradicted);
+  color: var(--false);
 }
 
 .relation-context,
-.relation-not_relevant {
+.relation-irrelevant {
   color: var(--muted);
 }
 
@@ -613,7 +641,7 @@ pre {
 }
 
 .error {
-  color: var(--contradicted);
+  color: var(--false);
   font-weight: 600;
 }
 

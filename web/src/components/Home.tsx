@@ -1,20 +1,20 @@
 import type { Recording } from '../fixtures'
 import { FLAG_LABEL } from '../labels'
 import { ClaimForm } from './ClaimForm'
-import { Verdict } from './Findings'
+import { DecisionLabel } from './Findings'
 
 const INTRO =
-  'Aletheia searches the web for a claim, checks every quotation against the stored source, and tells you whether the evidence supports it, including when a comparison is misleading.'
+  'Aletheia searches the web for a claim, checks every quotation against the stored source, and tells you whether it’s true, false or almost, including when a comparison is misleading.'
 
 function SampleRow({ recording, onOpen }: { recording: Recording; onOpen: () => void }) {
   const result = recording.investigation.result
-  const flags = [...new Set(result?.findings.flatMap((f) => f.qualification_flags.map((x) => x.type)) ?? [])]
+  const flags = [...new Set(result?.finding.qualification_flags.map((x) => x.type) ?? [])]
   return (
     <li>
       <button type="button" className="sample" onClick={onOpen}>
         <span className="sample-claim">{recording.investigation.claim}</span>
         <span className="meta">
-          {result && <Verdict verdict={result.overall_verdict} />}
+          {result && <DecisionLabel decision={result} />}
           {flags.map((f) => ` · ${FLAG_LABEL[f]}`).join('')}
           {recording.sample && ' · invented sample'}
         </span>
