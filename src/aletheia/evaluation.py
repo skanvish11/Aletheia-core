@@ -134,7 +134,10 @@ def decision_key(decision):
 def score(case, artifact):
     investigation = artifact.get("investigation") or {}
     result = investigation.get("result") or {}
-    completed = investigation.get("status") == "completed"
+    completed = investigation.get("status") == "completed" and result.get("outcome") in {
+        "decided",
+        "unable_to_decide",
+    }
     match = bool(result) and any(
         decision_key(result) == decision_key(d.model_dump()) for d in case.decisions
     )

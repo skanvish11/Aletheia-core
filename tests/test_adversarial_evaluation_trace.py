@@ -284,12 +284,7 @@ async def test_trace_storage_time_cannot_start_http_or_sleep_past_deadline(monke
         assert records[-1][1]["reason"] == "backoff_exceeds_deadline"
 
 
-@pytest.mark.xfail(
-    strict=True,
-    raises=AssertionError,
-    reason="F04 open: model can mislabel a truth question as missing scope",
-)
-async def test_truth_question_cannot_bypass_guard_by_claiming_missing_scope(settings):
+async def test_truth_question_with_inconsistent_scope_analysis_is_rejected(settings):
     class Misclassified(Providers):
         def model_value(self, schema, data):
             value = super().model_value(schema, data)

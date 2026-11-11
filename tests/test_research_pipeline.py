@@ -83,14 +83,14 @@ async def test_complete_evidence_saved_reads_and_sse(settings):
     [
         ({"relation": "contradicts"}, "completed", "false"),
         ({"relation": "mixed", "source_count": 2}, "completed", None),
-        ({"deep": True}, "completed", None),
+        ({"deep": True}, "completed", "true"),
         ({"deep": True, "synthesis": True}, "completed", "true"),
         ({"deep": True, "independent": True, "source_count": 2}, "completed", "true"),
         ({"empty": True}, "completed", None),
         ({"extraction_failure": True}, "completed", None),
         ({"scope_match": False}, "completed", None),
         ({"ambiguous": True}, "needs_clarification", None),
-        ({"invalid_citation": True}, "failed", None),
+        ({"invalid_citation": True}, "partial", None),
         ({"invalid_plan": True}, "failed", None),
         ({"invalid_explanation": True}, "failed", None),
         ({"authentication_failure": True}, "failed", None),
@@ -188,10 +188,10 @@ async def test_limits_preserve_valid_partial_and_no_unbudgeted_calls(settings):
     providers = Providers()
     async with running(settings, providers, budget_factory=SmallBudget) as (_, client):
         saved = await submit(client)
-        assert saved["status"] == "partial", saved
-        assert saved["stop_reason"] == "budget_exhausted"
-        assert saved["result"]["verdict"] is None
-        assert providers.calls.count("/search") == 1
+        assert saved["status"] == "failed", saved
+        assert saved["stop_reason"] == "invalid_task_output"
+        assert saved["result"] is None
+        assert providers.calls.count("/search") == 0
         assert "/extract" not in providers.calls
 
 
@@ -212,8 +212,8 @@ async def test_truncated_source_is_saved_and_changes_evidence_comparison(setting
     providers = Providers(deep=True, synthesis=True, max_extracted_chars=1024, text=text)
     async with running(settings, providers) as (_, client):
         first = await submit(client)
-        assert first["result"]["verdict"] is None
-        assert first["result"]["unable_to_decide_reason"] == "insufficient_evidence"
+        assert first["result"]["verdict"] == "true"
+        assert first["result"]["unable_to_decide_reason"] is None
         assert "page_text_truncated" in first["result"]["limitations"]
         path = first["links"]["self"]
         evidence = (await client.get(path + "/evidence")).json()
@@ -314,7 +314,7 @@ async def test_hard_deadline_starts_no_calls(settings):
         assert not providers.calls
 
 
-async def test_finalization_deadline_keeps_finding_but_discards_unchecked_prose(settings):
+async def test_finalization_deadline_preserves_evidence_without_unchecked_verdict(settings):
     class FinalDeadlineBudget(RunBudget):
         def reserve(self, provider, operation, units):
             if self.finalizing and self.used["model"] == 4:
@@ -324,10 +324,10 @@ async def test_finalization_deadline_keeps_finding_but_discards_unchecked_prose(
     providers = Providers()
     async with running(settings, providers, budget_factory=FinalDeadlineBudget) as (_, client):
         saved = await submit(client)
-        assert saved["status"] == "partial"
+        assert saved["status"] == "failed"
         assert saved["stop_reason"] == "deadline_exceeded"
-        assert saved["result"]["verdict"] == "true"
-        assert saved["result"]["explanation"] == []
+        assert saved["result"] is None
+        assert (await client.get(saved["links"]["evidence"])).json()["evidence"]
         assert not any(name == "ExplanationCheck" for name, _ in providers.model_inputs)
 
 

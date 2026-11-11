@@ -4,6 +4,8 @@ from typing import Annotated, Literal
 
 from pydantic import AwareDatetime, BaseModel, ConfigDict, Field, model_validator
 
+from aletheia.phase_one_contracts import ClaimAnalysis, ComponentFinding, RecordedValue
+
 Text = Annotated[str, Field(strict=True, min_length=1, max_length=2000)]
 Short = Annotated[str, Field(strict=True, min_length=1, max_length=400)]
 Identifier = Annotated[str, Field(strict=True, min_length=1, max_length=80)]
@@ -23,7 +25,8 @@ class Record(BaseModel):
 
 class Assertion(Record):
     id: Literal["a1"] = "a1"
-    text: Text
+    text: Annotated[str, Field(strict=True, min_length=1, max_length=8000)]
+    analysis: ClaimAnalysis | None = None
     kind: Literal["direct_record", "causal", "predictive", "generalized", "interpretive", "value"]
     consequential: bool
     recommended_route: Route
@@ -89,6 +92,8 @@ class ProposedFlag(Record):
 
 
 class Assessment(Record):
+    component_id: str | None = None
+    values: list[RecordedValue] = Field(default_factory=list)
     citation: Citation
     relation: Relation
     scope_match: bool
@@ -179,6 +184,7 @@ class Decision(Record):
 
 
 class Finding(Decision):
+    components: list[ComponentFinding] = Field(default_factory=list)
     assertion_id: Literal["a1"] = "a1"
     evidence_ids: list[str]
     qualification_flags: list[QualificationFlag]

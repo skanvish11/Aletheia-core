@@ -237,7 +237,7 @@ async def test_refresh_transaction_failure_and_independent_connections(settings,
         await store.refresh(uuid4(), "retry")
 
 
-async def test_migration_v1_preserves_claims_and_is_transactional(tmp_path):
+async def test_migration_v1_preserves_claims_and_is_transactional(tmp_path, monkeypatch):
     import aiosqlite
 
     from aletheia.storage import SCHEMA
@@ -249,7 +249,17 @@ async def test_migration_v1_preserves_claims_and_is_transactional(tmp_path):
         await db.execute("PRAGMA user_version=1")
         await db.commit()
     old = Storage(path)
-    original = await old.submit(InvestigationRequest(claim="A V1 queued claim"))
+    # Simulate the V1 reader before initializing the current research record projection.
+    with monkeypatch.context() as legacy:
+        legacy.setattr(
+            "aletheia.storage.SELECT_INVESTIGATION",
+            """
+            SELECT i.*, c.original_claim, c.context_json,
+            NULL AS analysis_json, NULL AS method_json
+            FROM investigations i JOIN claim_requests c ON c.id=i.claim_request_id
+        """,
+        )
+        original = await old.submit(InvestigationRequest(claim="A V1 queued claim"))
     await old.initialize()
     assert await old.get(original.id) == original.model_copy(update={"reused": True})
     async with old.connection() as db:

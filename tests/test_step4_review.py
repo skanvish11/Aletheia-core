@@ -93,7 +93,7 @@ def test_refresh_selects_cited_support_and_contradiction_before_other_snapshots(
 
 
 async def test_successful_followup_gate_is_followed_by_planned_event(settings):
-    providers = RoundProviders([[{}], [independent("new")]], deep=True)
+    providers = RoundProviders([[{}], [independent("new")]], deep=True, authoritative=False)
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
         events = await app.state.storage.events(UUID(saved["id"]))
@@ -113,7 +113,7 @@ async def test_exhausted_capacity_emits_stop_gate_without_followup(settings):
             super().escalate()
             self.extraction_attempts = 2
 
-    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True)
+    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True, authoritative=False)
     async with running(settings, providers, budget_factory=TwoPages) as (app, client):
         saved = await submit(client)
         events = await app.state.storage.events(UUID(saved["id"]))
@@ -126,7 +126,7 @@ async def test_exhausted_capacity_emits_stop_gate_without_followup(settings):
 
 
 async def test_empty_followup_plan_never_announces_followup(settings):
-    providers = Providers(deep=True)
+    providers = Providers(deep=True, authoritative=False)
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
         events = await app.state.storage.events(UUID(saved["id"]))

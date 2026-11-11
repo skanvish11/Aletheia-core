@@ -103,7 +103,7 @@ async def test_planner_consuming_last_research_call_stops_without_false_followup
             super().escalate()
             self.model_attempts = 9  # Five research attempts and four reserved finalization calls.
 
-    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True)
+    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True, authoritative=False)
     async with running(settings, providers, budget_factory=FiveResearchCalls) as (app, client):
         saved = await submit(client)
         assert saved["status"] == "partial"

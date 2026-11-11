@@ -58,8 +58,9 @@ class DiagnosticModel(NebiusProvider):
         return await super().generate(**kwargs)
 
 
-async def run(args, cases):
-    settings = ProviderSettings.from_environment(dotenv_path=args.dotenv)
+async def run(args, cases, *, settings=None):
+    if settings is None:
+        settings = ProviderSettings.from_environment(dotenv_path=args.dotenv)
     if args.model:
         settings = ProviderSettings.model_validate(
             {**settings.model_dump(), "nebius_model": args.model}

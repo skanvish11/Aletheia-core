@@ -10,10 +10,52 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "numeric grounding trusts a cropped source fragment",
+        "direct.py",
+        "extracted = decimal_value(value.value)",
+        "extracted = decimal_value(value.value)\n                quoted = value.source_text",
+        "tests/test_adversarial_phase_one.py::test_cropped_negative_value_must_not_publish_true",
+    ),
+    (
+        "superlative admits a self-comparison",
+        "direct.py",
+        "if normalized(right.entity) == normalized(left.entity):",
+        "if False:",
+        "tests/test_adversarial_phase_one.py::test_superlative_requires_a_distinct_comparison_member",
+    ),
+    (
+        "comparison drops admitted counterevidence",
+        "direct.py",
+        'if relations_for(observed) == {"supports", "contradicts"}:',
+        'if relations_for(grounded) == {"supports", "contradicts"}:',
+        "tests/test_adversarial_phase_one.py::test_comparison_does_not_silently_drop_admitted_counterevidence",
+    ),
+    (
+        "passage selection drops substantive headings",
+        "passages.py",
+        "or normalized_navigation(stripped)",
+        'or re.fullmatch(r"#{1,6}\\s+.*", stripped) or normalized_navigation(stripped)',
+        "tests/test_adversarial_phase_one.py::test_evidence_heading_is_not_navigation_boilerplate",
+    ),
+    (
+        "missing component incorrectly becomes True",
+        "verdicts.py",
+        'elif states == {"supported"}:',
+        'elif "supported" in states:',
+        "tests/test_phase_one.py::test_missing_component_cannot_become_true",
+    ),
+    (
+        "comparison arithmetic is reversed",
+        "direct.py",
+        "result = getattr(operator, spec.operator)(a, b)",
+        "result = getattr(operator, spec.operator)(b, a)",
+        "tests/test_phase_one.py::test_comparison_can_join_separate_sources_but_each_operand_needs_evidence",
+    ),
+    (
         "diagnostic storage failure replaces a successful provider result",
         "diagnostics.py",
-        "except Exception:",
-        "except LookupError:",
+        "except Exception:\n        # Never log",
+        "except LookupError:\n        # Never log",
         "tests/test_pr18_reliability.py::test_diagnostic_failure_preserves_provider_result_and_error[200-StorageError]",
     ),
     (
@@ -96,8 +138,8 @@ MUTATIONS = (
     (
         "Almost semantic correction check bypassed",
         "verdicts.py",
-        "        if not all(\n",
-        "        if False and not all(\n",
+        "if not getattr(check, name)",
+        "if False",
         "tests/test_verdict_labels.py::test_each_failed_correction_check_prevents_almost[corrected_claim_supported]",
     ),
     (

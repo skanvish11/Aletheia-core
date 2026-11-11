@@ -50,7 +50,11 @@ RESEARCH_SCHEMA = (
     )""",
 )
 SELECT_INVESTIGATION = """
-    SELECT i.*, c.original_claim, c.context_json
+    SELECT i.*, c.original_claim, c.context_json,
+        (SELECT payload_json FROM research_records r WHERE r.investigation_id=i.id
+         AND r.kind='claim_analysis' AND r.record_id='claim_analysis') AS analysis_json,
+        (SELECT payload_json FROM research_records r WHERE r.investigation_id=i.id
+         AND r.kind='unsupported_method' AND r.record_id='unsupported_method') AS method_json
     FROM investigations i JOIN claim_requests c ON c.id = i.claim_request_id
 """
 
@@ -393,10 +397,22 @@ class Storage:
         questions=None,
         error=None,
         comparison=None,
+        method_limitation=None,
     ):
         if status not in {"completed", "partial", "failed", "needs_clarification"}:
             raise ValueError("Terminal status required.")
-        if (status in {"completed", "partial"}) != (result is not None):
+        if method_limitation is not None and (
+            status != "completed"
+            or result is not None
+            or questions
+            or stop_reason != "unsupported_method"
+        ):
+            raise ValueError(
+                "Unsupported method requires an explicit non-factual terminal response."
+            )
+        if (status in {"completed", "partial"}) != (
+            result is not None or method_limitation is not None
+        ):
             raise ValueError("Completed and partial investigations require validated results.")
         if status == "needs_clarification" and not questions:
             raise ValueError("Clarification questions required.")
@@ -430,6 +446,16 @@ class Storage:
                         str(investigation_id),
                     ),
                 )
+                if method_limitation is not None:
+                    await db.execute(
+                        "INSERT INTO research_records VALUES (?,?,?,?)",
+                        (
+                            str(investigation_id),
+                            "unsupported_method",
+                            "unsupported_method",
+                            method_limitation.model_dump_json(),
+                        ),
+                    )
                 if comparison:
                     await db.execute(
                         "INSERT INTO research_records VALUES (?,?,?,?)",
@@ -485,7 +511,8 @@ class Storage:
                     await db.commit()
                     return None
                 if parent["status"] != "failed" and not (
-                    parent["status"] in {"completed", "partial"} and parent["result_json"]
+                    parent["status"] in {"completed", "partial"}
+                    and (parent["result_json"] or parent["stop_reason"] == "unsupported_method")
                 ):
                     raise Conflict(
                         "Refresh requires a failed investigation or a completed/partial result."
@@ -546,6 +573,10 @@ class Storage:
             started_at=row["started_at"],
             finished_at=row["finished_at"],
             result=json.loads(row["result_json"]) if row["result_json"] else None,
+            claim_analysis=json.loads(row["analysis_json"])["analysis"]
+            if row["analysis_json"]
+            else None,
+            method_limitation=json.loads(row["method_json"]) if row["method_json"] else None,
             clarification_questions=json.loads(row["clarification_json"])
             if row["clarification_json"]
             else None,
@@ -557,7 +588,10 @@ class Storage:
                 "comparison": f"/investigations/{row['id']}/comparison",
                 "refresh": f"/investigations/{row['id']}/refresh"
                 if row["status"] == "failed"
-                or (row["status"] in {"completed", "partial"} and row["result_json"])
+                or (
+                    row["status"] in {"completed", "partial"}
+                    and (row["result_json"] or row["method_json"])
+                )
                 else None,
             },
         )

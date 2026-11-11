@@ -17,6 +17,7 @@ class Providers:
         self,
         *,
         relation="supports",
+        authoritative=True,
         almost=False,
         invalid_correction=False,
         deep=False,
@@ -47,13 +48,34 @@ class Providers:
     def model_value(self, schema, data):
         o = self.options
         if schema == "ClaimPlan":
+            claim = data.get("claim", "The Archive opened in 2000.")
             return {
+                "analysis": {
+                    "primary_type": "direct_fact",
+                    "scope": "missing" if o["ambiguous"] else "complete",
+                    "required_method": "record_lookup",
+                    "supported": True,
+                    "reason": "An opening date is a recorded fact.",
+                    "missing_scope": ["archive identity"] if o["ambiguous"] else [],
+                    "components": [
+                        {
+                            "id": "c1",
+                            "text": claim,
+                            "role": "essential",
+                            "subject": "Archive",
+                            "predicate": "opened",
+                            "timeframe": "2000",
+                            "location_or_population": None,
+                            "comparison": None,
+                        }
+                    ],
+                },
                 "assertions": []
                 if o["ambiguous"]
                 else [
                     {
                         "id": "a1",
-                        "text": "The Archive opened in 2000.",
+                        "text": claim,
                         "kind": "direct_record",
                         "consequential": o["deep"],
                         "recommended_route": "quick",
@@ -90,6 +112,8 @@ class Providers:
             return {
                 "assessments": [
                     {
+                        "component_id": "c1",
+                        "values": [],
                         "citation": {
                             "snapshot_id": "invented"
                             if o["invalid_citation"]
@@ -98,7 +122,7 @@ class Providers:
                         },
                         "relation": relation,
                         "scope_match": o["scope_match"],
-                        "authoritative_record": True,
+                        "authoritative_record": o["authoritative"],
                         "credible_synthesis": o["synthesis"],
                         "synthesis_coverage": "Reviews all Archive records."
                         if o["synthesis"]
@@ -152,6 +176,8 @@ class Providers:
             }
         if schema == "ExplanationCheck":
             return {
+                "decision_supported": True,
+                "rejected_component_ids": [],
                 "supported_units": [] if o["invalid_explanation"] else [0],
                 "core_supported": o["almost"],
                 "correction_supported": o["almost"],
