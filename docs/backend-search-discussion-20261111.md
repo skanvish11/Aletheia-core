@@ -6,6 +6,8 @@ The central finding was that useful information often reached the backend but fa
 
 **Status at this discussion cutoff:** the established-retrieval comparison had completed; the quotation repair and separate retrieval/context experiments were running. Their results are not included as completed findings. Experimental changes described below were not promoted to production by this discussion. This documentation change itself changes no runtime behavior.
 
+**Related implementation:** read [PR #20](https://github.com/skanvish11/Aletheia-core/pull/20) alongside this discussion in [PR #21](https://github.com/skanvish11/Aletheia-core/pull/21). The [saved experiment package](evaluation/search-discussion-20261111/README.md) includes the scripts, source snapshots, outputs, traces, databases, and exact later baseline used in the completed experiments.
+
 ## Reading guide and evidence boundaries
 
 - Sections 1–3 describe the implementation and historical pilot traces discussed in the chat.
@@ -13,7 +15,7 @@ The central finding was that useful information often reached the backend but fa
 - Sections 7–9 record completed experiments and why the focus returned to evidence selection.
 - Sections 10–12 capture the latest direction, remaining questions, and source inventory.
 
-Historical pilot behavior, the newer experimental baseline, and proposed changes are different states. The later assessment baseline was frozen at revision `0246699`; historical errors should not automatically be attributed to that newer revision. The local experiment directories listed at the end are outside the repository. Their results are summarized here, but the experiment bundles and saved pages are not shipped in this PR.
+Historical pilot behavior, the newer experimental baseline, and proposed changes are different states. The later assessment baseline was frozen at revision `0246699`; historical errors should not automatically be attributed to that newer revision. The original experiments lived outside the repository. Their completed artifacts and saved pages are now included in the [companion archive](evaluation/search-discussion-20261111/README.md), preserving their workspace layout. PR #20 did not yet include local baseline commit `0246699` at packaging time; the package includes its source snapshot and patch without changing PR #20.
 
 ## 1. How backend search was implemented
 
@@ -443,7 +445,7 @@ Primary discussion: **Explain backend search logic**, chat ID `01a1c8c7-6127-706
 
 Implementation references discussed in the `aletheia-phase-one` checkout were `planning.py`, `providers/tavily.py`, `research.py`, `evidence.py`, `passages.py`, `verification.py`, `research_gate.py`, and `budgets.py` under `src/aletheia`. The later baseline revision was `0246699`; the original pilot reconstruction used its historical revision rather than assuming the later code was identical.
 
-Local supporting artifacts, relative to the shared workspace rather than this repository:
+Supporting artifacts below use paths relative to the extracted archive workspace. See the [package guide](evaluation/search-discussion-20261111/README.md) for verification and extraction:
 
 | Artifact | What it supports |
 |---|---|
@@ -458,7 +460,7 @@ Local supporting artifacts, relative to the shared workspace rather than this re
 | `experiments/selection-hardening-20261111/v3/review/final-review.json` | Selector progression and Berlin regression |
 | `experiments/standard-retrieval-20261111/analysis/findings.txt` | Completed retrieval comparison, mammography failure, and quotation bug |
 
-These are provenance locations, not repository-relative download links. A reviewer without that workspace can read the discussion and reported results here but cannot reproduce the experiments from this documentation-only PR. Reproducible experiment packaging would be separate work.
+These paths are available in the [artifact archive](evaluation/search-discussion-20261111/experiment-artifacts.tar.gz). The package includes a per-file checksum manifest and an offline verifier. Historical capture gaps remain, exported SQLite files may have different physical hashes, and some historical runners need path or environment setup before rerunning. The package guide documents those boundaries; no new live experiments were run while packaging.
 
 Research references raised in the discussion, retained as background reading rather than evidence of an Aletheia performance gain:
 
