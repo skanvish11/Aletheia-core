@@ -2,7 +2,9 @@
 
 This implements the first code milestone in [the agreed plan](direct-claims-phase-one.md).
 It does not establish the proposed acceptance scores. The 1,000-claim dataset, independent
-label review, frozen evaluation settings, and live end-to-end evaluation remain pending.
+label review and acceptance evaluation remain pending. The reviewed PR's live 30-case
+development rerun completed with zero factual completions, 14 failures, 15 partial runs,
+and one unsupported-method response; see the [full results](evaluation/phase-one-reviewed-pilot.md).
 No historical pilot claims, labels, saved outcomes, or archived runtime files are changed.
 
 ## Behavior
@@ -177,3 +179,9 @@ It preserves all original metadata and labels and records source revision, setti
 usage, saved-read/restart checks and every attempted case. Unsupported-method responses
 are reported separately from factual completion; historical label agreement remains
 provisional and is not presented as phase-one accuracy.
+
+The live run evaluated clean revision `c885bbad8c4fb29a619bdf41236c95b94ef003ed`.
+Historical label agreement was 0/30 versus 1/30 in the prior repaired pilot. Passing
+the targeted repair tests did not translate into successful end-to-end factual research.
+Interpretation, assessment contracts, routing and budget pressure remain blockers;
+the report preserves all 30 outcomes and distinguishes them from infrastructure checks.
