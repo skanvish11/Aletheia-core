@@ -19,7 +19,7 @@ Both are drawn on the result page (state 2.5 with 2.6 in [inventory.md](inventor
 - **It shows the numbers behind a caveat.** The percentile-by-comparison-group table makes a misleading comparison visible at a glance.
 - **It reads as an instrument, not a chat.** Its mono metadata and timed research log say "measured and traceable". There are no chat bubbles or generic cards.
 
-**Revised after review:** B looked cluttered, so the result now leads with a large written label like A's ("True, with a caveat") instead of TRUE and 1 CAVEAT tags. The text is cut to what the decision needs: one conclusion paragraph, a two-line caveat with a three-row table, one line each for what was checked and the limitation, and a leaner evidence pane (relation, source, excerpt, link).
+**Revised after review:** B looked cluttered, so the result now shows a written label like A's ("True, with a caveat") instead of TRUE and 1 CAVEAT tags, set just below the claim and smaller than it, so the claim stays the heading. The text is cut to what the decision needs: one conclusion paragraph, a two-line caveat with a three-row table, one line each for what was checked and the limitation, and a leaner evidence pane (relation, source, excerpt, link).
 
 **What B has to solve, carried into the screen reviews:**
 - **Narrow screens:** the side pane only fits on wide screens. Below about 900px it stacks under the report, and a citation scrolls to it and highlights it. Whether a bottom sheet works better is a question for the result-page review.
@@ -53,7 +53,7 @@ The hue for each label is a product decision, so it would stay the same under ei
 | Conflicting evidence | `#6E4A86` / `#CBA8E2` | `#EEE5F3` / `#2A2232` |
 | Caveat | `#2D4E7A` / `#9FBCE6` | `#E4EBF4` / `#1C2536` |
 
-The label is written large in its colour, followed by ", with a caveat" in `text-2` when a flag applies. Almost is ochre and a caveat is ink blue, so a qualified True is never mistaken for Almost.
+The label is written in its colour, smaller than the claim, followed by ", with a caveat" in `text-2` when a flag applies. Almost is ochre and a caveat is ink blue, so a qualified True is never mistaken for Almost.
 
 **Contrast (WCAG 2.1):** every text pair passes AA for normal text. The lowest is the Almost correction's labels on their tint, at 4.8:1 in light mode. Body text on the page background is 16.5:1 in light mode and 15.4:1 in dark. A selected citation (surface on accent) is 6.8:1 in light mode and 7.3:1 in dark.
 
@@ -62,7 +62,7 @@ The label is written large in its colour, followed by ", with a caveat" in `text
 | Role | Face | Size / line height |
 | --- | --- | --- |
 | Claim | Plex Sans 500 | 26 / 1.3 |
-| Result label | Plex Sans 600, label colour | 52 / 1.05 (", with a caveat": 32, regular, `text-2`) |
+| Result label | Plex Sans 600, label colour | 22 / 1.3, smaller than the claim (", with a caveat": regular, `text-2`) |
 | Section label (CONCLUSION, WHAT WE CHECKED) | Plex Mono 500, uppercase, +0.08em | 12, `text-2` |
 | Conclusion, caveat text | Plex Sans 400 | 18 and 16 / 1.6 |
 | Body | Plex Sans 400 | 15 / 1.55 |
