@@ -1,0 +1,3660 @@
+[
+  {
+    "id": "fever-161911",
+    "number": 1,
+    "claim": "Alan Shepard was Chief of the Astronaut Office.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Alan_Shepard",
+        "sentence": 16,
+        "article_url": "https://en.wikipedia.org/wiki/Alan_Shepard"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          186446,
+          198259,
+          "Alan_Shepard",
+          16
+        ]
+      ],
+      [
+        [
+          186448,
+          198260,
+          "Alan_Shepard",
+          16
+        ]
+      ]
+    ],
+    "source_record_id": 161911,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-11312",
+    "number": 2,
+    "claim": "Prescott, Arizona is in Yavapai County.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Prescott,_Arizona",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Prescott%2C_Arizona"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          26494,
+          32528,
+          "Prescott,_Arizona",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 11312,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-191659",
+    "number": 3,
+    "claim": "Ang Lee's date of birth is October 23, 1954.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Ang_Lee",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Ang_Lee"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          224147,
+          229000,
+          "Ang_Lee",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 191659,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-145339",
+    "number": 4,
+    "claim": "Emmanuel Macron worked as a banker.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Emmanuel_Macron",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
+      },
+      {
+        "page": "Emmanuel_Macron",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Emmanuel_Macron"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          292204,
+          285032,
+          "Emmanuel_Macron",
+          1
+        ]
+      ],
+      [
+        [
+          292204,
+          285033,
+          "Emmanuel_Macron",
+          2
+        ]
+      ],
+      [
+        [
+          294213,
+          286545,
+          "Emmanuel_Macron",
+          1
+        ]
+      ],
+      [
+        [
+          294850,
+          287063,
+          "Emmanuel_Macron",
+          1
+        ]
+      ],
+      [
+        [
+          294850,
+          287064,
+          "Emmanuel_Macron",
+          2
+        ]
+      ],
+      [
+        [
+          339387,
+          324362,
+          "Emmanuel_Macron",
+          1
+        ]
+      ],
+      [
+        [
+          339396,
+          324367,
+          "Emmanuel_Macron",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 145339,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-173508",
+    "number": 5,
+    "claim": "Sancho Panza is a fictional character in a novel written by Don Miguel de Cervantes Saavedra.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Sancho_Panza",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Sancho_Panza"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          200472,
+          209976,
+          "Sancho_Panza",
+          0
+        ]
+      ],
+      [
+        [
+          200479,
+          209980,
+          "Sancho_Panza",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 173508,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-153534",
+    "number": 6,
+    "claim": "The Hunger Games are based on a novel by Suzanne Collins.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "The_Hunger_Games_-LRB-film_series-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/The_Hunger_Games_-LRB-film_series-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          177481,
+          190269,
+          "The_Hunger_Games_-LRB-film_series-RRB-",
+          0
+        ]
+      ],
+      [
+        [
+          177482,
+          190270,
+          "The_Hunger_Games_-LRB-film_series-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 153534,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-2106",
+    "number": 7,
+    "claim": "Johann Wolfgang von Goethe published the first part of Faust in 1808.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Johann_Wolfgang_von_Goethe",
+        "sentence": 13,
+        "article_url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          17926,
+          22077,
+          "Johann_Wolfgang_von_Goethe",
+          13
+        ]
+      ]
+    ],
+    "source_record_id": 2106,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-54759",
+    "number": 8,
+    "claim": "Cambridgeshire's county council is Cambridgeshire County Council.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Cambridgeshire",
+        "sentence": 7,
+        "article_url": "https://en.wikipedia.org/wiki/Cambridgeshire"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          71113,
+          82039,
+          "Cambridgeshire",
+          7
+        ]
+      ]
+    ],
+    "source_record_id": 54759,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-45226",
+    "number": 9,
+    "claim": "Harold Macmillan was from Great Britain.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Harold_Macmillan",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Harold_Macmillan"
+      },
+      {
+        "page": "Harold_Macmillan",
+        "sentence": 31,
+        "article_url": "https://en.wikipedia.org/wiki/Harold_Macmillan"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          61581,
+          72091,
+          "Harold_Macmillan",
+          0
+        ]
+      ],
+      [
+        [
+          61581,
+          72092,
+          "Harold_Macmillan",
+          31
+        ]
+      ],
+      [
+        [
+          61586,
+          72097,
+          "Harold_Macmillan",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 45226,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-38944",
+    "number": 10,
+    "claim": "Starrcade was originally broadcast via closed-circuit television.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Starrcade",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Starrcade"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          55170,
+          65208,
+          "Starrcade",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 38944,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-215137",
+    "number": 11,
+    "claim": "Noel Coward made a comedy of manners called Private Lives.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Private_Lives",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Private_Lives"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          255482,
+          254933,
+          "Private_Lives",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 215137,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-212309",
+    "number": 12,
+    "claim": "Mary-Kate Olsen and Ashley Olsen are also known as the Olsen twins.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Mary-Kate_and_Ashley_Olsen",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Mary-Kate_and_Ashley_Olsen"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          251674,
+          251494,
+          "Mary-Kate_and_Ashley_Olsen",
+          0
+        ]
+      ],
+      [
+        [
+          251679,
+          251499,
+          "Mary-Kate_and_Ashley_Olsen",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 212309,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-216363",
+    "number": 13,
+    "claim": "The Chagatai language was a Turkic language spoken in India.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Chagatai_language",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Chagatai_language"
+      },
+      {
+        "page": "Chagatai_language",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Chagatai_language"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          257068,
+          256126,
+          "Chagatai_language",
+          1
+        ],
+        [
+          257068,
+          256126,
+          "Chagatai_language",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 216363,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-85061",
+    "number": 14,
+    "claim": "Margaret Thatcher was the earliest woman to lead a major political party in the UK.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Margaret_Thatcher",
+        "sentence": 8,
+        "article_url": "https://en.wikipedia.org/wiki/Margaret_Thatcher"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          102153,
+          115430,
+          "Margaret_Thatcher",
+          8
+        ]
+      ]
+    ],
+    "source_record_id": 85061,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-223775",
+    "number": 15,
+    "claim": "Ralph Fults was born January 23 1911 and died in March of 1993.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Ralph_Fults",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Ralph_Fults"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          266602,
+          263534,
+          "Ralph_Fults",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 223775,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-53389",
+    "number": 16,
+    "claim": "George III's successor was his son.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "George_III_of_the_United_Kingdom",
+        "sentence": 14,
+        "article_url": "https://en.wikipedia.org/wiki/George_III_of_the_United_Kingdom"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          70607,
+          81509,
+          "George_III_of_the_United_Kingdom",
+          14
+        ]
+      ]
+    ],
+    "source_record_id": 53389,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-16056",
+    "number": 17,
+    "claim": "In 1992, Prague's historic center was added to UNESCO's list of World Heritage Sites.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Prague",
+        "sentence": 16,
+        "article_url": "https://en.wikipedia.org/wiki/Prague"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          40425,
+          48643,
+          "Prague",
+          16
+        ]
+      ],
+      [
+        [
+          43511,
+          52170,
+          "Prague",
+          16
+        ]
+      ],
+      [
+        [
+          45701,
+          54569,
+          "Prague",
+          16
+        ]
+      ],
+      [
+        [
+          302101,
+          293155,
+          "Prague",
+          16
+        ]
+      ],
+      [
+        [
+          302102,
+          293156,
+          "Prague",
+          16
+        ]
+      ],
+      [
+        [
+          304620,
+          295426,
+          "Prague",
+          16
+        ]
+      ]
+    ],
+    "source_record_id": 16056,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-193874",
+    "number": 18,
+    "claim": "Bea Arthur died on April 25th, 2009.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Bea_Arthur",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Bea_Arthur"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          227031,
+          231458,
+          "Bea_Arthur",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 193874,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-203627",
+    "number": 19,
+    "claim": "Steven Spielberg's directorial debut was the 1974 crime film The Sugarland Express.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "The_Sugarland_Express",
+        "sentence": 3,
+        "article_url": "https://en.wikipedia.org/wiki/The_Sugarland_Express"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          240276,
+          241917,
+          "The_Sugarland_Express",
+          3
+        ]
+      ]
+    ],
+    "source_record_id": 203627,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-16694",
+    "number": 20,
+    "claim": "The Palace of Caserta, former home of the Bourbon royalty, lies near Naples.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Naples",
+        "sentence": 34,
+        "article_url": "https://en.wikipedia.org/wiki/Naples"
+      },
+      {
+        "page": "Palace_of_Caserta",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Palace_of_Caserta"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          32092,
+          38972,
+          "Naples",
+          34
+        ],
+        [
+          32092,
+          38972,
+          "Palace_of_Caserta",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 16694,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-44703",
+    "number": 21,
+    "claim": "In 1963, the Guthrie Theater's first building began operating.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Guthrie_Theater",
+        "sentence": 6,
+        "article_url": "https://en.wikipedia.org/wiki/Guthrie_Theater"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          61071,
+          71535,
+          "Guthrie_Theater",
+          6
+        ]
+      ]
+    ],
+    "source_record_id": 44703,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-91234",
+    "number": 22,
+    "claim": "In 1936, Mary of Teck's son abdicated the throne.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Mary_of_Teck",
+        "sentence": 12,
+        "article_url": "https://en.wikipedia.org/wiki/Mary_of_Teck"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          108566,
+          122170,
+          "Mary_of_Teck",
+          12
+        ]
+      ]
+    ],
+    "source_record_id": 91234,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-158017",
+    "number": 23,
+    "claim": "Two of Mozart's sons were alive after his death.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Wolfgang_Amadeus_Mozart",
+        "sentence": 12,
+        "article_url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          182303,
+          194557,
+          "Wolfgang_Amadeus_Mozart",
+          12
+        ]
+      ]
+    ],
+    "source_record_id": 158017,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-183462",
+    "number": 24,
+    "claim": "Henry III of France was assassinated by a fanatic in 1589.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Henry_III_of_France",
+        "sentence": 23,
+        "article_url": "https://en.wikipedia.org/wiki/Henry_III_of_France"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          213539,
+          220762,
+          "Henry_III_of_France",
+          23
+        ]
+      ],
+      [
+        [
+          213540,
+          220763,
+          "Henry_III_of_France",
+          23
+        ]
+      ]
+    ],
+    "source_record_id": 183462,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-95864",
+    "number": 25,
+    "claim": "Caroline Kennedy from 2013 to 2017 served as United States Ambassador to Japan.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Caroline_Kennedy",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Caroline_Kennedy"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          113379,
+          127243,
+          "Caroline_Kennedy",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 95864,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-159940",
+    "number": 26,
+    "claim": "Christa McAuliffe was a high school social studies teacher.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Christa_McAuliffe",
+        "sentence": 4,
+        "article_url": "https://en.wikipedia.org/wiki/Christa_McAuliffe"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          184387,
+          196286,
+          "Christa_McAuliffe",
+          4
+        ]
+      ]
+    ],
+    "source_record_id": 159940,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-194025",
+    "number": 27,
+    "claim": "Kim Jong-il was proclaimed Eternal Chairman of the National Defence Commission.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Kim_Jong-il",
+        "sentence": 16,
+        "article_url": "https://en.wikipedia.org/wiki/Kim_Jong-il"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          227213,
+          231615,
+          "Kim_Jong-il",
+          16
+        ]
+      ]
+    ],
+    "source_record_id": 194025,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-100358",
+    "number": 28,
+    "claim": "French Indochina was officially known as the Indochinese Union after 1887.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "French_Indochina",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/French_Indochina"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          118023,
+          131877,
+          "French_Indochina",
+          0
+        ]
+      ],
+      [
+        [
+          118031,
+          131889,
+          "French_Indochina",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 100358,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-218092",
+    "number": 29,
+    "claim": "The Indian National Congress was founded in Bombay.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Indian_National_Congress",
+        "sentence": 8,
+        "article_url": "https://en.wikipedia.org/wiki/Indian_National_Congress"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          259288,
+          257918,
+          "Indian_National_Congress",
+          8
+        ]
+      ]
+    ],
+    "source_record_id": 218092,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-81492",
+    "number": 30,
+    "claim": "The Selma to Montgomery marches were in defiance of segregationist repression.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Selma_to_Montgomery_marches",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Selma_to_Montgomery_marches"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          98539,
+          111629,
+          "Selma_to_Montgomery_marches",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 81492,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-24479",
+    "number": 31,
+    "claim": "Charles de Gaulle was a leader in the French Resistance.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Charles_de_Gaulle",
+        "sentence": 12,
+        "article_url": "https://en.wikipedia.org/wiki/Charles_de_Gaulle"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          40419,
+          48636,
+          "Charles_de_Gaulle",
+          12
+        ]
+      ]
+    ],
+    "source_record_id": 24479,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-104811",
+    "number": 32,
+    "claim": "The Airbus A380 entered commercial service in 2007 with Singapore Airlines.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Airbus_A380",
+        "sentence": 3,
+        "article_url": "https://en.wikipedia.org/wiki/Airbus_A380"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          125203,
+          139548,
+          "Airbus_A380",
+          3
+        ]
+      ]
+    ],
+    "source_record_id": 104811,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-54533",
+    "number": 33,
+    "claim": "Georges Gilles de la Tourette described symptoms in 1884.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Georges_Gilles_de_la_Tourette",
+        "sentence": 11,
+        "article_url": "https://en.wikipedia.org/wiki/Georges_Gilles_de_la_Tourette"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          70892,
+          81787,
+          "Georges_Gilles_de_la_Tourette",
+          11
+        ]
+      ]
+    ],
+    "source_record_id": 54533,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-12678",
+    "number": 34,
+    "claim": "Project Y's mission was to design the first atomic bombs under the Manhattan Project.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Project_Y",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Project_Y"
+      },
+      {
+        "page": "Project_Y",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Project_Y"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          27926,
+          34224,
+          "Project_Y",
+          1
+        ]
+      ],
+      [
+        [
+          27926,
+          34225,
+          "Project_Y",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 12678,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-33491",
+    "number": 35,
+    "claim": "US Airways Flight 1549 touched down in the Hudson River.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "US_Airways_Flight_1549",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/US_Airways_Flight_1549"
+      },
+      {
+        "page": "Water_landing",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Water_landing"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          49591,
+          58975,
+          "US_Airways_Flight_1549",
+          1
+        ]
+      ],
+      [
+        [
+          49600,
+          58990,
+          "US_Airways_Flight_1549",
+          1
+        ],
+        [
+          49600,
+          58990,
+          "Water_landing",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 33491,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-144087",
+    "number": 36,
+    "claim": "San Diego Comic-Con was founded in San Diego in 1970.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "San_Diego_Comic-Con",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/San_Diego_Comic-Con"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          167224,
+          181049,
+          "San_Diego_Comic-Con",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 144087,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-23807",
+    "number": 37,
+    "claim": "Thomas Jefferson founded the University of Virginia after retiring.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Thomas_Jefferson",
+        "sentence": 28,
+        "article_url": "https://en.wikipedia.org/wiki/Thomas_Jefferson"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          39758,
+          47840,
+          "Thomas_Jefferson",
+          28
+        ]
+      ]
+    ],
+    "source_record_id": 23807,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-69108",
+    "number": 38,
+    "claim": "Maria Theresa was Emperor Charles VI's daughter.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Maria_Theresa",
+        "sentence": 5,
+        "article_url": "https://en.wikipedia.org/wiki/Maria_Theresa"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          85749,
+          98046,
+          "Maria_Theresa",
+          5
+        ]
+      ]
+    ],
+    "source_record_id": 69108,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-47525",
+    "number": 39,
+    "claim": "King Edward the First's occupation of north Scotland was opposed by Andrew Moray.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Andrew_Moray",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Andrew_Moray"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          145120,
+          160124,
+          "Andrew_Moray",
+          1
+        ]
+      ],
+      [
+        [
+          150285,
+          165207,
+          "Andrew_Moray",
+          1
+        ]
+      ],
+      [
+        [
+          311232,
+          301247,
+          "Andrew_Moray",
+          1
+        ]
+      ],
+      [
+        [
+          311233,
+          301248,
+          "Andrew_Moray",
+          1
+        ]
+      ],
+      [
+        [
+          311235,
+          301250,
+          "Andrew_Moray",
+          1
+        ]
+      ],
+      [
+        [
+          311238,
+          301253,
+          "Andrew_Moray",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 47525,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-163805",
+    "number": 40,
+    "claim": "The UN included the Ukrainian Soviet Socialist Republic.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Ukrainian_Soviet_Socialist_Republic",
+        "sentence": 7,
+        "article_url": "https://en.wikipedia.org/wiki/Ukrainian_Soviet_Socialist_Republic"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          188461,
+          199864,
+          "Ukrainian_Soviet_Socialist_Republic",
+          7
+        ]
+      ]
+    ],
+    "source_record_id": 163805,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-126912",
+    "number": 41,
+    "claim": "The Maltese language is the official language of Malta.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Languages_of_Malta",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Languages_of_Malta"
+      },
+      {
+        "page": "Maltese_language",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Maltese_language"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          148764,
+          163799,
+          "Maltese_language",
+          0
+        ],
+        [
+          148764,
+          163799,
+          "Languages_of_Malta",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 126912,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-44950",
+    "number": 42,
+    "claim": "2016 Tour de France was won by Chris Froome.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "2016_Tour_de_France",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/2016_Tour_de_France"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          61335,
+          71850,
+          "2016_Tour_de_France",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 44950,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-45603",
+    "number": 43,
+    "claim": "Argentina is subdivided into twenty-three provinces.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Argentina",
+        "sentence": 3,
+        "article_url": "https://en.wikipedia.org/wiki/Argentina"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          61945,
+          72437,
+          "Argentina",
+          3
+        ]
+      ]
+    ],
+    "source_record_id": 45603,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-32958",
+    "number": 44,
+    "claim": "The New York Knicks compete in the Eastern Conference of the National Basketball Association.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "New_York_Knicks",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/New_York_Knicks"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          49052,
+          58394,
+          "New_York_Knicks",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 32958,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-144102",
+    "number": 45,
+    "claim": "Manchester United's first name was the Newton Heath LYR Football Club.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Manchester_United_F.C.",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Manchester_United_F.C."
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          167265,
+          181106,
+          "Manchester_United_F.C.",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 144102,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-171597",
+    "number": 46,
+    "claim": "Syracuse, New York, had a population of 145,170 in 2010.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Syracuse,_New_York",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Syracuse%2C_New_York"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          198018,
+          207964,
+          "Syracuse,_New_York",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 171597,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-51066",
+    "number": 47,
+    "claim": "Samsung went into the electronics industry in the late 1960s.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Samsung",
+        "sentence": 6,
+        "article_url": "https://en.wikipedia.org/wiki/Samsung"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          67408,
+          78234,
+          "Samsung",
+          6
+        ]
+      ]
+    ],
+    "source_record_id": 51066,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-112064",
+    "number": 48,
+    "claim": "Queen (band) formed in London in 1970.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Queen_-LRB-band-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Queen_-LRB-band-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          131541,
+          146343,
+          "Queen_-LRB-band-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 112064,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-106044",
+    "number": 49,
+    "claim": "The Lincoln-Douglas debates happened in Alton, Illinois.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Lincoln–Douglas_debates",
+        "sentence": 24,
+        "article_url": "https://en.wikipedia.org/wiki/Lincoln%E2%80%93Douglas_debates"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          124467,
+          138816,
+          "Lincoln–Douglas_debates",
+          24
+        ]
+      ]
+    ],
+    "source_record_id": 106044,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-14078",
+    "number": 50,
+    "claim": "The Chrysler Building was the world's tallest building for 11 months.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Chrysler_Building",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Chrysler_Building"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          29345,
+          35807,
+          "Chrysler_Building",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 14078,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-161713",
+    "number": 51,
+    "claim": "Animals are multicellular organisms.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Multicellular_organism",
+        "sentence": 3,
+        "article_url": "https://en.wikipedia.org/wiki/Multicellular_organism"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          186245,
+          198112,
+          "Multicellular_organism",
+          3
+        ]
+      ]
+    ],
+    "source_record_id": 161713,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-174883",
+    "number": 52,
+    "claim": "In Downtown Oklahoma City, Oklahoma, the Alfred P. Murrah Federal Building was located.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Alfred_P._Murrah_Federal_Building",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Alfred_P._Murrah_Federal_Building"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          202228,
+          211556,
+          "Alfred_P._Murrah_Federal_Building",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 174883,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-54742",
+    "number": 53,
+    "claim": "The United Nations Charter was completed at the San Francisco War Memorial and Performing Arts Center.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "United_Nations_Charter",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/United_Nations_Charter"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          169222,
+          182888,
+          "United_Nations_Charter",
+          1
+        ]
+      ],
+      [
+        [
+          173245,
+          186511,
+          "United_Nations_Charter",
+          1
+        ]
+      ],
+      [
+        [
+          312608,
+          302381,
+          "United_Nations_Charter",
+          1
+        ]
+      ],
+      [
+        [
+          313712,
+          303252,
+          "United_Nations_Charter",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 54742,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-32474",
+    "number": 54,
+    "claim": "West Virginia borders Maryland to the northeast.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "West_Virginia",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/West_Virginia"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          48570,
+          57878,
+          "West_Virginia",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 32474,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-218373",
+    "number": 55,
+    "claim": "The French Resistance committed acts of sabotage on telecommunication networks.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "French_Resistance",
+        "sentence": 6,
+        "article_url": "https://en.wikipedia.org/wiki/French_Resistance"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          259613,
+          258177,
+          "French_Resistance",
+          6
+        ]
+      ]
+    ],
+    "source_record_id": 218373,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-80316",
+    "number": 56,
+    "claim": "Tiber Oil Field was discovered in 2009.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Tiber_Oil_Field",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Tiber_Oil_Field"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          97305,
+          110480,
+          "Tiber_Oil_Field",
+          1
+        ]
+      ],
+      [
+        [
+          97308,
+          110483,
+          "Tiber_Oil_Field",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 80316,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-20492",
+    "number": 57,
+    "claim": "Super Bowl XLV was played on February 6, 2011.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Super_Bowl_XLV",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Super_Bowl_XLV"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          53510,
+          63506,
+          "Super_Bowl_XLV",
+          2
+        ]
+      ],
+      [
+        [
+          56871,
+          67112,
+          "Super_Bowl_XLV",
+          2
+        ]
+      ],
+      [
+        [
+          59840,
+          70242,
+          "Super_Bowl_XLV",
+          2
+        ]
+      ],
+      [
+        [
+          302915,
+          293899,
+          "Super_Bowl_XLV",
+          2
+        ]
+      ],
+      [
+        [
+          305101,
+          295934,
+          "Super_Bowl_XLV",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 20492,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-225803",
+    "number": 58,
+    "claim": "Chinatown was directed by Roman Polanski.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Chinatown_-LRB-1974_film-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Chinatown_-LRB-1974_film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          269163,
+          265554,
+          "Chinatown_-LRB-1974_film-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 225803,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-197632",
+    "number": 59,
+    "claim": "There was a contribution to the discovery of the remains of King Richard III by the University of Leicester.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "University_of_Leicester",
+        "sentence": 11,
+        "article_url": "https://en.wikipedia.org/wiki/University_of_Leicester"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          232334,
+          235563,
+          "University_of_Leicester",
+          11
+        ]
+      ]
+    ],
+    "source_record_id": 197632,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-78244",
+    "number": 60,
+    "claim": "There is a drama film called Jackie (2016 film).",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Jackie_-LRB-2016_film-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Jackie_-LRB-2016_film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          95190,
+          108196,
+          "Jackie_-LRB-2016_film-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 78244,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-45637",
+    "number": 61,
+    "claim": "Anneliese van der Pol had an early career in musical theater.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Anneliese_van_der_Pol",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Anneliese_van_der_Pol"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          61980,
+          72481,
+          "Anneliese_van_der_Pol",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 45637,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-198210",
+    "number": 62,
+    "claim": "Saturn is the sixth planet from the Sun.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Saturn",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Saturn"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          233037,
+          236041,
+          "Saturn",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 198210,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-104926",
+    "number": 63,
+    "claim": "Exit the King the show premiered in 1962.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Exit_the_King",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Exit_the_King"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          123235,
+          137631,
+          "Exit_the_King",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 104926,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-136947",
+    "number": 64,
+    "claim": "Hollow Man has a sequel released in 2006 named Hollow Man 2.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Hollow_Man",
+        "sentence": 15,
+        "article_url": "https://en.wikipedia.org/wiki/Hollow_Man"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          159677,
+          174170,
+          "Hollow_Man",
+          15
+        ]
+      ]
+    ],
+    "source_record_id": 136947,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-216597",
+    "number": 65,
+    "claim": "An imaging technique is used to detect calcaneal spurs.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Calcaneal_spur",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Calcaneal_spur"
+      },
+      {
+        "page": "Radiography",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Radiography"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          257335,
+          256355,
+          "Calcaneal_spur",
+          1
+        ],
+        [
+          257335,
+          256355,
+          "Radiography",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 216597,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-13815",
+    "number": 66,
+    "claim": "Theresa May worked for Bank of England.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Theresa_May",
+        "sentence": 6,
+        "article_url": "https://en.wikipedia.org/wiki/Theresa_May"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          29066,
+          35459,
+          "Theresa_May",
+          6
+        ]
+      ]
+    ],
+    "source_record_id": 13815,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-10261",
+    "number": 67,
+    "claim": "The English Wikipedia is an edition of a free online encyclopedia.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "English_Wikipedia",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/English_Wikipedia"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          25206,
+          31087,
+          "English_Wikipedia",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 10261,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-83509",
+    "number": 68,
+    "claim": "Truman Capote's lifelong friend was Harper Lee, author of To Kill a Mockingbird.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Truman_Capote",
+        "sentence": 9,
+        "article_url": "https://en.wikipedia.org/wiki/Truman_Capote"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          269988,
+          266144,
+          "Truman_Capote",
+          9
+        ]
+      ],
+      [
+        [
+          271125,
+          267046,
+          "Truman_Capote",
+          9
+        ]
+      ],
+      [
+        [
+          321786,
+          310192,
+          "Truman_Capote",
+          9
+        ]
+      ],
+      [
+        [
+          323120,
+          311349,
+          "Truman_Capote",
+          9
+        ]
+      ],
+      [
+        [
+          323299,
+          311494,
+          "Truman_Capote",
+          9
+        ]
+      ]
+    ],
+    "source_record_id": 83509,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-90000",
+    "number": 69,
+    "claim": "Blade Runner 2049 stars the actor Ryan Gosling.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Blade_Runner_2049",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Blade_Runner_2049"
+      },
+      {
+        "page": "Ryan_Gosling",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Ryan_Gosling"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          27560,
+          33746,
+          "Blade_Runner_2049",
+          1
+        ],
+        [
+          27560,
+          33746,
+          "Ryan_Gosling",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 90000,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-220288",
+    "number": 70,
+    "claim": "Peter Yates directed the film Bullitt.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Bullitt",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Bullitt"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          262164,
+          260212,
+          "Bullitt",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 220288,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-12681",
+    "number": 71,
+    "claim": "The Romani people originated in Northern India.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Romani_people",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Romani_people"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          27929,
+          34228,
+          "Romani_people",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 12681,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-21719",
+    "number": 72,
+    "claim": "Antigua and Barbuda was named in honor of the Virgin of La Antigua.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Antigua_and_Barbuda",
+        "sentence": 6,
+        "article_url": "https://en.wikipedia.org/wiki/Antigua_and_Barbuda"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          37524,
+          45446,
+          "Antigua_and_Barbuda",
+          6
+        ]
+      ]
+    ],
+    "source_record_id": 21719,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-139030",
+    "number": 73,
+    "claim": "Peking University was founded as the replacement of a vintage school.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Peking_University",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Peking_University"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          161815,
+          176238,
+          "Peking_University",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 139030,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-192583",
+    "number": 74,
+    "claim": "Live Nation Entertainment formed from the merger of Live Nation and Ticketmaster.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Live_Nation_Entertainment",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Live_Nation_Entertainment"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          225305,
+          229983,
+          "Live_Nation_Entertainment",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 192583,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-213928",
+    "number": 75,
+    "claim": "Gray Matter Interactive Studios, Inc. was a computer game developer.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Gray_Matter_Interactive",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Gray_Matter_Interactive"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          253945,
+          253738,
+          "Gray_Matter_Interactive",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 213928,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-201747",
+    "number": 76,
+    "claim": "North Vietnam existed from 1945 to 1976.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "North_Vietnam",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/North_Vietnam"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          237543,
+          239739,
+          "North_Vietnam",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 201747,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-78957",
+    "number": 77,
+    "claim": "MSG has a savory taste similar to that of glutamate.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Monosodium_glutamate",
+        "sentence": 4,
+        "article_url": "https://en.wikipedia.org/wiki/Monosodium_glutamate"
+      },
+      {
+        "page": "Umami",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Umami"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          255090,
+          254620,
+          "Monosodium_glutamate",
+          4
+        ]
+      ],
+      [
+        [
+          322316,
+          310676,
+          "Monosodium_glutamate",
+          4
+        ],
+        [
+          322316,
+          310676,
+          "Umami",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 78957,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-173619",
+    "number": 78,
+    "claim": "A Drama Desk Award was given to Hair (musical) for best revival of a musical.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Hair_-LRB-musical-RRB-",
+        "sentence": 15,
+        "article_url": "https://en.wikipedia.org/wiki/Hair_-LRB-musical-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          200609,
+          210087,
+          "Hair_-LRB-musical-RRB-",
+          15
+        ]
+      ]
+    ],
+    "source_record_id": 173619,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-167163",
+    "number": 79,
+    "claim": "Westworld's first season concluded on December 4, 2016.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Westworld_-LRB-TV_series-RRB-",
+        "sentence": 4,
+        "article_url": "https://en.wikipedia.org/wiki/Westworld_-LRB-TV_series-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          192315,
+          203075,
+          "Westworld_-LRB-TV_series-RRB-",
+          4
+        ]
+      ]
+    ],
+    "source_record_id": 167163,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-105256",
+    "number": 80,
+    "claim": "Louie (season 1) first came on the air in 2010.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Louie_-LRB-season_1-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Louie_-LRB-season_1-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          123578,
+          138003,
+          "Louie_-LRB-season_1-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 105256,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-141058",
+    "number": 81,
+    "claim": "Buffy the Vampire Slayer's creator is Joss Whedon.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Buffy_the_Vampire_Slayer",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Buffy_the_Vampire_Slayer"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          35980,
+          43527,
+          "Buffy_the_Vampire_Slayer",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 141058,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-179042",
+    "number": 82,
+    "claim": "Congressional Space Medal of Honor is the highest award given only to astronauts by NASA.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Congressional_Space_Medal_of_Honor",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Congressional_Space_Medal_of_Honor"
+      },
+      {
+        "page": "Congressional_Space_Medal_of_Honor",
+        "sentence": 9,
+        "article_url": "https://en.wikipedia.org/wiki/Congressional_Space_Medal_of_Honor"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          207706,
+          215921,
+          "Congressional_Space_Medal_of_Honor",
+          9
+        ],
+        [
+          207706,
+          215921,
+          "Congressional_Space_Medal_of_Honor",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 179042,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-47791",
+    "number": 83,
+    "claim": "Half Girlfriend's principal photography began in June of 2016.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Half_Girlfriend_-LRB-film-RRB-",
+        "sentence": 4,
+        "article_url": "https://en.wikipedia.org/wiki/Half_Girlfriend_-LRB-film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          64170,
+          74902,
+          "Half_Girlfriend_-LRB-film-RRB-",
+          4
+        ]
+      ]
+    ],
+    "source_record_id": 47791,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-200282",
+    "number": 84,
+    "claim": "Story credit for Natural Born Killers went to Quentin Tarantino.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Natural_Born_Killers",
+        "sentence": 5,
+        "article_url": "https://en.wikipedia.org/wiki/Natural_Born_Killers"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          235586,
+          238199,
+          "Natural_Born_Killers",
+          5
+        ]
+      ]
+    ],
+    "source_record_id": 200282,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-117966",
+    "number": 85,
+    "claim": "Anna Nicole Smith was a model for Guess.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Anna_Nicole_Smith",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Anna_Nicole_Smith"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          138420,
+          153461,
+          "Anna_Nicole_Smith",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 117966,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-42559",
+    "number": 86,
+    "claim": "Halsey signed her first recording contract with Astralwerks.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Halsey_-LRB-singer-RRB-",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/Halsey_-LRB-singer-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          58855,
+          69171,
+          "Halsey_-LRB-singer-RRB-",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 42559,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-16437",
+    "number": 87,
+    "claim": "Match Point was a film by Woody Allen.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Match_Point",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Match_Point"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          31845,
+          38655,
+          "Match_Point",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 16437,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-148981",
+    "number": 88,
+    "claim": "Jim Halpert was played by John Krasinski.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "John_Krasinski",
+        "sentence": 1,
+        "article_url": "https://en.wikipedia.org/wiki/John_Krasinski"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          292566,
+          285312,
+          "John_Krasinski",
+          1
+        ]
+      ],
+      [
+        [
+          294573,
+          286823,
+          "John_Krasinski",
+          1
+        ]
+      ],
+      [
+        [
+          295161,
+          287333,
+          "John_Krasinski",
+          1
+        ]
+      ],
+      [
+        [
+          340394,
+          325061,
+          "John_Krasinski",
+          1
+        ]
+      ]
+    ],
+    "source_record_id": 148981,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-202436",
+    "number": 89,
+    "claim": "Tinker Tailor Soldier Spy stars Gary Oldman.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Tinker_Tailor_Soldier_Spy_-LRB-film-RRB-",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Tinker_Tailor_Soldier_Spy_-LRB-film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          238517,
+          240517,
+          "Tinker_Tailor_Soldier_Spy_-LRB-film-RRB-",
+          2
+        ]
+      ],
+      [
+        [
+          238518,
+          240518,
+          "Tinker_Tailor_Soldier_Spy_-LRB-film-RRB-",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 202436,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-144309",
+    "number": 90,
+    "claim": "The film Watchmen focuses on a group of mostly retired American superheroes.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Watchmen_-LRB-film-RRB-",
+        "sentence": 2,
+        "article_url": "https://en.wikipedia.org/wiki/Watchmen_-LRB-film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          167525,
+          181327,
+          "Watchmen_-LRB-film-RRB-",
+          2
+        ]
+      ]
+    ],
+    "source_record_id": 144309,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-223342",
+    "number": 91,
+    "claim": "The principal photography of The Disaster Artist (film) started on December 8th, 2015.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "The_Disaster_Artist_-LRB-film-RRB-",
+        "sentence": 5,
+        "article_url": "https://en.wikipedia.org/wiki/The_Disaster_Artist_-LRB-film-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          266025,
+          263128,
+          "The_Disaster_Artist_-LRB-film-RRB-",
+          5
+        ]
+      ]
+    ],
+    "source_record_id": 223342,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-23012",
+    "number": 92,
+    "claim": "The Beverly Hillbillies had nine seasons.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "The_Beverly_Hillbillies",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/The_Beverly_Hillbillies"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          38984,
+          46967,
+          "The_Beverly_Hillbillies",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 23012,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-21899",
+    "number": 93,
+    "claim": "Morse Code is used in air traffic control.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Morse_code",
+        "sentence": 16,
+        "article_url": "https://en.wikipedia.org/wiki/Morse_code"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          37730,
+          45662,
+          "Morse_code",
+          16
+        ]
+      ]
+    ],
+    "source_record_id": 21899,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-143123",
+    "number": 94,
+    "claim": "Daenerys Targaryen was introduced in a novel.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "A_Game_of_Thrones",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/A_Game_of_Thrones"
+      },
+      {
+        "page": "Daenerys_Targaryen",
+        "sentence": 5,
+        "article_url": "https://en.wikipedia.org/wiki/Daenerys_Targaryen"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          166189,
+          180114,
+          "Daenerys_Targaryen",
+          5
+        ],
+        [
+          166189,
+          180114,
+          "A_Game_of_Thrones",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 143123,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-221073",
+    "number": 95,
+    "claim": "A&E was previously the Arts & Entertainment Network.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "A&E_-LRB-TV_channel-RRB-",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/A%26E_-LRB-TV_channel-RRB-"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          263241,
+          260970,
+          "A&E_-LRB-TV_channel-RRB-",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 221073,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-77048",
+    "number": 96,
+    "claim": "In 1947 José Ferrer won a Tony Award.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "José_Ferrer",
+        "sentence": 4,
+        "article_url": "https://en.wikipedia.org/wiki/Jose%CC%81_Ferrer"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          93934,
+          106887,
+          "José_Ferrer",
+          4
+        ]
+      ]
+    ],
+    "source_record_id": 77048,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-157052",
+    "number": 97,
+    "claim": "The Silver Surfer is portrayed in comic books of American origin.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Silver_Surfer",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Silver_Surfer"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          181171,
+          193442,
+          "Silver_Surfer",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 157052,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-4807",
+    "number": 98,
+    "claim": "Dark matter is distinguishable from dark energy.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Dark_matter",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Dark_matter"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          21163,
+          25995,
+          "Dark_matter",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 4807,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-1933",
+    "number": 99,
+    "claim": "Dissociative identity disorder is known as multiple personality disorder.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Dissociative_identity_disorder",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Dissociative_identity_disorder"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          17781,
+          21933,
+          "Dissociative_identity_disorder",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 1933,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  },
+  {
+    "id": "fever-160379",
+    "number": 100,
+    "claim": "Mamata Banerjee is an Indian politician in West Bengal.",
+    "context": {},
+    "published_label": "SUPPORTS",
+    "expected_verdict": "true",
+    "label_status": "published_human_annotation; local_review_pending",
+    "research_method": "direct_fact_or_comparison_pending_scope_review",
+    "evidence_sentence_pointers": [
+      {
+        "page": "Mamata_Banerjee",
+        "sentence": 0,
+        "article_url": "https://en.wikipedia.org/wiki/Mamata_Banerjee"
+      }
+    ],
+    "original_evidence_sets": [
+      [
+        [
+          184849,
+          196725,
+          "Mamata_Banerjee",
+          0
+        ]
+      ]
+    ],
+    "source_record_id": 160379,
+    "source_dataset": "FEVER v1 shared task development",
+    "reference_corpus": "English Wikipedia, June 2017",
+    "current_web_verified_at": null,
+    "local_labelers": []
+  }
+]

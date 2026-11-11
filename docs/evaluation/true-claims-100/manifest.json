@@ -1,0 +1,16 @@
+{
+  "source": "https://zenodo.org/records/4925954/files/shared_task_dev.jsonl?download=1",
+  "source_sha256": "e89865bfe1b4dd054e03dd57d7241a6fde24862905f31117cf0cd719f7c78df7",
+  "count": 100,
+  "published_label_counts": {
+    "SUPPORTS": 100
+  },
+  "reference_corpus": "English Wikipedia, June 2017",
+  "current_web_verified_count": 0,
+  "local_reviewed_count": 0,
+  "backend_runs": 0,
+  "claim_text_preserved": true,
+  "claims_sha256": "b30f72ae47b8524325e319b9a2d59c8013934e9a278a09e097dc2c05f525e8a5",
+  "license": "https://fever.ai/download/fever/license.html",
+  "attribution": "Thorne, Vlachos, Christodoulopoulos, Mittal (2018), FEVER: a Large-scale Dataset for Fact Extraction and VERification"
+}

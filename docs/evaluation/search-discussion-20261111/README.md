@@ -4,6 +4,8 @@ Read **[PR #20 — Phase 1 implementation](https://github.com/skanvish11/Alethei
 
 The [discussion record](../../backend-search-discussion-20261111.md) explains the diagnosis and results. This companion package supplies the actual saved inputs, source snapshots, model requests and available responses, traces, scripts, frozen source copies, reviews, and SQLite databases behind those results.
 
+A separate [100-claim True evaluation batch](../true-claims-100/README.md) was added to this PR after the experiment archive was frozen. It contains published FEVER `SUPPORTS` annotations for direct-claim review. It is outside the archive and has not been run through the backend.
+
 ## What is included
 
 The [artifact archive](experiment-artifacts.tar.gz) contains **1,956 files**, approximately **150 MiB unpacked / 19.3 MiB compressed**, captured November 11, 2026 at 2:35 PM Pacific. The [manifest](manifest.json) identifies every file, its size and SHA-256 checksum, the source revision, exclusions, and package checks. The archive keeps the original workspace layout: sibling `experiments/` and `aletheia-phase-one/` directories.
@@ -57,7 +59,7 @@ Reading saved results and running the package verifier requires no credentials. 
 ## Deliberate exclusions and known gaps
 
 - Credential/settings files, virtual environments, downloaded model weights, caches, Python bytecode, and SQLite sidecars are excluded.
-- The separate claim-bank inventory was an unexecuted review queue, not one of these completed backend experiments, and is excluded.
+- The broader separate claim-bank inventory was an unexecuted review queue, not one of these completed backend experiments, and is excluded from the archive. The 100-claim batch linked above is a new, separate PR artifact.
 - `mistake-one-focused-20261111` was still running at packaging time. Its quotation repair and separate exact-outcome/context tests remain pending in the discussion snapshot and are not presented as completed artifacts here.
 - Raw responses that the original pipeline failed to record cannot be recovered by packaging. In particular, the replay's capture limitation and unavailable historical rejected responses remain explicit in the original reports.
 - Frozen source coverage, citation checks, and small synthetic results do not establish production answer accuracy or fresh-search quality.
