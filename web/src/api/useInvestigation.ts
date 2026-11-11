@@ -22,6 +22,12 @@ export interface InvestigationState {
   loadError: string | null
   /** Submitting, opening or following progress failed. */
   error: string | null
+  /**
+   * True when submitting returned an existing investigation of the same claim instead
+   * of starting research. Only the submit response defines this; a plain GET always
+   * reports reused, so the investigation's own field is not used for display.
+   */
+  reused: boolean
 }
 
 const EMPTY: InvestigationState = {
@@ -33,6 +39,7 @@ const EMPTY: InvestigationState = {
   finished: false,
   loadError: null,
   error: null,
+  reused: false,
 }
 
 export interface OpenOptions {
@@ -46,6 +53,12 @@ function addEvent(events: InvestigationEvent[], event: InvestigationEvent): Inve
   return [...events, event].sort((a, b) => a.sequence - b.sequence)
 }
 
+/** How long loading the final report may take before the client offers a retry. */
+export const LOAD_TIMEOUT_MS = 20_000
+
+export const LOAD_TIMED_OUT =
+  'The backend didn’t return the results in time. Retry to fetch them again.'
+
 function message(err: unknown, fallback: string): string {
   return err instanceof Error ? err.message : fallback
 }
@@ -58,31 +71,58 @@ export function useInvestigation(source: DataSource) {
   const session = useRef(0)
   const currentId = useRef<string | null>(null)
   const submitting = useRef(false)
+  // The in-flight report load, so a retry, a new session or unmounting can abandon it.
+  const pendingLoad = useRef<AbortController | null>(null)
+
+  const cancelLoad = useCallback(() => {
+    pendingLoad.current?.abort()
+    pendingLoad.current = null
+  }, [])
 
   const stop = useCallback(() => {
     unsubscribe.current?.()
     unsubscribe.current = null
   }, [])
 
-  useEffect(() => stop, [stop])
+  useEffect(
+    () => () => {
+      stop()
+      cancelLoad()
+    },
+    [stop, cancelLoad],
+  )
 
   const isCurrent = (token: number) => session.current === token
 
   const loadFinal = useCallback(
     async (id: string, token: number) => {
+      cancelLoad()
+      const controller = new AbortController()
+      pendingLoad.current = controller
+      // Only the latest load of the current session may update state; an abandoned or
+      // timed-out load's late answer is ignored.
+      const live = () => isCurrent(token) && pendingLoad.current === controller
       setState((s) => ({ ...s, loadError: null }))
+      // Aborting (on timeout, or when the load is abandoned) also settles the race.
+      const timeout = new Promise<never>((_, reject) => {
+        controller.signal.addEventListener('abort', () => reject(new Error(LOAD_TIMED_OUT)))
+      })
+      const timer = setTimeout(() => controller.abort(), LOAD_TIMEOUT_MS)
       try {
-        const [investigation, evidence] = await Promise.all([
-          source.getInvestigation(id),
-          source.getEvidence(id),
+        const [investigation, evidence] = await Promise.race([
+          Promise.all([source.getInvestigation(id, controller.signal), source.getEvidence(id, controller.signal)]),
+          timeout,
         ])
-        if (!isCurrent(token)) return
+        if (!live()) return
         setState((s) => ({ ...s, investigation, evidence, finished: true }))
       } catch (err) {
-        if (isCurrent(token)) setState((s) => ({ ...s, loadError: message(err, 'Could not load the results.') }))
+        if (live()) setState((s) => ({ ...s, loadError: message(err, 'Could not load the results.') }))
+      } finally {
+        clearTimeout(timer)
+        if (pendingLoad.current === controller) pendingLoad.current = null
       }
     },
-    [source],
+    [source, cancelLoad],
   )
 
   const follow = useCallback(
@@ -111,7 +151,8 @@ export function useInvestigation(source: DataSource) {
         id,
         (event) => {
           if (!isCurrent(token)) return
-          setState((s) => ({ ...s, events: addEvent(s.events, event) }))
+          // An event means the stream is flowing again, so a reconnecting notice is stale.
+          setState((s) => ({ ...s, error: null, events: addEvent(s.events, event) }))
           if (TERMINAL_EVENTS.has(event.type)) {
             stop()
             setState((s) => ({ ...s, researchDone: true }))
@@ -130,10 +171,11 @@ export function useInvestigation(source: DataSource) {
     async (id: string, options: OpenOptions = {}) => {
       const token = ++session.current
       submitting.current = false
+      cancelLoad()
       setState(EMPTY)
       await follow(id, token, options.animate ?? source.kind === 'live')
     },
-    [source, follow],
+    [source, follow, cancelLoad],
   )
 
   const submit = useCallback(
@@ -142,11 +184,12 @@ export function useInvestigation(source: DataSource) {
       submitting.current = true
       const token = ++session.current
       stop()
+      cancelLoad()
       setState({ ...EMPTY, submitting: true })
       try {
         const created = await source.submit(claim, context)
         if (!isCurrent(token)) return // the user left or submitted again
-        setState((s) => ({ ...s, submitting: false }))
+        setState((s) => ({ ...s, submitting: false, reused: created.reused }))
         await follow(created.id, token, true)
       } catch (err) {
         if (isCurrent(token)) setState({ ...EMPTY, error: message(err, 'Could not submit the claim.') })
@@ -154,7 +197,7 @@ export function useInvestigation(source: DataSource) {
         if (isCurrent(token)) submitting.current = false
       }
     },
-    [source, stop, follow],
+    [source, stop, follow, cancelLoad],
   )
 
   /** Retry loading the report after research finished; never starts a new investigation. */
@@ -168,9 +211,10 @@ export function useInvestigation(source: DataSource) {
     session.current++
     submitting.current = false
     stop()
+    cancelLoad()
     currentId.current = null
     setState(EMPTY)
-  }, [stop])
+  }, [stop, cancelLoad])
 
   return { state, open, submit, retryLoad, close }
 }

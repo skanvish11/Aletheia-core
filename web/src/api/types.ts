@@ -1,7 +1,10 @@
-// Client-side view of the backend contract in README.md sections 3, 6 and 9.
-// PROVISIONAL: field names are inferred from the design doc. When
-// src/aletheia/contracts.py exists, regenerate or reconcile these types
-// against it and treat the Python models as the source of truth.
+// Client-side view of the backend contract.
+//
+// RECONCILED with src/aletheia/contracts.py and research_contracts.py at 6b1dc23
+// (step 3 research pipeline, #11): Investigation, the decision and result models,
+// the /evidence response, events, /health and the error body. Keep this file in
+// step with those modules; the backend forbids extra fields, so nothing here is
+// optional unless the backend makes it so.
 
 export type InvestigationStatus =
   | 'queued'
@@ -26,11 +29,17 @@ export type StopReason =
   | 'budget_exhausted'
   | 'deadline_exceeded'
   | 'provider_failure'
+  | 'storage_failure'
   | 'interrupted'
 
 export type Route = 'quick' | 'deep'
 
-export type Verdict = 'supported' | 'contradicted' | 'mixed' | 'insufficient_evidence'
+/** A truth verdict. Only present when the outcome is decided. */
+export type Verdict = 'true' | 'false' | 'almost'
+
+export type Outcome = 'decided' | 'unable_to_decide'
+
+export type UndecidedReason = 'insufficient_evidence' | 'conflicting_evidence'
 
 export type FlagType = 'misleading_comparison' | 'narrow_scope'
 
@@ -52,43 +61,93 @@ export interface QualificationFlag {
   evidence_ids: string[]
 }
 
-/** A sentence of explanation tied to the evidence that backs it. */
+/** A sentence of explanation tied to the evidence that backs it (at least one ID). */
 export interface ExplanationUnit {
   text: string
   evidence_ids: string[]
 }
 
-export interface AssertionFinding {
+/** Required exactly when the verdict is Almost; every part is cited. */
+export interface AlmostCorrection {
+  what_is_correct: ExplanationUnit
+  what_needs_correction: ExplanationUnit
+  corrected_claim: ExplanationUnit
+}
+
+/**
+ * decided → verdict set, reason null; unable_to_decide → verdict null, reason set.
+ * almost_correction is set exactly when verdict is 'almost'.
+ */
+export interface Decision {
+  outcome: Outcome
+  verdict: Verdict | null
+  unable_to_decide_reason: UndecidedReason | null
+  almost_correction: AlmostCorrection | null
+}
+
+export type AssertionKind =
+  | 'direct_record'
+  | 'causal'
+  | 'predictive'
+  | 'generalized'
+  | 'interpretive'
+  | 'value'
+
+/** The one checkable assertion the claim was scoped to. */
+export interface Assertion {
+  id: string
+  text: string
+  kind: AssertionKind
+  consequential: boolean
+  recommended_route: Route
+}
+
+export interface Finding extends Decision {
   assertion_id: string
-  position: number
-  scoped_text: string
-  route: Route
-  verdict: Verdict
-  explanation: ExplanationUnit[]
-  qualification_check: 'assessed' | 'unknown'
+  evidence_ids: string[]
   qualification_flags: QualificationFlag[]
+  qualification_check: 'assessed' | 'unknown'
   limitations: string[]
 }
 
-export interface InvestigationResult {
-  overall_verdict: Verdict
-  summary: ExplanationUnit[]
-  findings: AssertionFinding[]
-  conflicts: string[]
+/** The result's decision always equals its finding's decision. */
+export interface InvestigationResult extends Decision {
+  assertion: Assertion
+  scope_note: string
+  finding: Finding
+  explanation: ExplanationUnit[]
   limitations: string[]
+  model: string
+  prompt_version: string
+  application_version: string
+  configuration: Record<string, string | number | boolean>
+  budget_used: Record<string, number>
+  provider_attempts: Record<string, string | number | null>[]
+  token_usage: Record<string, number>
 }
 
+/** Each field may be omitted or explicitly null; at most 4,000 characters (contracts.py). */
 export interface ClaimContext {
-  timeframe?: string
-  location?: string
-  definitions?: string
-  notes?: string
+  timeframe?: string | null
+  location?: string | null
+  definitions?: string | null
+  notes?: string | null
+}
+
+export interface InvestigationLinks {
+  /** API path of this investigation, e.g. /investigations/{id}. */
+  self: string
+  events?: string | null
+  evidence?: string | null
+  comparison?: string | null
+  refresh?: string | null
 }
 
 export interface Investigation {
   id: string
   claim: string
-  context: ClaimContext
+  /** The supplied context fields only. */
+  context: Record<string, string | null>
   version: number
   parent_id: string | null
   status: InvestigationStatus
@@ -99,66 +158,115 @@ export interface Investigation {
   created_at: string
   started_at: string | null
   finished_at: string | null
+  /** Set when research reached a decision (completed or partial). */
   result: InvestigationResult | null
   clarification_questions: string[] | null
   error: { message: string } | null
+  links: InvestigationLinks
 }
 
+/** GET /health. research_enabled is false when the API keys are not configured. */
+export interface HealthStatus {
+  status: string
+  database: string
+  research_enabled: boolean
+}
+
+/** Every 4xx/5xx body from the backend: a sanitized message that never echoes input. */
+export interface ErrorBody {
+  detail: string
+}
+
+/** Metadata of a retrieved page; the stored text itself is not served. */
 export interface SourceSnapshot {
   id: string
   url: string
-  title: string | null
-  publisher: string | null
-  author: string | null
+  canonical_url: string
+  title: string
   published_date: string | null
   retrieved_at: string
-  extraction_status: 'succeeded' | 'failed'
+  normalization_version: string
+  splitter_version: string
+  content_hash: string
+  duplicate_group: string
+  limitations: string[]
 }
 
 /** A contiguous excerpt rebuilt by code from stored spans; never model-written text. */
 export interface Excerpt {
-  span_ids: string[]
+  span_ids: number[]
+  start: number
+  end: number
   text: string
+  quote_hash: string
 }
 
-export type EvidenceRelation = 'supports' | 'contradicts' | 'context' | 'not_relevant'
+export type EvidenceRelation = 'supports' | 'contradicts' | 'context' | 'irrelevant'
 
-export interface EvidenceAssessment {
-  id: string
-  assertion_id: string
-  snapshot_id: string
+/** The model's reading of one cited passage, checked by code before admission. */
+export interface Assessment {
+  citation: { snapshot_id: string; span_ids: number[] }
   relation: EvidenceRelation
-  excerpts: Excerpt[]
+  scope_match: boolean
+  authoritative_record: boolean
+  credible_synthesis: boolean
+  synthesis_coverage: string | null
+  publisher: string | null
+  origin: string | null
+  independence: 'established' | 'shared' | 'unknown'
+  provenance_span_ids: number[]
+  provenance_note: string | null
   rationale: string
   limitations: string[]
+  flags: { type: string; dimension: string; explanation: string }[]
+}
+
+export interface Evidence {
+  id: string
+  assertion_id: string
+  assessment: Assessment
+  excerpts: Excerpt[]
   admissible: boolean
+  rejection_reason: string | null
 }
 
+/** GET /investigations/{id}/evidence: every checked passage, admitted or not. */
 export interface EvidenceResponse {
-  investigation_id: string
   sources: SourceSnapshot[]
-  assessments: EvidenceAssessment[]
+  evidence: Evidence[]
 }
 
-export type EventType =
-  | 'investigation_queued'
-  | 'investigation_started'
-  | 'claim_interpreted'
-  | 'clarification_required'
-  | 'route_selected'
-  | 'search_started'
-  | 'search_completed'
-  | 'source_extracted'
-  | 'source_rejected'
-  | 'evidence_checked'
-  | 'route_escalated'
-  | 'followup_planned'
-  | 'budget_reached'
-  | 'comparison_completed'
-  | 'consistency_flagged'
-  | 'investigation_completed'
-  | 'investigation_partial'
-  | 'investigation_failed'
+/**
+ * Every event type the backend emits (contracts.py InvestigationEvent.type). The
+ * backend sends each as a named SSE event, so the client must listen for each name.
+ */
+export const EVENT_TYPES = [
+  'investigation_queued',
+  'investigation_started',
+  'stage_started',
+  'claim_interpreted',
+  'clarification_required',
+  'route_selected',
+  'search_started',
+  'search_completed',
+  'source_extracted',
+  'source_rejected',
+  'sources_deferred',
+  'research_gate',
+  'evidence_checked',
+  'route_escalated',
+  'followup_planned',
+  'budget_reached',
+  'task_output_rejected',
+  'qualification_flag_dropped',
+  'comparison_completed',
+  'consistency_flagged',
+  'investigation_completed',
+  'investigation_partial',
+  'investigation_failed',
+] as const
+
+export type EventType = (typeof EVENT_TYPES)[number]
 
 export const TERMINAL_EVENTS: ReadonlySet<EventType> = new Set([
   'investigation_completed',
@@ -173,6 +281,6 @@ export interface InvestigationEvent {
   timestamp: string
   type: EventType
   stage: Stage | null
-  /** Typed per event on the backend; read defensively here until contracts.py exists. */
-  payload: Record<string, unknown>
+  /** String values only; keys vary by event type, so read them defensively. */
+  payload: Record<string, string>
 }

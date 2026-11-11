@@ -8,9 +8,11 @@ interface Props {
   submitting: boolean
   /** Investigation isn't available here (replay-only page). */
   unavailableReason?: string
+  /** Offered while unavailable when checking the backend again could help. */
+  onRetry?: () => void
 }
 
-export function ClaimForm({ onSubmit, submitting, unavailableReason }: Props) {
+export function ClaimForm({ onSubmit, submitting, unavailableReason, onRetry }: Props) {
   const [claim, setClaim] = useState('')
   const noteId = useId()
   const trimmed = claim.trim()
@@ -41,6 +43,14 @@ export function ClaimForm({ onSubmit, submitting, unavailableReason }: Props) {
         {unavailable && (
           <p id={noteId} className="meta claim-form-note">
             {unavailableReason}
+            {onRetry && (
+              <>
+                {' '}
+                <button type="button" className="link-button" onClick={onRetry}>
+                  Retry connection
+                </button>
+              </>
+            )}
           </p>
         )}
       </div>

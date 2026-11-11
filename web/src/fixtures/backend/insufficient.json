@@ -1,0 +1,293 @@
+{
+  "investigation": {
+    "id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+    "claim": "The Archive opened in 2000.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "completed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "no_useful_query",
+    "reused": true,
+    "created_at": "2026-11-06T18:08:40.091259Z",
+    "started_at": "2026-11-06T18:08:40.098123Z",
+    "finished_at": "2026-11-06T18:08:40.259154Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "The Archive opened in 2000.",
+        "kind": "direct_record",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "Opening year of the named Archive.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "insufficient_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [],
+        "qualification_flags": [],
+        "qualification_check": "unknown",
+        "limitations": [
+          "The retrieved evidence does not meet the evidence requirements.",
+          "Distinct independent origins or an appropriate synthesis were not established."
+        ]
+      },
+      "explanation": [],
+      "limitations": [
+        "The retrieved evidence does not meet the evidence requirements.",
+        "Distinct independent origins or an appropriate synthesis were not established."
+      ],
+      "model": "synthetic-model",
+      "prompt_version": "one-claim-v4.2",
+      "application_version": "research-v4.2",
+      "configuration": {
+        "response_format": "json_schema",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 0,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 3,
+        "search": 2,
+        "extract": 0
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.00048619997687637806,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.0004718999844044447,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 0.0004187000449746847,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 0.0004338000435382128,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.0004755000118166208,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 30,
+        "completion_tokens": 60,
+        "total_tokens": 90
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "events": "/investigations/2521978a-7b6b-462f-b73b-da9a3f5cbd35/events",
+      "evidence": "/investigations/2521978a-7b6b-462f-b73b-da9a3f5cbd35/evidence",
+      "comparison": "/investigations/2521978a-7b6b-462f-b73b-da9a3f5cbd35/comparison",
+      "refresh": "/investigations/2521978a-7b6b-462f-b73b-da9a3f5cbd35/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "events": [
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 1,
+      "timestamp": "2026-11-06T18:08:40.091259Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 2,
+      "timestamp": "2026-11-06T18:08:40.098123Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 3,
+      "timestamp": "2026-11-06T18:08:40.110910Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 4,
+      "timestamp": "2026-11-06T18:08:40.122578Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 5,
+      "timestamp": "2026-11-06T18:08:40.135548Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 6,
+      "timestamp": "2026-11-06T18:08:40.143222Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 7,
+      "timestamp": "2026-11-06T18:08:40.155612Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "archive record 0",
+        "purpose": "support"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 8,
+      "timestamp": "2026-11-06T18:08:40.163897Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "archive record 0",
+        "result_count": "0"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 9,
+      "timestamp": "2026-11-06T18:08:40.177998Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "archive correction 0",
+        "purpose": "contradiction"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 10,
+      "timestamp": "2026-11-06T18:08:40.186811Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "archive correction 0",
+        "result_count": "0"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 11,
+      "timestamp": "2026-11-06T18:08:40.197859Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "missing_evidence"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 12,
+      "timestamp": "2026-11-06T18:08:40.206610Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 13,
+      "timestamp": "2026-11-06T18:08:40.220733Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "no_useful_query",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 14,
+      "timestamp": "2026-11-06T18:08:40.250617Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "2521978a-7b6b-462f-b73b-da9a3f5cbd35",
+      "sequence": 15,
+      "timestamp": "2026-11-06T18:08:40.259154Z",
+      "type": "investigation_completed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "no_useful_query"
+      }
+    }
+  ]
+}

@@ -1,8 +1,9 @@
 import type { EvidenceResponse, Investigation, InvestigationEvent, InvestigationResult } from '../api/types'
 import { EvidenceIndexContext, buildEvidenceIndex } from '../evidenceIndex'
-import { STATUS_LABEL, formatTime } from '../labels'
+import { STATUS_LABEL, UNDECIDED_REASON, formatTime, reason } from '../labels'
 import { Evidence } from './Evidence'
-import { Findings, Flag, Units, Verdict } from './Findings'
+import { Citations } from './Cite'
+import { Correction, DecisionLabel, Findings, Flag, Units } from './Findings'
 import { ResearchActivity, ResearchInProgress } from './Progress'
 
 interface Props {
@@ -13,6 +14,8 @@ interface Props {
   finished: boolean
   loadError: string | null
   replay: boolean
+  /** The submission returned an existing investigation rather than starting one. */
+  reused: boolean
   onRetry: () => void
   /** Replay only: play the recorded research steps again. */
   onReplay?: () => void
@@ -21,16 +24,18 @@ interface Props {
 function ClaimHeader({
   investigation,
   finished,
+  reused,
   onReplay,
 }: {
   investigation: Investigation
   finished: boolean
+  reused: boolean
   onReplay?: () => void
 }) {
   const meta = [
     finished ? STATUS_LABEL[investigation.status] : 'Researching',
     `researched ${formatTime(investigation.started_at ?? investigation.created_at)}`,
-    investigation.reused ? 'saved result' : null,
+    reused ? 'saved result' : null,
     investigation.version > 1 ? `version ${investigation.version}` : null,
   ].filter(Boolean)
   return (
@@ -52,27 +57,55 @@ function ClaimHeader({
   )
 }
 
+/**
+ * Keeps the decision checkable when the explanation cites nothing, for example a
+ * partial result saved with an empty explanation: link the finding's own evidence.
+ */
+function DecisionEvidence({ result }: { result: InvestigationResult }) {
+  const ids = result.finding.evidence_ids
+  if (ids.length === 0 || result.explanation.some((unit) => unit.evidence_ids.length > 0)) return null
+  return (
+    <p>
+      {result.explanation.length === 0 ? 'No written explanation was saved. ' : ''}
+      The decision rests on this evidence:
+      <Citations ids={ids} />
+    </p>
+  )
+}
+
 /** The answer and its essential caveat, before any detail. */
-function Conclusion({ result }: { result: InvestigationResult }) {
-  const flags = result.findings.flatMap((f) => f.qualification_flags)
+function Conclusion({ investigation, result }: { investigation: Investigation; result: InvestigationResult }) {
+  const flags = result.finding.qualification_flags
   return (
     <section className="conclusion" aria-labelledby="conclusion-heading">
       <h2 id="conclusion-heading" className="conclusion-verdict">
-        <Verdict verdict={result.overall_verdict} />
+        <DecisionLabel decision={result} />
         {flags.length > 0 && <span className="conclusion-but">, with a caveat</span>}
       </h2>
+      {result.unable_to_decide_reason && (
+        <p className="meta">{UNDECIDED_REASON[result.unable_to_decide_reason]}</p>
+      )}
+      {investigation.status === 'partial' && (
+        <p className="meta">
+          Partial result: the run stopped before every step finished
+          {reason(investigation.stop_reason) ? ` (${reason(investigation.stop_reason)})` : ''}. The decision comes from
+          the steps that completed; Limitations says what was left unfinished.
+        </p>
+      )}
+      {result.almost_correction && <Correction correction={result.almost_correction} />}
       {flags.map((flag, i) => (
         <Flag key={i} flag={flag} />
       ))}
       <div className="summary">
-        <Units units={result.summary} />
+        <Units units={result.explanation} />
+        <DecisionEvidence result={result} />
       </div>
     </section>
   )
 }
 
 function Limitations({ result }: { result: InvestigationResult }) {
-  const items = [...result.conflicts, ...result.limitations]
+  const items = [...new Set([...result.limitations, ...result.finding.limitations])]
   if (items.length === 0) return null
   return (
     <section className="section" aria-labelledby="limitations-heading">
@@ -87,12 +120,12 @@ function Limitations({ result }: { result: InvestigationResult }) {
 }
 
 export function Report(props: Props) {
-  const { investigation, evidence, events, researchDone, finished, loadError, replay, onRetry, onReplay } = props
+  const { investigation, evidence, events, researchDone, finished, loadError, replay, reused, onRetry, onReplay } = props
   const result = finished ? investigation.result : null
   return (
     <EvidenceIndexContext.Provider value={buildEvidenceIndex(evidence)}>
       <article className="report">
-        <ClaimHeader investigation={investigation} finished={finished} onReplay={onReplay} />
+        <ClaimHeader investigation={investigation} finished={finished} reused={reused} onReplay={onReplay} />
 
         {!researchDone && <ResearchInProgress events={events} replay={replay} />}
 
@@ -126,7 +159,7 @@ export function Report(props: Props) {
 
         {finished && investigation.error && (
           <section className="conclusion" role="alert">
-            <h2>No verdict</h2>
+            <h2>No decision</h2>
             <p>{investigation.error.message}</p>
             <p className="meta">A failed investigation is not evidence that the claim is false.</p>
           </section>
@@ -134,8 +167,8 @@ export function Report(props: Props) {
 
         {result && (
           <>
-            <Conclusion result={result} />
-            <Findings findings={result.findings} />
+            <Conclusion investigation={investigation} result={result} />
+            <Findings result={result} route={investigation.route} />
             <Limitations result={result} />
             <Evidence />
           </>
