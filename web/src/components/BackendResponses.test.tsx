@@ -53,8 +53,8 @@ describe('rendering captured backend responses', () => {
     ['conflicting', 'Conflicting evidence'],
     ['finalization-timeout', 'True'],
   ])('%s renders the contracted label "%s"', (name, label) => {
-    const conclusion = renderCaptured(name)
-    expect(within(conclusion).getByRole('heading', { level: 2 }).textContent).toBe(label)
+    renderCaptured(name)
+    expect(document.getElementById('result-label')?.textContent).toBe(label)
   })
 
   it('shows the three correction parts for Almost', () => {
@@ -70,7 +70,7 @@ describe('rendering captured backend responses', () => {
 
     const conclusion = renderCaptured('finalization-timeout')
     expect(conclusion.textContent).toContain('No written explanation was saved')
-    expect(within(conclusion).getAllByRole('link').length).toBe(investigation.result?.finding.evidence_ids.length)
+    expect(within(conclusion).getAllByRole('button').length).toBe(investigation.result?.finding.evidence_ids.length)
   })
 
   it('describes a partial run without claiming fewer sources', () => {

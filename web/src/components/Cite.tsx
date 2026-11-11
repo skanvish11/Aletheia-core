@@ -1,82 +1,25 @@
-import { useId, useRef, type MouseEvent } from 'react'
-import { createPortal } from 'react-dom'
-import { evidenceAnchor, useEvidenceIndex } from '../evidenceIndex'
-import { RELATION_LABEL } from '../labels'
+import { EVIDENCE_PANE_ID, useEvidenceIndex, useEvidenceSelection } from '../evidenceIndex'
 
 /**
- * A numbered citation. Activating it opens a preview of the source and excerpt
- * (native popover: Esc and outside-click close it, focus returns to the link).
- * Without popover support it behaves as a plain link to the evidence entry.
+ * A numbered citation. Activating it shows that evidence in the evidence pane beside
+ * the report, so checking a source never leaves the page.
  */
 function Cite({ id }: { id: string }) {
   const entry = useEvidenceIndex().get(id)
-  const popoverId = useId()
-  const popover = useRef<HTMLDivElement>(null)
-
+  const { selected, select } = useEvidenceSelection()
   if (!entry) return <span className="cite cite-missing">[?]</span>
-  const { number, evidence, source } = entry
-
-  function open(event: MouseEvent<HTMLAnchorElement>) {
-    const el = popover.current
-    if (!el || typeof el.showPopover !== 'function') return // fall back to the anchor jump
-    event.preventDefault()
-    el.showPopover()
-    el.querySelector<HTMLElement>('.cite-preview-close')?.focus()
-  }
-
+  const { number, source } = entry
   return (
-    <>
-      <a
-        className="cite"
-        href={`#${evidenceAnchor(id)}`}
-        onClick={open}
-        aria-haspopup="dialog"
-        aria-label={`Source ${number}${source?.title ? `: ${source.title}` : ''}`}
-      >
-        {number}
-      </a>
-      {/* Portaled: citations sit inside <p>, which cannot contain block content. */}
-      {createPortal(
-      <div
-        ref={popover}
-        id={popoverId}
-        popover="auto"
-        role="dialog"
-        aria-label={`Source ${number}`}
-        className="cite-preview"
-      >
-        <div className="cite-preview-head">
-          <span className="evidence-number">{number}</span>
-          <div>
-            <p className="cite-preview-title">{source?.title ?? source?.url ?? 'Source'}</p>
-            <p className="meta">
-              {[evidence.assessment.publisher, source?.published_date].filter(Boolean).join(' · ')}
-            </p>
-          </div>
-          <button
-            type="button"
-            className="cite-preview-close"
-            popoverTarget={popoverId}
-            popoverTargetAction="hide"
-            aria-label="Close source preview"
-          >
-            ×
-          </button>
-        </div>
-        <p className="meta">{RELATION_LABEL[evidence.assessment.relation]}</p>
-        {evidence.excerpts.map((excerpt) => (
-          <blockquote key={excerpt.span_ids.join('-')}>{excerpt.text}</blockquote>
-        ))}
-        <a
-          href={`#${evidenceAnchor(id)}`}
-          onClick={() => popover.current?.hidePopover()}
-        >
-          View full evidence entry
-        </a>
-      </div>,
-      document.body,
-      )}
-    </>
+    <button
+      type="button"
+      className="cite"
+      aria-pressed={selected === id}
+      aria-controls={EVIDENCE_PANE_ID}
+      aria-label={`Show source ${number}${source?.title ? `: ${source.title}` : ''}`}
+      onClick={() => select(id, true)}
+    >
+      {number}
+    </button>
   )
 }
 

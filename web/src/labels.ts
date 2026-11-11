@@ -155,3 +155,17 @@ export function formatTime(iso: string | null): string {
   if (!iso) return '—'
   return new Date(iso).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })
 }
+
+/** A calendar date as YYYY-MM-DD in the reader's time zone, for the mono run line. */
+export function formatDate(iso: string | null): string | null {
+  if (!iso) return null
+  const d = new Date(iso)
+  const pad = (n: number) => String(n).padStart(2, '0')
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`
+}
+
+/** Time since the run's first step, as mm:ss, for the research log. */
+export function elapsed(iso: string, start: string): string {
+  const seconds = Math.max(0, Math.round((Date.parse(iso) - Date.parse(start)) / 1000))
+  return `${String(Math.floor(seconds / 60)).padStart(2, '0')}:${String(seconds % 60).padStart(2, '0')}`
+}
