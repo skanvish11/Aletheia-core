@@ -1,6 +1,6 @@
 # Phase one direct facts and comparisons
 
-Status: agreed direction; implementation and dataset creation have not started for this phase. Recorded 10 November 2026.
+Status: first implementation complete on the implementation branch; see [behavior, compatibility and validation](phase-one-implementation.md). Dataset creation and acceptance evaluation remain pending. Plan recorded 10 November 2026.
 
 Build reliable support for direct facts and direct comparisons before implementing causal, predictive, or other inferential research. The agent must preserve the submitted assertion, recognize the research method it needs, and return a result appropriate to its supported scope. Open a pull request when this first implementation and its required checks are complete. Complete the phase-one evaluation before moving to the next research method.
 
@@ -147,4 +147,4 @@ Count errors, unclassified outputs, and inappropriate clarification in the relev
 4. **Evaluate recognition and direct checking:** create and review the proposed dataset, freeze the splits and evaluation settings, run classification first, then the separately bounded evidence and direct-research evaluations. Link the resulting evidence to the implementation PR or a focused follow-up. Keep evaluation failures visible and repair against development cases.
 5. **Advance only after phase-one acceptance:** review the measured results and limitations before starting the next research method. The first PR is an implementation milestone, not automatic permission to claim broad research capability.
 
-Current step: documentation and evidence handoff PR. Phase-one implementation remains separate, and no 1,000-claim dataset has been generated.
+Current step: a separate implementation PR follows the documentation/evidence handoff. No 1,000-claim dataset has been generated; acceptance evaluation remains pending.

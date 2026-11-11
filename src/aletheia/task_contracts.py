@@ -5,12 +5,14 @@ from typing import Annotated, Literal
 from pydantic import Field
 
 from aletheia import research_contracts as saved
+from aletheia.phase_one_contracts import ClaimAnalysis, ComponentId, RecordedValue
 
 Brief = Annotated[str, Field(strict=True, min_length=1, max_length=300)]
 Label = Annotated[str, Field(strict=True, min_length=1, max_length=160)]
 
 
 class ClaimPlan(saved.ClaimPlan):
+    analysis: ClaimAnalysis
     clarification_reason: (
         Literal["missing_scope", "compound", "non_factual", "factual_uncertainty"] | None
     )
@@ -27,6 +29,8 @@ class ProposedFlag(saved.ProposedFlag):
 
 
 class Assessment(saved.Assessment):
+    component_id: ComponentId
+    values: Annotated[list[RecordedValue], Field(max_length=2)]
     citation: Citation
     synthesis_coverage: Brief | None
     publisher: Label | None
@@ -41,7 +45,7 @@ class Assessment(saved.Assessment):
 
 
 class AssessmentBatch(saved.AssessmentBatch):
-    assessments: Annotated[list[Assessment], Field(max_length=3)]
+    assessments: Annotated[list[Assessment], Field(max_length=8)]
 
 
 class ExplanationUnit(saved.ExplanationUnit):

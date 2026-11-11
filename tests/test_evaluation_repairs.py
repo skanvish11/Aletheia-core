@@ -157,7 +157,7 @@ async def test_oversized_generation_gets_one_repair_and_keeps_citations(settings
             if name == schema:
                 self.count += 1
                 if self.count == 1:
-                    value[field] *= 4
+                    value[field] *= 9
             return value
 
     providers = Verbose()
@@ -250,5 +250,13 @@ async def test_final_semantic_rejection_is_auditable(settings, options, reason):
         assert saved["status"] == "failed" and saved["result"] is None
         events = await app.state.storage.events(UUID(saved["id"]))
         assert any(
-            e.type == "task_output_rejected" and e.payload.get("reason") == reason for e in events
+            e.type == "task_output_rejected"
+            and (
+                reason in e.payload.get("failed_conditions", "")
+                or (
+                    reason == "unsupported_correction"
+                    and "corrected_claim_supported" in e.payload.get("failed_conditions", "")
+                )
+            )
+            for e in events
         )

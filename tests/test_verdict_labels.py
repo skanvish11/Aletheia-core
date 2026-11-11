@@ -116,8 +116,14 @@ async def test_invalid_correction_has_one_repair_then_fails(settings, defect):
     [
         {"relation": "mixed", "source_count": 2},
         {"relation": "supports"},
-        {"relation": "context", "deep": True},
-        {"relation": "context", "deep": True, "independent": True, "source_count": 2},
+        {"relation": "context", "deep": True, "authoritative": False},
+        {
+            "relation": "context",
+            "deep": True,
+            "independent": True,
+            "source_count": 2,
+            "authoritative": False,
+        },
     ],
 )
 async def test_almost_cannot_bypass_conflict_truth_or_per_part_evidence_bar(settings, options):
@@ -140,10 +146,9 @@ async def test_deadline_before_correction_check_never_publishes_candidate(settin
     providers = Providers(relation="contradicts", almost=True)
     async with running(settings, providers, budget_factory=CheckDeadline) as (_, client):
         saved = await submit(client)
-        assert saved["status"] == "partial"
-        assert saved["result"]["verdict"] == "false"
-        assert saved["result"]["almost_correction"] is None
-        assert saved["result"]["explanation"] == []
+        assert saved["status"] == "failed"
+        assert saved["result"] is None
+        assert saved["stop_reason"] == "deadline_exceeded"
         assert not any(name == "ExplanationCheck" for name, _ in providers.model_inputs)
 
 

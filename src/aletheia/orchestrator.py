@@ -5,15 +5,17 @@ from dataclasses import asdict
 from aletheia.budgets import RunBudget
 from aletheia.claims import interpret, route
 from aletheia.comparison import compare
+from aletheia.diagnostics import save_final_check
+from aletheia.phase_one_contracts import SavedAnalysis, UnsupportedMethod
 from aletheia.planning import plan_search, query_key
 from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.research import gather, refresh_sources
 from aletheia.research_contracts import Evidence, InvestigationResult, Snapshot
 from aletheia.research_gate import evaluate, planning_context
 from aletheia.tasks import PROMPT_VERSION, InvalidTask, Tasks
-from aletheia.verdicts import finding, synthesize
+from aletheia.verdicts import SemanticRejection, finding, synthesize
 
-APPLICATION_VERSION = "research-v4.4"
+APPLICATION_VERSION = "direct-research-v1"
 MAX_FOLLOWUP_ROUNDS = 2
 
 
@@ -63,6 +65,11 @@ class Pipeline:
             },
         )
         tasks = Tasks(self.model, budget, emit)
+
+        async def save_diagnostic(record):
+            await save_final_check(self.storage.path, record)
+
+        tasks.save_diagnostic = save_diagnostic
         sources, evidence, seen, seen_urls = [], [], set(), set()
         limitations = []
         plan = None
@@ -72,6 +79,11 @@ class Pipeline:
         try:
             await emit("stage_started", {"stage": "interpreting"}, stage="interpreting")
             plan = await interpret(tasks, investigation)
+            await self.storage.save_records(
+                investigation.id,
+                "claim_analysis",
+                [SavedAnalysis(original_claim=investigation.claim, analysis=plan.analysis)],
+            )
             if plan.questions:
                 await budget.observe(
                     "clarification_decision",
@@ -85,13 +97,23 @@ class Pipeline:
                 )
                 return
             assertion = plan.assertions[0]
-            if assertion.kind in {"predictive", "value"}:
+            if not plan.analysis.supported:
                 await self.storage.finish(
                     investigation.id,
-                    status="needs_clarification",
-                    questions=[
-                        "Please submit a factual claim checkable against existing evidence."
-                    ],
+                    status="completed",
+                    stop_reason="unsupported_method",
+                    method_limitation=UnsupportedMethod(
+                        original_claim=investigation.claim,
+                        analysis=plan.analysis,
+                        explanation="This claim requires "
+                        + plan.analysis.required_method.replace("_", " ")
+                        + ". Phase one supports direct records and compatible comparisons. "
+                        + (
+                            "Split the independent propositions before submitting them separately."
+                            if plan.analysis.primary_type == "mixed"
+                            else "No truth verdict was assigned."
+                        ),
+                    ),
                 )
                 return
             await emit("claim_interpreted", {"assertion_id": assertion.id})
@@ -224,7 +246,7 @@ class Pipeline:
             await self.storage.finish(
                 investigation.id,
                 status="failed",
-                stop_reason="provider_failure",
+                stop_reason="invalid_task_output",
                 error="Research output failed validation; no factual verdict was published.",
             )
             return
@@ -237,6 +259,22 @@ class Pipeline:
         limitations.extend(note for s in sources for note in s.limitations)
         limitations.extend(note for e in evidence for note in e.assessment.limitations)
         events = await self.storage.events(investigation.id)
+        if any(e.type in {"assessment_rejected", "search_incomplete"} for e in events):
+            partial = True
+            stop_reason = (
+                "invalid_task_output"
+                if any(e.type == "assessment_rejected" for e in events)
+                else "provider_failure"
+            )
+            if stop_reason == "provider_failure":
+                stopped = next(
+                    e.payload["reason"] for e in reversed(events) if e.type == "search_incomplete"
+                )
+                if stopped in {"budget_exhausted", "deadline_exceeded"}:
+                    stop_reason = stopped
+            limitations.append(
+                "Some planned evidence checks could not be completed; coverage is incomplete."
+            )
         if any(e.type == "source_rejected" for e in events):
             limitations.append("Some selected pages were unavailable or exceeded the text limit.")
         if any(e.type == "sources_deferred" for e in events):
@@ -260,20 +298,37 @@ class Pipeline:
                         error="A research provider could not finalize the investigation.",
                     )
                     return
-                # The policy finding is already valid, but no unchecked generated prose is saved.
+                if computed.verdict is not None:
+                    await self.storage.finish(
+                        investigation.id,
+                        status="failed",
+                        stop_reason=exc.code.value,
+                        error="Final validation did not finish; no verdict was published.",
+                    )
+                    return
                 partial, stop_reason = True, exc.code.value
                 limitations.append(
                     "The explanation could not be finalized within the investigation limits."
                 )
-            except InvalidTask:
+            except InvalidTask as exc:
                 await self.storage.finish(
                     investigation.id,
                     status="failed",
-                    stop_reason="provider_failure",
+                    stop_reason="semantic_rejection"
+                    if isinstance(exc, SemanticRejection)
+                    else "invalid_task_output",
                     error="Final explanation failed validation; no factual verdict was published.",
                 )
                 return
         else:
+            if computed.verdict is not None:
+                await self.storage.finish(
+                    investigation.id,
+                    status="failed",
+                    stop_reason="deadline_exceeded",
+                    error="Final validation did not finish; no verdict was published.",
+                )
+                return
             partial, stop_reason = True, "deadline_exceeded"
             limitations.append("The hard deadline prevented a generated explanation.")
         limitations.extend(computed.limitations)

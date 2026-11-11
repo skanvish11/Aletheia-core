@@ -188,7 +188,9 @@ async def test_refresh_reserves_old_evidence_and_fresh_search_slots(settings):
 
 
 async def test_conflict_takes_priority_over_retrieval_gap_and_can_stop_honestly(settings):
-    providers = RoundProviders([[{}, {"relation": "contradicts"}, {"error": True}]], deep=True)
+    providers = RoundProviders(
+        [[{}, {"relation": "contradicts"}, {"error": True}]], deep=True, authoritative=False
+    )
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
         assert saved["status"] == "completed", saved
@@ -215,6 +217,7 @@ async def test_counterevidence_in_followup_prevents_true_even_with_more_support(
             [independent("three")],
         ],
         deep=True,
+        authoritative=False,
     )
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
@@ -234,7 +237,9 @@ async def test_counterevidence_in_followup_prevents_true_even_with_more_support(
 
 async def test_large_source_lists_leave_capacity_for_two_followups_and_finalization(settings):
     shared = {"independence": "shared", "origin": "One underlying report"}
-    providers = RoundProviders([[shared] * 5, [shared] * 5, [shared] * 5], deep=True)
+    providers = RoundProviders(
+        [[shared] * 5, [shared] * 5, [shared] * 5], deep=True, authoritative=False
+    )
     async with running(settings, providers) as (app, client):
         saved = await submit(client)
         assert saved["status"] == "partial", saved
@@ -257,7 +262,7 @@ async def test_no_followup_planning_when_no_pages_can_be_extracted(settings):
             super().escalate()
             self.extraction_attempts = 2
 
-    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True)
+    providers = RoundProviders([[{}, {}], [independent("new")]], deep=True, authoritative=False)
     async with running(settings, providers, budget_factory=TwoPages) as (_, client):
         saved = await submit(client)
         assert saved["status"] == "partial"
@@ -275,7 +280,7 @@ async def test_repeated_followup_queries_are_repaired_once_then_fail_without_sea
                 value["queries"][0]["text"] = " ARCHIVE   RECORD 0 "
             return value
 
-    providers = Repeating(deep=True, followups=True)
+    providers = Repeating(deep=True, followups=True, authoritative=False)
     async with running(settings, providers) as (_, client):
         saved = await submit(client)
         assert saved["status"] == "failed"

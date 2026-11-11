@@ -8,12 +8,15 @@ def query_key(text):
     return " ".join(text.casefold().split())
 
 
-def validate_plan(plan, seen, initial):
+def validate_plan(plan, seen, initial, capacity=3):
+    if len(plan.queries) > max(0, capacity):
+        raise TaskValidationError("query_capacity")
     keys = [query_key(q.text) for q in plan.queries]
     if any(not key or key in seen for key in keys) or len(set(keys)) != len(keys):
         raise TaskValidationError("query_identity")
     if (
         initial
+        and capacity >= 2
         and plan.queries
         and not {"support", "contradiction"} <= {q.purpose for q in plan.queries}
     ):
@@ -48,5 +51,7 @@ async def plan_search(tasks, assertion, route, seen, gap=None, evidence_context=
             "evidence_context": evidence_context or {"summaries": [], "omitted_assessments": 0},
         },
         SearchPlan,
-        lambda value: validate_plan(value, seen, gap is None),
+        lambda value: validate_plan(
+            value, seen, gap is None, tasks.budget.search_attempts - tasks.budget.used["search"]
+        ),
     )

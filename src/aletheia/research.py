@@ -2,6 +2,7 @@
 
 from aletheia.evidence import canonical_url, snapshot
 from aletheia.providers.errors import ErrorCode, ProviderError
+from aletheia.tasks import InvalidTask
 from aletheia.verification import assess
 
 
@@ -56,8 +57,15 @@ async def gather(
             {"query": query.text, "purpose": query.purpose, "query_id": query_id},
             stage="searching",
         )
-        with tasks.budget.tracing(query_id=query_id):
-            result = await search.search(query.text, budget=tasks.budget, max_results=5)
+        try:
+            with tasks.budget.tracing(query_id=query_id):
+                result = await search.search(query.text, budget=tasks.budget, max_results=5)
+        except ProviderError as exc:
+            if not batches:
+                raise
+            # A retry may exhaust capacity even after a valid plan. Preserve completed searches.
+            await tasks.emit("search_incomplete", {"reason": exc.code.value}, stage="searching")
+            break
         await tasks.emit(
             "search_completed",
             {"query": query.text, "query_id": query_id, "result_count": str(len(result.results))},
@@ -174,7 +182,9 @@ async def gather(
         )
         source.limitations.extend(page.limitations)
         if len(source.spans) > 120 or sum(len(s.text) for s in source.spans) > 12000:
-            source.limitations.append("Only the first bounded set of source spans was assessed.")
+            source.limitations.append(
+                "Only a relevant bounded selection of source spans was assessed."
+            )
         duplicate = any(s.content_hash == source.content_hash for s in sources)
         await storage.save_records(run_id, "snapshot", [source])
         sources.append(source)
@@ -191,7 +201,19 @@ async def gather(
         if duplicate:
             continue
         await tasks.emit("stage_started", {"stage": "verifying"}, stage="verifying")
-        checked, gap = await assess(tasks, assertion, source)
+        try:
+            checked, gap = await assess(tasks, assertion, source)
+        except InvalidTask:
+            await tasks.emit(
+                "assessment_rejected",
+                {
+                    "snapshot_id": source.id,
+                    "reason": "invalid_task_output",
+                },
+                stage="verifying",
+            )
+            gaps.append("A selected source assessment failed validation; coverage is incomplete.")
+            continue
         await storage.save_records(run_id, "evidence", checked)
         evidence.extend(checked)
         for item in checked:

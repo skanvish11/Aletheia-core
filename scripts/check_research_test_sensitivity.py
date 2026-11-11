@@ -10,10 +10,24 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "missing component incorrectly becomes True",
+        "verdicts.py",
+        'elif states == {"supported"}:',
+        'elif "supported" in states:',
+        "tests/test_phase_one.py::test_missing_component_cannot_become_true",
+    ),
+    (
+        "comparison arithmetic is reversed",
+        "direct.py",
+        "result = getattr(operator, spec.operator)(a, b)",
+        "result = getattr(operator, spec.operator)(b, a)",
+        "tests/test_phase_one.py::test_comparison_can_join_separate_sources_but_each_operand_needs_evidence",
+    ),
+    (
         "diagnostic storage failure replaces a successful provider result",
         "diagnostics.py",
-        "except Exception:",
-        "except LookupError:",
+        "except Exception:\n        # Never log",
+        "except LookupError:\n        # Never log",
         "tests/test_pr18_reliability.py::test_diagnostic_failure_preserves_provider_result_and_error[200-StorageError]",
     ),
     (
@@ -96,8 +110,8 @@ MUTATIONS = (
     (
         "Almost semantic correction check bypassed",
         "verdicts.py",
-        "        if not all(\n",
-        "        if False and not all(\n",
+        "if not getattr(check, name)",
+        "if False",
         "tests/test_verdict_labels.py::test_each_failed_correction_check_prevents_almost[corrected_claim_supported]",
     ),
     (
