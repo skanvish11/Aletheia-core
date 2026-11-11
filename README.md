@@ -6,6 +6,8 @@ An evidence-first research agent that investigates factual claims, shows its wor
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.
 
+The [backend search diagnosis and experiment discussion](docs/backend-search-discussion-20261111.md) records the November 10–11 Phase 1 investigation, experimental results, remaining failures, and the latest evidence-selection work. It is a dated discussion record, not a change to the implementation status above.
+
 ## 1. Product contract
 
 Input: one factual claim, with optional context. The full design supports up to three separately checkable assertions; the minimum demo can restrict inputs to one assertion and explicitly request that compound claims be split (see the cut line in section 11).
