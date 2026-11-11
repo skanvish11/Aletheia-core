@@ -1,0 +1,33 @@
+{
+  "reviewer": "Codex agent inspection; not independent human review",
+  "scope": "All three completed pilot outputs inspected after the fixed baseline.",
+  "observations": [
+    {
+      "id": "b0008",
+      "issues": [
+        "scope_omission",
+        "unsupported_citation"
+      ],
+      "details": "The submitted claim includes a World Health Assembly eradication date. Interpretation reduced it to Smallpox is caused by variola virus, leaving the disputed date in scope_note without checking it. One accepted evidence excerpt is only a Wikipedia Virology navigation link. FDA evidence supports the cause, but not the omitted date.",
+      "artifact": "b0008/b0008.json"
+    },
+    {
+      "id": "b0011",
+      "issues": [
+        "overstated_source_independence"
+      ],
+      "details": "The main SHA-256 output-size claim is supported by the saved excerpts, but the explanation claims three independent sources. There are three evidence records from only two pages on one publisher, with independence marked unknown.",
+      "artifact": "b0011/b0011.json"
+    },
+    {
+      "id": "b0013",
+      "issues": [
+        "verdict_explanation_contradiction"
+      ],
+      "details": "The claim says May 1993 and the interpreted assertion retains that date. The verdict is True, but the explanation explicitly dates the public-domain release to April 30, 1993. No Almost correction is returned.",
+      "artifact": "b0013/b0013.json"
+    }
+  ],
+  "citation_support_precision": null,
+  "human_review_complete": false
+}

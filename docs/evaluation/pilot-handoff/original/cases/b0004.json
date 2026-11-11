@@ -1,0 +1,434 @@
+{
+  "id": "b0004",
+  "live": true,
+  "investigation": {
+    "id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+    "claim": "Microbial life exists beneath the present-day ice shell of Europa.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": null,
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:47:01.795118Z",
+    "started_at": "2026-11-10T04:47:01.796341Z",
+    "finished_at": "2026-11-10T04:47:04.254388Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Research output failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "events": "/investigations/e5d166f9-a23f-4d26-a9f3-4a242c96852f/events",
+      "evidence": "/investigations/e5d166f9-a23f-4d26-a9f3-4a242c96852f/evidence",
+      "comparison": "/investigations/e5d166f9-a23f-4d26-a9f3-4a242c96852f/comparison",
+      "refresh": "/investigations/e5d166f9-a23f-4d26-a9f3-4a242c96852f/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:47:01.795118Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:47:01.796341Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:47:01.797238Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:47:01.798009Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:47:01.798827Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "94"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:47:01.799926Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5076"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:47:03.099725Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.699",
+        "hard_remaining_seconds": "118.699",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5076",
+        "elapsed_seconds": "1.298",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1612"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:47:03.102382Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.696",
+        "hard_remaining_seconds": "118.696",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "clarification_shape",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "730",
+        "elapsed_seconds": "1.303",
+        "finish_reason": "stop",
+        "prompt_tokens": "779",
+        "completion_tokens": "166",
+        "total_tokens": "945"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:47:03.104583Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "interpret",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:47:03.106540Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.691",
+        "hard_remaining_seconds": "118.691",
+        "attempt": "2",
+        "input_chars": "94"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:47:03.109645Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.688",
+        "hard_remaining_seconds": "118.688",
+        "provider_call_id": "p3",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5259"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:47:04.247800Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.551",
+        "hard_remaining_seconds": "117.551",
+        "provider_call_id": "p3",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5259",
+        "elapsed_seconds": "1.135",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1586"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:47:04.250537Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.547",
+        "hard_remaining_seconds": "117.547",
+        "attempt": "2",
+        "outcome": "invalid_task_output",
+        "validation_code": "clarification_shape",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "704",
+        "elapsed_seconds": "1.144",
+        "finish_reason": "stop",
+        "prompt_tokens": "810",
+        "completion_tokens": "159",
+        "total_tokens": "969"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:47:04.252626Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "interpret",
+        "attempt": "2"
+      }
+    },
+    {
+      "investigation_id": "e5d166f9-a23f-4d26-a9f3-4a242c96852f",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:47:04.254388Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 2.5919639999992796,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.296
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.133
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2976920000000973,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.135071708002215,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

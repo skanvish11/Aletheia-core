@@ -1,0 +1,4068 @@
+{
+  "id": "b0027",
+  "live": true,
+  "investigation": {
+    "id": "82bb47c2-ae64-428d-a30e-60b533469709",
+    "claim": "The United States Constitution sets a six-year term for members of the House of Representatives.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:35:10.397366Z",
+    "started_at": "2026-11-10T05:35:10.398627Z",
+    "finished_at": "2026-11-10T05:35:59.444868Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/82bb47c2-ae64-428d-a30e-60b533469709",
+      "events": "/investigations/82bb47c2-ae64-428d-a30e-60b533469709/events",
+      "evidence": "/investigations/82bb47c2-ae64-428d-a30e-60b533469709/evidence",
+      "comparison": "/investigations/82bb47c2-ae64-428d-a30e-60b533469709/comparison",
+      "refresh": "/investigations/82bb47c2-ae64-428d-a30e-60b533469709/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "url": "https://en.wikipedia.org/wiki/United_States_House_of_Representatives",
+        "canonical_url": "https://en.wikipedia.org/wiki/United_States_House_of_Representatives",
+        "title": "United States House of Representatives - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:20.528153Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "aafee8ac57463eaaa17f57d97af04fb165b1e792ccd5087566a4507359e67ed8",
+        "duplicate_group": "aafee8ac57463eaaa17f57d97af04fb165b1e792ccd5087566a4507359e67ed8",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "url": "https://www.ncsl.org/about-state-legislatures/legislative-term-limits-an-overview",
+        "canonical_url": "https://www.ncsl.org/about-state-legislatures/legislative-term-limits-an-overview",
+        "title": "Legislative Term Limits: An Overview",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:25.799243Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "26259228ecec6f98a48dcb97fa3d52b884e92cc15aab00e2a2dd9b6e27ca7b2d",
+        "duplicate_group": "26259228ecec6f98a48dcb97fa3d52b884e92cc15aab00e2a2dd9b6e27ca7b2d",
+        "limitations": []
+      },
+      {
+        "id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "url": "https://termlimits.com/congress-term-length",
+        "canonical_url": "https://termlimits.com/congress-term-length",
+        "title": "How Long Are U.S. House and U.S. Senate Terms? - U.S. Term Limits",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:32.704130Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "ba79f1f3c86ab548c7d77de8bb6a5604d897e290ebc7707aca8709bc4a50c48b",
+        "duplicate_group": "ba79f1f3c86ab548c7d77de8bb6a5604d897e290ebc7707aca8709bc4a50c48b",
+        "limitations": []
+      },
+      {
+        "id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "url": "https://constitutionallawreporter.com/article-01-section-02",
+        "canonical_url": "https://constitutionallawreporter.com/article-01-section-02",
+        "title": "Article I, Section Two",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:43.763399Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "dbca0a77557787d870a450c97553d868ecb67dc03bb83445f0786fba10d91635",
+        "duplicate_group": "dbca0a77557787d870a450c97553d868ecb67dc03bb83445f0786fba10d91635",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "url": "https://www.law.cornell.edu/constitution-conan/article-1/section-3/clause-1/six-year-senate-terms",
+        "canonical_url": "https://www.law.cornell.edu/constitution-conan/article-1/section-3/clause-1/six-year-senate-terms",
+        "title": "Six-Year Senate Terms | U.S. Constitution Annotated | US Law | LII / Legal Information Institute",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:47.043995Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "291a948075728906aa981fdee91b479ee53ed960d5d6fd6ed86299abffb5738b",
+        "duplicate_group": "291a948075728906aa981fdee91b479ee53ed960d5d6fd6ed86299abffb5738b",
+        "limitations": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "362678ac-170f-4f31-b5ae-89ac5ca6d71f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+            "span_ids": [
+              112
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia article on United States House of Representatives",
+          "independence": "shared",
+          "provenance_span_ids": [
+            112
+          ],
+          "provenance_note": "List of language editions, no article content visible",
+          "rationale": "The Wikipedia page's span 112 (Occitan language edition header) indicates the article exists but provides no substantive content about term lengths; source truncated and language headers do not establish term length claims.",
+          "limitations": [
+            "Source truncated, only language edition headers visible"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "content",
+              "explanation": "Language edition headers do not convey article content about House term lengths"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              112
+            ],
+            "start": 13608,
+            "end": 13772,
+            "text": "* [Occitan](https://oc.wikipedia.org/wiki/Cambra_dels_Representants_dels_Estats_Units_d%27America \"Cambra dels Representants dels Estats Units d'America – Occitan\")",
+            "quote_hash": "9a5652ec715f87a5a459ef96a37910facb1788368dc8a006255197f3ad8ef059"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "805e57db-53e6-4a8e-b832-d704401d9aa0",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+            "span_ids": [
+              25,
+              26,
+              29,
+              34
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "National Conference of State Legislatures (NCSL) website",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            25,
+            26,
+            29,
+            34
+          ],
+          "provenance_note": "Spans 25, 26, 29 and 34 address term limits for state legislatures, not the U.S. House of Representatives term length.",
+          "rationale": "The source discusses term limits for state legislators across various U.S. states, with no mention of the U.S. House of Representatives term length. It states that 15 states have term limits for legislators (span 26) and describes term limit history and court rulings (spans 25, 29, 34).",
+          "limitations": [
+            "No information about U.S. Congressional terms",
+            "Focuses on state legislative term limits only",
+            "Does not define or reference U.S. House term length"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "jurisdiction",
+              "explanation": "Covers only state legislatures, not U.S. Congress"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              25,
+              26
+            ],
+            "start": 2141,
+            "end": 2432,
+            "text": "Subsequently, 18 other states adopted term limits, but in four - Massachusetts, Oregon, Washington and Wyoming- term limits were thrown out by the state supreme courts, and they have been repealed by the legislatures in Idaho and Utah. That leaves 15 states with term limits for legislators.",
+            "quote_hash": "cedb4715e6788503c6119621be9e7e1239297544eeea85ee5ceaa6e63fa3fb3c"
+          },
+          {
+            "span_ids": [
+              29
+            ],
+            "start": 2550,
+            "end": 2731,
+            "text": "Term limits have been changed occasionally; most recently, Arkansas extended its term limits from six years in the House and eight years in the Senate to a 16 year cumulative total.",
+            "quote_hash": "8bb2d4d5417815b7c452886f5d4af885b90e986a243267600198d2a668b88af8"
+          },
+          {
+            "span_ids": [
+              34
+            ],
+            "start": 2960,
+            "end": 3169,
+            "text": "The tempo increased dramatically in 1998 when time ran out for another 204 members in both chambers in California, Colorado and Maine, the Missouri Senate, and the Arkansas, Michigan and Oregon House chambers.",
+            "quote_hash": "207ca6ea28053e7db8a8b2804bafb3d7604fb1b86bf19d120636df2fcde575f0"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "07576501-f0b3-4879-a56a-a4476289338c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+            "span_ids": [
+              11,
+              13,
+              14
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "termlimits.com",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            11,
+            13,
+            14
+          ],
+          "provenance_note": "Source is a term-limits advocacy site, not an official constitutional reference.",
+          "rationale": "The source explicitly states U.S. House members serve two-year terms, and references Article I, Sections 2 and 3 of the U.S. Constitution as the establishment of House and Senate term lengths. This directly contradicts the claim that the Constitution sets a six-year term for House members.",
+          "limitations": [
+            "Source is an advocacy organization, not an official constitutional source.",
+            "Does not provide the full constitutional text.",
+            "Term limits advocacy framing may bias presentation."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "term_length",
+              "explanation": "Source distinguishes House (two-year) from Senate (six-year) terms, directly opposing the claim."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 545,
+            "end": 668,
+            "text": "**U.S. House members serve two-year terms. U.S. senators serve six-year terms. Neither chamber currently has term limits.**",
+            "quote_hash": "c2257a7ca85f1f68dd57b4df035e9bc6f98a3fab327e3588ca13a223cd389373"
+          },
+          {
+            "span_ids": [
+              13,
+              14
+            ],
+            "start": 735,
+            "end": 903,
+            "text": "House and Senate term lengths are established in [Article I, Sections 2 and 3 of the U.S. Constitution](https://www.archives.gov/founding-docs/constitution-transcript).",
+            "quote_hash": "c1045b168cf57b7c728bd516d0c7eb95475e9def013d651da021075dd993d3b3"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "904c444b-2d16-43d8-8381-f9282757579a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+            "span_ids": [
+              122,
+              123
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            122,
+            123
+          ],
+          "provenance_note": "Explicit text of Article I, Section 2 states House members chosen every second year; six-year term contradicts this explicit provision.",
+          "rationale": "Article I, Section 2 explicitly states House members chosen every second Year, directly contradicting the claim of a six-year term.",
+          "limitations": [
+            "Source is a blog-style compilation with potential truncation and navigational clutter, not an official constitutional text"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "term_length",
+              "explanation": "Claim asserts six-year term for House; source establishes two-year term per constitutional text."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              122,
+              123
+            ],
+            "start": 9688,
+            "end": 9977,
+            "text": "Text of Article 1, Section 2:\n\nThe House of Representatives shall be composed of Members chosen every second Year by the People of the several States, and the Electors in each State shall have the Qualifications requisite for Electors of the most numerous Branch of the State Legislature. ",
+            "quote_hash": "d0df7749fd6313657a9fe250bba0460b51e2709d16af2033ede54b3619d0a01d"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "6b2ad59b-657e-4837-9ef0-a9165e6ffafe",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+            "span_ids": [
+              124
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            124
+          ],
+          "provenance_note": "Additional qualification clause for Representatives (age 25, 7 years citizenship, state inhabitant) provided but does not address term length.",
+          "rationale": "Span 124 lists qualification requirements but does not mention term length; provides contextual qualifications only.",
+          "limitations": [
+            "Term length not addressed in this span"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              124
+            ],
+            "start": 9981,
+            "end": 10224,
+            "text": "No Person shall be a Representative who shall not have attained to the Age of twenty five Years, and been seven Years a Citizen of the United States, and who shall not, when elected, be an Inhabitant of that State in which he shall be chosen. ",
+            "quote_hash": "a4604b8e1332377efe06714293d3c135ef07d20afb41a3b3310afdc11e039a5c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "13ec45ce-ca5f-4e4f-a380-631a9f4a1595",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+            "span_ids": [
+              7,
+              13
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            7,
+            13
+          ],
+          "provenance_note": "Spans 7 and 13 describe Senate six-year terms; span 13 explicitly corrects that House terms are two years, not six.",
+          "rationale": "The assertion that 'The United States Constitution sets a six-year term for members of the House of Representatives' is contradicted by span 13, which states the Framers reduced a proposed seven-year Senate term to six years, while the House term is two years (implied by span 19). Span 7 confirms '6",
+          "limitations": [
+            "Spans do not explicitly enumerate the House term length in a single sentence, requiring inference from context."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "chamber",
+              "explanation": "The source addresses Senate terms (six years) but does not set the House term; the claim incorrectly assigns six-year terms to the House."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              7
+            ],
+            "start": 549,
+            "end": 719,
+            "text": "The Senate of the United States shall be composed of two Senators from each State, chosen by the Legislature thereof, for six Years; and each Senator shall have one Vote.",
+            "quote_hash": "13898a72a9cc8fc1f29fad9407557c0299434a2d00824b8370d618ad57143419"
+          },
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 1848,
+            "end": 2050,
+            "text": "Max Farrand, The Framing of the Constitution 76 (1913). the Framers reduced the seven-year Senate term, which had been discussed in conjunction with the three-year House term, to six years. *Id.* at 91.",
+            "quote_hash": "df4efa6ce6a4d1e2175b6e0a6bc68278a9a7e007c788403e36751f5d133b71be"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "d0f67928-02c5-4984-a671-10c095e0fa03",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+            "span_ids": [
+              19
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Span 19 discusses the balance between the six-year Senate term and two-year House term as intentional design; the six-year term applies to Senators, not Representatives.",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            19
+          ],
+          "provenance_note": "Span 19 contextualizes the six-year Senate term relative to the two-year House term but does not define either term's legal text.",
+          "rationale": "Span 19 confirms a two-year House term in contrast to the six-year Senate term, providing context that corrects the assertion's chamber assignment.",
+          "limitations": [
+            "Does not quote constitutional text establishing the House term."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "chamber",
+              "explanation": "Contextualizes the six-year Senate term but does not establish the House term in the constitutional text."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              19
+            ],
+            "start": 3779,
+            "end": 4044,
+            "text": "Commentators have viewed the six-year Senate term and two-year House term as striking a careful balance between institutional stability provided by a longer Senate term and legislative responsiveness provided by shorter House terms punctuated by frequent elections.",
+            "quote_hash": "4f33f508a73d12f8beba21c29e393892aa7efc5a4196137037fb2de89f072ee1"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "eec0ef15-72d9-4a56-9820-b240526fd9a3",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+            "span_ids": [
+              13
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            13
+          ],
+          "provenance_note": "Span 13 explicitly states the Framers reduced the Senate term to six years, referencing the House term separately.",
+          "rationale": "Span 13 identifies the six-year term for Senators and the separate two-year House term, directly contradicting the assertion that the House term is six years.",
+          "limitations": [
+            "Historical context about term reductions; does not quote the final constitutional text for the House."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "chamber",
+              "explanation": "Focuses on the Senate term reduction; the House term length is mentioned only as a comparative element."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 1848,
+            "end": 2050,
+            "text": "Max Farrand, The Framing of the Constitution 76 (1913). the Framers reduced the seven-year Senate term, which had been discussed in conjunction with the three-year House term, to six years. *Id.* at 91.",
+            "quote_hash": "df4efa6ce6a4d1e2175b6e0a6bc68278a9a7e007c788403e36751f5d133b71be"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:35:10.397366Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:35:10.398627Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:35:10.400703Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:35:10.401715Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:35:10.402441Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "attempt": "1",
+        "input_chars": "124"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:35:10.403499Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.996",
+        "hard_remaining_seconds": "119.996",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5801"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:35:11.692542Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.708",
+        "hard_remaining_seconds": "118.708",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5801",
+        "elapsed_seconds": "1.287",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1278"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:35:11.694698Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.706",
+        "hard_remaining_seconds": "118.706",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "402",
+        "elapsed_seconds": "1.292",
+        "finish_reason": "stop",
+        "prompt_tokens": "896",
+        "completion_tokens": "102",
+        "total_tokens": "998"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:35:11.696256Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:35:11.697718Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:35:11.699020Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:35:11.700363Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.700",
+        "hard_remaining_seconds": "238.700",
+        "attempt": "1",
+        "input_chars": "490"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:35:11.702511Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.698",
+        "hard_remaining_seconds": "238.698",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3515"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:35:12.598581Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.804",
+        "hard_remaining_seconds": "237.804",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3515",
+        "elapsed_seconds": "0.893",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1436"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:35:12.601907Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.799",
+        "hard_remaining_seconds": "237.799",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "546",
+        "elapsed_seconds": "0.901",
+        "finish_reason": "stop",
+        "prompt_tokens": "600",
+        "completion_tokens": "127",
+        "total_tokens": "727"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:35:12.604104Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "United States House of Representatives term length constitutional term years",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:35:12.605589Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.795",
+        "hard_remaining_seconds": "237.795",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:35:14.895128Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.507",
+        "hard_remaining_seconds": "235.507",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284",
+        "elapsed_seconds": "2.286",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8790"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:35:14.898286Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "United States House of Representatives term length constitutional term years",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:35:14.900531Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "US Constitution Article I Section 2 House Representatives term length two years",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:35:14.902282Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.498",
+        "hard_remaining_seconds": "235.498",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:35:17.906944Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.493",
+        "hard_remaining_seconds": "232.493",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287",
+        "elapsed_seconds": "3.003",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7552"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:35:17.908112Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "US Constitution Article I Section 2 House Representatives term length two years",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:35:17.909058Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "House of Representatives term limits constitutional amendment history",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:35:17.909839Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.490",
+        "hard_remaining_seconds": "232.490",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "277"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:35:20.039355Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.362",
+        "hard_remaining_seconds": "230.362",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "277",
+        "elapsed_seconds": "2.127",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10909"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:35:20.042109Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "House of Representatives term limits constitutional amendment history",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:35:20.044362Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:35:20.046302Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://en.wikipedia.org/wiki/United_States_House_of_Representatives",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:35:20.047968Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:35:20.049469Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.351",
+        "hard_remaining_seconds": "230.351",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "195"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:35:20.526382Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "184.875",
+        "hard_remaining_seconds": "229.875",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "195",
+        "elapsed_seconds": "0.474",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "426191"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:35:20.539728Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "url": "https://en.wikipedia.org/wiki/United_States_House_of_Representatives",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:35:20.541182Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:35:20.545863Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "184.855",
+        "hard_remaining_seconds": "229.855",
+        "attempt": "1",
+        "input_chars": "16951"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:35:20.549357Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "184.851",
+        "hard_remaining_seconds": "229.851",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29440"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:35:25.271532Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.129",
+        "hard_remaining_seconds": "225.129",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29440",
+        "elapsed_seconds": "4.720",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1988"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:35:25.274306Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.126",
+        "hard_remaining_seconds": "225.126",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1070",
+        "elapsed_seconds": "4.729",
+        "finish_reason": "stop",
+        "prompt_tokens": "9974",
+        "completion_tokens": "279",
+        "total_tokens": "10253"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:35:25.278076Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "362678ac-170f-4f31-b5ae-89ac5ca6d71f",
+        "snapshot_id": "62a659a3-3865-43b4-95ea-e5936bb37b5d",
+        "admissible": "true",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:35:25.279914Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://brainly.com/question/41549135",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:35:25.281745Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:35:25.283312Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.117",
+        "hard_remaining_seconds": "225.117",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "164"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:35:25.647829Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.754",
+        "hard_remaining_seconds": "224.754",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "164",
+        "elapsed_seconds": "0.362",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "206"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:35:25.650133Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://brainly.com/question/41549135",
+        "candidate_id": "c15",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:35:25.651939Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "url": "https://www.ncsl.org/about-state-legislatures/legislative-term-limits-an-overview",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:35:25.653684Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:35:25.655320Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.745",
+        "hard_remaining_seconds": "224.745",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "208"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:35:25.797758Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.604",
+        "hard_remaining_seconds": "224.604",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "208",
+        "elapsed_seconds": "0.139",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9753"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:35:25.803799Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "url": "https://www.ncsl.org/about-state-legislatures/legislative-term-limits-an-overview",
+        "candidate_id": "c17",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:35:25.805623Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:35:25.812265Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.590",
+        "hard_remaining_seconds": "224.590",
+        "attempt": "1",
+        "input_chars": "15589"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:35:25.816960Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.584",
+        "hard_remaining_seconds": "224.584",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27585"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:35:32.342577Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.058",
+        "hard_remaining_seconds": "218.058",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27585",
+        "elapsed_seconds": "6.524",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2263"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:35:32.344346Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.056",
+        "hard_remaining_seconds": "218.056",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1344",
+        "elapsed_seconds": "6.535",
+        "finish_reason": "stop",
+        "prompt_tokens": "7982",
+        "completion_tokens": "394",
+        "total_tokens": "8376"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:35:32.346730Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "805e57db-53e6-4a8e-b832-d704401d9aa0",
+        "snapshot_id": "1bef31a3-0fcf-4cc5-9867-fd61dde9d87d",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:35:32.348242Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "url": "https://termlimits.com/congress-term-length",
+        "slot": "4",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:35:32.349225Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:35:32.350366Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "173.050",
+        "hard_remaining_seconds": "218.050",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:35:32.702574Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.699",
+        "hard_remaining_seconds": "217.699",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.350",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2157"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:35:32.707994Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "url": "https://termlimits.com/congress-term-length",
+        "candidate_id": "c21",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:35:32.709792Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:35:32.713309Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.687",
+        "hard_remaining_seconds": "217.687",
+        "attempt": "1",
+        "input_chars": "3438"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:35:32.716997Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.684",
+        "hard_remaining_seconds": "217.684",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13173"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:35:35.010674Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.391",
+        "hard_remaining_seconds": "215.391",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13173",
+        "elapsed_seconds": "2.291",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2218"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:35:35.014492Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.386",
+        "hard_remaining_seconds": "215.386",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1299",
+        "elapsed_seconds": "2.301",
+        "finish_reason": "stop",
+        "prompt_tokens": "2855",
+        "completion_tokens": "346",
+        "total_tokens": "3201"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:35:35.017898Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "07576501-f0b3-4879-a56a-a4476289338c",
+        "snapshot_id": "7d290c6c-7e2e-4210-a007-563f30444cf9",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:35:35.019717Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:35:35.021620Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.379",
+        "hard_remaining_seconds": "215.379",
+        "attempt": "1",
+        "input_chars": "2453"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:35:35.023885Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.376",
+        "hard_remaining_seconds": "215.376",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5588"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:35:36.220982Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.179",
+        "hard_remaining_seconds": "214.179",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5588",
+        "elapsed_seconds": "1.196",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1484"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:35:36.222057Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.178",
+        "hard_remaining_seconds": "214.178",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "591",
+        "elapsed_seconds": "1.201",
+        "finish_reason": "stop",
+        "prompt_tokens": "1268",
+        "completion_tokens": "136",
+        "total_tokens": "1404"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:35:36.222977Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:35:36.223863Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:35:36.224745Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Original text of Article I Section 2 United States Constitution House of Representatives term length two years",
+        "purpose": "support",
+        "query_id": "q27"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:35:36.225524Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.174",
+        "hard_remaining_seconds": "214.174",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "318"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:35:38.846830Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.555",
+        "hard_remaining_seconds": "211.555",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "318",
+        "elapsed_seconds": "2.619",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8806"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:35:38.849929Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Original text of Article I Section 2 United States Constitution House of Representatives term length two years",
+        "query_id": "q27",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:35:38.852016Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Early congressional records or Federalist Papers confirming two-year term for House members",
+        "purpose": "support",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:35:38.853666Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.547",
+        "hard_remaining_seconds": "211.547",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:35:41.144538Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.258",
+        "hard_remaining_seconds": "209.258",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299",
+        "elapsed_seconds": "2.287",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6060"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:35:41.148007Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Early congressional records or Federalist Papers confirming two-year term for House members",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:35:41.150002Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Madison or Joseph Story Commentaries on Constitution regarding House term length",
+        "purpose": "context",
+        "query_id": "q31"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:35:41.151616Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.249",
+        "hard_remaining_seconds": "209.249",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "294"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:35:43.599309Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.803",
+        "hard_remaining_seconds": "206.803",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "294",
+        "elapsed_seconds": "2.444",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6305"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:35:43.602243Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Madison or Joseph Story Commentaries on Constitution regarding House term length",
+        "query_id": "q31",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:35:43.605049Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "12",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:35:43.606825Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "url": "https://constitutionallawreporter.com/article-01-section-02",
+        "slot": "1",
+        "query_ids": "q27",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:35:43.608715Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:35:43.610897Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.790",
+        "hard_remaining_seconds": "206.790",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "186"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:35:43.761513Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.640",
+        "hard_remaining_seconds": "206.640",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "186",
+        "elapsed_seconds": "0.147",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "16845"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:35:43.770358Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "url": "https://constitutionallawreporter.com/article-01-section-02",
+        "candidate_id": "c33",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:35:43.772090Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:35:43.776796Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.624",
+        "hard_remaining_seconds": "206.624",
+        "attempt": "1",
+        "input_chars": "18732"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:35:43.781904Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.620",
+        "hard_remaining_seconds": "206.620",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31539"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:35:46.895940Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "158.505",
+        "hard_remaining_seconds": "203.505",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31539",
+        "elapsed_seconds": "3.111",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2891"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:35:46.899701Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "158.501",
+        "hard_remaining_seconds": "203.501",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1933",
+        "elapsed_seconds": "3.123",
+        "finish_reason": "stop",
+        "prompt_tokens": "9780",
+        "completion_tokens": "525",
+        "total_tokens": "10305"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:35:46.903394Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "904c444b-2d16-43d8-8381-f9282757579a",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:35:46.905049Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "6b2ad59b-657e-4837-9ef0-a9165e6ffafe",
+        "snapshot_id": "2eaf375c-e2e1-4c8a-ab21-81bc9f1b32e2",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:35:46.907682Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c37",
+        "url": "https://www.law.cornell.edu/constitution-conan/article-1/section-3/clause-1/six-year-senate-terms",
+        "slot": "2",
+        "query_ids": "q31",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:35:46.909610Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:35:46.911497Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c37",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.489",
+        "hard_remaining_seconds": "203.489",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:35:47.042929Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c37",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.357",
+        "hard_remaining_seconds": "203.357",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224",
+        "elapsed_seconds": "0.130",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7641"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:35:47.046615Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "url": "https://www.law.cornell.edu/constitution-conan/article-1/section-3/clause-1/six-year-senate-terms",
+        "candidate_id": "c37",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:35:47.047805Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:35:47.050567Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.349",
+        "hard_remaining_seconds": "203.349",
+        "attempt": "1",
+        "input_chars": "10462"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:35:47.052662Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.347",
+        "hard_remaining_seconds": "203.347",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20873"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:35:50.834367Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.567",
+        "hard_remaining_seconds": "199.567",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20873",
+        "elapsed_seconds": "3.779",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4347"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:35:50.837582Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.563",
+        "hard_remaining_seconds": "199.563",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3320",
+        "elapsed_seconds": "3.787",
+        "finish_reason": "stop",
+        "prompt_tokens": "5125",
+        "completion_tokens": "901",
+        "total_tokens": "6026"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:35:50.841377Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "13ec45ce-ca5f-4e4f-a380-631a9f4a1595",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:35:50.843234Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "d0f67928-02c5-4984-a671-10c095e0fa03",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:35:50.845226Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "eec0ef15-72d9-4a56-9820-b240526fd9a3",
+        "snapshot_id": "82803257-cbce-4963-896d-d916d6d5e44a",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:35:50.847104Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:35:50.848713Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.551",
+        "hard_remaining_seconds": "199.551",
+        "attempt": "1",
+        "input_chars": "5436"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:35:50.851188Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.549",
+        "hard_remaining_seconds": "199.549",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8735"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:35:51.880291Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.521",
+        "hard_remaining_seconds": "198.521",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8735",
+        "elapsed_seconds": "1.026",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1491"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:35:51.883099Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.517",
+        "hard_remaining_seconds": "198.517",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "598",
+        "elapsed_seconds": "1.034",
+        "finish_reason": "stop",
+        "prompt_tokens": "2359",
+        "completion_tokens": "147",
+        "total_tokens": "2506"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:35:51.884886Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:35:51.886415Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:35:51.888021Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Article I Section 2 Clause 1 original text US Constitution two-year term for House members",
+        "purpose": "support",
+        "query_id": "q43"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:35:51.889604Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q43",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.511",
+        "hard_remaining_seconds": "198.511",
+        "provider_call_id": "p44",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:35:54.244010Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q43",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "151.158",
+        "hard_remaining_seconds": "196.158",
+        "provider_call_id": "p44",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298",
+        "elapsed_seconds": "2.351",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7367"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:35:54.247106Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Article I Section 2 Clause 1 original text US Constitution two-year term for House members",
+        "query_id": "q43",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:35:54.249201Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Madison Federalist Papers or notes on House term length two years",
+        "purpose": "support",
+        "query_id": "q45"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:35:54.250856Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "151.149",
+        "hard_remaining_seconds": "196.149",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "279"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:35:56.740867Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.661",
+        "hard_remaining_seconds": "193.661",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "279",
+        "elapsed_seconds": "2.487",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7209"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:35:56.744029Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Madison Federalist Papers or notes on House term length two years",
+        "query_id": "q45",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:35:56.746305Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Joseph Story Commentaries on Constitution House term length two years 1833",
+        "purpose": "support",
+        "query_id": "q47"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:35:56.747935Z",
+      "type": "provider_call_rejected",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q47",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.652",
+        "hard_remaining_seconds": "193.652",
+        "provider_call_id": "p48",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "282",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:35:56.749419Z",
+      "type": "research_stopped",
+      "stage": "searching",
+      "payload": {
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.651",
+        "hard_remaining_seconds": "193.651",
+        "provider": "tavily",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:35:56.750870Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:35:56.752334Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:35:56.753859Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "362678ac-170f-4f31-b5ae-89ac5ca6d71f"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:35:56.755129Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "805e57db-53e6-4a8e-b832-d704401d9aa0"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:35:56.756371Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "07576501-f0b3-4879-a56a-a4476289338c"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:35:56.757597Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "904c444b-2d16-43d8-8381-f9282757579a"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:35:56.759800Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "13ec45ce-ca5f-4e4f-a380-631a9f4a1595"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:35:56.761462Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "d0f67928-02c5-4984-a671-10c095e0fa03"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:35:56.763025Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "eec0ef15-72d9-4a56-9820-b240526fd9a3"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:35:56.766270Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:35:56.767524Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.633",
+        "hard_remaining_seconds": "193.632",
+        "attempt": "1",
+        "input_chars": "4996"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:35:56.769487Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.631",
+        "hard_remaining_seconds": "193.631",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9932"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:35:58.736357Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "191.665",
+        "hard_remaining_seconds": "191.665",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9932",
+        "elapsed_seconds": "1.964",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1815"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:35:58.739459Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "191.661",
+        "hard_remaining_seconds": "191.661",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "922",
+        "elapsed_seconds": "1.972",
+        "finish_reason": "stop",
+        "prompt_tokens": "2359",
+        "completion_tokens": "318",
+        "total_tokens": "2677"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:35:58.742732Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "191.658",
+        "hard_remaining_seconds": "191.658",
+        "attempt": "1",
+        "input_chars": "5905"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:35:58.744907Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "191.655",
+        "hard_remaining_seconds": "191.655",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10216"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:35:59.438612Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "190.963",
+        "hard_remaining_seconds": "190.963",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10216",
+        "elapsed_seconds": "0.691",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1064"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:35:59.441373Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "190.959",
+        "hard_remaining_seconds": "190.959",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "200",
+        "elapsed_seconds": "0.698",
+        "finish_reason": "stop",
+        "prompt_tokens": "2542",
+        "completion_tokens": "59",
+        "total_tokens": "2601"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:35:59.443385Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "82bb47c2-ae64-428d-a30e-60b533469709",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:35:59.444868Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 49.27963279100004,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.286
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.89
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.282
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.0
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.123
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.152
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.719
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.36
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.133
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 6.523
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.348
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.287
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.195
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.616
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.283
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.438
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.141
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.109
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.126
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.777
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.024
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.344
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.484
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.962
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.688
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2872375000006286,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8926685000005818,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.2864176250004675,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.0030575840028177,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.127388292003161,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.4742763329995796,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.7198884159988665,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3616844999996829,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13893745799941826,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 6.52352108299965,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3497564159988542,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.290599249998195,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1957425420005166,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.6185202919987205,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.287387749998743,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.444159040998784,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14740833299947553,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.1112700839985337,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12988625000070897,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.779096499998559,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0261456670014013,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.350915791997977,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.487110082998697,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.9639285419980297,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.6906532499997411,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

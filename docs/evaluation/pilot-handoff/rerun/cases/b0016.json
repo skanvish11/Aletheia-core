@@ -1,0 +1,5160 @@
+{
+  "id": "b0016",
+  "live": true,
+  "investigation": {
+    "id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+    "claim": "The United States Consumer Price Index measures price changes for a basket of consumer goods and services.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "partial",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "budget_exhausted",
+    "reused": true,
+    "created_at": "2026-11-10T05:33:16.022162Z",
+    "started_at": "2026-11-10T05:33:16.226399Z",
+    "finished_at": "2026-11-10T05:34:17.490093Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "The United States Consumer Price Index measures price changes for a basket of consumer goods and services.",
+        "kind": "generalized",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "No additional scope needed; claim is self-contained and checkable.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "insufficient_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "f8a2130c-8d51-415c-b319-07fa39904e3f",
+          "47ab1803-14bb-4026-9952-2267e6285d53",
+          "48b2c903-747d-411b-b473-5b9d6ac5638d",
+          "c7dcf734-e516-405b-9522-99709b3ae815",
+          "c86bc9c5-016d-466e-9061-99bf8e7cb401",
+          "b2487948-7681-4d9c-a653-3c44104dfe2e",
+          "63aa9db4-1e5b-4568-959b-8604333a68b7",
+          "ae7147f6-e256-4a73-b79b-c2cff6d4c837",
+          "29dfe726-1f5e-453a-a927-c9eec8adbeda",
+          "1dfe1a77-d25b-4373-98de-8e9bbea96c14"
+        ],
+        "qualification_flags": [],
+        "qualification_check": "assessed",
+        "limitations": [
+          "The retrieved evidence does not meet the evidence requirements.",
+          "Distinct independent origins or an appropriate synthesis were not established."
+        ]
+      },
+      "explanation": [
+        {
+          "text": "CPIAUCSL is defined as a price index of a basket of consumer goods and services paid by urban consumers, with components including food, shelter, fuels, transportation, service fees, and sales taxes, and price changes are averaged with weights representing their importance in consumer spending.",
+          "evidence_ids": [
+            "f8a2130c-8d51-415c-b319-07fa39904e3f",
+            "48b2c903-747d-411b-b473-5b9d6ac5638d",
+            "c7dcf734-e516-405b-9522-99709b3ae815",
+            "c86bc9c5-016d-466e-9061-99bf8e7cb401",
+            "63aa9db4-1e5b-4568-959b-8604333a68b7",
+            "29dfe726-1f5e-453a-a927-c9eec8adbeda"
+          ]
+        },
+        {
+          "text": "The Consumer Price Index (CPI) is described as a measure of average price change for a representative basket of consumer goods and services, with weights summing to 100 and composition including food, clothing, shelter, fuels, transportation fares, service fees, and sales taxes.",
+          "evidence_ids": [
+            "c86bc9c5-016d-466e-9061-99bf8e7cb401",
+            "63aa9db4-1e5b-4568-959b-8604333a68b7",
+            "29dfe726-1f5e-453a-a927-c9eec8adbeda"
+          ]
+        },
+        {
+          "text": "The CPI tracks price changes for consumer goods and services as a measure of inflation, with regular national publication beginning in 1921 and indexes estimated back to 1913, collected periodically from housing units and retail establishments across urban areas.",
+          "evidence_ids": [
+            "ae7147f6-e256-4a73-b79b-c2cff6d4c837",
+            "29dfe726-1f5e-453a-a927-c9eec8adbeda",
+            "1dfe1a77-d25b-4373-98de-8e9bbea96c14"
+          ]
+        }
+      ],
+      "limitations": [
+        "Research stopped at a time or call limit; coverage is incomplete.",
+        "Only the first bounded set of source spans was assessed.",
+        "page_text_truncated",
+        "Source is a single publisher (BLS/FRED); independence cannot be fully established as shared only.",
+        "Data coverage snapshot is limited to observations shown; no comprehensive historical range provided.",
+        "The assertion does not specify urban consumer population or weighting methodology.",
+        "No definitional content about CPI construction",
+        "Formula type specified but basket composition details not provided",
+        "Specific weighting period mentioned but not the general mechanism",
+        "Single-source from snapshot only",
+        "No explicit mention of 'Consumer Price Index' name in the definition clause",
+        "Single-source; lacks independent institutional definition.",
+        "No quantitative details on basket composition or methodology provided.",
+        "Language links do not add evidential weight.",
+        "Combined spans still from one source.",
+        "Source is an archived page (span 32) limiting relevance to current methodology",
+        "Does not define the specific basket composition or weighting methodology in detail",
+        "Coverage limited to historical evolution, not a formal definitional statement",
+        "Source is a review article, not the primary BLS methodology documentation.",
+        "Does not specify the exact basket composition or updating frequency.",
+        "Span 10 discusses changes in consumer behavior, not the CPI's structural definition.",
+        "Span 47 identifies challenges but does not restate the core definition.",
+        "Some search results were not extracted within per-round page limits.",
+        "The retrieved evidence does not meet the evidence requirements.",
+        "Distinct independent origins or an appropriate synthesis were not established."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.5",
+      "application_version": "research-v4.5",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 14,
+        "search": 8,
+        "extract": 7
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.3182297499988636,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.3226830830026302,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 5.896610749998217,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.427829083000688,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 4.697346958000708,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.14527808399725473,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.526777667000715,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.1408188749992405,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 4.0222442080012115,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.13350908299980802,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.6713869999985036,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.2777840000017022,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.5410912500010454,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.1077147079995484,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.1749752079995233,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.931974084000103,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.540383166000538,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.1512445000007574,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.680347375000565,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.14381004200185998,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.032163166997634,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.6831130829996255,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.0832214160000149,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.7666252500021074,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 4.034764250001899,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.3185010420020262,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.7567950830016343,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.5343325409994577,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.7087762919982197,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 87098,
+        "completion_tokens": 5071,
+        "total_tokens": 92169
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "events": "/investigations/9449d597-b6ef-46a3-91a6-6e6e880f27fa/events",
+      "evidence": "/investigations/9449d597-b6ef-46a3-91a6-6e6e880f27fa/evidence",
+      "comparison": "/investigations/9449d597-b6ef-46a3-91a6-6e6e880f27fa/comparison",
+      "refresh": "/investigations/9449d597-b6ef-46a3-91a6-6e6e880f27fa/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+        "canonical_url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+        "title": "Consumer Price Index for All Urban Consumers: All Items in U.S. City Average (CPIAUCSL) | FRED | St. Louis Fed",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:32.117452Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "15149138d2940b5b4845f5201c8732e441e8d8395d20e9c8326f5eff7bae70d6",
+        "duplicate_group": "15149138d2940b5b4845f5201c8732e441e8d8395d20e9c8326f5eff7bae70d6",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "url": "https://www.brookings.edu/articles/the-bureau-of-labor-statistics-fixing-the-consumer-price-index",
+        "canonical_url": "https://www.brookings.edu/articles/the-bureau-of-labor-statistics-fixing-the-consumer-price-index",
+        "title": "The Bureau of Labor Statistics: Fixing the Consumer Price Index | Brookings",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:35.825382Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "f09a410c50af49d2e8a1d7274bdfe1b089b48e5062d9e2239e0780a245ed0d1a",
+        "duplicate_group": "f09a410c50af49d2e8a1d7274bdfe1b089b48e5062d9e2239e0780a245ed0d1a",
+        "limitations": []
+      },
+      {
+        "id": "17e86925-854c-4bf3-8658-c54753508917",
+        "url": "https://www.bls.gov/opub/hom/cpi/history.htm",
+        "canonical_url": "https://www.bls.gov/opub/hom/cpi/history.htm",
+        "title": "History : U.S. Bureau of Labor Statistics",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:40.019918Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "9a59c7744fd977bfd7fcd1f8d3835ac9f1b311ffd6661ef2ef454ae653a4d2bf",
+        "duplicate_group": "9a59c7744fd977bfd7fcd1f8d3835ac9f1b311ffd6661ef2ef454ae653a4d2bf",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "url": "https://en.wikipedia.org/wiki/Consumer_price_index",
+        "canonical_url": "https://en.wikipedia.org/wiki/Consumer_price_index",
+        "title": "Consumer price index - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:42.012056Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "7653447c71ad038ac39e86d54b6bbe71d766cdd94cd60d314efb1c38d924bc3d",
+        "duplicate_group": "7653447c71ad038ac39e86d54b6bbe71d766cdd94cd60d314efb1c38d924bc3d",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "url": "https://www.bls.gov/opub/hom/cpi/archive/20201124/history.htm",
+        "canonical_url": "https://www.bls.gov/opub/hom/cpi/archive/20201124/history.htm",
+        "title": "History : U.S. Bureau of Labor Statistics",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:54.544713Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "c40a3cb676dc6a522efa3353ccf0966a3ae5426416832a2359dc27fafc848882",
+        "duplicate_group": "c40a3cb676dc6a522efa3353ccf0966a3ae5426416832a2359dc27fafc848882",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "url": "https://www.abacademies.org/articles/the-cpi-market-basket-a-review-of-economic-and-marketing-validity-issues.pdf",
+        "canonical_url": "https://www.abacademies.org/articles/the-cpi-market-basket-a-review-of-economic-and-marketing-validity-issues.pdf",
+        "title": "[PDF] the-cpi-market-basket-a-review-of-economic-and-marketing-validity ...",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:57.403033Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "8842817262989a229d63555d095f828a9c4ad939da2b5e08dc58d7e559398b96",
+        "duplicate_group": "8842817262989a229d63555d095f828a9c4ad939da2b5e08dc58d7e559398b96",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "url": "https://www.measuringworth.com/docs/cpistudyrev.pdf",
+        "canonical_url": "https://www.measuringworth.com/docs/cpistudyrev.pdf",
+        "title": "https://www.measuringworth.com/docs/cpistudyrev.pdf",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:34:11.430992Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "306d7935b34eca85c61c86827eccdb88015486d059baeb0505a52a45a5df24fd",
+        "duplicate_group": "306d7935b34eca85c61c86827eccdb88015486d059baeb0505a52a45a5df24fd",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "f8a2130c-8d51-415c-b319-07fa39904e3f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+            "span_ids": [
+              56,
+              65,
+              70,
+              71,
+              72,
+              73
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "CPIAUCSL is a price index of a basket of consumer goods and services paid by urban consumers, as defined by the Bureau of Labor Statistics and presented on FRED; key spans confirm the definition, composition (food, shelter, fuels, transportation, service fees, sales taxes), data collection method, a",
+          "publisher": null,
+          "origin": "U.S. Bureau of Labor Statistics via FRED (St. Louis Fed)",
+          "independence": "shared",
+          "provenance_span_ids": [
+            56,
+            65,
+            70,
+            71,
+            72,
+            73
+          ],
+          "provenance_note": "Spans 65–73 and 56 provide the definition, scope, and source attribution of CPIAUCSL as a basket‑based price index for urban consumers.",
+          "rationale": "The definition in the assertion is confirmed by spans 65 and 70–73, which describe CPIAUCSL as a price index of a basket of consumer goods and services for urban consumers, with supporting detail on components and collection method.",
+          "limitations": [
+            "Source is a single publisher (BLS/FRED); independence cannot be fully established as shared only.",
+            "Data coverage snapshot is limited to observations shown; no comprehensive historical range provided.",
+            "The assertion does not specify urban consumer population or weighting methodology."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              56
+            ],
+            "start": 2061,
+            "end": 2066,
+            "text": "[U.S.",
+            "quote_hash": "cb45fb78595b4b3dc5773548c9ba332c6140dac0f8d134a26b7596570999021f"
+          },
+          {
+            "span_ids": [
+              65
+            ],
+            "start": 2273,
+            "end": 2419,
+            "text": "The Consumer Price Index for All Urban Consumers: All Items (CPIAUCSL) is a price index of a basket of goods and services paid by urban consumers.",
+            "quote_hash": "beab0157e3ea3793a390d4b35739aa17f4e16cae6233a1b1f099b5c6a92ec373"
+          },
+          {
+            "span_ids": [
+              70,
+              71,
+              72,
+              73
+            ],
+            "start": 2882,
+            "end": 3392,
+            "text": "The CPIs are based on prices for food, clothing, shelter, and fuels; transportation fares; service fees (e.g., water and sewer service); and sales taxes. Prices are collected monthly from about 4,000 housing units and approximately 26,000 retail establishments across 87 urban areas. To calculate the index, price changes are averaged with weights representing their importance in the spending of the particular group. The index measures price changes (as a percent change) from a predetermined reference date.",
+            "quote_hash": "baa3baddfec6787845ad71a02c3c9cd8a90ecc0fdad663d06166fe5560192482"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "47ab1803-14bb-4026-9952-2267e6285d53",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+            "span_ids": [
+              33,
+              34,
+              35
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            33,
+            34,
+            35
+          ],
+          "provenance_note": "Author's introductory remarks on CPI issues and importance of accurate measurement.",
+          "rationale": "Spans 33-35 introduce the author's testimony on CPI measurement but do not define what the CPI measures.",
+          "limitations": [
+            "No definitional content about CPI construction"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              33,
+              34,
+              35
+            ],
+            "start": 991,
+            "end": 1331,
+            "text": "I appreciate the opportunity to discuss CPI measurement issues. An accurate CPI is important. The subcommittee performs a valuable service by focussing attention on issues that are at once technically difficult even for professional economists and of vital concern for users of the index, including those in both public and private sectors.",
+            "quote_hash": "a06d10ccbb9c4b04fa2029b535846080f84f0e2d94904170c47f7f184cb0b365"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "48b2c903-747d-411b-b473-5b9d6ac5638d",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+            "span_ids": [
+              50,
+              51,
+              52
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            50,
+            51,
+            52
+          ],
+          "provenance_note": "Describes BLS fixed-basket Laspeyres formula aggregating 211 strata indexes into overall CPI.",
+          "rationale": "Spans 50-52 confirm the CPI uses a fixed-basket formula to aggregate component indexes, consistent with the assertion.",
+          "limitations": [
+            "Formula type specified but basket composition details not provided"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              50,
+              51,
+              52
+            ],
+            "start": 2564,
+            "end": 2788,
+            "text": "BLS uses a fixed-basket formula (known as the Laspeyres formula) to aggregate 211 “strata \n indexes,” such as the price index for “bananas” and the price index for “computer software and \n accessories,” into the overall CPI.",
+            "quote_hash": "a95be389bd531bfa0f3e212ee1bb07b5cc66f148a84c80876633b379d64c42b8"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "c7dcf734-e516-405b-9522-99709b3ae815",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+            "span_ids": [
+              38,
+              39
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            38,
+            39
+          ],
+          "provenance_note": "States BLS updates CPI weights in January using 1993-95 consumption patterns.",
+          "rationale": "Spans 38-39 confirm the CPI includes weight updates based on consumer spending patterns, aligning with the assertion that it measures price changes for a basket of goods and services.",
+          "limitations": [
+            "Specific weighting period mentioned but not the general mechanism"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              38,
+              39
+            ],
+            "start": 1658,
+            "end": 1814,
+            "text": "In Januray, the Bureau of Labor Statistics (BLS) updated the Consumer Price Index (CPI) weights. They are now derived from consumption patterns for 1993-95.",
+            "quote_hash": "669ff50485d3e07df0bc49dc108eebbd331822512f6f758523e4e0a68f271919"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "c86bc9c5-016d-466e-9061-99bf8e7cb401",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+            "span_ids": [
+              32
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            32
+          ],
+          "provenance_note": "Directly states the CPI measures average price change for a representative basket of consumer goods and services.",
+          "rationale": "Span 32 defines the CPI as a measure of average price change for consumer goods and services.",
+          "limitations": [
+            "Single-source from snapshot only",
+            "No explicit mention of 'Consumer Price Index' name in the definition clause"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              32
+            ],
+            "start": 1826,
+            "end": 1993,
+            "text": "The Consumer Price Index (CPI) is a measure of the average change over time in the prices paid by consumers for a representative basket of consumer goods and services.",
+            "quote_hash": "c8c60c1ba2eaad39b047ade7fb064d574486f60db62577989f6262dfba5f3470"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "b2487948-7681-4d9c-a653-3c44104dfe2e",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+            "span_ids": [
+              104
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "https://en.wikipedia.org/wiki/Consumer_price_index",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            104
+          ],
+          "provenance_note": "Single-source from Wikipedia introductory summary.",
+          "rationale": "The lead defines CPI as 'Statistic to indicate the change in typical household expenditure' covering 'price changes for a basket of consumer goods and services'.",
+          "limitations": [
+            "Single-source; lacks independent institutional definition.",
+            "No quantitative details on basket composition or methodology provided."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              104
+            ],
+            "start": 10760,
+            "end": 10825,
+            "text": "Statistic to indicate the change in typical household expenditure",
+            "quote_hash": "345bbe88c6d92019b68949293fa9cdd2ff50e3d10da276cd60bc1872e3875087"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "63aa9db4-1e5b-4568-959b-8604333a68b7",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+            "span_ids": [
+              25,
+              104
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "https://en.wikipedia.org/wiki/Consumer_price_index",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            25,
+            104
+          ],
+          "provenance_note": "Language links and introductory summary paragraph.",
+          "rationale": "Span 25 is an Arabic language link; span 104 reiterates the CPI definition as a measure of price changes for consumer goods and services.",
+          "limitations": [
+            "Language links do not add evidential weight.",
+            "Combined spans still from one source."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              25
+            ],
+            "start": 1253,
+            "end": 1431,
+            "text": "* [العربية](https://ar.wikipedia.org/wiki/%D9%85%D8%A4%D8%B4%D8%B1_%D8%A3%D8%B3%D8%B9%D8%A7%D8%B1_%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%87%D9%84%D9%83 \"مؤشر أسعار المستهلك – Arabic\")",
+            "quote_hash": "d0e19d3ef16f025c8cd447d19f9790733e1ab289d5c80e136e98887e9019be09"
+          },
+          {
+            "span_ids": [
+              104
+            ],
+            "start": 10760,
+            "end": 10825,
+            "text": "Statistic to indicate the change in typical household expenditure",
+            "quote_hash": "345bbe88c6d92019b68949293fa9cdd2ff50e3d10da276cd60bc1872e3875087"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ae7147f6-e256-4a73-b79b-c2cff6d4c837",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+            "span_ids": [
+              42,
+              49,
+              51,
+              52
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The assertion is supported by the source. CPI is defined as a measure of price changes for a consumer basket, with spans showing periodic collection of prices, estimation back to 1913, and coverage of food, clothing, rent, and other goods. Span 42 confirms national index began in 1921 with estimates",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            42,
+            49,
+            51,
+            52
+          ],
+          "provenance_note": "Spans collectively show CPI tracks price changes for a defined basket of consumer goods and services",
+          "rationale": "Spans 42, 49, 51, 52 confirm CPI tracks price changes for a consumer basket of goods and services, matching the claim.",
+          "limitations": [
+            "Source is an archived page (span 32) limiting relevance to current methodology",
+            "Does not define the specific basket composition or weighting methodology in detail",
+            "Coverage limited to historical evolution, not a formal definitional statement"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              42
+            ],
+            "start": 3671,
+            "end": 3790,
+            "text": "Regular publication of a national index, the U.S. city average, began in 1921, and indexes were estimated back to 1913.",
+            "quote_hash": "9bbc61bdede7422a927a40268d1113ed5290d0c552ba1c0efcf6133609052d38"
+          },
+          {
+            "span_ids": [
+              49
+            ],
+            "start": 4313,
+            "end": 4355,
+            "text": "* In 1919 data were estimated back to 1913",
+            "quote_hash": "a99da0189285e68a31e5516a12ea08126d86daa6e16990df1fa84e385cb7cb06"
+          },
+          {
+            "span_ids": [
+              51,
+              52
+            ],
+            "start": 4421,
+            "end": 4645,
+            "text": "* Collected prices in central cities periodically\n* BLS used a 1917–19 study on family expenditures in 92 industrial centers to develop weights reflecting the relative importance of goods and services purchased by consumers.",
+            "quote_hash": "06120f0038ee3ffacd079c8ac38558b55890bfea92ad61fc06119b6d00d095e8"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "29dfe726-1f5e-453a-a927-c9eec8adbeda",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+            "span_ids": [
+              26,
+              39,
+              41
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The CPI measures price changes for a fixed market basket of goods and services including food.",
+          "publisher": null,
+          "origin": "Csipak, Zuccaro (2014) J Econ Educ Res",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            26,
+            39,
+            41
+          ],
+          "provenance_note": "Spans 26, 39, 41 directly state the CPI definition and reference basket concept.",
+          "rationale": "The CPI definition as a measure of average price change for a market basket of goods and services is confirmed across multiple spans.",
+          "limitations": [
+            "Source is a review article, not the primary BLS methodology documentation.",
+            "Does not specify the exact basket composition or updating frequency."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              26
+            ],
+            "start": 4738,
+            "end": 4935,
+            "text": "A DESCRIPTION OF THE CPI Essentially, the CPI is a measure of the average change in prices paid by urban consumers for a fixed market basket of goods and services including food” (MacDonald, 1995).",
+            "quote_hash": "678221694de8550aff6e16011eb3a8244b8554cd6815994a4ae110eee9b81006"
+          },
+          {
+            "span_ids": [
+              39
+            ],
+            "start": 7553,
+            "end": 7601,
+            "text": "The weights of all goods and services equal 100.",
+            "quote_hash": "a6b8467d115f2377f4599ead8ae5ec90cf8c385089c0de672a0d711d46b623f2"
+          },
+          {
+            "span_ids": [
+              41
+            ],
+            "start": 7675,
+            "end": 7767,
+            "text": "Food, for example, may at one point in time have a weight of 14.208 out of the total of 100.",
+            "quote_hash": "b5af4765ff483336b72b73727848dfa960d3e68ca497d014e497194140d6fc6a"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "1dfe1a77-d25b-4373-98de-8e9bbea96c14",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+            "span_ids": [
+              10,
+              47
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The CPI tracks price changes for consumer goods and services as a measure of inflation.",
+          "publisher": null,
+          "origin": "Csipak, Zuccaro (2014) J Econ Educ Res",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            10,
+            47
+          ],
+          "provenance_note": "Span 10 notes major CPI food-at-home changes; Span 47 cites the BLS core challenge of measuring true price changes.",
+          "rationale": "Both spans confirm the CPI's role in measuring consumer price changes, though span 10 focuses on food-at-home shifts.",
+          "limitations": [
+            "Span 10 discusses changes in consumer behavior, not the CPI's structural definition.",
+            "Span 47 identifies challenges but does not restate the core definition."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              10
+            ],
+            "start": 1770,
+            "end": 1992,
+            "text": "In September 2011, a quick perusal of the Consumer Price Index (CPI hereafter) food at home literature informed us that, within the last 20 years, major changes had occurred within food at home purchases by U.S. consumers.",
+            "quote_hash": "4a6b43b77dd3981e8a4da90744700cff3af48afa52413bb32f16c66b0ae79c8c"
+          },
+          {
+            "span_ids": [
+              47
+            ],
+            "start": 8227,
+            "end": 8415,
+            "text": "The major challenge faced by the BLS in computing the CPI is to accurately compute a price index that is “representative” of “true” price changes of products purchased by consumers in U.S.",
+            "quote_hash": "33f1b2e57b0e5fbe2990037bc6de8cecfb889221d908c81db82244c23101d0b4"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:33:16.022162Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:33:16.226399Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:33:16.231220Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:33:16.233879Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:33:16.236331Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.994",
+        "attempt": "1",
+        "input_chars": "134"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:33:16.241101Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.990",
+        "hard_remaining_seconds": "119.990",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5811"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:33:17.563141Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.669",
+        "hard_remaining_seconds": "118.669",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5811",
+        "elapsed_seconds": "1.318",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1231"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:33:17.568045Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.665",
+        "hard_remaining_seconds": "118.665",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "356",
+        "elapsed_seconds": "1.329",
+        "finish_reason": "stop",
+        "prompt_tokens": "897",
+        "completion_tokens": "90",
+        "total_tokens": "987"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:33:17.571144Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:33:17.573055Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:33:17.575563Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:33:17.577767Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.653",
+        "hard_remaining_seconds": "238.653",
+        "attempt": "1",
+        "input_chars": "501"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:33:17.580602Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.650",
+        "hard_remaining_seconds": "238.650",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3526"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:33:18.907012Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.325",
+        "hard_remaining_seconds": "237.325",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3526",
+        "elapsed_seconds": "1.323",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1504"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:33:18.909381Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.321",
+        "hard_remaining_seconds": "237.321",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "614",
+        "elapsed_seconds": "1.331",
+        "finish_reason": "stop",
+        "prompt_tokens": "602",
+        "completion_tokens": "140",
+        "total_tokens": "742"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:33:18.911203Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index definition price changes basket consumer goods services US",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:33:18.913149Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.318",
+        "hard_remaining_seconds": "237.318",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:33:24.813001Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "186.419",
+        "hard_remaining_seconds": "231.419",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287",
+        "elapsed_seconds": "5.897",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10238"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:33:24.815751Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index definition price changes basket consumer goods services US",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:33:24.817659Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index methodology US Bureau of Labor Statistics basket composition revision",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:33:24.819252Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "186.411",
+        "hard_remaining_seconds": "231.411",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:33:27.250689Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "183.982",
+        "hard_remaining_seconds": "228.982",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298",
+        "elapsed_seconds": "2.428",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10155"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:33:27.253753Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index methodology US Bureau of Labor Statistics basket composition revision",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:33:27.255819Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index history and evolution purpose scope official definition",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:33:27.257360Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "183.973",
+        "hard_remaining_seconds": "228.973",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:33:31.958209Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "179.274",
+        "hard_remaining_seconds": "224.274",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284",
+        "elapsed_seconds": "4.697",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "11627"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:33:31.960240Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Consumer Price Index history and evolution purpose scope official definition",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:33:31.962252Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "9",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:33:31.963629Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:33:31.965290Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:33:31.966767Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.264",
+        "hard_remaining_seconds": "224.264",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:33:32.115508Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.117",
+        "hard_remaining_seconds": "224.117",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.145",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12562"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:33:32.123503Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "url": "https://fred.stlouisfed.org/series/CPIAUCSL",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:33:32.125220Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:33:32.132540Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.098",
+        "hard_remaining_seconds": "224.098",
+        "attempt": "1",
+        "input_chars": "17081"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:33:32.137183Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.094",
+        "hard_remaining_seconds": "224.094",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29930"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:33:35.666518Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "175.565",
+        "hard_remaining_seconds": "220.565",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29930",
+        "elapsed_seconds": "3.527",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2374"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:33:35.669696Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "175.561",
+        "hard_remaining_seconds": "220.561",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1461",
+        "elapsed_seconds": "3.537",
+        "finish_reason": "stop",
+        "prompt_tokens": "9004",
+        "completion_tokens": "410",
+        "total_tokens": "9414"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:33:35.673877Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "f8a2130c-8d51-415c-b319-07fa39904e3f",
+        "snapshot_id": "347a25ac-8638-4f7b-8018-c6b67b8bd977",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:33:35.675554Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.brookings.edu/articles/the-bureau-of-labor-statistics-fixing-the-consumer-price-index",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:33:35.677126Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:33:35.678810Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.552",
+        "hard_remaining_seconds": "220.552",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:33:35.822972Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.409",
+        "hard_remaining_seconds": "220.409",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224",
+        "elapsed_seconds": "0.141",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6598"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:33:35.831313Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "url": "https://www.brookings.edu/articles/the-bureau-of-labor-statistics-fixing-the-consumer-price-index",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:33:35.832782Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:33:35.836845Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.394",
+        "hard_remaining_seconds": "220.394",
+        "attempt": "1",
+        "input_chars": "12050"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:33:35.840883Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.390",
+        "hard_remaining_seconds": "220.390",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23687"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:33:39.865957Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "171.366",
+        "hard_remaining_seconds": "216.366",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23687",
+        "elapsed_seconds": "4.022",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3327"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:33:39.868660Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "171.362",
+        "hard_remaining_seconds": "216.362",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2338",
+        "elapsed_seconds": "4.032",
+        "finish_reason": "stop",
+        "prompt_tokens": "6632",
+        "completion_tokens": "697",
+        "total_tokens": "7329"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:33:39.872738Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "47ab1803-14bb-4026-9952-2267e6285d53",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:33:39.874413Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "48b2c903-747d-411b-b473-5b9d6ac5638d",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:33:39.876166Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c7dcf734-e516-405b-9522-99709b3ae815",
+        "snapshot_id": "aa13e147-0460-4cea-9ad9-58be994f7cc7",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:33:39.878003Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "url": "https://www.bls.gov/opub/hom/cpi/history.htm",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:33:39.879719Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:33:39.881213Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.349",
+        "hard_remaining_seconds": "216.349",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "171"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:33:40.017862Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.214",
+        "hard_remaining_seconds": "216.214",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "171",
+        "elapsed_seconds": "0.134",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "15789"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:33:40.026661Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "url": "https://www.bls.gov/opub/hom/cpi/history.htm",
+        "candidate_id": "c19",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:33:40.028475Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:33:40.034112Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.197",
+        "hard_remaining_seconds": "216.197",
+        "attempt": "1",
+        "input_chars": "20330"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:33:40.037894Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.193",
+        "hard_remaining_seconds": "216.193",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33208"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:33:41.713427Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "169.519",
+        "hard_remaining_seconds": "214.519",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33208",
+        "elapsed_seconds": "1.671",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1635"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:33:41.716634Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "169.514",
+        "hard_remaining_seconds": "214.514",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "734",
+        "elapsed_seconds": "1.683",
+        "finish_reason": "stop",
+        "prompt_tokens": "9450",
+        "completion_tokens": "216",
+        "total_tokens": "9666"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:33:41.721011Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c86bc9c5-016d-466e-9061-99bf8e7cb401",
+        "snapshot_id": "17e86925-854c-4bf3-8658-c54753508917",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:33:41.723104Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "url": "https://en.wikipedia.org/wiki/Consumer_price_index",
+        "slot": "4",
+        "query_ids": "q5,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:33:41.726265Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:33:41.729506Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.502",
+        "hard_remaining_seconds": "214.502",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:33:42.010573Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.222",
+        "hard_remaining_seconds": "214.222",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177",
+        "elapsed_seconds": "0.278",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "63773"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:33:42.021410Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "url": "https://en.wikipedia.org/wiki/Consumer_price_index",
+        "candidate_id": "c23",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:33:42.023056Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:33:42.028856Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.202",
+        "hard_remaining_seconds": "214.202",
+        "attempt": "1",
+        "input_chars": "16681"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:33:42.032632Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.198",
+        "hard_remaining_seconds": "214.198",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29443"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:33:44.576922Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.655",
+        "hard_remaining_seconds": "211.655",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29443",
+        "elapsed_seconds": "2.541",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2636"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:33:44.580239Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.651",
+        "hard_remaining_seconds": "211.651",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1679",
+        "elapsed_seconds": "2.552",
+        "finish_reason": "stop",
+        "prompt_tokens": "9485",
+        "completion_tokens": "471",
+        "total_tokens": "9956"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:33:44.583879Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b2487948-7681-4d9c-a653-3c44104dfe2e",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:33:44.585386Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "63aa9db4-1e5b-4568-959b-8604333a68b7",
+        "snapshot_id": "99b39d64-c720-42f2-9e68-37641438b3ab",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:33:44.587087Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:33:44.588587Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.642",
+        "hard_remaining_seconds": "211.642",
+        "attempt": "1",
+        "input_chars": "6039"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:33:44.590687Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.640",
+        "hard_remaining_seconds": "211.640",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9366"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:33:45.701420Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.531",
+        "hard_remaining_seconds": "210.531",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9366",
+        "elapsed_seconds": "1.108",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1703"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:33:45.704609Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.526",
+        "hard_remaining_seconds": "210.526",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "810",
+        "elapsed_seconds": "1.116",
+        "finish_reason": "stop",
+        "prompt_tokens": "2497",
+        "completion_tokens": "175",
+        "total_tokens": "2672"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:33:45.706628Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:33:45.708189Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:33:45.709764Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "First published CPI measurement definition by U.S. Bureau of Labor Statistics with exact basket description and historical origin date",
+        "purpose": "support",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:33:45.711247Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.519",
+        "hard_remaining_seconds": "210.519",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "342"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:33:48.888390Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.343",
+        "hard_remaining_seconds": "207.343",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "342",
+        "elapsed_seconds": "3.175",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8834"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:33:48.890688Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "First published CPI measurement definition by U.S. Bureau of Labor Statistics with exact basket description and historical origin date",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:33:48.892473Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Earliest independent academic or government source defining CPI as basket of consumer goods and services distinct from BLS origin story",
+        "purpose": "contradiction",
+        "query_id": "q31"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:33:48.894153Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.336",
+        "hard_remaining_seconds": "207.336",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "343"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:33:51.829495Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.403",
+        "hard_remaining_seconds": "204.403",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "343",
+        "elapsed_seconds": "2.932",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9598"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:33:51.832636Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Earliest independent academic or government source defining CPI as basket of consumer goods and services distinct from BLS origin story",
+        "query_id": "q31",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:33:51.834633Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "BLS historical timeline showing initial CPI launch year, original basket composition methodology, and first publication citation",
+        "purpose": "context",
+        "query_id": "q33"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:33:51.836388Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.394",
+        "hard_remaining_seconds": "204.394",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "336"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:33:54.380473Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.852",
+        "hard_remaining_seconds": "201.852",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "336",
+        "elapsed_seconds": "2.540",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10682"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:33:54.383861Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "BLS historical timeline showing initial CPI launch year, original basket composition methodology, and first publication citation",
+        "query_id": "q33",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:33:54.386278Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:33:54.387744Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "url": "https://www.bls.gov/opub/hom/cpi/archive/20201124/history.htm",
+        "slot": "1",
+        "query_ids": "q29",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:33:54.389341Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:33:54.390892Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.840",
+        "hard_remaining_seconds": "201.840",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:33:54.543824Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.687",
+        "hard_remaining_seconds": "201.687",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188",
+        "elapsed_seconds": "0.151",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "14888"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:33:54.548901Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "url": "https://www.bls.gov/opub/hom/cpi/archive/20201124/history.htm",
+        "candidate_id": "c35",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:33:54.550310Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:33:54.554385Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.676",
+        "hard_remaining_seconds": "201.676",
+        "attempt": "1",
+        "input_chars": "20604"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:33:54.558895Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.672",
+        "hard_remaining_seconds": "201.672",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33518"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:33:57.242505Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "153.990",
+        "hard_remaining_seconds": "198.990",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33518",
+        "elapsed_seconds": "2.680",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2106"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:33:57.245965Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "153.985",
+        "hard_remaining_seconds": "198.985",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1201",
+        "elapsed_seconds": "2.691",
+        "finish_reason": "stop",
+        "prompt_tokens": "9643",
+        "completion_tokens": "345",
+        "total_tokens": "9988"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:33:57.249472Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ae7147f6-e256-4a73-b79b-c2cff6d4c837",
+        "snapshot_id": "41b4fb16-8907-4f84-abb3-5371a338fdf4",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:33:57.251071Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "url": "https://www.abacademies.org/articles/the-cpi-market-basket-a-review-of-economic-and-marketing-validity-issues.pdf",
+        "slot": "2",
+        "query_ids": "q31",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:33:57.252540Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:33:57.254038Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.976",
+        "hard_remaining_seconds": "198.976",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "240"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:33:57.401340Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.831",
+        "hard_remaining_seconds": "198.831",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "240",
+        "elapsed_seconds": "0.144",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "71558"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:33:57.414516Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "url": "https://www.abacademies.org/articles/the-cpi-market-basket-a-review-of-economic-and-marketing-validity-issues.pdf",
+        "candidate_id": "c39",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:33:57.416021Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:33:57.421093Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.810",
+        "hard_remaining_seconds": "198.810",
+        "attempt": "1",
+        "input_chars": "15718"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:33:57.424101Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.806",
+        "hard_remaining_seconds": "198.806",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26615"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:34:00.458065Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.773",
+        "hard_remaining_seconds": "195.773",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26615",
+        "elapsed_seconds": "3.032",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3221"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:34:00.460505Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.770",
+        "hard_remaining_seconds": "195.770",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2302",
+        "elapsed_seconds": "3.039",
+        "finish_reason": "stop",
+        "prompt_tokens": "6597",
+        "completion_tokens": "629",
+        "total_tokens": "7226"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:34:00.462168Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:34:00.463871Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.767",
+        "hard_remaining_seconds": "195.767",
+        "attempt": "2",
+        "input_chars": "15718"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:34:00.467667Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.763",
+        "hard_remaining_seconds": "195.763",
+        "provider_call_id": "p43",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26805"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:34:03.154104Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.078",
+        "hard_remaining_seconds": "193.078",
+        "provider_call_id": "p43",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26805",
+        "elapsed_seconds": "2.683",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3105"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:34:03.157865Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.073",
+        "hard_remaining_seconds": "193.073",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2148",
+        "elapsed_seconds": "2.694",
+        "finish_reason": "stop",
+        "prompt_tokens": "6630",
+        "completion_tokens": "606",
+        "total_tokens": "7236"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:34:03.162288Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "29dfe726-1f5e-453a-a927-c9eec8adbeda",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:34:03.163952Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "1dfe1a77-d25b-4373-98de-8e9bbea96c14",
+        "snapshot_id": "10a611a9-961a-4780-9909-e0df0a999303",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:34:03.165777Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:34:03.167444Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.063",
+        "hard_remaining_seconds": "193.063",
+        "attempt": "1",
+        "input_chars": "8897"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:34:03.170365Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.061",
+        "hard_remaining_seconds": "193.061",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "12352"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:34:04.257943Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "146.975",
+        "hard_remaining_seconds": "191.975",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "12352",
+        "elapsed_seconds": "1.083",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1553"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:34:04.261215Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "146.970",
+        "hard_remaining_seconds": "191.970",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "672",
+        "elapsed_seconds": "1.093",
+        "finish_reason": "stop",
+        "prompt_tokens": "3431",
+        "completion_tokens": "157",
+        "total_tokens": "3588"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:34:04.263292Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:34:04.265559Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:34:04.269156Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "What year did the U.S. Bureau of Labor Statistics first publish the Consumer Price Index, and what was the original basket composition description in that first publication?",
+        "purpose": "context",
+        "query_id": "q46"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:34:04.271100Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q46",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "146.960",
+        "hard_remaining_seconds": "191.960",
+        "provider_call_id": "p47",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "381"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:34:07.040653Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q46",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.191",
+        "hard_remaining_seconds": "189.191",
+        "provider_call_id": "p47",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "381",
+        "elapsed_seconds": "2.767",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8544"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:34:07.043386Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "What year did the U.S. Bureau of Labor Statistics first publish the Consumer Price Index, and what was the original basket composition description in that first publication?",
+        "query_id": "q46",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:34:07.045182Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Find an early independent academic or government source from before 1930 that defines CPI as a basket of consumer goods and services distinct from the BLS origin narrative.",
+        "purpose": "contradiction",
+        "query_id": "q48"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:34:07.046733Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q48",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.184",
+        "hard_remaining_seconds": "189.184",
+        "provider_call_id": "p49",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "380"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:34:11.083992Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q48",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.148",
+        "hard_remaining_seconds": "185.148",
+        "provider_call_id": "p49",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "380",
+        "elapsed_seconds": "4.035",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10297"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:34:11.088156Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Find an early independent academic or government source from before 1930 that defines CPI as a basket of consumer goods and services distinct from the BLS origin narrative.",
+        "query_id": "q48",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:34:11.096692Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "5",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:34:11.103547Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c50",
+        "url": "https://www.measuringworth.com/docs/cpistudyrev.pdf",
+        "slot": "1",
+        "query_ids": "q48",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:34:11.107450Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:34:11.108350Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c50",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "140.122",
+        "hard_remaining_seconds": "185.122",
+        "provider_call_id": "p51",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:34:11.428961Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c50",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "139.803",
+        "hard_remaining_seconds": "184.803",
+        "provider_call_id": "p51",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178",
+        "elapsed_seconds": "0.319",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "145180"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:34:11.448723Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "url": "https://www.measuringworth.com/docs/cpistudyrev.pdf",
+        "candidate_id": "c50",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:34:11.450350Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:34:11.454415Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "139.776",
+        "hard_remaining_seconds": "184.776",
+        "attempt": "1",
+        "input_chars": "18416"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:34:11.458088Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "139.773",
+        "hard_remaining_seconds": "184.773",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30172"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:34:14.216207Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.014",
+        "hard_remaining_seconds": "182.014",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30172",
+        "elapsed_seconds": "2.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2527"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:34:14.217262Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.013",
+        "hard_remaining_seconds": "182.013",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1608",
+        "elapsed_seconds": "2.763",
+        "finish_reason": "stop",
+        "prompt_tokens": "7810",
+        "completion_tokens": "457",
+        "total_tokens": "8267"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 150,
+      "timestamp": "2026-11-10T05:34:14.218176Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 151,
+      "timestamp": "2026-11-10T05:34:14.218966Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.011",
+        "hard_remaining_seconds": "182.011",
+        "attempt": "2",
+        "input_chars": "18416"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 152,
+      "timestamp": "2026-11-10T05:34:14.220444Z",
+      "type": "provider_call_rejected",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.010",
+        "hard_remaining_seconds": "182.010",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30362",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 153,
+      "timestamp": "2026-11-10T05:34:14.221158Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "779862e1-a339-4591-ae2a-ce2d69d3e627",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.009",
+        "hard_remaining_seconds": "182.009",
+        "attempt": "2",
+        "outcome": "budget_exhausted",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "model_finalization_reserve",
+        "reasoning_tokens": "unknown",
+        "output_chars": "unknown",
+        "elapsed_seconds": "0.002",
+        "finish_reason": "unknown",
+        "prompt_tokens": "unknown",
+        "completion_tokens": "unknown",
+        "total_tokens": "unknown"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 154,
+      "timestamp": "2026-11-10T05:34:14.221914Z",
+      "type": "research_stopped",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "137.008",
+        "hard_remaining_seconds": "182.008",
+        "provider": "nebius",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 155,
+      "timestamp": "2026-11-10T05:34:14.222612Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 156,
+      "timestamp": "2026-11-10T05:34:14.223378Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 157,
+      "timestamp": "2026-11-10T05:34:14.225012Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 158,
+      "timestamp": "2026-11-10T05:34:14.225738Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "182.004",
+        "hard_remaining_seconds": "182.004",
+        "attempt": "1",
+        "input_chars": "16750"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 159,
+      "timestamp": "2026-11-10T05:34:14.227269Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "182.003",
+        "hard_remaining_seconds": "182.003",
+        "provider_call_id": "p56",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22397"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 160,
+      "timestamp": "2026-11-10T05:34:16.764270Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "179.468",
+        "hard_remaining_seconds": "179.468",
+        "provider_call_id": "p56",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22397",
+        "elapsed_seconds": "2.534",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2348"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 161,
+      "timestamp": "2026-11-10T05:34:16.766781Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "179.464",
+        "hard_remaining_seconds": "179.464",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1451",
+        "elapsed_seconds": "2.540",
+        "finish_reason": "stop",
+        "prompt_tokens": "6962",
+        "completion_tokens": "613",
+        "total_tokens": "7575"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 162,
+      "timestamp": "2026-11-10T05:34:16.770471Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "179.461",
+        "hard_remaining_seconds": "179.461",
+        "attempt": "1",
+        "input_chars": "18211"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 163,
+      "timestamp": "2026-11-10T05:34:16.772840Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "179.458",
+        "hard_remaining_seconds": "179.458",
+        "provider_call_id": "p58",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23253"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 164,
+      "timestamp": "2026-11-10T05:34:17.484636Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "178.747",
+        "hard_remaining_seconds": "178.747",
+        "provider_call_id": "p58",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23253",
+        "elapsed_seconds": "0.709",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1069"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 165,
+      "timestamp": "2026-11-10T05:34:17.487982Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "178.743",
+        "hard_remaining_seconds": "178.743",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "205",
+        "elapsed_seconds": "0.717",
+        "finish_reason": "stop",
+        "prompt_tokens": "7458",
+        "completion_tokens": "65",
+        "total_tokens": "7523"
+      }
+    },
+    {
+      "investigation_id": "9449d597-b6ef-46a3-91a6-6e6e880f27fa",
+      "sequence": 166,
+      "timestamp": "2026-11-10T05:34:17.490093Z",
+      "type": "investigation_partial",
+      "stage": null,
+      "payload": {
+        "stop_reason": "budget_exhausted"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 61.59506358300132,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.316
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.321
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.893
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.427
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.694
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.136
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.525
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.138
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.021
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.131
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.67
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.167
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.539
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.105
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.172
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.924
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.537
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.148
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.678
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.134
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.031
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.681
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.079
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.765
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.034
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.256
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.754
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.532
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.707
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3182297499988636,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3226830830026302,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 5.896610749998217,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.427829083000688,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 4.697346958000708,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14527808399725473,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.526777667000715,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1408188749992405,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.0222442080012115,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13350908299980802,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.6713869999985036,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2777840000017022,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5410912500010454,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1077147079995484,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.1749752079995233,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.931974084000103,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.540383166000538,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1512445000007574,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.680347375000565,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14381004200185998,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.032163166997634,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.6831130829996255,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0832214160000149,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7666252500021074,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 4.034764250001899,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3185010420020262,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.7567950830016343,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5343325409994577,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7087762919982197,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

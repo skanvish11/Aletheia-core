@@ -1,0 +1,5012 @@
+{
+  "id": "b0017",
+  "live": true,
+  "investigation": {
+    "id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+    "claim": "Nominal gross domestic product removes the effects of price inflation from measured economic output.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:33:16.022022Z",
+    "started_at": "2026-11-10T05:33:16.226389Z",
+    "finished_at": "2026-11-10T05:34:11.821376Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "events": "/investigations/dca2b24d-9e6d-4d45-99e2-5f2653d2d76d/events",
+      "evidence": "/investigations/dca2b24d-9e6d-4d45-99e2-5f2653d2d76d/evidence",
+      "comparison": "/investigations/dca2b24d-9e6d-4d45-99e2-5f2653d2d76d/comparison",
+      "refresh": "/investigations/dca2b24d-9e6d-4d45-99e2-5f2653d2d76d/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "url": "https://obr.uk/box/rewriting-recent-history-real-gdp-revisions",
+        "canonical_url": "https://obr.uk/box/rewriting-recent-history-real-gdp-revisions",
+        "title": "Rewriting recent history: real GDP revisions - Office for Budget Responsibility",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:29.705549Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "13600b29401261d9dd4911fc96c414e61b682d0aa5f0735b6e88c70db54422c7",
+        "duplicate_group": "13600b29401261d9dd4911fc96c414e61b682d0aa5f0735b6e88c70db54422c7",
+        "limitations": []
+      },
+      {
+        "id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "url": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+        "canonical_url": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+        "title": "What Does Nominal GDP Mean? | LiveWell",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:32.925602Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "bd8844bbc8a82751cccdd67da108a0ed74ffdf00aaa6b52fe0cf2ab00003490a",
+        "duplicate_group": "bd8844bbc8a82751cccdd67da108a0ed74ffdf00aaa6b52fe0cf2ab00003490a",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "url": "https://ryanoconnellfinance.com/real-vs-nominal-gdp",
+        "canonical_url": "https://ryanoconnellfinance.com/real-vs-nominal-gdp",
+        "title": "Real vs Nominal GDP, GDP Deflator & Chain Weighting | Ryan O'Connell, CFA",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:38.360602Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "bfca09bdc6db107a2cc9e38f8ea78b3448cc83e583adef66cae2ba58a9619ea3",
+        "duplicate_group": "bfca09bdc6db107a2cc9e38f8ea78b3448cc83e583adef66cae2ba58a9619ea3",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+        "canonical_url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+        "title": "World Bank Open Data",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:47.383349Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "bf390b53d8586a69d22be42aba150f800acd33fa8582e0e96c5ff19a3d62e6b5",
+        "duplicate_group": "bf390b53d8586a69d22be42aba150f800acd33fa8582e0e96c5ff19a3d62e6b5",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "url": "https://study.com/academy/lesson/nominal-gdp-definition-formula-quiz.html",
+        "canonical_url": "https://study.com/academy/lesson/nominal-gdp-definition-formula-quiz.html",
+        "title": "Nominal GDP | Definition, Formula & Examples - Lesson | Study.com",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:50.247568Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a75b8fff3089aa61490e774fbe6bf9aebdbe23521fc7d72010bef7fd83ef5e4d",
+        "duplicate_group": "a75b8fff3089aa61490e774fbe6bf9aebdbe23521fc7d72010bef7fd83ef5e4d",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "url": "https://www.measuringworth.com/glossary/nominalgdp.html",
+        "canonical_url": "https://www.measuringworth.com/glossary/nominalgdp.html",
+        "title": "Glossary - Nominal GDP",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:34:03.826512Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "561822e2ea0132a89fc29c9a8876aee8c9a09a0a428fabe6b1a6dd176c759068",
+        "duplicate_group": "561822e2ea0132a89fc29c9a8876aee8c9a09a0a428fabe6b1a6dd176c759068",
+        "limitations": []
+      },
+      {
+        "id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "url": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+        "canonical_url": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+        "title": "Gross domestic product - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:34:06.056601Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a467b31b7fdc180d01ade132e9f645e0478eeb768e58435623a47e6633464ec6",
+        "duplicate_group": "a467b31b7fdc180d01ade132e9f645e0478eeb768e58435623a47e6633464ec6",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "fa024fd0-967c-474a-ad73-3ce0fc1270d0",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+            "span_ids": [
+              5,
+              6,
+              8
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Office for Budget Responsibility",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            5,
+            6,
+            8
+          ],
+          "provenance_note": "Spans 5 and 6 describe National Accounts data revisions and the impact on recession path estimates; span 8 notes published data as early drafts subject to future revisions.",
+          "rationale": "The supplied text discusses GDP data revisions and their impact on measured economic output over time, but does not define or describe nominal vs. real GDP adjustment.",
+          "limitations": [
+            "No definition of nominal versus real GDP in source",
+            "Content focuses on revision impacts rather than price inflation adjustment methodology"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              5,
+              6
+            ],
+            "start": 371,
+            "end": 744,
+            "text": "Revisions to National Accounts data are a normal part of the Blue Book process, which reconciles the different measures of GDP and incorporates information from annual data sources. This box explored how the estimated path of the 1990-92 and 2008-09 recessions and subsequent recoveries evolved over time, focusing in particular on revisions to GDP growth in 2011 and 2012.",
+            "quote_hash": "d51d27730e970224572820e44c448247311a4a15e243392cff37a9dfa6cef8f6"
+          },
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 849,
+            "end": 1114,
+            "text": "It is important to remember that the published GDP data for the past few years represent relatively early drafts of economic history and that the ONS may still be making significant revisions due to new information or the use of new methodologies many years later.a",
+            "quote_hash": "b2e5b754c9ccd1515ff8f51097a93fc8951e401c67c2fda0fa5c27effea20203"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "3bee4f64-3bcf-4ce1-a103-5fb96581614f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+            "span_ids": [
+              40,
+              49,
+              50,
+              54,
+              55
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Nominal GDP is measured using current market prices; it does not remove inflation effects.",
+          "publisher": "LiveWell",
+          "origin": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            40,
+            49,
+            50,
+            54,
+            55
+          ],
+          "provenance_note": "Span 40 defines nominal GDP as using current market prices; span 49 contrasts it with real GDP which uses constant prices; span 50 notes nominal GDP influenced by price changes; spans 54-55 state it does not account for inflation.",
+          "rationale": "The source repeatedly identifies nominal GDP as using current market prices and explicitly states it does not adjust for inflation. The assertion claims the opposite.",
+          "limitations": [
+            "Source is a finance guide, not a primary statistical authority.",
+            "No explicit definition of 'removes the effects of price inflation' is provided."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "definition",
+              "explanation": "The source defines nominal GDP as using current market prices without inflation adjustment, which contradicts the assertion that it removes inflation effects."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              40
+            ],
+            "start": 1886,
+            "end": 2053,
+            "text": "Nominal GDP refers to the total value of all goods and services produced within a country's borders during a given period, usually a year, using current market prices.",
+            "quote_hash": "f4b00f18bbebaf9f1e9bc800ec34b3a82762ef61e46eb29369ea83ffd84887ad"
+          },
+          {
+            "span_ids": [
+              49,
+              50
+            ],
+            "start": 3117,
+            "end": 3425,
+            "text": "Unlike real GDP, which adjusts for inflation by using constant prices, nominal GDP uses the actual prices paid for goods and services at the time they were produced. This means that changes in nominal GDP may be influenced by both changes in prices and changes in the quantity of goods and services produced.",
+            "quote_hash": "273a5c6499e06b023543d842a8689d7646cca7ecfd14ecbe4535d30519933993"
+          },
+          {
+            "span_ids": [
+              54,
+              55
+            ],
+            "start": 3878,
+            "end": 4101,
+            "text": "In other words, it does not take into consideration inflation or deflation. Therefore, changes in nominal GDP can be influenced by changes in the prices of goods and services rather than changes in actual economic activity.",
+            "quote_hash": "7ae88cd5cd86cb83496c0578e3bb466c4e2ced05d45e8660fcd5b7074bf9aee6"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "090b5461-3124-4744-a085-91103d4aa7fd",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+            "span_ids": [
+              96,
+              98,
+              99,
+              100,
+              101
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Real GDP adjusts for inflation; nominal GDP does not.",
+          "publisher": "LiveWell",
+          "origin": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            96,
+            98,
+            99,
+            100,
+            101
+          ],
+          "provenance_note": "Span 96 reiterates nominal GDP does not account for price changes; spans 98-101 define real GDP as inflation-adjusted using constant prices and a price index.",
+          "rationale": "The source clearly distinguishes nominal GDP (current prices) from real GDP (inflation-adjusted), contradicting the assertion.",
+          "limitations": [
+            "Source is a guide, not a primary data source.",
+            "No formal econometric definition is provided."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "definition",
+              "explanation": "The source's distinction between nominal and real GDP directly contradicts the assertion."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              96
+            ],
+            "start": 11733,
+            "end": 11877,
+            "text": "While nominal GDP provides valuable insights into the current economic output of a country, it does not account for changes in prices over time.",
+            "quote_hash": "88ed7648dbd79914605b46d6d2e4f1d306dc18bd395211378505e6cc96d1f99b"
+          },
+          {
+            "span_ids": [
+              98,
+              99,
+              100,
+              101
+            ],
+            "start": 11918,
+            "end": 12575,
+            "text": "Real GDP, unlike nominal GDP, adjusts for inflation or deflation and measures economic output using constant prices, providing a more accurate picture of economic growth.\n\nReal GDP takes into consideration the changes in the general price level, allowing for a more meaningful comparison of economic performance across different time periods. By keeping prices constant, real GDP isolates the changes in the actual quantity of goods and services produced, reflecting true economic growth or contraction.\n\nThe calculation of real GDP involves using a price index, such as the GDP deflator or a specific consumer price index, to adjust the nominal GDP figure.",
+            "quote_hash": "9f6bc1c68b2e49ac3431af3cc6388826e04594d6ba06a29b6cea98cf97112e0e"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "e974e8e0-9d99-497c-8838-6ed3996e3c46",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+            "span_ids": [
+              39,
+              47
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Nominal GDP is one measure of economic output; the source describes its relation to other GDP measures.",
+          "publisher": "LiveWell",
+          "origin": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            39,
+            47
+          ],
+          "provenance_note": "Span 39 introduces nominal GDP as an important measure; span 47 defines it as current-dollar GDP taking current market prices.",
+          "rationale": "These spans provide context about nominal GDP as a measure but do not support the claim that it removes inflation effects.",
+          "limitations": [
+            "Context does not address the assertion's core claim.",
+            "Source lacks formal economic definitions."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              39
+            ],
+            "start": 1847,
+            "end": 1884,
+            "text": "One important measure is Nominal GDP.",
+            "quote_hash": "8b8eee86e74c060a0299fabd3eb1b6ffbafc5cd4d38b0537136f76c56e2563a9"
+          },
+          {
+            "span_ids": [
+              47
+            ],
+            "start": 2819,
+            "end": 2970,
+            "text": "Nominal GDP, also known as current-dollar GDP, is a measure of economic output that takes into account the current market prices of goods and services.",
+            "quote_hash": "3674b748256d210e816733cebd2376c10768b398aea7485ea68eb2e343dacfa4"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "e52726f0-7492-4b46-9bd8-f8b624a99b7e",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+            "span_ids": [
+              17,
+              42,
+              44
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Nominal GDP uses current-year prices; real GDP removes price inflation effects using reference-year pricing, with explicit formula Real GDP = (Nominal GDP / GDP Deflator) × 100.",
+          "publisher": "Ryan O'Connell, CFA",
+          "origin": "https://ryanoconnellfinance.com/real-vs-nominal-gdp",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            17,
+            42,
+            44
+          ],
+          "provenance_note": "Source presents definitions and conversion formula but does not cite external authorities.",
+          "rationale": "Spans 17, 42, and 44 explicitly define nominal GDP as current-dollar output and real GDP as inflation-adjusted output using the GDP deflator conversion formula.",
+          "limitations": [
+            "Source is a single-author finance blog without external peer review",
+            "Independence from other GDP definitions unverified",
+            "Chain-weight methodology details limited to blog summary"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "definition",
+              "explanation": "Blog equates 'removes the effects of price inflation' with fixed-weight Laspeyres adjustment; BEA uses chain-weighted Fisher index which differs from simple inflation removal."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              17
+            ],
+            "start": 1791,
+            "end": 2084,
+            "text": "**Nominal GDP** (current-dollar GDP) values output using the prices prevailing in each year. **Real GDP** (chained-dollar GDP) removes the effect of [inflation](/inflation-consumer-price-index/) so that changes in GDP reflect only changes in the actual quantity of goods and services produced.",
+            "quote_hash": "7dbdf8a45221bb8a615b5a1da84aea2965c696ebf7d202c21443b952831e929b"
+          },
+          {
+            "span_ids": [
+              42
+            ],
+            "start": 3852,
+            "end": 3993,
+            "text": "If you know the GDP deflator, you can convert nominal GDP into real GDP (or vice versa) using a simple rearrangement of the deflator formula:",
+            "quote_hash": "14d5f7c2641be4840b199b13307cbf56cca23217a0c7a2f5bff59038330699a5"
+          },
+          {
+            "span_ids": [
+              44
+            ],
+            "start": 4027,
+            "end": 4072,
+            "text": "Real GDP = (Nominal GDP / GDP Deflator) × 100",
+            "quote_hash": "3f71d2e4a9062a2e31a349fd923b0c8b0774c6e9de99813d2167d6cb583d201c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "9bc14574-a7c0-4d6c-92f1-538705ad2868",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+            "span_ids": [
+              39
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "World Bank Open Data",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            39
+          ],
+          "provenance_note": "Source footnote identifies data providers but does not define methodological terms.",
+          "rationale": "Span 39 lists data sources (country statistics, OECD, World Bank estimates) but does not describe how GDP is calculated or whether it adjusts for inflation.",
+          "limitations": [
+            "No methodological definition provided in source spans"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              39
+            ],
+            "start": 2865,
+            "end": 3080,
+            "text": "Country official statistics, National Statistical Organizations and/or Central Banks; National Accounts data files, Organisation for Economic Co-operation and Development ( OECD ); Staff estimates, World Bank ( WB )",
+            "quote_hash": "d89d502f857b9aa657b4f7fddf2dedd76defe059840519009b20ccd9433a9b2a"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "a553254d-f16b-4526-87da-7057c163dc8f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+            "span_ids": [
+              48
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "World Bank Open Data",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            48
+          ],
+          "provenance_note": "Indicates a constant-price series but does not explain removal of inflation from nominal GDP.",
+          "rationale": "Span 48 references 'GDP (constant 2015 US$)' which is a real measure, but the page does not state that nominal GDP removes inflation effects.",
+          "limitations": [
+            "No explicit definition of nominal GDP adjustment"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              48
+            ],
+            "start": 3765,
+            "end": 3913,
+            "text": "* [GDP (constant 2015 US$)![Image 5](https://data.worldbank.org/assets/images/placeholder.png)](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD)",
+            "quote_hash": "07ae009099834f7e34b7be8e33f1999cc668da728a4ee95691f647d43bd2da89"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "8d3d6174-3224-461f-a003-e5eed41ef385",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+            "span_ids": [
+              113,
+              114,
+              115,
+              116
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            113,
+            114,
+            115,
+            116
+          ],
+          "provenance_note": "Source article does not define nominal GDP as removing inflation's effects; it defines nominal GDP as based on current prices and explicitly states it does not account for inflation, contradicting the assertion.",
+          "rationale": "The source states nominal GDP is 'GDP based on current prices' and 'does not take into consideration inflation' while real GDP 'takes inflation into account and adjusts the prices.' It never says nominal GDP removes inflation effects.",
+          "limitations": [
+            "Source is an educational article with limited citation of primary economic definitions.",
+            "No direct source defining nominal GDP as removing inflation effects."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "definition",
+              "explanation": "Source defines nominal GDP as current prices without inflation adjustment, opposite of the assertion's claim."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              113,
+              114,
+              115,
+              116
+            ],
+            "start": 7720,
+            "end": 8108,
+            "text": "What is nominal GDP? **Nominal GDP** is GDP based on current prices. It does not take into consideration inflation. The nominal GDP definition is the aggregate sum of all the value of a country's goods and services at the current prices. On the other hand, real GDP takes inflation into account and adjusts the prices for better comparison without the effects of inflation or price hikes.",
+            "quote_hash": "1ca033676381815d563ca96a8e748c1f04cc4973f5471d47cc68242a84b315ca"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "ed70b7f8-e9cb-4d87-be41-3512fa754e33",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+            "span_ids": [
+              117,
+              118,
+              119
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            117,
+            118,
+            119
+          ],
+          "provenance_note": "Source confirms real GDP adjusts for inflation and removes its effects, which indirectly highlights that nominal GDP does not, but does not itself assert that nominal GDP removes inflation.",
+          "rationale": "Spans 117-119 describe real GDP's inflation adjustment but do not claim nominal GDP removes inflation effects; they describe what real GDP does instead.",
+          "limitations": [
+            "These spans describe real GDP, not nominal GDP's properties.",
+            "No direct statement about nominal GDP removing inflation."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              117,
+              118,
+              119
+            ],
+            "start": 8109,
+            "end": 8401,
+            "text": "This way, the analysis on the wellness of the country's economy is free from inflationary effects. This is done by fixing the prices to a base-year valuation. This way, the prices are adjusted, and only the other factors can be attributed to the price increases and not the inflation anymore.",
+            "quote_hash": "a56fb70d33be3d8efc53b7d1581e149dd0b8c20f4c688c9a9b0bdf0b4e9346ea"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "dce0f3ee-5b79-4b7d-883f-34b4fcc13429",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+            "span_ids": [
+              24,
+              26,
+              27
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            24,
+            26,
+            27
+          ],
+          "provenance_note": "Source states base year/prices are specified for real GDP while nominal GDP uses current prices; nominal GDP 'does not take into consideration that price increases might be due to inflationary influences.'",
+          "rationale": "Spans 24, 26, 27 directly contrast nominal GDP (current prices, no inflation consideration) with real GDP (base year prices), contradicting the assertion that nominal GDP removes inflation effects.",
+          "limitations": [
+            "Educational source without primary economic data.",
+            "No direct definition of nominal GDP as removing inflation."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              24
+            ],
+            "start": 1594,
+            "end": 1698,
+            "text": "A base year for base prices is specified for the real GDP while the nominal GDP will use current prices.",
+            "quote_hash": "b6a6bffbb61b02cd4ab676f20aae6161224584a96a8dc3dbd4ff776527e8609e"
+          },
+          {
+            "span_ids": [
+              26,
+              27
+            ],
+            "start": 1726,
+            "end": 1958,
+            "text": "Nominal GDP is the value of all goods and services produced within a country during a specific period of time. It uses current prices and does not take into consideration that price increases might be due to inflationary influences.",
+            "quote_hash": "f1f4a0e2ad7f70b8736d0544b3707779e20f175cc7a75a6df4ad0f3ac9266c5c"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "65640b69-247a-4302-bd2c-ceb6814488dc",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+            "span_ids": [
+              4
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "MeasuringWorth glossary",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            4
+          ],
+          "provenance_note": "Direct definition from MeasuringWorth glossary on Nominal GDP.",
+          "rationale": "Nominal GDP is defined as GDP expressed in current market prices without adjusting for inflation, incorporating both real-output change and price change (inflation). The assertion incorrectly states that nominal GDP removes the effects of price inflation, when in fact it includes inflation by using ",
+          "limitations": [
+            "Assertion uses an incorrect definition of nominal GDP; actual nominal GDP includes price inflation effects."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "definition",
+              "explanation": "Nominal GDP definition contradicts claim that it removes price inflation effects; it incorporates inflation."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              4
+            ],
+            "start": 30,
+            "end": 340,
+            "text": "| [GDP](http://www.measuringworth.com/glossary/gdp.html) expressed in current market prices, which is GDP not corrected for inflation. This may also be called \"money GDP\", \"current-price GDP\" or \"GDP at current prices\". Nominal GDP over time incorporates both real-output change and price change (inflation). |",
+            "quote_hash": "bb301c4a9f1ca158111ccd898eb3054672a3273fbac980b0ca7093ae349ed2e4"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "245a5d27-9a70-4297-94a0-7f2f4ef4e134",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+            "span_ids": [
+              114,
+              117
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            114,
+            117
+          ],
+          "provenance_note": "Spanish and Latvian language sections on GDP definitions; not English body text",
+          "rationale": "Spans 114 and 117 are Wikipedia language translations of GDP; they do not establish the claim that nominal GDP removes inflation effects in the English article body.",
+          "limitations": [
+            "Language barrier - non-English sections",
+            "Spans are footers/translations, not article content"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "jurisdiction/language",
+              "explanation": "Citations are language variants, not the English article's definition of nominal GDP."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              114
+            ],
+            "start": 12793,
+            "end": 12890,
+            "text": "* [Lombard](https://lmo.wikipedia.org/wiki/Prodott_interno_lord \"Prodott interno lord – Lombard\")",
+            "quote_hash": "3c4ccb14a0d832e10cc6f9855e2afe4eb28a9f8b7744a9de75f59a8d4a3e1f7f"
+          },
+          {
+            "span_ids": [
+              117
+            ],
+            "start": 13313,
+            "end": 13417,
+            "text": "* [Latviešu](https://lv.wikipedia.org/wiki/Iek%C5%A1zemes_kopprodukts \"Iekšzemes kopprodukts – Latvian\")",
+            "quote_hash": "6e74085f8b725b993e4f0acc43a03824ae0134f524127fb2e744cb1390eaba2a"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "39c0a375-ec06-477f-a7aa-f2edb4e5f85a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+            "span_ids": [
+              2
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            2
+          ],
+          "provenance_note": "Search link span; not article text",
+          "rationale": "Span 2 is a search widget link, not article content about GDP definitions.",
+          "limitations": [
+            "Not article body text"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "content_type",
+              "explanation": "Span 2 is a navigation element, not definitional text."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              2
+            ],
+            "start": 33,
+            "end": 86,
+            "text": "[Search](/wiki/Special:Search \"Search Wikipedia [f]\")",
+            "quote_hash": "eb6a8623ac62935f15d87f5c67098312f859734166c04ae150fcbf224d9e4d52"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "aa3b24a3-a0f7-42ec-9d06-87047031a69c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+            "span_ids": [
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "provenance_note": "Language blocks for Afrikaans, Alemannic, Aragonese, Arabic, Moroccan Arabic; not English article body",
+          "rationale": "Spans 35-40 are interlanguage links in Wikipedia footer; they do not constitute the English article's definition of nominal GDP.",
+          "limitations": [
+            "Non-English language sections",
+            "Footer navigation, not article content"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "language/footnote",
+              "explanation": "These are interlanguage links, not the English article's GDP definition."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ],
+            "start": 1607,
+            "end": 2402,
+            "text": "* [Afrikaans](https://af.wikipedia.org/wiki/Bruto_binnelandse_produk \"Bruto binnelandse produk – Afrikaans\")\n* [Alemannisch](https://als.wikipedia.org/wiki/Bruttoinlandsprodukt \"Bruttoinlandsprodukt – Alemannic\")\n* [Aragonés](https://an.wikipedia.org/wiki/Producto_Interior_Bruto \"Producto Interior Bruto – Aragonese\")\n* [العربية](https://ar.wikipedia.org/wiki/%D9%86%D8%A7%D8%AA%D8%AC_%D9%85%D8%AD%D9%84%D9%8A_%D8%A5%D8%AC%D9%85%D8%A7%D9%84%D9%8A \"ناتج محلي إجمالي – Arabic\")\n* [الدارجة](https://ary.wikipedia.org/wiki/%D9%86%D8%A7%D8%AA%D8%AC_%D8%AF%D8%A7%D8%AE%D9%84%D9%8A_%D8%AE%D8%A7%D9%85 \"ناتج داخلي خام – Moroccan Arabic\")\n* [مصرى](https://arz.wikipedia.org/wiki/%D9%86%D8%A7%D8%AA%D8%AC_%D9%85%D8%AD%D9%84%D9%89_%D8%A7%D8%AC%D9%85%D8%A7%D9%84%D9%89 \"ناتج محلى اجمالى – Egyptian Arabic\")",
+            "quote_hash": "82fdaf78e35d9a0de8fb167feb62366a51a342ae8db51de2d9df4dc57062fef9"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:33:16.022022Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:33:16.226389Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:33:16.231300Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:33:16.233781Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:33:16.236064Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.994",
+        "hard_remaining_seconds": "119.994",
+        "attempt": "1",
+        "input_chars": "128"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:33:16.240708Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.991",
+        "hard_remaining_seconds": "119.991",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5805"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:33:17.338673Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.892",
+        "hard_remaining_seconds": "118.892",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5805",
+        "elapsed_seconds": "1.096",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1244"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:33:17.341586Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.889",
+        "hard_remaining_seconds": "118.889",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "369",
+        "elapsed_seconds": "1.106",
+        "finish_reason": "stop",
+        "prompt_tokens": "895",
+        "completion_tokens": "87",
+        "total_tokens": "982"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:33:17.343681Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:33:17.345715Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:33:17.347660Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:33:17.349306Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.881",
+        "hard_remaining_seconds": "238.881",
+        "attempt": "1",
+        "input_chars": "494"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:33:17.351482Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.879",
+        "hard_remaining_seconds": "238.879",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3519"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:33:18.135365Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.096",
+        "hard_remaining_seconds": "238.096",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3519",
+        "elapsed_seconds": "0.781",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1435"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:33:18.137664Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.093",
+        "hard_remaining_seconds": "238.093",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "545",
+        "elapsed_seconds": "0.788",
+        "finish_reason": "stop",
+        "prompt_tokens": "600",
+        "completion_tokens": "128",
+        "total_tokens": "728"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:33:18.139525Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Definition of nominal GDP and whether it adjusts for price inflation",
+        "purpose": "context",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:33:18.141318Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.089",
+        "hard_remaining_seconds": "238.089",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "276"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:33:23.889325Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.342",
+        "hard_remaining_seconds": "232.342",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "276",
+        "elapsed_seconds": "5.745",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9335"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:33:23.892170Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Definition of nominal GDP and whether it adjusts for price inflation",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:33:23.894267Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Distinction between nominal GDP and real GDP in official statistical sources",
+        "purpose": "support",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:33:23.896262Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.334",
+        "hard_remaining_seconds": "232.334",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:33:26.290746Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "184.941",
+        "hard_remaining_seconds": "229.941",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284",
+        "elapsed_seconds": "2.391",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7334"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:33:26.293583Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Distinction between nominal GDP and real GDP in official statistical sources",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:33:26.295517Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Historical revisions or corrections to GDP inflation adjustment methodology",
+        "purpose": "contradiction",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:33:26.297056Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "184.933",
+        "hard_remaining_seconds": "229.933",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:33:29.066373Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "182.165",
+        "hard_remaining_seconds": "227.165",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283",
+        "elapsed_seconds": "2.767",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6830"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:33:29.069534Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Historical revisions or corrections to GDP inflation adjustment methodology",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:33:29.072298Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:33:29.074237Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.reddit.com/r/AskEconomics/comments/sje86q/can_someone_please_explain_the_difference_between",
+        "slot": "1",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:33:29.076288Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:33:29.078005Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.152",
+        "hard_remaining_seconds": "227.152",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "230"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:33:29.464618Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "181.767",
+        "hard_remaining_seconds": "226.767",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "230",
+        "elapsed_seconds": "0.384",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "272"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:33:29.467122Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.reddit.com/r/AskEconomics/comments/sje86q/can_someone_please_explain_the_difference_between",
+        "candidate_id": "c11",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:33:29.468813Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "url": "https://obr.uk/box/rewriting-recent-history-real-gdp-revisions",
+        "slot": "2",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:33:29.470354Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:33:29.471976Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "181.758",
+        "hard_remaining_seconds": "226.758",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "189"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:33:29.703667Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "181.528",
+        "hard_remaining_seconds": "226.528",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "189",
+        "elapsed_seconds": "0.228",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9178"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:33:29.709614Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "url": "https://obr.uk/box/rewriting-recent-history-real-gdp-revisions",
+        "candidate_id": "c13",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:33:29.711238Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:33:29.715758Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "181.514",
+        "hard_remaining_seconds": "226.514",
+        "attempt": "1",
+        "input_chars": "12254"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:33:29.718936Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "181.511",
+        "hard_remaining_seconds": "226.511",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23182"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:33:32.674027Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.556",
+        "hard_remaining_seconds": "223.556",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23182",
+        "elapsed_seconds": "2.953",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1986"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:33:32.676413Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.554",
+        "hard_remaining_seconds": "223.554",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1081",
+        "elapsed_seconds": "2.961",
+        "finish_reason": "stop",
+        "prompt_tokens": "6302",
+        "completion_tokens": "274",
+        "total_tokens": "6576"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:33:32.679497Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "fa024fd0-967c-474a-ad73-3ce0fc1270d0",
+        "snapshot_id": "c8dc4925-5310-4fbe-afae-4405be17c612",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:33:32.681015Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "url": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+        "slot": "3",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:33:32.682331Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:33:32.683680Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.546",
+        "hard_remaining_seconds": "223.546",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "182"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:33:32.923632Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.308",
+        "hard_remaining_seconds": "223.308",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "182",
+        "elapsed_seconds": "0.237",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "28665"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:33:32.932908Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "url": "https://livewell.com/finance/what-does-nominal-gdp-mean",
+        "candidate_id": "c17",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:33:32.934591Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:33:32.939226Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.291",
+        "hard_remaining_seconds": "223.291",
+        "attempt": "1",
+        "input_chars": "18585"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:33:32.942796Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.287",
+        "hard_remaining_seconds": "223.287",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30320"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:33:37.924370Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.307",
+        "hard_remaining_seconds": "218.307",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30320",
+        "elapsed_seconds": "4.979",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4610"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:33:37.927877Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.303",
+        "hard_remaining_seconds": "218.303",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3572",
+        "elapsed_seconds": "4.988",
+        "finish_reason": "stop",
+        "prompt_tokens": "7718",
+        "completion_tokens": "1002",
+        "total_tokens": "8720"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:33:37.932000Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "3bee4f64-3bcf-4ce1-a103-5fb96581614f",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:33:37.933840Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "090b5461-3124-4744-a085-91103d4aa7fd",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:33:37.935609Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e974e8e0-9d99-497c-8838-6ed3996e3c46",
+        "snapshot_id": "3c1b3142-79d0-4784-b854-93f1ec189347",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:33:37.937684Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "url": "https://ryanoconnellfinance.com/real-vs-nominal-gdp",
+        "slot": "4",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:33:37.939088Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:33:37.940539Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "173.290",
+        "hard_remaining_seconds": "218.289",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:33:38.358772Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.873",
+        "hard_remaining_seconds": "217.873",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178",
+        "elapsed_seconds": "0.414",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "23735"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:33:38.367615Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "url": "https://ryanoconnellfinance.com/real-vs-nominal-gdp",
+        "candidate_id": "c21",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:33:38.369664Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:33:38.376536Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.855",
+        "hard_remaining_seconds": "217.855",
+        "attempt": "1",
+        "input_chars": "19942"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:33:38.380391Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.850",
+        "hard_remaining_seconds": "217.850",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32837"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:33:40.825684Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.406",
+        "hard_remaining_seconds": "215.406",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32837",
+        "elapsed_seconds": "2.442",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2285"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:33:40.829566Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.401",
+        "hard_remaining_seconds": "215.401",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1360",
+        "elapsed_seconds": "2.454",
+        "finish_reason": "stop",
+        "prompt_tokens": "9886",
+        "completion_tokens": "374",
+        "total_tokens": "10260"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:33:40.835244Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e52726f0-7492-4b46-9bd8-f8b624a99b7e",
+        "snapshot_id": "250b416d-6a0d-4167-8da7-a4c79283d4d6",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:33:40.837945Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:33:40.840657Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.390",
+        "hard_remaining_seconds": "215.390",
+        "attempt": "1",
+        "input_chars": "4536"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:33:40.844472Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.386",
+        "hard_remaining_seconds": "215.386",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7743"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:33:41.712384Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.521",
+        "hard_remaining_seconds": "214.521",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7743",
+        "elapsed_seconds": "0.863",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1398"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:33:41.716067Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.515",
+        "hard_remaining_seconds": "214.515",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "517",
+        "elapsed_seconds": "0.875",
+        "finish_reason": "stop",
+        "prompt_tokens": "1907",
+        "completion_tokens": "112",
+        "total_tokens": "2019"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:33:41.718974Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:33:41.720933Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:33:41.723130Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary definition of nominal GDP as inflation-adjusted measure from official statistics origin",
+        "purpose": "support",
+        "query_id": "q27"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:33:41.726316Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "169.505",
+        "hard_remaining_seconds": "214.505",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "303"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:33:44.628096Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.603",
+        "hard_remaining_seconds": "211.603",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "303",
+        "elapsed_seconds": "2.898",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8479"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:33:44.630147Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary definition of nominal GDP as inflation-adjusted measure from official statistics origin",
+        "query_id": "q27",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:33:44.631937Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Explicit statement that nominal GDP does NOT remove inflation effects from measured output",
+        "purpose": "contradiction",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:33:44.633512Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.597",
+        "hard_remaining_seconds": "211.597",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:33:47.209882Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.020",
+        "hard_remaining_seconds": "209.020",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298",
+        "elapsed_seconds": "2.575",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7812"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:33:47.211777Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Explicit statement that nominal GDP does NOT remove inflation effects from measured output",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:33:47.213168Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:33:47.214788Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+        "slot": "1",
+        "query_ids": "q27",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:33:47.215895Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:33:47.217061Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "164.013",
+        "hard_remaining_seconds": "209.013",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:33:47.382555Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "163.848",
+        "hard_remaining_seconds": "208.848",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "178",
+        "elapsed_seconds": "0.164",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "33348"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:33:47.389659Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "url": "https://data.worldbank.org/indicator/NY.GDP.MKTP.CD",
+        "candidate_id": "c31",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:33:47.390563Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:33:47.393343Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "163.836",
+        "hard_remaining_seconds": "208.836",
+        "attempt": "1",
+        "input_chars": "15672"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:33:47.395462Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "163.834",
+        "hard_remaining_seconds": "208.834",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28477"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:33:50.043773Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.188",
+        "hard_remaining_seconds": "206.188",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28477",
+        "elapsed_seconds": "2.646",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2457"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:33:50.047858Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "161.183",
+        "hard_remaining_seconds": "206.183",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1508",
+        "elapsed_seconds": "2.654",
+        "finish_reason": "stop",
+        "prompt_tokens": "9122",
+        "completion_tokens": "432",
+        "total_tokens": "9554"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:33:50.051528Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "9bc14574-a7c0-4d6c-92f1-538705ad2868",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:33:50.053249Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "a553254d-f16b-4526-87da-7057c163dc8f",
+        "snapshot_id": "0f331606-19ee-4caf-98e9-8873760c4a70",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:33:50.055022Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "url": "https://study.com/academy/lesson/nominal-gdp-definition-formula-quiz.html",
+        "slot": "2",
+        "query_ids": "q29",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:33:50.056374Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:33:50.057831Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "161.172",
+        "hard_remaining_seconds": "206.172",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "200"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:33:50.245672Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.987",
+        "hard_remaining_seconds": "205.987",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "200",
+        "elapsed_seconds": "0.184",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "28904"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:33:50.255910Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "url": "https://study.com/academy/lesson/nominal-gdp-definition-formula-quiz.html",
+        "candidate_id": "c35",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:33:50.257805Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:33:50.264019Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.967",
+        "hard_remaining_seconds": "205.966",
+        "attempt": "1",
+        "input_chars": "20546"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:33:50.267868Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.962",
+        "hard_remaining_seconds": "205.962",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33565"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:33:54.202568Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.029",
+        "hard_remaining_seconds": "202.029",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33565",
+        "elapsed_seconds": "3.932",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4212"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:33:54.206243Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.024",
+        "hard_remaining_seconds": "202.024",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3202",
+        "elapsed_seconds": "3.942",
+        "finish_reason": "stop",
+        "prompt_tokens": "10342",
+        "completion_tokens": "877",
+        "total_tokens": "11219"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:33:54.209857Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "8d3d6174-3224-461f-a003-e5eed41ef385",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:33:54.211298Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ed70b7f8-e9cb-4d87-be41-3512fa754e33",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:33:54.212865Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "dce0f3ee-5b79-4b7d-883f-34b4fcc13429",
+        "snapshot_id": "5869ac3f-91a0-4f78-a5e2-6af72e29b689",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:33:54.214509Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:33:54.215939Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.014",
+        "hard_remaining_seconds": "202.014",
+        "attempt": "1",
+        "input_chars": "7248"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:33:54.218168Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.012",
+        "hard_remaining_seconds": "202.012",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10621"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:33:55.248941Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "155.983",
+        "hard_remaining_seconds": "200.983",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10621",
+        "elapsed_seconds": "1.027",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1657"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:33:55.252016Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "155.978",
+        "hard_remaining_seconds": "200.978",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "764",
+        "elapsed_seconds": "1.036",
+        "finish_reason": "stop",
+        "prompt_tokens": "2952",
+        "completion_tokens": "163",
+        "total_tokens": "3115"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:33:55.253857Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:33:55.255453Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:33:55.257117Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "original definition of nominal GDP as current-dollar output that does not remove price inflation from measured economic output from an official statistical source",
+        "purpose": "support",
+        "query_id": "q41"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:33:55.258664Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q41",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "155.971",
+        "hard_remaining_seconds": "200.971",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "370"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:33:57.570053Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q41",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.661",
+        "hard_remaining_seconds": "198.661",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "370",
+        "elapsed_seconds": "2.308",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6782"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:33:57.572920Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "original definition of nominal GDP as current-dollar output that does not remove price inflation from measured economic output from an official statistical source",
+        "query_id": "q41",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:33:57.574945Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "official definition of real GDP as inflation-adjusted measure of economic output from an authoritative source",
+        "purpose": "support",
+        "query_id": "q43"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:33:57.576573Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q43",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.654",
+        "hard_remaining_seconds": "198.654",
+        "provider_call_id": "p44",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "317"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:34:00.339226Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q43",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.892",
+        "hard_remaining_seconds": "195.892",
+        "provider_call_id": "p44",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "317",
+        "elapsed_seconds": "2.760",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4081"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:34:00.341875Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "official definition of real GDP as inflation-adjusted measure of economic output from an authoritative source",
+        "query_id": "q43",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:34:00.343891Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "explicit statement that nominal GDP does not adjust for price inflation in measured economic output from an official source",
+        "purpose": "contradiction",
+        "query_id": "q45"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:34:00.345561Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.885",
+        "hard_remaining_seconds": "195.885",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:34:02.952089Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.280",
+        "hard_remaining_seconds": "193.280",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331",
+        "elapsed_seconds": "2.603",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8851"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:34:02.955163Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "explicit statement that nominal GDP does not adjust for price inflation in measured economic output from an official source",
+        "query_id": "q45",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:34:02.957747Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "11",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:34:02.959388Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c47",
+        "url": "https://www.measuringworth.com/glossary/nominalgdp.html",
+        "slot": "1",
+        "query_ids": "q41",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:34:02.961006Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:34:02.962754Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c47",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "148.267",
+        "hard_remaining_seconds": "193.267",
+        "provider_call_id": "p48",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "182"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:34:03.824885Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c47",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "147.407",
+        "hard_remaining_seconds": "192.407",
+        "provider_call_id": "p48",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "182",
+        "elapsed_seconds": "0.859",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "625"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:34:03.830080Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "url": "https://www.measuringworth.com/glossary/nominalgdp.html",
+        "candidate_id": "c47",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:34:03.831785Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:34:03.836123Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "147.394",
+        "hard_remaining_seconds": "192.394",
+        "attempt": "1",
+        "input_chars": "952"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:34:03.839282Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "147.391",
+        "hard_remaining_seconds": "192.391",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10179"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:34:05.770064Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "145.461",
+        "hard_remaining_seconds": "190.461",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10179",
+        "elapsed_seconds": "1.929",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2096"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:34:05.772075Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "145.458",
+        "hard_remaining_seconds": "190.458",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1181",
+        "elapsed_seconds": "1.936",
+        "finish_reason": "stop",
+        "prompt_tokens": "1781",
+        "completion_tokens": "301",
+        "total_tokens": "2082"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:34:05.774843Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "65640b69-247a-4302-bd2c-ceb6814488dc",
+        "snapshot_id": "430a9f7d-142a-4d01-95dd-d08170203a65",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:34:05.776004Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c51",
+        "url": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+        "slot": "2",
+        "query_ids": "q41,q43,q45",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:34:05.777188Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:34:05.778367Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c51",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "145.452",
+        "hard_remaining_seconds": "190.451",
+        "provider_call_id": "p52",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "179"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:34:06.055468Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c51",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "145.175",
+        "hard_remaining_seconds": "190.175",
+        "provider_call_id": "p52",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "179",
+        "elapsed_seconds": "0.275",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "207275"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:34:06.065014Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "url": "https://en.wikipedia.org/wiki/Gross_domestic_product",
+        "candidate_id": "c51",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:34:06.066069Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:34:06.068903Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t53",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "145.161",
+        "hard_remaining_seconds": "190.161",
+        "attempt": "1",
+        "input_chars": "18406"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:34:06.072083Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t53",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "145.159",
+        "hard_remaining_seconds": "190.159",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31764"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:34:09.950377Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t53",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "141.281",
+        "hard_remaining_seconds": "186.281",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31764",
+        "elapsed_seconds": "3.875",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3940"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 150,
+      "timestamp": "2026-11-10T05:34:09.953517Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t53",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "141.277",
+        "hard_remaining_seconds": "186.277",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2896",
+        "elapsed_seconds": "3.884",
+        "finish_reason": "stop",
+        "prompt_tokens": "11347",
+        "completion_tokens": "850",
+        "total_tokens": "12197"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 151,
+      "timestamp": "2026-11-10T05:34:09.957820Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "245a5d27-9a70-4297-94a0-7f2f4ef4e134",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 152,
+      "timestamp": "2026-11-10T05:34:09.959471Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "39c0a375-ec06-477f-a7aa-f2edb4e5f85a",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 153,
+      "timestamp": "2026-11-10T05:34:09.961109Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "aa3b24a3-a0f7-42ec-9d06-87047031a69c",
+        "snapshot_id": "80ca3d62-2fd0-4375-8d05-211d7561cf6e",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 154,
+      "timestamp": "2026-11-10T05:34:09.963085Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 155,
+      "timestamp": "2026-11-10T05:34:09.964394Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 156,
+      "timestamp": "2026-11-10T05:34:09.965946Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "3bee4f64-3bcf-4ce1-a103-5fb96581614f"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 157,
+      "timestamp": "2026-11-10T05:34:09.967915Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "090b5461-3124-4744-a085-91103d4aa7fd"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 158,
+      "timestamp": "2026-11-10T05:34:09.969632Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "8d3d6174-3224-461f-a003-e5eed41ef385"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 159,
+      "timestamp": "2026-11-10T05:34:09.971174Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "65640b69-247a-4302-bd2c-ceb6814488dc"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 160,
+      "timestamp": "2026-11-10T05:34:09.972635Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "245a5d27-9a70-4297-94a0-7f2f4ef4e134"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 161,
+      "timestamp": "2026-11-10T05:34:09.973927Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "39c0a375-ec06-477f-a7aa-f2edb4e5f85a"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 162,
+      "timestamp": "2026-11-10T05:34:09.975172Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "aa3b24a3-a0f7-42ec-9d06-87047031a69c"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 163,
+      "timestamp": "2026-11-10T05:34:09.978498Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 164,
+      "timestamp": "2026-11-10T05:34:09.979894Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "186.250",
+        "hard_remaining_seconds": "186.250",
+        "attempt": "1",
+        "input_chars": "11003"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 165,
+      "timestamp": "2026-11-10T05:34:09.981600Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "186.248",
+        "hard_remaining_seconds": "186.248",
+        "provider_call_id": "p56",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16289"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 166,
+      "timestamp": "2026-11-10T05:34:11.183076Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "185.047",
+        "hard_remaining_seconds": "185.047",
+        "provider_call_id": "p56",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16289",
+        "elapsed_seconds": "1.200",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1387"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 167,
+      "timestamp": "2026-11-10T05:34:11.185816Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t55",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "185.045",
+        "hard_remaining_seconds": "185.045",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "508",
+        "elapsed_seconds": "1.205",
+        "finish_reason": "stop",
+        "prompt_tokens": "4654",
+        "completion_tokens": "194",
+        "total_tokens": "4848"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 168,
+      "timestamp": "2026-11-10T05:34:11.188686Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "185.042",
+        "hard_remaining_seconds": "185.042",
+        "attempt": "1",
+        "input_chars": "11521"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 169,
+      "timestamp": "2026-11-10T05:34:11.190635Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "185.039",
+        "hard_remaining_seconds": "185.039",
+        "provider_call_id": "p58",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16184"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 170,
+      "timestamp": "2026-11-10T05:34:11.808882Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "184.423",
+        "hard_remaining_seconds": "184.423",
+        "provider_call_id": "p58",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16184",
+        "elapsed_seconds": "0.615",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1070"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 171,
+      "timestamp": "2026-11-10T05:34:11.814641Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t57",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "184.419",
+        "hard_remaining_seconds": "184.419",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "206",
+        "elapsed_seconds": "0.623",
+        "finish_reason": "stop",
+        "prompt_tokens": "4731",
+        "completion_tokens": "62",
+        "total_tokens": "4793"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 172,
+      "timestamp": "2026-11-10T05:34:11.819308Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "dca2b24d-9e6d-4d45-99e2-5f2653d2d76d",
+      "sequence": 173,
+      "timestamp": "2026-11-10T05:34:11.821376Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 55.98681099999885,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.094
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.779
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.742
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.388
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.762
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.382
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.225
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.952
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.131
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.977
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.413
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.439
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.861
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.896
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.572
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.163
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.643
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.164
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.93
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.025
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.303
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.747
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.596
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.857
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.928
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.125
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.873
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.199
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.613
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.095530583999789,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7809439159973408,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 5.7448027079990425,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.391399707998062,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7667297499974666,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.38365862499995274,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.22849562500050524,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.953325416001462,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.23702358300215565,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.97877150000204,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.4144466249999823,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.4418404579992057,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.862789167000301,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8984305830017547,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.5746022499988612,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.16397662500094157,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.645707666000817,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1842705829985789,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.93172845799927,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0274462080014928,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3083783330002916,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7595727919979254,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.603278874998068,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.8586917499997071,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.9288302499990095,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2749201670012553,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.8751598749986442,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1998563749984896,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.6152092080010334,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

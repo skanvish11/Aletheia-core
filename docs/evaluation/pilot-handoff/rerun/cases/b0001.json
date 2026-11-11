@@ -1,0 +1,4460 @@
+{
+  "id": "b0001",
+  "live": true,
+  "investigation": {
+    "id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+    "claim": "The Apollo 11 lunar module landed on the Moon on 20 July 1969.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "partial",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "budget_exhausted",
+    "reused": true,
+    "created_at": "2026-11-10T05:28:47.018974Z",
+    "started_at": "2026-11-10T05:28:47.218666Z",
+    "finished_at": "2026-11-10T05:29:50.328800Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "The Apollo 11 lunar module landed on the Moon on 20 July 1969.",
+        "kind": "direct_record",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "The claim states a specific lunar landing date of 20 July 1969 for Apollo 11.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "insufficient_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "76d1b709-8a0c-4e12-89ae-efd986e94b6b",
+          "0fd06193-d1d0-4390-8a60-66241d49a86e",
+          "f385b511-4aec-4c08-8383-d67281d813a8",
+          "19de7142-4ede-4e57-ae89-f942d8205345",
+          "880f9bff-7889-4ef0-a933-8b2d824b95c7",
+          "ac8047ea-bda5-4206-938c-fffbba9d3549",
+          "4a97cfe4-f7cb-47bf-ae37-f28269b7ca29"
+        ],
+        "qualification_flags": [],
+        "qualification_check": "assessed",
+        "limitations": [
+          "The retrieved evidence does not meet the evidence requirements.",
+          "Distinct independent origins or an appropriate synthesis were not established."
+        ]
+      },
+      "explanation": [
+        {
+          "text": "The assertion that Apollo 11 lunar module landed on the Moon on 20 July 1969 is well-supported. Multiple independent sources confirm the date: History.com (spans 9-11) states the landing on July 20, 1969 with astronauts Armstrong and Aldrin walking on the surface; Wikipedia (spans 50, 54, 73) states",
+          "evidence_ids": [
+            "76d1b709-8a0c-4e12-89ae-efd986e94b6b",
+            "f385b511-4aec-4c08-8383-d67281d813a8"
+          ]
+        },
+        {
+          "text": "National Archives (spans 13, 21, 34, 41) explicitly records the landing on July 20, 1969, noting the crew's first step and recovery by USS Hornet; National Archives (spans 25, 28, 29, 51) confirm launch on July 16, 1969 and log entry on July 20 landing",
+          "evidence_ids": [
+            "19de7142-4ede-4e57-ae89-f942d8205345",
+            "880f9bff-7889-4ef0-a933-8b2d824b95c7"
+          ]
+        }
+      ],
+      "limitations": [
+        "The follow-up round limit was reached.",
+        "page_text_truncated",
+        "Only the first bounded set of source spans was assessed.",
+        "Spans do not contain article text",
+        "Cannot verify landing date from these spans",
+        "Source is a modern article about conspiracy theories, not a primary NASA technical record.",
+        "Does not provide launch, descent, or EVA timeline details beyond landing date.",
+        "Span 4 is a brief mention within a list of conspiracy claims.",
+        "Span 13 addresses post-landing discourse, not the landing event itself.",
+        "Single-source (Wikipedia) origin; independence not established.",
+        "No explicit verification from independent NASA or primary records in this snapshot.",
+        "Source is a 2003 magazine article, not a primary flight record",
+        "No direct telemetry or NASA technical documentation cited",
+        "Relies on retrospective accounts and exhibit descriptions",
+        "Span 51 is a brief log entry, not a detailed technical record",
+        "Source is a magazine article summarizing archives, not a primary NASA transcript",
+        "Single source (The Planetary Society) – independence not established.",
+        "Source is a summary page, not a primary NASA technical document.",
+        "Context-only support for date claim.",
+        "Some selected pages were unavailable or exceeded the text limit.",
+        "Some search results were not extracted within per-round page limits.",
+        "The retrieved evidence does not meet the evidence requirements.",
+        "Distinct independent origins or an appropriate synthesis were not established."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.5",
+      "application_version": "research-v4.5",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 12,
+        "search": 8,
+        "extract": 6
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.280420792001678,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.1826976249976724,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.9320596250036033,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.1877512079990993,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.324320666000858,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.28323529199769837,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.411135667000053,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.12576483299926622,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.8048885409989452,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.8776956250003423,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.9770187079993775,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.4112867090007057,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.24627529200006393,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 7.212875082997925,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.757324750000407,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.2841510409998591,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 4.653847416000644,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.5525863340008073,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.2265144159973715,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.5062514999990526,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.476015667001775,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 3.837403916997573,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.2474514999994426,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 6.023104749998311,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.716899082999589,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.2174134590022732,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 74523,
+        "completion_tokens": 4712,
+        "total_tokens": 79235
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "events": "/investigations/c9c697ec-bd62-4f6e-adac-5b1856409563/events",
+      "evidence": "/investigations/c9c697ec-bd62-4f6e-adac-5b1856409563/evidence",
+      "comparison": "/investigations/c9c697ec-bd62-4f6e-adac-5b1856409563/comparison",
+      "refresh": "/investigations/c9c697ec-bd62-4f6e-adac-5b1856409563/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "url": "https://en.wikipedia.org/wiki/Apollo_11",
+        "canonical_url": "https://en.wikipedia.org/wiki/Apollo_11",
+        "title": "Apollo 11 - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:28:57.464960Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "b4d4b41e4996a6f70ad7a89b699e9f9ad90a03dd2b1f100b9af27a610059a61d",
+        "duplicate_group": "b4d4b41e4996a6f70ad7a89b699e9f9ad90a03dd2b1f100b9af27a610059a61d",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "url": "https://www.history.com/articles/moon-landing-fake-conspiracy-theories",
+        "canonical_url": "https://www.history.com/articles/moon-landing-fake-conspiracy-theories",
+        "title": "The Wildest Apollo 11 Moon Landing Conspiracy Theories, Debunked | HISTORY",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:00.031392Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "99dfb4402688273a9154a27dcfe08ade94c81df804fcd46002557909a090a34f",
+        "duplicate_group": "99dfb4402688273a9154a27dcfe08ade94c81df804fcd46002557909a090a34f",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+        "canonical_url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+        "title": "Lunar Module Eagle - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:10.423100Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "e7925605e1ebd9d90721c2db4388b1a1a7643bd5a25491e807da2e855e214026",
+        "duplicate_group": "e7925605e1ebd9d90721c2db4388b1a1a7643bd5a25491e807da2e855e214026",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "url": "https://www.archives.gov/publications/prologue/2003/summer/20-july-1969.html",
+        "canonical_url": "https://www.archives.gov/publications/prologue/2003/summer/20-july-1969.html",
+        "title": "20 July 1969 | National Archives",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:20.724440Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "e184aa691aee3f5cb9362aaa516e9b9a5566fe0e930659490827405435060c07",
+        "duplicate_group": "e184aa691aee3f5cb9362aaa516e9b9a5566fe0e930659490827405435060c07",
+        "limitations": []
+      },
+      {
+        "id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "url": "https://www.planetary.org/space-missions/apollo-11",
+        "canonical_url": "https://www.planetary.org/space-missions/apollo-11",
+        "title": "Apollo 11 | The Planetary Society",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:39.308034Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "01ec0251c75ed0ee28ed331a7ae7096b9f9b21d17d245e5ab296843498d39285",
+        "duplicate_group": "01ec0251c75ed0ee28ed331a7ae7096b9f9b21d17d245e5ab296843498d39285",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "fd8aa585-ac70-4128-b732-d90f792efaec",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+            "span_ids": [
+              2,
+              3
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            2,
+            3
+          ],
+          "provenance_note": "Spans 2-3 are navigation/footer elements, not article content.",
+          "rationale": "Spans 2 and 3 are site navigation and search links, not article body text about Apollo 11 landing date.",
+          "limitations": [
+            "Spans do not contain article text",
+            "Cannot verify landing date from these spans"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "content_type",
+              "explanation": "Navigation/footer spans cannot support factual assertions about landing dates"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              2,
+              3
+            ],
+            "start": 33,
+            "end": 307,
+            "text": "[![](/static/images/icons/enwiki-25.svg) ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)\n\n[Search](/wiki/Special:Search \"Search Wikipedia [f]\")",
+            "quote_hash": "f58f29a407f2ada0bca70f2d5fed407174a9691a194b3a59d2d8d96c0cfd113f"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "76d1b709-8a0c-4e12-89ae-efd986e94b6b",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+            "span_ids": [
+              9,
+              10,
+              11
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The source confirms the Apollo 11 lunar module landed on the Moon on July 20, 1969, with astronauts Armstrong and Aldrin walking on the surface and returning safely via Michael Collins.",
+          "publisher": "A+E Networks",
+          "origin": "History.com article on moon landing conspiracy theories",
+          "independence": "shared",
+          "provenance_span_ids": [
+            9,
+            10,
+            11
+          ],
+          "provenance_note": "Spans 9-11 describe the Apollo 11 landing date, viewer count, and crew return; they support the claim's date and event but are drawn from a source focused on debunking conspiracy theories.",
+          "rationale": "Spans 9, 10, and 11 directly state the landing occurred on July 20, 1969, matching the assertion's date and core event details.",
+          "limitations": [
+            "Source is a modern article about conspiracy theories, not a primary NASA technical record.",
+            "Does not provide launch, descent, or EVA timeline details beyond landing date."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              9,
+              10,
+              11
+            ],
+            "start": 607,
+            "end": 1313,
+            "text": "The [Apollo 11](https://www.history.com/this-day-in-history/apollo-11-departs-earth) [moon landing](https://www.history.com/topics/space-exploration/moon-landing-1969) on July 20, 1969 was one of the most astonishing achievements in human history. That day, an estimated 530 million TV viewers watched U.S. astronauts [Neil Armstrong](https://www.history.com/topics/space-exploration/neil-armstrong) and [Buzz Aldrin](https://www.history.com/topics/space-exploration/buzz-aldrin) take their [first steps on the moon](https://www.history.com/this-day-in-history/armstrong-walks-on-moon). Afterward, the two men and third crew member Michael Collins flew safely back to Earth and landed in the Pacific Ocean.",
+            "quote_hash": "48e01d1a114bb9a7b371ce73e3d9732137a531f35c3527bcb0dee4ff137313fb"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "0fd06193-d1d0-4390-8a60-66241d49a86e",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+            "span_ids": [
+              4,
+              13
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Spans provide surrounding context that the moon landing happened in 1969 and that conspiracy theories emerged later, but do not themselves assert the landing date.",
+          "publisher": "A+E Networks",
+          "origin": "History.com article on moon landing conspiracy theories",
+          "independence": "shared",
+          "provenance_span_ids": [
+            4,
+            13
+          ],
+          "provenance_note": "Span 4 mentions the 1969 landing in passing; span 13 discusses emergence of hoax claims in the mid-1970s. Neither span is a primary source for the landing event.",
+          "rationale": "These spans establish temporal context and note later conspiracy claims but do not independently verify the landing date or module touchdown.",
+          "limitations": [
+            "Span 4 is a brief mention within a list of conspiracy claims.",
+            "Span 13 addresses post-landing discourse, not the landing event itself."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              4
+            ],
+            "start": 110,
+            "end": 213,
+            "text": "Claims the Apollo 11 mission was staged began soon after astronauts first set foot on the moon in 1969.",
+            "quote_hash": "1f7fbbb4018671e47ae055b39e5e43530969f7d0e2f269bd5296c91fa2f0bfc3"
+          },
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 1408,
+            "end": 1708,
+            "text": "Conspiracy theories that the moon landing was actually a hoax that the U.S. government had staged to win the [space race](https://www.history.com/topics/cold-war/space-race) with [the Soviets](https://www.history.com/topics/russia/history-of-the-soviet-union) began to gain traction in the mid-1970s.",
+            "quote_hash": "48c787b68a45d9621a9a3f22c0df40a151c96b2b50c28f098760a186d6dc8d5b"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "f385b511-4aec-4c08-8383-d67281d813a8",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+            "span_ids": [
+              50,
+              54,
+              73
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The assertion 'The Apollo 11 lunar module landed on the Moon on 20 July 1969' is supported by the Wikipedia article stating Eagle landed at Tranquility Base, July 20, 1969.",
+          "publisher": "Wikipedia",
+          "origin": "en.wikipedia.org",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            50,
+            54,
+            73
+          ],
+          "provenance_note": "Spans 50, 54, 73 from the Wikipedia Lunar Module Eagle article confirm the landing date.",
+          "rationale": "Spans 50 and 54 describe the landing at Tranquility Base on July 20, 1969; span 73 confirms the landing date of July 20, 1969. Together they directly support the main clause of the assertion.",
+          "limitations": [
+            "Single-source (Wikipedia) origin; independence not established.",
+            "No explicit verification from independent NASA or primary records in this snapshot."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              50
+            ],
+            "start": 3849,
+            "end": 3880,
+            "text": "Lunar lander used for Apollo 11",
+            "quote_hash": "bc78622faa579b88b982dc1f1072764203d3cdd34969af79e18e46acd321ac4d"
+          },
+          {
+            "span_ids": [
+              54
+            ],
+            "start": 3979,
+            "end": 4259,
+            "text": "| *Eagle* at [Tranquility Base](https://en.wikipedia.org/wiki/Tranquility_Base \"Tranquility Base\"), July 20, 1969. [Neil Armstrong](https://en.wikipedia.org/wiki/Neil_Armstrong \"Neil Armstrong\") photographs [Buzz Aldrin](https://en.wikipedia.org/wiki/Buzz_Aldrin \"Buzz Aldrin\"). |",
+            "quote_hash": "7b5f5d98ccd54af17d3c937d4b47fc4486ddd4cf1f387a3c0463fd15fef68ce2"
+          },
+          {
+            "span_ids": [
+              73
+            ],
+            "start": 8876,
+            "end": 10121,
+            "text": "*Eagle* was launched with [Command Module *Columbia*](https://en.wikipedia.org/wiki/Command_module_Columbia \"Command module Columbia\") on July 16, 1969, atop a [Saturn V](https://en.wikipedia.org/wiki/Saturn_V \"Saturn V\") launch vehicle from [Launch Complex 39A](https://en.wikipedia.org/wiki/Launch_Complex_39A \"Launch Complex 39A\"), and entered Earth orbit 12 minutes later. *Eagle* entered [lunar orbit](https://en.wikipedia.org/wiki/Lunar_orbit \"Lunar orbit\") on July 19, 1969. On July 20, [Neil Armstrong](https://en.wikipedia.org/wiki/Neil_Armstrong \"Neil Armstrong\") and [Buzz Aldrin](https://en.wikipedia.org/wiki/Buzz_Aldrin \"Buzz Aldrin\") entered into the LM and separated it from [Command Module *Columbia*](https://en.wikipedia.org/wiki/Command_module_Columbia \"Command module Columbia\"). *Eagle* was landed at Tranquility Base at 20:17:40 UTC on July 20, 1969, with 216 pounds (98 kg) of usable fuel remaining. After the lunar surface operations, Armstrong and Aldrin returned to the Lunar Module *Eagle* on July 21, 1969. At 17:54:00 UTC, they lifted off in *Eagle*'s ascent stage to rejoin [Michael Collins](https://en.wikipedia.org/wiki/Michael_Collins_(astronaut) \"Michael Collins (astronaut)\") aboard *Columbia* in lunar orbit.",
+            "quote_hash": "07e7854529f37981e8d7ab8b01ed6cf9df1474c995b33d59e19dec491fc5ac65"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "19de7142-4ede-4e57-ae89-f942d8205345",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+            "span_ids": [
+              13,
+              21,
+              34,
+              41
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "National Archives",
+          "origin": "National Archives publication",
+          "independence": "established",
+          "provenance_span_ids": [
+            13,
+            21,
+            34,
+            41
+          ],
+          "provenance_note": "Span 13 directly states 'July 20, 1969'; span 21 confirms landing on July 20, 1969; span 34 confirms landing and exploration on July 20, 1969; span 41 confirms Navy role in recovery on July 20.",
+          "rationale": "Multiple spans explicitly state the Apollo 11 lunar module landed on the Moon on July 20, 1969. Span 13 provides the date in the caption, span 21 describes the event as culminating on that date, span 34 gives the eight-day timeline including the landing on July 20, and span 41 records the USS Hornet",
+          "limitations": [
+            "Source is a 2003 magazine article, not a primary flight record",
+            "No direct telemetry or NASA technical documentation cited",
+            "Relies on retrospective accounts and exhibit descriptions"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 689,
+            "end": 728,
+            "text": "Buzz Aldrin on the Moon, July 20, 1969.",
+            "quote_hash": "396848341c7efd69284cc26c596f08486025b7b871cb4c256552a1cc912e92bc"
+          },
+          {
+            "span_ids": [
+              21
+            ],
+            "start": 1466,
+            "end": 1756,
+            "text": "Culminating with *Apollo 11* astronaut Neil Armstrong's first step onto the Moon on July 20, 1969, the space flight, the lunar landing, and the crew's safe return to earth were seen as epochal events, worthy of intense media coverage, international celebration, and careful social analysis.",
+            "quote_hash": "9d735f346f76e4abbc303b904ffa17f9a55491c28db961572ca0cbcf355df1b9"
+          },
+          {
+            "span_ids": [
+              34
+            ],
+            "start": 3475,
+            "end": 3651,
+            "text": "For the next eight days, the world watched as *Apollo 11* flew to the Moon, Armstrong and Aldrin landed and explored its surface, linked up with Collins, and returned to Earth.",
+            "quote_hash": "08831c6c4219d2439d9a907f133559f23c25448c2e78424ea9a5381f46c891f8"
+          },
+          {
+            "span_ids": [
+              41
+            ],
+            "start": 4355,
+            "end": 4431,
+            "text": "Navy rehearsed its role in the successful recovery of the spacecraft at sea.",
+            "quote_hash": "fbf84a575d9d425281ccb22fa0d40d0ba038b00badecb14a88cf2fda1e33c6e7"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "880f9bff-7889-4ef0-a933-8b2d824b95c7",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+            "span_ids": [
+              25,
+              28,
+              29,
+              51
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "National Archives",
+          "origin": "National Archives publication",
+          "independence": "established",
+          "provenance_span_ids": [
+            25,
+            28,
+            29,
+            51
+          ],
+          "provenance_note": "Span 25 places launch on July 16, 1969; span 28 names the astronauts including Armstrong; span 29 describes the Lunar Module Eagle separating for Moon landing; span 51 records the Hornet officer noting the landing on July 20.",
+          "rationale": "Span 25 establishes the launch date of July 16, 1969, which precedes the July 20 landing; span 28 identifies the crew; span 29 describes the Lunar Module Eagle used for landing; span 51 provides a contemporary log entry confirming the lunar module landed safely on July 20.",
+          "limitations": [
+            "Span 51 is a brief log entry, not a detailed technical record",
+            "Source is a magazine article summarizing archives, not a primary NASA transcript"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              25
+            ],
+            "start": 2336,
+            "end": 2488,
+            "text": "On the morning of July 16, 1969, an enormous three-stage Saturn V rocket—the largest rocket ever built—stood on launch pad 39A at Cape Kennedy, Florida.",
+            "quote_hash": "6682a53f5b1c1b03a4b6ac22db58225571706d9ecd9fb07b80d5055c6e1f0b9a"
+          },
+          {
+            "span_ids": [
+              28,
+              29
+            ],
+            "start": 2699,
+            "end": 3196,
+            "text": "On top of the Saturn V, three *Apollo 11* astronauts—Neil Armstrong, Michael Collins, and Edwin \"Buzz\" Aldrin— waited in their tiny \"Command Module,\" over three hundred feet above the ground. Attached below them were a \"Service Module,\" whose engine would be used to take them out of Earth orbit, and a \"Lunar Module,\" named *Eagle,* which would be used to take Armstrong and Aldrin to the surface of the Moon and back to Collins, who would orbit the Moon in the Command Module, for the trip home.",
+            "quote_hash": "7f347d475e3a1f4a42e776c2083e82269dd7c706ea890094d928a3e0701db244"
+          },
+          {
+            "span_ids": [
+              51
+            ],
+            "start": 5704,
+            "end": 5762,
+            "text": "On July 20 the *Hornet'*s officer of the deck, Lt. (jg) J.",
+            "quote_hash": "374d37f09aa37aa8fade73659cd4c6b3b876bf81bb844955ee090ace82775be7"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ac8047ea-bda5-4206-938c-fffbba9d3549",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+            "span_ids": [
+              110,
+              119
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "The Planetary Society",
+          "origin": "planetary.org",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            110,
+            119
+          ],
+          "provenance_note": "Official mission timeline and landing time.",
+          "rationale": "Span 119 states the official touchdown time was 20:17:39 UTC on 20 July 1969. Span 110 confirms Armstrong and Aldrin boarded Eagle and undocked on 20 July, with landing occurring that same day.",
+          "limitations": [
+            "Single source (The Planetary Society) – independence not established.",
+            "Source is a summary page, not a primary NASA technical document."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              110
+            ],
+            "start": 5776,
+            "end": 5918,
+            "text": "On 20 July, Armstrong and Aldrin boarded their lunar module, nicknamed Eagle, and undocked it from the command module, where Collins remained.",
+            "quote_hash": "d04ecfd816edd9ba949c50f1b00180cfb1afd9781389a353ae94d9ea92e99067"
+          },
+          {
+            "span_ids": [
+              119
+            ],
+            "start": 6966,
+            "end": 7027,
+            "text": "The official touchdown time was 20:17:39 UTC on 20 July 1969.",
+            "quote_hash": "26a83df3ed34344aa6b90ec0b9772ca9eb56a5723296dc0b3241313b67e8e303"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "4a97cfe4-f7cb-47bf-ae37-f28269b7ca29",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+            "span_ids": [
+              95,
+              96
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "The Planetary Society",
+          "origin": "planetary.org",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            95,
+            96
+          ],
+          "provenance_note": "Establishes that Apollo 11 was the first crewed Moon landing mission.",
+          "rationale": "Span 95 describes the first crewed Moon landing; span 96 confirms Apollo 11 was the first mission to land humans on the Moon. Together they support the event's historical significance but do not independently verify the date.",
+          "limitations": [
+            "Context-only support for date claim.",
+            "Source is a summary page, not a primary NASA technical document."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              95,
+              96
+            ],
+            "start": 4044,
+            "end": 4134,
+            "text": "The first crewed Moon landing\n\nApollo 11 was the first mission to land humans on the Moon.",
+            "quote_hash": "029156a8fe162ebe3057825401e8af01a057b211de5dab3e69a5040a747adc84"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:28:47.018974Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:28:47.218666Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:28:47.220231Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:28:47.221253Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:28:47.224165Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.996",
+        "hard_remaining_seconds": "119.996",
+        "attempt": "1",
+        "input_chars": "90"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:28:47.225587Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5767"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:28:48.507585Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.713",
+        "hard_remaining_seconds": "118.713",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5767",
+        "elapsed_seconds": "1.280",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1202"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:28:48.509303Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.711",
+        "hard_remaining_seconds": "118.711",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "325",
+        "elapsed_seconds": "1.285",
+        "finish_reason": "stop",
+        "prompt_tokens": "901",
+        "completion_tokens": "104",
+        "total_tokens": "1005"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:28:48.511040Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:28:48.512885Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:28:48.514865Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:28:48.516194Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.704",
+        "hard_remaining_seconds": "118.704",
+        "attempt": "1",
+        "input_chars": "456"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:28:48.518243Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.702",
+        "hard_remaining_seconds": "118.702",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3481"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:28:49.703992Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.518",
+        "hard_remaining_seconds": "117.518",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3481",
+        "elapsed_seconds": "1.183",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1397"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:28:49.706914Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.514",
+        "hard_remaining_seconds": "117.514",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "507",
+        "elapsed_seconds": "1.191",
+        "finish_reason": "stop",
+        "prompt_tokens": "602",
+        "completion_tokens": "153",
+        "total_tokens": "755"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:28:49.708735Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 lunar module landing date July 1969 primary source NASA",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:28:49.710351Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.510",
+        "hard_remaining_seconds": "117.510",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:28:52.645397Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.576",
+        "hard_remaining_seconds": "114.576",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273",
+        "elapsed_seconds": "2.932",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8305"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:28:52.647843Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 lunar module landing date July 1969 primary source NASA",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:28:52.649567Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 landing date conspiracy claims 1969 July refutation",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:28:52.651093Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.569",
+        "hard_remaining_seconds": "114.569",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "269"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:28:54.842078Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.380",
+        "hard_remaining_seconds": "112.380",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "269",
+        "elapsed_seconds": "2.188",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9741"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:28:54.845079Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 landing date conspiracy claims 1969 July refutation",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:28:54.847305Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 mission timeline lunar module landing July 20 1969 official record",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:28:54.849160Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.371",
+        "hard_remaining_seconds": "112.371",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:28:57.174944Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "65.045",
+        "hard_remaining_seconds": "110.045",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284",
+        "elapsed_seconds": "2.324",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12042"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:28:57.175961Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Apollo 11 mission timeline lunar module landing July 20 1969 official record",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:28:57.177099Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "11",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:28:57.177931Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://en.wikipedia.org/wiki/Apollo_11",
+        "slot": "1",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:28:57.178792Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:28:57.179634Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.040",
+        "hard_remaining_seconds": "110.040",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:28:57.464270Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.756",
+        "hard_remaining_seconds": "109.756",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166",
+        "elapsed_seconds": "0.283",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "386849"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:28:57.471757Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "url": "https://en.wikipedia.org/wiki/Apollo_11",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:28:57.472787Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:28:57.475340Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.745",
+        "hard_remaining_seconds": "109.745",
+        "attempt": "1",
+        "input_chars": "19587"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:28:57.477309Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.743",
+        "hard_remaining_seconds": "109.743",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "34013"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:28:59.890751Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "62.331",
+        "hard_remaining_seconds": "107.331",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "34013",
+        "elapsed_seconds": "2.411",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1850"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:28:59.893340Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "62.327",
+        "hard_remaining_seconds": "107.327",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "932",
+        "elapsed_seconds": "2.417",
+        "finish_reason": "stop",
+        "prompt_tokens": "11707",
+        "completion_tokens": "268",
+        "total_tokens": "11975"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:28:59.896428Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "fd8aa585-ac70-4128-b732-d90f792efaec",
+        "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:28:59.898140Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.history.com/articles/moon-landing-fake-conspiracy-theories",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:28:59.899714Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:28:59.901339Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.319",
+        "hard_remaining_seconds": "107.319",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:29:00.029770Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.192",
+        "hard_remaining_seconds": "107.192",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197",
+        "elapsed_seconds": "0.126",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "19383"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:29:00.036962Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "url": "https://www.history.com/articles/moon-landing-fake-conspiracy-theories",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:29:00.038485Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:29:00.044896Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.177",
+        "hard_remaining_seconds": "107.177",
+        "attempt": "1",
+        "input_chars": "20062"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:29:00.049248Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.171",
+        "hard_remaining_seconds": "107.171",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32519"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:29:03.857110Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.365",
+        "hard_remaining_seconds": "103.365",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32519",
+        "elapsed_seconds": "3.805",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3451"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:29:03.859705Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.361",
+        "hard_remaining_seconds": "103.361",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2489",
+        "elapsed_seconds": "3.816",
+        "finish_reason": "stop",
+        "prompt_tokens": "9716",
+        "completion_tokens": "672",
+        "total_tokens": "10388"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:29:03.863611Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "76d1b709-8a0c-4e12-89ae-efd986e94b6b",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:29:03.865301Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "0fd06193-d1d0-4390-8a60-66241d49a86e",
+        "snapshot_id": "ce3bc1bd-5c01-4179-91ab-c9fa878865c4",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:29:03.866897Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "evidence_quality"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:29:03.868415Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:29:03.869989Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.350",
+        "hard_remaining_seconds": "223.350",
+        "attempt": "1",
+        "input_chars": "3310"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:29:03.872034Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.348",
+        "hard_remaining_seconds": "223.348",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6447"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:29:04.752117Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.469",
+        "hard_remaining_seconds": "222.469",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6447",
+        "elapsed_seconds": "0.878",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1410"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:29:04.754049Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.466",
+        "hard_remaining_seconds": "222.466",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "529",
+        "elapsed_seconds": "0.884",
+        "finish_reason": "stop",
+        "prompt_tokens": "1564",
+        "completion_tokens": "140",
+        "total_tokens": "1704"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:29:04.755507Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:29:04.757437Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:29:04.758779Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA official Apollo 11 mission report confirming lunar module Eagle touchdown on July 20 1969 with primary source citation",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:29:04.762000Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.460",
+        "hard_remaining_seconds": "222.460",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:29:07.741914Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "174.480",
+        "hard_remaining_seconds": "219.480",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331",
+        "elapsed_seconds": "2.977",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4926"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:29:07.744714Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA official Apollo 11 mission report confirming lunar module Eagle touchdown on July 20 1969 with primary source citation",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:29:07.746657Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "First independent non-NASA source documenting Apollo 11 lunar module landing date July 20 1969",
+        "purpose": "contradiction",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:29:07.748212Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "174.472",
+        "hard_remaining_seconds": "219.472",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "302"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:29:10.163230Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.059",
+        "hard_remaining_seconds": "217.059",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "302",
+        "elapsed_seconds": "2.411",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10787"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:29:10.164881Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "First independent non-NASA source documenting Apollo 11 lunar module landing date July 20 1969",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:29:10.166836Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:29:10.168566Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+        "slot": "1",
+        "query_ids": "q21",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:29:10.170346Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:29:10.171746Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "172.049",
+        "hard_remaining_seconds": "217.049",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:29:10.421227Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.801",
+        "hard_remaining_seconds": "216.801",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175",
+        "elapsed_seconds": "0.246",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "41403"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:29:10.428717Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "url": "https://en.wikipedia.org/wiki/Lunar_Module_Eagle",
+        "candidate_id": "c25",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:29:10.430249Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:29:10.434546Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.786",
+        "hard_remaining_seconds": "216.786",
+        "attempt": "1",
+        "input_chars": "17562"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:29:10.438767Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.782",
+        "hard_remaining_seconds": "216.782",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29303"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:29:17.654293Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.567",
+        "hard_remaining_seconds": "209.567",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29303",
+        "elapsed_seconds": "7.213",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4943"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:29:17.657176Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.564",
+        "hard_remaining_seconds": "209.564",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3895",
+        "elapsed_seconds": "7.222",
+        "finish_reason": "stop",
+        "prompt_tokens": "8601",
+        "completion_tokens": "1114",
+        "total_tokens": "9715"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:29:17.659334Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:29:17.660975Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.559",
+        "hard_remaining_seconds": "209.559",
+        "attempt": "2",
+        "input_chars": "17562"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:29:17.664645Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.556",
+        "hard_remaining_seconds": "209.556",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29493"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:29:20.424974Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "161.797",
+        "hard_remaining_seconds": "206.797",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29493",
+        "elapsed_seconds": "2.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2099"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:29:20.428533Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "161.792",
+        "hard_remaining_seconds": "206.792",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1190",
+        "elapsed_seconds": "2.767",
+        "finish_reason": "stop",
+        "prompt_tokens": "8634",
+        "completion_tokens": "358",
+        "total_tokens": "8992"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:29:20.432642Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "f385b511-4aec-4c08-8383-d67281d813a8",
+        "snapshot_id": "963b9705-10ee-44c8-ad5a-68248d44d549",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:29:20.434299Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "url": "https://www.archives.gov/publications/prologue/2003/summer/20-july-1969.html",
+        "slot": "2",
+        "query_ids": "q23",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:29:20.435786Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:29:20.437411Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.783",
+        "hard_remaining_seconds": "206.783",
+        "provider_call_id": "p31",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:29:20.723419Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.497",
+        "hard_remaining_seconds": "206.497",
+        "provider_call_id": "p31",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203",
+        "elapsed_seconds": "0.284",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9899"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:29:20.728212Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "url": "https://www.archives.gov/publications/prologue/2003/summer/20-july-1969.html",
+        "candidate_id": "c30",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:29:20.729735Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:29:20.734453Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t32",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.486",
+        "hard_remaining_seconds": "206.486",
+        "attempt": "1",
+        "input_chars": "15536"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:29:20.737830Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t32",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.483",
+        "hard_remaining_seconds": "206.483",
+        "provider_call_id": "p33",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27221"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:29:25.393241Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t32",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.827",
+        "hard_remaining_seconds": "201.827",
+        "provider_call_id": "p33",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27221",
+        "elapsed_seconds": "4.654",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3220"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:29:25.394758Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t32",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.826",
+        "hard_remaining_seconds": "201.826",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2263",
+        "elapsed_seconds": "4.661",
+        "finish_reason": "stop",
+        "prompt_tokens": "7340",
+        "completion_tokens": "708",
+        "total_tokens": "8048"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:29:25.396947Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "19de7142-4ede-4e57-ae89-f942d8205345",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:29:25.398455Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "880f9bff-7889-4ef0-a933-8b2d824b95c7",
+        "snapshot_id": "b2d785ff-112b-4264-a486-c40871f8e4b5",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:29:25.399644Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:29:25.400800Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t34",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.820",
+        "hard_remaining_seconds": "201.820",
+        "attempt": "1",
+        "input_chars": "6784"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:29:25.402157Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t34",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.818",
+        "hard_remaining_seconds": "201.818",
+        "provider_call_id": "p35",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10075"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:29:26.956482Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t34",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "155.264",
+        "hard_remaining_seconds": "200.264",
+        "provider_call_id": "p35",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10075",
+        "elapsed_seconds": "1.553",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1639"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:29:26.959304Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t34",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "155.261",
+        "hard_remaining_seconds": "200.261",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "746",
+        "elapsed_seconds": "1.558",
+        "finish_reason": "stop",
+        "prompt_tokens": "2736",
+        "completion_tokens": "194",
+        "total_tokens": "2930"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:29:26.961091Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:29:26.962625Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:29:26.964115Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA Apollo 11 mission report primary source confirming lunar module Eagle touchdown on July 20 1969 with official citation",
+        "purpose": "contradiction",
+        "query_id": "q36"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:29:26.965401Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "155.255",
+        "hard_remaining_seconds": "200.255",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:29:30.194945Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "152.027",
+        "hard_remaining_seconds": "197.027",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "331",
+        "elapsed_seconds": "3.227",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "5942"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:29:30.197876Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA Apollo 11 mission report primary source confirming lunar module Eagle touchdown on July 20 1969 with official citation",
+        "query_id": "q36",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:29:30.199987Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "First independent non-NASA source documenting Apollo 11 lunar module Eagle landing July 20 1969 with primary citation",
+        "purpose": "support",
+        "query_id": "q38"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:29:30.201570Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q38",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "152.019",
+        "hard_remaining_seconds": "197.019",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "325"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:29:32.710935Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q38",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "149.511",
+        "hard_remaining_seconds": "194.511",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "325",
+        "elapsed_seconds": "2.506",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8640"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:29:32.714144Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "First independent non-NASA source documenting Apollo 11 lunar module Eagle landing July 20 1969 with primary citation",
+        "query_id": "q38",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:29:32.715855Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Official NASA press release or log entry dated July 20 1969 documenting lunar module Eagle touchdown",
+        "purpose": "context",
+        "query_id": "q40"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:29:32.717358Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q40",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "149.503",
+        "hard_remaining_seconds": "194.503",
+        "provider_call_id": "p41",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "308"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:29:35.196704Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q40",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "147.026",
+        "hard_remaining_seconds": "192.026",
+        "provider_call_id": "p41",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "308",
+        "elapsed_seconds": "2.476",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6730"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:29:35.199843Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Official NASA press release or log entry dated July 20 1969 documenting lunar module Eagle touchdown",
+        "query_id": "q40",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:29:35.202422Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:29:35.204051Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "url": "https://www.facebook.com/ilovetheuniverseFB/posts/this-is-the-lunar-module-eagle-during-the-historic-apollo-11-mission-the-spacecr/1366378288837251",
+        "slot": "1",
+        "query_ids": "q38",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:29:35.205531Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:29:35.207253Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "147.013",
+        "hard_remaining_seconds": "192.013",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "274"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:29:39.047635Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "143.174",
+        "hard_remaining_seconds": "188.174",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "274",
+        "elapsed_seconds": "3.837",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "316"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:29:39.050454Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.facebook.com/ilovetheuniverseFB/posts/this-is-the-lunar-module-eagle-during-the-historic-apollo-11-mission-the-spacecr/1366378288837251",
+        "candidate_id": "c42",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:29:39.052366Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "url": "https://www.planetary.org/space-missions/apollo-11",
+        "slot": "2",
+        "query_ids": "q36,q38",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:29:39.054241Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:29:39.055907Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "143.165",
+        "hard_remaining_seconds": "188.165",
+        "provider_call_id": "p45",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:29:39.306085Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "142.916",
+        "hard_remaining_seconds": "187.916",
+        "provider_call_id": "p45",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177",
+        "elapsed_seconds": "0.247",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "20535"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:29:39.315054Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "url": "https://www.planetary.org/space-missions/apollo-11",
+        "candidate_id": "c44",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:29:39.317078Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:29:39.323163Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "142.898",
+        "hard_remaining_seconds": "187.898",
+        "attempt": "1",
+        "input_chars": "18477"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:29:39.327100Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "142.894",
+        "hard_remaining_seconds": "187.894",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31342"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:29:45.353426Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "136.868",
+        "hard_remaining_seconds": "181.868",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31342",
+        "elapsed_seconds": "6.023",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2953"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:29:45.356639Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "136.864",
+        "hard_remaining_seconds": "181.864",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1993",
+        "elapsed_seconds": "6.034",
+        "finish_reason": "stop",
+        "prompt_tokens": "9575",
+        "completion_tokens": "581",
+        "total_tokens": "10156"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:29:45.360631Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ac8047ea-bda5-4206-938c-fffbba9d3549",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:29:45.362155Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "4a97cfe4-f7cb-47bf-ae37-f28269b7ca29",
+        "snapshot_id": "ac9e1b2c-a427-4a38-9053-e417eb6a31ce",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:29:45.363819Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:29:45.365273Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:29:45.366770Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "fd8aa585-ac70-4128-b732-d90f792efaec"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:29:45.370752Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:29:45.373007Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "181.848",
+        "hard_remaining_seconds": "181.848",
+        "attempt": "1",
+        "input_chars": "15542"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:29:45.375378Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "181.845",
+        "hard_remaining_seconds": "181.845",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20994"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:29:49.095170Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "178.127",
+        "hard_remaining_seconds": "178.127",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20994",
+        "elapsed_seconds": "3.717",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1689"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:29:49.098212Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "178.123",
+        "hard_remaining_seconds": "178.123",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "814",
+        "elapsed_seconds": "3.725",
+        "finish_reason": "stop",
+        "prompt_tokens": "6458",
+        "completion_tokens": "358",
+        "total_tokens": "6816"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:29:49.101771Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "178.119",
+        "hard_remaining_seconds": "178.119",
+        "attempt": "1",
+        "input_chars": "16354"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:29:49.104208Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "178.116",
+        "hard_remaining_seconds": "178.116",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21171"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:29:50.324149Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "176.897",
+        "hard_remaining_seconds": "176.897",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21171",
+        "elapsed_seconds": "1.217",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1066"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:29:50.326640Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "176.894",
+        "hard_remaining_seconds": "176.894",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "202",
+        "elapsed_seconds": "1.225",
+        "finish_reason": "stop",
+        "prompt_tokens": "6689",
+        "completion_tokens": "62",
+        "total_tokens": "6751"
+      }
+    },
+    {
+      "investigation_id": "c9c697ec-bd62-4f6e-adac-5b1856409563",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:29:50.328800Z",
+      "type": "investigation_partial",
+      "stage": null,
+      "payload": {
+        "stop_reason": "budget_exhausted"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 63.46391862499877,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.28
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.181
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.93
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.182
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.324
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.153
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.41
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.124
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.802
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.876
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.971
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.41
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.118
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 7.211
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.755
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.281
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.653
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.552
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.217
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.503
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.47
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.835
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.137
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 6.021
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.715
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.215
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.280420792001678,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1826976249976724,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.9320596250036033,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.1877512079990993,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.324320666000858,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.28323529199769837,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.411135667000053,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12576483299926622,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.8048885409989452,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8776956250003423,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.9770187079993775,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.4112867090007057,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.24627529200006393,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 7.212875082997925,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.757324750000407,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2841510409998591,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.653847416000644,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.5525863340008073,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.2265144159973715,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.5062514999990526,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.476015667001775,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 3.837403916997573,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2474514999994426,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 6.023104749998311,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.716899082999589,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2174134590022732,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

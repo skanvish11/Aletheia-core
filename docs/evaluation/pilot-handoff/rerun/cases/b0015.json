@@ -1,0 +1,296 @@
+{
+  "id": "b0015",
+  "live": true,
+  "investigation": {
+    "id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+    "claim": "Using GitHub Copilot increases experienced professional developers’ productivity on unfamiliar software engineering tasks.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "needs_clarification",
+    "stage": null,
+    "route": null,
+    "stop_reason": null,
+    "reused": true,
+    "created_at": "2026-11-10T05:32:10.790675Z",
+    "started_at": "2026-11-10T05:32:10.991286Z",
+    "finished_at": "2026-11-10T05:32:12.371342Z",
+    "result": null,
+    "clarification_questions": [
+      "Specify the programming language, task domain, and performance metric for productivity.",
+      "Define the experience level threshold (e.g., years of professional experience) for 'experienced professional developers'.",
+      "Provide the timeframe or experimental conditions under which productivity was measured."
+    ],
+    "error": null,
+    "links": {
+      "self": "/investigations/ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "events": "/investigations/ca76cbd6-3fe5-4a6e-ad09-80234986de84/events",
+      "evidence": "/investigations/ca76cbd6-3fe5-4a6e-ad09-80234986de84/evidence",
+      "comparison": "/investigations/ca76cbd6-3fe5-4a6e-ad09-80234986de84/comparison",
+      "refresh": null
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:32:10.790675Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:32:10.991286Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:32:10.994332Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:32:10.996554Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:32:10.998660Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "attempt": "1",
+        "input_chars": "150"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:32:11.002428Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.992",
+        "hard_remaining_seconds": "119.992",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5829"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:32:12.364931Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.630",
+        "hard_remaining_seconds": "118.630",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5829",
+        "elapsed_seconds": "1.360",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1393"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:32:12.367571Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.627",
+        "hard_remaining_seconds": "118.627",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "527",
+        "elapsed_seconds": "1.369",
+        "finish_reason": "stop",
+        "prompt_tokens": "896",
+        "completion_tokens": "103",
+        "total_tokens": "999"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:32:12.369585Z",
+      "type": "clarification_decision",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.625",
+        "hard_remaining_seconds": "118.625",
+        "reason": "missing_scope",
+        "question_count": "3"
+      }
+    },
+    {
+      "investigation_id": "ca76cbd6-3fe5-4a6e-ad09-80234986de84",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:32:12.371342Z",
+      "type": "clarification_required",
+      "stage": null,
+      "payload": {}
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 1.8209771670008195,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.359
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3601000829985423,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

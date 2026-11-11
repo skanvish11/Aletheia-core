@@ -1,0 +1,2007 @@
+{
+  "id": "b0026",
+  "live": true,
+  "investigation": {
+    "id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+    "claim": "The Paris Agreement was adopted at the United Nations climate conference in December 2015.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "completed",
+    "stage": null,
+    "route": "quick",
+    "stop_reason": "evidence_sufficient",
+    "reused": true,
+    "created_at": "2026-11-10T05:35:10.398677Z",
+    "started_at": "2026-11-10T05:35:10.602274Z",
+    "finished_at": "2026-11-10T05:35:34.118011Z",
+    "result": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "The Paris Agreement was adopted at the United Nations climate conference in December 2015.",
+        "kind": "direct_record",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "This is a widely documented historical fact. The agreement was adopted on 12 December 2015 at the 21st Conference of the Parties (COP21) to the United Nations Framework Convention on Climate Change held in Paris.",
+      "finding": {
+        "outcome": "decided",
+        "verdict": "true",
+        "unable_to_decide_reason": null,
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "9714bd6a-2729-4717-ad32-953642311a54",
+          "bc4b2dfc-6da9-4c2b-bd45-2653bd0b6959",
+          "2810e240-1ddf-4f99-9d32-114291a1729c"
+        ],
+        "qualification_flags": [],
+        "qualification_check": "assessed",
+        "limitations": []
+      },
+      "explanation": [
+        {
+          "text": "The Paris Agreement was adopted on 12 December 2015 at the UN climate conference (COP21), as confirmed by UNFCCC sources.",
+          "evidence_ids": [
+            "9714bd6a-2729-4717-ad32-953642311a54",
+            "bc4b2dfc-6da9-4c2b-bd45-2653bd0b6959",
+            "2810e240-1ddf-4f99-9d32-114291a1729c"
+          ]
+        }
+      ],
+      "limitations": [
+        "page_text_truncated",
+        "Only the first bounded set of source spans was assessed.",
+        "Source is the official Paris Agreement text published by UNFCCC, but does not provide independent journalistic or scholarly verification.",
+        "Text is a static PDF extract; no external cross-referencing performed.",
+        "Entry-into-force date is a downstream event; does not independently verify the adoption date itself.",
+        "Source is the same official UNFCCC publication.",
+        "Source is a registry record, not an independent academic or journalistic source.",
+        "No explicit external verification beyond the cited UN record.",
+        "Some search results were not extracted within per-round page limits."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.5",
+      "application_version": "research-v4.5",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 10,
+        "search_attempt_limit": 4,
+        "extraction_attempt_limit": 4,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 120.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 7,
+        "search": 2,
+        "extract": 2
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.3423230830012471,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.3868899999979476,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.057931457999075,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.8507494170007703,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.3409846250033297,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 5.786247125000955,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.6528490829987277,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.6816359589975036,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.82456062500205,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.2843872080011351,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.1162173750017246,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 19196,
+        "completion_tokens": 1716,
+        "total_tokens": 20912
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "events": "/investigations/3ae8e33c-87e8-4c13-8b86-48db61191322/events",
+      "evidence": "/investigations/3ae8e33c-87e8-4c13-8b86-48db61191322/evidence",
+      "comparison": "/investigations/3ae8e33c-87e8-4c13-8b86-48db61191322/comparison",
+      "refresh": "/investigations/3ae8e33c-87e8-4c13-8b86-48db61191322/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "url": "https://unfccc.int/sites/default/files/resource/parisagreement_publication.pdf",
+        "canonical_url": "https://unfccc.int/sites/default/files/resource/parisagreement_publication.pdf",
+        "title": "THE PARIS AGREEMENT",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:19.642437Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "90fef68f2392326152fe2827df1a39598c79d1447ff5f57723c6911400ac5c09",
+        "duplicate_group": "90fef68f2392326152fe2827df1a39598c79d1447ff5f57723c6911400ac5c09",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=27&clang=_en&mtdsg_no=XXVII-7-d&src=treaty",
+        "canonical_url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=27&clang=_en&mtdsg_no=XXVII-7-d&src=treaty",
+        "title": "UNTC",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:35:26.130454Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "33d3a653dbda6244fb15b720465c8027fdb2de61aea544fb296a7aeaa849a5af",
+        "duplicate_group": "33d3a653dbda6244fb15b720465c8027fdb2de61aea544fb296a7aeaa849a5af",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "9714bd6a-2729-4717-ad32-953642311a54",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+            "span_ids": [
+              5,
+              7
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "United Nations Framework Convention on Climate Change (UNFCCC)",
+          "origin": "THE PARIS AGREEMENT",
+          "independence": "established",
+          "provenance_span_ids": [
+            5,
+            7
+          ],
+          "provenance_note": "Span 5 directly states the adoption date; Span 7 records the opening for signature date, which is consistent with the adoption context.",
+          "rationale": "The source confirms the Paris Agreement was adopted on 12 December 2015 at the UN climate conference (COP21), and opened for signature on 22 April 2016.",
+          "limitations": [
+            "Source is the official Paris Agreement text published by UNFCCC, but does not provide independent journalistic or scholarly verification.",
+            "Text is a static PDF extract; no external cross-referencing performed."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              5
+            ],
+            "start": 277,
+            "end": 392,
+            "text": "1 INTRODUCTION The Conference of the Parties, at its 21st session, adopted the Paris Agreement on 12 December 2015.",
+            "quote_hash": "1c985f32e36f5de0f546a6dd0fef372dd715669653573f2f92596ed4c40fbf47"
+          },
+          {
+            "span_ids": [
+              7
+            ],
+            "start": 827,
+            "end": 895,
+            "text": "The agreement was opened for signature on 22 April 2016 in New York.",
+            "quote_hash": "7f10f42dc046f590ca2a58629f3ddda626dd92ab0080ab9d48fde12ab9eb0d47"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "bc4b2dfc-6da9-4c2b-bd45-2653bd0b6959",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+            "span_ids": [
+              8
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "United Nations Framework Convention on Climate Change (UNFCCC)",
+          "origin": "THE PARIS AGREEMENT",
+          "independence": "established",
+          "provenance_span_ids": [
+            8
+          ],
+          "provenance_note": "Span 8 confirms the entry-into-force timeline and date (4 November 2016), which follows the December 2015 adoption.",
+          "rationale": "Span 8 corroborates the post-adoption timeline, confirming the adoption event occurred as stated.",
+          "limitations": [
+            "Entry-into-force date is a downstream event; does not independently verify the adoption date itself.",
+            "Source is the same official UNFCCC publication."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 896,
+            "end": 1025,
+            "text": "On 5 October 2016, the threshold for entry into force was achieved and the Paris Agreement entered into force on 4 November 2016.",
+            "quote_hash": "5208b2e8ce6b6e3dd3b515c74ebf7f4e64d7202ebb8992e8e4e5ef00ca81a806"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "2810e240-1ddf-4f99-9d32-114291a1729c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+            "span_ids": [
+              8
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            8
+          ],
+          "provenance_note": "Source spans the UN treaty registry details for the Paris Agreement.",
+          "rationale": "The UN treaty registry records that the Paris Agreement was adopted on 12 December 2015 at the twenty-first session of the UNFCCC COP in Paris.",
+          "limitations": [
+            "Source is a registry record, not an independent academic or journalistic source.",
+            "No explicit external verification beyond the cited UN record."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 1316,
+            "end": 3287,
+            "text": "| | | | | | | | | | | | | | | | | | | | | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | | STATUS AS AT : 27-08-2026 09:15:32 EDT CHAPTER XXVII ENVIRONMENT | | | --- | | 7. d Paris Agreement | | Paris, 12 December 2015 | | | | | | --- | --- | --- | | Entry into force | : | 4 November 2016, in accordance with article 21(1) : \"The Agreement enters into force on the thirtieth day after the date on which at least 55 Parties to the Convention accounting in total for at least an estimated 55 per cent of the total global greenhouse gas emissions have deposited their instruments of ratification, acceptance, approval or accession\".. | | | | | | --- | --- | --- | | Registration | : | 4 November 2016, No. 54113 | | | | | | --- | --- | --- | | Status | : | Signatories : 194. Parties : 194 | | | | | | --- | --- | --- | | Text | : | [Certified true copy](/doc/Treaties/2016/02/20160215%2006-03%20PM/Ch_XXVII-7-d.pdf) United Nations,*Treaty Series*,[vol. 3156](https://treaties.un.org/doc/Publication/UNTS/Volume 3156/v3156.pdf), p.79 [C.N.63.2016](https://treaties.un.org/doc/Publication/CN/2016/CN.63.2016-Eng.pdf).TREATIES-XXVII.7.d of 16 February 2016 (Opening for signature) and [C.N.92.2016](https://treaties.un.org/doc/Publication/CN/2016/CN.92.2016-Eng.pdf).TREATIES-XXVII.7.d of 17 March 2016 (Issuance of Certified True Copies). | | | | | | --- | --- | --- | | Note | : | The Paris Agreement was adopted on 12 December 2015 at the twenty-first session of the Conference of the Parties to the United Nations Framework Convention on Climate Change held in Paris from 30 November to 13 December 2015. In accordance with its article 20, the Agreement shall be open for signature at the United Nations Headquarters in New York from 22 April 2016 until 21 April 2017 by States and regional economic integration organizations that are Parties to the United Nations Framework Convention on Climate Change. | | |",
+            "quote_hash": "aec3e09e799bdba400c926485a25cbf36cabdd3e1fb02931d31c942032976a28"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:35:10.398677Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:35:10.602274Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:35:10.606877Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:35:10.609025Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:35:10.610910Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "attempt": "1",
+        "input_chars": "118"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:35:10.614922Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.992",
+        "hard_remaining_seconds": "119.992",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5795"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:35:11.959990Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.647",
+        "hard_remaining_seconds": "118.647",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5795",
+        "elapsed_seconds": "1.342",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1365"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:35:11.962545Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.644",
+        "hard_remaining_seconds": "118.644",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "488",
+        "elapsed_seconds": "1.352",
+        "finish_reason": "stop",
+        "prompt_tokens": "898",
+        "completion_tokens": "128",
+        "total_tokens": "1026"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:35:11.964327Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:35:11.965823Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:35:11.967143Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:35:11.968486Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.637",
+        "hard_remaining_seconds": "118.637",
+        "attempt": "1",
+        "input_chars": "485"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:35:11.970794Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.635",
+        "hard_remaining_seconds": "118.635",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3510"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:35:13.361107Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.247",
+        "hard_remaining_seconds": "117.247",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3510",
+        "elapsed_seconds": "1.387",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1153"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:35:13.363973Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.242",
+        "hard_remaining_seconds": "117.242",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "278",
+        "elapsed_seconds": "1.395",
+        "finish_reason": "stop",
+        "prompt_tokens": "600",
+        "completion_tokens": "80",
+        "total_tokens": "680"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:35:13.366051Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Paris Agreement adoption United Nations climate conference December 2015",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:35:13.367617Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.238",
+        "hard_remaining_seconds": "117.238",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "280"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:35:16.428003Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.179",
+        "hard_remaining_seconds": "114.179",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "280",
+        "elapsed_seconds": "3.058",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7747"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:35:16.430738Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Paris Agreement adoption United Nations climate conference December 2015",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:35:16.432785Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Paris Agreement UN climate conference 2015 date resolution",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:35:16.434637Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.171",
+        "hard_remaining_seconds": "114.171",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "266"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:35:19.287750Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "66.319",
+        "hard_remaining_seconds": "111.319",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "266",
+        "elapsed_seconds": "2.851",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7333"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:35:19.289771Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Paris Agreement UN climate conference 2015 date resolution",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:35:19.291642Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "5",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:35:19.293227Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "url": "https://unfccc.int/sites/default/files/resource/parisagreement_publication.pdf",
+        "slot": "1",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:35:19.294875Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:35:19.296606Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "66.309",
+        "hard_remaining_seconds": "111.309",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "205"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:35:19.640440Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.967",
+        "hard_remaining_seconds": "110.967",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "205",
+        "elapsed_seconds": "0.341",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "112862"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:35:19.661863Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "url": "https://unfccc.int/sites/default/files/resource/parisagreement_publication.pdf",
+        "candidate_id": "c9",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:35:19.663563Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:35:19.667956Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.938",
+        "hard_remaining_seconds": "110.938",
+        "attempt": "1",
+        "input_chars": "14663"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:35:19.670921Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.935",
+        "hard_remaining_seconds": "110.935",
+        "provider_call_id": "p12",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24849"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:35:25.460027Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.147",
+        "hard_remaining_seconds": "105.147",
+        "provider_call_id": "p12",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24849",
+        "elapsed_seconds": "5.786",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2837"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:35:25.462907Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.143",
+        "hard_remaining_seconds": "105.143",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1880",
+        "elapsed_seconds": "5.795",
+        "finish_reason": "stop",
+        "prompt_tokens": "5310",
+        "completion_tokens": "539",
+        "total_tokens": "5849"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:35:25.466471Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "9714bd6a-2729-4717-ad32-953642311a54",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:35:25.468060Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "bc4b2dfc-6da9-4c2b-bd45-2653bd0b6959",
+        "snapshot_id": "aeea99f0-489d-4dd3-9c49-d24e9e16fcb9",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:35:25.469731Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=27&clang=_en&mtdsg_no=XXVII-7-d&src=treaty",
+        "slot": "2",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:35:25.471239Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:35:25.472838Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "60.133",
+        "hard_remaining_seconds": "105.133",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:35:26.128593Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.479",
+        "hard_remaining_seconds": "104.479",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "224",
+        "elapsed_seconds": "0.653",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "96053"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:35:26.143501Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "url": "https://treaties.un.org/pages/ViewDetails.aspx?chapter=27&clang=_en&mtdsg_no=XXVII-7-d&src=treaty",
+        "candidate_id": "c13",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:35:26.145716Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:35:26.150867Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.455",
+        "hard_remaining_seconds": "104.455",
+        "attempt": "1",
+        "input_chars": "4216"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:35:26.153942Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.452",
+        "hard_remaining_seconds": "104.452",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13589"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:35:29.838640Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "55.769",
+        "hard_remaining_seconds": "100.769",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13589",
+        "elapsed_seconds": "3.682",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2752"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:35:29.842005Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "55.764",
+        "hard_remaining_seconds": "100.764",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1789",
+        "elapsed_seconds": "3.691",
+        "finish_reason": "stop",
+        "prompt_tokens": "3124",
+        "completion_tokens": "518",
+        "total_tokens": "3642"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:35:29.843820Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:35:29.845797Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "55.760",
+        "hard_remaining_seconds": "100.760",
+        "attempt": "2",
+        "input_chars": "4216"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:35:29.849263Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "55.757",
+        "hard_remaining_seconds": "100.757",
+        "provider_call_id": "p17",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13779"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:35:31.676679Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.930",
+        "hard_remaining_seconds": "98.930",
+        "provider_call_id": "p17",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "13779",
+        "elapsed_seconds": "1.825",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1672"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:35:31.680200Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.926",
+        "hard_remaining_seconds": "98.926",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "771",
+        "elapsed_seconds": "1.834",
+        "finish_reason": "stop",
+        "prompt_tokens": "3157",
+        "completion_tokens": "228",
+        "total_tokens": "3385"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:35:31.684395Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "2810e240-1ddf-4f99-9d32-114291a1729c",
+        "snapshot_id": "0c717b1f-298b-4f12-9eeb-92543859405d",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:35:31.686511Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "evidence_sufficient",
+        "gap": "",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:35:31.689715Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:35:31.692580Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "98.914",
+        "hard_remaining_seconds": "98.914",
+        "attempt": "1",
+        "input_chars": "6417"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:35:31.695246Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "98.911",
+        "hard_remaining_seconds": "98.911",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11345"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:35:32.982602Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "97.625",
+        "hard_remaining_seconds": "97.625",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11345",
+        "elapsed_seconds": "1.284",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1178"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:35:32.986016Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "97.620",
+        "hard_remaining_seconds": "97.620",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "311",
+        "elapsed_seconds": "1.294",
+        "finish_reason": "stop",
+        "prompt_tokens": "3039",
+        "completion_tokens": "164",
+        "total_tokens": "3203"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:35:32.990578Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t20",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "97.616",
+        "hard_remaining_seconds": "97.616",
+        "attempt": "1",
+        "input_chars": "6714"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:35:32.993845Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t20",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "97.612",
+        "hard_remaining_seconds": "97.612",
+        "provider_call_id": "p21",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10991"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:35:34.113193Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t20",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "96.494",
+        "hard_remaining_seconds": "96.494",
+        "provider_call_id": "p21",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10991",
+        "elapsed_seconds": "1.116",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1063"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:35:34.116072Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t20",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "10",
+        "model_available_limit": "10",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "96.490",
+        "hard_remaining_seconds": "96.490",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "199",
+        "elapsed_seconds": "1.126",
+        "finish_reason": "stop",
+        "prompt_tokens": "3068",
+        "completion_tokens": "59",
+        "total_tokens": "3127"
+      }
+    },
+    {
+      "investigation_id": "3ae8e33c-87e8-4c13-8b86-48db61191322",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:35:34.118011Z",
+      "type": "investigation_completed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "evidence_sufficient"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 23.939588917000947,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.341
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.385
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.055
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.847
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.126
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.785
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.376
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.679
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.823
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.282
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.114
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3423230830012471,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3868899999979476,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.057931457999075,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8507494170007703,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3409846250033297,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 5.786247125000955,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.6528490829987277,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.6816359589975036,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.82456062500205,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2843872080011351,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1162173750017246,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

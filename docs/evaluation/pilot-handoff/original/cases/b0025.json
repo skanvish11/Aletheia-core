@@ -1,0 +1,4528 @@
+{
+  "id": "b0025",
+  "live": true,
+  "investigation": {
+    "id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+    "claim": "The Bronze Age eruption of Thera occurred before 1600 BCE.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:54:57.528872Z",
+    "started_at": "2026-11-10T04:54:57.530147Z",
+    "finished_at": "2026-11-10T04:55:52.261206Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "events": "/investigations/7d75d34e-d7a7-4574-a849-9d7b20bc71f8/events",
+      "evidence": "/investigations/7d75d34e-d7a7-4574-a849-9d7b20bc71f8/evidence",
+      "comparison": "/investigations/7d75d34e-d7a7-4574-a849-9d7b20bc71f8/comparison",
+      "refresh": "/investigations/7d75d34e-d7a7-4574-a849-9d7b20bc71f8/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6093623",
+        "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6093623",
+        "title": "Annual radiocarbon record indicates 16th century BCE date for the Thera eruption",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:09.274855Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "d261566897ad88d516ffa070cb25cfe3e88d3bf095b9460a50dbdb7a6b8d16c6",
+        "duplicate_group": "d261566897ad88d516ffa070cb25cfe3e88d3bf095b9460a50dbdb7a6b8d16c6",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12422448",
+        "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12422448",
+        "title": "The Minoan Thera eruption predates Pharaoh Ahmose: Radiocarbon dating of Egyptian 17th to early 18th Dynasty museum objects",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:13.995825Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "1836464c1d3bcff2e707ececff8a5720b8a407d2ed6a7d6b4bf45723021c8893",
+        "duplicate_group": "1836464c1d3bcff2e707ececff8a5720b8a407d2ed6a7d6b4bf45723021c8893",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "url": "https://www.academia.edu/41184869/Annual_radiocarbon_record_indicates_16th_century_BCE_date_for_the_Thera_eruption",
+        "canonical_url": "https://www.academia.edu/41184869/Annual_radiocarbon_record_indicates_16th_century_BCE_date_for_the_Thera_eruption",
+        "title": "(PDF) Annual radiocarbon record indicates 16th century BCE date for the Thera eruption | Academia | Theran Eruption",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:25.157095Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "af93b8bfb1506e786ab1db1faf2be2e0e9a000d902cd37181698f623115d82db",
+        "duplicate_group": "af93b8bfb1506e786ab1db1faf2be2e0e9a000d902cd37181698f623115d82db",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9488803",
+        "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9488803",
+        "title": "Second Intermediate Period date for the Thera (Santorini) eruption and historical implications",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:29.013488Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "52e09df97b7d9ea18a0a512a8d72e6ab2afd65f5937edb2f16a5ce37214b6aa6",
+        "duplicate_group": "52e09df97b7d9ea18a0a512a8d72e6ab2afd65f5937edb2f16a5ce37214b6aa6",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+        "canonical_url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+        "title": "Minoan eruption - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:41.542122Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "74266f46f5965df555cd4b625f09bbbf72abb42ada0b6692b47359a9eddf3a3b",
+        "duplicate_group": "74266f46f5965df555cd4b625f09bbbf72abb42ada0b6692b47359a9eddf3a3b",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0330702",
+        "canonical_url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0330702",
+        "title": "The Minoan Thera eruption predates Pharaoh Ahmose: Radiocarbon dating of Egyptian 17th to early 18th Dynasty museum objects | PLOS One",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:55:44.706108Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "0049806953c60d87112988e1f777e17441e4c2777be076376e15b94708bfc71a",
+        "duplicate_group": "0049806953c60d87112988e1f777e17441e4c2777be076376e15b94708bfc71a",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "56135d86-0ea8-464b-a1c7-74857b7ee5ff",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+            "span_ids": [
+              48,
+              66,
+              67
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The study's annual 14C data reveal a sustained offset from IntCal13 between c.1660–1540 BCE, and recalibration with ICCP17 shifts posterior means into the 16th century BCE, supporting a date before 1600 BCE.",
+          "publisher": "Science Advances",
+          "origin": "Annual radiocarbon record indicates 16th century BCE date for the Thera eruption",
+          "independence": "established",
+          "provenance_span_ids": [
+            48,
+            66,
+            67
+          ],
+          "provenance_note": "Annual tree-ring 14C measurements and ICCP17 recalibration provide direct empirical basis for 16th century BCE date.",
+          "rationale": "The offset from IntCal13 and its correction via ICCP17 moves calibrated dates into the 16th century BCE, directly supporting the assertion that the Thera eruption occurred before 1600 BCE.",
+          "limitations": [
+            "The study's annual data cover 1700–1500 BCE and do not extend beyond this range to confirm earlier dates.",
+            "Recalibration effects are sample-specific and depend on calibration curve shape; not all samples shift into the 16th century.",
+            "The analysis focuses on calibration curve improvement rather than providing an absolute eruption date."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              48
+            ],
+            "start": 7687,
+            "end": 7976,
+            "text": "Our 285 annual data points are all internally consistent and fall within the 2σ range of most of the raw data underlying IntCal13 (Fig. 1A); however, when compared to IntCal13, both species show a clear and sustained offset in the annual measurements (Fig. 1B) between c.1660 and 1540 BCE.",
+            "quote_hash": "bf4b616983d367d7f1608f43926142f22375ca1cb8c0e8f2956f01dac1497282"
+          },
+          {
+            "span_ids": [
+              66,
+              67
+            ],
+            "start": 11844,
+            "end": 12072,
+            "text": "In each case, the posterior mean based on ICCP17 moves into the 16th century BCE. Furthermore, the younger end of posterior age distribution is considerably extended in all scenarios, magnified by the plateau in the ICCP17 data.",
+            "quote_hash": "24fc4ba1649fdadef01602375ddd8aa0dcbc5cd8669a7b6f6cd45f67568be71c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "b8128624-9868-4efb-8c14-4d6abccb0699",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+            "span_ids": [
+              23,
+              31
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Radiocarbon dates from legumes, grains, and an olive branch cluster around c.1650–1600 cal BCE, but recalibration to older IntCal iterations can shift ranges into the 16th century BCE due to a radiocarbon plateau.",
+          "publisher": "Science Advances",
+          "origin": "Annual radiocarbon record indicates 16th century BCE date for the Thera eruption",
+          "independence": "shared",
+          "provenance_span_ids": [
+            23,
+            31
+          ],
+          "provenance_note": "Original radiocarbon cluster and recalibration notes provide context on date ranges but are not independent confirmation of the 16th century date.",
+          "rationale": "Source text reports radiocarbon dates clustering around c.1650–1600 cal BCE and notes that recalibration to older IntCal versions can produce distributions extending into the 16th century due to a plateau, offering contextual background but not definitive support for the assertion.",
+          "limitations": [
+            "Original cluster c.1650–1600 cal BCE is based on IntCal13; recalibration effects introduce uncertainty.",
+            "The text acknowledges debate and dependence on calibration curve accuracy.",
+            "No absolute date is given; ranges overlap with both 17th and 16th centuries."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              23
+            ],
+            "start": 2027,
+            "end": 2416,
+            "text": "Measurements of radiocarbon (14C) from legumes and grains (3, 8, 9) buried directly beneath the eruption deposits, and an olive branch (10) buried within them, cluster in the range c.1650–1600 cal BCE relative to the internationally agreed radiocarbon calibration curve, IntCal13 (11), which converts radiocarbon determinations from samples of unknown age into calendar age estimates (12).",
+            "quote_hash": "ffe3cb49ec9c3d351ab004ba61464691f668b92e6806fe92e40d6278c8ac8e49"
+          },
+          {
+            "span_ids": [
+              31
+            ],
+            "start": 4283,
+            "end": 4618,
+            "text": "Many of the existing radiocarbon determinations have been recalibrated multiple times, with calibrations to older iterations of IntCal [for example, (3, 10)] returning probability distributions ranging into the 16th century because of a slight shift in the position of a well-described (3) radiocarbon plateau in the calibration curve.",
+            "quote_hash": "d8cf31f18db85af014235a450cd1f733dfea2616f310c5678e8e0277fc94c203"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "b1c29aed-2c68-48f7-b50e-2ec78803bb92",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+            "span_ids": [
+              1,
+              6,
+              15,
+              60
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            1,
+            6,
+            15,
+            60
+          ],
+          "provenance_note": "Span 1 is the article title; Span 6 states eruption occurred within Late Minoan IA; Span 15 states eruption older than Ahmose reign; Span 60 provides calibrated Bayesian dates 1606–1589 BCE. Source truncated; end not fully visible.",
+          "rationale": "Span 15 directly asserts the Minoan eruption predates Ahmose's reign. Span 60 gives calibrated Bayesian age ranges 1606–1589 BCE (1σ), 1609–1560 BCE (95.4%). The article's calibrated Bayesian analyses (Manning 2024) place the eruption starting at 1608 BCE, consistent with the 'before 1600 BCE' claim",
+          "limitations": [
+            "Source truncated; calibrated Bayesian analysis from Manning 2024 (Span 60) is the most precise data available but not fully displayed in spans"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              1
+            ],
+            "start": 0,
+            "end": 125,
+            "text": "# The Minoan Thera eruption predates Pharaoh Ahmose: Radiocarbon dating of Egyptian 17th to early 18th Dynasty museum objects",
+            "quote_hash": "da9fd0dcc88155788a2b214f52fcd3935fadc4ba94d1bdd016bf70cd964084a1"
+          },
+          {
+            "span_ids": [
+              6
+            ],
+            "start": 298,
+            "end": 432,
+            "text": "The huge volcanic eruption at Thera (Santorini), situated in the Aegean Sea, occurred within the Late Minoan IA archaeological period.",
+            "quote_hash": "a2789cc2c91ee0cc4e53844fb22fd5d692c60fb777963550f2649447f54bfa06"
+          },
+          {
+            "span_ids": [
+              15
+            ],
+            "start": 1757,
+            "end": 1894,
+            "text": "The Minoan eruption is older than the reign of Nebpehtire Ahmose, the first king of the 18th Dynasty, who reunited Upper and Lower Egypt.",
+            "quote_hash": "839507063af205a02bd0b13cf29582dc31f15483987b1e310107d49a002adeef"
+          },
+          {
+            "span_ids": [
+              60
+            ],
+            "start": 8875,
+            "end": 9153,
+            "text": "Consequently, new Bayesian analyses concerning the time of the Thera eruption were conducted by Manning [60], using the latest IntCal20 calibration curve, which resulted in the following 1σ and 2σ age ranges: 1606–1589 BCE (68.3% probability), 1609–1560 BCE (95.4% probability).",
+            "quote_hash": "4cc36ebbe4e192f486a80d6482c66b8381fb73d93704161b407dd555b757b886"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "3f3a19de-4262-4051-80d4-1fc52d718b93",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+            "span_ids": [
+              24,
+              57,
+              60
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            24,
+            57,
+            60
+          ],
+          "provenance_note": "Span 24: 'The most famous one occurred during the Late Minoan IA, an archaeological period traditionally dated from about 1600/1580–1480 BCE.' Span 57: 'When the IntCal98 calibration curve [56], released in 1998, was in use, the Minoan Thera eruption was dated quite early in the 17th century BCE by湾",
+          "rationale": "Span 24 situates Late Minoan IA traditionally at 1600/1580–1480 BCE. This provides chronological context but the 'traditionally dated' qualifier means it may not reflect the study's own radiocarbon results. Span 57 and 60 show that updated Bayesian analyses with IntCal20 calibration place the main 1",
+          "limitations": [
+            "Span 24 references traditional archaeological period dating, not the article's radiocarbon results. The article's own calibrated Bayesian results (Span 60) indicate eruption beginning 1606–1589 BCE",
+            "flags: []}, {"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "chronology",
+              "explanation": "Article presents calibrated Bayesian analyses placing eruption onset at 1606–1589 BCE, which marginally overlaps with but is generally before 1600 BCE boundary. The claim 'before 1600 BCE' is supported by the calibrated data but sits at the boundary of the 1σ range start (1606 BCE)"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              24
+            ],
+            "start": 2665,
+            "end": 2802,
+            "text": "The most famous one occurred during the Late Minoan IA, an archaeological period traditionally dated from about 1600/1580–1480 BCE [2,3].",
+            "quote_hash": "b596668245e07cbbac38a394dfaab64d797514590e3e4d6648d2512fa2c75456"
+          },
+          {
+            "span_ids": [
+              57
+            ],
+            "start": 8344,
+            "end": 8562,
+            "text": "When the IntCal98 calibration curve [56], released in 1998, was in use, the Minoan Thera eruption was dated quite early in the 17th century BCE by Bayesian analyses, to ca 1650–1620 BCE [54], and to 1663–1599 BCE [57].",
+            "quote_hash": "fad6d05b7952a469b650b0a3c21079258316af80dcb83e56ff4d13d886c7f061"
+          },
+          {
+            "span_ids": [
+              60
+            ],
+            "start": 8875,
+            "end": 9153,
+            "text": "Consequently, new Bayesian analyses concerning the time of the Thera eruption were conducted by Manning [60], using the latest IntCal20 calibration curve, which resulted in the following 1σ and 2σ age ranges: 1606–1589 BCE (68.3% probability), 1609–1560 BCE (95.4% probability).",
+            "quote_hash": "4cc36ebbe4e192f486a80d6482c66b8381fb73d93704161b407dd555b757b886"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "984024dc-b90b-4bf2-b6b1-b800cbb6da5c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+            "span_ids": [
+              35,
+              38,
+              39,
+              41
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Radiocarbon study using annual tree-ring data (1700-1500 BCE) shifts calibrated age range for Thera eruption toward 16th century BCE, aligning with new ICCP17 calibration curve and resolving discrepancy between radiocarbon (late 17th-early 16th century) and archaeological (mid 16th-early 15th) dates",
+          "publisher": "Science Advances",
+          "origin": "Annual radiocarbon record indicates 16th century BCE date for the Thera eruption",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            35,
+            38,
+            39,
+            41
+          ],
+          "provenance_note": "Key claims derived from abstract, results, discussion, and key takeaways of Salzer et al. (2018, Science Advances). ICCP17 calibration curve shift central to dating resolution.",
+          "rationale": "The study's annual radiocarbon data from tree rings (1700-1500 BCE) demonstrates a sustained offset from IntCal13 between c.1660-1540 BCE, indicating calibrated ages cluster in the 16th century BCE. Results show shift in calibrated age range for Thera toward 16th century BCE, and ICCP17 alignment.",
+          "limitations": [
+            "Study covers 1700-1500 BCE range only; dates before 1700 or after 1500 BCE not addressed",
+            "ICCP17 curve alignment improves fit but does not independently verify 16th century BCE date without additional archaeological correlation",
+            "Tree-ring radiocarbon offsets plateau-dependent; sustained offset zone (c.1660-1540 BCE) may not represent full eruption age range"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "timeframe",
+              "explanation": "Assertion states eruption occurred 'before 1600 BCE'; study calibrates to 16th century BCE (1500-1400 BCE range) with offset zone c.1660-1540 BCE, which straddles 1600 BCE boundary"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              35
+            ],
+            "start": 1202,
+            "end": 1480,
+            "text": "The mid-second millennium BCE eruption of Thera (Santorini) offers a critically important marker horizon to synchronize archaeological chronologies of the Aegean, Egypt, and the Near East and to anchor paleo-environmental records from ice cores, speleothems, and lake sediments.",
+            "quote_hash": "30723c305932c168a306b5757fe06fa5855b3012a801383cd2b7b97e41aded95"
+          },
+          {
+            "span_ids": [
+              38,
+              39
+            ],
+            "start": 1806,
+            "end": 2189,
+            "text": "Results show an offset from the international radiocarbon calibration curve, which indicates a shift in the calibrated age range for Thera toward the 16th century BCE. This finding sheds new light on the long-running debate focused on a discrepancy between radiocarbon (late 17th-early 16th century BCE) and archaeological (mid 16th-early 15th century BCE) dating evidence for Thera.",
+            "quote_hash": "8a4b1bf6d1b2bcb273e40d75156d2cd5ccc0ec1c10b23be8535cbc95005552c7"
+          },
+          {
+            "span_ids": [
+              41
+            ],
+            "start": 2221,
+            "end": 2313,
+            "text": "1. The Thera eruption is now dated to the 16th century BCE based on annual radiocarbon data.",
+            "quote_hash": "e6841e743555d4d17b0d2e232894a1b3948653acc274dc7e770bd32a90079d7c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "70571810-f854-4456-8fe1-98b586998922",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+            "span_ids": [
+              7,
+              13
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "PLOS ONE",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            7,
+            13
+          ],
+          "provenance_note": "Dating evidence and Bayesian analysis range from ~1606–1589 BCE.",
+          "rationale": "The source reports a revised Bayesian date range of ~1606–1589 BCE (68.3% probability) and ~1609–1560 BCE (95.4% probability), which directly contradicts the claim that the eruption occurred before 1600 BCE.",
+          "limitations": [
+            "Source is truncated, limiting comprehensive coverage.",
+            "Provenance of the specific Bayesian date range cannot be fully verified from this snapshot alone."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              7
+            ],
+            "start": 358,
+            "end": 550,
+            "text": "Long placed ~1500 BCE and during the Egyptian New Kingdom (starts ~1565–1540 BCE) by archaeologists, 14C pointed to dates ≥50–100 years earlier during the preceding Second Intermediate Period.",
+            "quote_hash": "5d2416d00c70b9b7046ab957a877189c9ae18df8572d7543606f1d5d94dea8ca"
+          },
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 1492,
+            "end": 1625,
+            "text": "This enables a robust high-resolution dating for the eruption ~1606–1589 BCE (68.3% probability), ~1609–1560 BCE (95.4% probability).",
+            "quote_hash": "020ff81b62395a06e06604ed2dff7b9d8f65a2b462ac48a61fd08135d0d0d4f3"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "ed4f6dec-b6ba-49ae-89a9-45133f5fd1ad",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+            "span_ids": [
+              29,
+              30
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "PLOS ONE",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            29,
+            30
+          ],
+          "provenance_note": "Conventional date ~1530–1500 BCE is cited as the established range but the source's new data contradicts pre-1600 BCE placement.",
+          "rationale": "The conventional date range of ~1530–1500 BCE is presented, but the new Bayesian analysis places the eruption earlier (~1606–1589 BCE), partially overlapping but ultimately resolving to a date range that extends before and through 1600 BCE.",
+          "limitations": [
+            "Conventional dates conflict with the new analysis.",
+            "Truncated source limits full evaluation of cited references."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              29,
+              30
+            ],
+            "start": 4358,
+            "end": 4748,
+            "text": "A date range of ~1530–1500 BCE remains the ‘conventional’ date for the Thera eruption [6, 8, 25, 27–30]. At a minimum, several authors categorically state that the eruption must be placed after the start of the Egyptian New Kingdom (stated as after ~1550 BCE by [13] citing [30]), e.g. “…that the eruption occurred after the start of the New Kingdom seems in little doubt” ([13] at p. 168).",
+            "quote_hash": "eaf56f10df08990d707848e76e73c10de6f33fc90c184b68a7d8d9eb30649692"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "b1182968-19cb-4a00-beb1-5a75585aad14",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+            "span_ids": [
+              93,
+              98
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia infobox",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            93,
+            98
+          ],
+          "provenance_note": "Infobox caption states 'c. 1600 BC' for Minoan eruption of Thera",
+          "rationale": "Source establishes the date as 'c. 1600 BC' (circa 1600 BCE), which is consistent with the assertion that it occurred before 1600 BCE. The 'circa' notation introduces dating uncertainty but the span falls within the claimed timeframe.",
+          "limitations": [
+            "Source uses 'c. 1600 BC' notation, not a precise absolute date",
+            "Source is a secondary summary article, not a primary scholarly publication"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              93
+            ],
+            "start": 7888,
+            "end": 7926,
+            "text": "Major volcanic eruption around 1600 BC",
+            "quote_hash": "0c57e1e0435294db66c491696934aafc66fb900e012e743290e5c9abdff568fb"
+          },
+          {
+            "span_ids": [
+              98
+            ],
+            "start": 8266,
+            "end": 8319,
+            "text": "| Date | c. 1600 BC (see [below](#Eruption_dating)) |",
+            "quote_hash": "f5d13e68806006cdab376bd9acec421b4dfa59187ebe24d7375551bec3323dc9"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "8421ea67-ca73-4672-87fb-2269c4ec9f11",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+            "span_ids": [
+              14
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia section on ice cores, tree rings and speleothems",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            14
+          ],
+          "provenance_note": "Section discusses radiocarbon and other dating evidence for the eruption",
+          "rationale": "The eruption dating section provides the chronological framework including radiocarbon dates and ice core ties that support a 16th century BCE timing, consistent with the assertion of before 1600 BCE.",
+          "limitations": [
+            "Dating methods and their calibration are not detailed in this span",
+            "Source is a secondary summary, not primary research data"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              14
+            ],
+            "start": 627,
+            "end": 713,
+            "text": " + [4.3 Ice cores, tree rings and speleothems](#Ice_cores,_tree_rings_and_speleothems)",
+            "quote_hash": "f64785d51ee2b286d2c35918d0ba9b24e254cb59bb349c1d80441b31fc867530"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "8514bfe1-f09d-4d67-bc93-f9b536fa3fb0",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+            "span_ids": [
+              88,
+              89,
+              106
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Previous radiocarbon dates of king Senusert III support a high chronology for the Middle Kingdom. Our calibrated results support a low chronology for his reign and the beginning of the New Kingdom. The Minoan eruption is older than the reign of Nebpehtire Ahmose, the first king of the 18th Dynasty,",
+          "publisher": "Public Library of Science",
+          "origin": "Bruins HJ, van der Plicht J (2025) The Minoan Thera eruption predates Pharaoh Ahmose: Radiocarbon dating of Egyptian 17th to early 18th Dynasty museum objects. ",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            88,
+            89,
+            106
+          ],
+          "provenance_note": "Source states eruption is older than Ahmose's reign; calibrated results support low chronology; previous dates support high chronology for Middle Kingdom",
+          "rationale": "The article's abstract and introduction directly address the temporal relationship between the Thera eruption and Egyptian chronology, establishing that the eruption predates Ahmose's reign and supporting a low chronology for the New Kingdom transition.",
+          "limitations": [
+            "Bayesian analysis could not be used due to inability to arrange items in stratigraphic sequence",
+            "Reliance on museum object radiocarbon dating rather than direct geological context for eruption dating",
+            "Calibration methodology differences between uncalibrated eruption dates and Egyptian king chronologies"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              88,
+              89
+            ],
+            "start": 6233,
+            "end": 6478,
+            "text": "The Minoan eruption is **older** than the reign of Nebpehtire Ahmose, the first king of the 18th Dynasty, who reunited Upper and Lower Egypt. Our calibrated results support a **low** chronology for his reign and the beginning of the New Kingdom.",
+            "quote_hash": "728955fab3b51f2be7a9722f11eb00a90f7a9b30e5c1c6e1d25762f4fc98596e"
+          },
+          {
+            "span_ids": [
+              106
+            ],
+            "start": 8365,
+            "end": 8550,
+            "text": "The most famous one occurred during the Late Minoan IA, an archaeological period traditionally dated from about 1600/1580–1480 BCE [[2](#pone.0330702.ref002),[3](#pone.0330702.ref003)].",
+            "quote_hash": "ccdfa421642a39ea7e35fd651dd6ec12123e401ceaffde4ccf7557ca9f0f17d1"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "1c67123c-a0a0-4e56-8168-15beae34d427",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+            "span_ids": [
+              106
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The most famous one occurred during the Late Minoan IA, an archaeological period traditionally dated from about 1600/1580–1480 BCE",
+          "publisher": "Public Library of Science",
+          "origin": "Bruins HJ, van der Plicht J (2025) The Minoan Thera eruption predates Pharaoh Ahmose: Radiocarbon dating of Egyptian 17th to early 18th Dynasty museum objects.",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            106
+          ],
+          "provenance_note": "Traditional archaeological dating of Late Minoan IA period",
+          "rationale": "Provides the conventional archaeological timeline context for the Thera eruption, which the study then reassesses through radiocarbon dating.",
+          "limitations": [
+            "Traditional dating range (1600/1580–1480 BCE) may not reflect current radiocarbon evidence",
+            "Does not address the specific assertion about 1600 BCE cutoff"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              106
+            ],
+            "start": 8365,
+            "end": 8550,
+            "text": "The most famous one occurred during the Late Minoan IA, an archaeological period traditionally dated from about 1600/1580–1480 BCE [[2](#pone.0330702.ref002),[3](#pone.0330702.ref003)].",
+            "quote_hash": "ccdfa421642a39ea7e35fd651dd6ec12123e401ceaffde4ccf7557ca9f0f17d1"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:54:57.528872Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:54:57.530147Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:54:57.531033Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:54:57.531730Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:54:57.532394Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.999",
+        "hard_remaining_seconds": "119.999",
+        "attempt": "1",
+        "input_chars": "86"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:54:57.533618Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5068"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:54:58.685293Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.848",
+        "hard_remaining_seconds": "118.848",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5068",
+        "elapsed_seconds": "1.149",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1168"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:54:58.688875Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.843",
+        "hard_remaining_seconds": "118.843",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "293",
+        "elapsed_seconds": "1.155",
+        "finish_reason": "stop",
+        "prompt_tokens": "782",
+        "completion_tokens": "89",
+        "total_tokens": "871"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:54:58.691215Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:54:58.694325Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:54:58.696823Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:54:58.698869Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.833",
+        "hard_remaining_seconds": "118.833",
+        "attempt": "1",
+        "input_chars": "452"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:54:58.701429Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.830",
+        "hard_remaining_seconds": "118.830",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3477"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:54:59.633260Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.900",
+        "hard_remaining_seconds": "117.900",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3477",
+        "elapsed_seconds": "0.929",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1505"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:54:59.636742Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.895",
+        "hard_remaining_seconds": "117.895",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "615",
+        "elapsed_seconds": "0.937",
+        "finish_reason": "stop",
+        "prompt_tokens": "596",
+        "completion_tokens": "168",
+        "total_tokens": "764"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:54:59.639289Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Radiocarbon dating of the Thera eruption site contexts with calibrated dates before 1600 BCE",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:54:59.641290Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.890",
+        "hard_remaining_seconds": "117.890",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "300"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:55:03.377074Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.156",
+        "hard_remaining_seconds": "114.156",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "300",
+        "elapsed_seconds": "3.732",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12417"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:55:03.380578Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Radiocarbon dating of the Thera eruption site contexts with calibrated dates before 1600 BCE",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:55:03.383606Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Archaeological destruction layers at Akrotiri and surrounding sites dated to before 1600 BCE",
+        "purpose": "support",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:55:03.386223Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "69.146",
+        "hard_remaining_seconds": "114.146",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "300"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:55:06.126171Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "66.405",
+        "hard_remaining_seconds": "111.405",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "300",
+        "elapsed_seconds": "2.738",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6506"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:55:06.127550Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Archaeological destruction layers at Akrotiri and surrounding sites dated to before 1600 BCE",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:55:06.128911Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Ancient Egyptian texts or king lists referencing the Thera eruption prior to 1600 BCE",
+        "purpose": "contradiction",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:55:06.130675Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "66.401",
+        "hard_remaining_seconds": "111.401",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "293"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:55:08.981684Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "63.551",
+        "hard_remaining_seconds": "108.551",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "293",
+        "elapsed_seconds": "2.848",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10437"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:55:08.985425Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Ancient Egyptian texts or king lists referencing the Thera eruption prior to 1600 BCE",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:55:08.988675Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "13",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:55:08.990801Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6093623",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:55:08.993280Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:55:08.995367Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "63.536",
+        "hard_remaining_seconds": "108.536",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:55:09.272851Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "63.260",
+        "hard_remaining_seconds": "108.260",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175",
+        "elapsed_seconds": "0.274",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "41484"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:55:09.284186Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6093623",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:55:09.286268Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:55:09.289012Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "63.243",
+        "hard_remaining_seconds": "108.243",
+        "attempt": "1",
+        "input_chars": "17200"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:55:09.316397Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "63.216",
+        "hard_remaining_seconds": "108.216",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26957"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:55:13.572048Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "58.961",
+        "hard_remaining_seconds": "103.961",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26957",
+        "elapsed_seconds": "4.253",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3927"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:55:13.575942Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "58.956",
+        "hard_remaining_seconds": "103.956",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2952",
+        "elapsed_seconds": "4.287",
+        "finish_reason": "stop",
+        "prompt_tokens": "6694",
+        "completion_tokens": "822",
+        "total_tokens": "7516"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:55:13.582328Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "56135d86-0ea8-464b-a1c7-74857b7ee5ff",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:55:13.584877Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b8128624-9868-4efb-8c14-4d6abccb0699",
+        "snapshot_id": "a8bf832a-ae9f-478e-8306-8b1d194ca6a7",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:55:13.587261Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12422448",
+        "slot": "2",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:55:13.589055Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:55:13.590621Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.941",
+        "hard_remaining_seconds": "103.941",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "176"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:55:13.993467Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.540",
+        "hard_remaining_seconds": "103.540",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "176",
+        "elapsed_seconds": "0.400",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "171925"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:55:14.012479Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12422448",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:55:14.013920Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:55:14.015483Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.516",
+        "hard_remaining_seconds": "103.516",
+        "attempt": "1",
+        "input_chars": "18261"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:55:14.017990Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.513",
+        "hard_remaining_seconds": "103.513",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28235"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:55:17.699277Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "54.834",
+        "hard_remaining_seconds": "99.834",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28235",
+        "elapsed_seconds": "3.678",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3663"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:55:17.703911Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "54.828",
+        "hard_remaining_seconds": "99.828",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2688",
+        "elapsed_seconds": "3.688",
+        "finish_reason": "stop",
+        "prompt_tokens": "7446",
+        "completion_tokens": "848",
+        "total_tokens": "8294"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:55:17.709385Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b1c29aed-2c68-48f7-b50e-2ec78803bb92",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:55:17.711584Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "3f3a19de-4262-4051-80d4-1fc52d718b93",
+        "snapshot_id": "4e828bf7-bbda-4620-8d3b-1b9d49a0f6b8",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:55:17.713636Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "evidence_quality"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:55:17.715359Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:55:17.717272Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "174.814",
+        "hard_remaining_seconds": "219.814",
+        "attempt": "1",
+        "input_chars": "5403"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:55:17.719357Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "174.812",
+        "hard_remaining_seconds": "219.812",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8602"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:55:18.738148Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.795",
+        "hard_remaining_seconds": "218.795",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8602",
+        "elapsed_seconds": "1.016",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1511"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:55:18.742029Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.790",
+        "hard_remaining_seconds": "218.790",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "630",
+        "elapsed_seconds": "1.024",
+        "finish_reason": "stop",
+        "prompt_tokens": "2199",
+        "completion_tokens": "153",
+        "total_tokens": "2352"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:55:18.744704Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:55:18.747185Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:55:18.749616Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "High-resolution annual radiocarbon record from tree rings or varved sediments placing the Thera eruption securely in the 16th century BCE with calibrated dates before 1600 BCE",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:55:18.752023Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.780",
+        "hard_remaining_seconds": "218.780",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "383"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:55:21.244354Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "171.289",
+        "hard_remaining_seconds": "216.289",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "383",
+        "elapsed_seconds": "2.489",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10344"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:55:21.248076Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "High-resolution annual radiocarbon record from tree rings or varved sediments placing the Thera eruption securely in the 16th century BCE with calibrated dates before 1600 BCE",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:55:21.250608Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Independent archaeological or textual evidence (e.g., Egyptian king list, synchronigraph data) confirming Thera eruption date earlier than 1600 BCE",
+        "purpose": "contradiction",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:55:21.253073Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "171.279",
+        "hard_remaining_seconds": "216.279",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "355"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:55:24.789490Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "167.744",
+        "hard_remaining_seconds": "212.744",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "355",
+        "elapsed_seconds": "3.532",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10955"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:55:24.793020Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Independent archaeological or textual evidence (e.g., Egyptian king list, synchronigraph data) confirming Thera eruption date earlier than 1600 BCE",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:55:24.796108Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:55:24.798558Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "url": "https://www.academia.edu/41184869/Annual_radiocarbon_record_indicates_16th_century_BCE_date_for_the_Thera_eruption",
+        "slot": "1",
+        "query_ids": "q21",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:55:24.800793Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:55:24.802914Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.729",
+        "hard_remaining_seconds": "212.729",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "241"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:55:25.155223Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.378",
+        "hard_remaining_seconds": "212.378",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "241",
+        "elapsed_seconds": "0.349",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "72180"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:55:25.170875Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "url": "https://www.academia.edu/41184869/Annual_radiocarbon_record_indicates_16th_century_BCE_date_for_the_Thera_eruption",
+        "candidate_id": "c25",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:55:25.172779Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:55:25.174617Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.357",
+        "hard_remaining_seconds": "212.357",
+        "attempt": "1",
+        "input_chars": "20038"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:55:25.177566Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.354",
+        "hard_remaining_seconds": "212.354",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30305"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:55:28.839747Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "163.693",
+        "hard_remaining_seconds": "208.693",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30305",
+        "elapsed_seconds": "3.659",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3052"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:55:28.842935Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "163.689",
+        "hard_remaining_seconds": "208.689",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2129",
+        "elapsed_seconds": "3.668",
+        "finish_reason": "stop",
+        "prompt_tokens": "8452",
+        "completion_tokens": "627",
+        "total_tokens": "9079"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:55:28.847361Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "984024dc-b90b-4bf2-b6b1-b800cbb6da5c",
+        "snapshot_id": "607ca9ab-e189-4919-82b4-e85ef506656c",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:55:28.849864Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9488803",
+        "slot": "2",
+        "query_ids": "q23",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:55:28.851955Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:55:28.854079Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.678",
+        "hard_remaining_seconds": "208.678",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:55:29.011289Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.522",
+        "hard_remaining_seconds": "208.522",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175",
+        "elapsed_seconds": "0.154",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "170618"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:55:29.029033Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9488803",
+        "candidate_id": "c29",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:55:29.030679Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:55:29.032261Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.499",
+        "hard_remaining_seconds": "208.499",
+        "attempt": "1",
+        "input_chars": "16707"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:55:29.035136Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.496",
+        "hard_remaining_seconds": "208.496",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26475"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:55:31.553949Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.979",
+        "hard_remaining_seconds": "205.979",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26475",
+        "elapsed_seconds": "2.516",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2706"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:55:31.558154Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.974",
+        "hard_remaining_seconds": "205.974",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1741",
+        "elapsed_seconds": "2.525",
+        "finish_reason": "stop",
+        "prompt_tokens": "6818",
+        "completion_tokens": "549",
+        "total_tokens": "7367"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:55:31.563688Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "70571810-f854-4456-8fe1-98b586998922",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:55:31.565614Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ed4f6dec-b6ba-49ae-89a9-45133f5fd1ad",
+        "snapshot_id": "d1e7d8d3-d971-4f0a-b934-7c7e7141a1e0",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:55:31.567518Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:55:31.570240Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.962",
+        "hard_remaining_seconds": "205.962",
+        "attempt": "1",
+        "input_chars": "8518"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:55:31.572532Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.959",
+        "hard_remaining_seconds": "205.959",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11843"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:55:32.948552Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.584",
+        "hard_remaining_seconds": "204.584",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11843",
+        "elapsed_seconds": "1.373",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1992"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:55:32.951312Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.581",
+        "hard_remaining_seconds": "204.581",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1099",
+        "elapsed_seconds": "1.381",
+        "finish_reason": "stop",
+        "prompt_tokens": "3243",
+        "completion_tokens": "260",
+        "total_tokens": "3503"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:55:32.953582Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:55:32.955563Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:55:32.957620Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary archaeological or textual record confirming Thera eruption calibrated date range before 1600 BCE, independent of the radiocarbon offset corrections discussed in PMC6093623",
+        "purpose": "support",
+        "query_id": "q35"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:55:32.959682Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q35",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.572",
+        "hard_remaining_seconds": "204.572",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "387"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:55:35.870781Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q35",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.662",
+        "hard_remaining_seconds": "201.662",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "387",
+        "elapsed_seconds": "2.908",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10156"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:55:35.875161Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary archaeological or textual record confirming Thera eruption calibrated date range before 1600 BCE, independent of the radiocarbon offset corrections discussed in PMC6093623",
+        "query_id": "q35",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:55:35.878448Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Egyptian king list or contemporaneous dynasty dating placing Thera eruption securely before 1600 BCE, cross-referenced with archaeological destruction layers",
+        "purpose": "contradiction",
+        "query_id": "q37"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:55:35.881337Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.651",
+        "hard_remaining_seconds": "201.651",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "365"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:55:39.188310Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "153.345",
+        "hard_remaining_seconds": "198.345",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "365",
+        "elapsed_seconds": "3.303",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9842"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:55:39.192173Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Egyptian king list or contemporaneous dynasty dating placing Thera eruption securely before 1600 BCE, cross-referenced with archaeological destruction layers",
+        "query_id": "q37",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:55:39.194704Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "High-precision varved sediment or tree-ring record with absolute calendar years placing Thera eruption at 1600 BCE or earlier, using calibration curves prior to ICCP17 adjustments",
+        "purpose": "context",
+        "query_id": "q39"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:55:39.196695Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "153.335",
+        "hard_remaining_seconds": "198.335",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "387"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:55:41.313341Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "151.220",
+        "hard_remaining_seconds": "196.220",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "387",
+        "elapsed_seconds": "2.113",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "11850"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:55:41.316956Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "High-precision varved sediment or tree-ring record with absolute calendar years placing Thera eruption at 1600 BCE or earlier, using calibration curves prior to ICCP17 adjustments",
+        "query_id": "q39",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:55:41.319977Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "6",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 113,
+      "timestamp": "2026-11-10T04:55:41.322404Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+        "slot": "1",
+        "query_ids": "q35,q37",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 114,
+      "timestamp": "2026-11-10T04:55:41.324583Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 115,
+      "timestamp": "2026-11-10T04:55:41.326852Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "151.205",
+        "hard_remaining_seconds": "196.205",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 116,
+      "timestamp": "2026-11-10T04:55:41.540559Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.992",
+        "hard_remaining_seconds": "195.992",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172",
+        "elapsed_seconds": "0.211",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "147321"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 117,
+      "timestamp": "2026-11-10T04:55:41.556487Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "url": "https://en.wikipedia.org/wiki/Minoan_eruption",
+        "candidate_id": "c41",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 118,
+      "timestamp": "2026-11-10T04:55:41.558490Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 119,
+      "timestamp": "2026-11-10T04:55:41.560389Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.971",
+        "hard_remaining_seconds": "195.971",
+        "attempt": "1",
+        "input_chars": "17656"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 120,
+      "timestamp": "2026-11-10T04:55:41.563370Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.968",
+        "hard_remaining_seconds": "195.968",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28602"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 121,
+      "timestamp": "2026-11-10T04:55:44.508597Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.024",
+        "hard_remaining_seconds": "193.024",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28602",
+        "elapsed_seconds": "2.943",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2686"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 122,
+      "timestamp": "2026-11-10T04:55:44.513048Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.020",
+        "hard_remaining_seconds": "193.020",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1731",
+        "elapsed_seconds": "2.952",
+        "finish_reason": "stop",
+        "prompt_tokens": "8897",
+        "completion_tokens": "508",
+        "total_tokens": "9405"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 123,
+      "timestamp": "2026-11-10T04:55:44.519715Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b1182968-19cb-4a00-beb1-5a75585aad14",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 124,
+      "timestamp": "2026-11-10T04:55:44.522952Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "8421ea67-ca73-4672-87fb-2269c4ec9f11",
+        "snapshot_id": "90c2adb3-1db3-41f4-8abb-cac232123181",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 125,
+      "timestamp": "2026-11-10T04:55:44.525565Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0330702",
+        "slot": "2",
+        "query_ids": "q37",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 126,
+      "timestamp": "2026-11-10T04:55:44.527236Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 127,
+      "timestamp": "2026-11-10T04:55:44.529341Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.002",
+        "hard_remaining_seconds": "193.002",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "202"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 128,
+      "timestamp": "2026-11-10T04:55:44.704518Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.828",
+        "hard_remaining_seconds": "192.828",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "202",
+        "elapsed_seconds": "0.172",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "151661"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 129,
+      "timestamp": "2026-11-10T04:55:44.721128Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0330702",
+        "candidate_id": "c45",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 130,
+      "timestamp": "2026-11-10T04:55:44.722639Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 131,
+      "timestamp": "2026-11-10T04:55:44.724226Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.807",
+        "hard_remaining_seconds": "192.807",
+        "attempt": "1",
+        "input_chars": "20495"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 132,
+      "timestamp": "2026-11-10T04:55:44.726888Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.804",
+        "hard_remaining_seconds": "192.804",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30993"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 133,
+      "timestamp": "2026-11-10T04:55:48.111257Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.420",
+        "hard_remaining_seconds": "189.420",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30993",
+        "elapsed_seconds": "3.383",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3964"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 134,
+      "timestamp": "2026-11-10T04:55:48.112966Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.418",
+        "hard_remaining_seconds": "189.418",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2996",
+        "elapsed_seconds": "3.389",
+        "finish_reason": "stop",
+        "prompt_tokens": "9699",
+        "completion_tokens": "797",
+        "total_tokens": "10496"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 135,
+      "timestamp": "2026-11-10T04:55:48.115194Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "8514bfe1-f09d-4d67-bc93-f9b536fa3fb0",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 136,
+      "timestamp": "2026-11-10T04:55:48.116310Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "1c67123c-a0a0-4e56-8168-15beae34d427",
+        "snapshot_id": "8f5f9557-14ae-4c5a-b998-569a6663ab9f",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 137,
+      "timestamp": "2026-11-10T04:55:48.118260Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 138,
+      "timestamp": "2026-11-10T04:55:48.119095Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 139,
+      "timestamp": "2026-11-10T04:55:48.120024Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "3f3a19de-4262-4051-80d4-1fc52d718b93"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 140,
+      "timestamp": "2026-11-10T04:55:48.121718Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 141,
+      "timestamp": "2026-11-10T04:55:48.122709Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "189.409",
+        "hard_remaining_seconds": "189.408",
+        "attempt": "1",
+        "input_chars": "22769"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 142,
+      "timestamp": "2026-11-10T04:55:48.124035Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "189.407",
+        "hard_remaining_seconds": "189.407",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28294"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 143,
+      "timestamp": "2026-11-10T04:55:50.698554Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.834",
+        "hard_remaining_seconds": "186.834",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28294",
+        "elapsed_seconds": "2.572",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2200"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 144,
+      "timestamp": "2026-11-10T04:55:50.702172Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.830",
+        "hard_remaining_seconds": "186.830",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1306",
+        "elapsed_seconds": "2.578",
+        "finish_reason": "stop",
+        "prompt_tokens": "8911",
+        "completion_tokens": "542",
+        "total_tokens": "9453"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 145,
+      "timestamp": "2026-11-10T04:55:50.706072Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.826",
+        "hard_remaining_seconds": "186.826",
+        "attempt": "1",
+        "input_chars": "24085"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 146,
+      "timestamp": "2026-11-10T04:55:50.709081Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.823",
+        "hard_remaining_seconds": "186.823",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28599"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 147,
+      "timestamp": "2026-11-10T04:55:51.500749Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.032",
+        "hard_remaining_seconds": "186.032",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28599",
+        "elapsed_seconds": "0.788",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1043"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 148,
+      "timestamp": "2026-11-10T04:55:51.504391Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.028",
+        "hard_remaining_seconds": "186.028",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "explanation_indices",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "181",
+        "elapsed_seconds": "0.798",
+        "finish_reason": "stop",
+        "prompt_tokens": "9257",
+        "completion_tokens": "60",
+        "total_tokens": "9317"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 149,
+      "timestamp": "2026-11-10T04:55:51.506971Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "check_explanation",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 150,
+      "timestamp": "2026-11-10T04:55:51.509747Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.022",
+        "hard_remaining_seconds": "186.022",
+        "attempt": "2",
+        "input_chars": "24085"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 151,
+      "timestamp": "2026-11-10T04:55:51.512481Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "186.019",
+        "hard_remaining_seconds": "186.019",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28805"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 152,
+      "timestamp": "2026-11-10T04:55:52.253057Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "185.280",
+        "hard_remaining_seconds": "185.280",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28805",
+        "elapsed_seconds": "0.737",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1043"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 153,
+      "timestamp": "2026-11-10T04:55:52.256611Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "185.275",
+        "hard_remaining_seconds": "185.275",
+        "attempt": "2",
+        "outcome": "invalid_task_output",
+        "validation_code": "explanation_indices",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "181",
+        "elapsed_seconds": "0.747",
+        "finish_reason": "stop",
+        "prompt_tokens": "9296",
+        "completion_tokens": "60",
+        "total_tokens": "9356"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 154,
+      "timestamp": "2026-11-10T04:55:52.258928Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "check_explanation",
+        "attempt": "2"
+      }
+    },
+    {
+      "investigation_id": "7d75d34e-d7a7-4574-a849-9d7b20bc71f8",
+      "sequence": 155,
+      "timestamp": "2026-11-10T04:55:52.261206Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 54.86912412500169,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.147
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.926
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.637
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.737
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.838
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.152
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.251
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.145
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.676
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.014
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.485
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.528
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.344
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.657
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.135
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.514
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.371
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.905
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.299
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.11
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.206
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.941
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.154
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.382
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.57
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.786
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.734
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1487847909993434,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9288075000004028,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.73207279199778,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7375812089994724,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.848138500001369,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.27430495799853816,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.252857499999664,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3996910410023702,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.6784795000021404,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0158253330009757,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.4885101250001753,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.532310166996467,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.34858750000057626,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.6591067499975907,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1536188329992001,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5157975830006762,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.372977417002403,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.90810324999984,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.3031697500009614,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.1133955829973274,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.21073429199896054,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.9426298750004207,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.17239204099678318,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.3830268339988834,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5717494999989867,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7883357089995116,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7369596249991446,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

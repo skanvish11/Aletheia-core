@@ -1,0 +1,1671 @@
+{
+  "id": "b0028",
+  "live": true,
+  "investigation": {
+    "id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+    "claim": "The Montreal Protocol, adopted in 1986, regulates substances that deplete the ozone layer.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "quick",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:35:59.743218Z",
+    "started_at": "2026-11-10T05:35:59.744995Z",
+    "finished_at": "2026-11-10T05:36:23.335909Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Research output failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "events": "/investigations/5d1834c9-8e7d-4c3d-b4d5-013b5e999065/events",
+      "evidence": "/investigations/5d1834c9-8e7d-4c3d-b4d5-013b5e999065/evidence",
+      "comparison": "/investigations/5d1834c9-8e7d-4c3d-b4d5-013b5e999065/comparison",
+      "refresh": "/investigations/5d1834c9-8e7d-4c3d-b4d5-013b5e999065/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol",
+        "canonical_url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol",
+        "title": "About Montreal Protocol",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:36:09.628844Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "8ae394b0660522c25426c005cfbe4746934eee959e719542b96c2cdd6ce8bfd9",
+        "duplicate_group": "8ae394b0660522c25426c005cfbe4746934eee959e719542b96c2cdd6ce8bfd9",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+        "canonical_url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+        "title": "Montreal Protocol - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:36:16.913997Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "fd75cfff4e7179d7976e9c6a9b70d44ef882fdeccaa74e79e241b7fbd4b5c83c",
+        "duplicate_group": "fd75cfff4e7179d7976e9c6a9b70d44ef882fdeccaa74e79e241b7fbd4b5c83c",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "0169ebe3-3d45-4bfa-a3b1-88e1b56683f5",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+            "span_ids": [
+              21,
+              23
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The source confirms the Montreal Protocol regulates ODS and was adopted in 1987, not 1986. The core regulatory claim is supported but the date is incorrect.",
+          "publisher": "UN Environment Programme",
+          "origin": "UNEP about page",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            21,
+            23
+          ],
+          "provenance_note": "Span 21 describes the Protocol's regulatory scope; span 23 gives the adoption date as 16 September 1987.",
+          "rationale": "The assertion's main clause about regulating ozone-depleting substances is supported, but the specified year 1986 contradicts the source's 1987 date. The regulatory function is accurately captured in context.",
+          "limitations": [
+            "Date discrepancy: source says 1987, assertion says 1986",
+            "Source is a promotional/unofficial UNEP page, not a treaty text",
+            "No explicit statement that the Protocol 'adopted in 1986' appears in the source"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Assertion claims 1986 adoption; source states 1987. The regulatory content is correct but the year is wrong."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              21
+            ],
+            "start": 990,
+            "end": 1235,
+            "text": "The Montreal Protocol on Substances that Deplete the Ozone Layer is the landmark multilateral environmental agreement that regulates the production and consumption of nearly 100 man-made chemicals referred to as ozone depleting substances (ODS).",
+            "quote_hash": "ccc991536985640537eaa2330870a9cd31be09528ce3d1ca0dfab0f4fd2ba841"
+          },
+          {
+            "span_ids": [
+              23
+            ],
+            "start": 1451,
+            "end": 1564,
+            "text": "Adopted on 16 September 1987, the Protocol is to date one of the rare treaties to achieve universal ratification.",
+            "quote_hash": "6badfce70d119c455d82bc7e55c0259740590f7aaa30d6e405d54ddaac8c3297"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "db14d59e-c028-4ed8-ab35-c5992341d1db",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+            "span_ids": [
+              28
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The substances listed in Annexes A, B, C, E, and F are explicitly identified as ODS controlled by the Protocol.",
+          "publisher": "UN Environment Programme",
+          "origin": "UNEP about page",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            28
+          ],
+          "provenance_note": "Span 28 enumerates the controlled substance categories.",
+          "rationale": "Directly supports that the Protocol regulates specific ozone-depleting substance categories as asserted.",
+          "limitations": [
+            "Only lists substance categories; does not state the year 1986 or provide full treaty history",
+            "Does not address whether the Protocol was 'adopted in 1986'"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              28
+            ],
+            "start": 2555,
+            "end": 2754,
+            "text": "The substances controlled by the treaty are listed in Annexes A (CFCs, halons), B (other fully halogenated CFCs, carbon tetrachloride, methyl chloroform), C (HCFCs), E (methyl bromide), and F (HFCs).",
+            "quote_hash": "8d26838ea60dc9811f0f0c3baede221e52f10d3ddcfce482b26b18398d6b0369"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "abb4227d-9baf-47cc-bbd2-0df3320ebb51",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+            "span_ids": [
+              42,
+              43,
+              44,
+              45,
+              46
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "HCFCs and HFCs are described as substances regulated under the Protocol, with phase-out timelines specified for both developed and developing countries.",
+          "publisher": "UN Environment Programme",
+          "origin": "UNEP about page",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            42,
+            43,
+            44,
+            45,
+            46
+          ],
+          "provenance_note": "Spans 42-46 detail HCFC phase-out schedule and HFC addition via Kigali Amendment.",
+          "rationale": "Supports that the Protocol regulates substances depleting the ozone layer, including HCFCs and their replacement HFCs, but does not confirm the 1986 adoption date.",
+          "limitations": [
+            "Focus is on phase-out timelines, not adoption date",
+            "No explicit statement about 1986 adoption",
+            "Source presents implementation details rather than treaty history"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Addresses phase-out schedules but not the 1986 adoption claim."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              42,
+              43,
+              44,
+              45,
+              46
+            ],
+            "start": 5147,
+            "end": 6096,
+            "text": "Hydrochlorofluorocarbons (HCFCs) are gases used worldwide in [refrigeration, air-conditioning](https://www.unenvironment.org/ozonaction/what-we-do/refrigeration-and-air-conditioning) and [foam](https://www.unenvironment.org/ozonaction/what-we-do/foam) applications, but they are being phased out under the Montreal Protocol since deplete the ozone layer. HCFCs are both ODS and powerful greenhouse gases: the most commonly used HCFC is nearly 2,000 times more potent than carbon dioxide in terms of its global warming potential (GWP). Recognizing the potential benefits to the Earth’s climate, in September 2007 the Parties decided to accelerate their schedule to phase out HCFCs. Developed countries have been reducing their consumption of HCFCs and will completely phase them out by 2020. Developing countries agreed to start their phase-out process in 2013 and are now following a stepwise reduction until the complete phase-out of HCFCs by 2030.",
+            "quote_hash": "dabbd981bc5691deead79c92c790c366fab62785b7b012948530888bed3601c2"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:35:59.743218Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:35:59.744995Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:35:59.747181Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:35:59.748445Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:35:59.749769Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "attempt": "1",
+        "input_chars": "118"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:35:59.751802Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5795"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:36:01.235364Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.512",
+        "hard_remaining_seconds": "118.512",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5795",
+        "elapsed_seconds": "1.482",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1363"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:36:01.237471Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.510",
+        "hard_remaining_seconds": "118.510",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "486",
+        "elapsed_seconds": "1.487",
+        "finish_reason": "stop",
+        "prompt_tokens": "900",
+        "completion_tokens": "125",
+        "total_tokens": "1025"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:36:01.239147Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:36:01.240595Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:36:01.242208Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:36:01.243544Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.504",
+        "hard_remaining_seconds": "118.504",
+        "attempt": "1",
+        "input_chars": "485"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:36:01.245720Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.501",
+        "hard_remaining_seconds": "118.501",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3510"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:36:02.282719Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.465",
+        "hard_remaining_seconds": "117.465",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3510",
+        "elapsed_seconds": "1.035",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1410"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:36:02.285037Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.462",
+        "hard_remaining_seconds": "117.462",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "520",
+        "elapsed_seconds": "1.041",
+        "finish_reason": "stop",
+        "prompt_tokens": "602",
+        "completion_tokens": "138",
+        "total_tokens": "740"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:36:02.286586Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol adoption year 1986 substances depleting ozone layer",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:36:02.287910Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.459",
+        "hard_remaining_seconds": "117.459",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "277"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:36:04.414776Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.333",
+        "hard_remaining_seconds": "115.333",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "277",
+        "elapsed_seconds": "2.124",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9320"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:36:04.417297Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol adoption year 1986 substances depleting ozone layer",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:36:04.419113Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol adoption year different from 1986 ozone depleting substances",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:36:04.421035Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.326",
+        "hard_remaining_seconds": "115.326",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "286"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:36:07.240858Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.508",
+        "hard_remaining_seconds": "112.508",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "286",
+        "elapsed_seconds": "2.816",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8504"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:36:07.244082Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol adoption year different from 1986 ozone depleting substances",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:36:07.246228Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol effective date and initial regulated substances",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:36:07.247925Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.499",
+        "hard_remaining_seconds": "112.499",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:36:09.476870Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "65.272",
+        "hard_remaining_seconds": "110.272",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273",
+        "elapsed_seconds": "2.225",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9243"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:36:09.479796Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Montreal Protocol effective date and initial regulated substances",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:36:09.481980Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "8",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:36:09.483520Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol",
+        "slot": "1",
+        "query_ids": "q5,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:36:09.485245Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:36:09.486799Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.260",
+        "hard_remaining_seconds": "110.260",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "193"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:36:09.627111Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.121",
+        "hard_remaining_seconds": "110.121",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "193",
+        "elapsed_seconds": "0.137",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12608"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:36:09.633766Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "url": "https://www.unep.org/ozonaction/who-we-are/about-montreal-protocol",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:36:09.635457Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:36:09.639727Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.108",
+        "hard_remaining_seconds": "110.108",
+        "attempt": "1",
+        "input_chars": "18249"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:36:09.643941Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.104",
+        "hard_remaining_seconds": "110.104",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29902"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:36:16.230386Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "58.518",
+        "hard_remaining_seconds": "103.518",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29902",
+        "elapsed_seconds": "6.583",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4551"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:36:16.233834Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "58.514",
+        "hard_remaining_seconds": "103.514",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3509",
+        "elapsed_seconds": "6.594",
+        "finish_reason": "stop",
+        "prompt_tokens": "7991",
+        "completion_tokens": "1020",
+        "total_tokens": "9011"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:36:16.237612Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "0169ebe3-3d45-4bfa-a3b1-88e1b56683f5",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:36:16.239146Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "db14d59e-c028-4ed8-ab35-c5992341d1db",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:36:16.240579Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "abb4227d-9baf-47cc-bbd2-0df3320ebb51",
+        "snapshot_id": "2e3671e8-0f18-45db-88cd-3ac88f653a46",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:36:16.242038Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+        "slot": "2",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:36:16.243335Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:36:16.244680Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.502",
+        "hard_remaining_seconds": "103.502",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:36:16.912867Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "57.835",
+        "hard_remaining_seconds": "102.835",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174",
+        "elapsed_seconds": "0.666",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "171376"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:36:16.924491Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "url": "https://en.wikipedia.org/wiki/Montreal_Protocol",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:36:16.926059Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:36:16.931085Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "57.816",
+        "hard_remaining_seconds": "102.816",
+        "attempt": "1",
+        "input_chars": "18336"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:36:16.934359Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "57.813",
+        "hard_remaining_seconds": "102.813",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30961"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:36:20.818694Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.930",
+        "hard_remaining_seconds": "98.930",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30961",
+        "elapsed_seconds": "3.881",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3567"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:36:20.822036Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.925",
+        "hard_remaining_seconds": "98.925",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2593",
+        "elapsed_seconds": "3.891",
+        "finish_reason": "stop",
+        "prompt_tokens": "9719",
+        "completion_tokens": "713",
+        "total_tokens": "10432"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:36:20.823809Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:36:20.825305Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.922",
+        "hard_remaining_seconds": "98.922",
+        "attempt": "2",
+        "input_chars": "18336"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:36:20.829419Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "53.918",
+        "hard_remaining_seconds": "98.918",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31151"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:36:23.329304Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "51.419",
+        "hard_remaining_seconds": "96.419",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31151",
+        "elapsed_seconds": "2.497",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2281"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:36:23.332210Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d4db44b-dd9c-4c19-aaab-02f03265b49a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "51.415",
+        "hard_remaining_seconds": "96.415",
+        "attempt": "2",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1365",
+        "elapsed_seconds": "2.507",
+        "finish_reason": "stop",
+        "prompt_tokens": "9752",
+        "completion_tokens": "406",
+        "total_tokens": "10158"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:36:23.334390Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "2"
+      }
+    },
+    {
+      "investigation_id": "5d1834c9-8e7d-4c3d-b4d5-013b5e999065",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:36:23.335909Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 23.85134333300084,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.481
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.034
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.12
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.812
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.223
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.135
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 6.581
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.35
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.879
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.495
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.4816879999998491,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0347792909997224,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.124471667000762,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.815550874998735,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.225294749998284,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13741087499874993,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 6.58302654200088,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.6662882499986154,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.8814117500005523,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.4969145829963963,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

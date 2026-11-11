@@ -1,0 +1,296 @@
+{
+  "id": "b0010",
+  "live": true,
+  "investigation": {
+    "id": "7364a90a-85b1-4974-8005-6817399e6771",
+    "claim": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared with no screening.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "needs_clarification",
+    "stage": null,
+    "route": null,
+    "stop_reason": null,
+    "reused": true,
+    "created_at": "2026-11-10T05:31:17.346453Z",
+    "started_at": "2026-11-10T05:31:17.349787Z",
+    "finished_at": "2026-11-10T05:31:18.752419Z",
+    "result": null,
+    "clarification_questions": [
+      "What is the user's age, family history or risk status (e.g., BRCA mutation, dense breasts)?",
+      "What is the user's definition of 'reduces all-cause mortality' (relative risk reduction, absolute risk reduction, life-years gained)?",
+      "What is the time horizon (e.g., 10-year, lifetime) for the mortality comparison?"
+    ],
+    "error": null,
+    "links": {
+      "self": "/investigations/7364a90a-85b1-4974-8005-6817399e6771",
+      "events": "/investigations/7364a90a-85b1-4974-8005-6817399e6771/events",
+      "evidence": "/investigations/7364a90a-85b1-4974-8005-6817399e6771/evidence",
+      "comparison": "/investigations/7364a90a-85b1-4974-8005-6817399e6771/comparison",
+      "refresh": null
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:31:17.346453Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:31:17.349787Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:31:17.351992Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:31:17.353017Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:31:17.354194Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "153"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:31:17.355794Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.996",
+        "hard_remaining_seconds": "119.996",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5830"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:31:18.746886Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.606",
+        "hard_remaining_seconds": "118.606",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5830",
+        "elapsed_seconds": "1.389",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1400"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:31:18.748865Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.603",
+        "hard_remaining_seconds": "118.603",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "533",
+        "elapsed_seconds": "1.394",
+        "finish_reason": "stop",
+        "prompt_tokens": "903",
+        "completion_tokens": "125",
+        "total_tokens": "1028"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:31:18.750706Z",
+      "type": "clarification_decision",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.602",
+        "hard_remaining_seconds": "118.602",
+        "reason": "missing_scope",
+        "question_count": "3"
+      }
+    },
+    {
+      "investigation_id": "7364a90a-85b1-4974-8005-6817399e6771",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:31:18.752419Z",
+      "type": "clarification_required",
+      "stage": null,
+      "payload": {}
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 1.5711131249991013,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.388
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.38947887500035,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

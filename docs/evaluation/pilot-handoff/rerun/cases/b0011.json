@@ -1,0 +1,4793 @@
+{
+  "id": "b0011",
+  "live": true,
+  "investigation": {
+    "id": "aa461a24-3507-4ac5-9424-e246054585aa",
+    "claim": "The SHA-256 cryptographic hash algorithm produces a 256-bit digest.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "partial",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "budget_exhausted",
+    "reused": true,
+    "created_at": "2026-11-10T05:31:17.347407Z",
+    "started_at": "2026-11-10T05:31:17.550367Z",
+    "finished_at": "2026-11-10T05:32:10.475526Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "The SHA-256 cryptographic hash algorithm produces a 256-bit digest.",
+        "kind": "direct_record",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "Hash algorithm produces a 256-bit (32-byte) output digest.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "insufficient_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "9c040d00-5c20-40a8-9cca-0abc5bfab19d",
+          "d95805ce-8a3f-4dba-89f6-372707630753",
+          "3c84fc55-cdc8-43a7-a6e4-36ab294ce09c",
+          "9b4447f3-40a9-4e8c-8f2d-b11864cab082",
+          "d4855023-9e40-4bd7-b016-4edab0715a55",
+          "b0fefd14-9744-4e58-b3ff-9ea262a32694",
+          "c8988f11-499b-4a62-ba23-6c1e8a9f7dca",
+          "ced52ef4-afb6-4cde-9473-da23447bf698"
+        ],
+        "qualification_flags": [],
+        "qualification_check": "assessed",
+        "limitations": [
+          "The retrieved evidence does not meet the evidence requirements.",
+          "Distinct independent origins or an appropriate synthesis were not established."
+        ]
+      },
+      "explanation": [
+        {
+          "text": "The assertion is directly supported by multiple independent authoritative sources. Secra.es confirms SHA-256 produces a 256-bit (32-byte) digest, and NIST FIPS 180-2/180-4 publications explicitly specify SHA-256 as producing a 256-bit message digest.",
+          "evidence_ids": [
+            "9c040d00-5c20-40a8-9cca-0abc5bfab19d",
+            "b0fefd14-9744-4e58-b3ff-9ea262a32694"
+          ]
+        },
+        {
+          "text": "NIST FIPS 180-2 (Sec. 4.1.2, 7) and FIPS 180-4 (Sec. 3) are authoritative records that define SHA-256's output as a 256-bit message digest.",
+          "evidence_ids": [
+            "9b4447f3-40a9-4e8c-8f2d-b11864cab082",
+            "b0fefd14-9744-4e58-b3ff-9ea262a32694"
+          ]
+        }
+      ],
+      "limitations": [
+        "The follow-up round limit was reached.",
+        "Only the first bounded set of source spans was assessed.",
+        "page_text_truncated",
+        "Source is a single article; independence from other publications not verified.",
+        "Source flagged as truncated; may not represent comprehensive coverage of all SHA-256 specifications.",
+        "Source is a tutorial blog, not a formal specification",
+        "Contextual description only; no explicit output-length claim",
+        "Source publication is archived and superseded by FIPS 180-4.",
+        "Scope limited to NIST FIPS publication; does not cite external independent sources.",
+        "General digest-length statement does not independently confirm SHA-256's 256-bit output.",
+        "Source is a single FIPS publication without separate verification.",
+        "No SHA-256 content in source",
+        "Source is a commercial platform promotion, not a technical reference",
+        "Span 3 is largely base64 image data unrelated to the claim",
+        "No SHA-256 content",
+        "Commercial promotion context",
+        "Image data, not machine-readable text about hashing",
+        "No SHA-256 terminology present",
+        "Scope limited to FIPS 180-4; does not independently verify broader cryptographic literature.",
+        "No explicit mention of the exact bit length '256' in the cited span.",
+        "No explicit mention of SHA-256 or its digest size",
+        "Key size (256-bit) misinterpreted as hash digest size",
+        "No specific mention of SHA-256 or its 256-bit digest",
+        "Some search results were not extracted within per-round page limits.",
+        "The retrieved evidence does not meet the evidence requirements.",
+        "Distinct independent origins or an appropriate synthesis were not established."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.5",
+      "application_version": "research-v4.5",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 13,
+        "search": 8,
+        "extract": 6
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.146136250001291,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.954781208998611,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.360468666000088,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.849974000000657,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.1580369170005724,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.12623891700059175,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.755513250001968,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.15766270799940685,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.1629182910000964,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.0711709999995946,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.7113169170006586,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 5.214921040998888,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.3821784579995438,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.2245003749994794,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.4967424999995274,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.19300550000116345,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.7823840829987603,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.9864032920013415,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.8566320419995463,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.7451089580026746,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.5019262919995526,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.750737875001505,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.7408552499982761,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.11787462500069523,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.200307167000574,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.0482959170003596,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.796889374996681,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 73614,
+        "completion_tokens": 4682,
+        "total_tokens": 78296
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/aa461a24-3507-4ac5-9424-e246054585aa",
+      "events": "/investigations/aa461a24-3507-4ac5-9424-e246054585aa/events",
+      "evidence": "/investigations/aa461a24-3507-4ac5-9424-e246054585aa/evidence",
+      "comparison": "/investigations/aa461a24-3507-4ac5-9424-e246054585aa/comparison",
+      "refresh": "/investigations/aa461a24-3507-4ac5-9424-e246054585aa/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "url": "https://secra.es/en/blog/what-is-sha256",
+        "canonical_url": "https://secra.es/en/blog/what-is-sha256",
+        "title": "What Is SHA-256: Hash Function, Real Uses and Comparison",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:31:28.218847Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "4e459d073a16e477e1d5e0f16231710956732274e74b0ebd9e57d24a69268671",
+        "duplicate_group": "4e459d073a16e477e1d5e0f16231710956732274e74b0ebd9e57d24a69268671",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "url": "https://infosecwriteups.com/breaking-down-sha-256-algorithm-2ce61d86f7a3",
+        "canonical_url": "https://infosecwriteups.com/breaking-down-sha-256-algorithm-2ce61d86f7a3",
+        "title": "Breaking Down : SHA-256 Algorithm",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:31:31.167468Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "0f5a69260eb4d6c6ac16b3e0cb197636f38ee6cd5fd1d4a3d0f03e4eca51d67c",
+        "duplicate_group": "0f5a69260eb4d6c6ac16b3e0cb197636f38ee6cd5fd1d4a3d0f03e4eca51d67c",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "url": "https://csrc.nist.gov/files/pubs/fips/180-2/final/docs/fips180-2.pdf",
+        "canonical_url": "https://csrc.nist.gov/files/pubs/fips/180-2/final/docs/fips180-2.pdf",
+        "title": "FIPS 180-2, Secure Hash Standard (superseded Feb. 25, 2004)",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:31:45.032679Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "e971b79f8d6d591ae485eb071cfceb8197412679c91a86237e643d07da855b16",
+        "duplicate_group": "e971b79f8d6d591ae485eb071cfceb8197412679c91a86237e643d07da855b16",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "url": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+        "canonical_url": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+        "title": "The NSA and Bitcoin: Origins of the SHA-256 Hashing Algorithm",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:31:48.767311Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "b43e9c17d64fdc26d30680fe667482ad56b5ecfaf05a5fd90fddeb555b5756bb",
+        "duplicate_group": "b43e9c17d64fdc26d30680fe667482ad56b5ecfaf05a5fd90fddeb555b5756bb",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "url": "http://rfc.nop.hu/nist/NIST.FIPS.180-4.pdf",
+        "canonical_url": "http://rfc.nop.hu/nist/NIST.FIPS.180-4.pdf",
+        "title": "NIST.FIPS.180-4.pdf",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:31:59.718657Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a0f3f3be75e76781fe1c78a04f3566fe3ce74c6bced69dacfb07659fc6c69ea6",
+        "duplicate_group": "a0f3f3be75e76781fe1c78a04f3566fe3ce74c6bced69dacfb07659fc6c69ea6",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "url": "https://en.wikipedia.org/wiki/NSA_cryptography",
+        "canonical_url": "https://en.wikipedia.org/wiki/NSA_cryptography",
+        "title": "NSA cryptography - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:04.385386Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "46b83dd0e9dc1b8a0336bbf56c78d568ea5c51ac5495c3b626768116de9ac053",
+        "duplicate_group": "46b83dd0e9dc1b8a0336bbf56c78d568ea5c51ac5495c3b626768116de9ac053",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "9c040d00-5c20-40a8-9cca-0abc5bfab19d",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+            "span_ids": [
+              10,
+              20,
+              21,
+              51
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Multiple spans (10, 20, 21, 51) from the same source collectively and directly confirm that SHA-256 produces a 256-bit digest. Span 10 states the function 'produces a 256-bit (32-byte) digest'. Span 20 restates 'always returns a 256-bit digest'. Span 21 confirms the acronym's 256-bit variant. Span 5",
+          "publisher": "secra",
+          "origin": "https://secra.es/en/blog/what-is-sha256",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            10,
+            20,
+            21,
+            51
+          ],
+          "provenance_note": "All spans from a single article; independence not established as multiple distinct sources.",
+          "rationale": "The assertion is directly supported by explicit statements in the source that SHA-256 outputs a 256-bit digest. No contradictory evidence found within the provided spans.",
+          "limitations": [
+            "Source is a single article; independence from other publications not verified.",
+            "Source flagged as truncated; may not represent comprehensive coverage of all SHA-256 specifications."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              10
+            ],
+            "start": 598,
+            "end": 1198,
+            "text": "**SHA-256 is a cryptographic hash function that produces a 256-bit (32-byte) digest of any input**. It belongs to the SHA-2 family, designed by the NSA and published by NIST in 2001 as part of the FIPS 180-2 standard. It's the most-used hash function in the world in 2026: the base of modern TLS, of Bitcoin, of digital signatures, of file integrity verification, of JWT with HS256 algorithm, of Git for identifying commits and of practically any protocol needing to verify data without revealing content. It remains secure and recommended by NIST, IETF and most international bodies for general use.",
+            "quote_hash": "bcdd3d3654e2de0a3ad490dc1d8d7f0ebc10daad943247afec4608317a08e51e"
+          },
+          {
+            "span_ids": [
+              20,
+              21
+            ],
+            "start": 2261,
+            "end": 2489,
+            "text": "SHA-256 is **a cryptographic hash function that takes input of any size and always returns a 256-bit digest (usually represented as 64 hexadecimal characters)**. The acronym stands for *Secure Hash Algorithm 2, 256-bit variant*.",
+            "quote_hash": "3ceb71a3264a64f9c3a3303ad257df3649d801475a8f45998fbb80bb995482a8"
+          },
+          {
+            "span_ids": [
+              51
+            ],
+            "start": 4377,
+            "end": 4444,
+            "text": "* **Fixed output size**: 256 bits always, regardless of input size.",
+            "quote_hash": "da15e65db691ff4c9988208d5dc183a7be549676b78ba08041714a2cd9d516fa"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "d95805ce-8a3f-4dba-89f6-372707630753",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+            "span_ids": [
+              128
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "infosecwriteups.com",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            128
+          ],
+          "provenance_note": "Explicit statement of SHA-256 output length",
+          "rationale": "Span 128 directly asserts the 256-bit output length of SHA-256.",
+          "limitations": [
+            "Source is a tutorial blog, not a formal specification"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              128
+            ],
+            "start": 12497,
+            "end": 12534,
+            "text": "The length of the output is 256 bits.",
+            "quote_hash": "60f1a4abd3f76563f769c11fed4dc2d9f364d6dcbf72dc37c280b609cdc13218"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "3c84fc55-cdc8-43a7-a6e4-36ab294ce09c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+            "span_ids": [
+              106,
+              110
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "infosecwriteups.com",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            106,
+            110
+          ],
+          "provenance_note": "Describes chunking into 512-bit blocks and 64-round processing, consistent with 256-bit output",
+          "rationale": "Spans 106 and 110 reinforce the algorithm structure that produces a 256-bit digest, but do not independently state the output size.",
+          "limitations": [
+            "Contextual description only; no explicit output-length claim"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              106
+            ],
+            "start": 10320,
+            "end": 10562,
+            "text": "The entire message block that we have ‘n x 512’ bits long is divided into ‘n’ chunks of 512 bits and each of these 512 bits, are then put through 64 rounds of operations and the output obtained is fed as input for the next round of operation.",
+            "quote_hash": "3375ea7aef8335c0ef63e32faeea0783ff938e982462504d23f79798657e63fd"
+          },
+          {
+            "span_ids": [
+              110
+            ],
+            "start": 10820,
+            "end": 11043,
+            "text": "We can observe that two inputs that we send in are W(i) & K(i), for the first 16 rounds we further break down 512 bit message into 16 parts each of 32 bit but after that we need to calculate the value for W(i) at each step.",
+            "quote_hash": "528f288ff6e423bde6a2078ae9c1ed6089bcea227e0c367768c05d6c5cd757f2"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "9b4447f3-40a9-4e8c-8f2d-b11864cab082",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+            "span_ids": [
+              6,
+              8
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "National Institute of Standards and Technology (NIST)",
+          "origin": "FIPS 180-2, Secure Hash Standard",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            6,
+            8
+          ],
+          "provenance_note": "Spans 6 and 8 from FIPS 180-2 explicitly describe the SHA-256 algorithm and state that its message digest is 256 bits.",
+          "rationale": "FIPS 180-2 Section 4.1.2 and Section 7 together specify that SHA-256 produces a 256-bit message digest.",
+          "limitations": [
+            "Source publication is archived and superseded by FIPS 180-4.",
+            "Scope limited to NIST FIPS publication; does not cite external independent sources."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              6
+            ],
+            "start": 900,
+            "end": 1076,
+            "text": "Explanation: This Standard specifies four secure hash algorithms - SHA-1, SHA-256, SHA-384, and SHA-512 - for computing a condensed representation of electronic data (message).",
+            "quote_hash": "84a63df43bb7d59356e527ba874461de0800e9cf4c6268a031921291af23b966"
+          },
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 1257,
+            "end": 1342,
+            "text": "The message digests range in length from 160 to 512 bits, depending on the algorithm.",
+            "quote_hash": "2f153c17c97acd53ce01b8d3115a0419f9d77025b91788a3bda78618508a3e13"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "d4855023-9e40-4bd7-b016-4edab0715a55",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+            "span_ids": [
+              6,
+              7
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "National Institute of Standards and Technology (NIST)",
+          "origin": "FIPS 180-2, Secure Hash Standard",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            6,
+            7
+          ],
+          "provenance_note": "Span 7 defines message digest output generally; Span 6 identifies SHA-256 as one of four specified algorithms.",
+          "rationale": "Span 7 provides general digest-length context, but the specific 256-bit claim for SHA-256 is established in Span 6.",
+          "limitations": [
+            "General digest-length statement does not independently confirm SHA-256's 256-bit output.",
+            "Source is a single FIPS publication without separate verification."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              6,
+              7
+            ],
+            "start": 900,
+            "end": 1256,
+            "text": "Explanation: This Standard specifies four secure hash algorithms - SHA-1, SHA-256, SHA-384, and SHA-512 - for computing a condensed representation of electronic data (message). When a message of any length < 264 bits (for SHA-1 and SHA-256) or < 2128 bits (for SHA-384 and SHA-512) is input to an algorithm, the result is an output called a message digest.",
+            "quote_hash": "23158843d5c376a0c2a6e4b02e5f59aee02d11ba26076d9be6dd0eb7f672f2b9"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "59af4575-8794-4a4d-8fe2-7b54c1467020",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+            "span_ids": [
+              1,
+              2,
+              3
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Supra",
+          "origin": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            1,
+            2,
+            3
+          ],
+          "provenance_note": "Source spans describe Supra wallet and product navigation; no SHA-256 technical details.",
+          "rationale": "The supplied source is a promotional website for the Supra blockchain platform. The excerpt contains no information about SHA-256, cryptographic hash algorithms, or bit-lengths. The first three spans cover a logo, a wallet tag, and a very long block of base64-encoded SVG navigation/branding imagery.",
+          "limitations": [
+            "No SHA-256 content in source",
+            "Source is a commercial platform promotion, not a technical reference",
+            "Span 3 is largely base64 image data unrelated to the claim"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              1,
+              2,
+              3
+            ],
+            "start": 0,
+            "end": 8245,
+            "text": "![Supra](/_next/image/?url=https%3A%2F%2Fprod-assets.cerberus.supra.com%2Fspa-assets%2Fhome%2Fstar-key-logo.png&w=256&q=75)\n\nThe official wallet of Supra.\n\n[![Supra](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTg2IiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zOS42MjcgMjBjMCAxMS4wNDQtOC44NzIgMjAtMTkuODEzIDIwQzguODcyIDQwIDAgMzEuMDQ0IDAgMjBTOC44NzIgMCAxOS44MTQgMGMxMC45NDEgMCAxOS44MTMgOC45NTYgMTkuODEzIDIwWiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zMS4xNzggMTAuMzc4Yy0uNDc1LTEuMjIyLTEuMjcyLTIuMjkzLTIuMTYyLTMuMTkxYTEwLjU1MyAxMC41NTMgMCAwIDAtMy4yMjMtMi4wNzYgOS4zNzMgOS4zNzMgMCAwIDAtMi40MDgtLjYxN2MtMi45NTUtLjQzMi02LjA2OC40ODQtOC4zMjYgMi43NjgtMi42MDcgMi42MzItMy41MjMgNi40ODUtMi4zNzMgMTAuMDcydi4wMzVhMTAuMDg5IDEwLjA4OSAwIDAgMC0xLjk2OSAxLjYyMmMtLjkwNy45Ni0xLjY0MiAyLjA3Ni0yLjExOCAzLjI5OGExMC41NjQgMTAuNTY0IDAgMCAwLS42OSAzLjg0YzAgMS4zMzMuMjc3IDIuNi43OTYgMy43NzguNDc2IDEuMjIyIDEuMjczIDIuMjkzIDIuMTYyIDMuMTkxYTEwLjU1MyAxMC41NTMgMCAwIDAgMy4yMjMgMi4wNzZjMS4xNjcuNDggMi40MjYuNjk3IDMuNjk5LjY5Ny0uMTggMC0uMzU3LS4wMDktLjUzMy0uMDE3YTkuNjk1IDkuNjk1IDAgMCAwIDcuNDMyLTIuODc2IDkuODQzIDkuODQzIDAgMCAwIDIuMzk1LTkuOTkxIDkuNzk4IDkuNzk4IDAgMCAwIDIuMDg3LTEuNjkzYy45MDctLjk2IDEuNjQzLTIuMDc2IDIuMTE4LTMuMjk4YTEwLjU3IDEwLjU3IDAgMCAwIC42OTItMy44NCA5LjMxIDkuMzEgMCAwIDAtLjc5Ny0zLjc3OG0tOC41NDcuNzExYTQuMTcgNC4xNyAwIDAgMS0uMDk3LS45NTVjLjM1Ny4wNjIuNjk2LjE2OCAxLjAzNS4zMS40NzYuMi44OS41MjUgMS4yMTEuODk4LjMwOC4zODcuNTgxLjgwNS43MzUgMS4yODUuMTY4LjQ4LjIxNi45Ni4yMTYgMS40NGEzLjc1NyAzLjc1NyAwIDAgMS0xLjA3OSAyLjQyMmwtMi4wMi01LjM5NXYtLjAwNVptMi4zMDggNi4xNjVjLjA2MS0uMDU4LjEyMy0uMTE2LjE3Ni0uMTgzLjQxMy0uNDM1LjY3My0uODk3Ljg4OS0xLjQ0LjIxNi0uNTQyLjI2LTEuMTI5LjI2LTEuNjU3IDAtLjU4Ny0uMTU0LTEuMTE2LS4zNy0xLjU5NnMtLjU4MS0uOTE2LS45NTEtMS4yODRjLS4zNy0uMzI1LS44NDYtLjY1LTEuMzIxLS44MDUtLjM0My0uMTI0LS43MTgtLjE3OC0xLjA5Ni0uMjA0YTQuMDggNC4wOCAwIDAgMSAuNDYyLTEuNzkxYy40MzEuMDg0Ljg0NS4yMTMgMS4yNDYuNC43MzUuMzI0IDEuMzIuODA0IDEuODQgMS4zMzMuNDc2LjU4Ny45MDcgMS4yMjIgMS4xNjcgMS45MnMuMzcgMS40MjcuMzcgMi4xODJjMCAuNzU2LS4xNTQgMS41MDItLjQ3NSAyLjEzOGE0LjY3NiA0LjY3NiAwIDAgMS0xLjIxMSAxLjc1MSA1LjE4NyA1LjE4NyAwIDAgMS0uNTQ2LjQzMWwtLjQ0NS0xLjE5MS4wMDUtLjAwNFptLjcxNyAxLjkxNWE3LjUgNy41IDAgMCAwIC43OC0uNjcxYy41MzctLjU4NyAxLjAxMi0xLjMzMyAxLjI3Mi0yLjA3Ni4zMjEtLjgwNC40MzEtMS42MDguNDMxLTIuNCAwLS43OS0uMTk4LTEuNTk1LS41MjMtMi4zMzdhNS43ODggNS43ODggMCAwIDAtMS4zNjUtMS45MmMtLjU4Mi0uNTI1LTEuMjExLS45Ni0xLjk0Ny0xLjIyM2E2LjM5NyA2LjM5NyAwIDAgMC0xLjI4LS4zMDJjLjE4NC0uMzQyLjQwOS0uNjU4LjY4Ni0uOTQyLjIxNi0uMjE4LjQ1NC0uNDA0LjctLjU2NC4xOTguMDcuMzkyLjE1LjU4MS4yNGE3LjEyIDcuMTIgMCAwIDEgMi40MjYgMS43MDJjLjY5Mi42OTggMS4yMTEgMS42MDkgMS41ODEgMi41MDYuMzcuOTYuNTI0IDEuOTY1LjUyNCAyLjkyNWE4LjU2NiA4LjU2NiAwIDAgMS0uNjMgMi44OGMtLjM3Ljg1My0uOTUgMS42NC0xLjY0MiAyLjMzOGE2LjgzIDYuODMgMCAwIDEtMS4xNzUuOTVsLS40MTktMS4xMTV2LjAxWk0xNS4zNTQgMzMuNTE2YTUuOTIzIDUuOTIzIDAgMCAxLS40NTgtLjE5NiA3LjExOSA3LjExOSAwIDAgMS0yLjQyNi0xLjcwMmMtLjY5Mi0uNjk4LTEuMjExLTEuNjA5LTEuNTgxLTIuNTExYTguMTQzIDguMTQzIDAgMCAxLS41Mi0yLjkyNSA4LjQ2NCA4LjQ2NCAwIDAgMSAuNjMtMi44OGMuMzctLjg1My45NTEtMS42NCAxLjY0My0yLjMzN2E2Ljc5NyA2Ljc5NyAwIDAgMSAxLjA3OC0uODlsLjQyNyAxLjEyYTYuODg2IDYuODg2IDAgMCAwLS42OTEuNjA1Yy0uNTM3LjU4Ny0xLjAxMyAxLjMzNC0xLjI3MiAyLjA3Ni0uMzIyLjgwNC0uNDMyIDEuNjA5LS40MzIgMi40IDAgLjc5LjE5OCAxLjU5NS41MjQgMi4zMzhhNS43OSA1Ljc5IDAgMCAwIDEuMzY1IDEuOTJjLjU4MS41MjQgMS4yMS45NiAxLjk1IDEuMjIyLjM3NS4xMzMuNzY3LjIyNiAxLjE1OS4yODRhNC4wODkgNC4wODkgMCAwIDEtLjY3Ljg5OCAzLjg3IDMuODcgMCAwIDEtLjcyMi41NzNtLjI5NS0xLjkxNWMtLjczNS0uMzI1LTEuMzItLjgwNS0xLjg0LTEuMzM0LS40NzYtLjU4Ni0uOTAzLTEuMjIyLTEuMTY3LTEuOTJhNi4xOTMgNi4xOTMgMCAwIDEtLjM3LTIuMTgyYzAtLjc1NS4xNTQtMS41MDIuNDc2LTIuMTM4LjI2LS42OC42OS0xLjI3IDEuMjEtMS43NS4xNDYtLjEzNC4zLS4yNTQuNDU4LS4zN2wuNDU4IDEuMjFjLS4wMzUuMDM1LS4wNy4wNjYtLjEwNS4xMDYtLjQxNC40MzEtLjY3NC44OTgtLjg5IDEuNDQtLjIxNi41NDItLjI2IDEuMTI5LS4yNiAxLjY1OCAwIC41OS4xNTQgMS4xMTUuMzcgMS41OTVzLjU4MS45MTYuOTUxIDEuMjg1Yy4zNy4zMjQuODQ2LjY0OSAxLjMyMS44MDQuMzE3LjExMS42NTYuMTcgMS4wMDQuMTk2YTQuMTU4IDQuMTU4IDAgMCAxLS40ODkgMS43NzggNS4zNDUgNS4zNDUgMCAwIDEtMS4xMjctLjM3OFptMS41MzctMi40MTRjLjA2Ni4zMi4wODguNjQuMDc5Ljk1NmE0LjgyIDQuODIgMCAwIDEtLjk0Mi0uMjkzYy0uNDc2LS4yLS44OS0uNTI1LTEuMjExLS44OTgtLjMwOC0uMzg3LS41ODEtLjgwNS0uNzM1LTEuMjg1LS4xNjgtLjQ4LS4yMTYtLjk2LS4yMTYtMS40NGEzLjc1MyAzLjc1MyAwIDAgMSAxLjAwOC0yLjM0NmwyLjAxNyA1LjMwNlptLTYuMDggMy43NDdjLS45MDgtLjkxNS0xLjUzMy0xLjk2OS0yLjAwOS0zLjE0Mi0uNDEzLTEuMTE2LS42My0yLjQtLjYzLTMuNjIyLjA2Mi0xLjIyMy4zMjItMi40NDUuNzk4LTMuNTYuNDc1LTEuMTMgMS4yMS0yLjEzOCAyLjA1Ni0yLjk4N2E4LjcwNSA4LjcwNSAwIDAgMSAxLjcxNy0xLjMzM2wuMzI2Ljg1M2MtLjQ5OC4zMjktLjk2LjY5OC0xLjM2NSAxLjE0N2E4LjAwNSA4LjAwNSAwIDAgMC0xLjY4NiAyLjcxYy0uMzcgMS4wMDUtLjUyIDIuMDc2LS41MiAzLjE0My4wNjIgMS4wNTMuMjYgMi4xMi42OTEgMy4wOGE4LjE0OCA4LjE0OCAwIDAgMCAxLjc5NyAyLjU1NiA4LjEwMSA4LjEwMSAwIDAgMCAyLjU3NiAxLjY1N2MuMTM2LjA1NC4yNzMuMDk4LjQxLjE0N2E0LjMxMiA0LjMxMiAwIDAgMS0yLjA2Mi42IDMuMTc2IDMuMTc2IDAgMCAxLS43Ny0uMDggOS41MDkgOS41MDkgMCAwIDEtMS4zMjUtMS4xNm0xOS41MjMtMTUuMjQ0Yy0uNDc2IDEuMTI4LTEuMjExIDIuMTM3LTIuMDU3IDIuOTg2YTguNjIyIDguNjIyIDAgMCAxLTEuODIyIDEuMzk2bC0uMzE3LS44NWE3LjI0OCA3LjI0OCAwIDAgMCAxLjQ2Ni0xLjIxMmMuNzM1LS43OTIgMS4zMi0xLjcwMyAxLjY4Ni0yLjcxMi4zNy0xLjAwNC41Mi0yLjA3NS41Mi0zLjE0Mi0uMDYyLTEuMDUzLS4yNi0yLjEyLS42OTItMy4wOGE4LjA3NyA4LjA3NyAwIDAgMC00LjM3Mi00LjIxMyA1LjYzMyA1LjYzMyAwIDAgMC0uNTQ2LS4xODIgNC4wNDkgNC4wNDkgMCAwIDEgMi45NjgtLjQ4Yy40OC4zNDYuOTI0LjczNyAxLjMyIDEuMTYuOTA4LjkxNSAxLjUzMyAxLjk2NCAyLjAwOCAzLjE0Mi40MTQgMS4xMTUuNjMgMi40LjYzIDMuNjIyLS4wNjEgMS4yMjItLjMyMSAyLjQ0OS0uNzk3IDMuNTYiIGZpbGw9IiNERDE0MzgiLz48cGF0aCBkPSJNNTIuMzY2IDMzLjA5Yy0xLjk2NC0uNTc5LTMuNTQ0LTEuMzI1LTQuNzMzLTIuMjQ1bDIuMDkxLTQuNjg1YzEuMTQuODQ1IDIuNDk3IDEuNTI1IDQuMDY5IDIuMDM2IDEuNTcyLjUxIDMuMTQzLjc2OSA0LjcxNS43NjkgMS43NTMgMCAzLjA0My0uMjYzIDMuODgtLjc4Ny44MzYtLjUyNCAxLjI1NC0xLjIyMiAxLjI1NC0yLjA5MyAwLS42NC0uMjQ2LTEuMTc0LS43NC0xLjU5Ni0uNDkzLS40MjItMS4xMjctLjc2LTEuOTAyLTEuMDE4LS43NzUtLjI1OC0xLjgxOC0uNTM4LTMuMTM5LS44NDQtMi4wMy0uNDg1LTMuNjktLjk3My00Ljk4LTEuNDU4YTguMTAzIDguMTAzIDAgMCAxLTMuMzI4LTIuMzQyYy0uOTI1LTEuMDc2LTEuMzg3LTIuNTA3LTEuMzg3LTQuMjk4IDAtMS41Ni40MTgtMi45NzggMS4yNTQtNC4yNDQuODM3LTEuMjY3IDIuMDk2LTIuMjcxIDMuNzgzLTMuMDE0IDEuNjg2LS43NDIgMy43NDctMS4xMTUgNi4xODEtMS4xMTUgMS43IDAgMy4zNi4yMDQgNC45OC42MTMgMS42Mi40MDkgMy4wNDMgMSA0LjI2MiAxLjc2NWwtMS45MDIgNC43MjRjLTIuNDYxLTEuNDA0LTQuOTE4LTIuMTExLTcuMzgtMi4xMTEtMS43MjUgMC0yLjk5OC4yODQtMy44MjEuODQ0LS44MjMuNTY1LTEuMjM3IDEuMzA3LTEuMjM3IDIuMjI3IDAgLjkyLjQ3NSAxLjYwOSAxLjQyNiAyLjA1My45NTEuNDUgMi40MDQuODkgNC4zNTUgMS4zMjUgMi4wMy40ODQgMy42OS45NzMgNC45OCAxLjQ1N2E4LjIyIDguMjIgMCAwIDEgMy4zMjggMi4zMDNjLjkyNSAxLjA0OSAxLjM4NyAyLjQ3IDEuMzg3IDQuMjYyYTcuMzc5IDcuMzc5IDAgMCAxLTEuMjcyIDQuMjA0Yy0uODUgMS4yNjctMi4xMjcgMi4yNzEtMy44MjIgMy4wMTQtMS43Ljc0Mi0zLjc2NSAxLjExLTYuMiAxLjExYTIxLjU2IDIxLjU2IDAgMCAxLTYuMTA2LS44NjZtMjQuNzQ0LTIuMzE2Yy0yLjExOC0yLjEyNC0zLjE3NC01LjE2LTMuMTc0LTkuMDk3VjYuNjE3aDYuMTZ2MTQuODE5YzAgNC44MTMgMS45NzYgNy4yMTcgNS45MzUgNy4yMTcgMS45MjQgMCAzLjM5OS0uNTgyIDQuNDEyLTEuNzQ2IDEuMDEyLTEuMTY1IDEuNTIzLTIuOTg3IDEuNTIzLTUuNDcxVjYuNjE4aDYuMDg1djE1LjA0OWMwIDMuOTQyLTEuMDYxIDYuOTczLTMuMTc1IDkuMDk3LTIuMTE3IDIuMTI1LTUuMDc2IDMuMTg3LTguODggMy4xODctMy44MDUgMC02Ljc2NC0xLjA2Mi04Ljg4MS0zLjE4N200My4yNDUtMjIuOTU1YzEuNzM1Ljc5IDMuMDc0IDEuOTIgNC4wMTEgMy4zNzguOTM4IDEuNDU3IDEuNDA5IDMuMTg2IDEuNDA5IDUuMTgyIDAgMS45OTUtLjQ2NiAzLjY5My0xLjQwOSA1LjE2NC0uOTM3IDEuNDcxLTIuMjc2IDIuNi00LjAxMSAzLjM3OC0xLjczNC43ODItMy43ODYgMS4xNzMtNi4xNDIgMS4xNzNoLTUuMzYzdjcuNDFoLTYuMTZWNi42MTdoMTEuNTIzYzIuMzYgMCA0LjQwOC4zOTUgNi4xNDIgMS4xOVptLTIuMjYzIDExLjk5NWMuOTY0LS44MDQgMS40NDQtMS45NSAxLjQ0NC0zLjQzNXMtLjQ4LTIuNjY3LTEuNDQ0LTMuNDcxYy0uOTY0LS44MDUtMi4zNzMtMS4yMS00LjIyMi0xLjIxaC01LjAydjkuMzNoNS4wMmMxLjg0OSAwIDMuMjU4LS40MDUgNC4yMjItMS4yMW0yOS4xIDEzLjY4NS01LjEzNC03LjQ4OWgtNS42Njd2Ny40OWgtNi4xNlY2LjYxN2gxMS41MjNjMi4zNiAwIDQuNDA4LjM5NSA2LjE0MiAxLjE5IDEuNzM1Ljc5MiAzLjA3NCAxLjkyIDQuMDExIDMuMzc5LjkzOCAxLjQ1NyAxLjQwOSAzLjE4NiAxLjQwOSA1LjE4MiAwIDEuOTk1LS40NzUgMy43Mi0xLjQyNiA1LjE2NC0uOTUxIDEuNDUtMi4zMDMgMi41NTEtNC4wNTEgMy4zMmw1Ljk3MSA4LjY0aC02LjYxOFptLTEuNTU5LTIwLjU5NWMtLjk2NC0uODA1LTIuMzczLTEuMjEtNC4yMjItMS4yMWgtNS4wMnY5LjM3aDUuMDJjMS44NDkgMCAzLjI1OC0uNDEgNC4yMjItMS4yMjcuOTY0LS44MTggMS40NDQtMS45NjkgMS40NDQtMy40NTMgMC0xLjQ4NS0uNDgtMi42NjctMS40NDQtMy40NzZtMzEuNDI1IDE0LjgzMWgtMTIuMzZsLTIuMzYgNS43NmgtNi4zMTRsMTEuODY3LTI2Ljg3NWg2LjA4NWwxMS45MDUgMjYuODc1aC02LjQ2M2wtMi4zNi01Ljc2Wm0tMS45NDItNC43MjQtNC4yMjMtMTAuMjktNC4yMjIgMTAuMjloOC40NDVaIiBmaWxsPSIjZmZmIi8+PC9zdmc+)](/)",
+            "quote_hash": "08059267fed59e9b92769ca39a47c8131b8bff4502e4be3598ab921a48115bac"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "c5177d55-dbfd-48bf-81fa-08cece240f07",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+            "span_ids": [
+              1,
+              2
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Supra",
+          "origin": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            1,
+            2
+          ],
+          "provenance_note": "Source spans describe Supra wallet and product navigation; no SHA-256 technical details.",
+          "rationale": "Spans 1 and 2 are a logo image reference and a brief wallet tagline. Neither mentions hash algorithms nor bit lengths.",
+          "limitations": [
+            "No SHA-256 content",
+            "Commercial promotion context"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              1,
+              2
+            ],
+            "start": 0,
+            "end": 154,
+            "text": "![Supra](/_next/image/?url=https%3A%2F%2Fprod-assets.cerberus.supra.com%2Fspa-assets%2Fhome%2Fstar-key-logo.png&w=256&q=75)\n\nThe official wallet of Supra.",
+            "quote_hash": "a3633a889adc05ebe359a5bd1bc7ee0c0ecc544f55731845cc2a0de7d362e556"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "37ec831f-d9b0-43f1-b533-ab02d7b4a057",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+            "span_ids": [
+              3
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Supra",
+          "origin": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3
+          ],
+          "provenance_note": "Span 3 is a base64-encoded SVG block containing site navigation and branding; no SHA-256 content.",
+          "rationale": "Span 3 is a large block of base64-encoded SVG image data used for website layout and logos. It contains no readable technical information about SHA-256 or cryptographic digest sizes.",
+          "limitations": [
+            "Image data, not machine-readable text about hashing",
+            "No SHA-256 terminology present"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 156,
+            "end": 8245,
+            "text": "[![Supra](data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTg2IiBoZWlnaHQ9IjQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zOS42MjcgMjBjMCAxMS4wNDQtOC44NzIgMjAtMTkuODEzIDIwQzguODcyIDQwIDAgMzEuMDQ0IDAgMjBTOC44NzIgMCAxOS44MTQgMGMxMC45NDEgMCAxOS44MTMgOC45NTYgMTkuODEzIDIwWiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zMS4xNzggMTAuMzc4Yy0uNDc1LTEuMjIyLTEuMjcyLTIuMjkzLTIuMTYyLTMuMTkxYTEwLjU1MyAxMC41NTMgMCAwIDAtMy4yMjMtMi4wNzYgOS4zNzMgOS4zNzMgMCAwIDAtMi40MDgtLjYxN2MtMi45NTUtLjQzMi02LjA2OC40ODQtOC4zMjYgMi43NjgtMi42MDcgMi42MzItMy41MjMgNi40ODUtMi4zNzMgMTAuMDcydi4wMzVhMTAuMDg5IDEwLjA4OSAwIDAgMC0xLjk2OSAxLjYyMmMtLjkwNy45Ni0xLjY0MiAyLjA3Ni0yLjExOCAzLjI5OGExMC41NjQgMTAuNTY0IDAgMCAwLS42OSAzLjg0YzAgMS4zMzMuMjc3IDIuNi43OTYgMy43NzguNDc2IDEuMjIyIDEuMjczIDIuMjkzIDIuMTYyIDMuMTkxYTEwLjU1MyAxMC41NTMgMCAwIDAgMy4yMjMgMi4wNzZjMS4xNjcuNDggMi40MjYuNjk3IDMuNjk5LjY5Ny0uMTggMC0uMzU3LS4wMDktLjUzMy0uMDE3YTkuNjk1IDkuNjk1IDAgMCAwIDcuNDMyLTIuODc2IDkuODQzIDkuODQzIDAgMCAwIDIuMzk1LTkuOTkxIDkuNzk4IDkuNzk4IDAgMCAwIDIuMDg3LTEuNjkzYy45MDctLjk2IDEuNjQzLTIuMDc2IDIuMTE4LTMuMjk4YTEwLjU3IDEwLjU3IDAgMCAwIC42OTItMy44NCA5LjMxIDkuMzEgMCAwIDAtLjc5Ny0zLjc3OG0tOC41NDcuNzExYTQuMTcgNC4xNyAwIDAgMS0uMDk3LS45NTVjLjM1Ny4wNjIuNjk2LjE2OCAxLjAzNS4zMS40NzYuMi44OS41MjUgMS4yMTEuODk4LjMwOC4zODcuNTgxLjgwNS43MzUgMS4yODUuMTY4LjQ4LjIxNi45Ni4yMTYgMS40NGEzLjc1NyAzLjc1NyAwIDAgMS0xLjA3OSAyLjQyMmwtMi4wMi01LjM5NXYtLjAwNVptMi4zMDggNi4xNjVjLjA2MS0uMDU4LjEyMy0uMTE2LjE3Ni0uMTgzLjQxMy0uNDM1LjY3My0uODk3Ljg4OS0xLjQ0LjIxNi0uNTQyLjI2LTEuMTI5LjI2LTEuNjU3IDAtLjU4Ny0uMTU0LTEuMTE2LS4zNy0xLjU5NnMtLjU4MS0uOTE2LS45NTEtMS4yODRjLS4zNy0uMzI1LS44NDYtLjY1LTEuMzIxLS44MDUtLjM0My0uMTI0LS43MTgtLjE3OC0xLjA5Ni0uMjA0YTQuMDggNC4wOCAwIDAgMSAuNDYyLTEuNzkxYy40MzEuMDg0Ljg0NS4yMTMgMS4yNDYuNC43MzUuMzI0IDEuMzIuODA0IDEuODQgMS4zMzMuNDc2LjU4Ny45MDcgMS4yMjIgMS4xNjcgMS45MnMuMzcgMS40MjcuMzcgMi4xODJjMCAuNzU2LS4xNTQgMS41MDItLjQ3NSAyLjEzOGE0LjY3NiA0LjY3NiAwIDAgMS0xLjIxMSAxLjc1MSA1LjE4NyA1LjE4NyAwIDAgMS0uNTQ2LjQzMWwtLjQ0NS0xLjE5MS4wMDUtLjAwNFptLjcxNyAxLjkxNWE3LjUgNy41IDAgMCAwIC43OC0uNjcxYy41MzctLjU4NyAxLjAxMi0xLjMzMyAxLjI3Mi0yLjA3Ni4zMjEtLjgwNC40MzEtMS42MDguNDMxLTIuNCAwLS43OS0uMTk4LTEuNTk1LS41MjMtMi4zMzdhNS43ODggNS43ODggMCAwIDAtMS4zNjUtMS45MmMtLjU4Mi0uNTI1LTEuMjExLS45Ni0xLjk0Ny0xLjIyM2E2LjM5NyA2LjM5NyAwIDAgMC0xLjI4LS4zMDJjLjE4NC0uMzQyLjQwOS0uNjU4LjY4Ni0uOTQyLjIxNi0uMjE4LjQ1NC0uNDA0LjctLjU2NC4xOTguMDcuMzkyLjE1LjU4MS4yNGE3LjEyIDcuMTIgMCAwIDEgMi40MjYgMS43MDJjLjY5Mi42OTggMS4yMTEgMS42MDkgMS41ODEgMi41MDYuMzcuOTYuNTI0IDEuOTY1LjUyNCAyLjkyNWE4LjU2NiA4LjU2NiAwIDAgMS0uNjMgMi44OGMtLjM3Ljg1My0uOTUgMS42NC0xLjY0MiAyLjMzOGE2LjgzIDYuODMgMCAwIDEtMS4xNzUuOTVsLS40MTktMS4xMTV2LjAxWk0xNS4zNTQgMzMuNTE2YTUuOTIzIDUuOTIzIDAgMCAxLS40NTgtLjE5NiA3LjExOSA3LjExOSAwIDAgMS0yLjQyNi0xLjcwMmMtLjY5Mi0uNjk4LTEuMjExLTEuNjA5LTEuNTgxLTIuNTExYTguMTQzIDguMTQzIDAgMCAxLS41Mi0yLjkyNSA4LjQ2NCA4LjQ2NCAwIDAgMSAuNjMtMi44OGMuMzctLjg1My45NTEtMS42NCAxLjY0My0yLjMzN2E2Ljc5NyA2Ljc5NyAwIDAgMSAxLjA3OC0uODlsLjQyNyAxLjEyYTYuODg2IDYuODg2IDAgMCAwLS42OTEuNjA1Yy0uNTM3LjU4Ny0xLjAxMyAxLjMzNC0xLjI3MiAyLjA3Ni0uMzIyLjgwNC0uNDMyIDEuNjA5LS40MzIgMi40IDAgLjc5LjE5OCAxLjU5NS41MjQgMi4zMzhhNS43OSA1Ljc5IDAgMCAwIDEuMzY1IDEuOTJjLjU4MS41MjQgMS4yMS45NiAxLjk1IDEuMjIyLjM3NS4xMzMuNzY3LjIyNiAxLjE1OS4yODRhNC4wODkgNC4wODkgMCAwIDEtLjY3Ljg5OCAzLjg3IDMuODcgMCAwIDEtLjcyMi41NzNtLjI5NS0xLjkxNWMtLjczNS0uMzI1LTEuMzItLjgwNS0xLjg0LTEuMzM0LS40NzYtLjU4Ni0uOTAzLTEuMjIyLTEuMTY3LTEuOTJhNi4xOTMgNi4xOTMgMCAwIDEtLjM3LTIuMTgyYzAtLjc1NS4xNTQtMS41MDIuNDc2LTIuMTM4LjI2LS42OC42OS0xLjI3IDEuMjEtMS43NS4xNDYtLjEzNC4zLS4yNTQuNDU4LS4zN2wuNDU4IDEuMjFjLS4wMzUuMDM1LS4wNy4wNjYtLjEwNS4xMDYtLjQxNC40MzEtLjY3NC44OTgtLjg5IDEuNDQtLjIxNi41NDItLjI2IDEuMTI5LS4yNiAxLjY1OCAwIC41OS4xNTQgMS4xMTUuMzcgMS41OTVzLjU4MS45MTYuOTUxIDEuMjg1Yy4zNy4zMjQuODQ2LjY0OSAxLjMyMS44MDQuMzE3LjExMS42NTYuMTcgMS4wMDQuMTk2YTQuMTU4IDQuMTU4IDAgMCAxLS40ODkgMS43NzggNS4zNDUgNS4zNDUgMCAwIDEtMS4xMjctLjM3OFptMS41MzctMi40MTRjLjA2Ni4zMi4wODguNjQuMDc5Ljk1NmE0LjgyIDQuODIgMCAwIDEtLjk0Mi0uMjkzYy0uNDc2LS4yLS44OS0uNTI1LTEuMjExLS44OTgtLjMwOC0uMzg3LS41ODEtLjgwNS0uNzM1LTEuMjg1LS4xNjgtLjQ4LS4yMTYtLjk2LS4yMTYtMS40NGEzLjc1MyAzLjc1MyAwIDAgMSAxLjAwOC0yLjM0NmwyLjAxNyA1LjMwNlptLTYuMDggMy43NDdjLS45MDgtLjkxNS0xLjUzMy0xLjk2OS0yLjAwOS0zLjE0Mi0uNDEzLTEuMTE2LS42My0yLjQtLjYzLTMuNjIyLjA2Mi0xLjIyMy4zMjItMi40NDUuNzk4LTMuNTYuNDc1LTEuMTMgMS4yMS0yLjEzOCAyLjA1Ni0yLjk4N2E4LjcwNSA4LjcwNSAwIDAgMSAxLjcxNy0xLjMzM2wuMzI2Ljg1M2MtLjQ5OC4zMjktLjk2LjY5OC0xLjM2NSAxLjE0N2E4LjAwNSA4LjAwNSAwIDAgMC0xLjY4NiAyLjcxYy0uMzcgMS4wMDUtLjUyIDIuMDc2LS41MiAzLjE0My4wNjIgMS4wNTMuMjYgMi4xMi42OTEgMy4wOGE4LjE0OCA4LjE0OCAwIDAgMCAxLjc5NyAyLjU1NiA4LjEwMSA4LjEwMSAwIDAgMCAyLjU3NiAxLjY1N2MuMTM2LjA1NC4yNzMuMDk4LjQxLjE0N2E0LjMxMiA0LjMxMiAwIDAgMS0yLjA2Mi42IDMuMTc2IDMuMTc2IDAgMCAxLS43Ny0uMDggOS41MDkgOS41MDkgMCAwIDEtMS4zMjUtMS4xNm0xOS41MjMtMTUuMjQ0Yy0uNDc2IDEuMTI4LTEuMjExIDIuMTM3LTIuMDU3IDIuOTg2YTguNjIyIDguNjIyIDAgMCAxLTEuODIyIDEuMzk2bC0uMzE3LS44NWE3LjI0OCA3LjI0OCAwIDAgMCAxLjQ2Ni0xLjIxMmMuNzM1LS43OTIgMS4zMi0xLjcwMyAxLjY4Ni0yLjcxMi4zNy0xLjAwNC41Mi0yLjA3NS41Mi0zLjE0Mi0uMDYyLTEuMDUzLS4yNi0yLjEyLS42OTItMy4wOGE4LjA3NyA4LjA3NyAwIDAgMC00LjM3Mi00LjIxMyA1LjYzMyA1LjYzMyAwIDAgMC0uNTQ2LS4xODIgNC4wNDkgNC4wNDkgMCAwIDEgMi45NjgtLjQ4Yy40OC4zNDYuOTI0LjczNyAxLjMyIDEuMTYuOTA4LjkxNSAxLjUzMyAxLjk2NCAyLjAwOCAzLjE0Mi40MTQgMS4xMTUuNjMgMi40LjYzIDMuNjIyLS4wNjEgMS4yMjItLjMyMSAyLjQ0OS0uNzk3IDMuNTYiIGZpbGw9IiNERDE0MzgiLz48cGF0aCBkPSJNNTIuMzY2IDMzLjA5Yy0xLjk2NC0uNTc5LTMuNTQ0LTEuMzI1LTQuNzMzLTIuMjQ1bDIuMDkxLTQuNjg1YzEuMTQuODQ1IDIuNDk3IDEuNTI1IDQuMDY5IDIuMDM2IDEuNTcyLjUxIDMuMTQzLjc2OSA0LjcxNS43NjkgMS43NTMgMCAzLjA0My0uMjYzIDMuODgtLjc4Ny44MzYtLjUyNCAxLjI1NC0xLjIyMiAxLjI1NC0yLjA5MyAwLS42NC0uMjQ2LTEuMTc0LS43NC0xLjU5Ni0uNDkzLS40MjItMS4xMjctLjc2LTEuOTAyLTEuMDE4LS43NzUtLjI1OC0xLjgxOC0uNTM4LTMuMTM5LS44NDQtMi4wMy0uNDg1LTMuNjktLjk3My00Ljk4LTEuNDU4YTguMTAzIDguMTAzIDAgMCAxLTMuMzI4LTIuMzQyYy0uOTI1LTEuMDc2LTEuMzg3LTIuNTA3LTEuMzg3LTQuMjk4IDAtMS41Ni40MTgtMi45NzggMS4yNTQtNC4yNDQuODM3LTEuMjY3IDIuMDk2LTIuMjcxIDMuNzgzLTMuMDE0IDEuNjg2LS43NDIgMy43NDctMS4xMTUgNi4xODEtMS4xMTUgMS43IDAgMy4zNi4yMDQgNC45OC42MTMgMS42Mi40MDkgMy4wNDMgMSA0LjI2MiAxLjc2NWwtMS45MDIgNC43MjRjLTIuNDYxLTEuNDA0LTQuOTE4LTIuMTExLTcuMzgtMi4xMTEtMS43MjUgMC0yLjk5OC4yODQtMy44MjEuODQ0LS44MjMuNTY1LTEuMjM3IDEuMzA3LTEuMjM3IDIuMjI3IDAgLjkyLjQ3NSAxLjYwOSAxLjQyNiAyLjA1My45NTEuNDUgMi40MDQuODkgNC4zNTUgMS4zMjUgMi4wMy40ODQgMy42OS45NzMgNC45OCAxLjQ1N2E4LjIyIDguMjIgMCAwIDEgMy4zMjggMi4zMDNjLjkyNSAxLjA0OSAxLjM4NyAyLjQ3IDEuMzg3IDQuMjYyYTcuMzc5IDcuMzc5IDAgMCAxLTEuMjcyIDQuMjA0Yy0uODUgMS4yNjctMi4xMjcgMi4yNzEtMy44MjIgMy4wMTQtMS43Ljc0Mi0zLjc2NSAxLjExLTYuMiAxLjExYTIxLjU2IDIxLjU2IDAgMCAxLTYuMTA2LS44NjZtMjQuNzQ0LTIuMzE2Yy0yLjExOC0yLjEyNC0zLjE3NC01LjE2LTMuMTc0LTkuMDk3VjYuNjE3aDYuMTZ2MTQuODE5YzAgNC44MTMgMS45NzYgNy4yMTcgNS45MzUgNy4yMTcgMS45MjQgMCAzLjM5OS0uNTgyIDQuNDEyLTEuNzQ2IDEuMDEyLTEuMTY1IDEuNTIzLTIuOTg3IDEuNTIzLTUuNDcxVjYuNjE4aDYuMDg1djE1LjA0OWMwIDMuOTQyLTEuMDYxIDYuOTczLTMuMTc1IDkuMDk3LTIuMTE3IDIuMTI1LTUuMDc2IDMuMTg3LTguODggMy4xODctMy44MDUgMC02Ljc2NC0xLjA2Mi04Ljg4MS0zLjE4N200My4yNDUtMjIuOTU1YzEuNzM1Ljc5IDMuMDc0IDEuOTIgNC4wMTEgMy4zNzguOTM4IDEuNDU3IDEuNDA5IDMuMTg2IDEuNDA5IDUuMTgyIDAgMS45OTUtLjQ2NiAzLjY5My0xLjQwOSA1LjE2NC0uOTM3IDEuNDcxLTIuMjc2IDIuNi00LjAxMSAzLjM3OC0xLjczNC43ODItMy43ODYgMS4xNzMtNi4xNDIgMS4xNzNoLTUuMzYzdjcuNDFoLTYuMTZWNi42MTdoMTEuNTIzYzIuMzYgMCA0LjQwOC4zOTUgNi4xNDIgMS4xOVptLTIuMjYzIDExLjk5NWMuOTY0LS44MDQgMS40NDQtMS45NSAxLjQ0NC0zLjQzNXMtLjQ4LTIuNjY3LTEuNDQ0LTMuNDcxYy0uOTY0LS44MDUtMi4zNzMtMS4yMS00LjIyMi0xLjIxaC01LjAydjkuMzNoNS4wMmMxLjg0OSAwIDMuMjU4LS40MDUgNC4yMjItMS4yMW0yOS4xIDEzLjY4NS01LjEzNC03LjQ4OWgtNS42Njd2Ny40OWgtNi4xNlY2LjYxN2gxMS41MjNjMi4zNiAwIDQuNDA4LjM5NSA2LjE0MiAxLjE5IDEuNzM1Ljc5MiAzLjA3NCAxLjkyIDQuMDExIDMuMzc5LjkzOCAxLjQ1NyAxLjQwOSAzLjE4NiAxLjQwOSA1LjE4MiAwIDEuOTk1LS40NzUgMy43Mi0xLjQyNiA1LjE2NC0uOTUxIDEuNDUtMi4zMDMgMi41NTEtNC4wNTEgMy4zMmw1Ljk3MSA4LjY0aC02LjYxOFptLTEuNTU5LTIwLjU5NWMtLjk2NC0uODA1LTIuMzczLTEuMjEtNC4yMjItMS4yMWgtNS4wMnY5LjM3aDUuMDJjMS44NDkgMCAzLjI1OC0uNDEgNC4yMjItMS4yMjcuOTY0LS44MTggMS40NDQtMS45NjkgMS40NDQtMy40NTMgMC0xLjQ4NS0uNDgtMi42NjctMS40NDQtMy40NzZtMzEuNDI1IDE0LjgzMWgtMTIuMzZsLTIuMzYgNS43NmgtNi4zMTRsMTEuODY3LTI2Ljg3NWg2LjA4NWwxMS45MDUgMjYuODc1aC02LjQ2M2wtMi4zNi01Ljc2Wm0tMS45NDItNC43MjQtNC4yMjMtMTAuMjktNC4yMjIgMTAuMjloOC40NDVaIiBmaWxsPSIjZmZmIi8+PC9zdmc+)](/)",
+            "quote_hash": "69b99207029ddfb3ded4547598cfa813cc104fa5570add1d3cb7d6a85ae84a4e"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "b0fefd14-9744-4e58-b3ff-9ea262a32694",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+            "span_ids": [
+              11
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "NIST FIPS PUB 180-4",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            11
+          ],
+          "provenance_note": "FIPS 180-4 Section 3 explicitly names SHA-256 as one of the hash algorithms and defines its output as a message digest, which is the term used for the hash result.",
+          "rationale": "Section 3 of FIPS 180-4 lists SHA-256 among the specified secure hash algorithms and states that the algorithms produce a message digest. The standard identifies SHA-256 as producing a digest consistent with the 256-bit specification inherent to the algorithm name.",
+          "limitations": [
+            "Scope limited to FIPS 180-4; does not independently verify broader cryptographic literature.",
+            "No explicit mention of the exact bit length '256' in the cited span."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 2108,
+            "end": 3477,
+            "text": "3. Explanation: This Standard specifies secure hash algorithms - SHA-1, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224 and SHA-512/256 - for computing a condensed representation of electronic data (message). When a message of any length less than 264 bits (for SHA-1, SHA-224 and SHA-256) or less than 2128 bits (for SHA-384, SHA-512, SHA-512/224 and SHA-512/256) is input to a hash algorithm, the result is an output called a message digest. The message digests range in length from 160 to 512 bits, depending on the algorithm. Secure hash algorithms are typically used with other cryptographic algorithms, such as digital signature algorithms and keyed-hash message authentication codes, or in the generation of random numbers (bits). The hash algorithms specified in this Standard are called secure because, for a given algorithm, it is computationally infeasible 1) to find a message that corresponds to a given message digest, or 2) to find two different messages that produce the same message digest. Any change to a message will, with a very high probability, result in a different message digest. This will result in a verification failure when the secure hash algorithm is used with a digital signature algorithm or a keyed-hash message authentication algorithm. This Standard supersedes FIPS 180-3 [FIPS 180-3]. 4. Approving Authority: Secretary of Commerce.",
+            "quote_hash": "312f8e3016f02a56aefcb24e0ef42c52cdc82ce0c0dea3767194aae2370ee6ff"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "c8988f11-499b-4a62-ba23-6c1e8a9f7dca",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+            "span_ids": [
+              50,
+              51
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            50,
+            51
+          ],
+          "provenance_note": "Source describes NSA cryptography generally, categorizes algorithms and protocols but does not state SHA-256 digest size.",
+          "rationale": "Span 50 identifies the article topic as 'Cryptography practises of the USA's National Security Agency'. Span 51 states the NSA's work on encryption is largely classified and they participate in standards processes. Neither span mentions SHA-256 or its 256-bit digest. No support or contradiction for.",
+          "limitations": [
+            "No explicit mention of SHA-256 or its digest size"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              50,
+              51
+            ],
+            "start": 4364,
+            "end": 4938,
+            "text": "Cryptography practises of the USA's National Security Agency\n\nThe vast majority of the [National Security Agency](https://en.wikipedia.org/wiki/National_Security_Agency \"National Security Agency\")'s work on [encryption](https://en.wikipedia.org/wiki/Cryptography \"Cryptography\") is [classified](https://en.wikipedia.org/wiki/Classified_information \"Classified information\"), but from time to time NSA participates in [standards](https://en.wikipedia.org/wiki/Standardization \"Standardization\") processes or otherwise publishes information about its cryptographic algorithms.",
+            "quote_hash": "fda955f4ca8d86a752afcb3651e35efe4c78421fd9a2297cb4641af3f2bb5909"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "f24fb695-433d-41ff-bf60-6eafe999ed29",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+            "span_ids": [
+              61
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            61
+          ],
+          "provenance_note": "Span 61 lists AES (256-bit keys only) as a block cipher under FIPS 197. The 256-bit label refers to key size, not hash digest size.",
+          "rationale": "Confuses block cipher key size with cryptographic hash digest size. No mention of SHA-256.",
+          "limitations": [
+            "Key size (256-bit) misinterpreted as hash digest size"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              61
+            ],
+            "start": 6271,
+            "end": 6500,
+            "text": "| [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard \"Advanced Encryption Standard\") (256-bit keys only) | [Block cipher](https://en.wikipedia.org/wiki/Block_cipher \"Block cipher\") | FIPS 197 | Numerous | Numerous |",
+            "quote_hash": "d9520a8dc944252d20ebba911030ee558fe85c7d56de991fdab5957e3f5acd9b"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "ced52ef4-afb6-4cde-9473-da23447bf698",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+            "span_ids": [
+              69
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            69
+          ],
+          "provenance_note": "Span 69 identifies FASTHASH as a 'Cryptographic hash function' under MISSI Type 1 hash. No mention of SHA-256 or its digest size.",
+          "rationale": "Identifies a cryptographic hash function category but does not name SHA-256 or specify its 256-bit output. Provides contextual category information only.",
+          "limitations": [
+            "No specific mention of SHA-256 or its 256-bit digest"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              69
+            ],
+            "start": 9976,
+            "end": 10483,
+            "text": "| [FASTHASH](https://en.wikipedia.org/wiki/FASTHASH?action=edit&redlink=1 \"FASTHASH (page does not exist)\") | [Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function \"Cryptographic hash function\") | [MISSI](https://en.wikipedia.org/wiki/MISSI?action=edit&redlink=1 \"MISSI (page does not exist)\") Type 1 hash | [PKCS](https://en.wikipedia.org/wiki/PKCS \"PKCS\") #11, [CDSA/CSSM](https://en.wikipedia.org/wiki/CDSA/CSSM?action=edit&redlink=1 \"CDSA/CSSM (page does not exist)\") |",
+            "quote_hash": "0e7db7688a5a3fa6d24531e485da393406a021a6ce29e8187e3b06eebc06e6e4"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:31:17.347407Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:31:17.550367Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:31:17.553543Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:31:17.555313Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:31:17.557111Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.996",
+        "hard_remaining_seconds": "119.996",
+        "attempt": "1",
+        "input_chars": "95"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:31:17.560734Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.993",
+        "hard_remaining_seconds": "119.993",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5772"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:31:18.710183Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.845",
+        "hard_remaining_seconds": "118.845",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5772",
+        "elapsed_seconds": "1.146",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1186"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:31:18.712996Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.841",
+        "hard_remaining_seconds": "118.841",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "311",
+        "elapsed_seconds": "1.156",
+        "finish_reason": "stop",
+        "prompt_tokens": "898",
+        "completion_tokens": "94",
+        "total_tokens": "992"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:31:18.714970Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:31:18.716479Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:31:18.718122Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:31:18.719705Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.834",
+        "hard_remaining_seconds": "118.834",
+        "attempt": "1",
+        "input_chars": "462"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:31:18.722041Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.831",
+        "hard_remaining_seconds": "118.831",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3487"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:31:19.679842Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.875",
+        "hard_remaining_seconds": "117.875",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3487",
+        "elapsed_seconds": "0.955",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1261"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:31:19.682422Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.871",
+        "hard_remaining_seconds": "117.871",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "373",
+        "elapsed_seconds": "0.962",
+        "finish_reason": "stop",
+        "prompt_tokens": "600",
+        "completion_tokens": "116",
+        "total_tokens": "716"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:31:19.684342Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 algorithm specification digest size 256 bits",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:31:19.686280Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.867",
+        "hard_remaining_seconds": "117.867",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:31:22.049498Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.505",
+        "hard_remaining_seconds": "115.505",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260",
+        "elapsed_seconds": "2.360",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9895"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:31:22.052288Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 algorithm specification digest size 256 bits",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:31:22.054244Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 hash output length and bit length documentation",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:31:22.055815Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.497",
+        "hard_remaining_seconds": "115.497",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "263"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:31:24.909261Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.646",
+        "hard_remaining_seconds": "112.646",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "263",
+        "elapsed_seconds": "2.850",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8502"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:31:24.912022Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 hash output length and bit length documentation",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:31:24.913858Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 official FIPS publication or NIST standard reference",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:31:24.915638Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.638",
+        "hard_remaining_seconds": "112.638",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "268"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:31:28.077616Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "64.478",
+        "hard_remaining_seconds": "109.478",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "268",
+        "elapsed_seconds": "3.158",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "11654"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:31:28.080380Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "SHA-256 official FIPS publication or NIST standard reference",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:31:28.082651Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "13",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:31:28.084041Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://secra.es/en/blog/what-is-sha256",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:31:28.085596Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:31:28.087186Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.466",
+        "hard_remaining_seconds": "109.466",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:31:28.216899Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.338",
+        "hard_remaining_seconds": "109.338",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166",
+        "elapsed_seconds": "0.126",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "19773"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:31:28.224417Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "url": "https://secra.es/en/blog/what-is-sha256",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:31:28.225905Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:31:28.231215Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.322",
+        "hard_remaining_seconds": "109.322",
+        "attempt": "1",
+        "input_chars": "20179"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:31:28.235431Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.318",
+        "hard_remaining_seconds": "109.318",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33059"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:31:30.994066Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "61.560",
+        "hard_remaining_seconds": "106.560",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33059",
+        "elapsed_seconds": "2.756",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2129"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:31:30.997071Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "61.557",
+        "hard_remaining_seconds": "106.557",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1221",
+        "elapsed_seconds": "2.766",
+        "finish_reason": "stop",
+        "prompt_tokens": "9982",
+        "completion_tokens": "374",
+        "total_tokens": "10356"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:31:31.000614Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "9c040d00-5c20-40a8-9cca-0abc5bfab19d",
+        "snapshot_id": "fe4e3896-eab1-49dc-ac8b-aacf285e0a53",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:31:31.002313Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://infosecwriteups.com/breaking-down-sha-256-algorithm-2ce61d86f7a3",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:31:31.003708Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:31:31.005473Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "61.548",
+        "hard_remaining_seconds": "106.548",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "199"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:31:31.165949Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "61.388",
+        "hard_remaining_seconds": "106.388",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "199",
+        "elapsed_seconds": "0.158",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "21637"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:31:31.175128Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "url": "https://infosecwriteups.com/breaking-down-sha-256-algorithm-2ce61d86f7a3",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:31:31.177738Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:31:31.183817Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "61.370",
+        "hard_remaining_seconds": "106.370",
+        "attempt": "1",
+        "input_chars": "20816"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:31:31.192691Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "61.361",
+        "hard_remaining_seconds": "106.361",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33728"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:31:33.358572Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.196",
+        "hard_remaining_seconds": "104.196",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33728",
+        "elapsed_seconds": "2.163",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2245"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:31:33.361359Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.192",
+        "hard_remaining_seconds": "104.192",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1295",
+        "elapsed_seconds": "2.178",
+        "finish_reason": "stop",
+        "prompt_tokens": "10699",
+        "completion_tokens": "432",
+        "total_tokens": "11131"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:31:33.365240Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "d95805ce-8a3f-4dba-89f6-372707630753",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:31:33.366670Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "3c84fc55-cdc8-43a7-a6e4-36ab294ce09c",
+        "snapshot_id": "ab6f1f6e-5114-4fad-941c-03bf58dc2a73",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:31:33.368449Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "evidence_quality"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:31:33.370476Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:31:33.372273Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.181",
+        "hard_remaining_seconds": "224.181",
+        "attempt": "1",
+        "input_chars": "3674"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:31:33.374269Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.179",
+        "hard_remaining_seconds": "224.179",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6827"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:31:34.448680Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.106",
+        "hard_remaining_seconds": "223.106",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6827",
+        "elapsed_seconds": "1.071",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1577"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:31:34.451263Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.102",
+        "hard_remaining_seconds": "223.102",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "684",
+        "elapsed_seconds": "1.079",
+        "finish_reason": "stop",
+        "prompt_tokens": "1675",
+        "completion_tokens": "196",
+        "total_tokens": "1871"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:31:34.453456Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:31:34.455403Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:31:34.457180Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "FIPS 180-2 SHA-256 specification original standard documented 256-bit digest output length",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:31:34.458829Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.094",
+        "hard_remaining_seconds": "223.094",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:31:37.173285Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.381",
+        "hard_remaining_seconds": "220.381",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "298",
+        "elapsed_seconds": "2.711",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9791"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:31:37.175906Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "FIPS 180-2 SHA-256 specification original standard documented 256-bit digest output length",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:31:37.178266Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Pre-2001 cryptographic hash algorithm development records independent NSA NIST origins for SHA-256 256-bit output",
+        "purpose": "contradiction",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:31:37.179952Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.373",
+        "hard_remaining_seconds": "220.373",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "321"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:31:42.398134Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "170.157",
+        "hard_remaining_seconds": "215.157",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "321",
+        "elapsed_seconds": "5.215",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "13088"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:31:42.400924Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Pre-2001 cryptographic hash algorithm development records independent NSA NIST origins for SHA-256 256-bit output",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:31:42.403118Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "NIST or NSA publication history showing SHA-256 defined as 256-bit variant before FIPS 180-2 2001",
+        "purpose": "context",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:31:42.404941Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "170.148",
+        "hard_remaining_seconds": "215.148",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "305"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:31:44.790206Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "167.764",
+        "hard_remaining_seconds": "212.764",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "305",
+        "elapsed_seconds": "2.382",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9895"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:31:44.793430Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "NIST or NSA publication history showing SHA-256 defined as 256-bit variant before FIPS 180-2 2001",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:31:44.797569Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "12",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:31:44.800098Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "url": "https://csrc.nist.gov/files/pubs/fips/180-2/final/docs/fips180-2.pdf",
+        "slot": "1",
+        "query_ids": "q21",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:31:44.801768Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:31:44.803728Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.750",
+        "hard_remaining_seconds": "212.750",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "195"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:31:45.031126Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.523",
+        "hard_remaining_seconds": "212.523",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "195",
+        "elapsed_seconds": "0.225",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "166057"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:31:45.045685Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "url": "https://csrc.nist.gov/files/pubs/fips/180-2/final/docs/fips180-2.pdf",
+        "candidate_id": "c27",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:31:45.047324Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:31:45.054062Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.500",
+        "hard_remaining_seconds": "212.500",
+        "attempt": "1",
+        "input_chars": "14935"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:31:45.057380Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.496",
+        "hard_remaining_seconds": "212.496",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25597"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:31:48.556820Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "163.998",
+        "hard_remaining_seconds": "208.998",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25597",
+        "elapsed_seconds": "3.497",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2679"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:31:48.559761Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "163.994",
+        "hard_remaining_seconds": "208.994",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1724",
+        "elapsed_seconds": "3.506",
+        "finish_reason": "stop",
+        "prompt_tokens": "6039",
+        "completion_tokens": "537",
+        "total_tokens": "6576"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:31:48.563860Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "9b4447f3-40a9-4e8c-8f2d-b11864cab082",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:31:48.565377Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "d4855023-9e40-4bd7-b016-4edab0715a55",
+        "snapshot_id": "9f7eada8-1915-4f5a-a279-410ad6bf815d",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:31:48.566833Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "url": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+        "slot": "2",
+        "query_ids": "q23",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:31:48.568366Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:31:48.569898Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.983",
+        "hard_remaining_seconds": "208.983",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "213"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:31:48.765796Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.789",
+        "hard_remaining_seconds": "208.789",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "213",
+        "elapsed_seconds": "0.193",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "27354"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:31:48.774524Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "url": "https://supra.com/academy/the-nsa-and-bitcoin-origins-of-the-sha-256-hashing-algorithm",
+        "candidate_id": "c31",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:31:48.776061Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:31:48.781185Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.773",
+        "hard_remaining_seconds": "208.773",
+        "attempt": "1",
+        "input_chars": "16333"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:31:48.784778Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.769",
+        "hard_remaining_seconds": "208.769",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27054"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:31:52.569679Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.984",
+        "hard_remaining_seconds": "204.984",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27054",
+        "elapsed_seconds": "3.782",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3857"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:31:52.572534Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.981",
+        "hard_remaining_seconds": "204.981",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2845",
+        "elapsed_seconds": "3.792",
+        "finish_reason": "stop",
+        "prompt_tokens": "11028",
+        "completion_tokens": "844",
+        "total_tokens": "11872"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:31:52.575937Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "59af4575-8794-4a4d-8fe2-7b54c1467020",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:31:52.577497Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c5177d55-dbfd-48bf-81fa-08cece240f07",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:31:52.579356Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "37ec831f-d9b0-43f1-b533-ab02d7b4a057",
+        "snapshot_id": "cab33f23-5014-4711-9c6e-ae528acabe71",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:31:52.581072Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:31:52.582498Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.971",
+        "hard_remaining_seconds": "204.971",
+        "attempt": "1",
+        "input_chars": "6781"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:31:52.584454Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.969",
+        "hard_remaining_seconds": "204.969",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10104"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:31:53.574046Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "158.981",
+        "hard_remaining_seconds": "203.981",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10104",
+        "elapsed_seconds": "0.986",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1455"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:31:53.577194Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "158.977",
+        "hard_remaining_seconds": "203.977",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "574",
+        "elapsed_seconds": "0.994",
+        "finish_reason": "stop",
+        "prompt_tokens": "2936",
+        "completion_tokens": "173",
+        "total_tokens": "3109"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:31:53.579449Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:31:53.581180Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:31:53.582832Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "FIPS 180-2 Section 4.1.2 original standard document defines SHA-256 output length as 256 bits with explicit reference to the 256-bit digest specification",
+        "purpose": "support",
+        "query_id": "q37"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:31:53.584367Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "158.969",
+        "hard_remaining_seconds": "203.969",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "361"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:31:56.443932Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.111",
+        "hard_remaining_seconds": "201.111",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "361",
+        "elapsed_seconds": "2.857",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10991"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:31:56.446727Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "FIPS 180-2 Section 4.1.2 original standard document defines SHA-256 output length as 256 bits with explicit reference to the 256-bit digest specification",
+        "query_id": "q37",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:31:56.448616Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "NSA design documentation pre-2001 independently confirming SHA-256 designated as 256-bit variant separate from SHA-1 and SHA-512",
+        "purpose": "contradiction",
+        "query_id": "q39"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:31:56.450143Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.103",
+        "hard_remaining_seconds": "201.103",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "336"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:31:59.198172Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "153.356",
+        "hard_remaining_seconds": "198.356",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "336",
+        "elapsed_seconds": "2.745",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8145"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:31:59.200875Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "NSA design documentation pre-2001 independently confirming SHA-256 designated as 256-bit variant separate from SHA-1 and SHA-512",
+        "query_id": "q39",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:31:59.205120Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "4",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:31:59.207303Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "url": "http://rfc.nop.hu/nist/NIST.FIPS.180-4.pdf",
+        "slot": "1",
+        "query_ids": "q37",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:31:59.209410Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:31:59.211533Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "153.342",
+        "hard_remaining_seconds": "198.342",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "169"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:31:59.716962Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "152.838",
+        "hard_remaining_seconds": "197.838",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "169",
+        "elapsed_seconds": "0.502",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "50551"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:31:59.728693Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "url": "http://rfc.nop.hu/nist/NIST.FIPS.180-4.pdf",
+        "candidate_id": "c41",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:31:59.730091Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:31:59.734188Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "152.819",
+        "hard_remaining_seconds": "197.819",
+        "attempt": "1",
+        "input_chars": "12539"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:31:59.737279Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "152.816",
+        "hard_remaining_seconds": "197.816",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22150"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:32:02.490919Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.064",
+        "hard_remaining_seconds": "195.064",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22150",
+        "elapsed_seconds": "2.751",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2430"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:32:02.496851Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.058",
+        "hard_remaining_seconds": "195.058",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1511",
+        "elapsed_seconds": "2.761",
+        "finish_reason": "stop",
+        "prompt_tokens": "4673",
+        "completion_tokens": "453",
+        "total_tokens": "5126"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:32:02.498684Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:32:02.500264Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.053",
+        "hard_remaining_seconds": "195.053",
+        "attempt": "2",
+        "input_chars": "12539"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:32:02.503895Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.050",
+        "hard_remaining_seconds": "195.050",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22340"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:32:04.251156Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.307",
+        "hard_remaining_seconds": "193.307",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22340",
+        "elapsed_seconds": "1.741",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2148"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:32:04.254437Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.299",
+        "hard_remaining_seconds": "193.299",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1243",
+        "elapsed_seconds": "1.754",
+        "finish_reason": "stop",
+        "prompt_tokens": "4706",
+        "completion_tokens": "357",
+        "total_tokens": "5063"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:32:04.259296Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b0fefd14-9744-4e58-b3ff-9ea262a32694",
+        "snapshot_id": "fe1d785b-ff7f-43b6-8b8d-289f790fcb91",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:32:04.260945Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c46",
+        "url": "https://en.wikipedia.org/wiki/NSA_cryptography",
+        "slot": "2",
+        "query_ids": "q39",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:32:04.262561Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:32:04.264539Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c46",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.289",
+        "hard_remaining_seconds": "193.289",
+        "provider_call_id": "p47",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "173"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:32:04.384208Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c46",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.169",
+        "hard_remaining_seconds": "193.169",
+        "provider_call_id": "p47",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "173",
+        "elapsed_seconds": "0.118",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "35981"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:32:04.389998Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "url": "https://en.wikipedia.org/wiki/NSA_cryptography",
+        "candidate_id": "c46",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:32:04.391391Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:32:04.394472Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.159",
+        "hard_remaining_seconds": "193.159",
+        "attempt": "1",
+        "input_chars": "16421"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:32:04.397013Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "148.156",
+        "hard_remaining_seconds": "193.156",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27626"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:32:07.598571Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.954",
+        "hard_remaining_seconds": "189.954",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27626",
+        "elapsed_seconds": "3.200",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3367"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:32:07.600030Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.953",
+        "hard_remaining_seconds": "189.953",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2378",
+        "elapsed_seconds": "3.206",
+        "finish_reason": "stop",
+        "prompt_tokens": "7926",
+        "completion_tokens": "744",
+        "total_tokens": "8670"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:32:07.602489Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c8988f11-499b-4a62-ba23-6c1e8a9f7dca",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:32:07.604304Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "f24fb695-433d-41ff-bf60-6eafe999ed29",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:32:07.605861Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ced52ef4-afb6-4cde-9473-da23447bf698",
+        "snapshot_id": "469a1f2a-65b4-4a0a-b16f-724439a393b3",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:32:07.606983Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:32:07.607958Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:32:07.610316Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:32:07.611332Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "189.942",
+        "hard_remaining_seconds": "189.942",
+        "attempt": "1",
+        "input_chars": "15037"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:32:07.612610Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "189.940",
+        "hard_remaining_seconds": "189.940",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20447"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:32:09.664090Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.891",
+        "hard_remaining_seconds": "187.891",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20447",
+        "elapsed_seconds": "2.048",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1526"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:32:09.666212Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.887",
+        "hard_remaining_seconds": "187.887",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "651",
+        "elapsed_seconds": "2.055",
+        "finish_reason": "stop",
+        "prompt_tokens": "6139",
+        "completion_tokens": "300",
+        "total_tokens": "6439"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 150,
+      "timestamp": "2026-11-10T05:32:09.668848Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.884",
+        "hard_remaining_seconds": "187.884",
+        "attempt": "1",
+        "input_chars": "15686"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 151,
+      "timestamp": "2026-11-10T05:32:09.671166Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.882",
+        "hard_remaining_seconds": "187.882",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20461"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 152,
+      "timestamp": "2026-11-10T05:32:10.470571Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.084",
+        "hard_remaining_seconds": "187.084",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20461",
+        "elapsed_seconds": "0.797",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1066"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 153,
+      "timestamp": "2026-11-10T05:32:10.473526Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "187.080",
+        "hard_remaining_seconds": "187.080",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "202",
+        "elapsed_seconds": "0.804",
+        "finish_reason": "stop",
+        "prompt_tokens": "6313",
+        "completion_tokens": "62",
+        "total_tokens": "6375"
+      }
+    },
+    {
+      "investigation_id": "aa461a24-3507-4ac5-9424-e246054585aa",
+      "sequence": 154,
+      "timestamp": "2026-11-10T05:32:10.475526Z",
+      "type": "investigation_partial",
+      "stage": null,
+      "payload": {
+        "stop_reason": "budget_exhausted"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 53.38087158399867,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.144
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.952
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.346
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.846
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.155
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.122
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.752
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.151
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.161
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.069
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.708
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.213
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.381
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.158
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.495
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.126
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.781
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.984
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.854
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.742
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.434
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.749
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.739
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.114
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.2
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.047
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.796
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.146136250001291,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.954781208998611,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.360468666000088,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.849974000000657,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.1580369170005724,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12623891700059175,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.755513250001968,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.15766270799940685,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.1629182910000964,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0711709999995946,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7113169170006586,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 5.214921040998888,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3821784579995438,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2245003749994794,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.4967424999995274,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.19300550000116345,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.7823840829987603,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9864032920013415,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8566320419995463,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7451089580026746,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.5019262919995526,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.750737875001505,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.7408552499982761,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.11787462500069523,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.200307167000574,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.0482959170003596,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.796889374996681,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

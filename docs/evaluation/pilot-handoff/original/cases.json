@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "b0001",
+    "split": "development",
+    "claim": "The Apollo 11 lunar module landed on the Moon on 20 July 1969.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.nasa.gov/mission/apollo-11/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "science",
+    "difficulty": "easy",
+    "family_id": "apollo-11-landing",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-01",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0002",
+    "split": "development",
+    "claim": "Venus is the closest planet to the Sun.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/venus/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "science",
+    "difficulty": "easy",
+    "family_id": "venus-orbit",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-02",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0003",
+    "split": "development",
+    "claim": "The James Webb Space Telescope, launched in November 2021, observes the universe primarily in infrared light.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "Webb observes primarily in infrared light.",
+        "what_needs_correction": "The launch month was December, not November.",
+        "corrected_claim": "The James Webb Space Telescope, launched in December 2021, observes the universe primarily in infrared light."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/mission/webb/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "science",
+    "difficulty": "medium",
+    "family_id": "webb-observation",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-03",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0004",
+    "split": "development",
+    "claim": "Microbial life exists beneath the present-day ice shell of Europa.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://science.nasa.gov/jupiter/moons/europa/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "science",
+    "difficulty": "hard",
+    "family_id": "europa-extant-life",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-04",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0005",
+    "split": "development",
+    "claim": "The Younger Dryas cooling event was triggered by an extraterrestrial impact approximately 12,800 years ago.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.pnas.org/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://www.sciencedirect.com/journal/quaternary-science-reviews",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "science",
+    "difficulty": "hard",
+    "family_id": "younger-dryas-impact",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-05",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0006",
+    "split": "development",
+    "claim": "Antibiotics do not treat infections caused solely by viruses.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.cdc.gov/antibiotic-use/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "health",
+    "difficulty": "easy",
+    "family_id": "antibiotics-viruses",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-06",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0007",
+    "split": "development",
+    "claim": "The measles, mumps and rubella vaccine has been shown to cause autism.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.who.int/health-topics/vaccines-and-immunization",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "health",
+    "difficulty": "easy",
+    "family_id": "mmr-autism",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-07",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0008",
+    "split": "development",
+    "claim": "Smallpox, declared eradicated by the World Health Assembly in 1979, is caused by variola virus.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "Smallpox is caused by variola virus.",
+        "what_needs_correction": "The World Health Assembly declaration was in 1980, not 1979.",
+        "corrected_claim": "Smallpox, declared eradicated by the World Health Assembly in 1980, is caused by variola virus."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.who.int/health-topics/smallpox",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "health",
+    "difficulty": "medium",
+    "family_id": "smallpox-agent",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-08",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0009",
+    "split": "development",
+    "claim": "Daily oral resveratrol supplementation extends lifespan in healthy adult humans.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "health",
+    "difficulty": "hard",
+    "family_id": "resveratrol-human-lifespan",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-09",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0010",
+    "split": "development",
+    "claim": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared with no screening.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.cochranelibrary.com/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://www.uspreventiveservicestaskforce.org/",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "health",
+    "difficulty": "hard",
+    "family_id": "mammography-all-cause",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-10",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0011",
+    "split": "development",
+    "claim": "The SHA-256 cryptographic hash algorithm produces a 256-bit digest.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://csrc.nist.gov/pubs/fips/180-4/upd1/final",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "technology",
+    "difficulty": "easy",
+    "family_id": "sha256-digest",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-11",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0012",
+    "split": "development",
+    "claim": "The original version of the Python programming language was first publicly released in 2001.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://docs.python.org/3/faq/general.html",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "technology",
+    "difficulty": "easy",
+    "family_id": "python-first-release",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-12",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0013",
+    "split": "development",
+    "claim": "The World Wide Web software, released by CERN into the public domain in May 1993, enabled royalty-free reuse.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "CERN made the web software available in the public domain for royalty-free use.",
+        "what_needs_correction": "The public-domain release was on 30 April 1993, not in May.",
+        "corrected_claim": "The World Wide Web software, released by CERN into the public domain in April 1993, enabled royalty-free reuse."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://home.cern/science/computing/birth-web",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "technology",
+    "difficulty": "medium",
+    "family_id": "cern-web-public-domain",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-13",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0014",
+    "split": "development",
+    "claim": "GPT-4 was trained with exactly 1.76 trillion parameters.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://arxiv.org/abs/2303.08774",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "technology",
+    "difficulty": "hard",
+    "family_id": "gpt4-parameter-count",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-14",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0015",
+    "split": "development",
+    "claim": "Using GitHub Copilot increases experienced professional developers’ productivity on unfamiliar software engineering tasks.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://github.blog/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://metr.org/",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "technology",
+    "difficulty": "hard",
+    "family_id": "copilot-professional-productivity",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-15",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0016",
+    "split": "development",
+    "claim": "The United States Consumer Price Index measures price changes for a basket of consumer goods and services.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.bls.gov/cpi/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "economics",
+    "difficulty": "easy",
+    "family_id": "cpi-definition",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-16",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0017",
+    "split": "development",
+    "claim": "Nominal gross domestic product removes the effects of price inflation from measured economic output.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.bea.gov/resources/learning-center/what-to-know-gdp",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "economics",
+    "difficulty": "easy",
+    "family_id": "nominal-gdp-definition",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-17",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0018",
+    "split": "development",
+    "claim": "The euro, introduced as physical banknotes and coins in 2001, is the shared currency of the euro area.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "The euro is the shared currency of the euro area.",
+        "what_needs_correction": "Euro banknotes and coins entered circulation in 2002, not 2001.",
+        "corrected_claim": "The euro, introduced as physical banknotes and coins in 2002, is the shared currency of the euro area."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.ecb.europa.eu/euro/intro/html/index.en.html",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "economics",
+    "difficulty": "medium",
+    "family_id": "euro-cash-introduction",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-18",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0019",
+    "split": "development",
+    "claim": "A United States federal minimum wage of $25 per hour in 2030 would increase total national employment during that year.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.cbo.gov/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "economics",
+    "difficulty": "hard",
+    "family_id": "minimum-wage-2030-counterfactual",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-19",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0020",
+    "split": "development",
+    "claim": "New Jersey’s April 1992 minimum wage increase reduced employment at fast-food restaurants relative to eastern Pennsylvania.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.aeaweb.org/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://www.nber.org/",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "economics",
+    "difficulty": "hard",
+    "family_id": "new-jersey-minimum-wage",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-20",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0021",
+    "split": "development",
+    "claim": "The Berlin Wall opened to cross-border travel on 9 November 1989.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.stiftung-berliner-mauer.de/en",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "history",
+    "difficulty": "easy",
+    "family_id": "berlin-wall-opening",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-21",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0022",
+    "split": "development",
+    "claim": "The Magna Carta of 1215 was issued during the reign of King Henry VIII of England.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.bl.uk/magna-carta",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "history",
+    "difficulty": "easy",
+    "family_id": "magna-carta-monarch",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-22",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0023",
+    "split": "development",
+    "claim": "The Rosetta Stone, discovered in Egypt in 1798, helped scholars decipher Egyptian hieroglyphs.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "The Rosetta Stone helped scholars decipher Egyptian hieroglyphs.",
+        "what_needs_correction": "It was discovered in 1799, not 1798.",
+        "corrected_claim": "The Rosetta Stone, discovered in Egypt in 1799, helped scholars decipher Egyptian hieroglyphs."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.britishmuseum.org/collection/egypt/explore-rosetta-stone",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "history",
+    "difficulty": "medium",
+    "family_id": "rosetta-stone-discovery",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-23",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0024",
+    "split": "development",
+    "claim": "The unidentified author known as Jack the Ripper was the painter Walter Sickert.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.nationalarchives.gov.uk/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "history",
+    "difficulty": "hard",
+    "family_id": "ripper-identity",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-24",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0025",
+    "split": "development",
+    "claim": "The Bronze Age eruption of Thera occurred before 1600 BCE.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.cambridge.org/core/journals/radiocarbon",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://www.science.org/",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "history",
+    "difficulty": "hard",
+    "family_id": "thera-eruption-date",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-25",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0026",
+    "split": "development",
+    "claim": "The Paris Agreement was adopted at the United Nations climate conference in December 2015.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "true",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://unfccc.int/process-and-meetings/the-paris-agreement",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "public_policy",
+    "difficulty": "easy",
+    "family_id": "paris-agreement-adoption",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-26",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0027",
+    "split": "development",
+    "claim": "The United States Constitution sets a six-year term for members of the House of Representatives.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "false",
+      "unable_to_decide_reason": null,
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://constitution.congress.gov/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance.",
+    "schema_version": "1.0",
+    "domain": "public_policy",
+    "difficulty": "easy",
+    "family_id": "us-house-term",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-27",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0028",
+    "split": "development",
+    "claim": "The Montreal Protocol, adopted in 1986, regulates substances that deplete the ozone layer.",
+    "context": {},
+    "case_type": "direct_fact",
+    "expected": {
+      "outcome": "decided",
+      "verdict": "almost",
+      "unable_to_decide_reason": null,
+      "expected_correction": {
+        "what_is_correct": "The Montreal Protocol regulates ozone-depleting substances.",
+        "what_needs_correction": "The protocol was adopted in 1987, not 1986.",
+        "corrected_claim": "The Montreal Protocol, adopted in 1987, regulates substances that deplete the ozone layer."
+      }
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://ozone.unep.org/treaties/montreal-protocol",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Review whether the corrected detail is sufficiently bounded and noncentral for Almost; it may warrant False.",
+    "schema_version": "1.0",
+    "domain": "public_policy",
+    "difficulty": "medium",
+    "family_id": "montreal-protocol-scope",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-28",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0029",
+    "split": "development",
+    "claim": "A nationwide four-day working week enacted in India in 2030 would reduce annual carbon emissions by exactly 10 percent.",
+    "context": {},
+    "case_type": "insufficient",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.ilo.org/",
+        "shows": "Unverified research lead for independent review of this candidate."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Distinguish unavailable evidence from contradiction; review whether the proposition is in scope for this backend.",
+    "schema_version": "1.0",
+    "domain": "public_policy",
+    "difficulty": "hard",
+    "family_id": "india-four-day-emissions",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-29",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  },
+  {
+    "id": "b0030",
+    "split": "development",
+    "claim": "United States right-to-carry handgun laws reduce the violent crime rate compared with retaining more restrictive carry laws.",
+    "context": {},
+    "case_type": "conflict",
+    "expected": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "expected_correction": null
+    },
+    "acceptable_alternatives": [],
+    "expected_flags": [],
+    "key_sources": [
+      {
+        "url": "https://www.rand.org/research/gun-policy.html",
+        "shows": "Unverified research lead for independent review of this candidate."
+      },
+      {
+        "url": "https://www.nber.org/",
+        "shows": "Second unverified research lead; reviewer must establish an unresolved same-scope conflict."
+      }
+    ],
+    "as_of": "2026-11-09",
+    "labelers": [],
+    "status": "proposed",
+    "reviewer_note": "Original AI candidate. Independently verify the proposed label, wording and source passages before acceptance. Conflict is a hypothesis, not an established reference answer. Check common population, outcome and date; reclassify if studies differ in scope or the dispute is resolved.",
+    "schema_version": "1.0",
+    "domain": "public_policy",
+    "difficulty": "hard",
+    "family_id": "right-to-carry-crime",
+    "provenance": {
+      "method": "original_ai_candidate",
+      "source_id": "original-pilot-30",
+      "source_url": null,
+      "native_label": null,
+      "evidence_status": "unverified_leads",
+      "last_verified": null
+    },
+    "evidence_passages": [],
+    "pilot": true
+  }
+]

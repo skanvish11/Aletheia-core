@@ -1,0 +1,2779 @@
+{
+  "id": "b0006",
+  "live": true,
+  "investigation": {
+    "id": "f6f3f165-e342-46df-9531-550aa77efd12",
+    "claim": "Antibiotics do not treat infections caused solely by viruses.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:29:50.534418Z",
+    "started_at": "2026-11-10T05:29:50.536027Z",
+    "finished_at": "2026-11-10T05:30:31.143443Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/f6f3f165-e342-46df-9531-550aa77efd12",
+      "events": "/investigations/f6f3f165-e342-46df-9531-550aa77efd12/events",
+      "evidence": "/investigations/f6f3f165-e342-46df-9531-550aa77efd12/evidence",
+      "comparison": "/investigations/f6f3f165-e342-46df-9531-550aa77efd12/comparison",
+      "refresh": "/investigations/f6f3f165-e342-46df-9531-550aa77efd12/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "url": "https://www.unitypoint.org/news-and-articles/how-do-antibiotics-work-and-when-should-i-take-them",
+        "canonical_url": "https://www.unitypoint.org/news-and-articles/how-do-antibiotics-work-and-when-should-i-take-them",
+        "title": "How Do Antibiotics Work and When Should I Take Them?",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:03.246273Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "dc113f1c700e26be1adfefa419e11a0810c22f16ff8f22294e9a92d1810b43a2",
+        "duplicate_group": "dc113f1c700e26be1adfefa419e11a0810c22f16ff8f22294e9a92d1810b43a2",
+        "limitations": []
+      },
+      {
+        "id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "url": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+        "canonical_url": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+        "title": "Why are antibiotics ineffective against viruses? - The AMR Narrative",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:13.035155Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "eda325bf469357fe98a0d699c3f95fa234e403ec904a91e5f67ed84e722ca451",
+        "duplicate_group": "eda325bf469357fe98a0d699c3f95fa234e403ec904a91e5f67ed84e722ca451",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1305294/full",
+        "canonical_url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1305294/full",
+        "title": "Frontiers | Antibiotic action and resistance: updated review of mechanisms, spread, influencing factors, and alternative approaches for combating resistance",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:20.921656Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "e8db5758bb1495d33a688554815fe4939ebc2ed04f7212c1f85c7d7a3adf5d50",
+        "duplicate_group": "e8db5758bb1495d33a688554815fe4939ebc2ed04f7212c1f85c7d7a3adf5d50",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "url": "https://www.youtube.com/watch?v=Cj9UADDIidI",
+        "canonical_url": "https://www.youtube.com/watch?v=Cj9UADDIidI",
+        "title": "Antibiotics - Mechanisms of Action, Animation",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:25.534424Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "8b0e5d4f9917db86482ee1d416a14b038d24da9b3504f274334f92f20b67379d",
+        "duplicate_group": "8b0e5d4f9917db86482ee1d416a14b038d24da9b3504f274334f92f20b67379d",
+        "limitations": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e6e9bca5-9ec1-4a4e-8dcb-614f045bcc4f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+            "span_ids": [
+              11
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "UnityPoint Health article",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            11
+          ],
+          "provenance_note": "Directly states antibiotics do not work for viral infections.",
+          "rationale": "Span 11 explicitly states antibiotics do not work for infections caused by viruses such as common cold, influenza, viral sore throats, and most sinusitis or bronchitis.",
+          "limitations": [
+            "Source is a single article, not comprehensive medical literature"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 619,
+            "end": 788,
+            "text": "Unfortunately, antibiotics do not work for infections caused by viruses such as the common cold, influenza, viral sore throats and most cases of sinusitis or bronchitis.",
+            "quote_hash": "0694e4a106e3ed288cb1be5493449967167d915601074b90336d32b5a3651734"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "55e0b83f-970b-41b3-9d62-0f18057b4a0d",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+            "span_ids": [
+              8,
+              12
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "UnityPoint Health article",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            8,
+            12
+          ],
+          "provenance_note": "Span 8 defines antibiotics as targeting bacteria; span 12 reinforces they are ineffective without bacterial infection.",
+          "rationale": "Span 8 establishes antibiotics target bacteria; span 12 states taking antibiotics without bacterial infection won't help, supporting the assertion's mechanism.",
+          "limitations": [
+            "Does not explicitly mention viral exclusivity"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 382,
+            "end": 456,
+            "text": "Antibiotics are medications designed to kill bad bacteria within the body.",
+            "quote_hash": "69032abda53504702c344e8f5fe52976006f4c91b3ec12e1e978d6ef44e49af3"
+          },
+          {
+            "span_ids": [
+              12
+            ],
+            "start": 790,
+            "end": 892,
+            "text": "If you take an antibiotic when you don’t have a bacterial infection, it won't help you get any better.",
+            "quote_hash": "99f60eb7236067828c624a76780595086475ba610b4ab7c2818fd12cfdec48d2"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "7d958c75-7d7a-45a2-820e-39aed2d28f52",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+            "span_ids": [
+              15
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "UnityPoint Health article",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            15
+          ],
+          "provenance_note": "Quoted expert states patients would have gotten better from viral infection without antibiotics as virus runs its course.",
+          "rationale": "Span 15 provides expert confirmation that viral infections resolve independently, reinforcing that antibiotics are unnecessary for viral causes.",
+          "limitations": [
+            "Expert quote focuses on patient perception rather than pharmacological mechanism"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              15
+            ],
+            "start": 1121,
+            "end": 1437,
+            "text": "“People sometimes believe when prescribed an antibiotic, the antibiotic alone helped them,” says [Jessica Manders, PA-C](/providers/Jessica-Manders-1165934), “when in fact they would have gotten better from their viral infection without an antibiotic, simply because the virus had taken that time to run its course.”",
+            "quote_hash": "24da93c0c26fd97c13d94c9fa1a10106047d512794e062d4aea92bd1e093daf9"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "256a54d0-5fbe-4479-a91b-cc1c3f4ecc29",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+            "span_ids": [
+              27,
+              30,
+              31
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The blog explains that antibiotics target bacterial structures absent in viruses, are prescribed only for bacterial infections, and are ineffective against viruses like colds and flu.",
+          "publisher": "The AMR Narrative",
+          "origin": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            27,
+            30,
+            31
+          ],
+          "provenance_note": "Span 27: antibiotics target bacterial 'machineries' viruses lack; Span 30: antibiotics do not work against viral infections such as cold/flu; Span 31: antibiotics prescribed only for bacterial infections.",
+          "rationale": "Multiple spans (27, 30, 31) directly and consistently support the claim that antibiotics are ineffective against viral infections and are intended only for bacterial infections.",
+          "limitations": [
+            "Source is a single blog post, not a peer‑reviewed systematic review; independence from the author's clinical practice is unspecified.",
+            "Truncated source may omit nuanced exceptions (e.g., bacterial co‑infections).",
+            "No explicit citation of external guideline or CDC/WHO reference."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              27
+            ],
+            "start": 2915,
+            "end": 3074,
+            "text": "So, antibiotics are ineffective against viruses, simply because viruses are not cells and do not have those “machineries” that antibiotics specifically target.",
+            "quote_hash": "36ef74187eba77d3ad5485af5e2b26ac8a69d6f4d369552bd18043f5d45618a9"
+          },
+          {
+            "span_ids": [
+              30,
+              31
+            ],
+            "start": 3154,
+            "end": 3386,
+            "text": "Moving from the electron microscope to everyday life, we can say that antibiotics do not work against viral infections, such as the common cold or flu. Indeed, antibiotics are medicines prescribed only to treat bacterial infections.",
+            "quote_hash": "edd9ba7d6b37e8a83e365ef1c67a808c4e820672218b4a9c540bec32cd121abf"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "59385f10-657c-4f1e-91ba-50472b669503",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+            "span_ids": [
+              10,
+              11
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Spans 10 and 11 state that antibiotics cannot cure colds and that some people incorrectly believe they work against viral infections, reinforcing the general principle.",
+          "publisher": "The AMR Narrative",
+          "origin": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            10,
+            11
+          ],
+          "provenance_note": "Span 10: Antibiotics cannot cure colds; Span 11: Some people incorrectly believe antibiotics are effective against colds and other viral infections.",
+          "rationale": "These spans explicitly link antibiotics to viral infections (colds) and confirm the misconception, which indirectly supports the assertion by establishing the common belief being refuted.",
+          "limitations": [
+            "Spans address colds specifically; broader viral infections are covered elsewhere (spans 30, 31).",
+            "No quantitative data on prevalence of the misconception."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              10,
+              11
+            ],
+            "start": 1202,
+            "end": 1346,
+            "text": "Antibiotics cannot cure colds. However, some people incorrectly believe that antibiotics are effective against colds and other viral infections.",
+            "quote_hash": "ee43de2e43b194a758bc7b4a33f288432b7270977adb8ee785d489c412e43afa"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "24046450-7b1d-4095-ad5c-a9a448c2e7c1",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+            "span_ids": [
+              15,
+              16,
+              17
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Spans 15–17 describe basic biological differences between bacteria and viruses, providing the mechanistic basis for why antibiotics do not affect viruses.",
+          "publisher": "The AMR Narrative",
+          "origin": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            15,
+            16,
+            17
+          ],
+          "provenance_note": "Span 15: bacteria and viruses are completely different microorganisms; Span 16: bacterium structure (cell, wall); Span 17: bacterial cytoplasm and multiplication mechanisms.",
+          "rationale": "These spans establish the biological distinction that underpins the claim, but they are background context rather than direct assertion of the treatment principle.",
+          "limitations": [
+            "Descriptive biology only; does not itself state the clinical conclusion that antibiotics cannot treat viral infections.",
+            "Source is a blog, not a textbook or guideline."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              15,
+              16,
+              17
+            ],
+            "start": 1671,
+            "end": 2086,
+            "text": "Let’s start with a key concept: bacteria and viruses are completely different microorganisms.\n\nA bacterium is a microscopic creature consisting of a single cell, enclosed by a capsule and a cell wall, two different protective coatings. Inside the cell, a gooey substance called cytoplasm surrounds the DNA and a number of tiny but vital structures that allow the cell to survive on its own and multiply efficiently.",
+            "quote_hash": "b087268cf3cb0f5154fe4e9693bc32d614525404cc17b1f47465db915a11ec70"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "f7557571-078f-4b52-ab71-6723a00d805f",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+            "span_ids": [
+              102,
+              103
+            ]
+          },
+          "relation": "irrelevant",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            102,
+            103
+          ],
+          "provenance_note": "Covers antibiotic use and mechanism of action, not virus treatment claims",
+          "rationale": "Antibiotic use and mechanism of action described, no discussion of viral infection treatment",
+          "limitations": [
+            "Source is review article, not clinical guidance on viral infections"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              102,
+              103
+            ],
+            "start": 4785,
+            "end": 5163,
+            "text": "Antibiotics represent a frequently employed therapeutic modality for the management of bacterial infections across diverse domains, including human health, agriculture, livestock breeding, and fish farming. The efficacy of antibiotics relies on four distinct mechanisms of action, which are discussed in detail in this review, along with accompanying diagrammatic illustrations.",
+            "quote_hash": "620d4aaa0af5100c01c9d2e8426828aac8aa8e9b3ac9a8586cf898553da2c83b"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "419fe3c4-ae6d-419b-b121-907d2e95aabf",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+            "span_ids": [
+              111,
+              113,
+              114
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Defines antibiotics and their bacterial scope only",
+          "publisher": null,
+          "origin": "Frontiers in Pharmacology",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            111,
+            113,
+            114
+          ],
+          "provenance_note": "Defines antibiotics as substances targeting microorganisms; no viral scope addressed",
+          "rationale": "Establishes antibiotic definition and sector use but does not address viral infection treatment claims",
+          "limitations": [
+            "Definition context only; no viral infection treatment data"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              111
+            ],
+            "start": 5924,
+            "end": 6211,
+            "text": "Microbiology originated the term “antibiotic” from the French words “antibiose” and “antibiotique,” as defined by Vuillemin in the late 19th century to delineate substances that exert detrimental effects on living organisms, particularly microorganisms (Laskin, Bennett, and Gadd, 2002).",
+            "quote_hash": "78d5dbccd263446fb86e5abdb06b5baff71baa1dbb9c7c39d2f5a7018b7f77c7"
+          },
+          {
+            "span_ids": [
+              113,
+              114
+            ],
+            "start": 6245,
+            "end": 6734,
+            "text": "Waksman provided an all-encompassing definition of antibiotics as chemical compounds produced by microorganisms that possess the capacity to impede the growth and induce the demise of bacteria and other microorganisms ([Waksman, 1947](#B92); Kaur Sodhi and Singh, 2022). Antibiotics have found widespread application across various sectors, encompassing human health, agriculture, livestock breeding, and fish farms ([Okocha, Olatoye, and Adedeji, 2018](#B60); Kaur Sodhi and Singh, 2022).",
+            "quote_hash": "847a52809d4b13ae869f11297dbb462129cee76327d0f2240765c03ab13b2c0e"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "851effc0-8cfb-4b74-8808-92f1457b93d3",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+            "span_ids": [
+              108
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Mentions human misuse of antibiotics contributes to resistance",
+          "publisher": null,
+          "origin": "Frontiers in Pharmacology",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            108
+          ],
+          "provenance_note": "References human antibiotic misuse in resistance crisis context",
+          "rationale": "Addresses antibiotic misuse broadly, not specifically viral infection treatment distinction",
+          "limitations": [
+            "Resistance focus; no viral treatment guidance"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              108
+            ],
+            "start": 5673,
+            "end": 5789,
+            "text": "Multiple factors contribute to the worsening crisis of antibiotic resistance, including human misuse of antibiotics.",
+            "quote_hash": "7fb11f854b81c90d2a7bdf8e1f3fe56c0a87aee9401e641b2cd2f9071dbf805d"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "11305ad6-a1c5-452a-a51f-a875100a6541",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+            "span_ids": [
+              22,
+              53
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Spans 53 and 22 directly state that antibiotics cannot treat viral infections such as common cold or flu, which supports the claim that antibiotics do not treat infections caused solely by viruses. The source consistently reinforces this distinction throughout.",
+          "publisher": "Alila Medical Media",
+          "origin": "YouTube video titled 'Antibiotics - Mechanisms of Action, Animation'",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            22,
+            53
+          ],
+          "provenance_note": "Spans 53 and 22 from the same video explicitly confirm antibiotics are ineffective against viral infections.",
+          "rationale": "Spans 53 and 22 both state that antibiotics cannot treat viral infections, providing direct textual support for the assertion.",
+          "limitations": [
+            "Both spans originate from a single YouTube video without independent peer-reviewed sources",
+            "No citation of specific clinical studies or guidelines",
+            "Video is educational animation, not a primary medical source"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              22
+            ],
+            "start": 1466,
+            "end": 1535,
+            "text": "Antibiotics cannot treat viral infections such as common cold or flu.",
+            "quote_hash": "405bda267afb7e9d4576292c223f94d78a97ac4dbc5087b340b3f31e5d7124df"
+          },
+          {
+            "span_ids": [
+              53
+            ],
+            "start": 4563,
+            "end": 4639,
+            "text": "[0:41] Antibiotics cannot treat viral infections such as common cold or flu.",
+            "quote_hash": "60748de842e10a853e4f0b374b6a96fc9182011f8d448b2a6679d155c19c3313"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:29:50.534418Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:29:50.536027Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:29:50.538098Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:29:50.539067Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:29:50.540007Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "89"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:29:50.541472Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5766"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:29:52.618698Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.921",
+        "hard_remaining_seconds": "117.921",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5766",
+        "elapsed_seconds": "2.075",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1302"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:29:52.621250Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.917",
+        "hard_remaining_seconds": "117.917",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "427",
+        "elapsed_seconds": "2.081",
+        "finish_reason": "stop",
+        "prompt_tokens": "891",
+        "completion_tokens": "99",
+        "total_tokens": "990"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:29:52.623033Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:29:52.624629Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:29:52.626157Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:29:52.627699Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.910",
+        "hard_remaining_seconds": "237.910",
+        "attempt": "1",
+        "input_chars": "455"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:29:52.630145Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.908",
+        "hard_remaining_seconds": "237.908",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3480"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:29:54.460335Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "191.078",
+        "hard_remaining_seconds": "236.078",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3480",
+        "elapsed_seconds": "1.829",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1376"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:29:54.461816Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "191.076",
+        "hard_remaining_seconds": "236.076",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "486",
+        "elapsed_seconds": "1.834",
+        "finish_reason": "stop",
+        "prompt_tokens": "595",
+        "completion_tokens": "119",
+        "total_tokens": "714"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:29:54.463065Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Antibiotics treat bacterial infections in humans",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:29:54.464446Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "191.073",
+        "hard_remaining_seconds": "236.073",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "256"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:29:57.117777Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.422",
+        "hard_remaining_seconds": "233.422",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "256",
+        "elapsed_seconds": "2.651",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8885"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:29:57.120449Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Antibiotics treat bacterial infections in humans",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:29:57.122751Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Antibiotics are ineffective against viral infections",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:29:57.124867Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.413",
+        "hard_remaining_seconds": "233.413",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:29:59.974962Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.564",
+        "hard_remaining_seconds": "230.564",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260",
+        "elapsed_seconds": "2.848",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9828"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:29:59.977703Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Antibiotics are ineffective against viral infections",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:29:59.979727Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Mechanisms of antibiotic action on bacterial versus viral pathogens",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:29:59.981368Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.557",
+        "hard_remaining_seconds": "230.557",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "275"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:30:03.096953Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "182.443",
+        "hard_remaining_seconds": "227.443",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "275",
+        "elapsed_seconds": "3.112",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9177"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:30:03.099739Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Mechanisms of antibiotic action on bacterial versus viral pathogens",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:30:03.102201Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:30:03.103819Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.unitypoint.org/news-and-articles/how-do-antibiotics-work-and-when-should-i-take-them",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:30:03.105430Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:30:03.107538Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.431",
+        "hard_remaining_seconds": "227.431",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "223"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:30:03.244919Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.294",
+        "hard_remaining_seconds": "227.294",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "223",
+        "elapsed_seconds": "0.135",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8379"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:30:03.250081Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "url": "https://www.unitypoint.org/news-and-articles/how-do-antibiotics-work-and-when-should-i-take-them",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:30:03.251588Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:30:03.255687Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.282",
+        "hard_remaining_seconds": "227.282",
+        "attempt": "1",
+        "input_chars": "12371"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:30:03.259092Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.279",
+        "hard_remaining_seconds": "227.279",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23552"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:30:12.451436Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "173.088",
+        "hard_remaining_seconds": "218.088",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23552",
+        "elapsed_seconds": "9.189",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3427"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:30:12.454711Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "173.084",
+        "hard_remaining_seconds": "218.084",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2432",
+        "elapsed_seconds": "9.199",
+        "finish_reason": "stop",
+        "prompt_tokens": "6110",
+        "completion_tokens": "642",
+        "total_tokens": "6752"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:30:12.458421Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e6e9bca5-9ec1-4a4e-8dcb-614f045bcc4f",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:30:12.459890Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "55e0b83f-970b-41b3-9d62-0f18057b4a0d",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:30:12.461595Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "7d958c75-7d7a-45a2-820e-39aed2d28f52",
+        "snapshot_id": "b6360ae2-226b-4d25-a53c-eee883ced244",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:30:12.463114Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:30:12.464415Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:30:12.465900Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.072",
+        "hard_remaining_seconds": "218.072",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "210"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:30:13.034003Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.508",
+        "hard_remaining_seconds": "217.508",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "210",
+        "elapsed_seconds": "0.563",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "24155"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:30:13.043125Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "url": "https://amrnarrative.org/2025/11/20/why-are-antibiotics-ineffective-against-viruses",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:30:13.044325Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:30:13.047034Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.491",
+        "hard_remaining_seconds": "217.491",
+        "attempt": "1",
+        "input_chars": "18513"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:30:13.049599Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.488",
+        "hard_remaining_seconds": "217.488",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30204"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:30:20.683704Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "164.855",
+        "hard_remaining_seconds": "209.855",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30204",
+        "elapsed_seconds": "7.632",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4919"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:30:20.686567Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "164.852",
+        "hard_remaining_seconds": "209.852",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3893",
+        "elapsed_seconds": "7.639",
+        "finish_reason": "stop",
+        "prompt_tokens": "8106",
+        "completion_tokens": "1052",
+        "total_tokens": "9158"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:30:20.691946Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "256a54d0-5fbe-4479-a91b-cc1c3f4ecc29",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:30:20.694101Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "59385f10-657c-4f1e-91ba-50472b669503",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:30:20.696037Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "24046450-7b1d-4095-ad5c-a9a448c2e7c1",
+        "snapshot_id": "e30e5f7d-ce9e-4d9a-ac7d-3b615414d7c3",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:30:20.697759Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1305294/full",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:30:20.699443Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:30:20.701372Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.837",
+        "hard_remaining_seconds": "209.837",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "217"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:30:20.920841Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.617",
+        "hard_remaining_seconds": "209.617",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "217",
+        "elapsed_seconds": "0.218",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "75454"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:30:20.927400Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "url": "https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2023.1305294/full",
+        "candidate_id": "c19",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:30:20.928324Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:30:20.930804Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.607",
+        "hard_remaining_seconds": "209.607",
+        "attempt": "1",
+        "input_chars": "18240"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:30:20.933581Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.605",
+        "hard_remaining_seconds": "209.605",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31076"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:30:25.392858Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "160.147",
+        "hard_remaining_seconds": "205.147",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31076",
+        "elapsed_seconds": "4.457",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3196"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:30:25.396386Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "160.142",
+        "hard_remaining_seconds": "205.142",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2198",
+        "elapsed_seconds": "4.465",
+        "finish_reason": "stop",
+        "prompt_tokens": "9409",
+        "completion_tokens": "620",
+        "total_tokens": "10029"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:30:25.401055Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "f7557571-078f-4b52-ab71-6723a00d805f",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "admissible": "false",
+        "relation": "irrelevant"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:30:25.402680Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "419fe3c4-ae6d-419b-b121-907d2e95aabf",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:30:25.404047Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "851effc0-8cfb-4b74-8808-92f1457b93d3",
+        "snapshot_id": "c0a855ca-4b69-4bee-ad3d-2a2216564029",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:30:25.405499Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "url": "https://www.youtube.com/watch?v=Cj9UADDIidI",
+        "slot": "4",
+        "query_ids": "q5,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:30:25.406776Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:30:25.409628Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.129",
+        "hard_remaining_seconds": "205.129",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:30:25.532798Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.007",
+        "hard_remaining_seconds": "205.007",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.120",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7570"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:30:25.538289Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "url": "https://www.youtube.com/watch?v=Cj9UADDIidI",
+        "candidate_id": "c23",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:30:25.539947Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:30:25.544372Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.994",
+        "hard_remaining_seconds": "204.994",
+        "attempt": "1",
+        "input_chars": "12655"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:30:25.547676Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.990",
+        "hard_remaining_seconds": "204.990",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23971"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:30:27.802882Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "157.737",
+        "hard_remaining_seconds": "202.737",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23971",
+        "elapsed_seconds": "2.252",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2121"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:30:27.806172Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "157.732",
+        "hard_remaining_seconds": "202.732",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1212",
+        "elapsed_seconds": "2.262",
+        "finish_reason": "stop",
+        "prompt_tokens": "6241",
+        "completion_tokens": "314",
+        "total_tokens": "6555"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:30:27.809513Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "11305ad6-a1c5-452a-a51f-a875100a6541",
+        "snapshot_id": "7a547f82-c430-41c4-9962-7259d89d6d37",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:30:27.811423Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "evidence_sufficient",
+        "gap": "",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:30:27.814670Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:30:27.816186Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "202.722",
+        "hard_remaining_seconds": "202.722",
+        "attempt": "1",
+        "input_chars": "15036"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:30:27.818705Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "202.720",
+        "hard_remaining_seconds": "202.720",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20530"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:30:30.368846Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "200.171",
+        "hard_remaining_seconds": "200.171",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20530",
+        "elapsed_seconds": "2.546",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1821"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:30:30.372028Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "200.166",
+        "hard_remaining_seconds": "200.166",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "942",
+        "elapsed_seconds": "2.555",
+        "finish_reason": "stop",
+        "prompt_tokens": "5914",
+        "completion_tokens": "406",
+        "total_tokens": "6320"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:30:30.375079Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "200.163",
+        "hard_remaining_seconds": "200.163",
+        "attempt": "1",
+        "input_chars": "15976"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:30:30.377278Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "200.161",
+        "hard_remaining_seconds": "200.161",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20839"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:30:31.137194Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "199.402",
+        "hard_remaining_seconds": "199.402",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20839",
+        "elapsed_seconds": "0.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1063"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:30:31.140197Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "199.398",
+        "hard_remaining_seconds": "199.398",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "199",
+        "elapsed_seconds": "0.765",
+        "finish_reason": "stop",
+        "prompt_tokens": "6193",
+        "completion_tokens": "59",
+        "total_tokens": "6252"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:30:31.141951Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "f6f3f165-e342-46df-9531-550aa77efd12",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:30:31.143443Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 40.82245312500163,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.073
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.828
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.649
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.846
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.109
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.133
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 9.187
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.56
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 7.631
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.181
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.454
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.117
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.25
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.544
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.755
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.074839458000497,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.8286109170003328,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.650716416999785,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8477464160023374,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.1124596249974275,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13451670900030877,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 9.1892633330026,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.5628432909979892,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 7.632023166999716,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.21783524999773363,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.456511708001926,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.11991529200167861,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.2518131249998987,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.546290540998598,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7570026670000516,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

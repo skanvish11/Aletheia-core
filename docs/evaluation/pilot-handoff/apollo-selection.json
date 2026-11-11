@@ -1,0 +1,859 @@
+{
+  "case_id": "b0001",
+  "run": "rerun",
+  "snapshot_id": "3a9af00d-b606-400b-a59b-7499ef6b6a0d",
+  "url": "https://en.wikipedia.org/wiki/Apollo_11",
+  "original_content_hash": "b4d4b41e4996a6f70ad7a89b699e9f9ad90a03dd2b1f100b9af27a610059a61d",
+  "total_saved_spans": 560,
+  "reconstruction": "Selected source window reconstructed offline using the archived selection code and original saved snapshot. No model call was made. This is not a full snapshot.",
+  "supplied_spans": [
+    {
+      "id": 2,
+      "start": 33,
+      "end": 252,
+      "text": "[![](/static/images/icons/enwiki-25.svg) ![Wikipedia](/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg) ![The Free Encyclopedia](/static/images/mobile/copyright/wikipedia-tagline-en-25.svg)](/wiki/Main_Page)",
+      "kind": "sentence"
+    },
+    {
+      "id": 3,
+      "start": 254,
+      "end": 307,
+      "text": "[Search](/wiki/Special:Search \"Search Wikipedia [f]\")",
+      "kind": "sentence"
+    },
+    {
+      "id": 50,
+      "start": 2100,
+      "end": 2178,
+      "text": "* [Afrikaans](https://af.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Afrikaans\")",
+      "kind": "block"
+    },
+    {
+      "id": 51,
+      "start": 2179,
+      "end": 2284,
+      "text": "* [አማርኛ](https://am.wikipedia.org/wiki/%E1%8A%A0%E1%8D%96%E1%88%8E_%E1%8D%B2%E1%8D%A9 \"አፖሎ ፲፩ – Amharic\")",
+      "kind": "block"
+    },
+    {
+      "id": 52,
+      "start": 2285,
+      "end": 2362,
+      "text": "* [Aragonés](https://an.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Aragonese\")",
+      "kind": "block"
+    },
+    {
+      "id": 53,
+      "start": 2363,
+      "end": 2459,
+      "text": "* [العربية](https://ar.wikipedia.org/wiki/%D8%A3%D8%A8%D9%88%D9%84%D9%88_11 \"أبولو 11 – Arabic\")",
+      "kind": "block"
+    },
+    {
+      "id": 54,
+      "start": 2460,
+      "end": 2577,
+      "text": "* [অসমীয়া](https://as.wikipedia.org/wiki/%E0%A6%8F%E0%A6%AA%27%E0%A6%B2%27_%E0%A7%A7%E0%A7%A7 \"এপ'ল' ১১ – Assamese\")",
+      "kind": "block"
+    },
+    {
+      "id": 55,
+      "start": 2578,
+      "end": 2656,
+      "text": "* [Asturianu](https://ast.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Asturian\")",
+      "kind": "block"
+    },
+    {
+      "id": 56,
+      "start": 2657,
+      "end": 2742,
+      "text": "* [Azərbaycanca](https://az.wikipedia.org/wiki/Apollon_11 \"Apollon 11 – Azerbaijani\")",
+      "kind": "block"
+    },
+    {
+      "id": 57,
+      "start": 2743,
+      "end": 2850,
+      "text": "* [تۆرکجه](https://azb.wikipedia.org/wiki/%D8%A2%D9%BE%D9%88%D9%84%D9%88_11 \"آپولو 11 – South Azerbaijani\")",
+      "kind": "block"
+    },
+    {
+      "id": 58,
+      "start": 2851,
+      "end": 2929,
+      "text": "* [Basa Bali](https://ban.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Balinese\")",
+      "kind": "block"
+    },
+    {
+      "id": 59,
+      "start": 2930,
+      "end": 3088,
+      "text": "* [Беларуская (тарашкевіца)](https://be-tarask.wikipedia.org/wiki/%D0%90%D0%BF%D0%B0%D0%BB%D1%91%D0%BD-11 \"Апалён-11 – Belarusian (Taraškievica orthography)\")",
+      "kind": "block"
+    },
+    {
+      "id": 60,
+      "start": 3089,
+      "end": 3199,
+      "text": "* [Беларуская](https://be.wikipedia.org/wiki/%D0%90%D0%BF%D0%B0%D0%BB%D0%BE%D0%BD-11 \"Апалон-11 – Belarusian\")",
+      "kind": "block"
+    },
+    {
+      "id": 61,
+      "start": 3200,
+      "end": 3301,
+      "text": "* [Български](https://bg.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BE_11 \"Аполо 11 – Bulgarian\")",
+      "kind": "block"
+    },
+    {
+      "id": 62,
+      "start": 3302,
+      "end": 3457,
+      "text": "* [বাংলা](https://bn.wikipedia.org/wiki/%E0%A6%85%E0%A7%8D%E0%A6%AF%E0%A6%BE%E0%A6%AA%E0%A7%8B%E0%A6%B2%E0%A7%8B_%E0%A7%A7%E0%A7%A7 \"অ্যাপোলো ১১ – Bangla\")",
+      "kind": "block"
+    },
+    {
+      "id": 63,
+      "start": 3458,
+      "end": 3533,
+      "text": "* [Brezhoneg](https://br.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Breton\")",
+      "kind": "block"
+    },
+    {
+      "id": 64,
+      "start": 3534,
+      "end": 3609,
+      "text": "* [Bosanski](https://bs.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Bosnian\")",
+      "kind": "block"
+    },
+    {
+      "id": 65,
+      "start": 3610,
+      "end": 3683,
+      "text": "* [Català](https://ca.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Catalan\")",
+      "kind": "block"
+    },
+    {
+      "id": 66,
+      "start": 3684,
+      "end": 3759,
+      "text": "* [Cebuano](https://ceb.wikipedia.org/wiki/Apollo_XI \"Apollo XI – Cebuano\")",
+      "kind": "block"
+    },
+    {
+      "id": 67,
+      "start": 3760,
+      "end": 3881,
+      "text": "* [کوردی](https://ckb.wikipedia.org/wiki/%D8%A6%DB%95%D9%BE%DB%86%D9%84%DB%86_%D9%A1%D9%A1 \"ئەپۆلۆ ١١ – Central Kurdish\")",
+      "kind": "block"
+    },
+    {
+      "id": 68,
+      "start": 3882,
+      "end": 3955,
+      "text": "* [Corsu](https://co.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Corsican\")",
+      "kind": "block"
+    },
+    {
+      "id": 69,
+      "start": 3956,
+      "end": 4028,
+      "text": "* [Čeština](https://cs.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Czech\")",
+      "kind": "block"
+    },
+    {
+      "id": 70,
+      "start": 4029,
+      "end": 4140,
+      "text": "* [Чӑвашла](https://cv.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD-11 \"Аполлон-11 – Chuvash\")",
+      "kind": "block"
+    },
+    {
+      "id": 71,
+      "start": 4141,
+      "end": 4213,
+      "text": "* [Cymraeg](https://cy.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Welsh\")",
+      "kind": "block"
+    },
+    {
+      "id": 72,
+      "start": 4214,
+      "end": 4285,
+      "text": "* [Dansk](https://da.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Danish\")",
+      "kind": "block"
+    },
+    {
+      "id": 73,
+      "start": 4286,
+      "end": 4359,
+      "text": "* [Deutsch](https://de.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – German\")",
+      "kind": "block"
+    },
+    {
+      "id": 74,
+      "start": 4360,
+      "end": 4470,
+      "text": "* [Ελληνικά](https://el.wikipedia.org/wiki/%CE%91%CF%80%CF%8C%CE%BB%CE%BB%CF%89%CE%BD_11 \"Απόλλων 11 – Greek\")",
+      "kind": "block"
+    },
+    {
+      "id": 75,
+      "start": 4471,
+      "end": 4549,
+      "text": "* [Esperanto](https://eo.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Esperanto\")",
+      "kind": "block"
+    },
+    {
+      "id": 76,
+      "start": 4550,
+      "end": 4622,
+      "text": "* [Español](https://es.wikipedia.org/wiki/Apolo_11 \"Apolo 11 – Spanish\")",
+      "kind": "block"
+    },
+    {
+      "id": 77,
+      "start": 4623,
+      "end": 4696,
+      "text": "* [Eesti](https://et.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Estonian\")",
+      "kind": "block"
+    },
+    {
+      "id": 78,
+      "start": 4697,
+      "end": 4770,
+      "text": "* [Euskara](https://eu.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Basque\")",
+      "kind": "block"
+    },
+    {
+      "id": 79,
+      "start": 4771,
+      "end": 4876,
+      "text": "* [فارسی](https://fa.wikipedia.org/wiki/%D8%A2%D9%BE%D9%88%D9%84%D9%88_%DB%B1%DB%B1 \"آپولو ۱۱ – Persian\")",
+      "kind": "block"
+    },
+    {
+      "id": 80,
+      "start": 4877,
+      "end": 4949,
+      "text": "* [Suomi](https://fi.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Finnish\")",
+      "kind": "block"
+    },
+    {
+      "id": 81,
+      "start": 4950,
+      "end": 5024,
+      "text": "* [Français](https://fr.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – French\")",
+      "kind": "block"
+    },
+    {
+      "id": 82,
+      "start": 5025,
+      "end": 5105,
+      "text": "* [Frysk](https://fy.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Western Frisian\")",
+      "kind": "block"
+    },
+    {
+      "id": 83,
+      "start": 5106,
+      "end": 5178,
+      "text": "* [Gaeilge](https://ga.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Irish\")",
+      "kind": "block"
+    },
+    {
+      "id": 84,
+      "start": 5179,
+      "end": 5253,
+      "text": "* [Galego](https://gl.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Galician\")",
+      "kind": "block"
+    },
+    {
+      "id": 85,
+      "start": 5254,
+      "end": 5383,
+      "text": "* [ગુજરાતી](https://gu.wikipedia.org/wiki/%E0%AA%8F%E0%AA%AA%E0%AB%8B%E0%AA%B2%E0%AB%8B_%E0%AB%A7%E0%AB%A7 \"એપોલો ૧૧ – Gujarati\")",
+      "kind": "block"
+    },
+    {
+      "id": 86,
+      "start": 5384,
+      "end": 5453,
+      "text": "* [Gaelg](https://gv.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Manx\")",
+      "kind": "block"
+    },
+    {
+      "id": 87,
+      "start": 5454,
+      "end": 5524,
+      "text": "* [Hausa](https://ha.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Hausa\")",
+      "kind": "block"
+    },
+    {
+      "id": 88,
+      "start": 5525,
+      "end": 5619,
+      "text": "* [עברית](https://he.wikipedia.org/wiki/%D7%90%D7%A4%D7%95%D7%9C%D7%95_11 \"אפולו 11 – Hebrew\")",
+      "kind": "block"
+    },
+    {
+      "id": 89,
+      "start": 5620,
+      "end": 5745,
+      "text": "* [हिन्दी](https://hi.wikipedia.org/wiki/%E0%A4%85%E0%A4%AA%E0%A5%8B%E0%A4%B2%E0%A5%8B_%E0%A5%A7%E0%A5%A7 \"अपोलो ११ – Hindi\")",
+      "kind": "block"
+    },
+    {
+      "id": 90,
+      "start": 5746,
+      "end": 5822,
+      "text": "* [Hrvatski](https://hr.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Croatian\")",
+      "kind": "block"
+    },
+    {
+      "id": 91,
+      "start": 5823,
+      "end": 5906,
+      "text": "* [Magyar](https://hu.wikipedia.org/wiki/Apollo%E2%80%9311 \"Apollo–11 – Hungarian\")",
+      "kind": "block"
+    },
+    {
+      "id": 92,
+      "start": 5907,
+      "end": 6012,
+      "text": "* [Հայերեն](https://hy.wikipedia.org/wiki/%D4%B1%D5%BA%D5%B8%D5%AC%D5%B8%D5%B6_11 \"Ապոլոն 11 – Armenian\")",
+      "kind": "block"
+    },
+    {
+      "id": 93,
+      "start": 6013,
+      "end": 6099,
+      "text": "* [Bahasa Indonesia](https://id.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Indonesian\")",
+      "kind": "block"
+    },
+    {
+      "id": 94,
+      "start": 6100,
+      "end": 6166,
+      "text": "* [Ido](https://io.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Ido\")",
+      "kind": "block"
+    },
+    {
+      "id": 95,
+      "start": 6167,
+      "end": 6268,
+      "text": "* [Íslenska](https://is.wikipedia.org/wiki/Tungllendingin_(1969) \"Tungllendingin (1969) – Icelandic\")",
+      "kind": "block"
+    },
+    {
+      "id": 96,
+      "start": 6269,
+      "end": 6344,
+      "text": "* [Italiano](https://it.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Italian\")",
+      "kind": "block"
+    },
+    {
+      "id": 97,
+      "start": 6345,
+      "end": 6442,
+      "text": "* [日本語](https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%9D%E3%83%AD11%E5%8F%B7 \"アポロ11号 – Japanese\")",
+      "kind": "block"
+    },
+    {
+      "id": 98,
+      "start": 6443,
+      "end": 6515,
+      "text": "* [Jawa](https://jv.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Javanese\")",
+      "kind": "block"
+    },
+    {
+      "id": 99,
+      "start": 6516,
+      "end": 6629,
+      "text": "* [ქართული](https://ka.wikipedia.org/wiki/%E1%83%90%E1%83%9E%E1%83%9D%E1%83%9A%E1%83%9D_11 \"აპოლო 11 – Georgian\")",
+      "kind": "block"
+    },
+    {
+      "id": 100,
+      "start": 6630,
+      "end": 6740,
+      "text": "* [Қазақша](https://kk.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD_11 \"Аполлон 11 – Kazakh\")",
+      "kind": "block"
+    },
+    {
+      "id": 101,
+      "start": 6741,
+      "end": 6867,
+      "text": "* [ಕನ್ನಡ](https://kn.wikipedia.org/wiki/%E0%B2%85%E0%B2%AA%E0%B3%8B%E0%B2%B2%E0%B3%8A_%E0%B3%A7%E0%B3%A7 \"ಅಪೋಲೊ ೧೧ – Kannada\")",
+      "kind": "block"
+    },
+    {
+      "id": 102,
+      "start": 6868,
+      "end": 6965,
+      "text": "* [한국어](https://ko.wikipedia.org/wiki/%EC%95%84%ED%8F%B4%EB%A1%9C_11%ED%98%B8 \"아폴로 11호 – Korean\")",
+      "kind": "block"
+    },
+    {
+      "id": 103,
+      "start": 6966,
+      "end": 7072,
+      "text": "* [کٲشُر](https://ks.wikipedia.org/wiki/%D8%A7%D9%BE%D9%88%D9%84%D9%88_%DB%B1%DB%B1 \"اپولو ۱۱ – Kashmiri\")",
+      "kind": "block"
+    },
+    {
+      "id": 104,
+      "start": 7073,
+      "end": 7145,
+      "text": "* [Kurdî](https://ku.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Kurdish\")",
+      "kind": "block"
+    },
+    {
+      "id": 105,
+      "start": 7146,
+      "end": 7217,
+      "text": "* [Latina](https://la.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Latin\")",
+      "kind": "block"
+    },
+    {
+      "id": 106,
+      "start": 7218,
+      "end": 7293,
+      "text": "* [Lombard](https://lmo.wikipedia.org/wiki/Apollo_XI \"Apollo XI – Lombard\")",
+      "kind": "block"
+    },
+    {
+      "id": 107,
+      "start": 7294,
+      "end": 7372,
+      "text": "* [Lietuvių](https://lt.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Lithuanian\")",
+      "kind": "block"
+    },
+    {
+      "id": 108,
+      "start": 7373,
+      "end": 7448,
+      "text": "* [Latviešu](https://lv.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Latvian\")",
+      "kind": "block"
+    },
+    {
+      "id": 109,
+      "start": 7449,
+      "end": 7525,
+      "text": "* [Malagasy](https://mg.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Malagasy\")",
+      "kind": "block"
+    },
+    {
+      "id": 110,
+      "start": 7526,
+      "end": 7609,
+      "text": "* [Minangkabau](https://min.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Minangkabau\")",
+      "kind": "block"
+    },
+    {
+      "id": 111,
+      "start": 7610,
+      "end": 7713,
+      "text": "* [Македонски](https://mk.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BE_11 \"Аполо 11 – Macedonian\")",
+      "kind": "block"
+    },
+    {
+      "id": 112,
+      "start": 7714,
+      "end": 7847,
+      "text": "* [മലയാളം](https://ml.wikipedia.org/wiki/%E0%B4%85%E0%B4%AA%E0%B5%8D%E0%B4%AA%E0%B5%8B%E0%B4%B3%E0%B5%8B_11 \"അപ്പോളോ 11 – Malayalam\")",
+      "kind": "block"
+    },
+    {
+      "id": 113,
+      "start": 7848,
+      "end": 7974,
+      "text": "* [मराठी](https://mr.wikipedia.org/wiki/%E0%A4%85%E0%A4%AA%E0%A5%8B%E0%A4%B2%E0%A5%8B_%E0%A5%A7%E0%A5%A7 \"अपोलो ११ – Marathi\")",
+      "kind": "block"
+    },
+    {
+      "id": 114,
+      "start": 7975,
+      "end": 8053,
+      "text": "* [Bahasa Melayu](https://ms.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Malay\")",
+      "kind": "block"
+    },
+    {
+      "id": 115,
+      "start": 8054,
+      "end": 8205,
+      "text": "* [မြန်မာဘာသာ](https://my.wikipedia.org/wiki/%E1%80%A1%E1%80%95%E1%80%AD%E1%80%AF%E1%80%9C%E1%80%AD%E1%80%AF_%E1%81%81%E1%81%81 \"အပိုလို ၁၁ – Burmese\")",
+      "kind": "block"
+    },
+    {
+      "id": 116,
+      "start": 8206,
+      "end": 8281,
+      "text": "* [Nederlands](https://nl.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Dutch\")",
+      "kind": "block"
+    },
+    {
+      "id": 117,
+      "start": 8282,
+      "end": 8372,
+      "text": "* [Norsk nynorsk](https://nn.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Norwegian Nynorsk\")",
+      "kind": "block"
+    },
+    {
+      "id": 118,
+      "start": 8373,
+      "end": 8461,
+      "text": "* [Norsk bokmål](https://no.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Norwegian Bokmål\")",
+      "kind": "block"
+    },
+    {
+      "id": 119,
+      "start": 8462,
+      "end": 8536,
+      "text": "* [Occitan](https://oc.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Occitan\")",
+      "kind": "block"
+    },
+    {
+      "id": 120,
+      "start": 8537,
+      "end": 8660,
+      "text": "* [ଓଡ଼ିଆ](https://or.wikipedia.org/wiki/%E0%AC%86%E0%AC%AA%E0%AD%8B%E0%AC%B2%E0%AD%8B_%E0%AD%A7%E0%AD%A7 \"ଆପୋଲୋ ୧୧ – Odia\")",
+      "kind": "block"
+    },
+    {
+      "id": 121,
+      "start": 8661,
+      "end": 8733,
+      "text": "* [Polski](https://pl.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Polish\")",
+      "kind": "block"
+    },
+    {
+      "id": 122,
+      "start": 8734,
+      "end": 8816,
+      "text": "* [Piemontèis](https://pms.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Piedmontese\")",
+      "kind": "block"
+    },
+    {
+      "id": 123,
+      "start": 8817,
+      "end": 8922,
+      "text": "* [پنجابی](https://pnb.wikipedia.org/wiki/%D8%A7%D9%BE%D9%88%D9%84%D9%88_11 \"اپولو 11 – Western Punjabi\")",
+      "kind": "block"
+    },
+    {
+      "id": 124,
+      "start": 8923,
+      "end": 9026,
+      "text": "* [پښتو](https://ps.wikipedia.org/wiki/%D8%A7%D9%BE%D9%88%D9%84%D9%88_%DB%B1%DB%B1 \"اپولو ۱۱ – Pashto\")",
+      "kind": "block"
+    },
+    {
+      "id": 125,
+      "start": 9027,
+      "end": 9106,
+      "text": "* [Português](https://pt.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Portuguese\")",
+      "kind": "block"
+    },
+    {
+      "id": 126,
+      "start": 9107,
+      "end": 9180,
+      "text": "* [Romnă](https://ro.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Romanian\")",
+      "kind": "block"
+    },
+    {
+      "id": 127,
+      "start": 9181,
+      "end": 9292,
+      "text": "* [Русский](https://ru.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD-11 \"Аполлон-11 – Russian\")",
+      "kind": "block"
+    },
+    {
+      "id": 128,
+      "start": 9293,
+      "end": 9405,
+      "text": "* [Саха тыла](https://sah.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD_11 \"Аполлон 11 – Yakut\")",
+      "kind": "block"
+    },
+    {
+      "id": 129,
+      "start": 9406,
+      "end": 9511,
+      "text": "* [Srpskohrvatski / српскохрватски](https://sh.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Serbo-Croatian\")",
+      "kind": "block"
+    },
+    {
+      "id": 130,
+      "start": 9512,
+      "end": 9612,
+      "text": "* [සිංහල](https://si.wikipedia.org/wiki/%E0%B6%87%E0%B6%B4%E0%B6%BD%E0%B7%9D_11 \"ඇපලෝ 11 – Sinhala\")",
+      "kind": "block"
+    },
+    {
+      "id": 131,
+      "start": 9613,
+      "end": 9705,
+      "text": "* [Simple English](https://simple.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Simple English\")",
+      "kind": "block"
+    },
+    {
+      "id": 132,
+      "start": 9706,
+      "end": 9782,
+      "text": "* [Slovenčina](https://sk.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Slovak\")",
+      "kind": "block"
+    },
+    {
+      "id": 133,
+      "start": 9783,
+      "end": 9863,
+      "text": "* [Slovenščina](https://sl.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Slovenian\")",
+      "kind": "block"
+    },
+    {
+      "id": 134,
+      "start": 9864,
+      "end": 9944,
+      "text": "* [Anarškiel](https://smn.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Inari Sami\")",
+      "kind": "block"
+    },
+    {
+      "id": 135,
+      "start": 9945,
+      "end": 10018,
+      "text": "* [Shqip](https://sq.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Albanian\")",
+      "kind": "block"
+    },
+    {
+      "id": 136,
+      "start": 10019,
+      "end": 10124,
+      "text": "* [Српски / srpski](https://sr.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BE_11 \"Аполо 11 – Serbian\")",
+      "kind": "block"
+    },
+    {
+      "id": 137,
+      "start": 10125,
+      "end": 10212,
+      "text": "* [Seeltersk](https://stq.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Saterland Frisian\")",
+      "kind": "block"
+    },
+    {
+      "id": 138,
+      "start": 10213,
+      "end": 10287,
+      "text": "* [Svenska](https://sv.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Swedish\")",
+      "kind": "block"
+    },
+    {
+      "id": 139,
+      "start": 10288,
+      "end": 10364,
+      "text": "* [Kiswahili](https://sw.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Swahili\")",
+      "kind": "block"
+    },
+    {
+      "id": 140,
+      "start": 10365,
+      "end": 10503,
+      "text": "* [தமிழ்](https://ta.wikipedia.org/wiki/%E0%AE%85%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AF%8B_11 \"அப்பல்லோ 11 – Tamil\")",
+      "kind": "block"
+    },
+    {
+      "id": 141,
+      "start": 10504,
+      "end": 10629,
+      "text": "* [ไทย](https://th.wikipedia.org/wiki/%E0%B8%AD%E0%B8%B0%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B9%82%E0%B8%A5_11 \"อะพอลโล 11 – Thai\")",
+      "kind": "block"
+    },
+    {
+      "id": 142,
+      "start": 10630,
+      "end": 10704,
+      "text": "* [Tagalog](https://tl.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Tagalog\")",
+      "kind": "block"
+    },
+    {
+      "id": 143,
+      "start": 10705,
+      "end": 10778,
+      "text": "* [Türkçe](https://tr.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Turkish\")",
+      "kind": "block"
+    },
+    {
+      "id": 144,
+      "start": 10779,
+      "end": 10853,
+      "text": "* [Xitsonga](https://ts.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Tsonga\")",
+      "kind": "block"
+    },
+    {
+      "id": 145,
+      "start": 10854,
+      "end": 10970,
+      "text": "* [Українська](https://uk.wikipedia.org/wiki/%D0%90%D0%BF%D0%BE%D0%BB%D0%BB%D0%BE%D0%BD-11 \"Аполлон-11 – Ukrainian\")",
+      "kind": "block"
+    },
+    {
+      "id": 146,
+      "start": 10971,
+      "end": 11062,
+      "text": "* [اردو](https://ur.wikipedia.org/wiki/%D8%A7%D9%BE%D8%A7%D9%84%D9%88_11 \"اپالو 11 – Urdu\")",
+      "kind": "block"
+    },
+    {
+      "id": 147,
+      "start": 11063,
+      "end": 11147,
+      "text": "* [Oʻzbekcha / ўзбекча](https://uz.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Uzbek\")",
+      "kind": "block"
+    },
+    {
+      "id": 148,
+      "start": 11148,
+      "end": 11223,
+      "text": "* [Vèneto](https://vec.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Venetian\")",
+      "kind": "block"
+    },
+    {
+      "id": 149,
+      "start": 11224,
+      "end": 11304,
+      "text": "* [Tiếng Việt](https://vi.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Vietnamese\")",
+      "kind": "block"
+    },
+    {
+      "id": 150,
+      "start": 11305,
+      "end": 11378,
+      "text": "* [Winaray](https://war.wikipedia.org/wiki/Apollo_11 \"Apollo 11 – Waray\")",
+      "kind": "block"
+    },
+    {
+      "id": 151,
+      "start": 11379,
+      "end": 11470,
+      "text": "* [吴语](https://wuu.wikipedia.org/wiki/%E9%98%BF%E6%B3%A2%E7%BD%9711%E5%8F%B7 \"阿波罗11号 – Wu\")",
+      "kind": "block"
+    },
+    {
+      "id": 152,
+      "start": 11471,
+      "end": 11567,
+      "text": "* [ייִדיש](https://yi.wikipedia.org/wiki/%D7%90%D7%A4%D7%90%D7%9C%D7%90_11 \"אפאלא 11 – Yiddish\")",
+      "kind": "block"
+    },
+    {
+      "id": 153,
+      "start": 11568,
+      "end": 11669,
+      "text": "* [粵語](https://zh-yue.wikipedia.org/wiki/%E9%98%BF%E6%B3%A2%E7%BE%8511%E8%99%9F \"阿波羅11號 – Cantonese\")",
+      "kind": "block"
+    },
+    {
+      "id": 154,
+      "start": 11670,
+      "end": 11765,
+      "text": "* [中文](https://zh.wikipedia.org/wiki/%E9%98%BF%E6%B3%A2%E7%BD%9711%E5%8F%B7 \"阿波罗11号 – Chinese\")",
+      "kind": "block"
+    },
+    {
+      "id": 155,
+      "start": 11767,
+      "end": 11883,
+      "text": "[Edit links](https://www.wikidata.org/wiki/Special:EntityPage/Q43653#sitelinks-wikipedia \"Edit interlanguage links\")",
+      "kind": "sentence"
+    },
+    {
+      "id": 156,
+      "start": 11885,
+      "end": 11941,
+      "text": "* [Article](/wiki/Apollo_11 \"View the content page [c]\")",
+      "kind": "block"
+    },
+    {
+      "id": 157,
+      "start": 11942,
+      "end": 12019,
+      "text": "* [Talk](/wiki/Talk:Apollo_11 \"Discuss improvements to the content page [t]\")",
+      "kind": "block"
+    },
+    {
+      "id": 158,
+      "start": 12021,
+      "end": 12046,
+      "text": "* [Read](/wiki/Apollo_11)",
+      "kind": "block"
+    },
+    {
+      "id": 159,
+      "start": 12047,
+      "end": 12128,
+      "text": "* [View source](/w/index.php?title=Apollo_11&action=edit \"This page is protected.",
+      "kind": "block"
+    },
+    {
+      "id": 160,
+      "start": 12130,
+      "end": 12159,
+      "text": "You can view its source [e]\")",
+      "kind": "sentence"
+    },
+    {
+      "id": 161,
+      "start": 12160,
+      "end": 12255,
+      "text": "* [View history](/w/index.php?title=Apollo_11&action=history \"Past revisions of this page [h]\")",
+      "kind": "block"
+    },
+    {
+      "id": 163,
+      "start": 12307,
+      "end": 12312,
+      "text": "Tools",
+      "kind": "sentence"
+    },
+    {
+      "id": 164,
+      "start": 12314,
+      "end": 12321,
+      "text": "Actions",
+      "kind": "sentence"
+    },
+    {
+      "id": 165,
+      "start": 12323,
+      "end": 12348,
+      "text": "* [Read](/wiki/Apollo_11)",
+      "kind": "block"
+    },
+    {
+      "id": 166,
+      "start": 12349,
+      "end": 12430,
+      "text": "* [View source](/w/index.php?title=Apollo_11&action=edit \"This page is protected.",
+      "kind": "block"
+    },
+    {
+      "id": 167,
+      "start": 12432,
+      "end": 12461,
+      "text": "You can view its source [e]\")",
+      "kind": "sentence"
+    },
+    {
+      "id": 168,
+      "start": 12462,
+      "end": 12557,
+      "text": "* [View history](/w/index.php?title=Apollo_11&action=history \"Past revisions of this page [h]\")",
+      "kind": "block"
+    }
+  ],
+  "supplied_characters": 10554,
+  "excluded_relevant_span": {
+    "id": 241,
+    "start": 20291,
+    "end": 20365,
+    "text": "| Landing date | July 20, 1969, 20:17:40 UTC[[10]](#cite_note-ALSJ_1-10) |",
+    "kind": "block"
+  }
+}

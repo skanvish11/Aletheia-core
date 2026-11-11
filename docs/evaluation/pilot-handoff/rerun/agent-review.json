@@ -1,0 +1,42 @@
+{
+  "reviewer_type": "agent",
+  "human_review": false,
+  "scope": "Both completed outputs inspected against saved excerpts; selected failed/partial traces inspected for root causes.",
+  "findings": [
+    {
+      "case_id": "b0023",
+      "severity": "high",
+      "finding": "False True result survives the new semantic checker. Claim says discovery in 1798. Cited passages place discovery in 1799 and describe 1798 as the Egyptian campaign. The explanation explicitly mentions both years yet affirms True. The original claim text is retained, so the remaining defect is evidence interpretation and semantic checking, not dropped input.",
+      "status": "unresolved"
+    },
+    {
+      "case_id": "b0026",
+      "severity": "medium",
+      "finding": "The True verdict matches the proposed label and is directly supported by the official UNFCCC adoption passage and UN treaty registry passage. One extra evidence item cites entry into force in November 2016 and incorrectly marks this as direct support for the December 2015 adoption date. Citation validity alone is not support accuracy.",
+      "status": "partially_supported_output"
+    },
+    {
+      "case_id": "b0002",
+      "severity": "high",
+      "finding": "An assessment marks support while its rationale says Mercury is closer than Venus. Other contrary evidence is inconsistently scope-matched. The run remains partial.",
+      "status": "unresolved"
+    },
+    {
+      "case_id": "b0004",
+      "severity": "high",
+      "finding": "The interpreter asks which Europan region or habitat the general existence claim refers to. This adds unnecessary scope requirements instead of researching the assertion.",
+      "status": "unresolved"
+    },
+    {
+      "case_ids": [
+        "b0019",
+        "b0029"
+      ],
+      "severity": "medium",
+      "finding": "These 2030 counterfactual predictions have proposed insufficient-evidence labels, while the backend explicitly requests clarification for predictions. This is a benchmark/contract mismatch; no cases or labels were changed.",
+      "status": "needs_label_and_contract_review"
+    }
+  ],
+  "acceptance": "not_accepted_as_quality_improvement",
+  "citation_metrics": "Human-reviewed citation precision and coverage remain pending."
+}
