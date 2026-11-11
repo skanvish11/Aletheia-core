@@ -1,0 +1,1040 @@
+{
+  "planned": 30,
+  "recorded": 30,
+  "not_run": 0,
+  "human_acceptance_complete": false,
+  "note": "Provisional label comparison only. Human label/citation review is separate; failures remain in denominators.",
+  "all": {
+    "count": 30,
+    "correct_by_label_rules": 1,
+    "pending_correction_review": 0,
+    "provisional_accuracy_lower_bound": 0.03333333333333333,
+    "provisional_accuracy_upper_bound": 0.03333333333333333,
+    "statuses": {
+      "partial": 5,
+      "failed": 11,
+      "needs_clarification": 12,
+      "completed": 2
+    },
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null
+      }
+    }
+  },
+  "excluding_contested": {
+    "count": 30,
+    "correct_by_label_rules": 1,
+    "pending_correction_review": 0,
+    "provisional_accuracy_lower_bound": 0.03333333333333333,
+    "provisional_accuracy_upper_bound": 0.03333333333333333,
+    "statuses": {
+      "partial": 5,
+      "failed": 11,
+      "needs_clarification": 12,
+      "completed": 2
+    },
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "precision": null,
+        "recall": null
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.0,
+        "recall": null
+      }
+    }
+  },
+  "diagnostics": {
+    "count": 30,
+    "decision_label_agreement": 0.03333333333333333,
+    "label_agreement_wilson95": [
+      0.005908590381612455,
+      0.16670390991409173
+    ],
+    "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+    "confusion_matrix": {
+      "true": {
+        "no_decision": 5,
+        "true": 1
+      },
+      "false": {
+        "no_decision": 6
+      },
+      "almost": {
+        "no_decision": 5,
+        "true": 1
+      },
+      "insufficient_evidence": {
+        "no_decision": 6
+      },
+      "conflicting_evidence": {
+        "no_decision": 6
+      }
+    },
+    "per_class": {
+      "true": {
+        "support": 6,
+        "precision": 0.5,
+        "recall": 0.16666666666666666,
+        "f1": 0.25
+      },
+      "false": {
+        "support": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "almost": {
+        "support": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "insufficient_evidence": {
+        "support": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      },
+      "conflicting_evidence": {
+        "support": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": 0.0
+      }
+    },
+    "macro_f1_represented_classes": 0.05,
+    "completion_rate": 0.06666666666666667,
+    "decisive_coverage": 0.06666666666666667,
+    "selective_label_accuracy": 0.5,
+    "abstention_precision_exact_reason": null,
+    "abstention_recall_exact_reason": 0.0,
+    "unnecessary_abstention_rate": 0.0,
+    "latency_seconds": {
+      "observed": 30,
+      "p50": 23.939588917000947,
+      "p95": 63.46391862499877
+    },
+    "network_attempts_observed": 380,
+    "network_attempts_missing_cases": 0,
+    "observed_tokens": {
+      "prompt_tokens": 939529,
+      "completion_tokens": 65573
+    },
+    "usage_records": 191,
+    "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+    "billed_cost": null,
+    "cost_per_correct_result": null,
+    "citation_support_precision": null,
+    "citation_coverage": null,
+    "citation_review": "pending_human_review"
+  },
+  "by_split": {
+    "development": {
+      "count": 30,
+      "decision_label_agreement": 0.03333333333333333,
+      "label_agreement_wilson95": [
+        0.005908590381612455,
+        0.16670390991409173
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 5,
+          "true": 1
+        },
+        "false": {
+          "no_decision": 6
+        },
+        "almost": {
+          "no_decision": 5,
+          "true": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 6
+        },
+        "conflicting_evidence": {
+          "no_decision": 6
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 6,
+          "precision": 0.5,
+          "recall": 0.16666666666666666,
+          "f1": 0.25
+        },
+        "false": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.05,
+      "completion_rate": 0.06666666666666667,
+      "decisive_coverage": 0.06666666666666667,
+      "selective_label_accuracy": 0.5,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 30,
+        "p50": 23.939588917000947,
+        "p95": 63.46391862499877
+      },
+      "network_attempts_observed": 380,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 939529,
+        "completion_tokens": 65573
+      },
+      "usage_records": 191,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    }
+  },
+  "by_domain": {
+    "economics": {
+      "count": 5,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "no_decision": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.0,
+      "decisive_coverage": 0.0,
+      "selective_label_accuracy": null,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 2.0751601250012754,
+        "p95": 61.59506358300132
+      },
+      "network_attempts_observed": 61,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 162049,
+        "completion_tokens": 10206
+      },
+      "usage_records": 30,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "health": {
+      "count": 5,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "no_decision": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.0,
+      "decisive_coverage": 0.0,
+      "selective_label_accuracy": null,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 2.349800125000911,
+        "p95": 40.82245312500163
+      },
+      "network_attempts_observed": 31,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 76361,
+        "completion_tokens": 6817
+      },
+      "usage_records": 20,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "history": {
+      "count": 5,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "true": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.2,
+      "decisive_coverage": 0.2,
+      "selective_label_accuracy": 0.0,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 25.39908537500014,
+        "p95": 27.169430416000978
+      },
+      "network_attempts_observed": 34,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 85435,
+        "completion_tokens": 7351
+      },
+      "usage_records": 20,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "public_policy": {
+      "count": 5,
+      "decision_label_agreement": 0.2,
+      "label_agreement_wilson95": [
+        0.03622410863243014,
+        0.6244653702374747
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "true": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "no_decision": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.2,
+      "completion_rate": 0.2,
+      "decisive_coverage": 0.2,
+      "selective_label_accuracy": 1.0,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 23.85134333300084,
+        "p95": 49.27963279100004
+      },
+      "network_attempts_observed": 48,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 95707,
+        "completion_tokens": 7598
+      },
+      "usage_records": 25,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "science": {
+      "count": 5,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "no_decision": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.0,
+      "decisive_coverage": 0.0,
+      "selective_label_accuracy": null,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 55.7815123750006,
+        "p95": 63.46391862499877
+      },
+      "network_attempts_observed": 97,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 217915,
+        "completion_tokens": 13917
+      },
+      "usage_records": 43,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "technology": {
+      "count": 5,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        0,
+        0.43448246478317476
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 1
+        },
+        "false": {
+          "no_decision": 1
+        },
+        "almost": {
+          "no_decision": 1
+        },
+        "insufficient_evidence": {
+          "no_decision": 1
+        },
+        "conflicting_evidence": {
+          "no_decision": 1
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 1,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.0,
+      "decisive_coverage": 0.0,
+      "selective_label_accuracy": null,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 5,
+        "p50": 53.38357804200132,
+        "p95": 65.16718191699692
+      },
+      "network_attempts_observed": 109,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 302062,
+        "completion_tokens": 19684
+      },
+      "usage_records": 53,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "count": 12,
+      "decision_label_agreement": 0.08333333333333333,
+      "label_agreement_wilson95": [
+        0.014865094404917095,
+        0.35387991114111694
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {
+          "no_decision": 5,
+          "true": 1
+        },
+        "false": {
+          "no_decision": 6
+        },
+        "almost": {},
+        "insufficient_evidence": {},
+        "conflicting_evidence": {}
+      },
+      "per_class": {
+        "true": {
+          "support": 6,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "false": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "almost": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "insufficient_evidence": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "conflicting_evidence": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1_represented_classes": 0.14285714285714285,
+      "completion_rate": 0.08333333333333333,
+      "decisive_coverage": 0.08333333333333333,
+      "selective_label_accuracy": 1.0,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": null,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 12,
+        "p50": 40.82245312500163,
+        "p95": 63.46391862499877
+      },
+      "network_attempts_observed": 226,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 547415,
+        "completion_tokens": 36612
+      },
+      "usage_records": 109,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "hard": {
+      "count": 12,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        2.7755575615628914e-17,
+        0.24249400665524085
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {},
+        "false": {},
+        "almost": {},
+        "insufficient_evidence": {
+          "no_decision": 6
+        },
+        "conflicting_evidence": {
+          "no_decision": 6
+        }
+      },
+      "per_class": {
+        "true": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "false": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "almost": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "insufficient_evidence": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "conflicting_evidence": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.0,
+      "decisive_coverage": 0.0,
+      "selective_label_accuracy": null,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": 0.0,
+      "unnecessary_abstention_rate": null,
+      "latency_seconds": {
+        "observed": 12,
+        "p50": 1.5786132079992967,
+        "p95": 65.16718191699692
+      },
+      "network_attempts_observed": 72,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 157164,
+        "completion_tokens": 11813
+      },
+      "usage_records": 38,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    },
+    "medium": {
+      "count": 6,
+      "decision_label_agreement": 0.0,
+      "label_agreement_wilson95": [
+        2.7755575615628914e-17,
+        0.3903342879021653
+      ],
+      "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+      "confusion_matrix": {
+        "true": {},
+        "false": {},
+        "almost": {
+          "no_decision": 5,
+          "true": 1
+        },
+        "insufficient_evidence": {},
+        "conflicting_evidence": {}
+      },
+      "per_class": {
+        "true": {
+          "support": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0
+        },
+        "false": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "almost": {
+          "support": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        "insufficient_evidence": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        },
+        "conflicting_evidence": {
+          "support": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null
+        }
+      },
+      "macro_f1_represented_classes": 0.0,
+      "completion_rate": 0.16666666666666666,
+      "decisive_coverage": 0.16666666666666666,
+      "selective_label_accuracy": 0.0,
+      "abstention_precision_exact_reason": null,
+      "abstention_recall_exact_reason": null,
+      "unnecessary_abstention_rate": 0.0,
+      "latency_seconds": {
+        "observed": 6,
+        "p50": 23.85134333300084,
+        "p95": 57.23167941700012
+      },
+      "network_attempts_observed": 82,
+      "network_attempts_missing_cases": 0,
+      "observed_tokens": {
+        "prompt_tokens": 234950,
+        "completion_tokens": 17148
+      },
+      "usage_records": 44,
+      "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+      "billed_cost": null,
+      "cost_per_correct_result": null,
+      "citation_support_precision": null,
+      "citation_coverage": null,
+      "citation_review": "pending_human_review"
+    }
+  },
+  "reviewed_only": {
+    "count": 0,
+    "decision_label_agreement": null,
+    "label_agreement_wilson95": null,
+    "interval_note": "Descriptive binomial interval; assumes independent claims. Not uncertainty about human truth or a population traffic estimate.",
+    "confusion_matrix": {
+      "true": {},
+      "false": {},
+      "almost": {},
+      "insufficient_evidence": {},
+      "conflicting_evidence": {}
+    },
+    "per_class": {
+      "true": {
+        "support": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "false": {
+        "support": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "almost": {
+        "support": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "insufficient_evidence": {
+        "support": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      },
+      "conflicting_evidence": {
+        "support": 0,
+        "precision": null,
+        "recall": null,
+        "f1": null
+      }
+    },
+    "macro_f1_represented_classes": null,
+    "completion_rate": null,
+    "decisive_coverage": null,
+    "selective_label_accuracy": null,
+    "abstention_precision_exact_reason": null,
+    "abstention_recall_exact_reason": null,
+    "unnecessary_abstention_rate": null,
+    "latency_seconds": {
+      "observed": 0,
+      "p50": null,
+      "p95": null
+    },
+    "network_attempts_observed": 0,
+    "network_attempts_missing_cases": 0,
+    "observed_tokens": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "usage_records": 0,
+    "usage_note": "Observed model usage only; missing reports and interrupted attempts are unknown.",
+    "billed_cost": null,
+    "cost_per_correct_result": null,
+    "citation_support_precision": null,
+    "citation_coverage": null,
+    "citation_review": "pending_human_review"
+  }
+}

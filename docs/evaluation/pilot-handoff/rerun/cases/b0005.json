@@ -1,0 +1,4273 @@
+{
+  "id": "b0005",
+  "live": true,
+  "investigation": {
+    "id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+    "claim": "The Younger Dryas cooling event was triggered by an extraterrestrial impact approximately 12,800 years ago.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:29:50.536327Z",
+    "started_at": "2026-11-10T05:29:50.739009Z",
+    "finished_at": "2026-11-10T05:30:53.829943Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "events": "/investigations/1970d6a3-76af-4b29-8ef5-b2b1af559ec8/events",
+      "evidence": "/investigations/1970d6a3-76af-4b29-8ef5-b2b1af559ec8/evidence",
+      "comparison": "/investigations/1970d6a3-76af-4b29-8ef5-b2b1af559ec8/comparison",
+      "refresh": "/investigations/1970d6a3-76af-4b29-8ef5-b2b1af559ec8/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012825211000262",
+        "canonical_url": "https://www.sciencedirect.com/science/article/abs/pii/S0012825211000262",
+        "title": "The Younger Dryas impact hypothesis: A requiem",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:03.565064Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a0e3208cd3080b23471b97977a24b91c300ec83395d5ec4017bec34006c2c620",
+        "duplicate_group": "a0e3208cd3080b23471b97977a24b91c300ec83395d5ec4017bec34006c2c620",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "url": "https://research-portal.uu.nl/en/publications/the-younger-dryas-impact-hypothesis-a-critical-review",
+        "canonical_url": "https://research-portal.uu.nl/en/publications/the-younger-dryas-impact-hypothesis-a-critical-review",
+        "title": "The Younger Dryas impact hypothesis: A critical review - Utrecht University",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:13.020234Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "0309d3e88caffca22879805d8e953bc31a5ce1ad7e799a2d180f6b8826e56369",
+        "duplicate_group": "0309d3e88caffca22879805d8e953bc31a5ce1ad7e799a2d180f6b8826e56369",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "url": "https://www.whoi.edu/cms/files/Cheng_etal_2020_283226.pdf",
+        "canonical_url": "https://www.whoi.edu/cms/files/Cheng_etal_2020_283226.pdf",
+        "title": "Timing and structure of the Younger Dryas event and its ...",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:17.055259Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "57afa233dd4eadf9642786aa5a231cc4133299b9caa2d4584447d90413550fb6",
+        "duplicate_group": "57afa233dd4eadf9642786aa5a231cc4133299b9caa2d4584447d90413550fb6",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas_impact_hypothesis",
+        "canonical_url": "https://en.wikipedia.org/wiki/Younger_Dryas_impact_hypothesis",
+        "title": "Younger Dryas impact hypothesis - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:21.089504Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "b832c914dc9c88863fde14dcd5c53aef935e8fa606e09bc3ff0ad94588b67e42",
+        "duplicate_group": "b832c914dc9c88863fde14dcd5c53aef935e8fa606e09bc3ff0ad94588b67e42",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+        "canonical_url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+        "title": "Younger Dryas - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:35.442913Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "fb3d2f141f77eb95969232aa640ea8f456fc741faae142a87594a08429b18028",
+        "duplicate_group": "fb3d2f141f77eb95969232aa640ea8f456fc741faae142a87594a08429b18028",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "url": "https://www.youtube.com/watch?v=DE3NsjchgZA",
+        "canonical_url": "https://www.youtube.com/watch?v=DE3NsjchgZA",
+        "title": "New Evidence for Giant Impact 12800 Years Ago? Let's Discuss",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:30:38.505180Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "8604d672ea428a26fce5ba378b659d658457a9b42d1ec2fbea692e547fb6004a",
+        "duplicate_group": "8604d672ea428a26fce5ba378b659d658457a9b42d1ec2fbea692e547fb6004a",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "f8e1d87e-4d09-4d6f-9aac-9099257ddf54",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+            "span_ids": [
+              78,
+              85,
+              86,
+              88,
+              95
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The reviewed source describes the Younger Dryas impact hypothesis as suggesting an extraterrestrial impact ~12,900 years ago triggering climate and extinction events. However, it documents that all original impact signatures have failed independent corroboration, seven of 12 lines of evidence proven",
+          "publisher": "Elsevier",
+          "origin": "Earth-Science Reviews, Vol 106, Issues 3–4 (2011)",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            78,
+            85,
+            86,
+            88,
+            95
+          ],
+          "provenance_note": "The source both describes the hypothesis and provides detailed evidence refuting it. Span 78 states the hypothesis claims; spans 85-88 provide chronological and extinction context; span 95 criticizes early excesses. Independence unknown as single review article.",
+          "rationale": "The assertion that an extraterrestrial impact approximately 12,800 years ago triggered the Younger Dryas cooling event is contradicted by the source's comprehensive review showing no corroborated impact signatures. The hypothesis is described as 'a recent theory' and the review documents that 'none'",
+          "limitations": [
+            "Source is a 2011 review evaluating a hypothesis first proposed ~2007, so cannot address subsequent research",
+            "Does not present original impact data, only secondary evaluation of claimed evidence",
+            "Does not independently date the YD onset or megafaunal extinctions"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "timeframe",
+              "explanation": "Source cites ~12,900 years ago; assertion uses ~12,800 years ago - a 100-year difference within typical calibration uncertainty but technically distinct"
+            },
+            {
+              "type": "narrow_scope",
+              "dimension": "evidence_strength",
+              "explanation": "Source evaluates 12 claimed impact signatures; all fail corroboration, but does not address potential future evidence or alternative mechanisms"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              78
+            ],
+            "start": 8185,
+            "end": 8542,
+            "text": "A recent and controversial theory attributes the onset of the Younger Dryas (YD) climate interval, extinction of large mammalian fauna across North America, demise of the North American Clovis culture, and a range of other effects ~12,900 years ago to an extraterrestrial impact event (Firestone et al., 2007a, Kennett et al., 2009a, Kennett et al., 2009b).",
+            "quote_hash": "4beb78bb0dd8e05e7e0dca3b6dff996dcfaac53525ec78fef079c5cec170241b"
+          },
+          {
+            "span_ids": [
+              85,
+              86
+            ],
+            "start": 9764,
+            "end": 10357,
+            "text": "Post-glacial warming during the Bølling–Allerød period reversed starting about 12,900 cal BP (calibrated years before present), with colder conditions prevailing during the ~1300-year Younger Dryas (YD) interval (Broecker et al., 2010, Meltzer and Holliday, 2010). In North America, an estimated 33 genera of mammalian megafauna (fauna >100 kg; e.g., mammoths, mastodons, giant short-faced bear, saber-tooth tigers; Barnosky et al., 2004) went extinct at about this time, followed shortly thereafter by extinction of ~50 mammalian genera in South America (Barnosky et al., 2004, Fiedel, 2009).",
+            "quote_hash": "000a8463be2cf39adfd230ef56a4a5948e810d16fee43307852c47149a6beffc"
+          },
+          {
+            "span_ids": [
+              88
+            ],
+            "start": 10493,
+            "end": 10646,
+            "text": "The beginning of the YD coincides approximately with the end of the Paleoindian Clovis-type lithic technology (Haynes, 2010, Meltzer and Holliday, 2010).",
+            "quote_hash": "39f34ae02946440b437157a58142dc068269244ab3ca32da7af72f1be09c249b"
+          },
+          {
+            "span_ids": [
+              95
+            ],
+            "start": 11727,
+            "end": 11928,
+            "text": "These early sources contain a number of suggestions – impact origin of glacial drumlins, supernova eruptions leading to “deadly nerve toxins” in Pleistocene algal mats, etc. – that are highly unlikely.",
+            "quote_hash": "21c79eded16d2e84f2f178838552fcf5bd06f3b63091196491379e7c106c8ca0"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "746b899a-03bf-4543-a42a-5ca65718dee3",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+            "span_ids": [
+              14,
+              22,
+              23,
+              66
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Elsevier Ltd",
+          "origin": "van Hoesel et al. 2014, Quaternary Science Reviews",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            14,
+            22,
+            23,
+            66
+          ],
+          "provenance_note": "Spans 14 and 66 state the hypothesis and the age discrepancy claim; spans 22-23 and 102-103 stress that if markers were deposited at different times, they cannot be linked to the same event; the review does not confirm a single trigger event.",
+          "rationale": "The source presents the Younger Dryas impact hypothesis, notes evidence both for and against, and explicitly identifies timing discrepancies up to two centuries between sites, undermining a single instantaneous trigger. It does not support the assertion of a single extraterrestrial impact at exactly",
+          "limitations": [
+            "review does not resolve the timing discrepancies",
+            "scope limited to reported evidence, not comprehensive geological record"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "timeframe",
+              "explanation": "Age discrepancies of up to two centuries between impact-associated sites are highlighted, contradicting a single instantaneous 12,800-year-ago trigger."
+            },
+            {
+              "type": "misleading_comparison",
+              "dimension": "quantity",
+              "explanation": "Asserts 'multiple extraterrestrial airbursts or impacts' but original claim specifies a single event."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              14
+            ],
+            "start": 1176,
+            "end": 1388,
+            "text": "The Younger Dryas impact hypothesis suggests that multiple extraterrestrial airbursts or impacts resulted in the Younger Dryas cooling, extensive wildfires, megafaunal extinctions and changes in human population.",
+            "quote_hash": "4ef3cf3e30816b9ad76349c394b19ce69bff0385db45a62ed0fef198da05a4b9"
+          },
+          {
+            "span_ids": [
+              22,
+              23
+            ],
+            "start": 2310,
+            "end": 2835,
+            "text": "We show that there are three challenges related to the timing of the event: accurate age control for some of the sites that are reported to provide evidence for the impact, linking these sites to the onset of the Younger Dryas and, most importantly, an apparent age discrepancy of up to two centuries between different sites associated with the proposed impact event. We would like to stress that if the markers at different locations have been deposited at different points in time, they cannot be related to the same event.",
+            "quote_hash": "1bc7baacfafdcd1f3da08a915a4a994f8639000dcd8cba2b9f870c2a2180dde1"
+          },
+          {
+            "span_ids": [
+              66
+            ],
+            "start": 6079,
+            "end": 6446,
+            "text": "We show that there are three challenges related to the timing of the event: accurate age control for some of the sites that are reported to provide evidence for the impact, linking these sites to the onset of the Younger Dryas and, most importantly, an apparent age discrepancy of up to two centuries between different sites associated with the proposed impact event.",
+            "quote_hash": "7d0ce9eb39329bb00ce5635b69fec4e5aae606e79d3e0b2d47cfa58d63f351f5"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "e1a9e4d3-b1ec-4593-bfb5-2e16a3b18b8a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+            "span_ids": [
+              5,
+              8,
+              33,
+              34
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The study documents that the Younger Dryas onset occurred at 12,870 ± 30 B.P. in the North Atlantic and Antarctic termination began at ∼11,900 B.P., but finds no support for an extraterrestrial impact trigger. Dating precision is high (2σ 15-40 yr), and the trigger hypothesis is discussed but not",
+          "publisher": "PNAS",
+          "origin": "Cheng et al. (2020), speleothem and ice-core records",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            5,
+            8,
+            33,
+            34
+          ],
+          "provenance_note": "Spans 5 and 8 give onset timing; span 33 notes the extraterrestrial-impact hypothesis is discussed; span 34 summarizes dynamics",
+          "rationale": "The paper presents high-res speleothem data constraining YD onset/termination timing across regions, but explicitly states the trigger remains poorly understood and the extraterrestrial-impact hypothesis is only mentioned, not supported. Onset at 12,870 ± 30 B.P. in North Atlantic; termination began",
+          "limitations": [
+            "No direct evidence for or against extraterrestrial impact trigger",
+            "Dating constrained to speleothem and ice-core records; other mechanisms not ruled out",
+            "Trigger discussion is brief and no conclusive resolution provided"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "trigger mechanism",
+              "explanation": "Study focuses on timing/structure, not impact trigger evidence"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              5
+            ],
+            "start": 468,
+            "end": 2070,
+            "text": "Lawrence Edwardsj,k aInstitute of Global Environmental Change, Xi’an Jiaotong University, 710054 Xi’an, China; bState Key Laboratory of Loess and Quaternary Geology, Institute of Earth Environment, Chinese Academy of Sciences, 710061 Xi’an, China; cKey Laboratory of Karst Dynamics, Ministry of Land and Resources, Institute of Karst Geology, Chinese Academy of Geological Sciences, 541004 Guilin, China; dInstitute of Geology, University of Innsbruck, 6020 Innsbruck, Austria; eDepartment of Earth Sciences, California State University, Dominguez Hills, Carson, CA 90747; fDepartamento de Geología, Museo Nacional de Ciencias Naturales, Consejo Superior de Investigaciones Científicas, 28034 Madrid, Spain; gInstituto Pirenaico de Ecología, Consejo Superior de Investigaciones Científicas, 50059 Zaragoza, Spain; hInstituto de Geociências, Universidade de São Paulo, 05508-090 São Paulo, Brazil; iScripps Institution of Oceanography, University of California San Diego, La Jolla, CA 92093; jDepartment of Earth and Environmental Sciences, University of Minnesota, Minneapolis, MN 55455; and kSchool of Geography, Nanjing Normal University, 210023 Nanjing, China Edited by Mark Thiemens, University of California San Diego, La Jolla, CA, and approved August 5, 2020 (received for review April 23, 2020) The Younger Dryas (YD), arguably the most widely studied millennial-scale extreme climate event, was characterized by diverse hydrocli-mate shifts globally and severe cooling at high northern latitudes that abruptly punctuated the warming trend from the last glacial to the present interglacial.",
+            "quote_hash": "a063bc5bdcb2792b2e7b03a0c852809dccf2f76122af07062bcc238bc13c0a35"
+          },
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 2464,
+            "end": 2888,
+            "text": "Our analysis suggests that the onsets of YD in the North Atlantic (12,870 ± 30 B.P.) and the Asian Monsoon-Westerlies region are essentially synchronous within a few decades and lead the onset in Antarctica, implying a north-to-south climate signal propagation via both atmospheric (decadal-time scale) and oce-anic (centennial-time scale) processes, similar to the Dansgaard– Oeschger events during the last glacial period.",
+            "quote_hash": "b80558ba1f4c770c84f5f462ee0cd9d3be1b4bf09fa2151bd8bdb114ec835fbd"
+          },
+          {
+            "span_ids": [
+              33,
+              34
+            ],
+            "start": 8665,
+            "end": 8936,
+            "text": "Within this framework at subcentennial precision, we further discuss the hypothesis of an extraterrestrial-impact trigger for the YD (13). Our results shed light on the underly-ing dynamics of the YD, particularly with respect to its trigger, transition, and termination.",
+            "quote_hash": "64da21fd9f92721b496a16b3b3f573127afcb32a4078cb11042c3a10e7b19a62"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "957e77f9-dd60-49eb-9cc6-09bf643a7e70",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+            "span_ids": [
+              58,
+              68,
+              69
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The YDIH claims an extraterrestrial impact ~12,900 years ago causing Younger Dryas cooling, but the article presents mainstream scientific rejection due to lack of evidence, alternative meltwater/volcanism causes, and documented retractions of supporting data. It does not confirm the extraterrestri…",
+          "publisher": null,
+          "origin": "Wikipedia: Younger Dryas impact hypothesis",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            58,
+            68,
+            69
+          ],
+          "provenance_note": "Summary of hypothesis, mainstream rejection, and alternative mechanisms from a single Wikipedia article. No independent verification.",
+          "rationale": "The assertion that YDIH was triggered by an extraterrestrial impact ~12,800 years ago is presented as the hypothesis itself, but the dominant narrative in the source emphasizes expert rejection and alternative explanations (meltwater, volcanism). The date 12,800 vs 12,900 years differs slightly but ",
+          "limitations": [
+            "Source is a single Wikipedia article with no independent peer-reviewed citations within the span set",
+            "Dominant scientific consensus in the source rejects the impact trigger",
+            "Date discrepancy: claim says 12,800 years; source text cites ~12,900 years Before Present"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "scientific_consensus",
+              "explanation": "Source frames the impact hypothesis as a fringe theory rejected by most experts, rather than supporting it as established fact."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              58
+            ],
+            "start": 5311,
+            "end": 6194,
+            "text": "The **Younger Dryas impact hypothesis** (YDIH) is a [fringe](https://en.wikipedia.org/wiki/Fringe_theory \"Fringe theory\")[[1]](#cite_note-:2-1) hypothesis that posits that the cause of the disruption of the [Atlantic meridional overturning circulation](https://en.wikipedia.org/wiki/Atlantic_meridional_overturning_circulation \"Atlantic meridional overturning circulation\") resulting in the onset of the [Younger Dryas](https://en.wikipedia.org/wiki/Younger_Dryas \"Younger Dryas\") cooling c. 12,900 years [Before Present](https://en.wikipedia.org/wiki/Before_Present \"Before Present\"), was the result of an [impact](https://en.wikipedia.org/wiki/Impact_event \"Impact event\") or [air burst](https://en.wikipedia.org/wiki/Meteor_air_burst \"Meteor air burst\") of a [meteor](https://en.wikipedia.org/wiki/Meteor \"Meteor\"), possibly a [comet](https://en.wikipedia.org/wiki/Comet \"Comet\").",
+            "quote_hash": "3ee650044044a44170a4a4e26f361b405e4ec5a385d771532d86c64f1502054f"
+          },
+          {
+            "span_ids": [
+              68,
+              69
+            ],
+            "start": 8933,
+            "end": 11532,
+            "text": "The YDIH was formally introduced in 2007 by nuclear physicist Richard Firestone and collaborators in the *[Proceedings of the National Academy of Sciences of the United States of America](https://en.wikipedia.org/wiki/Proceedings_of_the_National_Academy_of_Sciences_of_the_United_States_of_America \"Proceedings of the National Academy of Sciences of the United States of America\")*[[1]](#cite_note-:2-1) with the paper titled \"Evidence for an extraterrestrial impact 12,900 years ago that contributed to the megafaunal extinctions and the Younger Dryas cooling.\" Prior to that publishing, in 2001, Firestone and archaeologist William Topping published their first version of YDIH, \"Terrestrial Evidence of a Nuclear Catastrophe in [Paleo-Indian](https://en.wikipedia.org/wiki/Paleo-Indians \"Paleo-Indians\") Times\" in *Mammoth Trumpet*, a newsletter of the Center for the Study of the First Americans.[[5]](#cite_note-Pinter_et_al_2011-5)\n\nFirestone and collaborators elaborated on the hypothesis substantially in their 2006 book *The Cycle of Cosmic Catastrophes*, though one of its co-authors denies the book was meant to be scientific.[[1]](#cite_note-:2-1)[[5]](#cite_note-Pinter_et_al_2011-5) In the book, they argue that the impact broke an ice dam holding a massive reservoir of glacial meltwater, [Lake Agassiz](https://en.wikipedia.org/wiki/Lake_Agassiz \"Lake Agassiz\"), causing it to flood the [Atlantic Ocean](https://en.wikipedia.org/wiki/Atlantic_Ocean \"Atlantic Ocean\") with freshwater disrupting the [North Atlantic Conveyor](https://en.wikipedia.org/wiki/Shutdown_of_thermohaline_circulation \"Shutdown of thermohaline circulation\"), and causing a sudden cooling event.[[1]](#cite_note-:2-1) They argue that the impact in the [Great Lakes region](https://en.wikipedia.org/wiki/Great_Lakes_region \"Great Lakes region\") destabilized the [Laurentide ice sheet](https://en.wikipedia.org/wiki/Laurentide_ice_sheet \"Laurentide ice sheet\") and took with it typical evidence of an impact which caused hemisphere-spanning wildfires and the North American [megafauna](https://en.wikipedia.org/wiki/Megafauna \"Megafauna\") and a Paleo-Indian extinction event,[[5]](#cite_note-Pinter_et_al_2011-5) in particular the disappearance of the [Clovis culture](https://en.wikipedia.org/wiki/Clovis_culture \"Clovis culture\").[[6]](#cite_note-:9-6) However, [genetic evidence](https://en.wikipedia.org/wiki/Genetic_evidence \"Genetic evidence\") indicates that the Clovis people migrated southward and adapted to the changes in their environment.[[7]](#cite_note-7)[[8]](#cite_note-8) Anthropologist [Vance T.",
+            "quote_hash": "3a3b112ebbbf2932bd195714934624f6c906b8c17c138e6a2bd0a9e78363e3ad"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "0047b15f-4613-4d87-b090-b811fe8934bd",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+            "span_ids": [
+              70,
+              80,
+              96
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The article discusses the Younger Dryas as a climatic phase occurring approximately 12,900 to 11,700 years ago, with rapid cooling in the Northern Hemisphere and warming in the Southern Hemisphere, but does not discuss the trigger mechanism or extraterrestrial impact.",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            70,
+            80,
+            96
+          ],
+          "provenance_note": "Wikipedia article summary only; no impact trigger claims found.",
+          "rationale": "Span 70 describes the event's duration (12,900–11,700 years ago). Span 80 gives the timeframe. Span 96 describes the event's characteristics and onset but makes no mention of an extraterrestrial impact trigger. The assertion's causal claim is unsupported.",
+          "limitations": [
+            "No source evidence presented for impact trigger",
+            "Article does not address cause of Younger Dryas",
+            "Extraterrestrial impact hypothesis not evaluated"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "causal_trigger",
+              "explanation": "Source covers event timing and climate effects but not trigger mechanism"
+            },
+            {
+              "type": "misleading_comparison",
+              "dimension": "cause",
+              "explanation": "Article discusses AMOC weakening as consensus explanation, contradicting extraterrestrial impact claim"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              70
+            ],
+            "start": 5481,
+            "end": 5601,
+            "text": "* [Get shortened URL](/w/index.php?title=Special:UrlShortener&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FYounger_Dryas)",
+            "quote_hash": "2a6a5a4ef5db588bddb80cc8777a5f15ee955efd429358935c724131de69f520"
+          },
+          {
+            "span_ids": [
+              80
+            ],
+            "start": 6199,
+            "end": 6237,
+            "text": "Time period c. 12,900–11,700 years ago",
+            "quote_hash": "555ad89e8352eff3a8584ef21e5ef3e40cf46a04688bbf35d2fa65691a47beb7"
+          },
+          {
+            "span_ids": [
+              96
+            ],
+            "start": 8329,
+            "end": 9815,
+            "text": "The **Younger Dryas** (YD, Greenland Stadial GS-1)[[2]](#cite_note-2) was the final climatic phase of the [Last Glacial Period](https://en.wikipedia.org/wiki/Last_Glacial_Period \"Last Glacial Period\") that occurred from around 12,900 to 11,700 years [Before Present](https://en.wikipedia.org/wiki/Before_Present \"Before Present\") (c. 10,900 – c. 9,700 BC).[[3]](#cite_note-3) It is primarily known for the sudden or abrupt cooling in the Northern Hemisphere, when the North [Atlantic Ocean](https://en.wikipedia.org/wiki/Atlantic_Ocean \"Atlantic Ocean\") cooled and annual air temperatures decreased by around 3 °C (5 °F) over [North America](https://en.wikipedia.org/wiki/North_America \"North America\"), 2–6 °C (4–11 °F) in [Europe](https://en.wikipedia.org/wiki/Europe \"Europe\") and up to 10 °C (18 °F) in [Greenland](https://en.wikipedia.org/wiki/Greenland \"Greenland\"), in a few decades.[[4]](#cite_note-Carlson2013-4) Cooling in Greenland was particularly rapid, taking place over just 3 years or less.[[1]](#cite_note-Partin2015-1)[[5]](#cite_note-5) At the same time, the Southern Hemisphere experienced warming.[[4]](#cite_note-Carlson2013-4)[[6]](#cite_note-6) This period ended as rapidly as it began, with dramatic warming over around 50 years, the transition from the glacial [Pleistocene](https://en.wikipedia.org/wiki/Pleistocene \"Pleistocene\") epoch into the current [Holocene](https://en.wikipedia.org/wiki/Holocene \"Holocene\") interglacial.[[1]](#cite_note-Partin2015-1)",
+            "quote_hash": "f6c72af78cb5812cc02771afbb4042226b9b74bb639966ac663c2df1fb6a4165"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "27bae922-f94f-43ca-a549-a2be68e6b6dd",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+            "span_ids": [
+              70,
+              72,
+              73,
+              86,
+              87,
+              88
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "YouTube transcript (Anton)",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            70,
+            72,
+            73,
+            86,
+            87,
+            88
+          ],
+          "provenance_note": "Spans describe the Younger Dryas event timing (~12,000 years ago, ~1,200 duration) and context as a rapid cooling during warming after last glaciation, but do not confirm an extraterrestrial impact trigger.",
+          "rationale": "The video transcript (spans 70-73) introduces the Younger Dryas Impact Hypothesis (YDIH) as a proposed comet/asteroid event ~12,800 years ago affecting Earth's climate. Spans 86-88 characterize the Younger Dryas as a sudden cooling ~12,000 years ago during deglaciation, lasting ~1,200 years. However",
+          "limitations": [
+            "Video is a discussion format, not a peer-reviewed source; claims about impact are attributed to proponents, not established fact",
+            "Timing discrepancy: assertion says ~12,800 years ago, transcript cites ~12,000 years ago",
+            "No direct evidence of impact mechanism presented in these spans"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "timing",
+              "explanation": "Assertion claims ~12,800 years ago; transcript describes event as ~12,000 years ago with ~1,200-year duration"
+            },
+            {
+              "type": "misleading_comparison",
+              "dimension": "causal",
+              "explanation": "Video presents YDIH as a debated hypothesis with alternative explanations (ocean current shutdown), not as established causation"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              70
+            ],
+            "start": 2738,
+            "end": 2822,
+            "text": "The idea referred to as the younger dry impact hypothesis, also referred to as YDIH.",
+            "quote_hash": "41ce41fa4c2ca5ff398147271c81d8665e3b369c5f20beb08d583557e84dff46"
+          },
+          {
+            "span_ids": [
+              72,
+              73
+            ],
+            "start": 2841,
+            "end": 3014,
+            "text": "[0:18] proposes that a massive cosmic event, possibly a comet or some kind of a massive asteroid, dramatically altered\n[0:24] Earth's climate approximately 12,800 years ago.",
+            "quote_hash": "5b4c3084317d3888e759fda8cc5b092952b1816147f47d95833b20aec7c38ca5"
+          },
+          {
+            "span_ids": [
+              86,
+              87,
+              88
+            ],
+            "start": 4075,
+            "end": 4303,
+            "text": "This was a sudden intense period of rapid cooling that happened roughly around\n[1:34] 12,000 years ago. and it lasted for about 1,200 years, plunging parts of the northern hemisphere back into the near\n[1:41] glacial conditions.",
+            "quote_hash": "ee8ffb673cc6256c4751af75e9e4a5dda277f8064c6540666355948e09fbf712"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:29:50.536327Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:29:50.739009Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:29:50.741596Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:29:50.743215Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:29:50.745178Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.996",
+        "attempt": "1",
+        "input_chars": "135"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:29:50.747929Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.994",
+        "hard_remaining_seconds": "119.994",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5812"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:29:52.806325Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.936",
+        "hard_remaining_seconds": "117.936",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5812",
+        "elapsed_seconds": "2.056",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1264"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:29:52.808624Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.933",
+        "hard_remaining_seconds": "117.933",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "387",
+        "elapsed_seconds": "2.063",
+        "finish_reason": "stop",
+        "prompt_tokens": "903",
+        "completion_tokens": "105",
+        "total_tokens": "1008"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:29:52.810521Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:29:52.812663Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:29:52.814301Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:29:52.815664Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.926",
+        "hard_remaining_seconds": "237.926",
+        "attempt": "1",
+        "input_chars": "496"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:29:52.817869Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.924",
+        "hard_remaining_seconds": "237.924",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3521"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:29:55.206644Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.536",
+        "hard_remaining_seconds": "235.536",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3521",
+        "elapsed_seconds": "2.386",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1487"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:29:55.208954Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.533",
+        "hard_remaining_seconds": "235.533",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "597",
+        "elapsed_seconds": "2.393",
+        "finish_reason": "stop",
+        "prompt_tokens": "608",
+        "completion_tokens": "153",
+        "total_tokens": "761"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:29:55.210858Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas cooling event extraterrestrial impact 12800 years ago scientific papers",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:29:55.212508Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.529",
+        "hard_remaining_seconds": "235.529",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "293"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:29:58.030950Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.712",
+        "hard_remaining_seconds": "232.712",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "293",
+        "elapsed_seconds": "2.816",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12025"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:29:58.033150Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas cooling event extraterrestrial impact 12800 years ago scientific papers",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:29:58.035043Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas impact hypothesis critics evidence against extraterrestrial trigger",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:29:58.036636Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.705",
+        "hard_remaining_seconds": "232.705",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "289"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:30:00.635241Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.108",
+        "hard_remaining_seconds": "230.108",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "289",
+        "elapsed_seconds": "2.595",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12288"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:30:00.638296Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas impact hypothesis critics evidence against extraterrestrial trigger",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:30:00.640187Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas onset date geological records proxy data",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:30:00.641685Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.100",
+        "hard_remaining_seconds": "230.100",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:30:03.420601Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "182.322",
+        "hard_remaining_seconds": "227.322",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262",
+        "elapsed_seconds": "2.776",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8859"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:30:03.422752Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas onset date geological records proxy data",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:30:03.424974Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:30:03.426514Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012825211000262",
+        "slot": "1",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:30:03.428094Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:30:03.429497Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.312",
+        "hard_remaining_seconds": "227.312",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:30:03.563231Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.180",
+        "hard_remaining_seconds": "227.180",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198",
+        "elapsed_seconds": "0.131",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "37134"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:30:03.572245Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S0012825211000262",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:30:03.573894Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:30:03.579010Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.163",
+        "hard_remaining_seconds": "227.163",
+        "attempt": "1",
+        "input_chars": "18600"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:30:03.583199Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.159",
+        "hard_remaining_seconds": "227.159",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30371"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:30:12.630798Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "173.112",
+        "hard_remaining_seconds": "218.112",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30371",
+        "elapsed_seconds": "9.045",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3224"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:30:12.633816Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "173.108",
+        "hard_remaining_seconds": "218.108",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2287",
+        "elapsed_seconds": "9.055",
+        "finish_reason": "stop",
+        "prompt_tokens": "8667",
+        "completion_tokens": "576",
+        "total_tokens": "9243"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:30:12.637147Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "f8e1d87e-4d09-4d6f-9aac-9099257ddf54",
+        "snapshot_id": "5d97d578-e3c9-417d-bdc2-42eb69d815ed",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:30:12.638718Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://research-portal.uu.nl/en/publications/the-younger-dryas-impact-hypothesis-a-critical-review",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:30:12.640138Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:30:12.641978Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.100",
+        "hard_remaining_seconds": "218.100",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "226"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:30:13.018327Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.724",
+        "hard_remaining_seconds": "217.724",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "226",
+        "elapsed_seconds": "0.373",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "13452"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:30:13.025754Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "url": "https://research-portal.uu.nl/en/publications/the-younger-dryas-impact-hypothesis-a-critical-review",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:30:13.028228Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:30:13.033980Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.708",
+        "hard_remaining_seconds": "217.708",
+        "attempt": "1",
+        "input_chars": "20304"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:30:13.040059Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "172.702",
+        "hard_remaining_seconds": "217.702",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32811"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:30:16.841241Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "168.902",
+        "hard_remaining_seconds": "213.902",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32811",
+        "elapsed_seconds": "3.798",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2657"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:30:16.844838Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "168.897",
+        "hard_remaining_seconds": "213.897",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1726",
+        "elapsed_seconds": "3.811",
+        "finish_reason": "stop",
+        "prompt_tokens": "9417",
+        "completion_tokens": "447",
+        "total_tokens": "9864"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:30:16.848500Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "746b899a-03bf-4543-a42a-5ca65718dee3",
+        "snapshot_id": "9d28cbb6-ad93-4d5c-80fd-f8232c06d322",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:30:16.850547Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "url": "https://www.whoi.edu/cms/files/Cheng_etal_2020_283226.pdf",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:30:16.852066Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:30:16.853616Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.888",
+        "hard_remaining_seconds": "213.888",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "184"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:30:17.053540Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.689",
+        "hard_remaining_seconds": "213.689",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "184",
+        "elapsed_seconds": "0.197",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "67820"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:30:17.067139Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "url": "https://www.whoi.edu/cms/files/Cheng_etal_2020_283226.pdf",
+        "candidate_id": "c19",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:30:17.068675Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:30:17.077295Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.665",
+        "hard_remaining_seconds": "213.665",
+        "attempt": "1",
+        "input_chars": "16135"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:30:17.081604Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.660",
+        "hard_remaining_seconds": "213.660",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26939"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:30:20.933642Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.808",
+        "hard_remaining_seconds": "209.808",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26939",
+        "elapsed_seconds": "3.851",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2705"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:30:20.935361Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "164.806",
+        "hard_remaining_seconds": "209.806",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1777",
+        "elapsed_seconds": "3.859",
+        "finish_reason": "stop",
+        "prompt_tokens": "7060",
+        "completion_tokens": "479",
+        "total_tokens": "7539"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:30:20.937178Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e1a9e4d3-b1ec-4593-bfb5-2e16a3b18b8a",
+        "snapshot_id": "c61e7bda-2209-4078-a4bb-fee8dffe3e6f",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:30:20.937962Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas_impact_hypothesis",
+        "slot": "4",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:30:20.938649Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:30:20.939404Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.802",
+        "hard_remaining_seconds": "209.802",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:30:21.088958Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c23",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.652",
+        "hard_remaining_seconds": "209.652",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188",
+        "elapsed_seconds": "0.149",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "61592"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:30:21.092834Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas_impact_hypothesis",
+        "candidate_id": "c23",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:30:21.093597Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:30:21.095389Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.646",
+        "hard_remaining_seconds": "209.646",
+        "attempt": "1",
+        "input_chars": "16013"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:30:21.096890Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.644",
+        "hard_remaining_seconds": "209.644",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27250"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:30:24.584210Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.158",
+        "hard_remaining_seconds": "206.158",
+        "provider_call_id": "p26",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27250",
+        "elapsed_seconds": "3.485",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2776"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:30:24.586864Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t25",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.155",
+        "hard_remaining_seconds": "206.155",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1853",
+        "elapsed_seconds": "3.491",
+        "finish_reason": "stop",
+        "prompt_tokens": "7512",
+        "completion_tokens": "464",
+        "total_tokens": "7976"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:30:24.590557Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "957e77f9-dd60-49eb-9cc6-09bf643a7e70",
+        "snapshot_id": "f0793c9f-a399-4905-9f70-8725801e0b4a",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:30:24.592557Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:30:24.594110Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.147",
+        "hard_remaining_seconds": "206.147",
+        "attempt": "1",
+        "input_chars": "6373"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:30:24.596194Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "161.145",
+        "hard_remaining_seconds": "206.145",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9585"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:30:26.467391Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.276",
+        "hard_remaining_seconds": "204.276",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9585",
+        "elapsed_seconds": "1.868",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1611"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:30:26.470046Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.272",
+        "hard_remaining_seconds": "204.272",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "716",
+        "elapsed_seconds": "1.876",
+        "finish_reason": "stop",
+        "prompt_tokens": "2332",
+        "completion_tokens": "216",
+        "total_tokens": "2548"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:30:26.471821Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:30:26.473452Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:30:26.475334Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas onset dating at 12,800 years ago vs 12,900 years ago from primary speleothem and ice core records",
+        "purpose": "support",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:30:26.476947Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.265",
+        "hard_remaining_seconds": "204.265",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "319"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:30:29.297909Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.445",
+        "hard_remaining_seconds": "201.445",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "319",
+        "elapsed_seconds": "2.818",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10872"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:30:29.300489Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Younger Dryas onset dating at 12,800 years ago vs 12,900 years ago from primary speleothem and ice core records",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:30:29.302492Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Critique of YDIH timing discrepancies: does any site provide single impact trigger at 12,800 years with tight age control",
+        "purpose": "contradiction",
+        "query_id": "q31"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:30:29.304147Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.437",
+        "hard_remaining_seconds": "201.437",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "329"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:30:31.604643Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q31",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "154.138",
+        "hard_remaining_seconds": "199.138",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "329",
+        "elapsed_seconds": "2.297",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10260"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:30:31.607153Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Critique of YDIH timing discrepancies: does any site provide single impact trigger at 12,800 years with tight age control",
+        "query_id": "q31",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:30:31.609207Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Quantified population or extinction data associated with YD cooling at 12,800 years ago",
+        "purpose": "context",
+        "query_id": "q33"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:30:31.610844Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "154.131",
+        "hard_remaining_seconds": "199.131",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "295"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:30:35.191889Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "150.551",
+        "hard_remaining_seconds": "195.551",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "295",
+        "elapsed_seconds": "3.578",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8897"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:30:35.194226Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Quantified population or extinction data associated with YD cooling at 12,800 years ago",
+        "query_id": "q33",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:30:35.196639Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "9",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:30:35.198175Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+        "slot": "1",
+        "query_ids": "q29,q33",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:30:35.199819Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:30:35.201438Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.540",
+        "hard_remaining_seconds": "195.540",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:30:35.441638Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.301",
+        "hard_remaining_seconds": "195.301",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.237",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "189320"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:30:35.453726Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+        "candidate_id": "c35",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:30:35.455074Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:30:35.460787Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.281",
+        "hard_remaining_seconds": "195.281",
+        "attempt": "1",
+        "input_chars": "18393"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:30:35.464144Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "150.277",
+        "hard_remaining_seconds": "195.277",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30674"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:30:38.366597Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "147.376",
+        "hard_remaining_seconds": "192.376",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30674",
+        "elapsed_seconds": "2.900",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2571"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:30:38.369624Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "147.372",
+        "hard_remaining_seconds": "192.372",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1638",
+        "elapsed_seconds": "2.909",
+        "finish_reason": "stop",
+        "prompt_tokens": "9121",
+        "completion_tokens": "433",
+        "total_tokens": "9554"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:30:38.373105Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "0047b15f-4613-4d87-b090-b811fe8934bd",
+        "snapshot_id": "98b7a452-3930-4916-941e-7143634f0aa1",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:30:38.374758Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "url": "https://www.youtube.com/watch?v=DE3NsjchgZA",
+        "slot": "2",
+        "query_ids": "q31",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:30:38.376518Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:30:38.378114Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.363",
+        "hard_remaining_seconds": "192.363",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:30:38.504196Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c39",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.238",
+        "hard_remaining_seconds": "192.238",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.124",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "19755"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:30:38.510747Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "url": "https://www.youtube.com/watch?v=DE3NsjchgZA",
+        "candidate_id": "c39",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:30:38.512444Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:30:38.516533Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.225",
+        "hard_remaining_seconds": "192.225",
+        "attempt": "1",
+        "input_chars": "16028"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:30:38.521137Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "147.220",
+        "hard_remaining_seconds": "192.220",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28857"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:30:41.281241Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.462",
+        "hard_remaining_seconds": "189.462",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28857",
+        "elapsed_seconds": "2.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2829"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:30:41.284623Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.457",
+        "hard_remaining_seconds": "189.457",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1898",
+        "elapsed_seconds": "2.767",
+        "finish_reason": "stop",
+        "prompt_tokens": "8763",
+        "completion_tokens": "556",
+        "total_tokens": "9319"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:30:41.288639Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "27bae922-f94f-43ca-a549-a2be68e6b6dd",
+        "snapshot_id": "6963f5cb-a9d7-4fa8-b2b6-d3a27382646c",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:30:41.290558Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:30:41.292448Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.449",
+        "hard_remaining_seconds": "189.449",
+        "attempt": "1",
+        "input_chars": "8389"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:30:41.295010Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.447",
+        "hard_remaining_seconds": "189.447",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11686"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:30:42.610612Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "143.132",
+        "hard_remaining_seconds": "188.132",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11686",
+        "elapsed_seconds": "1.313",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1773"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:30:42.613072Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "143.129",
+        "hard_remaining_seconds": "188.129",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "880",
+        "elapsed_seconds": "1.320",
+        "finish_reason": "stop",
+        "prompt_tokens": "3041",
+        "completion_tokens": "228",
+        "total_tokens": "3269"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:30:42.614825Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:30:42.616529Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:30:42.618035Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary speleothem and ice core records from North Atlantic and Antarctica constraining Younger Dryas onset timing at 12,800 years with direct age control",
+        "purpose": "support",
+        "query_id": "q45"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:30:42.619565Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "143.122",
+        "hard_remaining_seconds": "188.122",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "362"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:30:47.876639Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q45",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "137.865",
+        "hard_remaining_seconds": "182.865",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "362",
+        "elapsed_seconds": "5.255",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9716"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:30:47.879157Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary speleothem and ice core records from North Atlantic and Antarctica constraining Younger Dryas onset timing at 12,800 years with direct age control",
+        "query_id": "q45",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:30:47.881512Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Geochronological data from YD boundary sites (e.g., Clovis, Black Mat) showing single impact trigger at 12,800 years with tight age control",
+        "purpose": "contradiction",
+        "query_id": "q47"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:30:47.884094Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q47",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "137.858",
+        "hard_remaining_seconds": "182.858",
+        "provider_call_id": "p48",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "347"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:30:50.524741Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q47",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "135.219",
+        "hard_remaining_seconds": "180.219",
+        "provider_call_id": "p48",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "347",
+        "elapsed_seconds": "2.637",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8050"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:30:50.527752Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Geochronological data from YD boundary sites (e.g., Clovis, Black Mat) showing single impact trigger at 12,800 years with tight age control",
+        "query_id": "q47",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:30:50.530151Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Population and extinction records tied precisely to 12,800 year YD onset, quantifying megafaunal or human demographic changes",
+        "purpose": "context",
+        "query_id": "q49"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:30:50.532182Z",
+      "type": "provider_call_rejected",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q49",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "135.209",
+        "hard_remaining_seconds": "180.209",
+        "provider_call_id": "p50",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "333",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:30:50.533721Z",
+      "type": "research_stopped",
+      "stage": "searching",
+      "payload": {
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "135.208",
+        "hard_remaining_seconds": "180.208",
+        "provider": "tavily",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:30:50.535118Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:30:50.536538Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:30:50.538076Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "f8e1d87e-4d09-4d6f-9aac-9099257ddf54"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:30:50.539480Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "f8e1d87e-4d09-4d6f-9aac-9099257ddf54"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:30:50.540892Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "746b899a-03bf-4543-a42a-5ca65718dee3"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:30:50.543246Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "e1a9e4d3-b1ec-4593-bfb5-2e16a3b18b8a"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:30:50.544885Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "957e77f9-dd60-49eb-9cc6-09bf643a7e70"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:30:50.546351Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "0047b15f-4613-4d87-b090-b811fe8934bd"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:30:50.547702Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "0047b15f-4613-4d87-b090-b811fe8934bd"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:30:50.549001Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "27bae922-f94f-43ca-a549-a2be68e6b6dd"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:30:50.550160Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "27bae922-f94f-43ca-a549-a2be68e6b6dd"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:30:50.552912Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:30:50.554333Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "180.187",
+        "hard_remaining_seconds": "180.187",
+        "attempt": "1",
+        "input_chars": "20754"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:30:50.556130Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "180.185",
+        "hard_remaining_seconds": "180.185",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26236"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:30:53.039518Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "177.702",
+        "hard_remaining_seconds": "177.702",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26236",
+        "elapsed_seconds": "2.482",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1976"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:30:53.040707Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "177.700",
+        "hard_remaining_seconds": "177.700",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1089",
+        "elapsed_seconds": "2.487",
+        "finish_reason": "stop",
+        "prompt_tokens": "7369",
+        "completion_tokens": "397",
+        "total_tokens": "7766"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:30:53.042283Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t53",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "177.699",
+        "hard_remaining_seconds": "177.699",
+        "attempt": "1",
+        "input_chars": "21853"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 150,
+      "timestamp": "2026-11-10T05:30:53.043524Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t53",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "177.698",
+        "hard_remaining_seconds": "177.698",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26720"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 151,
+      "timestamp": "2026-11-10T05:30:53.823325Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t53",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "176.920",
+        "hard_remaining_seconds": "176.920",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26720",
+        "elapsed_seconds": "0.777",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1069"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 152,
+      "timestamp": "2026-11-10T05:30:53.826283Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t53",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "176.915",
+        "hard_remaining_seconds": "176.915",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "205",
+        "elapsed_seconds": "0.783",
+        "finish_reason": "stop",
+        "prompt_tokens": "7649",
+        "completion_tokens": "62",
+        "total_tokens": "7711"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 153,
+      "timestamp": "2026-11-10T05:30:53.828285Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "1970d6a3-76af-4b29-8ef5-b2b1af559ec8",
+      "sequence": 154,
+      "timestamp": "2026-11-10T05:30:53.829943Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 63.33687295799973,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.054
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.384
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.814
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.592
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.773
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.122
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 9.043
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.371
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.796
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.148
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.85
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.138
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.482
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.866
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.815
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.289
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.563
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.154
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.898
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.123
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.755
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.311
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.249
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.629
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.481
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.775
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.0557687079999596,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.3859604579993174,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.815810333002446,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.5952544169995235,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.776228832997731,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13067395800317172,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 9.044848041998193,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.3734752500022296,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.798087208000652,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.19748566699854564,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.850723665997066,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1486737909981457,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.484881000000314,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.8679758329999459,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.818140333001793,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.297487750001892,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.5781425419991137,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.23743637499865144,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.899789333001536,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12415812499966705,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.7568033339994145,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.3126608330021554,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 5.254830292000406,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.6371028749999823,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.4820651250010997,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.776856125001359,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

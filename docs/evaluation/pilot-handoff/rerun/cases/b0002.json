@@ -1,0 +1,3668 @@
+{
+  "id": "b0002",
+  "live": true,
+  "investigation": {
+    "id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+    "claim": "Venus is the closest planet to the Sun.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "partial",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "budget_exhausted",
+    "reused": true,
+    "created_at": "2026-11-10T05:28:47.016650Z",
+    "started_at": "2026-11-10T05:28:47.019940Z",
+    "finished_at": "2026-11-10T05:29:25.762324Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "conflicting_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "Venus is the closest planet to the Sun.",
+        "kind": "generalized",
+        "consequential": false,
+        "recommended_route": "quick"
+      },
+      "scope_note": "Assertion that the planet Venus has the smallest average distance from the Sun compared to all other planets in the Solar System.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "conflicting_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "d7ba300f-e10b-4517-97e5-e81acd15c006",
+          "83825bf2-f0e4-4336-9d04-6c0c3a47db90",
+          "ac2c6519-4776-44fc-be7b-0d0489f145f6"
+        ],
+        "qualification_flags": [
+          {
+            "type": "narrow_scope",
+            "dimension": "jurisdiction",
+            "explanation": "Only addresses planets in our solar system, not Venus's position among all planetary systems",
+            "evidence_ids": [
+              "ac2c6519-4776-44fc-be7b-0d0489f145f6"
+            ]
+          }
+        ],
+        "qualification_check": "assessed",
+        "limitations": [
+          "Material supporting and contradicting evidence remains unresolved."
+        ]
+      },
+      "explanation": [
+        {
+          "text": "Venus is not the closest planet to the Sun; Mercury holds that position with an average orbital distance of 58 million km compared to Venus's 108 million km.",
+          "evidence_ids": [
+            "d7ba300f-e10b-4517-97e5-e81acd15c006",
+            "83825bf2-f0e4-4336-9d04-6c0c3a47db90"
+          ]
+        },
+        {
+          "text": "Multiple sources confirm Mercury is the closest planet to the Sun, with Venus ranked second in solar system order by average distance.",
+          "evidence_ids": [
+            "ac2c6519-4776-44fc-be7b-0d0489f145f6"
+          ]
+        }
+      ],
+      "limitations": [
+        "Research stopped at a time or call limit; coverage is incomplete.",
+        "Only the first bounded set of source spans was assessed.",
+        "Source is a textbook problem statement, not a primary astronomical observation",
+        "Does not provide original orbital data or cite external references",
+        "Limited to the specific exercise formatting",
+        "Source does not list all eight planets' orbital distances, so cannot confirm Mercury is the single closest planet among all eight.",
+        "Only mentions two planets; does not evaluate Mercury vs. Venus vs. other planets for proximity rank.",
+        "Source only describes solar system planets, not exoplanets or historical contexts",
+        "Does not address Venus's specific orbital characteristics beyond average distance",
+        "Some selected pages were unavailable or exceeded the text limit.",
+        "Some search results were not extracted within per-round page limits.",
+        "Material supporting and contradicting evidence remains unresolved."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.5",
+      "application_version": "research-v4.5",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 9,
+        "search": 8,
+        "extract": 6
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.2794533749984112,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.9679360000009183,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.3592994159989757,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.209709999999177,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.186641625001357,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 1.5905965829988418,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.4963065839983756,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.14226475000032224,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.6283310420003545,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.4470627080008853,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.5015750419988763,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.8051564170018537,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.688361917000293,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.862311332999525,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.272382082999684,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.663470833998872,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.15221112500148593,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.216573416000756,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.1167102919971512,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.2526077500006068,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.441125707999163,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.438150209000014,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.7296347500014235,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 33194,
+        "completion_tokens": 1878,
+        "total_tokens": 35072
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "events": "/investigations/12e654a1-d67b-4b49-a060-4420bb42fea3/events",
+      "evidence": "/investigations/12e654a1-d67b-4b49-a060-4420bb42fea3/evidence",
+      "comparison": "/investigations/12e654a1-d67b-4b49-a060-4420bb42fea3/comparison",
+      "refresh": "/investigations/12e654a1-d67b-4b49-a060-4420bb42fea3/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "url": "https://www.vaia.com/en-us/textbooks/biology/life-in-the-universe-3-edition/chapter-1/problem-15-choose-the-best-answer-to-each-of-the-following-e",
+        "canonical_url": "https://www.vaia.com/en-us/textbooks/biology/life-in-the-universe-3-edition/chapter-1/problem-15-choose-the-best-answer-to-each-of-the-following-e",
+        "title": "Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:28:58.685895Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "ad4d09ec0ba7b86eb37ca6a688f762de9780856b2970dc30a45faa9cfc2ce9a3",
+        "duplicate_group": "ad4d09ec0ba7b86eb37ca6a688f762de9780856b2970dc30a45faa9cfc2ce9a3",
+        "limitations": []
+      },
+      {
+        "id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "url": "https://www.universetoday.com/articles/venus-and-mercury",
+        "canonical_url": "https://www.universetoday.com/articles/venus-and-mercury",
+        "title": "Venus and Mercury - Universe Today",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:01.357234Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "df0f8eadf88c27effae69e7d48cd9217512d0f651dd5fe85ab8f7181fbe5ea69",
+        "duplicate_group": "df0f8eadf88c27effae69e7d48cd9217512d0f651dd5fe85ab8f7181fbe5ea69",
+        "limitations": []
+      },
+      {
+        "id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "url": "https://consensus.app/questions/planets-in-order-of-distance-from-the-sun",
+        "canonical_url": "https://consensus.app/questions/planets-in-order-of-distance-from-the-sun",
+        "title": "Planets In Order Of Distance From The Sun - Consensus Academic Search Engine",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:14.483345Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "6d293f3d77801c631ddf3eb08f5e107efdd2c9a497872141b4b1a222f500ddcd",
+        "duplicate_group": "6d293f3d77801c631ddf3eb08f5e107efdd2c9a497872141b4b1a222f500ddcd",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "09dd37bc-e78e-45bb-84eb-85c6ff27e82a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+            "span_ids": [
+              65,
+              66,
+              67,
+              68,
+              69
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Vaia textbook chapter problem statement",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            65,
+            66,
+            67,
+            68,
+            69
+          ],
+          "provenance_note": "Textbook exercise presenting four multiple-choice orderings of planets; the correct answer states Mercury is closest to the Sun, contradicting the claim that Venus is closest.",
+          "rationale": "The source provides the standard planetary ordering starting with Mercury as the closest planet to the Sun, directly contradicting the assertion that Venus is closest.",
+          "limitations": [
+            "Source is a textbook problem statement, not a primary astronomical observation",
+            "Does not provide original orbital data or cite external references",
+            "Limited to the specific exercise formatting"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              65,
+              66,
+              67,
+              68,
+              69
+            ],
+            "start": 4657,
+            "end": 4969,
+            "text": "The correct order for the eight official planets in our solar system, from\nclosest to farthest from the Sun, is (a) Mercury, Venus, Earth, Mars, Saturn,\nJupiter, Neptune, Uranus; (b) Mercury, Venus, Earth, Mars, Jupiter, Uranus,\nNeptune, Saturn; (c) Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus,\nNeptune.",
+            "quote_hash": "9fdc124d1137046bb04f5094f7339aed80b0ad4ca612e28a6429d70a602396b0"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "d7ba300f-e10b-4517-97e5-e81acd15c006",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+            "span_ids": [
+              7,
+              8
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Universe Today",
+          "origin": "Universe Today article",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            7,
+            8
+          ],
+          "provenance_note": "Directly states Mercury has a closer average orbital distance to the Sun than Venus (58 million km vs 108 million km).",
+          "rationale": "Span 7 establishes both Venus and Mercury orbit closest to the Sun; span 8 provides the orbital distance comparison confirming Mercury is closer.",
+          "limitations": [
+            "Source does not list all eight planets' orbital distances, so cannot confirm Mercury is the single closest planet among all eight."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              7,
+              8
+            ],
+            "start": 406,
+            "end": 582,
+            "text": "Venus and Mercury are the two planets that orbit closest to the Sun. Mercury orbits at an average distance of 58 million km, while Venus orbits at a distance of 108 million km.",
+            "quote_hash": "ecbe93759e1cee20d0554804fb13053e5e0b93791d3f1848be6d196a7eef9bcc"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "83825bf2-f0e4-4336-9d04-6c0c3a47db90",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+            "span_ids": [
+              7
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Universe Today",
+          "origin": "Universe Today article",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            7
+          ],
+          "provenance_note": "Sentence positions Venus and Mercury as the two planets orbiting closest to the Sun.",
+          "rationale": "Provides the contextual claim that Venus and Mercury are the closest planets to the Sun, but does not address other planets or ranking order.",
+          "limitations": [
+            "Only mentions two planets; does not evaluate Mercury vs. Venus vs. other planets for proximity rank."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              7
+            ],
+            "start": 406,
+            "end": 474,
+            "text": "Venus and Mercury are the two planets that orbit closest to the Sun.",
+            "quote_hash": "6aba91aed4d693d6381bf89c4bae12d0ec3f08bf7b421a4240528b2ddaa1377e"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ac2c6519-4776-44fc-be7b-0d0489f145f6",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+            "span_ids": [
+              6,
+              7,
+              9,
+              11
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "consensus",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            6,
+            7,
+            9,
+            11
+          ],
+          "provenance_note": "Source lists solar system planets starting with Mercury as closest, then Venus as second.",
+          "rationale": "Assertion states Venus is closest to Sun, but span 6 establishes solar system order begins with Mercury, span 7 states planets are ordered by average distance from Sun, span 9 states starting from closest to Sun order is Mercury first, span 11 explicitly lists Venus as second planet averaging 67M mi",
+          "limitations": [
+            "Source only describes solar system planets, not exoplanets or historical contexts",
+            "Does not address Venus's specific orbital characteristics beyond average distance"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "jurisdiction",
+              "explanation": "Only addresses planets in our solar system, not Venus's position among all planetary systems"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              6,
+              7
+            ],
+            "start": 209,
+            "end": 779,
+            "text": "The planets in our solar system are arranged in a specific order based on their average distance from the Sun. This order is consistent across multiple sources and is a fundamental aspect of solar system structure [Schweitzer1957](https://consensus.app/papers/the-origin-of-the-universe-schweitzer/e0723d65362757fd9db96b47dde6e8c3/)[Aliev2019](https://consensus.app/papers/order-of-planets-in-the-solar-sphere-aliev/b393ecd3a8c454dcbcfd7840fd8c8f24/)[Price2000](https://consensus.app/papers/the-planet-observers-handbook-mercury-price/d5a0a64f958c59bc94449f1678ab1a43/).",
+            "quote_hash": "3a539aaba68562023a487ea17daf553a908b0a7165d8cf4c100411c50f454352"
+          },
+          {
+            "span_ids": [
+              9
+            ],
+            "start": 824,
+            "end": 897,
+            "text": "Starting from the closest to the Sun and moving outward, the planets are:",
+            "quote_hash": "2eaa042c40dc0f9b8f58830ec146843fad5a80c7b570188282e5b631ad790215"
+          },
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 1255,
+            "end": 1347,
+            "text": "2. **Venus** – The second planet, averaging 67 million miles (108 million km) from the Sun .",
+            "quote_hash": "69b3522988441111f79503e929cfb796b3c0b34993ca000180c7c1b0759f14f4"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:28:47.016650Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:28:47.019940Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:28:47.022055Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:28:47.023225Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:28:47.024417Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "attempt": "1",
+        "input_chars": "67"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:28:47.026492Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5744"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:28:48.314905Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.708",
+        "hard_remaining_seconds": "118.708",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5744",
+        "elapsed_seconds": "1.279",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1227"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:28:48.318484Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.705",
+        "hard_remaining_seconds": "118.705",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "352",
+        "elapsed_seconds": "1.292",
+        "finish_reason": "stop",
+        "prompt_tokens": "889",
+        "completion_tokens": "92",
+        "total_tokens": "981"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:28:48.321236Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:28:48.323119Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:28:48.324613Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:28:48.326180Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.696",
+        "hard_remaining_seconds": "238.696",
+        "attempt": "1",
+        "input_chars": "434"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:28:48.328669Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.694",
+        "hard_remaining_seconds": "238.694",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3459"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:28:49.299463Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.724",
+        "hard_remaining_seconds": "237.724",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3459",
+        "elapsed_seconds": "0.968",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1338"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:28:49.302673Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.720",
+        "hard_remaining_seconds": "237.720",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "448",
+        "elapsed_seconds": "0.976",
+        "finish_reason": "stop",
+        "prompt_tokens": "594",
+        "completion_tokens": "118",
+        "total_tokens": "712"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:28:49.304981Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Distance from Sun for Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:28:49.306716Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.715",
+        "hard_remaining_seconds": "237.715",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:28:51.669356Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.355",
+        "hard_remaining_seconds": "235.355",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "284",
+        "elapsed_seconds": "2.359",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6876"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:28:51.672489Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Distance from Sun for Mercury Venus Earth Mars Jupiter Saturn Uranus Neptune",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:28:51.674346Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury distance from Sun compared to Venus distance from Sun",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:28:51.676209Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.346",
+        "hard_remaining_seconds": "235.346",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "269"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:28:53.889707Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.134",
+        "hard_remaining_seconds": "233.134",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "269",
+        "elapsed_seconds": "2.210",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9183"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:28:53.892900Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury distance from Sun compared to Venus distance from Sun",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:28:53.895107Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Closest planet to Sun in solar system",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:28:53.896959Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.125",
+        "hard_remaining_seconds": "233.125",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "245"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:28:57.085183Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "184.937",
+        "hard_remaining_seconds": "229.937",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "245",
+        "elapsed_seconds": "3.187",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8161"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:28:57.086543Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Closest planet to Sun in solar system",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:28:57.087834Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:28:57.088791Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.vaia.com/en-us/textbooks/biology/life-in-the-universe-3-edition/chapter-1/problem-15-choose-the-best-answer-to-each-of-the-following-e",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:28:57.089920Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:28:57.091025Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "184.931",
+        "hard_remaining_seconds": "229.931",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:28:58.684095Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.339",
+        "hard_remaining_seconds": "228.339",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273",
+        "elapsed_seconds": "1.591",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8122"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:28:58.690109Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "url": "https://www.vaia.com/en-us/textbooks/biology/life-in-the-universe-3-edition/chapter-1/problem-15-choose-the-best-answer-to-each-of-the-following-e",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:28:58.691815Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:28:58.696155Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.326",
+        "hard_remaining_seconds": "228.326",
+        "attempt": "1",
+        "input_chars": "13539"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:28:58.700021Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.322",
+        "hard_remaining_seconds": "228.322",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25480"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:29:01.199101Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.824",
+        "hard_remaining_seconds": "225.824",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25480",
+        "elapsed_seconds": "2.496",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2035"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:29:01.202126Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.821",
+        "hard_remaining_seconds": "225.821",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1128",
+        "elapsed_seconds": "2.505",
+        "finish_reason": "stop",
+        "prompt_tokens": "7877",
+        "completion_tokens": "309",
+        "total_tokens": "8186"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:29:01.205362Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "09dd37bc-e78e-45bb-84eb-85c6ff27e82a",
+        "snapshot_id": "e4635167-35ad-4342-bb12-7d36f808776d",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:29:01.206797Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.universetoday.com/articles/venus-and-mercury",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:29:01.208145Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:29:01.209956Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.812",
+        "hard_remaining_seconds": "225.812",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "183"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:29:01.355281Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.668",
+        "hard_remaining_seconds": "225.668",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "183",
+        "elapsed_seconds": "0.142",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4189"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:29:01.361043Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "url": "https://www.universetoday.com/articles/venus-and-mercury",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:29:01.362564Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:29:01.367200Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.655",
+        "hard_remaining_seconds": "225.655",
+        "attempt": "1",
+        "input_chars": "6760"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:29:01.370667Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.651",
+        "hard_remaining_seconds": "225.651",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16983"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:29:04.001862Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.021",
+        "hard_remaining_seconds": "223.021",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16983",
+        "elapsed_seconds": "2.628",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2735"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:29:04.004377Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.018",
+        "hard_remaining_seconds": "223.018",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1782",
+        "elapsed_seconds": "2.637",
+        "finish_reason": "stop",
+        "prompt_tokens": "4160",
+        "completion_tokens": "489",
+        "total_tokens": "4649"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:29:04.007902Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "d7ba300f-e10b-4517-97e5-e81acd15c006",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:29:04.009540Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "83825bf2-f0e4-4336-9d04-6c0c3a47db90",
+        "snapshot_id": "b58e25d1-f853-42f2-bdf7-070e4a0d7889",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:29:04.011214Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "url": "https://www.twinkl.com/teaching-wiki/the-closest-planet-to-the-sun",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:29:04.012577Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:29:04.014126Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.008",
+        "hard_remaining_seconds": "223.008",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "193"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:29:04.463501Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "177.559",
+        "hard_remaining_seconds": "222.559",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "193",
+        "elapsed_seconds": "0.447",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "235"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:29:04.465733Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.twinkl.com/teaching-wiki/the-closest-planet-to-the-sun",
+        "candidate_id": "c19",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:29:04.468455Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "url": "https://commons.open.uci.edu/sun-planet-distance",
+        "slot": "4",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:29:04.470361Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:29:04.472069Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "177.550",
+        "hard_remaining_seconds": "222.550",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:29:04.975486Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "177.047",
+        "hard_remaining_seconds": "222.047",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175",
+        "elapsed_seconds": "0.502",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "217"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:29:04.978541Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://commons.open.uci.edu/sun-planet-distance",
+        "candidate_id": "c21",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:29:04.980145Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:29:04.981369Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "177.041",
+        "hard_remaining_seconds": "222.041",
+        "attempt": "1",
+        "input_chars": "2527"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:29:04.983423Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "177.038",
+        "hard_remaining_seconds": "222.038",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5662"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:29:05.791094Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.231",
+        "hard_remaining_seconds": "221.231",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5662",
+        "elapsed_seconds": "0.805",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1466"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:29:05.792797Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.229",
+        "hard_remaining_seconds": "221.229",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "573",
+        "elapsed_seconds": "0.811",
+        "finish_reason": "stop",
+        "prompt_tokens": "1298",
+        "completion_tokens": "135",
+        "total_tokens": "1433"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:29:05.794008Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:29:05.795000Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:29:05.796024Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury orbital distance comparison to Venus and all other solar system planets",
+        "purpose": "support",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:29:05.796969Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.225",
+        "hard_remaining_seconds": "221.225",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:29:08.488516Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "173.535",
+        "hard_remaining_seconds": "218.535",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287",
+        "elapsed_seconds": "2.688",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8000"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:29:08.491287Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury orbital distance comparison to Venus and all other solar system planets",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:29:08.493294Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Closest planet to Sun in solar system ranking by distance",
+        "purpose": "contradiction",
+        "query_id": "q27"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:29:08.494979Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "173.527",
+        "hard_remaining_seconds": "218.527",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "265"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:29:11.360251Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.663",
+        "hard_remaining_seconds": "215.663",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "265",
+        "elapsed_seconds": "2.862",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8564"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:29:11.362519Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Closest planet to Sun in solar system ranking by distance",
+        "query_id": "q27",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:29:11.364529Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Authoritative solar system planet distance rankings from original sources",
+        "purpose": "context",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:29:11.366141Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.656",
+        "hard_remaining_seconds": "215.656",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "281"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:29:13.641751Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.382",
+        "hard_remaining_seconds": "213.382",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "281",
+        "elapsed_seconds": "2.272",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7141"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:29:13.644818Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Authoritative solar system planet distance rankings from original sources",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:29:13.647167Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "11",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:29:13.648709Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "url": "https://solarsystem.nasa.gov/planet-compare",
+        "slot": "1",
+        "query_ids": "q25",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:29:13.650413Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:29:13.652203Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "168.370",
+        "hard_remaining_seconds": "213.370",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:29:14.318396Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "167.705",
+        "hard_remaining_seconds": "212.705",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.663",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "210"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:29:14.321011Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://solarsystem.nasa.gov/planet-compare",
+        "candidate_id": "c31",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:29:14.323076Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "url": "https://consensus.app/questions/planets-in-order-of-distance-from-the-sun",
+        "slot": "2",
+        "query_ids": "q27",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:29:14.324589Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:29:14.326143Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "167.696",
+        "hard_remaining_seconds": "212.696",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "200"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:29:14.481552Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "167.542",
+        "hard_remaining_seconds": "212.542",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "200",
+        "elapsed_seconds": "0.152",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "13269"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:29:14.488025Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "url": "https://consensus.app/questions/planets-in-order-of-distance-from-the-sun",
+        "candidate_id": "c33",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:29:14.489669Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:29:14.493936Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "167.528",
+        "hard_remaining_seconds": "212.528",
+        "attempt": "1",
+        "input_chars": "19749"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:29:14.497499Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "167.525",
+        "hard_remaining_seconds": "212.525",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32683"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:29:17.716890Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "164.306",
+        "hard_remaining_seconds": "209.306",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32683",
+        "elapsed_seconds": "3.217",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2190"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:29:17.719630Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "164.303",
+        "hard_remaining_seconds": "209.303",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1270",
+        "elapsed_seconds": "3.226",
+        "finish_reason": "stop",
+        "prompt_tokens": "10925",
+        "completion_tokens": "339",
+        "total_tokens": "11264"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:29:17.722965Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ac2c6519-4776-44fc-be7b-0d0489f145f6",
+        "snapshot_id": "96d98ce3-72d9-4113-bfd8-07d6fdb284c5",
+        "admissible": "true",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:29:17.724639Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:29:17.726203Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "164.296",
+        "hard_remaining_seconds": "209.296",
+        "attempt": "1",
+        "input_chars": "4051"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:29:17.728530Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "164.294",
+        "hard_remaining_seconds": "209.294",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7230"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:29:18.848236Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "163.175",
+        "hard_remaining_seconds": "208.175",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7230",
+        "elapsed_seconds": "1.117",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1459"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:29:18.851457Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "163.171",
+        "hard_remaining_seconds": "208.171",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "566",
+        "elapsed_seconds": "1.125",
+        "finish_reason": "stop",
+        "prompt_tokens": "1799",
+        "completion_tokens": "136",
+        "total_tokens": "1935"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:29:18.853283Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "conflicting_evidence",
+        "gap": "Investigate the conflicting passages and their original records, dates and scope. Seek evidence that explains the disagreement; do not count votes or ignore a side.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:29:18.854847Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Investigate the conflicting passages and their original records, dates and scope. Seek evidence that explains the disagreement; do not count votes or ignore a side.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:29:18.856520Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury average orbital distance from Sun versus Venus average orbital distance from Sun",
+        "purpose": "support",
+        "query_id": "q39"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:29:18.858114Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "163.164",
+        "hard_remaining_seconds": "208.164",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:29:21.112124Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.910",
+        "hard_remaining_seconds": "205.910",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296",
+        "elapsed_seconds": "2.253",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8516"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:29:21.113238Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Mercury average orbital distance from Sun versus Venus average orbital distance from Sun",
+        "query_id": "q39",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:29:21.114220Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Solar system planet order from Sun beginning with Mercury first",
+        "purpose": "contradiction",
+        "query_id": "q41"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:29:21.115135Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q41",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.907",
+        "hard_remaining_seconds": "205.907",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:29:23.558598Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q41",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.465",
+        "hard_remaining_seconds": "203.465",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271",
+        "elapsed_seconds": "2.441",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9971"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:29:23.561103Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Solar system planet order from Sun beginning with Mercury first",
+        "query_id": "q41",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:29:23.563104Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Dates and sources of original solar system distance rankings citing Mercury as closest planet to Sun",
+        "purpose": "context",
+        "query_id": "q43"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:29:23.564789Z",
+      "type": "provider_call_rejected",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q43",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.457",
+        "hard_remaining_seconds": "203.457",
+        "provider_call_id": "p44",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "308",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:29:23.566380Z",
+      "type": "research_stopped",
+      "stage": "searching",
+      "payload": {
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "158.456",
+        "hard_remaining_seconds": "203.456",
+        "provider": "tavily",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:29:23.567801Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:29:23.569240Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:29:23.572419Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:29:23.573868Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t45",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "203.448",
+        "hard_remaining_seconds": "203.448",
+        "attempt": "1",
+        "input_chars": "5671"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:29:23.576516Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t45",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "203.446",
+        "hard_remaining_seconds": "203.446",
+        "provider_call_id": "p46",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10639"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:29:25.017269Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t45",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "202.006",
+        "hard_remaining_seconds": "202.006",
+        "provider_call_id": "p46",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10639",
+        "elapsed_seconds": "1.438",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1386"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:29:25.020016Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t45",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "202.002",
+        "hard_remaining_seconds": "202.002",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "513",
+        "elapsed_seconds": "1.446",
+        "finish_reason": "stop",
+        "prompt_tokens": "2790",
+        "completion_tokens": "198",
+        "total_tokens": "2988"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:29:25.022773Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "202.000",
+        "hard_remaining_seconds": "201.999",
+        "attempt": "1",
+        "input_chars": "6182"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:29:25.025063Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "201.997",
+        "hard_remaining_seconds": "201.997",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10513"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:29:25.757487Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "201.266",
+        "hard_remaining_seconds": "201.266",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10513",
+        "elapsed_seconds": "0.730",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1067"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:29:25.760252Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "201.262",
+        "hard_remaining_seconds": "201.262",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "203",
+        "elapsed_seconds": "0.737",
+        "finish_reason": "stop",
+        "prompt_tokens": "2862",
+        "completion_tokens": "62",
+        "total_tokens": "2924"
+      }
+    },
+    {
+      "investigation_id": "12e654a1-d67b-4b49-a060-4420bb42fea3",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:29:25.762324Z",
+      "type": "investigation_partial",
+      "stage": null,
+      "payload": {
+        "stop_reason": "budget_exhausted"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 38.87552074999985,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.278
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.966
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.349
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.197
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.184
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.589
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.494
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.14
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.625
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.446
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.501
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.804
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.685
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.857
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.268
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.66
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.149
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.214
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.115
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.252
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.44
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.436
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.728
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2794533749984112,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9679360000009183,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3592994159989757,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.209709999999177,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.186641625001357,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 1.5905965829988418,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.4963065839983756,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14226475000032224,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.6283310420003545,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.4470627080008853,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.5015750419988763,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8051564170018537,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.688361917000293,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.862311332999525,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.272382082999684,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.663470833998872,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.15221112500148593,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.216573416000756,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1167102919971512,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.2526077500006068,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.441125707999163,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.438150209000014,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7296347500014235,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

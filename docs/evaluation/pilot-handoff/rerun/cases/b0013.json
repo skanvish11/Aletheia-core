@@ -1,0 +1,4512 @@
+{
+  "id": "b0013",
+  "live": true,
+  "investigation": {
+    "id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+    "claim": "The World Wide Web software, released by CERN into the public domain in May 1993, enabled royalty-free reuse.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:32:10.788685Z",
+    "started_at": "2026-11-10T05:32:10.790166Z",
+    "finished_at": "2026-11-10T05:33:07.814532Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "events": "/investigations/7e2e1734-171e-46d4-91c4-1c83f908d1d0/events",
+      "evidence": "/investigations/7e2e1734-171e-46d4-91c4-1c83f908d1d0/evidence",
+      "comparison": "/investigations/7e2e1734-171e-46d4-91c4-1c83f908d1d0/comparison",
+      "refresh": "/investigations/7e2e1734-171e-46d4-91c4-1c83f908d1d0/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "url": "https://www.facebook.com/cern/videos/throwbackthursday-to-the-90s-atcernfunfact-in-the-1990s-cern-released-the-world/1339552784891592",
+        "canonical_url": "https://www.facebook.com/cern/videos/throwbackthursday-to-the-90s-atcernfunfact-in-the-1990s-cern-released-the-world/1339552784891592",
+        "title": "137K views · 3.7K reactions | #ThrowbackThursday to the 90s #AtCERN\n\n#FunFact: In the 1990s, CERN released the World Wide Web into the public domain. On April 30, 1993, CERN issued a statement making the Web software available on a royalty-free basis, making the web accessible to everyone.\n\nCurious about CERN’s history? Explore more in our achives: https://sis.web.cern.ch/archives | CERN",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:20.196100Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "8cc9859345a2101967dbebc0950aa0188f4d3d7cdc5740f96843dece0fdd56f4",
+        "duplicate_group": "8cc9859345a2101967dbebc0950aa0188f4d3d7cdc5740f96843dece0fdd56f4",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "url": "https://www.pingdom.com/blog/open-sourced-world-wide-web-1993",
+        "canonical_url": "https://www.pingdom.com/blog/open-sourced-world-wide-web-1993",
+        "title": "Web history - CERN open sourced World Wide Web in 1993",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:26.211993Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "0e7ef3547fae46c963b23b837a08aacbb532e655fbc56d6e4c35b1f958b9a200",
+        "duplicate_group": "0e7ef3547fae46c963b23b837a08aacbb532e655fbc56d6e4c35b1f958b9a200",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/licensing-web",
+        "canonical_url": "https://home.cern/science/computing/the-birth-of-the-web/licensing-web",
+        "title": "Licensing the Web – Home | CERN",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:32.624340Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "44e9ae7b4f958343abbe03e92fc1039ca2e6f919ad1e78779167a6933cfa4242",
+        "duplicate_group": "44e9ae7b4f958343abbe03e92fc1039ca2e6f919ad1e78779167a6933cfa4242",
+        "limitations": []
+      },
+      {
+        "id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "url": "https://lists.w3.org/Archives/Public/www-talk/1993May/0047.html",
+        "canonical_url": "https://lists.w3.org/Archives/Public/www-talk/1993May/0047.html",
+        "title": "PUBLIC DOMAIN CERN WWW SOFTWARE from Tim Berners-Lee on 1993-05-07 (www-talk@w3.org from May 1993)",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:40.054571Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "0be8eff4e0a4c273e54a486090fa98777034ae454bd65b193d9e83b52ccbfcc1",
+        "duplicate_group": "0be8eff4e0a4c273e54a486090fa98777034ae454bd65b193d9e83b52ccbfcc1",
+        "limitations": []
+      },
+      {
+        "id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "url": "https://community.spiceworks.com/t/daily-challenge-the-day-the-web-went-public-when-cern-opened-the-web-to-everyone-2026-apr-30/1252998",
+        "canonical_url": "https://community.spiceworks.com/t/daily-challenge-the-day-the-web-went-public-when-cern-opened-the-web-to-everyone-2026-apr-30/1252998",
+        "title": "Daily Challenge - The Day the Web Went Public: When CERN Opened the Web to Everyone - 2026-Apr-30 - Daily Challenge - Spiceworks Community",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:32:57.249549Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "54375e776a6ae1701e087110e840110af63cea8924b683bfa9c15d1c7885ee27",
+        "duplicate_group": "54375e776a6ae1701e087110e840110af63cea8924b683bfa9c15d1c7885ee27",
+        "limitations": []
+      },
+      {
+        "id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web",
+        "canonical_url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web",
+        "title": "A short history of the Web – Home | CERN",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:33:01.220493Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "43a37149809ea36156cc3a57e7b6f1448b49f7cdfed4031c7eda49b99f73d289",
+        "duplicate_group": "43a37149809ea36156cc3a57e7b6f1448b49f7cdfed4031c7eda49b99f73d289",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "e2914cf9-8299-4f67-9806-4f9a4c025894",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+            "span_ids": [
+              39,
+              40
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "CERN",
+          "origin": "Facebook post by CERN",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            39,
+            40
+          ],
+          "provenance_note": "Facebook post from CERN's official page states that on April 30, 1993, CERN issued a statement making the Web software available on a royalty-free basis.",
+          "rationale": "The Facebook post from CERN's official page explicitly confirms that on April 30, 1993, CERN issued a statement making the World Wide Web software available on a royalty-free basis, supporting the assertion's core claim about the public domain release and royalty-free reuse.",
+          "limitations": [
+            "The source is a social media post, not a peer-reviewed publication or formal CERN archive record.",
+            "The post does not provide the full legal text of CERN's public domain dedication."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              39,
+              40
+            ],
+            "start": 2661,
+            "end": 2919,
+            "text": "[CERN](https://www.facebook.com/cern?comment_id=Y29tbWVudDoxMzkyNzIzMzU2MjMwNzIzXzEyOTcxMDg5NDU5Mjk1MTM%3D&__tn__=R)\n\nWe couldn't resist adding some extra [#throwback](https://www.facebook.com/watch/hashtag/throwback?__eep__=6%2F&__tn__=R) photos to the mix.",
+            "quote_hash": "be2a8277cc7d588c7069c9d8321aea316074331513080fe397a0f9124860c09c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "c4ad8845-090f-48e6-8915-fb46cf839f36",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+            "span_ids": [
+              30
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Facebook",
+          "origin": "Facebook post timestamp",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            30
+          ],
+          "provenance_note": "The post was published on Thursday, 23 April 2026, indicating the anniversary reference but not the original event details.",
+          "rationale": "The publication date of the Facebook post (23 April 2026) provides contextual timing relative to the 1993 event but does not itself establish the royalty-free release fact.",
+          "limitations": [
+            "The timestamp is for the post's sharing, not the original CERN release.",
+            "Does not independently verify the April 30, 1993 date or royalty-free terms."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              30
+            ],
+            "start": 2117,
+            "end": 2148,
+            "text": "Thursday 23 April 2026 at 07:42",
+            "quote_hash": "ab9623a1e5d2083a8576dbd6e93762e0ac368052801659a5bf887add35e17c64"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "6c87e094-7b00-4dfc-b29d-3114bff61c5c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+            "span_ids": [
+              58,
+              59,
+              60,
+              61
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Pingdom blog post about CERN open sourcing WWW",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            58,
+            59,
+            60,
+            61
+          ],
+          "provenance_note": "CERN release document stating public domain intention and royalty-free reuse terms",
+          "rationale": "Spans 58-61 cite the April 30, 1993 CERN public domain release, the official document text, and the royalty-free compatibility/standards language, directly supporting royalty-free reuse claim.",
+          "limitations": [
+            "source is a contemporary blog, not a peer-reviewed academic record",
+            "CERN's specific legal designation of 'public domain' versus 'royalty-free' distinction not explicitly parsed"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              58,
+              59,
+              60,
+              61
+            ],
+            "start": 6225,
+            "end": 6943,
+            "text": "Today is especially important in the history of the web since on April 30, 1993, [CERN](http://public.web.cern.ch/public/), the European Organization for Nuclear Research, released World Wide Web into the public domain.\n\nIn the document making the release official, W. Hoogland, Director of Research, and H. Weber, Director of Administration, referred to World Wide Web, or W3 for short, as “a global computer networked information system.” It further stated that “CERN’s intention in this is to further compatibility, common practices, and standards in networking and computer supported collaboration.” ([page 1](http://www.w3.org/History/1993/CERN/page1.png), [page 2](http://www.w3.org/History/1993/CERN/page2.png))",
+            "quote_hash": "b70b7f5ddb46c843d4c7912a9acf659a0f53a6d3323f6e61c496b6a91f2ef1f3"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "85ec2ede-6159-4e54-86a0-2e5e099a94f8",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+            "span_ids": [
+              65,
+              66
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Pingdom blog post pricing page for early WWW browser",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            65,
+            66
+          ],
+          "provenance_note": "Early WWW browser and source code sold for 50 Euros, not royalty-free",
+          "rationale": "Spans 65-66 explicitly state that early WWW browser and source code required payment (50 Euros per computer/site), contradicting royalty-free reuse for the initial product release.",
+          "limitations": [
+            "pricing pertains to early commercial distribution, not the 1993 public domain release",
+            "does not address whether later versions or source code became free"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              65,
+              66
+            ],
+            "start": 7472,
+            "end": 7709,
+            "text": "The World Wide Web browser was [available](http://www.w3.org/History/1993/WWW/Conditions/PriceList.html) for NeXT workstations and Apple Macintosh computers for 50 Euros per computer. Source code could be purchased for 50 Euros per site.",
+            "quote_hash": "f9ec1b02fa087ee46a1b26f6f50b0414fb3715a841f1ef023b9fdc3f567fe183"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "d292ac4f-4174-4932-b35a-e3c31e310304",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+            "span_ids": [
+              68,
+              69
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "CERN",
+          "origin": "home.cern",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            68,
+            69
+          ],
+          "provenance_note": "Primary source: CERN official licensing page.",
+          "rationale": "CERN's 30 April 1993 statement put the core Web software (line-mode client, server, common code library) in the public domain, explicitly relinquishing all intellectual property rights and granting permission to use, duplicate, modify and distribute it.",
+          "limitations": [
+            "May not capture subsequent legal interpretations of the public domain dedication"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              68,
+              69
+            ],
+            "start": 4773,
+            "end": 5166,
+            "text": "On 30 April 1993 CERN issued a public statement stating that the three components of Web software (the basic line-mode client, the basic server and the library of common code) were put in the Public Domain with the statement:\n\nCERN relinquishes all intellectual property rights to this code, both source and binary and permission is given to anyone to use, duplicate, modify and distribute it.",
+            "quote_hash": "a099660c340ea992beac0b3b33d743973d78e729c17089077c73023b790c43b6"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "db25865d-61ea-4bc7-9673-fce66a6002e6",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+            "span_ids": [
+              68,
+              69,
+              70
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "CERN",
+          "origin": "home.cern",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            68,
+            69,
+            70
+          ],
+          "provenance_note": "Source confirms public domain dedication and context of early 1990s open software concepts.",
+          "rationale": "The 30 April 1993 public domain statement is corroborated by the contextual note that free/open software concepts were in their infancy in the early 1990s, supporting the assertion's factual basis.",
+          "limitations": [
+            "Contextual remark does not quantify the scope of royalty-free reuse"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              68,
+              69,
+              70
+            ],
+            "start": 4773,
+            "end": 5271,
+            "text": "On 30 April 1993 CERN issued a public statement stating that the three components of Web software (the basic line-mode client, the basic server and the library of common code) were put in the Public Domain with the statement:\n\nCERN relinquishes all intellectual property rights to this code, both source and binary and permission is given to anyone to use, duplicate, modify and distribute it.\n\nIt was the early ’90s and concepts like free and open software and public domain were in their infancy.",
+            "quote_hash": "050de4c90c2cdad3aeebf95f35af264be54ba3cfe1ddad8dc6ef071ea843ca6c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "55a3aa60-4c07-4cee-a6ad-14626994520d",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+            "span_ids": [
+              2,
+              3
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "w3.org",
+          "origin": "CERN WWW talk archive",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            2,
+            3
+          ],
+          "provenance_note": "The email thread confirms the release date but does not explicitly state 'public domain' or 'royalty-free reuse' as a formal declaration.",
+          "rationale": "Span 2 provides the timestamp of the May 1993 release. Span 3 is an archive metadata footer. Together they establish the release context but contain no explicit terms about public domain status or royalty-free reuse.",
+          "limitations": [
+            "No explicit public domain declaration found in the snippet",
+            "No royalty-free reuse language present",
+            "Email subject/headers not included in span data"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "legal_status",
+              "explanation": "Release date and archive context do not establish public domain dedication or royalty-free licensing terms."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              2,
+              3
+            ],
+            "start": 35,
+            "end": 215,
+            "text": "Received on Friday, 7 May 1993 15:32:30 UTC\n\nThis archive was generated by [hypermail 3.0.0](https://github.com/hypermail-project/hypermail/): Tuesday, 27 October 2026 23:17:48 UTC",
+            "quote_hash": "a84733f42ee53465b3a5db2e5449434af07fb448cc2a333aed904127084eb260"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "a1cb1f15-215a-4b43-8062-65099f5b4996",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+            "span_ids": [
+              3,
+              5,
+              9,
+              10
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Spiceworks Community Daily Challenge post",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3,
+            5,
+            9,
+            10
+          ],
+          "provenance_note": "Multiple spans in the source confirm CERN released World Wide Web software into the public domain royalty-free on April 30, 1993, and that this was a deliberate decision by CERN management.",
+          "rationale": "Spans 3 and 9 state CERN released the core World Wide Web software (HTTP, HTML, server/browser code) into the public domain royalty-free on April 30, 1993. Span 5 confirms the correct answer. Span 10 attributes the decision to Tim Berners-Lee's 1989 proposal and CERN management. Together they fully覆",
+          "limitations": [
+            "Source is a community forum discussion, not a peer-reviewed historical record",
+            "No independent external verification provided within the snapshot"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 277,
+            "end": 357,
+            "text": "On April 30, 1993, CERN made a landmark decision that changed computing forever.",
+            "quote_hash": "71b59220627260802556d23757d00d6bb88b0f12569b815b62b1c8faafac82c2"
+          },
+          {
+            "span_ids": [
+              5
+            ],
+            "start": 418,
+            "end": 525,
+            "text": "**Correct Answer:** The World Wide Web software and protocols, released royalty-free into the public domain",
+            "quote_hash": "509720bd745c747021e4a98437e64be8e872ccf224a788a307c92a4b1e594886"
+          },
+          {
+            "span_ids": [
+              9,
+              10
+            ],
+            "start": 658,
+            "end": 999,
+            "text": "On April 30, 1993, CERN released the core World Wide Web software, including HTTP, HTML, and the original web server and browser code (WorldWideWeb/Nexus), into the public domain, royalty-free. This was a deliberate and historic decision by CERN management, largely championed by Tim Berners-Lee, who had originally proposed the Web in 1989.",
+            "quote_hash": "4579f2e7558cce77c73dd36ad15c705fa8e012dc2e6ee5b4633ec616f1c18425"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "331b99e9-8248-4616-898a-ec35de6d7ac5",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+            "span_ids": [
+              8
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Spiceworks Community Daily Challenge post",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            8
+          ],
+          "provenance_note": "Span 8 notes the 33-year milestone as of the post date, consistent with April 1993 release.",
+          "rationale": "Span 8 provides contextual timing information aligning with the 1993 release date but does not independently verify the royalty-free public domain release.",
+          "limitations": [
+            "Relies on the same community source as the primary evidence",
+            "No independent historical documentation"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 573,
+            "end": 656,
+            "text": "Today marks 33 years since one of the most important decisions in internet history.",
+            "quote_hash": "d754cf906e94b0cbabd79e30ee3a7996bba1bddda66f820a872457b211d62a44"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "6bc8b8a2-7a79-41bf-919b-d9299f77b292",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+            "span_ids": [
+              74,
+              77,
+              93,
+              96,
+              110
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": "CERN released WWW source code to royalty-free basis in April 1993 (span 110), with earlier March 1989 proposal (74), November 1990 formalisation (75), first browser 1990 (78), and public announcement August 1991 (96).",
+          "publisher": "CERN",
+          "origin": "CERN short history Web page",
+          "independence": "established",
+          "provenance_span_ids": [
+            74,
+            77,
+            93,
+            96,
+            110
+          ],
+          "provenance_note": "CERN's official timeline of the Web's development.",
+          "rationale": "The assertion states the software was released in May 1993 into the public domain enabling royalty-free reuse. Span 110 confirms the release date as 30 April 1993 on a royalty-free basis, making it free software. Spans 74 and 77 document the 1989 proposal and 1990 formalisation. Span 93 notes 1991 C",
+          "limitations": [
+            "Assertion says 'May 1993' while source gives 30 April 1993 (one-day difference, likely within same month release window)",
+            "Does not address whether 'public domain' terminology exactly matches CERN's royalty-free licensing approach"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              74
+            ],
+            "start": 5483,
+            "end": 5622,
+            "text": "Tim Berners-Lee wrote the [first proposal for the World Wide Web](http://cds.cern.ch/record/369245/files/ARCH-WWW-4-010.pdf) in March 1989.",
+            "quote_hash": "57f801fa4310e58cfd6f3fd24753f99558acc720e8861c7a153a3666ae1568d0"
+          },
+          {
+            "span_ids": [
+              77
+            ],
+            "start": 5880,
+            "end": 6019,
+            "text": "The document described a “hypertext project” called “WorldWideWeb” in which a “web” of “hypertext documents” could be viewed by “browsers”.",
+            "quote_hash": "4de4e53c8a8c0a519655c9c22a61af6b4c1f4eba887a26027f3645643c5a4603"
+          },
+          {
+            "span_ids": [
+              93
+            ],
+            "start": 7852,
+            "end": 7899,
+            "text": "In 1991, Berners-Lee released his WWW software.",
+            "quote_hash": "955fed9cc7bfdc95e1401251e06f107a28f3d431b711626bf2a56b645c1c7dfa"
+          },
+          {
+            "span_ids": [
+              96
+            ],
+            "start": 8068,
+            "end": 8271,
+            "text": "A few months later, in August 1991, he [announced the WWW software on Internet newsgroups](https://www.w3.org/People/Berners-Lee/1991/08/art-6484.txt) and interest in the project spread around the world.",
+            "quote_hash": "46203439f85fb131bb8e71d90e7f88c15a8f0aa7728ffac9348b0ec3bf97f409"
+          },
+          {
+            "span_ids": [
+              110
+            ],
+            "start": 9978,
+            "end": 10097,
+            "text": "On 30 April 1993, CERN made the source code of WorldWideWeb available on a royalty-free basis, making it free software.",
+            "quote_hash": "f4f9fc6271b7a901ae66225700f75fab8862493148ef098b42ff4d8d95d4703a"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "1bf66b45-d900-4704-b93b-e4112a8d4140",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+            "span_ids": [
+              66,
+              67,
+              68
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Tim Berners-Lee invented the Web in 1989 at CERN (67); the Web was conceived for automated information-sharing between scientists (68).",
+          "publisher": "CERN",
+          "origin": "CERN short history Web page",
+          "independence": "established",
+          "provenance_span_ids": [
+            66,
+            67,
+            68
+          ],
+          "provenance_note": "Contextual background from the same CERN page.",
+          "rationale": "These spans provide context about the invention and purpose of the Web but do not address the 1993 release or royalty-free licensing terms.",
+          "limitations": [
+            "Only covers invention context, not the release event or licensing terms"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              66,
+              67,
+              68
+            ],
+            "start": 4595,
+            "end": 4927,
+            "text": "The Web has grown to revolutionise communications worldwide\n\nTim Berners-Lee, a British scientist, invented the World Wide Web (WWW) in 1989, while working at CERN. The Web was originally conceived and developed to meet the demand for automated information-sharing between scientists in universities and institutes around the world.",
+            "quote_hash": "6bb5c5bf40ea6c6cb915bbbfa3458bc69aac0b2210dfc4e53fd17a4abf553af8"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:32:10.788685Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:32:10.790166Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:32:10.792463Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:32:10.793701Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:32:10.794780Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "attempt": "1",
+        "input_chars": "137"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:32:10.796352Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.996",
+        "hard_remaining_seconds": "119.996",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5814"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:32:11.950023Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.844",
+        "hard_remaining_seconds": "118.844",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5814",
+        "elapsed_seconds": "1.151",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1315"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:32:11.952801Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.840",
+        "hard_remaining_seconds": "118.840",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "438",
+        "elapsed_seconds": "1.158",
+        "finish_reason": "stop",
+        "prompt_tokens": "906",
+        "completion_tokens": "116",
+        "total_tokens": "1022"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:32:11.954500Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:32:11.956146Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:32:11.957568Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:32:11.959028Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.833",
+        "hard_remaining_seconds": "238.833",
+        "attempt": "1",
+        "input_chars": "504"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:32:11.961371Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.831",
+        "hard_remaining_seconds": "238.831",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3529"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:32:13.139287Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.654",
+        "hard_remaining_seconds": "237.654",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3529",
+        "elapsed_seconds": "1.175",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1430"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:32:13.141559Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.651",
+        "hard_remaining_seconds": "237.651",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "540",
+        "elapsed_seconds": "1.182",
+        "finish_reason": "stop",
+        "prompt_tokens": "611",
+        "completion_tokens": "154",
+        "total_tokens": "765"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:32:13.143269Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN World Wide Web software release May 1993 royalty free public domain",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:32:13.144686Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.648",
+        "hard_remaining_seconds": "237.648",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "280"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:32:15.475848Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.318",
+        "hard_remaining_seconds": "235.318",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "280",
+        "elapsed_seconds": "2.329",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8279"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:32:15.478198Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN World Wide Web software release May 1993 royalty free public domain",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:32:15.480055Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "World Wide Web 1993 CERN public domain release date details",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:32:15.481651Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.311",
+        "hard_remaining_seconds": "235.311",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "267"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:32:17.660273Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.134",
+        "hard_remaining_seconds": "233.134",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "267",
+        "elapsed_seconds": "2.175",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9685"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:32:17.663437Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "World Wide Web 1993 CERN public domain release date details",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:32:17.665511Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN Tim Berners Lee WWW software 1993 license terms reuse rights",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:32:17.667193Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.125",
+        "hard_remaining_seconds": "233.125",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:32:20.047409Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.746",
+        "hard_remaining_seconds": "230.746",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "273",
+        "elapsed_seconds": "2.378",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8719"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:32:20.049462Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN Tim Berners Lee WWW software 1993 license terms reuse rights",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:32:20.051723Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "6",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:32:20.053202Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.facebook.com/cern/videos/throwbackthursday-to-the-90s-atcernfunfact-in-the-1990s-cern-released-the-world/1339552784891592",
+        "slot": "1",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:32:20.054598Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:32:20.056006Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.736",
+        "hard_remaining_seconds": "230.736",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:32:20.194737Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.599",
+        "hard_remaining_seconds": "230.599",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "260",
+        "elapsed_seconds": "0.136",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "27539"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:32:20.202896Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "url": "https://www.facebook.com/cern/videos/throwbackthursday-to-the-90s-atcernfunfact-in-the-1990s-cern-released-the-world/1339552784891592",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:32:20.204673Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:32:20.210325Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.582",
+        "hard_remaining_seconds": "230.582",
+        "attempt": "1",
+        "input_chars": "18517"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:32:20.214068Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.578",
+        "hard_remaining_seconds": "230.578",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30112"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:32:22.784209Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.010",
+        "hard_remaining_seconds": "228.010",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30112",
+        "elapsed_seconds": "2.567",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1980"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:32:22.787319Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.005",
+        "hard_remaining_seconds": "228.005",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1060",
+        "elapsed_seconds": "2.577",
+        "finish_reason": "stop",
+        "prompt_tokens": "12306",
+        "completion_tokens": "303",
+        "total_tokens": "12609"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:32:22.789064Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:32:22.790582Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.002",
+        "hard_remaining_seconds": "228.002",
+        "attempt": "2",
+        "input_chars": "18517"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:32:22.794477Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.998",
+        "hard_remaining_seconds": "227.998",
+        "provider_call_id": "p15",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30302"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:32:25.953120Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.841",
+        "hard_remaining_seconds": "224.841",
+        "provider_call_id": "p15",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30302",
+        "elapsed_seconds": "3.155",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3019"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:32:25.955568Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "179.837",
+        "hard_remaining_seconds": "224.837",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2059",
+        "elapsed_seconds": "3.165",
+        "finish_reason": "stop",
+        "prompt_tokens": "12339",
+        "completion_tokens": "575",
+        "total_tokens": "12914"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:32:25.958853Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e2914cf9-8299-4f67-9806-4f9a4c025894",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:32:25.960409Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c4ad8845-090f-48e6-8915-fb46cf839f36",
+        "snapshot_id": "ab9c5127-01d1-4602-a98a-2ceacbd0e89e",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:32:25.961991Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "url": "https://www.pingdom.com/blog/open-sourced-world-wide-web-1993",
+        "slot": "2",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:32:25.963243Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:32:25.964673Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.828",
+        "hard_remaining_seconds": "224.828",
+        "provider_call_id": "p17",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:32:26.210704Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.582",
+        "hard_remaining_seconds": "224.582",
+        "provider_call_id": "p17",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "188",
+        "elapsed_seconds": "0.244",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "18246"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:32:26.217084Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "url": "https://www.pingdom.com/blog/open-sourced-world-wide-web-1993",
+        "candidate_id": "c16",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:32:26.218607Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:32:26.224179Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.568",
+        "hard_remaining_seconds": "224.568",
+        "attempt": "1",
+        "input_chars": "20294"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:32:26.228176Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.565",
+        "hard_remaining_seconds": "224.565",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32761"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:32:28.726551Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.067",
+        "hard_remaining_seconds": "222.067",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32761",
+        "elapsed_seconds": "2.495",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2214"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:32:28.730573Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.063",
+        "hard_remaining_seconds": "222.063",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1278",
+        "elapsed_seconds": "2.506",
+        "finish_reason": "stop",
+        "prompt_tokens": "9665",
+        "completion_tokens": "403",
+        "total_tokens": "10068"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:32:28.732725Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:32:28.734366Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.058",
+        "hard_remaining_seconds": "222.058",
+        "attempt": "2",
+        "input_chars": "20294"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:32:28.738968Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.054",
+        "hard_remaining_seconds": "222.054",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32951"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:32:32.102962Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.691",
+        "hard_remaining_seconds": "218.691",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32951",
+        "elapsed_seconds": "3.360",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3142"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:32:32.106911Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.686",
+        "hard_remaining_seconds": "218.686",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2186",
+        "elapsed_seconds": "3.372",
+        "finish_reason": "stop",
+        "prompt_tokens": "9698",
+        "completion_tokens": "616",
+        "total_tokens": "10314"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:32:32.112099Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "6c87e094-7b00-4dfc-b29d-3114bff61c5c",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:32:32.114209Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "85ec2ede-6159-4e54-86a0-2e5e099a94f8",
+        "snapshot_id": "b0fdfdbd-35ae-4267-b74f-2776baaf7b13",
+        "admissible": "true",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:32:32.115838Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/licensing-web",
+        "slot": "3",
+        "query_ids": "q5,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:32:32.117091Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:32:32.118545Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.674",
+        "hard_remaining_seconds": "218.674",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:32:32.622169Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.173",
+        "hard_remaining_seconds": "218.173",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197",
+        "elapsed_seconds": "0.499",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12046"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:32:32.629102Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/licensing-web",
+        "candidate_id": "c21",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:32:32.630904Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:32:32.636506Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.156",
+        "hard_remaining_seconds": "218.156",
+        "attempt": "1",
+        "input_chars": "19346"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:32:32.641951Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.151",
+        "hard_remaining_seconds": "218.151",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31946"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:32:36.989138Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.804",
+        "hard_remaining_seconds": "213.804",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31946",
+        "elapsed_seconds": "4.345",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3279"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:32:36.991180Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.801",
+        "hard_remaining_seconds": "213.801",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2288",
+        "elapsed_seconds": "4.355",
+        "finish_reason": "stop",
+        "prompt_tokens": "9337",
+        "completion_tokens": "669",
+        "total_tokens": "10006"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:32:36.992916Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:32:36.994489Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.798",
+        "hard_remaining_seconds": "213.798",
+        "attempt": "2",
+        "input_chars": "19346"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:32:36.998698Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "168.794",
+        "hard_remaining_seconds": "213.794",
+        "provider_call_id": "p25",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32136"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:32:39.542301Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.250",
+        "hard_remaining_seconds": "211.250",
+        "provider_call_id": "p25",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32136",
+        "elapsed_seconds": "2.542",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2719"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:32:39.543640Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.248",
+        "hard_remaining_seconds": "211.248",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1766",
+        "elapsed_seconds": "2.549",
+        "finish_reason": "stop",
+        "prompt_tokens": "9370",
+        "completion_tokens": "529",
+        "total_tokens": "9899"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:32:39.545535Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "d292ac4f-4174-4932-b35a-e3c31e310304",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:32:39.546722Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "db25865d-61ea-4bc7-9673-fce66a6002e6",
+        "snapshot_id": "651136f9-280b-44b3-886e-ed7b4916e778",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:32:39.548414Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c26",
+        "url": "https://lists.w3.org/Archives/Public/www-talk/1993May/0047.html",
+        "slot": "4",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:32:39.550362Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:32:39.552691Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c26",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.240",
+        "hard_remaining_seconds": "211.240",
+        "provider_call_id": "p27",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "190"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:32:40.053412Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c26",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.740",
+        "hard_remaining_seconds": "210.740",
+        "provider_call_id": "p27",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "190",
+        "elapsed_seconds": "0.495",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "559"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:32:40.057745Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "url": "https://lists.w3.org/Archives/Public/www-talk/1993May/0047.html",
+        "candidate_id": "c26",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:32:40.059373Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:32:40.063975Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t28",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.729",
+        "hard_remaining_seconds": "210.729",
+        "attempt": "1",
+        "input_chars": "840"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:32:40.067346Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t28",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.725",
+        "hard_remaining_seconds": "210.725",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10029"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:32:42.051903Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t28",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.742",
+        "hard_remaining_seconds": "208.742",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10029",
+        "elapsed_seconds": "1.982",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2182"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:32:42.054622Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t28",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.738",
+        "hard_remaining_seconds": "208.738",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1261",
+        "elapsed_seconds": "1.991",
+        "finish_reason": "stop",
+        "prompt_tokens": "1796",
+        "completion_tokens": "329",
+        "total_tokens": "2125"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:32:42.058249Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "55a3aa60-4c07-4cee-a6ad-14626994520d",
+        "snapshot_id": "0643813f-2c46-4bfe-a40b-e9fb10b58329",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:32:42.059930Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:32:42.061879Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.731",
+        "hard_remaining_seconds": "208.731",
+        "attempt": "1",
+        "input_chars": "7407"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:32:42.064340Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.728",
+        "hard_remaining_seconds": "208.728",
+        "provider_call_id": "p31",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10714"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:32:43.253243Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.540",
+        "hard_remaining_seconds": "207.540",
+        "provider_call_id": "p31",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10714",
+        "elapsed_seconds": "1.186",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1581"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:32:43.256124Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.536",
+        "hard_remaining_seconds": "207.536",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "688",
+        "elapsed_seconds": "1.194",
+        "finish_reason": "stop",
+        "prompt_tokens": "2945",
+        "completion_tokens": "187",
+        "total_tokens": "3132"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:32:43.257859Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "conflicting_evidence",
+        "gap": "Investigate the conflicting passages and their original records, dates and scope. Seek evidence that explains the disagreement; do not count votes or ignore a side.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:32:43.259386Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Investigate the conflicting passages and their original records, dates and scope. Seek evidence that explains the disagreement; do not count votes or ignore a side.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:32:43.261441Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN April 30 1993 public domain statement full text and explicit royalty-free terms",
+        "purpose": "support",
+        "query_id": "q32"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:32:43.262995Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q32",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.529",
+        "hard_remaining_seconds": "207.529",
+        "provider_call_id": "p33",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "292"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:32:50.438900Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q32",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "155.354",
+        "hard_remaining_seconds": "200.354",
+        "provider_call_id": "p33",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "292",
+        "elapsed_seconds": "7.174",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8663"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:32:50.441344Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN April 30 1993 public domain statement full text and explicit royalty-free terms",
+        "query_id": "q32",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:32:50.443198Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Pingdom 50 Euro pricing for WWW browser and source code early 1993 release",
+        "purpose": "contradiction",
+        "query_id": "q34"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:32:50.444862Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "155.348",
+        "hard_remaining_seconds": "200.348",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "282"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:32:53.578649Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "152.214",
+        "hard_remaining_seconds": "197.214",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "282",
+        "elapsed_seconds": "3.131",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6681"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:32:53.581018Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Pingdom 50 Euro pricing for WWW browser and source code early 1993 release",
+        "query_id": "q34",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:32:53.582926Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN licensing web page historical archived versions of April 1993 public domain release",
+        "purpose": "context",
+        "query_id": "q36"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:32:53.584324Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "152.208",
+        "hard_remaining_seconds": "197.208",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:32:57.088142Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "148.706",
+        "hard_remaining_seconds": "193.706",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296",
+        "elapsed_seconds": "3.501",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7481"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:32:57.090427Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "CERN licensing web page historical archived versions of April 1993 public domain release",
+        "query_id": "q36",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:32:57.092881Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "8",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:32:57.094417Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "url": "https://community.spiceworks.com/t/daily-challenge-the-day-the-web-went-public-when-cern-opened-the-web-to-everyone-2026-apr-30/1252998",
+        "slot": "1",
+        "query_ids": "q32,q36",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:32:57.096096Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:32:57.097881Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.695",
+        "hard_remaining_seconds": "193.695",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:32:57.248292Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.545",
+        "hard_remaining_seconds": "193.545",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262",
+        "elapsed_seconds": "0.148",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "11780"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:32:57.254040Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "url": "https://community.spiceworks.com/t/daily-challenge-the-day-the-web-went-public-when-cern-opened-the-web-to-everyone-2026-apr-30/1252998",
+        "candidate_id": "c38",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:32:57.255509Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:32:57.259547Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.533",
+        "hard_remaining_seconds": "193.533",
+        "attempt": "1",
+        "input_chars": "17593"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:32:57.262906Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "148.529",
+        "hard_remaining_seconds": "193.529",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29473"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:33:00.849223Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "144.944",
+        "hard_remaining_seconds": "189.944",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29473",
+        "elapsed_seconds": "3.584",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2832"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:33:00.851651Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "144.941",
+        "hard_remaining_seconds": "189.941",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1879",
+        "elapsed_seconds": "3.592",
+        "finish_reason": "stop",
+        "prompt_tokens": "8794",
+        "completion_tokens": "550",
+        "total_tokens": "9344"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:33:00.855117Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "a1cb1f15-215a-4b43-8062-65099f5b4996",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:33:00.856660Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "331b99e9-8248-4616-898a-ec35de6d7ac5",
+        "snapshot_id": "d7088d45-1a77-4472-8d78-8fb519f0485a",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 123,
+      "timestamp": "2026-11-10T05:33:00.858169Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web",
+        "slot": "2",
+        "query_ids": "q34",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 124,
+      "timestamp": "2026-11-10T05:33:00.859549Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 125,
+      "timestamp": "2026-11-10T05:33:00.861010Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.931",
+        "hard_remaining_seconds": "189.931",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "201"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 126,
+      "timestamp": "2026-11-10T05:33:01.218800Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.575",
+        "hard_remaining_seconds": "189.575",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "201",
+        "elapsed_seconds": "0.355",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "13512"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 127,
+      "timestamp": "2026-11-10T05:33:01.225253Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "url": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web",
+        "candidate_id": "c42",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 128,
+      "timestamp": "2026-11-10T05:33:01.226907Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 129,
+      "timestamp": "2026-11-10T05:33:01.232508Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.560",
+        "hard_remaining_seconds": "189.560",
+        "attempt": "1",
+        "input_chars": "20653"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 130,
+      "timestamp": "2026-11-10T05:33:01.236642Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "144.556",
+        "hard_remaining_seconds": "189.556",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33535"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 131,
+      "timestamp": "2026-11-10T05:33:04.894713Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.898",
+        "hard_remaining_seconds": "185.898",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "33535",
+        "elapsed_seconds": "3.655",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3251"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 132,
+      "timestamp": "2026-11-10T05:33:04.898765Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.895",
+        "hard_remaining_seconds": "185.895",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2289",
+        "elapsed_seconds": "3.665",
+        "finish_reason": "stop",
+        "prompt_tokens": "10033",
+        "completion_tokens": "725",
+        "total_tokens": "10758"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 133,
+      "timestamp": "2026-11-10T05:33:04.903074Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "6bc8b8a2-7a79-41bf-919b-d9299f77b292",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 134,
+      "timestamp": "2026-11-10T05:33:04.904929Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "1bf66b45-d900-4704-b93b-e4112a8d4140",
+        "snapshot_id": "a7cbcd0e-2474-4f36-ae4e-9e8937a94060",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 135,
+      "timestamp": "2026-11-10T05:33:04.907718Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 136,
+      "timestamp": "2026-11-10T05:33:04.909580Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.883",
+        "hard_remaining_seconds": "185.883",
+        "attempt": "1",
+        "input_chars": "11192"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 137,
+      "timestamp": "2026-11-10T05:33:04.912398Z",
+      "type": "provider_call_rejected",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.880",
+        "hard_remaining_seconds": "185.880",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14677",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 138,
+      "timestamp": "2026-11-10T05:33:04.914596Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.878",
+        "hard_remaining_seconds": "185.878",
+        "attempt": "1",
+        "outcome": "budget_exhausted",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "model_finalization_reserve",
+        "reasoning_tokens": "unknown",
+        "output_chars": "unknown",
+        "elapsed_seconds": "0.005",
+        "finish_reason": "unknown",
+        "prompt_tokens": "unknown",
+        "completion_tokens": "unknown",
+        "total_tokens": "unknown"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 139,
+      "timestamp": "2026-11-10T05:33:04.916078Z",
+      "type": "research_stopped",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "140.876",
+        "hard_remaining_seconds": "185.876",
+        "provider": "nebius",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 140,
+      "timestamp": "2026-11-10T05:33:04.917581Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 141,
+      "timestamp": "2026-11-10T05:33:04.918765Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 142,
+      "timestamp": "2026-11-10T05:33:04.921303Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "55a3aa60-4c07-4cee-a6ad-14626994520d"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 143,
+      "timestamp": "2026-11-10T05:33:04.925540Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 144,
+      "timestamp": "2026-11-10T05:33:04.926867Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "185.865",
+        "hard_remaining_seconds": "185.865",
+        "attempt": "1",
+        "input_chars": "19196"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 145,
+      "timestamp": "2026-11-10T05:33:04.928587Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "185.864",
+        "hard_remaining_seconds": "185.864",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24904"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 146,
+      "timestamp": "2026-11-10T05:33:06.874331Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "183.919",
+        "hard_remaining_seconds": "183.919",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24904",
+        "elapsed_seconds": "1.943",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1807"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 147,
+      "timestamp": "2026-11-10T05:33:06.876944Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "183.916",
+        "hard_remaining_seconds": "183.916",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "920",
+        "elapsed_seconds": "1.950",
+        "finish_reason": "stop",
+        "prompt_tokens": "7781",
+        "completion_tokens": "411",
+        "total_tokens": "8192"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 148,
+      "timestamp": "2026-11-10T05:33:06.879789Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "183.913",
+        "hard_remaining_seconds": "183.913",
+        "attempt": "1",
+        "input_chars": "20126"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 149,
+      "timestamp": "2026-11-10T05:33:06.881759Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "183.911",
+        "hard_remaining_seconds": "183.911",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25219"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 150,
+      "timestamp": "2026-11-10T05:33:07.808153Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "182.985",
+        "hard_remaining_seconds": "182.985",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25219",
+        "elapsed_seconds": "0.924",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1063"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 151,
+      "timestamp": "2026-11-10T05:33:07.810896Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "182.982",
+        "hard_remaining_seconds": "182.982",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "199",
+        "elapsed_seconds": "0.931",
+        "finish_reason": "stop",
+        "prompt_tokens": "8075",
+        "completion_tokens": "59",
+        "total_tokens": "8134"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 152,
+      "timestamp": "2026-11-10T05:33:07.813028Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "7e2e1734-171e-46d4-91c4-1c83f908d1d0",
+      "sequence": 153,
+      "timestamp": "2026-11-10T05:33:07.814532Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 57.23167941700012,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.149
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.173
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.326
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.173
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.375
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.121
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.565
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.154
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.224
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.492
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.357
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.494
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.344
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.541
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.492
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.98
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.184
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 7.172
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.129
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.499
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.146
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.582
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.352
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.654
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.941
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.922
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1508935000019846,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1753562910016626,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3285672920028446,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.175410167001246,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3780188750024536,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.136281750001217,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.567040916001133,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.1551635839969094,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.24407862500083866,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.49497191699993,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.3604212079990248,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.4988487080008781,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.344734416998108,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5420862499995565,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.49516249999942374,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.9817299999995157,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1862114169998677,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 7.173600958001771,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.131443042002502,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.500935541000217,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1477416660018207,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.584044458999415,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.35474645900103496,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.655404917000851,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.9431527080014348,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9240453750026063,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,3256 @@
+{
+  "id": "b0003",
+  "live": true,
+  "investigation": {
+    "id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+    "claim": "The James Webb Space Telescope, launched in November 2021, observes the universe primarily in infrared light.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T05:28:47.016694Z",
+    "started_at": "2026-11-10T05:28:47.018799Z",
+    "finished_at": "2026-11-10T05:29:42.705997Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "events": "/investigations/5c56959f-fa9f-4e46-b4aa-909d7bc93fd2/events",
+      "evidence": "/investigations/5c56959f-fa9f-4e46-b4aa-909d7bc93fd2/evidence",
+      "comparison": "/investigations/5c56959f-fa9f-4e46-b4aa-909d7bc93fd2/comparison",
+      "refresh": "/investigations/5c56959f-fa9f-4e46-b4aa-909d7bc93fd2/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+        "canonical_url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+        "title": "James Webb Space Telescope - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:28:57.065051Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "3af595a67a5a19fb0258ec71d71c333763f6457c28cbd09ebe6c8109c77b2893",
+        "duplicate_group": "3af595a67a5a19fb0258ec71d71c333763f6457c28cbd09ebe6c8109c77b2893",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "url": "https://www.stsci.edu/jwst",
+        "canonical_url": "https://www.stsci.edu/jwst",
+        "title": "NASA's James Webb Space Telescope | STScI",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T05:29:11.289315Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "13e5189d50d0538010ded4f02c4dce23b3701fb8a20c7164775e2e767adad86b",
+        "duplicate_group": "13e5189d50d0538010ded4f02c4dce23b3701fb8a20c7164775e2e767adad86b",
+        "limitations": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "cfe1ca4a-1102-4e42-b62d-b7860e3c550e",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+            "span_ids": [
+              17,
+              87
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "James Webb Space Telescope is described as observing primarily in infrared light, launched in November 2021, with detailed design and construction period from 2007–2021, and a section about Kurdish language. The launch date and infrared mission are consistent with the claim.",
+          "publisher": "Wikipedia",
+          "origin": "Wikipedia article on James Webb Space Telescope",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            17,
+            87
+          ],
+          "provenance_note": "Span 17 covers 'Detailed design and construction (2007–2021)'; span 87 is Kurdish language version.",
+          "rationale": "The Wikipedia article confirms the JWST launch in November 2021 and its primary infrared observation capability, directly supporting the assertion's core claims about launch date and wavelength.",
+          "limitations": [
+            "Source is a single Wikipedia article, not independent verification.",
+            "Truncated source may omit detailed technical specifications."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              17
+            ],
+            "start": 933,
+            "end": 1033,
+            "text": " + [3.3 Detailed design and construction (2007–2021)](#Detailed_design_and_construction_(2007–2021))",
+            "quote_hash": "c5a5f7118024d665c0188eefe7adf0ac4ed20237089b7ca98c87dd5b64078f14"
+          },
+          {
+            "span_ids": [
+              87
+            ],
+            "start": 9142,
+            "end": 9331,
+            "text": "* [Қазақша](https://kk.wikipedia.org/wiki/%D0%94%D0%B6%D0%B5%D0%B9%D0%BC%D1%81_%D0%A3%D1%8D%D0%B1%D0%B1_(%D1%82%D0%B5%D0%BB%D0%B5%D1%81%D0%BA%D0%BE%D0%BF) \"Джеймс Уэбб (телескоп) – Kazakh\")",
+            "quote_hash": "e673bbb62320c863f6697e178929b9ce466d35d34638492f203ff6f0caaa391e"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "8e18c800-7b25-482a-ba8f-7e7b8c9ababb",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+            "span_ids": [
+              17
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            17
+          ],
+          "provenance_note": "Span 17 covers 'Detailed design and construction (2007–2021)'.",
+          "rationale": "This span describes the development timeline but does not directly state launch date or infrared capability, providing only contextual background.",
+          "limitations": [
+            "Does not independently verify launch date or wavelength claims."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              17
+            ],
+            "start": 933,
+            "end": 1033,
+            "text": " + [3.3 Detailed design and construction (2007–2021)](#Detailed_design_and_construction_(2007–2021))",
+            "quote_hash": "c5a5f7118024d665c0188eefe7adf0ac4ed20237089b7ca98c87dd5b64078f14"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "7202685d-cd0d-4354-9f61-0368ff7753da",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+            "span_ids": [
+              3
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "STScI JWST overview",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3
+          ],
+          "provenance_note": "Span 3 states launch date as December 25, 2021, contradicting the assertion's November 2021 claim.",
+          "rationale": "The source states JWST launched on December 25, 2021, but the assertion claims November 2021. The primary instrument claim is unaddressed.",
+          "limitations": [
+            "Launch date discrepancy of ~1 month"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "date",
+              "explanation": "Assertion states November 2021 launch; source gives December 25, 2021."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 61,
+            "end": 224,
+            "text": "The James Webb Space Telescope (JWST), NASA's flagship infrared observatory, developed in partnership with ESA and CSA, successfully launched on December 25, 2021.",
+            "quote_hash": "5164933a1a431614ca542214f2d3e6b7cd43f181c99aab87c4bf6e8a9ccc77cc"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "a48eba9b-0dc9-4b18-8ebf-8c9a8dd715aa",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+            "span_ids": [
+              3,
+              5
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "STScI JWST overview",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3,
+            5
+          ],
+          "provenance_note": "Span 3 confirms infrared observatory designation; Span 5 mentions galaxy/evolution observation goals without specifying wavelength band.",
+          "rationale": "Span 3 identifies JWST as 'infrared observatory' supporting the primary wavelength claim, but does not mention infrared-specific capabilities. Span 5 addresses scientific goals, not instrument wavelength design.",
+          "limitations": [
+            "No explicit statement of 'primarily infrared' instruments or observational band"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 61,
+            "end": 224,
+            "text": "The James Webb Space Telescope (JWST), NASA's flagship infrared observatory, developed in partnership with ESA and CSA, successfully launched on December 25, 2021.",
+            "quote_hash": "5164933a1a431614ca542214f2d3e6b7cd43f181c99aab87c4bf6e8a9ccc77cc"
+          },
+          {
+            "span_ids": [
+              5
+            ],
+            "start": 357,
+            "end": 589,
+            "text": "Accessible to the worldwide scientific community, JWST offers scientists the opportunity to observe galaxy evolution, the formation of stars and planets, exoplanetary systems, and our own solar system, in ways never before possible.",
+            "quote_hash": "cb9f6b6055940eb744abb0abb1aa824157419290f4063c5566ed9674c17ee219"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "36a2445a-b8ea-42b8-b2cb-e977fbd8dead",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+            "span_ids": [
+              3,
+              5,
+              93
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "STScI JWST overview",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3,
+            5,
+            93
+          ],
+          "provenance_note": "Span 3 gives launch date December 2021; Span 5 describes general science goals; Span 93 confirms JWST operated by AURA's STScI in partnership with ESA/CSA.",
+          "rationale": "Span 3 identifies JWST as NASA's 'flagship infrared observatory', directly supporting the 'primarily in infrared light' claim. Span 5 provides context on scientific capabilities. Span 93 establishes institutional context. The launch date mismatch remains a scope limitation for the full assertion but",
+          "limitations": [
+            "Launch date discrepancy contradicts the assertion's 'November 2021' claim"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "date",
+              "explanation": "Assertion states November 2021 launch; source gives December 25, 2021."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 61,
+            "end": 224,
+            "text": "The James Webb Space Telescope (JWST), NASA's flagship infrared observatory, developed in partnership with ESA and CSA, successfully launched on December 25, 2021.",
+            "quote_hash": "5164933a1a431614ca542214f2d3e6b7cd43f181c99aab87c4bf6e8a9ccc77cc"
+          },
+          {
+            "span_ids": [
+              5
+            ],
+            "start": 357,
+            "end": 589,
+            "text": "Accessible to the worldwide scientific community, JWST offers scientists the opportunity to observe galaxy evolution, the formation of stars and planets, exoplanetary systems, and our own solar system, in ways never before possible.",
+            "quote_hash": "cb9f6b6055940eb744abb0abb1aa824157419290f4063c5566ed9674c17ee219"
+          },
+          {
+            "span_ids": [
+              93
+            ],
+            "start": 7037,
+            "end": 7173,
+            "text": "The NASA James Webb Space Telescope, developed in partnership with ESA and CSA, is operated by AURA’s Space Telescope Science Institute.",
+            "quote_hash": "2b10209ec72b8ed8a27ed85c479f0773cf0f6673d3a189030680fce2ff188780"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:28:47.016694Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:28:47.018799Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:28:47.021717Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:28:47.022918Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:28:47.024129Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "attempt": "1",
+        "input_chars": "137"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:28:47.026213Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5814"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:28:48.488876Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.533",
+        "hard_remaining_seconds": "118.533",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5814",
+        "elapsed_seconds": "1.460",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1359"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:28:48.491089Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.530",
+        "hard_remaining_seconds": "118.530",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "482",
+        "elapsed_seconds": "1.467",
+        "finish_reason": "stop",
+        "prompt_tokens": "903",
+        "completion_tokens": "133",
+        "total_tokens": "1036"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:28:48.492990Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:28:48.494746Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 11,
+      "timestamp": "2026-11-10T05:28:48.496517Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 12,
+      "timestamp": "2026-11-10T05:28:48.498014Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.523",
+        "hard_remaining_seconds": "118.523",
+        "attempt": "1",
+        "input_chars": "504"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 13,
+      "timestamp": "2026-11-10T05:28:48.500109Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.521",
+        "hard_remaining_seconds": "118.521",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3529"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 14,
+      "timestamp": "2026-11-10T05:28:49.343303Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.678",
+        "hard_remaining_seconds": "117.678",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3529",
+        "elapsed_seconds": "0.841",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1346"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 15,
+      "timestamp": "2026-11-10T05:28:49.344864Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.676",
+        "hard_remaining_seconds": "117.676",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "458",
+        "elapsed_seconds": "0.847",
+        "finish_reason": "stop",
+        "prompt_tokens": "605",
+        "completion_tokens": "116",
+        "total_tokens": "721"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 16,
+      "timestamp": "2026-11-10T05:28:49.346239Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope launch date November 2021 infrared astronomy primary mission",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 17,
+      "timestamp": "2026-11-10T05:28:49.347850Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.673",
+        "hard_remaining_seconds": "117.673",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "295"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 18,
+      "timestamp": "2026-11-10T05:28:51.959063Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.063",
+        "hard_remaining_seconds": "115.063",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "295",
+        "elapsed_seconds": "2.609",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8133"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 19,
+      "timestamp": "2026-11-10T05:28:51.961822Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope launch date November 2021 infrared astronomy primary mission",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 20,
+      "timestamp": "2026-11-10T05:28:51.963799Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope versus Hubble wavelength range comparison infrared",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 21,
+      "timestamp": "2026-11-10T05:28:51.965480Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.056",
+        "hard_remaining_seconds": "115.056",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "285"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 22,
+      "timestamp": "2026-11-10T05:28:54.442510Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.580",
+        "hard_remaining_seconds": "112.580",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "285",
+        "elapsed_seconds": "2.474",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7984"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 23,
+      "timestamp": "2026-11-10T05:28:54.445507Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope versus Hubble wavelength range comparison infrared",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 24,
+      "timestamp": "2026-11-10T05:28:54.447817Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope instruments and detectors infrared sensitivity specifications",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 25,
+      "timestamp": "2026-11-10T05:28:54.449636Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.572",
+        "hard_remaining_seconds": "112.572",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 26,
+      "timestamp": "2026-11-10T05:28:56.767936Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "65.254",
+        "hard_remaining_seconds": "110.254",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "296",
+        "elapsed_seconds": "2.315",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9939"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 27,
+      "timestamp": "2026-11-10T05:28:56.770601Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope instruments and detectors infrared sensitivity specifications",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 28,
+      "timestamp": "2026-11-10T05:28:56.772987Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "11",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 29,
+      "timestamp": "2026-11-10T05:28:56.774445Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+        "slot": "1",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 30,
+      "timestamp": "2026-11-10T05:28:56.775904Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 31,
+      "timestamp": "2026-11-10T05:28:56.777621Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.244",
+        "hard_remaining_seconds": "110.244",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "183"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 32,
+      "timestamp": "2026-11-10T05:28:57.064317Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.957",
+        "hard_remaining_seconds": "109.957",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "183",
+        "elapsed_seconds": "0.285",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "480960"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 33,
+      "timestamp": "2026-11-10T05:28:57.071879Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "url": "https://en.wikipedia.org/wiki/James_Webb_Space_Telescope",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 34,
+      "timestamp": "2026-11-10T05:28:57.072856Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 35,
+      "timestamp": "2026-11-10T05:28:57.075697Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.945",
+        "hard_remaining_seconds": "109.945",
+        "attempt": "1",
+        "input_chars": "17501"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 36,
+      "timestamp": "2026-11-10T05:28:57.078348Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.943",
+        "hard_remaining_seconds": "109.943",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30451"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 37,
+      "timestamp": "2026-11-10T05:29:01.168091Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.857",
+        "hard_remaining_seconds": "105.857",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30451",
+        "elapsed_seconds": "4.085",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2972"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 38,
+      "timestamp": "2026-11-10T05:29:01.170699Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.851",
+        "hard_remaining_seconds": "105.851",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2010",
+        "elapsed_seconds": "4.095",
+        "finish_reason": "stop",
+        "prompt_tokens": "10883",
+        "completion_tokens": "539",
+        "total_tokens": "11422"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 39,
+      "timestamp": "2026-11-10T05:29:01.173999Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "cfe1ca4a-1102-4e42-b62d-b7860e3c550e",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 40,
+      "timestamp": "2026-11-10T05:29:01.175725Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "8e18c800-7b25-482a-ba8f-7e7b8c9ababb",
+        "snapshot_id": "8ebf33eb-112c-4816-a49d-8ee4fd6ba554",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 41,
+      "timestamp": "2026-11-10T05:29:01.177304Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.telescopenerd.com/space-telescopes/james-webb-vs-hubble.htm",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 42,
+      "timestamp": "2026-11-10T05:29:01.178626Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 43,
+      "timestamp": "2026-11-10T05:29:01.180813Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "60.841",
+        "hard_remaining_seconds": "105.841",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 44,
+      "timestamp": "2026-11-10T05:29:01.827944Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "60.195",
+        "hard_remaining_seconds": "105.195",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198",
+        "elapsed_seconds": "0.644",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "239"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 45,
+      "timestamp": "2026-11-10T05:29:01.831007Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.telescopenerd.com/space-telescopes/james-webb-vs-hubble.htm",
+        "candidate_id": "c15",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 46,
+      "timestamp": "2026-11-10T05:29:01.833150Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "evidence_quality"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 47,
+      "timestamp": "2026-11-10T05:29:01.834628Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 48,
+      "timestamp": "2026-11-10T05:29:01.836201Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.185",
+        "hard_remaining_seconds": "225.185",
+        "attempt": "1",
+        "input_chars": "2440"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 49,
+      "timestamp": "2026-11-10T05:29:01.838542Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.183",
+        "hard_remaining_seconds": "225.183",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5584"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 50,
+      "timestamp": "2026-11-10T05:29:02.951777Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.071",
+        "hard_remaining_seconds": "224.071",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5584",
+        "elapsed_seconds": "1.110",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1586"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 51,
+      "timestamp": "2026-11-10T05:29:02.955023Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.067",
+        "hard_remaining_seconds": "224.067",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "693",
+        "elapsed_seconds": "1.118",
+        "finish_reason": "stop",
+        "prompt_tokens": "1273",
+        "completion_tokens": "160",
+        "total_tokens": "1433"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 52,
+      "timestamp": "2026-11-10T05:29:02.957140Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 53,
+      "timestamp": "2026-11-10T05:29:02.958820Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 54,
+      "timestamp": "2026-11-10T05:29:02.960440Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope launch date November 2021 primary infrared observatory official NASA statement",
+        "purpose": "support",
+        "query_id": "q19"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 55,
+      "timestamp": "2026-11-10T05:29:02.961994Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q19",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.059",
+        "hard_remaining_seconds": "224.059",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "313"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 56,
+      "timestamp": "2026-11-10T05:29:05.836546Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q19",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "176.184",
+        "hard_remaining_seconds": "221.184",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "313",
+        "elapsed_seconds": "2.873",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7948"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 57,
+      "timestamp": "2026-11-10T05:29:05.837680Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope launch date November 2021 primary infrared observatory official NASA statement",
+        "query_id": "q19",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 58,
+      "timestamp": "2026-11-10T05:29:05.839156Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope infrared-optimized design specification primary mirror and instruments NASA",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 59,
+      "timestamp": "2026-11-10T05:29:05.840135Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "176.181",
+        "hard_remaining_seconds": "221.181",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "310"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 60,
+      "timestamp": "2026-11-10T05:29:08.333975Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.689",
+        "hard_remaining_seconds": "218.689",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "310",
+        "elapsed_seconds": "2.491",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9277"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 61,
+      "timestamp": "2026-11-10T05:29:08.336844Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope infrared-optimized design specification primary mirror and instruments NASA",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 62,
+      "timestamp": "2026-11-10T05:29:08.338969Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope first light infrared observations 2022 independent observatory report",
+        "purpose": "contradiction",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 63,
+      "timestamp": "2026-11-10T05:29:08.340682Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.680",
+        "hard_remaining_seconds": "218.680",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "304"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 64,
+      "timestamp": "2026-11-10T05:29:11.142244Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "170.880",
+        "hard_remaining_seconds": "215.880",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "304",
+        "elapsed_seconds": "2.798",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9510"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 65,
+      "timestamp": "2026-11-10T05:29:11.145323Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "James Webb Space Telescope first light infrared observations 2022 independent observatory report",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 66,
+      "timestamp": "2026-11-10T05:29:11.147527Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "9",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 67,
+      "timestamp": "2026-11-10T05:29:11.148975Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "url": "https://www.stsci.edu/jwst",
+        "slot": "1",
+        "query_ids": "q19",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 68,
+      "timestamp": "2026-11-10T05:29:11.150426Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 69,
+      "timestamp": "2026-11-10T05:29:11.151914Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.869",
+        "hard_remaining_seconds": "215.869",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "153"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 70,
+      "timestamp": "2026-11-10T05:29:11.287632Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.735",
+        "hard_remaining_seconds": "215.735",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "153",
+        "elapsed_seconds": "0.133",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7595"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 71,
+      "timestamp": "2026-11-10T05:29:11.293313Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "url": "https://www.stsci.edu/jwst",
+        "candidate_id": "c25",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 72,
+      "timestamp": "2026-11-10T05:29:11.294819Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 73,
+      "timestamp": "2026-11-10T05:29:11.299455Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.722",
+        "hard_remaining_seconds": "215.722",
+        "attempt": "1",
+        "input_chars": "11403"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 74,
+      "timestamp": "2026-11-10T05:29:11.303132Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.718",
+        "hard_remaining_seconds": "215.718",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22780"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 75,
+      "timestamp": "2026-11-10T05:29:15.979340Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.043",
+        "hard_remaining_seconds": "211.043",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22780",
+        "elapsed_seconds": "4.673",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3018"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 76,
+      "timestamp": "2026-11-10T05:29:15.983691Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.038",
+        "hard_remaining_seconds": "211.038",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2083",
+        "elapsed_seconds": "4.684",
+        "finish_reason": "stop",
+        "prompt_tokens": "6349",
+        "completion_tokens": "552",
+        "total_tokens": "6901"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 77,
+      "timestamp": "2026-11-10T05:29:15.985752Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 78,
+      "timestamp": "2026-11-10T05:29:15.987313Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.034",
+        "hard_remaining_seconds": "211.034",
+        "attempt": "2",
+        "input_chars": "11403"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 79,
+      "timestamp": "2026-11-10T05:29:15.991418Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "166.030",
+        "hard_remaining_seconds": "211.030",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22970"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 80,
+      "timestamp": "2026-11-10T05:29:21.633397Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "160.388",
+        "hard_remaining_seconds": "205.388",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22970",
+        "elapsed_seconds": "5.639",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4087"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 81,
+      "timestamp": "2026-11-10T05:29:21.636456Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "160.385",
+        "hard_remaining_seconds": "205.385",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3068",
+        "elapsed_seconds": "5.649",
+        "finish_reason": "stop",
+        "prompt_tokens": "6382",
+        "completion_tokens": "903",
+        "total_tokens": "7285"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 82,
+      "timestamp": "2026-11-10T05:29:21.639860Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "7202685d-cd0d-4354-9f61-0368ff7753da",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 83,
+      "timestamp": "2026-11-10T05:29:21.641372Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "a48eba9b-0dc9-4b18-8ebf-8c9a8dd715aa",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 84,
+      "timestamp": "2026-11-10T05:29:21.643354Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "36a2445a-b8ea-42b8-b2cb-e977fbd8dead",
+        "snapshot_id": "77b62434-6849-4150-9d9d-5bac35cfa662",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 85,
+      "timestamp": "2026-11-10T05:29:21.645117Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "url": "https://www.facebook.com/groups/MichioKakuGroup/posts/3148728992072187",
+        "slot": "2",
+        "query_ids": "q23",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 86,
+      "timestamp": "2026-11-10T05:29:21.646641Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 87,
+      "timestamp": "2026-11-10T05:29:21.648145Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.373",
+        "hard_remaining_seconds": "205.373",
+        "provider_call_id": "p31",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 88,
+      "timestamp": "2026-11-10T05:29:27.370576Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c30",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "154.651",
+        "hard_remaining_seconds": "199.651",
+        "provider_call_id": "p31",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "197",
+        "elapsed_seconds": "5.720",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "239"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 89,
+      "timestamp": "2026-11-10T05:29:27.372981Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.facebook.com/groups/MichioKakuGroup/posts/3148728992072187",
+        "candidate_id": "c30",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 90,
+      "timestamp": "2026-11-10T05:29:27.374688Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 91,
+      "timestamp": "2026-11-10T05:29:27.376408Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t32",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "154.645",
+        "hard_remaining_seconds": "199.645",
+        "attempt": "1",
+        "input_chars": "5387"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 92,
+      "timestamp": "2026-11-10T05:29:27.378668Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t32",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "154.642",
+        "hard_remaining_seconds": "199.642",
+        "provider_call_id": "p33",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8649"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 93,
+      "timestamp": "2026-11-10T05:29:30.492395Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t32",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "151.529",
+        "hard_remaining_seconds": "196.529",
+        "provider_call_id": "p33",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8649",
+        "elapsed_seconds": "3.112",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1680"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 94,
+      "timestamp": "2026-11-10T05:29:30.493459Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t32",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "151.527",
+        "hard_remaining_seconds": "196.527",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "787",
+        "elapsed_seconds": "3.117",
+        "finish_reason": "stop",
+        "prompt_tokens": "2186",
+        "completion_tokens": "198",
+        "total_tokens": "2384"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 95,
+      "timestamp": "2026-11-10T05:29:30.494327Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 96,
+      "timestamp": "2026-11-10T05:29:30.495165Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 97,
+      "timestamp": "2026-11-10T05:29:30.496231Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA official statement confirming James Webb Space Telescope launch in November 2021 and primary infrared observation design",
+        "purpose": "support",
+        "query_id": "q34"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 98,
+      "timestamp": "2026-11-10T05:29:30.497232Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "151.523",
+        "hard_remaining_seconds": "196.523",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "333"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 99,
+      "timestamp": "2026-11-10T05:29:34.391139Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "147.632",
+        "hard_remaining_seconds": "192.632",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "333",
+        "elapsed_seconds": "3.891",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6258"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 100,
+      "timestamp": "2026-11-10T05:29:34.394230Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "NASA official statement confirming James Webb Space Telescope launch in November 2021 and primary infrared observation design",
+        "query_id": "q34",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 101,
+      "timestamp": "2026-11-10T05:29:34.396131Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary sources documenting JWST infrared-optimized design origins independent of Wikipedia narrative",
+        "purpose": "contradiction",
+        "query_id": "q36"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 102,
+      "timestamp": "2026-11-10T05:29:34.397723Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "147.623",
+        "hard_remaining_seconds": "192.623",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "309"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 103,
+      "timestamp": "2026-11-10T05:29:37.295601Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "144.727",
+        "hard_remaining_seconds": "189.727",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "309",
+        "elapsed_seconds": "2.895",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10041"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 104,
+      "timestamp": "2026-11-10T05:29:37.299309Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary sources documenting JWST infrared-optimized design origins independent of Wikipedia narrative",
+        "query_id": "q36",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 105,
+      "timestamp": "2026-11-10T05:29:37.301551Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Corrected launch date documentation for JWST with citation of official NASA or ESA release aligning with November 2021 claim",
+        "purpose": "context",
+        "query_id": "q38"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 106,
+      "timestamp": "2026-11-10T05:29:37.303601Z",
+      "type": "provider_call_rejected",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q38",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "144.718",
+        "hard_remaining_seconds": "189.718",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "332",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 107,
+      "timestamp": "2026-11-10T05:29:37.305543Z",
+      "type": "research_stopped",
+      "stage": "searching",
+      "payload": {
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "144.716",
+        "hard_remaining_seconds": "189.716",
+        "provider": "tavily",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 108,
+      "timestamp": "2026-11-10T05:29:37.307469Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 109,
+      "timestamp": "2026-11-10T05:29:37.309076Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 110,
+      "timestamp": "2026-11-10T05:29:37.310855Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "7202685d-cd0d-4354-9f61-0368ff7753da"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 111,
+      "timestamp": "2026-11-10T05:29:37.312850Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "36a2445a-b8ea-42b8-b2cb-e977fbd8dead"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 112,
+      "timestamp": "2026-11-10T05:29:37.317061Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 113,
+      "timestamp": "2026-11-10T05:29:37.318690Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "189.702",
+        "hard_remaining_seconds": "189.702",
+        "attempt": "1",
+        "input_chars": "8870"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 114,
+      "timestamp": "2026-11-10T05:29:37.320623Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "189.700",
+        "hard_remaining_seconds": "189.700",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14063"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 115,
+      "timestamp": "2026-11-10T05:29:41.512353Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "185.511",
+        "hard_remaining_seconds": "185.510",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14063",
+        "elapsed_seconds": "4.188",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1762"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 116,
+      "timestamp": "2026-11-10T05:29:41.515076Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "185.506",
+        "hard_remaining_seconds": "185.506",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "871",
+        "elapsed_seconds": "4.196",
+        "finish_reason": "stop",
+        "prompt_tokens": "3983",
+        "completion_tokens": "434",
+        "total_tokens": "4417"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 117,
+      "timestamp": "2026-11-10T05:29:41.518524Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t42",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "185.503",
+        "hard_remaining_seconds": "185.503",
+        "attempt": "1",
+        "input_chars": "9751"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 118,
+      "timestamp": "2026-11-10T05:29:41.521215Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t42",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "185.500",
+        "hard_remaining_seconds": "185.500",
+        "provider_call_id": "p43",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14333"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 119,
+      "timestamp": "2026-11-10T05:29:42.699140Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t42",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "184.323",
+        "hard_remaining_seconds": "184.323",
+        "provider_call_id": "p43",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14333",
+        "elapsed_seconds": "1.175",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1067"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 120,
+      "timestamp": "2026-11-10T05:29:42.702289Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t42",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "184.319",
+        "hard_remaining_seconds": "184.319",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "203",
+        "elapsed_seconds": "1.184",
+        "finish_reason": "stop",
+        "prompt_tokens": "4300",
+        "completion_tokens": "59",
+        "total_tokens": "4359"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 121,
+      "timestamp": "2026-11-10T05:29:42.704512Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "5c56959f-fa9f-4e46-b4aa-909d7bc93fd2",
+      "sequence": 122,
+      "timestamp": "2026-11-10T05:29:42.705997Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 55.7815123750006,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.459
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.84
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.606
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.471
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.311
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.134
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.08
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.642
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.108
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.872
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.489
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.794
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.13
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.67
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.638
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.719
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.111
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.889
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.89
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.186
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.173
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.460161541999696,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8410540000004403,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.6086690420015657,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.4739709590030543,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.315395375000662,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2850437500019325,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.084690167001099,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.6438929590003681,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1102201249996142,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8730929579978692,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.490939375002199,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.798406875001092,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13279008400058956,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.672930000000633,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 5.6394910419985536,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 5.720226875000662,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.1118309589983255,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.890923250000924,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8947771249986545,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.18848508299925,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1748750829974597,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

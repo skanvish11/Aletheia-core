@@ -1,0 +1,2959 @@
+{
+  "id": "b0014",
+  "live": true,
+  "investigation": {
+    "id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+    "claim": "GPT-4 was trained with exactly 1.76 trillion parameters.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:50:36.331470Z",
+    "started_at": "2026-11-10T04:50:36.332619Z",
+    "finished_at": "2026-11-10T04:51:12.826726Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "events": "/investigations/40706187-fca4-4fa3-acfc-e09cc1fdd6c2/events",
+      "evidence": "/investigations/40706187-fca4-4fa3-acfc-e09cc1fdd6c2/evidence",
+      "comparison": "/investigations/40706187-fca4-4fa3-acfc-e09cc1fdd6c2/comparison",
+      "refresh": "/investigations/40706187-fca4-4fa3-acfc-e09cc1fdd6c2/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "url": "https://news.ycombinator.com/item?id=37804839",
+        "canonical_url": "https://news.ycombinator.com/item?id=37804839",
+        "title": "Ask HN: GPT-4 has 1.7T parameters. What's a parameter? | Hacker News",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:50:46.441379Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "616dad55ad19aaa42d7c81d4c3df5ba93e158c04c5d0721ca2221a3746a52c80",
+        "duplicate_group": "616dad55ad19aaa42d7c81d4c3df5ba93e158c04c5d0721ca2221a3746a52c80",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "url": "https://explodingtopics.com/blog/gpt-parameters",
+        "canonical_url": "https://explodingtopics.com/blog/gpt-parameters",
+        "title": "Number of Parameters in GPT-4 (Latest Data)",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:50:49.088442Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a6dfeb86034655560b142e1c5878299bcaa862cf74accf1969c0afcdf8b13ba7",
+        "duplicate_group": "a6dfeb86034655560b142e1c5878299bcaa862cf74accf1969c0afcdf8b13ba7",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "fd8d377b-c2ce-46a7-8114-c89de698218b",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+            "span_ids": [
+              15,
+              39
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            15,
+            39
+          ],
+          "provenance_note": "Hacker News discussion; user reports rumor of 1.7T parameters, OpenAI has not released technical details",
+          "rationale": "The assertion claims GPT-4 was trained with exactly 1.76 trillion parameters, but the source is a Hacker News discussion where multiple users state the 1.7T figure is a rumor and OpenAI has not released technical details. The claim of an exact count of 1.76T is not supported; the source indicates it",
+          "limitations": [
+            "Source is a forum discussion, not an official OpenAI technical report",
+            "No authoritative parameter count disclosed by OpenAI",
+            "Figure cited as rumor by multiple participants"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "parameter count precision",
+              "explanation": "Asserts exact count (1.76T) while source states figure is rumor and OpenAI has not released details"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              15
+            ],
+            "start": 7407,
+            "end": 8163,
+            "text": "| | | Hi folks, AI newbie here. Can those of you that are well versed in AI please help me understand what exactly constitutes a parameter? I often see LLMs being compared / ranked based on their number of parameters, so I'm hoping to better understand this metric. I have a rudimentary understanding of artificial neural networks (in terms of inputs -> functions -> outputs), and by extension, a very basic understanding of deep learning. But when it comes to defining a parameter, my google searches thus far have led me to concepts such as 'AI model behaviour' and 'adjustable settings' which, whilst interesting, are still too complex for me to distil into simple terms. If I were to explain what a parameter is to my child, what might I say? Thanks! |",
+            "quote_hash": "1679a686a56b985655091df5c5ea1c3d1ed0cd7a79f6fa9b58bcb5d8ecfcf3f5"
+          },
+          {
+            "span_ids": [
+              39
+            ],
+            "start": 10452,
+            "end": 11366,
+            "text": "| | | | | | --- | --- | --- | | | | [ash-ishh](user?id=ash-ishh) [on Oct 8, 2023](item?id=37811641) | [next](#37804873) [[–]](javascript:void(0)) Checkout this tweet <https://twitter.com/ylecun/status/1706545305762582580> by Yan LeCun. \"Parameters are coefficients inside the model that are adjusted by the training procedure. The dataset is what you train the model on. Language models are trained with tokens that are subword units (e.g. prefix, root, suffix).\" His comment on GPT-4 parameters count \"Also: a model with more parameters is not necessarily better. It's generally more expensive to run and requires more RAM than a single GPU card can have. GPT-4 is rumored to be a \"mixture of experts\", i.e. a neural net consisting of multiple specialized modules, only one of which is run on any particular prompt. So the effective number of parameters used at any one time is smaller than the total number.\" | |",
+            "quote_hash": "14958194f740bcd8c3844b4c39f63bafda278143f66e37d8305d7f8efbb857ea"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "64e880d2-c064-4c98-98ed-444dd0b22275",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+            "span_ids": [
+              105,
+              119
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Span 105 states the architecture consisted of eight models each of 220B parameters, totaling 1.7T. Span 119 explicitly concludes GPT-4 has 1.76 trillion parameters.",
+          "publisher": null,
+          "origin": "Exploding Topics article on GPT-4 parameters",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            105,
+            119
+          ],
+          "provenance_note": "No direct source verification from OpenAI; multiple external estimates cited.",
+          "rationale": "The article's breakdown (8 × 220B) mathematically yields 1.76 trillion, which aligns with the asserted figure.",
+          "limitations": [
+            "OpenAI has not officially confirmed parameter counts",
+            "Counts are based on third‑party estimates"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              105
+            ],
+            "start": 6882,
+            "end": 7004,
+            "text": "More specifically, the architecture consisted of eight models, with each internal model made up of 220 billion parameters.",
+            "quote_hash": "54fdd032bd95e080d38ae4981b7a4a1bbf6c33d83d717af808d62ddd50bfc3e1"
+          },
+          {
+            "span_ids": [
+              119
+            ],
+            "start": 8302,
+            "end": 8387,
+            "text": "So, we can assert with reasonable confidence that GPT-4 has 1.76 trillion parameters.",
+            "quote_hash": "53ee06da768e8b0a369002a91a3e11f7d21719c276953dd84db444e61db0d31e"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "3a3c3440-8296-4a88-bb90-e97047a776c3",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+            "span_ids": [
+              106
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Span 106 contains a tweet‑style post stating 'GPT4 is 8 × 220B params = 1.7 Trillion params'.",
+          "publisher": null,
+          "origin": "Exploding Topics article (quoted tweet)",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            106
+          ],
+          "provenance_note": "External social media claim, not a verified OpenAI document.",
+          "rationale": "The arithmetic 8 × 220B equals 1.76 trillion, matching the assertion.",
+          "limitations": [
+            "Social‑media post not an authoritative record",
+            "Rounding may produce 1.7T vs 1.76T"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              106
+            ],
+            "start": 7006,
+            "end": 7080,
+            "text": "> GPT4 is 8 x 220B params = 1.7 Trillion params <https://t.co/DW4jrzFEn2> ",
+            "quote_hash": "ed6b9b25acea7564d0ce30f335ad15c4d3cd87a9d61612ac9e59e8d16488870c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:50:36.331470Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:50:36.332619Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:50:36.333686Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:50:36.334410Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:50:36.335244Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "84"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:50:36.336369Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5066"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:50:37.318400Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.017",
+        "hard_remaining_seconds": "119.017",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5066",
+        "elapsed_seconds": "0.980",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1159"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:50:37.321592Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.013",
+        "hard_remaining_seconds": "119.013",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "284",
+        "elapsed_seconds": "0.986",
+        "finish_reason": "stop",
+        "prompt_tokens": "782",
+        "completion_tokens": "84",
+        "total_tokens": "866"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:50:37.323932Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:50:37.326124Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:50:37.328538Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:50:37.330598Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.004",
+        "hard_remaining_seconds": "119.004",
+        "attempt": "1",
+        "input_chars": "451"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:50:37.333311Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.001",
+        "hard_remaining_seconds": "119.001",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3476"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:50:38.116582Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.219",
+        "hard_remaining_seconds": "118.219",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3476",
+        "elapsed_seconds": "0.780",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1360"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:50:38.119893Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.215",
+        "hard_remaining_seconds": "118.215",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "470",
+        "elapsed_seconds": "0.789",
+        "finish_reason": "stop",
+        "prompt_tokens": "597",
+        "completion_tokens": "136",
+        "total_tokens": "733"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:50:38.124153Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 training parameters count OpenAI published model details",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:50:38.127102Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.208",
+        "hard_remaining_seconds": "118.207",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "270"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:50:40.104237Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "71.230",
+        "hard_remaining_seconds": "116.230",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "270",
+        "elapsed_seconds": "1.975",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12022"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:50:40.106251Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 training parameters count OpenAI published model details",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:50:40.108000Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 parameter estimate 1.8 trillion versus 1.76 trillion",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:50:40.109942Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "71.224",
+        "hard_remaining_seconds": "116.224",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "266"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:50:43.871181Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.465",
+        "hard_remaining_seconds": "112.465",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "266",
+        "elapsed_seconds": "3.758",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7186"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:50:43.874868Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 parameter estimate 1.8 trillion versus 1.76 trillion",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:50:43.877495Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 architecture specification parameter count",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:50:43.880004Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "67.454",
+        "hard_remaining_seconds": "112.454",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "256"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:50:46.237139Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "65.098",
+        "hard_remaining_seconds": "110.098",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "256",
+        "elapsed_seconds": "2.354",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9036"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:50:46.241151Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 architecture specification parameter count",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:50:46.244454Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:50:46.247026Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://news.ycombinator.com/item?id=37804839",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:50:46.249706Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:50:46.252181Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.082",
+        "hard_remaining_seconds": "110.082",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:50:46.439429Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.896",
+        "hard_remaining_seconds": "109.896",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172",
+        "elapsed_seconds": "0.184",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "24509"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:50:46.448538Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "url": "https://news.ycombinator.com/item?id=37804839",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:50:46.450857Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:50:46.453069Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.881",
+        "hard_remaining_seconds": "109.881",
+        "attempt": "1",
+        "input_chars": "15215"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:50:46.456296Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "64.878",
+        "hard_remaining_seconds": "109.878",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24658"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:50:48.910623Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "62.425",
+        "hard_remaining_seconds": "107.425",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24658",
+        "elapsed_seconds": "2.451",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2257"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:50:48.914985Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "62.420",
+        "hard_remaining_seconds": "107.420",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1340",
+        "elapsed_seconds": "2.461",
+        "finish_reason": "stop",
+        "prompt_tokens": "6725",
+        "completion_tokens": "368",
+        "total_tokens": "7093"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:50:48.920320Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "fd8d377b-c2ce-46a7-8114-c89de698218b",
+        "snapshot_id": "cd09fde3-e588-4f2c-8f93-fb9bb19cc0e5",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:50:48.922410Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://explodingtopics.com/blog/gpt-parameters",
+        "slot": "2",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:50:48.924285Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:50:48.927056Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.408",
+        "hard_remaining_seconds": "107.408",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:50:49.086240Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.250",
+        "hard_remaining_seconds": "107.250",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174",
+        "elapsed_seconds": "0.155",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "23651"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:50:49.099253Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "url": "https://explodingtopics.com/blog/gpt-parameters",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:50:49.101691Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:50:49.104526Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.230",
+        "hard_remaining_seconds": "107.230",
+        "attempt": "1",
+        "input_chars": "17259"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:50:49.107882Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "62.226",
+        "hard_remaining_seconds": "107.226",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27750"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:50:51.736556Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.599",
+        "hard_remaining_seconds": "104.599",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27750",
+        "elapsed_seconds": "2.626",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2756"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:50:51.739277Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.594",
+        "hard_remaining_seconds": "104.594",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1790",
+        "elapsed_seconds": "2.635",
+        "finish_reason": "stop",
+        "prompt_tokens": "8168",
+        "completion_tokens": "558",
+        "total_tokens": "8726"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:50:51.741568Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "64e880d2-c064-4c98-98ed-444dd0b22275",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:50:51.742900Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "3a3c3440-8296-4a88-bb90-e97047a776c3",
+        "snapshot_id": "a5494e6e-1b80-4ce7-9571-06047fb87658",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:50:51.744395Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "evidence_quality"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:50:51.746278Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:50:51.747985Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.586",
+        "hard_remaining_seconds": "224.586",
+        "attempt": "1",
+        "input_chars": "3898"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:50:51.749807Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.584",
+        "hard_remaining_seconds": "224.584",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7051"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:50:52.693005Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.643",
+        "hard_remaining_seconds": "223.643",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7051",
+        "elapsed_seconds": "0.940",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1443"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:50:52.696426Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.638",
+        "hard_remaining_seconds": "223.638",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "550",
+        "elapsed_seconds": "0.948",
+        "finish_reason": "stop",
+        "prompt_tokens": "1708",
+        "completion_tokens": "154",
+        "total_tokens": "1862"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:50:52.698671Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:50:52.701988Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:50:52.704493Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "OpenAI published the parameter count of GPT-4 as 1.76 trillion parameters",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:50:52.706783Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.628",
+        "hard_remaining_seconds": "223.628",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "281"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:50:55.584370Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.752",
+        "hard_remaining_seconds": "220.752",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "281",
+        "elapsed_seconds": "2.874",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8240"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:50:55.588107Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "OpenAI published the parameter count of GPT-4 as 1.76 trillion parameters",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:50:55.591037Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 model consists of eight expert sub-models each with 220 billion parameters",
+        "purpose": "support",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:50:55.593636Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.741",
+        "hard_remaining_seconds": "220.741",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "288"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:50:58.111586Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.224",
+        "hard_remaining_seconds": "218.224",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "288",
+        "elapsed_seconds": "2.515",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7538"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:50:58.114719Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 model consists of eight expert sub-models each with 220 billion parameters",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:50:58.117532Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Yan LeCun or OpenAI official statement on GPT-4 parameter count",
+        "purpose": "context",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:50:58.119755Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.214",
+        "hard_remaining_seconds": "218.214",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:51:00.766519Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "170.569",
+        "hard_remaining_seconds": "215.569",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271",
+        "elapsed_seconds": "2.643",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4272"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:51:00.769980Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Yan LeCun or OpenAI official statement on GPT-4 parameter count",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:51:00.773107Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "9",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:51:00.775726Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "url": "https://mlubbad.medium.com/the-ultimate-guide-to-gpt-4-parameters-everything-you-need-to-know-about-nlps-game-changer-109b8767855a",
+        "slot": "1",
+        "query_ids": "q21",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:51:00.778337Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:51:00.780679Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.554",
+        "hard_remaining_seconds": "215.554",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "257"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:51:01.165888Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.169",
+        "hard_remaining_seconds": "215.169",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "257",
+        "elapsed_seconds": "0.382",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "299"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:51:01.168729Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://mlubbad.medium.com/the-ultimate-guide-to-gpt-4-parameters-everything-you-need-to-know-about-nlps-game-changer-109b8767855a",
+        "candidate_id": "c27",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:51:01.170950Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "url": "https://www.instagram.com/p/DKgA-52TS_Q?hl=en",
+        "slot": "2",
+        "query_ids": "q25",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:51:01.173145Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:51:01.175931Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.159",
+        "hard_remaining_seconds": "215.159",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:51:03.432398Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.903",
+        "hard_remaining_seconds": "212.903",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "172",
+        "elapsed_seconds": "2.253",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "214"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:51:03.435613Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.instagram.com/p/DKgA-52TS_Q?hl=en",
+        "candidate_id": "c29",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:51:03.438087Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:51:03.440907Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.894",
+        "hard_remaining_seconds": "212.894",
+        "attempt": "1",
+        "input_chars": "4126"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:51:03.444638Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.890",
+        "hard_remaining_seconds": "212.890",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7285"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:51:04.901412Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.434",
+        "hard_remaining_seconds": "211.434",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7285",
+        "elapsed_seconds": "1.453",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1633"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:51:04.904266Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.430",
+        "hard_remaining_seconds": "211.430",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "740",
+        "elapsed_seconds": "1.464",
+        "finish_reason": "stop",
+        "prompt_tokens": "1769",
+        "completion_tokens": "185",
+        "total_tokens": "1954"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:51:04.906704Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:51:04.908776Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:51:04.910784Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 official OpenAI technical report parameter count: 1.76 trillion or alternative figure",
+        "purpose": "support",
+        "query_id": "q33"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:51:04.912996Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.421",
+        "hard_remaining_seconds": "211.421",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:51:07.826504Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q33",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.508",
+        "hard_remaining_seconds": "208.508",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299",
+        "elapsed_seconds": "2.911",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7531"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:51:07.828412Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GPT-4 official OpenAI technical report parameter count: 1.76 trillion or alternative figure",
+        "query_id": "q33",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:51:07.829975Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Yan LeCun or OpenAI statement explicitly contradicting or confirming 1.76 trillion parameter count for GPT-4",
+        "purpose": "contradiction",
+        "query_id": "q35"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:51:07.831335Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q35",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.502",
+        "hard_remaining_seconds": "208.502",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "316"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:51:10.590618Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q35",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.745",
+        "hard_remaining_seconds": "205.745",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "316",
+        "elapsed_seconds": "2.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10455"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:51:10.594230Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Yan LeCun or OpenAI statement explicitly contradicting or confirming 1.76 trillion parameter count for GPT-4",
+        "query_id": "q35",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:51:10.597200Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary GPT-4 model architecture document or research paper stating total parameter count",
+        "purpose": "context",
+        "query_id": "q37"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:51:10.599283Z",
+      "type": "provider_call_rejected",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.735",
+        "hard_remaining_seconds": "205.735",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "297",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:51:10.601235Z",
+      "type": "research_stopped",
+      "stage": "searching",
+      "payload": {
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.733",
+        "hard_remaining_seconds": "205.733",
+        "provider": "tavily",
+        "outcome": "budget_exhausted",
+        "limit_reason": "search_limit"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:51:10.603333Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:51:10.605408Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:51:10.607255Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "fd8d377b-c2ce-46a7-8114-c89de698218b"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:51:10.611616Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:51:10.613210Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "205.721",
+        "hard_remaining_seconds": "205.721",
+        "attempt": "1",
+        "input_chars": "6627"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:51:10.615275Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "205.719",
+        "hard_remaining_seconds": "205.719",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11362"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:51:12.243019Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t39",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "204.092",
+        "hard_remaining_seconds": "204.092",
+        "provider_call_id": "p40",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "11362",
+        "elapsed_seconds": "1.625",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1523"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:51:12.247609Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t39",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "204.087",
+        "hard_remaining_seconds": "204.087",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "648",
+        "elapsed_seconds": "1.633",
+        "finish_reason": "stop",
+        "prompt_tokens": "2993",
+        "completion_tokens": "244",
+        "total_tokens": "3237"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:51:12.250471Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "204.084",
+        "hard_remaining_seconds": "204.084",
+        "attempt": "1",
+        "input_chars": "7273"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:51:12.253959Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "204.081",
+        "hard_remaining_seconds": "204.081",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10976"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:51:12.819256Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t41",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "203.516",
+        "hard_remaining_seconds": "203.516",
+        "provider_call_id": "p42",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10976",
+        "elapsed_seconds": "0.562",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1035"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:51:12.822632Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t41",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "203.512",
+        "hard_remaining_seconds": "203.512",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "173",
+        "elapsed_seconds": "0.572",
+        "finish_reason": "stop",
+        "prompt_tokens": "3037",
+        "completion_tokens": "51",
+        "total_tokens": "3088"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 113,
+      "timestamp": "2026-11-10T04:51:12.824967Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "40706187-fca4-4fa3-acfc-e09cc1fdd6c2",
+      "sequence": 114,
+      "timestamp": "2026-11-10T04:51:12.826726Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 36.62845416699929,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.978
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.778
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.968
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.749
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.316
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.12
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.448
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.151
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.624
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.938
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.87
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.513
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.64
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.38
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.251
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.451
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.896
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.754
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.623
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.56
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9796121660001518,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7799872499999765,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 1.9748559170002409,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.758041041000979,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3539973750011995,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.18371037500037346,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.450690833000408,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1552994999983639,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.62587904099928,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9399650000013935,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.8735093329996744,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.514630624998972,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.642626459000894,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.38205833400206757,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 2.2526018750031653,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.4531595410007867,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.911455333000049,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.756653959000687,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.6248333330004243,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.5620343340015097,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

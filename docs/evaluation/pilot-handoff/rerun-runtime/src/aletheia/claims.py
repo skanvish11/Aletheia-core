@@ -1,0 +1,69 @@
+"""One-assertion interpretation and conservative, one-way research routing."""
+
+from aletheia.task_contracts import ClaimPlan
+from aletheia.tasks import TaskValidationError
+
+
+def validate_claim(plan):
+    if plan.clarification_reason == "factual_uncertainty":
+        raise TaskValidationError("factual_uncertainty")
+    if plan.questions and (plan.assertions or plan.clarification_reason is None):
+        raise TaskValidationError("clarification_shape")
+    if not plan.questions and plan.clarification_reason is not None:
+        raise TaskValidationError("clear_claim_reason")
+    if any(not q.strip() for q in plan.questions) or any(
+        not a.text.strip() for a in plan.assertions
+    ):
+        raise TaskValidationError("blank_claim")
+    if not plan.questions and len(plan.assertions) != 1:
+        raise TaskValidationError("claim_shape")
+
+
+async def interpret(tasks, investigation):
+    plan = await tasks.call(
+        "interpret",
+        "Classify scope, NOT truth. First choose clarification_reason=null for a checkable "
+        "claim, then questions=[], then exactly one assertion. Never use factual_uncertainty. "
+        "An unproven assertion about present or past reality is still checkable. "
+        "Lack of conclusive evidence is an investigation outcome, not missing scope. "
+        "Copy ALL submitted factual details, including dates in descriptive clauses. "
+        "Interpret exactly one factual assertion without changing its meaning. For compound "
+        "claims, unresolved relative dates, ambiguous scope, predictions or value judgments, "
+        "return clarification questions and no assertions. Resolve relative dates only from "
+        "explicit user-supplied absolute timeframe context; never silently use today's date. "
+        "For clear factual claims supply a1, explicit scope and characteristics, with "
+        "questions=[] and clarification_reason=null. False premises, unknown answers, "
+        "contested evidence and uncertainty about a named person's nationality or an "
+        "event's equipment are research questions, NOT missing user scope. Preserve those "
+        "details in the assertion; do not correct them from memory. Never ask the user "
+        "whether the claim is true, what the evidence establishes or which fact is correct. "
+        "Clarification must identify missing scope the user can supply (which entity, "
+        "period, place or definition), separate independently asserted propositions, or "
+        "a non-factual request. Set the corresponding clarification_reason. A subject's "
+        "descriptive modifier does not by itself make one proposition compound. "
+        "A direct record is a precise date/quantity/event lookup. Consequential causal, medical, "
+        "legal or financial interpretations require deep research; a publication-date lookup "
+        "does not become consequential merely because it concerns a medical paper.",
+        {"claim": investigation.claim, "context": investigation.context},
+        ClaimPlan,
+        validate_claim,
+    )
+    # Classification must not silently remove or correct a user-supplied fact.
+    # Retain contextual date resolution when an explicit timeframe was supplied.
+    if plan.assertions and not investigation.context.get("timeframe"):
+        if len(investigation.claim) <= 2000:
+            plan.assertions[0].text = investigation.claim
+    return plan
+
+
+def route(assertion):
+    deep = (
+        assertion.recommended_route == "deep"
+        or assertion.consequential
+        or assertion.kind != "direct_record"
+    )
+    return (
+        ("deep", "Claim meaning requires deeper evidence.")
+        if deep
+        else ("quick", "A precise direct record may settle the claim.")
+    )

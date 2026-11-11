@@ -1,0 +1,296 @@
+{
+  "id": "b0020",
+  "live": true,
+  "investigation": {
+    "id": "e36cd88e-d140-4589-8a8e-650476558228",
+    "claim": "New Jersey’s April 1992 minimum wage increase reduced employment at fast-food restaurants relative to eastern Pennsylvania.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "needs_clarification",
+    "stage": null,
+    "route": null,
+    "stop_reason": null,
+    "reused": true,
+    "created_at": "2026-11-10T05:34:17.694880Z",
+    "started_at": "2026-11-10T05:34:17.897054Z",
+    "finished_at": "2026-11-10T05:34:19.505319Z",
+    "result": null,
+    "clarification_questions": [
+      "Specify the time frame within April 1992 (e.g., start-of-month, end-of-month, full month) for employment data comparison.",
+      "Specify the exact definition of 'fast-food restaurants' (e.g., chain type, sit-down vs. counter service) and the geographical boundary of eastern Pennsylvania for the comparison.",
+      "State whether the claim refers to headcount, hours worked, or wage bill employment metrics."
+    ],
+    "error": null,
+    "links": {
+      "self": "/investigations/e36cd88e-d140-4589-8a8e-650476558228",
+      "events": "/investigations/e36cd88e-d140-4589-8a8e-650476558228/events",
+      "evidence": "/investigations/e36cd88e-d140-4589-8a8e-650476558228/evidence",
+      "comparison": "/investigations/e36cd88e-d140-4589-8a8e-650476558228/comparison",
+      "refresh": null
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 1,
+      "timestamp": "2026-11-10T05:34:17.694880Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 2,
+      "timestamp": "2026-11-10T05:34:17.897054Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 3,
+      "timestamp": "2026-11-10T05:34:17.900444Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.5",
+        "application_version": "research-v4.5",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 4,
+      "timestamp": "2026-11-10T05:34:17.902425Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 5,
+      "timestamp": "2026-11-10T05:34:17.904694Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.995",
+        "hard_remaining_seconds": "119.995",
+        "attempt": "1",
+        "input_chars": "151"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 6,
+      "timestamp": "2026-11-10T05:34:17.909104Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.991",
+        "hard_remaining_seconds": "119.991",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5830"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 7,
+      "timestamp": "2026-11-10T05:34:19.499299Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.401",
+        "hard_remaining_seconds": "118.401",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5830",
+        "elapsed_seconds": "1.587",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1555"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 8,
+      "timestamp": "2026-11-10T05:34:19.501717Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.399",
+        "hard_remaining_seconds": "118.399",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "688",
+        "elapsed_seconds": "1.597",
+        "finish_reason": "stop",
+        "prompt_tokens": "903",
+        "completion_tokens": "153",
+        "total_tokens": "1056"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 9,
+      "timestamp": "2026-11-10T05:34:19.503648Z",
+      "type": "clarification_decision",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "10",
+        "model_available_limit": "6",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.396",
+        "hard_remaining_seconds": "118.396",
+        "reason": "missing_scope",
+        "question_count": "3"
+      }
+    },
+    {
+      "investigation_id": "e36cd88e-d140-4589-8a8e-650476558228",
+      "sequence": 10,
+      "timestamp": "2026-11-10T05:34:19.505319Z",
+      "type": "clarification_required",
+      "stage": null,
+      "payload": {}
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 2.0751601250012754,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.586
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.5871298339989153,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,272 @@
+{
+  "id": "b0024",
+  "live": true,
+  "investigation": {
+    "id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+    "claim": "The unidentified author known as Jack the Ripper was the painter Walter Sickert.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "needs_clarification",
+    "stage": null,
+    "route": null,
+    "stop_reason": null,
+    "reused": true,
+    "created_at": "2026-11-10T04:54:56.161934Z",
+    "started_at": "2026-11-10T04:54:56.163203Z",
+    "finished_at": "2026-11-10T04:54:57.291411Z",
+    "result": null,
+    "clarification_questions": [
+      "Please submit a factual claim checkable against existing evidence."
+    ],
+    "error": null,
+    "links": {
+      "self": "/investigations/145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "events": "/investigations/145ea07f-e133-44c3-8f41-0997ba1fab79/events",
+      "evidence": "/investigations/145ea07f-e133-44c3-8f41-0997ba1fab79/evidence",
+      "comparison": "/investigations/145ea07f-e133-44c3-8f41-0997ba1fab79/comparison",
+      "refresh": null
+    }
+  },
+  "evidence": {
+    "sources": [],
+    "evidence": []
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:54:56.161934Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:54:56.163203Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:54:56.164262Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:54:56.165124Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:54:56.165990Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "108"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:54:56.167148Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5090"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:54:57.285074Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.881",
+        "hard_remaining_seconds": "118.881",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5090",
+        "elapsed_seconds": "1.115",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1238"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:54:57.289162Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.876",
+        "hard_remaining_seconds": "118.876",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "363",
+        "elapsed_seconds": "1.122",
+        "finish_reason": "stop",
+        "prompt_tokens": "783",
+        "completion_tokens": "96",
+        "total_tokens": "879"
+      }
+    },
+    {
+      "investigation_id": "145ea07f-e133-44c3-8f41-0997ba1fab79",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:54:57.291411Z",
+      "type": "clarification_required",
+      "stage": null,
+      "payload": {}
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 1.3126133749974542,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.113
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.114814958000352,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

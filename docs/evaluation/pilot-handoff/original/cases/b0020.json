@@ -1,0 +1,4835 @@
+{
+  "id": "b0020",
+  "live": true,
+  "investigation": {
+    "id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+    "claim": "New Jersey’s April 1992 minimum wage increase reduced employment at fast-food restaurants relative to eastern Pennsylvania.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:52:35.489020Z",
+    "started_at": "2026-11-10T04:52:35.490130Z",
+    "finished_at": "2026-11-10T04:53:28.716747Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "events": "/investigations/eee09633-327a-4f3a-a566-ad6be5e99df9/events",
+      "evidence": "/investigations/eee09633-327a-4f3a-a566-ad6be5e99df9/evidence",
+      "comparison": "/investigations/eee09633-327a-4f3a-a566-ad6be5e99df9/comparison",
+      "refresh": "/investigations/eee09633-327a-4f3a-a566-ad6be5e99df9/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "url": "https://danisreadingnotes.substack.com/p/minimum-wages-and-employment-a-case",
+        "canonical_url": "https://danisreadingnotes.substack.com/p/minimum-wages-and-employment-a-case",
+        "title": "Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:52:43.126101Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "28967da3b967405919061e6e805ddbbb9fb3903d823a5fa729e09bc06efd4c5f",
+        "duplicate_group": "28967da3b967405919061e6e805ddbbb9fb3903d823a5fa729e09bc06efd4c5f",
+        "limitations": []
+      },
+      {
+        "id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "url": "https://www.academia.edu/24347775/Minimum_Wages_and_Employment_A_Case_Study_of_the_Fast_Food_Industry_in_New_Jersey_and_Pennsylvania",
+        "canonical_url": "https://www.academia.edu/24347775/Minimum_Wages_and_Employment_A_Case_Study_of_the_Fast_Food_Industry_in_New_Jersey_and_Pennsylvania",
+        "title": "(PDF) Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania | Academia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:52:46.985749Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "2a3b073125b0561eaaafae1e2e3f08050dde50ad3af866e4b93615e903f2847a",
+        "duplicate_group": "2a3b073125b0561eaaafae1e2e3f08050dde50ad3af866e4b93615e903f2847a",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "url": "https://sites.udel.edu/saul-hoffman/files/2011/11/Hoffman_Trace_EEJ.pdf",
+        "canonical_url": "https://sites.udel.edu/saul-hoffman/files/2011/11/Hoffman_Trace_EEJ.pdf",
+        "title": "What Happened to Employment When the PA–NJ Minimum Wage ...",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:52:52.058162Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "151fe679641652469a92d9f4af6c3ef9db0435d34407b8b900f3cbdd37cc2bfb",
+        "duplicate_group": "151fe679641652469a92d9f4af6c3ef9db0435d34407b8b900f3cbdd37cc2bfb",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "url": "https://libguides.princeton.edu/c.php?g=1269845&p=9343628",
+        "canonical_url": "https://libguides.princeton.edu/c.php?g=1269845&p=9343628",
+        "title": "Reproducing Card and Krueger (AER, 1994) - Introduction to R for Policy - Research Guides at Princeton University",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:01.779310Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a177c254f6786cd665439b384f133592b4f4d86a8ffdacdc185200682efb6c9a",
+        "duplicate_group": "a177c254f6786cd665439b384f133592b4f4d86a8ffdacdc185200682efb6c9a",
+        "limitations": []
+      },
+      {
+        "id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html",
+        "canonical_url": "https://ideas.repec.org/p/nbr/nberwo/4509.html",
+        "title": "Minimum Wages and Employment: A Case Study of the Fast Food Industry in New Jersey and Pennsylvania",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:04.686087Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "78a7c2ad88a080cee35153c11342e6238970b6ed2a1f77a20921e788f947770c",
+        "duplicate_group": "78a7c2ad88a080cee35153c11342e6238970b6ed2a1f77a20921e788f947770c",
+        "limitations": []
+      },
+      {
+        "id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "url": "https://ideas.repec.org/a/aea/aecrev/v84y1994i4p772-93.html",
+        "canonical_url": "https://ideas.repec.org/a/aea/aecrev/v84y1994i4p772-93.html",
+        "title": "Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:17.156297Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "09f15e9d6d6accbf37dd44acccec647d98f03a1aa4642fcde7aa04e62164d426",
+        "duplicate_group": "09f15e9d6d6accbf37dd44acccec647d98f03a1aa4642fcde7aa04e62164d426",
+        "limitations": []
+      },
+      {
+        "id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html?wptouch_preview_theme=enabled",
+        "canonical_url": "https://ideas.repec.org/p/nbr/nberwo/4509.html?wptouch_preview_theme=enabled",
+        "title": "Minimum Wages and Employment: A Case Study of the Fast Food Industry in New Jersey and Pennsylvania",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:21.037221Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "50c7070692e2343430cfa109acb537b5c7a7ee307b89279cbfc03d94199e2e45",
+        "duplicate_group": "50c7070692e2343430cfa109acb537b5c7a7ee307b89279cbfc03d94199e2e45",
+        "limitations": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "27694a5d-935f-418f-93ca-09615173d67b",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+            "span_ids": [
+              7,
+              12,
+              21,
+              24
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The abstract and key text state that New Jersey's April 1, 1992 minimum wage increase from $4.25 to $5.05 showed no indication of reducing employment in fast-food restaurants when compared to eastern Pennsylvania, which had a constant minimum wage. Differences-in-differences estimates found no conct",
+          "publisher": "Dani Sandler/Substack",
+          "origin": "Substack post reproducing Card & Krueger (1994)",
+          "independence": "shared",
+          "provenance_span_ids": [
+            7,
+            12,
+            21,
+            24
+          ],
+          "provenance_note": "The abstract and body text directly report the study's finding of no employment reduction; the study explicitly uses Pennsylvania as the comparison group.",
+          "rationale": "The source abstract and key result sentences state that the minimum wage increase did not reduce employment relative to Pennsylvania, contradicting the user's claim that it reduced employment.",
+          "limitations": [
+            "Source is a reading-note summary, not the original journal article",
+            "Abstract wording 'no indication' does not quantify magnitude of any effect",
+            "Study period (Apr 1992–Nov 1992) is brief and may not capture longer-term adjustments"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              7
+            ],
+            "start": 653,
+            "end": 1283,
+            "text": "**Abstract:** On April 1, 1992, New Jersey’s minimum wage rose from $4.25 to $5.05 per hour. To evaluate the impact of the law we surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after the rise. Comparisons of employment growth at stores in New Jersey and Pennsylvania (where the minimum wage was constant) provide simple estimates of the effect of the higher minimum wage. We also compare employment changes at stores in New Jersey that were initially paying high wages (above $5) to the changes at lower-wage stores. We find no indication that the rise in the minimum wage reduced employment.",
+            "quote_hash": "31d54178cbb62da7ddde0ee98e806094102d3e7b9194ae9d47e6337212195681"
+          },
+          {
+            "span_ids": [
+              12
+            ],
+            "start": 1444,
+            "end": 1560,
+            "text": "On April 1, 1992 New Jersey’s minimum wage change from $4.25 to $5.05 per hours while Pennsylvania’s stayed constant",
+            "quote_hash": "a6f63550353279a3d99788960022d51f6a85380aee87738eeaff85d3c08b25de"
+          },
+          {
+            "span_ids": [
+              21
+            ],
+            "start": 2212,
+            "end": 2295,
+            "text": "Differences-in-differences comparing stores in New Jersey to those in Pennsylvania.",
+            "quote_hash": "ec8ce6a7a95f06c760519af55df1712508646cf44d1196400352347943aec58a"
+          },
+          {
+            "span_ids": [
+              24
+            ],
+            "start": 2416,
+            "end": 2514,
+            "text": "No indication that the rise in minimum wage reduced employment, if anything the effect is positive",
+            "quote_hash": "d4ff1522dda356b7f384bb01d8ea409fb1d0546502d3d2f2d9059dd6574bf02f"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "c545088c-6507-4abd-ba5f-672e5548c507",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+            "span_ids": [
+              14,
+              17,
+              25
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "New Jersey's economy is linked to eastern Pennsylvania with shared seasonal patterns; the study sample includes 410 fast-food restaurants (Burger King, KFC, Wendy's, Roy Rogers) surveyed before and after the wage increase; the abstract notes no evidence of non-wage offsets.",
+          "publisher": "Dani Sandler/Substack",
+          "origin": "Substack post reproducing Card & Krueger (1994)",
+          "independence": "shared",
+          "provenance_span_ids": [
+            14,
+            17,
+            25
+          ],
+          "provenance_note": "Span 14 confirms the geographic linkage; span 17 defines the sample; span 25 notes absence of non-wage offsets, supporting the study's internal validity.",
+          "rationale": "These spans establish the study design and comparison group context but do not directly address the employment claim.",
+          "limitations": [
+            "Span 14 describes general economic linkage, not a rigorous empirical comparison",
+            "Span 25 addresses non-wage offsets, not employment levels"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              14
+            ],
+            "start": 1652,
+            "end": 1772,
+            "text": "The New Jersey economy is closely linked to that in other states, like eastern Pennsylvania, including seasonal patterns",
+            "quote_hash": "00036f72c43ff02e60b2cc31eac07f088953b5fa39100ca29d11fdb7efe1484d"
+          },
+          {
+            "span_ids": [
+              17
+            ],
+            "start": 1906,
+            "end": 2006,
+            "text": "410 fast food restaurants in New Jersey and Pennsylvania - Burger King, KFC, Wendy’s, and Roy Rogers",
+            "quote_hash": "cf57e0448e3ce2ea50a3cd89354d2c53cdffdd03b976adbd34f83769f4c76fd4"
+          },
+          {
+            "span_ids": [
+              25
+            ],
+            "start": 2516,
+            "end": 2552,
+            "text": "Also no evidence of non-wage offsets",
+            "quote_hash": "9328632f69ed92dacc23fda7fd78178ca02894572bbfbfa4be528e85704bed5c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "532893aa-871b-49e1-84d8-bcede82ad1c1",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+            "span_ids": [
+              36,
+              37,
+              38,
+              40
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The source states that on April 1, 1992, New Jersey's minimum wage rose from $4.25 to $5.05 (span 36); the authors surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after the rise (span 37); comparisons of employment growth at stores in New Jersey and Pennsylvania,",
+          "publisher": "Shaikh Saif",
+          "origin": "Academia.edu PDF",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            36,
+            37,
+            38,
+            40
+          ],
+          "provenance_note": "The full text is behind a paywall; spans captured from the publicly viewable abstract/landing page only.",
+          "rationale": "The abstract explicitly finds no indication that the minimum wage rise reduced employment, directly contradicting the claim that it reduced employment at fast-food restaurants relative to eastern Pennsylvania.",
+          "limitations": [
+            "Abstract only; full methodology not accessible",
+            "No county-level or firm-level data visible",
+            "Survey scope limited to 410 restaurants"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              36,
+              37,
+              38
+            ],
+            "start": 1461,
+            "end": 1856,
+            "text": "On April 1, 1992, New Jersey's minimum wage rose from $4.25 to $5.05 per hour. To evaluate the impact of the law we surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after the rise. Comparisons of employment growth at stores in New Jersey and Pennsylvania (where the minimum wage was constant) provide simple estimates of the effect of the higher minimum wage.",
+            "quote_hash": "5e6c884ccbad4b8cec451f079815a6b6581fcd1b00ee29480def9c8ae1a01183"
+          },
+          {
+            "span_ids": [
+              40
+            ],
+            "start": 2002,
+            "end": 2092,
+            "text": "We find no indication that the rise in the minimum wage reduced employment. (JEL 530, 523)",
+            "quote_hash": "25d5809d53d709daf203e558e8fde43e163f4d210f0be616e36232d33cd5497d"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "154d2309-cef8-4b3e-be43-076e7cd39d39",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+            "span_ids": [
+              42,
+              43
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Key takeaway 1 states the New Jersey minimum wage increase did not reduce employment in fast-food restaurants, contrary to standard predictions (span 42); key takeaway 2 states employment rose by 13% in New Jersey relative to Pennsylvania after the minimum wage increase (span 43).",
+          "publisher": "Shaikh Saif",
+          "origin": "Academia.edu PDF",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            42,
+            43
+          ],
+          "provenance_note": "The full text is behind a paywall; spans captured from the publicly viewable abstract/landing page only.",
+          "rationale": "The source's abstract and key takeaways directly refute the claim, finding no employment reduction and instead a 13% relative employment increase in New Jersey versus Pennsylvania after the minimum wage hike.",
+          "limitations": [
+            "Abstract only; full methodology not accessible",
+            "No county-level or firm-level data visible",
+            "Survey scope limited to 410 restaurants"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              42,
+              43
+            ],
+            "start": 2124,
+            "end": 2347,
+            "text": "1. The New Jersey minimum wage increase did not reduce employment in fast-food restaurants, contrary to standard predictions.\n2. Employment rose by 13% in New Jersey relative to Pennsylvania after the minimum wage increase.",
+            "quote_hash": "381a433c397a619ab5f5e9c732b0701bd3e3650fe8bc2e42f6f57dc222794db5"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "025002cd-e45f-4350-9726-55620338ec65",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+            "span_ids": [
+              10,
+              11,
+              12
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Hoffman and M., Trace Department of Economics, University of Delaware",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            10,
+            11,
+            12
+          ],
+          "provenance_note": "Spans 10, 11, 12 describe Card and Krueger's 1992 NJ minimum wage increase findings: NJ wage rose $0.80 to $5.05; PA remained at $4.25; Card-Krueger used survey data and found employment increased in NJ relative to PA. The assertion's claim of 'reduced employment at fast-food restaurants relative to",
+          "rationale": "Spans 10-12 describe the 1992 minimum wage increase setup and Card-Krueger's finding of increased employment in NJ relative to PA, which contradicts the assertion's claim of reduced employment. The snapshot reports Card-Krueger's result that employment rose in NJ, not fell. The assertion's causal 'N",
+          "limitations": [
+            "Source describes Card and Krueger's finding, not direct evidence on assertion's causal claim about reduced employment. Truncated source may not present full analysis results.",
+            "The analysis focuses on Card-Krueger's findings rather than directly testing the assertion's causal claim",
+            "Scope mismatch: assertion specifies 'April 1992 minimum wage increase reduced employment' while source describes Card-Krueger's counterintuitive finding of employment increases in NJ"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              10,
+              11,
+              12
+            ],
+            "start": 1246,
+            "end": 1911,
+            "text": "In that year, the NJ minimum wage increased $0.80 to $5.05 per hour, while the minimum wage in Pennsylvania (PA) remained at $4.25, the federal statutory rate. Card and Krueger treated the NJ increase as a kind of natural experiment and then used their own survey data to examine how employment in fast-food restaurants in PA and NJ was affected. Their result — that employment increased in NJ relative to PA — has been both widely cited and controversial since its first report.1 President Clinton cited it in his 1995 State of the Union address as evidence that ‘‘a modest increase does not cost jobs and may even lure people into the job market’’ [Clinton 1995].",
+            "quote_hash": "fa7797bc3d32b77359b5dbdccc6aedbe1e1536a2f33707b7536e73f65cc73e46"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "15bae92e-3ab0-4908-a975-251ac7aebd92",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+            "span_ids": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The abstract describes a 13% employment increase in New Jersey relative to Pennsylvania after the April 1992 minimum wage hike, contradicting the claim that the increase reduced employment at fast-food restaurants.",
+          "publisher": "Princeton University",
+          "origin": "Author abstract of Card and Krueger (1994) working paper as linked from Princeton guide",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "provenance_note": "Abstract states NJ employment rose 13% relative to PA; the guide links to the NBER working paper w4509 for the full study.",
+          "rationale": "Source directly reports that fast-food employment in New Jersey increased relative to Pennsylvania after the minimum wage increase, opposite to the assertion that it reduced employment.",
+          "limitations": [
+            "Abstract does not provide full regression results or confidence intervals",
+            "Scope limited to surveyed 410 restaurants and does not cover all fast-food establishments",
+            "Does not assess longer-term employment effects beyond the immediate post-increase period"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "direction_of_effect",
+              "explanation": "Assertion claims employment reduction; source reports a 13% employment increase relative to Pennsylvania"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "start": 1213,
+            "end": 1903,
+            "text": "Author abstract: \"On April 1, 1992 New Jersey's minimum wage increased from $4.25 to $5.05 per hour. To evaluate the impact of the law we surveyed 410 fast food restaurants in New Jersey and Pennsylvania before and after the rise in the minimum. Comparisons of the changes in wages, employment, and prices at stores in New Jersey relative to stores in Pennsylvania (where the minimum wage remained fixed at $4.25 per hour) yield simple estimates of the effect of the higher minimum wage. Our empirical findings challenge the prediction that a rise in the minimum reduces employment. Relative to stores in Pennsylvania, fast food restaurants in New Jersey increased employment by 13 percent.",
+            "quote_hash": "443d672a12f8bba79dad3ee9b5b1dfe6b2965b5d3eda63da6879a0815d596589"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "c59a7c5a-58d8-4867-9e3a-f9c1b46d6425",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+            "span_ids": [
+              30,
+              31,
+              32,
+              34
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The paper documents a 13% employment increase at New Jersey fast-food restaurants relative to Pennsylvania after the April 1992 minimum wage hike. However, this contradicts the assertion that the increase 'reduced employment'; the study found the opposite outcome.",
+          "publisher": "National Bureau of Economic Research",
+          "origin": "NBER Working Paper 4509",
+          "independence": "shared",
+          "provenance_span_ids": [
+            30,
+            31,
+            32,
+            34
+          ],
+          "provenance_note": "Abstract states NJ minimum wage rose from $4.25 to $5.05; comparison with PA (where minimum stayed at $4.25) yielded simple estimates. Span 34 reports 'Relative to stores in Pennsylvania, fast food restaurants in New Jersey increased employment by 13 percent.'",
+          "rationale": "The abstract and findings directly describe the employment effect of the April 1992 NJ minimum wage increase relative to PA, but the result (employment increased) contradicts the claim that it reduced employment.",
+          "limitations": [
+            "Study focuses on fast-food industry and may not generalize to other sectors",
+            "Comparison is relative to Pennsylvania with fixed minimum wage, not a general equilibrium analysis",
+            "Abstract does not detail statistical significance or confidence intervals"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "direction of effect",
+              "explanation": "The assertion claims the increase 'reduced employment' but the paper finds a 13% employment increase relative to Pennsylvania."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              30,
+              31,
+              32
+            ],
+            "start": 1095,
+            "end": 1564,
+            "text": "On April 1, 1992 New Jersey's minimum wage increased from $4.25 to $5.05 per hour. To evaluate the impact of the law we surveyed 410 fast food restaurants in New Jersey and Pennsylvania before and after the rise in the minimum. Comparisons of the changes in wages, employment, and prices at stores in New Jersey relative to stores in Pennsylvania (where the minimum wage remained fixed at $4.25 per hour) yield simple estimates of the effect of the higher minimum wage.",
+            "quote_hash": "24a65c7ca3891c8b9c3cb510d301ff724bd192478b535b8885467d1885df34ba"
+          },
+          {
+            "span_ids": [
+              34
+            ],
+            "start": 1660,
+            "end": 1767,
+            "text": "Relative to stores in Pennsylvania, fast food restaurants in New Jersey increased employment by 13 percent.",
+            "quote_hash": "931c935d3127f61b217e06c9b20140f20b860fc840e97e8266bac412c8d7e31e"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "2cd6cee5-3b5c-4590-be5c-e44c315f10ed",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+            "span_ids": [
+              35,
+              36
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The paper reports that stores unaffected by the minimum wage had the same employment growth as Pennsylvania, while stores that had to increase wages increased their employment. This directly contradicts the assertion that the increase reduced employment.",
+          "publisher": "National Bureau of Economic Research",
+          "origin": "NBER Working Paper 4509",
+          "independence": "shared",
+          "provenance_span_ids": [
+            35,
+            36
+          ],
+          "provenance_note": "Span 36: 'Stores that were unaffected by the minimum wage had the same employment growth as stores in Pennsylvania, while stores that had to increase their wages increased their employment.' Span 35: comparison of initially high-wage NJ stores to lower-wage stores.",
+          "rationale": "Spans 35-36 describe the within‑New Jersey comparison and explicitly state that wage-increasing stores grew employment, opposing the claim of reduction.",
+          "limitations": [
+            "Within‑state comparison does not isolate the overall employment effect from other factors",
+            "Does not provide a counterfactual for what would have happened without the wage increase"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "direction of effect",
+              "explanation": "Spans 35‑36 show employment increased at stores that raised wages, directly contradicting the claim of reduction."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              35,
+              36
+            ],
+            "start": 1768,
+            "end": 2124,
+            "text": "We also compare employment growth at stores in New Jersey that were initially paying high wages (and were unaffected by the new law) to employment changes at lower-wage stores. Stores that were unaffected by the minimum wage had the same employment growth as stores in Pennsylvania, while stores that had to increase their wages increased their employment.",
+            "quote_hash": "f5fc6810cdf5be5b656f7ae979cc2df1c193a078763b817111c3689e52e81260"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "c09b4eaa-0f06-4dd0-94be-97f1981e2be4",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+            "span_ids": [
+              33
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The authors state their findings 'challenge the prediction that a rise in the minimum reduces employment.' This provides contextual framing but does not itself establish the empirical result.",
+          "publisher": "National Bureau of Economic Research",
+          "origin": "NBER Working Paper 4509",
+          "independence": "shared",
+          "provenance_span_ids": [
+            33
+          ],
+          "provenance_note": "Span 33: 'Our empirical findings challenge the prediction that a rise in the minimum reduces employment.'",
+          "rationale": "States the authors' contrary position but does not quote the specific employment change.",
+          "limitations": [
+            "Abstract‑level statement only; no data or magnitude provided"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              33
+            ],
+            "start": 1565,
+            "end": 1659,
+            "text": "Our empirical findings challenge the prediction that a rise in the minimum reduces employment.",
+            "quote_hash": "75ceb4de915296404b65fad34ba9ad34ea0e07ef2757792759598b24428594a0"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "39bf061c-aff3-4193-851e-54c08c3dd0f2",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+            "span_ids": [
+              30,
+              31,
+              32,
+              34
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "New Jersey's minimum wage increased from $4.25 to $5.05 on April 1, 1992; the study surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after; employment comparisons between New Jersey and Pennsylvania (where the wage was constant) provide simple estimates of the law",
+          "publisher": null,
+          "origin": "RePEc/IDEAS snapshot of Card & Krueger (1994) American Economic Review",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            30,
+            31,
+            32,
+            34
+          ],
+          "provenance_note": "Source spans contain abstract and methodological description only; full-text data on employment outcomes not captured in this snapshot.",
+          "rationale": "The abstract and summary confirm the 1992 minimum wage increase in New Jersey and the comparative design using eastern Pennsylvania as a control, but do not quantify employment effects in this excerpt.",
+          "limitations": [
+            "No employment outcome statistics reported in abstract/summary",
+            "No direct comparison of fast-food employment levels between New Jersey and eastern Pennsylvania",
+            "Cannot assess the study's actual finding of 'no indication' of reduced employment from this snapshot alone"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              30,
+              31,
+              32
+            ],
+            "start": 1124,
+            "end": 1529,
+            "text": "On April 1, 1992, New Jersey's minimum wage rose from $4.25 to $5.05 per hour. To evaluate the impact of the law, the authors surveyed 410 fast-food restaurants in New Jersey and eastern Pennsylvania before and after the rise. Comparisons of employment growth at stores in New Jersey and Pennsylvania (where the minimum wage was constant) provide simple estimates of the effect of the higher minimum wage.",
+            "quote_hash": "cbfef6e4ecfed0f18f9b14d6d570d5b541de1f7f410a9fc9587cb1123bf739ca"
+          },
+          {
+            "span_ids": [
+              34
+            ],
+            "start": 1687,
+            "end": 1764,
+            "text": "They find no indication that the rise in the minimum wage reduced employment.",
+            "quote_hash": "5a360669b1d5c4848cbb892d862fb52f49ef9e130636c0c5983ad289c4ead37c"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "e2cbea6b-c0ce-4abf-bb39-4094906d5f5a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+            "span_ids": [
+              33
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The authors also compare employment changes at stores in New Jersey that were initially paying high wages (above $5.00) to the changes at lower-wage stores.",
+          "publisher": null,
+          "origin": "RePEc/IDEAS snapshot of Card & Krueger (1994) American Economic Review",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            33
+          ],
+          "provenance_note": "Additional analytical subgroup comparison within the same study; not independently sourced.",
+          "rationale": "Describes a subgroup analysis (high-wage vs. low-wage New Jersey stores) that supplements the main NJ vs. PA comparison but does not itself evaluate the asserted claim about employment reduction.",
+          "limitations": [
+            "Subgroup comparison is secondary to the main NJ-PA design; not directly responsive to the assertion",
+            "Scope limited to within-New Jersey wage-level comparison"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              33
+            ],
+            "start": 1530,
+            "end": 1686,
+            "text": "The authors also compare employment changes at stores in New Jersey that were initially paying high wages (above $5.00) to the changes at lower-wage stores.",
+            "quote_hash": "1ff511e41367de37d4eb05210633faf9c6bb2cb63a9625e8d782475384d3c8db"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "1bfa96ce-08ac-44b1-9ec0-dccb35db7c33",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+            "span_ids": [
+              30,
+              34
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The source states that New Jersey's minimum wage increase to $5.05 per hour on April 1, 1992 led to a 13 percent increase in employment relative to Pennsylvania, contradicting the assertion that employment was reduced.",
+          "publisher": null,
+          "origin": "NBER Working Paper 4509",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            30,
+            34
+          ],
+          "provenance_note": "Spans 30 and 34 directly quote the paper's abstract and main comparative finding on employment effects.",
+          "rationale": "The paper's central finding of employment growth contradicts the claim of employment reduction.",
+          "limitations": [
+            "Observational study without random assignment",
+            "Specific to fast-food industry in two states",
+            "Short-run analysis timeframe"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "employment direction",
+              "explanation": "Paper finds employment increased by 13%, directly opposite to the claim of reduced employment."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              30
+            ],
+            "start": 1127,
+            "end": 1209,
+            "text": "On April 1, 1992 New Jersey's minimum wage increased from $4.25 to $5.05 per hour.",
+            "quote_hash": "f489e57ce2de735b9ee4a6a4f6aed1b0961c3fd56d120abd897ed2536965bef1"
+          },
+          {
+            "span_ids": [
+              34
+            ],
+            "start": 1692,
+            "end": 1799,
+            "text": "Relative to stores in Pennsylvania, fast food restaurants in New Jersey increased employment by 13 percent.",
+            "quote_hash": "931c935d3127f61b217e06c9b20140f20b860fc840e97e8266bac412c8d7e31e"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:52:35.489020Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:52:35.490130Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:52:35.491225Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:52:35.491984Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:52:35.492728Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "151"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:52:35.493968Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5135"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:52:36.754361Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.739",
+        "hard_remaining_seconds": "118.739",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5135",
+        "elapsed_seconds": "1.257",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1645"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:52:36.757852Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.735",
+        "hard_remaining_seconds": "118.735",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "769",
+        "elapsed_seconds": "1.264",
+        "finish_reason": "stop",
+        "prompt_tokens": "790",
+        "completion_tokens": "164",
+        "total_tokens": "954"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:52:36.760906Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:52:36.764851Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:52:36.768294Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:52:36.772913Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.720",
+        "hard_remaining_seconds": "238.720",
+        "attempt": "1",
+        "input_chars": "510"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:52:36.775956Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.716",
+        "hard_remaining_seconds": "238.716",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3535"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:52:37.569956Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.923",
+        "hard_remaining_seconds": "237.923",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3535",
+        "elapsed_seconds": "0.791",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1347"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:52:37.573137Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.919",
+        "hard_remaining_seconds": "237.919",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "469",
+        "elapsed_seconds": "0.801",
+        "finish_reason": "stop",
+        "prompt_tokens": "607",
+        "completion_tokens": "116",
+        "total_tokens": "723"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:52:37.575517Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey minimum wage increase April 1992 fast-food employment effects comparison eastern Pennsylvania",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:52:37.577941Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.914",
+        "hard_remaining_seconds": "237.914",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "312"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:52:40.498387Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "189.995",
+        "hard_remaining_seconds": "234.995",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "312",
+        "elapsed_seconds": "2.917",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10646"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:52:40.501851Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey minimum wage increase April 1992 fast-food employment effects comparison eastern Pennsylvania",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:52:40.504331Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food employment change 1992 minimum wage increase vs Pennsylvania control group",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:52:40.506763Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "189.985",
+        "hard_remaining_seconds": "234.985",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "303"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:52:42.968971Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.524",
+        "hard_remaining_seconds": "232.524",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "303",
+        "elapsed_seconds": "2.459",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10208"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:52:42.971966Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food employment change 1992 minimum wage increase vs Pennsylvania control group",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:52:42.974466Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "4",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:52:42.976569Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "url": "https://danisreadingnotes.substack.com/p/minimum-wages-and-employment-a-case",
+        "slot": "1",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:52:42.978416Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:52:42.980400Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "187.511",
+        "hard_remaining_seconds": "232.511",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:52:43.124424Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c9",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "187.368",
+        "hard_remaining_seconds": "232.368",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203",
+        "elapsed_seconds": "0.141",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3616"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:52:43.131532Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "url": "https://danisreadingnotes.substack.com/p/minimum-wages-and-employment-a-case",
+        "candidate_id": "c9",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:52:43.134301Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:52:43.137374Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "187.355",
+        "hard_remaining_seconds": "232.355",
+        "attempt": "1",
+        "input_chars": "6032"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:52:43.140740Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "187.351",
+        "hard_remaining_seconds": "232.351",
+        "provider_call_id": "p12",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15299"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:52:46.810868Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.682",
+        "hard_remaining_seconds": "228.682",
+        "provider_call_id": "p12",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15299",
+        "elapsed_seconds": "3.667",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3713"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:52:46.814047Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t11",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "183.678",
+        "hard_remaining_seconds": "228.678",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2748",
+        "elapsed_seconds": "3.676",
+        "finish_reason": "stop",
+        "prompt_tokens": "3486",
+        "completion_tokens": "730",
+        "total_tokens": "4216"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:52:46.819821Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "27694a5d-935f-418f-93ca-09615173d67b",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:52:46.822150Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c545088c-6507-4abd-ba5f-672e5548c507",
+        "snapshot_id": "a41f0087-f1a6-4acd-ae61-a985dcc84cb8",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:52:46.824409Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "url": "https://www.academia.edu/24347775/Minimum_Wages_and_Employment_A_Case_Study_of_the_Fast_Food_Industry_in_New_Jersey_and_Pennsylvania",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:52:46.826769Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:52:46.828856Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "183.663",
+        "hard_remaining_seconds": "228.663",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "259"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:52:46.983357Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c13",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "183.510",
+        "hard_remaining_seconds": "228.510",
+        "provider_call_id": "p14",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "259",
+        "elapsed_seconds": "0.151",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "30208"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:52:46.995499Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "url": "https://www.academia.edu/24347775/Minimum_Wages_and_Employment_A_Case_Study_of_the_Fast_Food_Industry_in_New_Jersey_and_Pennsylvania",
+        "candidate_id": "c13",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:52:46.997618Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:52:46.999917Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "183.492",
+        "hard_remaining_seconds": "228.492",
+        "attempt": "1",
+        "input_chars": "20694"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:52:47.003074Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "183.489",
+        "hard_remaining_seconds": "228.489",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31085"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:52:50.291445Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.202",
+        "hard_remaining_seconds": "225.202",
+        "provider_call_id": "p16",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31085",
+        "elapsed_seconds": "3.285",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3537"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:52:50.295788Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t15",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.196",
+        "hard_remaining_seconds": "225.196",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2572",
+        "elapsed_seconds": "3.295",
+        "finish_reason": "stop",
+        "prompt_tokens": "8531",
+        "completion_tokens": "691",
+        "total_tokens": "9222"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:52:50.301662Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "532893aa-871b-49e1-84d8-bcede82ad1c1",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:52:50.303974Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "154d2309-cef8-4b3e-be43-076e7cd39d39",
+        "snapshot_id": "b9219895-dd7a-4a81-b665-b65da678d9b6",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:52:50.306107Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "url": "https://fermatslibrary.com/s/minimum-wages-and-employment-a-case-study-of-the-fast-food-industry-in-new-jersey-and-pennsylvania",
+        "slot": "3",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:52:50.308355Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:52:50.310217Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "180.181",
+        "hard_remaining_seconds": "225.181",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "254"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:52:51.423529Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.069",
+        "hard_remaining_seconds": "224.069",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "254",
+        "elapsed_seconds": "1.110",
+        "status_code": "200",
+        "outcome": "response_too_large",
+        "validation_code": "unknown",
+        "limit_reason": "unknown",
+        "response_bytes": "2106929"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:52:51.426397Z",
+      "type": "provider_retry_stopped",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "179.066",
+        "hard_remaining_seconds": "224.066",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "254",
+        "reason": "not_retryable",
+        "outcome": "response_too_large"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:52:51.429048Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://fermatslibrary.com/s/minimum-wages-and-employment-a-case-study-of-the-fast-food-industry-in-new-jersey-and-pennsylvania",
+        "candidate_id": "c17",
+        "reason": "response_too_large"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:52:51.431515Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "url": "https://sites.udel.edu/saul-hoffman/files/2011/11/Hoffman_Trace_EEJ.pdf",
+        "slot": "4",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:52:51.433556Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:52:51.435677Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "179.056",
+        "hard_remaining_seconds": "224.056",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:52:52.056129Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c19",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "178.437",
+        "hard_remaining_seconds": "223.437",
+        "provider_call_id": "p20",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "198",
+        "elapsed_seconds": "0.617",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "45525"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:52:52.068044Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "url": "https://sites.udel.edu/saul-hoffman/files/2011/11/Hoffman_Trace_EEJ.pdf",
+        "candidate_id": "c19",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:52:52.070604Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:52:52.072878Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "178.419",
+        "hard_remaining_seconds": "223.419",
+        "attempt": "1",
+        "input_chars": "17005"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:52:52.077089Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "178.415",
+        "hard_remaining_seconds": "223.415",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26824"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:52:54.475333Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.018",
+        "hard_remaining_seconds": "221.018",
+        "provider_call_id": "p22",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26824",
+        "elapsed_seconds": "2.395",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2822"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:52:54.478742Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t21",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.013",
+        "hard_remaining_seconds": "221.013",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1915",
+        "elapsed_seconds": "2.406",
+        "finish_reason": "stop",
+        "prompt_tokens": "6653",
+        "completion_tokens": "501",
+        "total_tokens": "7154"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:52:54.483187Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "025002cd-e45f-4350-9726-55620338ec65",
+        "snapshot_id": "681a65fe-a740-4249-9014-f2615c19629f",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:52:54.485337Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:52:54.487470Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.004",
+        "hard_remaining_seconds": "221.004",
+        "attempt": "1",
+        "input_chars": "4191"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:52:54.490358Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "176.002",
+        "hard_remaining_seconds": "221.002",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7396"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:52:55.364529Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "175.129",
+        "hard_remaining_seconds": "220.129",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7396",
+        "elapsed_seconds": "0.871",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1437"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:52:55.369840Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "175.123",
+        "hard_remaining_seconds": "220.123",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "556",
+        "elapsed_seconds": "0.881",
+        "finish_reason": "stop",
+        "prompt_tokens": "1898",
+        "completion_tokens": "145",
+        "total_tokens": "2043"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:52:55.372492Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:52:55.384860Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:52:55.387485Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Card Krueger 1994 New Jersey minimum wage increase April 1992 fast-food employment change compared eastern Pennsylvania",
+        "purpose": "support",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:52:55.389777Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "175.102",
+        "hard_remaining_seconds": "220.102",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "327"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:52:58.102293Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.391",
+        "hard_remaining_seconds": "217.391",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "327",
+        "elapsed_seconds": "2.709",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "11047"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:52:58.105687Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Card Krueger 1994 New Jersey minimum wage increase April 1992 fast-food employment change compared eastern Pennsylvania",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:52:58.108354Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food employment April 1992 minimum wage increase $0.80 hourly vs Pennsylvania control group",
+        "purpose": "contradiction",
+        "query_id": "q27"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:52:58.110311Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.381",
+        "hard_remaining_seconds": "217.381",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "315"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:53:01.618070Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.875",
+        "hard_remaining_seconds": "213.875",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "315",
+        "elapsed_seconds": "3.504",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7308"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:53:01.621628Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food employment April 1992 minimum wage increase $0.80 hourly vs Pennsylvania control group",
+        "query_id": "q27",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:53:01.625363Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "5",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:53:01.628338Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "url": "https://libguides.princeton.edu/c.php?g=1269845&p=9343628",
+        "slot": "1",
+        "query_ids": "q25",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:53:01.630431Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:53:01.632742Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "168.859",
+        "hard_remaining_seconds": "213.859",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "184"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:53:01.777506Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c29",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "168.716",
+        "hard_remaining_seconds": "213.716",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "184",
+        "elapsed_seconds": "0.141",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3262"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:53:01.783544Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "url": "https://libguides.princeton.edu/c.php?g=1269845&p=9343628",
+        "candidate_id": "c29",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:53:01.785648Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:53:01.788147Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "168.704",
+        "hard_remaining_seconds": "213.704",
+        "attempt": "1",
+        "input_chars": "5439"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:53:01.792120Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "168.700",
+        "hard_remaining_seconds": "213.700",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14640"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:53:04.419655Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "166.074",
+        "hard_remaining_seconds": "211.074",
+        "provider_call_id": "p32",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "14640",
+        "elapsed_seconds": "2.624",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2585"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:53:04.423832Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t31",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "166.068",
+        "hard_remaining_seconds": "211.068",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1662",
+        "elapsed_seconds": "2.635",
+        "finish_reason": "stop",
+        "prompt_tokens": "3455",
+        "completion_tokens": "422",
+        "total_tokens": "3877"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:53:04.429551Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "15bae92e-3ab0-4908-a975-251ac7aebd92",
+        "snapshot_id": "73e8686f-dffd-403d-ad28-fedad63c299f",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:53:04.432457Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html",
+        "slot": "2",
+        "query_ids": "q27",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:53:04.434469Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:53:04.436767Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "166.055",
+        "hard_remaining_seconds": "211.055",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "173"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:53:04.683917Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c33",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "165.809",
+        "hard_remaining_seconds": "210.809",
+        "provider_call_id": "p34",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "173",
+        "elapsed_seconds": "0.244",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7274"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:53:04.691890Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html",
+        "candidate_id": "c33",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:53:04.694649Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:53:04.698585Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "165.794",
+        "hard_remaining_seconds": "210.794",
+        "attempt": "1",
+        "input_chars": "13608"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:53:04.704790Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "165.788",
+        "hard_remaining_seconds": "210.788",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23687"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:53:09.354131Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "161.139",
+        "hard_remaining_seconds": "206.139",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23687",
+        "elapsed_seconds": "4.646",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "5417"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:53:09.357410Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "161.135",
+        "hard_remaining_seconds": "206.135",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "4369",
+        "elapsed_seconds": "4.660",
+        "finish_reason": "stop",
+        "prompt_tokens": "6520",
+        "completion_tokens": "1104",
+        "total_tokens": "7624"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:53:09.363159Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c59a7c5a-58d8-4867-9e3a-f9c1b46d6425",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:53:09.365320Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "2cd6cee5-3b5c-4590-be5c-e44c315f10ed",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:53:09.367021Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "c09b4eaa-0f06-4dd0-94be-97f1981e2be4",
+        "snapshot_id": "711c6530-51c9-4fed-911d-1d7d4bda3c51",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:53:09.369264Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:53:09.371760Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "161.120",
+        "hard_remaining_seconds": "206.120",
+        "attempt": "1",
+        "input_chars": "6024"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:53:09.374076Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "161.117",
+        "hard_remaining_seconds": "206.117",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9359"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:53:10.316529Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.176",
+        "hard_remaining_seconds": "205.176",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9359",
+        "elapsed_seconds": "0.939",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1543"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:53:10.319999Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.172",
+        "hard_remaining_seconds": "205.172",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "query_identity",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "662",
+        "elapsed_seconds": "0.948",
+        "finish_reason": "stop",
+        "prompt_tokens": "2704",
+        "completion_tokens": "172",
+        "total_tokens": "2876"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:53:10.322375Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "plan",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:53:10.324713Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.167",
+        "hard_remaining_seconds": "205.167",
+        "attempt": "2",
+        "input_chars": "6024"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 113,
+      "timestamp": "2026-11-10T04:53:10.327896Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.164",
+        "hard_remaining_seconds": "205.164",
+        "provider_call_id": "p39",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9529"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 114,
+      "timestamp": "2026-11-10T04:53:11.256062Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.237",
+        "hard_remaining_seconds": "204.237",
+        "provider_call_id": "p39",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "9529",
+        "elapsed_seconds": "0.924",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1512"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 115,
+      "timestamp": "2026-11-10T04:53:11.260268Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.232",
+        "hard_remaining_seconds": "204.232",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "631",
+        "elapsed_seconds": "0.935",
+        "finish_reason": "stop",
+        "prompt_tokens": "2736",
+        "completion_tokens": "163",
+        "total_tokens": "2899"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 116,
+      "timestamp": "2026-11-10T04:53:11.263086Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 117,
+      "timestamp": "2026-11-10T04:53:11.265371Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 118,
+      "timestamp": "2026-11-10T04:53:11.267343Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Card Krueger 1994 fast-food employment change New Jersey Pennsylvania April 1992 minimum wage $0.80 increase comparison with exact dates restaurant count",
+        "purpose": "support",
+        "query_id": "q40"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 119,
+      "timestamp": "2026-11-10T04:53:11.268847Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q40",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.223",
+        "hard_remaining_seconds": "204.223",
+        "provider_call_id": "p41",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "361"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 120,
+      "timestamp": "2026-11-10T04:53:14.641562Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q40",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "155.852",
+        "hard_remaining_seconds": "200.852",
+        "provider_call_id": "p41",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "361",
+        "elapsed_seconds": "3.369",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9858"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 121,
+      "timestamp": "2026-11-10T04:53:14.645007Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Card Krueger 1994 fast-food employment change New Jersey Pennsylvania April 1992 minimum wage $0.80 increase comparison with exact dates restaurant count",
+        "query_id": "q40",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 122,
+      "timestamp": "2026-11-10T04:53:14.647536Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food restaurant employment April 1992 versus Pennsylvania control group minimum wage $5.05 versus $4.25 hourly rate restaurant count",
+        "purpose": "contradiction",
+        "query_id": "q42"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 123,
+      "timestamp": "2026-11-10T04:53:14.650081Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q42",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "155.842",
+        "hard_remaining_seconds": "200.842",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "356"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 124,
+      "timestamp": "2026-11-10T04:53:16.998350Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q42",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "153.495",
+        "hard_remaining_seconds": "198.495",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "356",
+        "elapsed_seconds": "2.344",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9964"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 125,
+      "timestamp": "2026-11-10T04:53:17.002620Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "New Jersey fast-food restaurant employment April 1992 versus Pennsylvania control group minimum wage $5.05 versus $4.25 hourly rate restaurant count",
+        "query_id": "q42",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 126,
+      "timestamp": "2026-11-10T04:53:17.007108Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "4",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 127,
+      "timestamp": "2026-11-10T04:53:17.009300Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "url": "https://ideas.repec.org/a/aea/aecrev/v84y1994i4p772-93.html",
+        "slot": "1",
+        "query_ids": "q40",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 128,
+      "timestamp": "2026-11-10T04:53:17.011178Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 129,
+      "timestamp": "2026-11-10T04:53:17.013208Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "153.478",
+        "hard_remaining_seconds": "198.478",
+        "provider_call_id": "p45",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "186"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 130,
+      "timestamp": "2026-11-10T04:53:17.154048Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c44",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "153.339",
+        "hard_remaining_seconds": "198.339",
+        "provider_call_id": "p45",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "186",
+        "elapsed_seconds": "0.137",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7725"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 131,
+      "timestamp": "2026-11-10T04:53:17.161633Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "url": "https://ideas.repec.org/a/aea/aecrev/v84y1994i4p772-93.html",
+        "candidate_id": "c44",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 132,
+      "timestamp": "2026-11-10T04:53:17.163919Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 133,
+      "timestamp": "2026-11-10T04:53:17.166768Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "153.325",
+        "hard_remaining_seconds": "198.325",
+        "attempt": "1",
+        "input_chars": "14394"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 134,
+      "timestamp": "2026-11-10T04:53:17.171029Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "153.321",
+        "hard_remaining_seconds": "198.321",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24543"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 135,
+      "timestamp": "2026-11-10T04:53:20.867765Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "149.626",
+        "hard_remaining_seconds": "194.626",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "24543",
+        "elapsed_seconds": "3.693",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3698"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 136,
+      "timestamp": "2026-11-10T04:53:20.871138Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "7",
+        "extract_limit": "10",
+        "remaining_seconds": "149.621",
+        "hard_remaining_seconds": "194.621",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2739",
+        "elapsed_seconds": "3.704",
+        "finish_reason": "stop",
+        "prompt_tokens": "6964",
+        "completion_tokens": "695",
+        "total_tokens": "7659"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 137,
+      "timestamp": "2026-11-10T04:53:20.876172Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "39bf061c-aff3-4193-851e-54c08c3dd0f2",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 138,
+      "timestamp": "2026-11-10T04:53:20.878317Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e2cbea6b-c0ce-4abf-bb39-4094906d5f5a",
+        "snapshot_id": "471c9476-415e-42ff-a1e4-a38180b9f8fc",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 139,
+      "timestamp": "2026-11-10T04:53:20.880523Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c48",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html?wptouch_preview_theme=enabled",
+        "slot": "2",
+        "query_ids": "q42",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 140,
+      "timestamp": "2026-11-10T04:53:20.882619Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 141,
+      "timestamp": "2026-11-10T04:53:20.884869Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c48",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "149.607",
+        "hard_remaining_seconds": "194.607",
+        "provider_call_id": "p49",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 142,
+      "timestamp": "2026-11-10T04:53:21.035357Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c48",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "149.458",
+        "hard_remaining_seconds": "194.458",
+        "provider_call_id": "p49",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "203",
+        "elapsed_seconds": "0.147",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7338"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 143,
+      "timestamp": "2026-11-10T04:53:21.043038Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "url": "https://ideas.repec.org/p/nbr/nberwo/4509.html?wptouch_preview_theme=enabled",
+        "candidate_id": "c48",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 144,
+      "timestamp": "2026-11-10T04:53:21.045275Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 145,
+      "timestamp": "2026-11-10T04:53:21.047924Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "149.444",
+        "hard_remaining_seconds": "194.444",
+        "attempt": "1",
+        "input_chars": "13672"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 146,
+      "timestamp": "2026-11-10T04:53:21.051856Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "149.440",
+        "hard_remaining_seconds": "194.440",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23755"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 147,
+      "timestamp": "2026-11-10T04:53:22.812124Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "147.681",
+        "hard_remaining_seconds": "192.681",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23755",
+        "elapsed_seconds": "1.757",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2243"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 148,
+      "timestamp": "2026-11-10T04:53:22.815947Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "147.676",
+        "hard_remaining_seconds": "192.676",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1322",
+        "elapsed_seconds": "1.768",
+        "finish_reason": "stop",
+        "prompt_tokens": "6540",
+        "completion_tokens": "354",
+        "total_tokens": "6894"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 149,
+      "timestamp": "2026-11-10T04:53:22.821276Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "1bfa96ce-08ac-44b1-9ec0-dccb35db7c33",
+        "snapshot_id": "e93e9b27-42cb-40da-9640-e89bf553c9f4",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 150,
+      "timestamp": "2026-11-10T04:53:22.824115Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 151,
+      "timestamp": "2026-11-10T04:53:22.826472Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 152,
+      "timestamp": "2026-11-10T04:53:22.828644Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "15bae92e-3ab0-4908-a975-251ac7aebd92"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 153,
+      "timestamp": "2026-11-10T04:53:22.830929Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "c59a7c5a-58d8-4867-9e3a-f9c1b46d6425"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 154,
+      "timestamp": "2026-11-10T04:53:22.832416Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "2cd6cee5-3b5c-4590-be5c-e44c315f10ed"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 155,
+      "timestamp": "2026-11-10T04:53:22.833713Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "1bfa96ce-08ac-44b1-9ec0-dccb35db7c33"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 156,
+      "timestamp": "2026-11-10T04:53:22.836998Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 157,
+      "timestamp": "2026-11-10T04:53:22.838443Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "192.653",
+        "hard_remaining_seconds": "192.653",
+        "attempt": "1",
+        "input_chars": "10408"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 158,
+      "timestamp": "2026-11-10T04:53:22.840378Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "192.651",
+        "hard_remaining_seconds": "192.651",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15308"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 159,
+      "timestamp": "2026-11-10T04:53:25.426875Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "190.066",
+        "hard_remaining_seconds": "190.066",
+        "provider_call_id": "p53",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15308",
+        "elapsed_seconds": "2.584",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2735"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 160,
+      "timestamp": "2026-11-10T04:53:25.430730Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "190.061",
+        "hard_remaining_seconds": "190.061",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "correction_insufficient",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1820",
+        "elapsed_seconds": "2.591",
+        "finish_reason": "stop",
+        "prompt_tokens": "4112",
+        "completion_tokens": "626",
+        "total_tokens": "4738"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 161,
+      "timestamp": "2026-11-10T04:53:25.433657Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "synthesize",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 162,
+      "timestamp": "2026-11-10T04:53:25.436285Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "190.056",
+        "hard_remaining_seconds": "190.056",
+        "attempt": "2",
+        "input_chars": "10408"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 163,
+      "timestamp": "2026-11-10T04:53:25.439787Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "190.052",
+        "hard_remaining_seconds": "190.052",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15498"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 164,
+      "timestamp": "2026-11-10T04:53:28.705987Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "186.787",
+        "hard_remaining_seconds": "186.787",
+        "provider_call_id": "p54",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "15498",
+        "elapsed_seconds": "3.263",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3090"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 165,
+      "timestamp": "2026-11-10T04:53:28.710946Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t52",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "8",
+        "extract_limit": "10",
+        "remaining_seconds": "186.781",
+        "hard_remaining_seconds": "186.781",
+        "attempt": "2",
+        "outcome": "invalid_task_output",
+        "validation_code": "correction_insufficient",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2167",
+        "elapsed_seconds": "3.274",
+        "finish_reason": "stop",
+        "prompt_tokens": "4144",
+        "completion_tokens": "803",
+        "total_tokens": "4947"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 166,
+      "timestamp": "2026-11-10T04:53:28.713463Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "synthesize",
+        "attempt": "2"
+      }
+    },
+    {
+      "investigation_id": "eee09633-327a-4f3a-a566-ad6be5e99df9",
+      "sequence": 167,
+      "timestamp": "2026-11-10T04:53:28.716747Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 53.333131125000364,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.256
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.788
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.91
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.456
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.137
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.665
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.138
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.282
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.544
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.396
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.393
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.868
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.706
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.501
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.137
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.622
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.241
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.644
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.937
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.922
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.365
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.341
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.134
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.691
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.143
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.754
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.582
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.261
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.2571256250012084,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7906385839996801,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.9171614999977464,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.458586333999847,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1411684159975266,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.6670798329978425,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.15127458300048602,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.2851409160030016,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 1.1102120420000574,
+        "status_code": 200,
+        "outcome": "response_too_large"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.6171290409984067,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.3951936250014114,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8705148340013693,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7092570420027187,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.5042925419984385,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14051049999761744,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.623946292002074,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.24381950000315555,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.6460046249994775,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9394914170006814,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9243723330000648,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.369438917001389,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3441512499994133,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13740579099976458,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.6926101250028296,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.14720395900076255,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.7571517079995829,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5835972079985368,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.2629853340004047,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

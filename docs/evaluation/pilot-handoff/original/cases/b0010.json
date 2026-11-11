@@ -1,0 +1,4623 @@
+{
+  "id": "b0010",
+  "live": true,
+  "investigation": {
+    "id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+    "claim": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared with no screening.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "partial",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "budget_exhausted",
+    "reused": true,
+    "created_at": "2026-11-10T04:47:46.519304Z",
+    "started_at": "2026-11-10T04:47:46.520581Z",
+    "finished_at": "2026-11-10T04:48:33.223011Z",
+    "result": {
+      "outcome": "unable_to_decide",
+      "verdict": null,
+      "unable_to_decide_reason": "insufficient_evidence",
+      "almost_correction": null,
+      "assertion": {
+        "id": "a1",
+        "text": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared with no screening.",
+        "kind": "causal",
+        "consequential": true,
+        "recommended_route": "deep"
+      },
+      "scope_note": "Screening age group: women aged 40 and older; Risk status: average-risk; Outcome: all-cause mortality; Comparator: no screening.",
+      "finding": {
+        "outcome": "unable_to_decide",
+        "verdict": null,
+        "unable_to_decide_reason": "insufficient_evidence",
+        "almost_correction": null,
+        "assertion_id": "a1",
+        "evidence_ids": [
+          "9570661a-5f88-48f1-8185-dfb12d80e839",
+          "a70eeb97-aff5-4494-a42e-0930e1b4b905"
+        ],
+        "qualification_flags": [
+          {
+            "type": "narrow_scope",
+            "dimension": "population",
+            "explanation": "Average-risk women not explicitly analyzed; recommendation focused on reducing health disparities for Black women.",
+            "evidence_ids": [
+              "a70eeb97-aff5-4494-a42e-0930e1b4b905"
+            ]
+          }
+        ],
+        "qualification_check": "assessed",
+        "limitations": [
+          "The retrieved evidence does not meet the evidence requirements.",
+          "Distinct independent origins or an appropriate synthesis were not established."
+        ]
+      },
+      "explanation": [
+        {
+          "text": "The evidence does not support that annual mammography starting at age 40 reduces all-cause mortality in average-risk women. Two sources provide breast cancer mortality reduction estimates and modeling-based recommendations, but neither contains direct evidence on all-cause mortality for average-risk",
+          "evidence_ids": [
+            "9570661a-5f88-48f1-8185-dfb12d80e839",
+            "a70eeb97-aff5-4494-a42e-0930e1b4b905"
+          ]
+        },
+        {
+          "text": "Source 9570661a reports a 40% mortality reduction from annual screening ages 40–84 compared to no screening, but this pertains to breast cancer mortality, not all-cause mortality, and the data do not isolate average-risk women.",
+          "evidence_ids": [
+            "9570661a-5f88-48f1-8185-dfb12d80e839"
+          ]
+        },
+        {
+          "text": "Source a70eeb97 states the 2023 USPSTF B recommendation for women 40–74 was motivated by reducing health disparities for Black women and was based on modeling estimates of breast cancer mortality reduction, not on all-cause mortality evidence.",
+          "evidence_ids": [
+            "a70eeb97-aff5-4494-a42e-0930e1b4b905"
+          ]
+        }
+      ],
+      "limitations": [
+        "Research stopped at a time or call limit; coverage is incomplete.",
+        "Only the first bounded set of source spans was assessed.",
+        "Scope mismatch: evidence pertains to breast‑cancer mortality, not all‑cause mortality as asserted.",
+        "Population scope: study uses CISNET median estimates for average‑risk women but does not report all‑cause death outcomes.",
+        "Jurisdiction scope: data derived from U.S. screening models; no extrapolation to other populations.",
+        "No direct evidence on all-cause mortality",
+        "No explicit comparison of starting at age 40 vs. no screening for all-cause mortality",
+        "No new RCTs identified in 2023 systematic review",
+        "Modeling assumptions not validated against all-cause mortality outcomes",
+        "Scope limited to breast cancer mortality, not all-cause mortality",
+        "Study models breast cancer mortality reduction, not all-cause mortality as asserted",
+        "CISNET does not model screening past age 79, so benefit beyond 79 is extrapolated",
+        "The comparison is against other screening scenarios, not against no screening",
+        "RCT evidence limited to two trials with insufficient power, low sensitivity, and contamination",
+        "Follow-up of at least 10 years may not capture longer-term mortality effects",
+        "Population restricted to asymptomatic women not under treatment",
+        "Source is an advocacy publication, not a peer-reviewed study of all-cause mortality",
+        "No comparative data on all-cause mortality versus no screening in average-risk women",
+        "Claim focuses on breast cancer mortality, not all-cause mortality",
+        "Some search results were not extracted within per-round page limits.",
+        "The retrieved evidence does not meet the evidence requirements.",
+        "Distinct independent origins or an appropriate synthesis were not established."
+      ],
+      "model": "nvidia/Nemotron-3_5-Lightning",
+      "prompt_version": "one-claim-v4.4",
+      "application_version": "research-v4.4",
+      "configuration": {
+        "response_format": "json_schema",
+        "nebius_thinking": "disabled",
+        "max_output_tokens": 4096,
+        "provider_max_retries": 2,
+        "provider_timeout_seconds": 45.0,
+        "max_request_bytes": 262144,
+        "max_response_bytes": 2097152,
+        "max_extracted_chars": 100000,
+        "model_attempt_limit": 16,
+        "search_attempt_limit": 8,
+        "extraction_attempt_limit": 10,
+        "finalization_reserve_seconds": 45.0,
+        "finalization_reserve_model_attempts": 4,
+        "duration_limit_seconds": 240.0,
+        "max_followup_rounds": 2,
+        "quick_initial_page_limit": 2,
+        "deep_initial_page_limit": 4,
+        "followup_page_limit": 2,
+        "refresh_recheck_page_limit": 2
+      },
+      "budget_used": {
+        "model": 14,
+        "search": 6,
+        "extract": 6
+      },
+      "provider_attempts": [
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.0923643329988408,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.9492142080016492,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.2529257500027597,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.422876125001494,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.541919333001715,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.13605404199915938,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.9369232919998467,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.3918952089989034,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.9812734580009419,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.7280834170014714,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 1.4432274169994344,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.1903784589994757,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.5857152919998043,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.12498204200164764,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.3007585409977764,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.760001791000832,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.0611151660014002,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.683264249997592,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 2.0071732079995854,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "search",
+          "units": 1,
+          "elapsed_seconds": 3.396361541999795,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.5886761249967094,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 3.1187805410008878,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "tavily",
+          "operation": "extract",
+          "units": 1,
+          "elapsed_seconds": 0.12806791700131726,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 2.2791883750032866,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 1.6140254169986292,
+          "status_code": 200,
+          "outcome": "success"
+        },
+        {
+          "provider": "nebius",
+          "operation": "model",
+          "units": 1,
+          "elapsed_seconds": 0.5027639590007311,
+          "status_code": 200,
+          "outcome": "success"
+        }
+      ],
+      "token_usage": {
+        "prompt_tokens": 68072,
+        "completion_tokens": 5196,
+        "total_tokens": 73268
+      }
+    },
+    "clarification_questions": null,
+    "error": null,
+    "links": {
+      "self": "/investigations/8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "events": "/investigations/8fb27b5c-6af9-4a7c-833a-f97e44482dd3/events",
+      "evidence": "/investigations/8fb27b5c-6af9-4a7c-833a-f97e44482dd3/evidence",
+      "comparison": "/investigations/8fb27b5c-6af9-4a7c-833a-f97e44482dd3/comparison",
+      "refresh": "/investigations/8fb27b5c-6af9-4a7c-833a-f97e44482dd3/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "url": "https://ascopost.com/news/february-2024/does-annual-breast-cancer-screening-starting-at-age-40-offer-benefit",
+        "canonical_url": "https://ascopost.com/news/february-2024/does-annual-breast-cancer-screening-starting-at-age-40-offer-benefit",
+        "title": "Does Annual Breast Cancer Screening Starting at Age 40 Offer Benefit - The ASCO Post",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:47:55.996592Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "fe82b00a2de14457225d7901b11a29a0316ac52b32f9962f3785ed9db68977b3",
+        "duplicate_group": "fe82b00a2de14457225d7901b11a29a0316ac52b32f9962f3785ed9db68977b3",
+        "limitations": []
+      },
+      {
+        "id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8796062",
+        "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8796062",
+        "title": "Benefits and Risks of Mammography Screening in Women ...",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:48:02.363092Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "ee2b4b1c9fb108efeb553682c966e210177986d0deace9e14a9ab14acc38076e",
+        "duplicate_group": "ee2b4b1c9fb108efeb553682c966e210177986d0deace9e14a9ab14acc38076e",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "url": "https://cdr.lib.unc.edu/downloads/6q183089s",
+        "canonical_url": "https://cdr.lib.unc.edu/downloads/6q183089s",
+        "title": "CP-ACPJ240022 389..393",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:48:05.572189Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "66f8af286d31ae766ba9b78aa90b61d4e7a536709c3450aed70375874946744b",
+        "duplicate_group": "66f8af286d31ae766ba9b78aa90b61d4e7a536709c3450aed70375874946744b",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "url": "https://www.rsna.org/news/2024/february/breast-screening-at-40-saves-lives",
+        "canonical_url": "https://www.rsna.org/news/2024/february/breast-screening-at-40-saves-lives",
+        "title": "Study Validates Annual Screening from Age 40 to 79 | RSNA",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:48:10.524030Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "cda99614f9cdbc2ebcb9f2a1dbad02bcfeb13a4c1bc1ebfb7c221caecca84679",
+        "duplicate_group": "cda99614f9cdbc2ebcb9f2a1dbad02bcfeb13a4c1bc1ebfb7c221caecca84679",
+        "limitations": []
+      },
+      {
+        "id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "url": "http://blogs.uct.ac.za/cancerphd/wp-content/uploads/2017/09/Mammography-and-Breast-cancer-screening.pdf",
+        "canonical_url": "http://blogs.uct.ac.za/cancerphd/wp-content/uploads/2017/09/Mammography-and-Breast-cancer-screening.pdf",
+        "title": "Benefits and harms of breast cancer screening with ...",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:48:25.435096Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a92c224772e1c68217f0a6032fb74e174b8abcf8bc70899ddeba5a6399039284",
+        "duplicate_group": "a92c224772e1c68217f0a6032fb74e174b8abcf8bc70899ddeba5a6399039284",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "url": "https://www.acr.org/Clinical-Resources/Publications-and-Research/ACR-Bulletin/mammography-impact-on-mortality",
+        "canonical_url": "https://www.acr.org/Clinical-Resources/Publications-and-Research/ACR-Bulletin/mammography-impact-on-mortality",
+        "title": "Screening Mammography and the Impact of Breast Imaging in Lowering Mortality Rates",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:48:28.722367Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "b280e516da9d392614410b05465ca34ca0a5a98220e7cf4bb8baf1303ba92a40",
+        "duplicate_group": "b280e516da9d392614410b05465ca34ca0a5a98220e7cf4bb8baf1303ba92a40",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "5e60d19b-3822-43fb-b3dd-d8258ad846f4",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+            "span_ids": [
+              25,
+              32
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "https://pubs.rsna.org/doi/10.1148/radiol.232658",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            25,
+            32
+          ],
+          "provenance_note": "Monticciolo et al CISNET modeling estimates of breast cancer screening outcomes; conclusions summarize annual screening from age 40 as most effective strategy for early diagnosis.",
+          "rationale": "CISNET 2023 modeling data show annual screening ages 40-79 reduces breast cancer mortality rate by 41.7%; study conclusions state annual screening beginning at age 40 is the most effective strategy to diagnose cancer early. However, the evidence addresses breast cancer mortality reduction, not all‑c",
+          "limitations": [
+            "Scope mismatch: evidence pertains to breast‑cancer mortality, not all‑cause mortality as asserted.",
+            "Population scope: study uses CISNET median estimates for average‑risk women but does not report all‑cause death outcomes.",
+            "Jurisdiction scope: data derived from U.S. screening models; no extrapolation to other populations."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "outcome_type",
+              "explanation": "The claim asserts reduction in all-cause mortality; the source provides breast‑cancer‑specific mortality reduction (41.7%). These are different outcome measures and not directly comparable."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              25
+            ],
+            "start": 3022,
+            "end": 3316,
+            "text": "The investigators found that annual screening in women aged 40 to 79 years with either digital mammography or tomosynthesis reduced the mortality rate by 41.7%; whereas biennial screening in women aged 50 to 74 years and 40 to 74 years reduced the mortality rate by 25.4% and 30%, respectively.",
+            "quote_hash": "27b581bc773423d7cab56bc00d5851c8ab061c2c68a3de42dc13da74ae34988f"
+          },
+          {
+            "span_ids": [
+              32
+            ],
+            "start": 4171,
+            "end": 4609,
+            "text": "The investigators hope their findings will add to the body of literature that supports annual breast cancer screening beginning at age of 40 as the most effective strategy to diagnose this cancer type early. \"The biggest takeaway … of our study is that annual screening beginning at [the age of] 40 and continuing to at least age 79 gives the highest mortality reduction, the most cancer deaths averted, and the most years of life gained.",
+            "quote_hash": "e38786d5749385a16dbbde4a246a823250a934f493c7729d0ef1b846860e0049"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "9570661a-5f88-48f1-8185-dfb12d80e839",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+            "span_ids": [
+              75
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Journal of Primary Care & Community Health",
+          "origin": "PMID article PMC8796062",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            75
+          ],
+          "provenance_note": "Explicitly discusses annual screening mammography from ages 40 to 84 years yielding 40% mortality reduction compared to no screening; also gives 12%–29% contribution from ages 40 to 49",
+          "rationale": "Provides specific mortality reduction estimates for annual mammography, but does not directly state that starting annual screening at age 40 reduces all-cause mortality in average-risk women compared with no screening; the data pertains to breast cancer mortality reduction and uses different metric.",
+          "limitations": [
+            "No direct evidence on all-cause mortality",
+            "No explicit comparison of starting at age 40 vs. no screening for all-cause mortality"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              75
+            ],
+            "start": 9593,
+            "end": 10254,
+            "text": "Annual screening mammography from ages 40 to 84 years yields a mortality reduction of 40% compared to no screening.[17](#bibr17-21501327211058322) The specific contribution to mortality reduction from annual screening ages 40 to 49 years is 12% to 29%.[18](#bibr18-21501327211058322)-[20](#bibr20-21501327211058322) The mortality ratio (observed breast cancer death rate divided by the expected death rate) is similar between women aged 40 to 49 at first screening, versus women over 50.[21](#bibr21-21501327211058322) Another common metric is the number needed to screen (NNS), which reports how many women need to be screened to prevent 1 breast cancer death.",
+            "quote_hash": "6af76bce32484a75ca8a535055d5ad562cc27414466eed8a3a303f796e1b7bc6"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "a70eeb97-aff5-4494-a42e-0930e1b4b905",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+            "span_ids": [
+              17,
+              30,
+              40
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The 2023 draft systematic review found no new RCTs and relied on modeling to estimate mortality differences; it did not establish that annual mammography starting at 40 reduces all-cause mortality in average-risk women. The B recommendation was motivated by reducing disparities for Black women, notす",
+          "publisher": null,
+          "origin": "CP-ACPJ240022 389..393",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            17,
+            30,
+            40
+          ],
+          "provenance_note": "Spans 17, 30, 40 describe the 2023 draft recommendation and modeling of benefits/harms; no direct causal evidence of all-cause mortality reduction.",
+          "rationale": "The 2023 USPSTF B recommendation for women 40-74 was based on modeling estimates of breast cancer mortality reduction and disparity reduction, not on evidence that annual screening starting at 40 reduces all-cause mortality. The review found no new RCTs; benefits and harms were estimated via models.",
+          "limitations": [
+            "No new RCTs identified in 2023 systematic review",
+            "Modeling assumptions not validated against all-cause mortality outcomes",
+            "Scope limited to breast cancer mortality, not all-cause mortality"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "outcome",
+              "explanation": "Assertion claims all-cause mortality reduction; source addresses breast cancer mortality and modeling estimates only."
+            },
+            {
+              "type": "narrow_scope",
+              "dimension": "population",
+              "explanation": "Average-risk women not explicitly analyzed; recommendation focused on reducing health disparities for Black women."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              17
+            ],
+            "start": 4718,
+            "end": 4946,
+            "text": "The 2023 draft systematic review again found no new RCTs relevant to the decision of when to start screening (9), yet the 2023 draft recommendation was that all women aged 40 to 74 years receive screening (B recommendation) (1).",
+            "quote_hash": "1bdf770975c208a827ec7ddc2afc726e31dc5492793b283bfe9c51f5fa1ad738"
+          },
+          {
+            "span_ids": [
+              30
+            ],
+            "start": 8058,
+            "end": 8220,
+            "text": "0.87), corresponding to 1 breast cancer death avoided for every 838 women screened over 14 y of follow-up For women in their 40s: pooled RR, 0.85 (95% CrI, 0.73 –",
+            "quote_hash": "8cb7a72336dcc54e7a24c4edeb5c16519bd7dccb5e36ad1a4e9813ee94d68245"
+          },
+          {
+            "span_ids": [
+              40
+            ],
+            "start": 11297,
+            "end": 11361,
+            "text": "Continued on following page heavily on decision analytic models.",
+            "quote_hash": "0894317febfbb6771fd09774525c365702deba77d0973335161e32e9a628f782"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "3cae4eec-5d72-4a65-9bc2-c19e03efa1cc",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+            "span_ids": [
+              3,
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "Annual screening starting at age 40 reduces all-cause mortality in average-risk women compared with no screening. The study reports a 41.7% mortality reduction with annual screening ages 40-79. However, CISNET does not model past age 79, and the study estimates relative reductions in breast cancer,不",
+          "publisher": "RSNA",
+          "origin": "https://www.rsna.org/news/2024/february/breast-screening-at-40-saves-lives",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            3,
+            25,
+            26,
+            27,
+            28,
+            29
+          ],
+          "provenance_note": "RSNA News article summarizing a CISNET modeling study published in Radiology. The study examined breast cancer mortality reduction, not all-cause mortality. Average-risk women population is stated but all-cause mortality is not directly reported.",
+          "rationale": "The study reports a 41.7% mortality reduction for annual screening ages 40-79 and states this is the highest reduction versus other scenarios (biennial 50-74: 25.4%; biennial 40-74: 30%; annual 40-74: not directly given but implied lower). However, the outcome is breast cancer mortality reduction,不",
+          "limitations": [
+            "Study models breast cancer mortality reduction, not all-cause mortality as asserted",
+            "CISNET does not model screening past age 79, so benefit beyond 79 is extrapolated",
+            "The comparison is against other screening scenarios, not against no screening"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "outcome_type",
+              "explanation": "Asserts all-cause mortality reduction; study reports breast cancer mortality reduction only"
+            },
+            {
+              "type": "narrow_scope",
+              "dimension": "age_range",
+              "explanation": "Study covers ages 40-79; no data on mortality impact starting at age 40 versus starting later, or versus no screening baseline"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              3
+            ],
+            "start": 92,
+            "end": 188,
+            "text": "Study supports growing body of literature validating annual screening from age 40 to at least 79",
+            "quote_hash": "294fad2cfb64a0a34a080a43c6d20beaf7e623e956e3dd7d7b5fc26a295f558f"
+          },
+          {
+            "span_ids": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            "start": 2702,
+            "end": 3498,
+            "text": "The review of CISNET estimates showed that annual screening of women 40-79 with either digital mammography or tomosynthesis showed a mortality reduction of 41.7%. Biennial screening of women 50-74 and 40-74 showed mortality reduction of 25.4% and 30%, respectively. Annual screening of women 40-79 years showed the lowest per mammogram false-positive screens (6.5%) and benign biopsies (0.88%) compared to other screening scenarios.\n\n“The biggest takeaway point of our study is that annual screening beginning at 40 and continuing to at least age 79 gives the highest mortality reduction, the most cancer deaths averted, and the most years of life gained,” Dr. Monticciolo said. “There’s a huge benefit to screening annually until at least 79 and even more benefit if women are screened past 79.”",
+            "quote_hash": "a75ec8d0b39adf040d93d7a60a134bdb4931cb53fcd27dc607967455f4f86c0f"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "2a6f41c8-8663-4244-854c-8b4e12ced1d7",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+            "span_ids": [
+              9,
+              13
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            9,
+            13
+          ],
+          "provenance_note": "Span 9 reports RR 0.98 (95% CI 0.93–1.03) for all-cause mortality in women 40–49 offered screening. Span 13 states extending screening to younger age groups cannot be recommended based on current RCT evidence.",
+          "rationale": "The RCT evidence from the Age trial and CNBSS-I shows no significant effect on all-cause mortality (RR 0.98, 95% CI 0.93–1.03) in women aged 40–49 offered screening, directly contradicting the claim that annual mammography starting at 40 reduces all-cause mortality.",
+          "limitations": [
+            "RCT evidence limited to two trials with insufficient power, low sensitivity, and contamination",
+            "Follow-up of at least 10 years may not capture longer-term mortality effects",
+            "Population restricted to asymptomatic women not under treatment"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "mortality_outcome",
+              "explanation": "No significant reduction in all-cause mortality detected; effect on breast cancer mortality alone not assessed in these spans"
+            },
+            {
+              "type": "narrow_scope",
+              "dimension": "population_age",
+              "explanation": "Evidence covers women aged 40–49; assertion specifies starting at age 40 but broader age range evidence available"
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              9
+            ],
+            "start": 1107,
+            "end": 1351,
+            "text": "The results showed no significant effect on breast cancer mortality (Age trial: RR 0.93 (95% CI 0.80–1.09); CNBSS-I: HR 1.10 (95% CI 0.86–1.40)) nor on all-cause mortality (RR 0.98, 95% CI 0.93–1.03) in women aged 40–49 years offered screening.",
+            "quote_hash": "7e9b1073e51d592a89206e1909f8158c801c7b49f052ae44a49089ddb3816a2b"
+          },
+          {
+            "span_ids": [
+              13
+            ],
+            "start": 1710,
+            "end": 1840,
+            "text": "Based on the current evidence from randomised trials, extending mammography screening to younger age groups cannot be recommended.",
+            "quote_hash": "39b2a720b406c1fae852376ae8b326e27a5fae6174212044f4d4d04ec9f92864"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "5fe785e2-a118-4d64-86e2-55207ebdb5a8",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+            "span_ids": [
+              41,
+              42
+            ]
+          },
+          "relation": "supports",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "The ACR bulletin states its annual screening recommendation starting at age 40 saves more lives than USPSTF or ACS recommendations, but does not provide a study of all-cause mortality in average-risk women comparing annual screening starting at 40 versus no screening.",
+          "publisher": "ACR",
+          "origin": "ACR Bulletin article 'Screening Mammography and the Impact of Breast Imaging in Lowering Mortality Rates'",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            41,
+            42
+          ],
+          "provenance_note": "Spans 41-42 contain the claim 'ACR’s recommendation of annual screening beginning at age 40 saves more lives...' compared to USPSTF and ACS; they assert benefit but do not meet the exact causal assertion of all-cause mortality reduction versus no screening in average-risk women.",
+          "rationale": "The ACR source promotes annual screening starting at 40 as life-saving and contrasts its recommendations with other bodies, but the assertion of all-cause mortality reduction versus no screening in average-risk women is not directly supported with study data or causal evidence in these spans.",
+          "limitations": [
+            "Source is an advocacy publication, not a peer-reviewed study of all-cause mortality",
+            "No comparative data on all-cause mortality versus no screening in average-risk women",
+            "Claim focuses on breast cancer mortality, not all-cause mortality"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "outcome",
+              "explanation": "Assertion of all-cause mortality reduction is not substantiated; source discusses breast cancer mortality and comparative screening recommendations, not all-cause mortality versus no screening."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              41,
+              42
+            ],
+            "start": 4471,
+            "end": 4758,
+            "text": "There is no doubt, from a scientific standpoint, that ACR’s recommendation of annual screening beginning at age 40 saves more lives than either the U.S. Preventive Services Task Force (USPSTF) or the American Cancer Society’s [recommendations](https://pubmed.ncbi.nlm.nih.gov/38376405/).",
+            "quote_hash": "51b3d0ad34893b25ac7b5e84e2161400349868c1cac9d4b2053dd257b68cebf6"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:47:46.519304Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:47:46.520581Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:47:46.521604Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:47:46.522483Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:47:46.523251Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "153"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:47:46.524852Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5135"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:47:47.619550Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.903",
+        "hard_remaining_seconds": "118.903",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5135",
+        "elapsed_seconds": "1.092",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1306"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:47:47.623595Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.899",
+        "hard_remaining_seconds": "118.899",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "430",
+        "elapsed_seconds": "1.099",
+        "finish_reason": "stop",
+        "prompt_tokens": "790",
+        "completion_tokens": "112",
+        "total_tokens": "902"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:47:47.626208Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:47:47.628632Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:47:47.630671Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:47:47.632769Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.889",
+        "hard_remaining_seconds": "238.889",
+        "attempt": "1",
+        "input_chars": "511"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:47:47.636056Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.886",
+        "hard_remaining_seconds": "238.886",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3536"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:47:48.588711Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.935",
+        "hard_remaining_seconds": "237.935",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3536",
+        "elapsed_seconds": "0.949",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1560"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:47:48.592317Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.930",
+        "hard_remaining_seconds": "237.930",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "670",
+        "elapsed_seconds": "0.959",
+        "finish_reason": "stop",
+        "prompt_tokens": "606",
+        "completion_tokens": "164",
+        "total_tokens": "770"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:47:48.595408Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Effect of annual mammography screening starting at age 40 on all-cause mortality in average-risk women",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:47:48.598083Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "192.924",
+        "hard_remaining_seconds": "237.924",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "310"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:47:50.854408Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.669",
+        "hard_remaining_seconds": "235.669",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "310",
+        "elapsed_seconds": "2.253",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7876"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:47:50.857639Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Effect of annual mammography screening starting at age 40 on all-cause mortality in average-risk women",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:47:50.860176Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Effect of annual mammography screening starting at age 40 on all-cause mortality in average-risk women: no screening comparator",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:47:50.862490Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.660",
+        "hard_remaining_seconds": "235.660",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "335"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:47:53.288783Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.234",
+        "hard_remaining_seconds": "233.234",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "335",
+        "elapsed_seconds": "2.423",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10163"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:47:53.291676Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Effect of annual mammography screening starting at age 40 on all-cause mortality in average-risk women: no screening comparator",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:47:53.294006Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Mortality outcomes from randomized trials and cohort studies of mammography screening age 40 vs no screening in average-risk women",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:47:53.296200Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "188.226",
+        "hard_remaining_seconds": "233.226",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "338"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:47:55.840974Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.682",
+        "hard_remaining_seconds": "230.682",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "338",
+        "elapsed_seconds": "2.542",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9125"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:47:55.844401Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Mortality outcomes from randomized trials and cohort studies of mammography screening age 40 vs no screening in average-risk women",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:47:55.847663Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "7",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:47:55.850023Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://ascopost.com/news/february-2024/does-annual-breast-cancer-screening-starting-at-age-40-offer-benefit",
+        "slot": "1",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:47:55.852405Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:47:55.854888Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.667",
+        "hard_remaining_seconds": "230.667",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "235"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:47:55.994261Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.529",
+        "hard_remaining_seconds": "230.529",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "235",
+        "elapsed_seconds": "0.136",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7515"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:47:56.002896Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "url": "https://ascopost.com/news/february-2024/does-annual-breast-cancer-screening-starting-at-age-40-offer-benefit",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:47:56.004854Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:47:56.007376Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.515",
+        "hard_remaining_seconds": "230.515",
+        "attempt": "1",
+        "input_chars": "11987"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:47:56.011011Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.511",
+        "hard_remaining_seconds": "230.511",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21689"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:47:58.951030Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.572",
+        "hard_remaining_seconds": "227.572",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21689",
+        "elapsed_seconds": "2.937",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3016"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:47:58.954593Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.568",
+        "hard_remaining_seconds": "227.568",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "scope_flag",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2081",
+        "elapsed_seconds": "2.947",
+        "finish_reason": "stop",
+        "prompt_tokens": "5510",
+        "completion_tokens": "512",
+        "total_tokens": "6022"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:47:58.957227Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:47:58.959309Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.563",
+        "hard_remaining_seconds": "227.563",
+        "attempt": "2",
+        "input_chars": "11987"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:47:58.964660Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "182.558",
+        "hard_remaining_seconds": "227.558",
+        "provider_call_id": "p15",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21879"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:48:01.359474Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.163",
+        "hard_remaining_seconds": "225.163",
+        "provider_call_id": "p15",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "21879",
+        "elapsed_seconds": "2.392",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2757"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:48:01.363157Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.159",
+        "hard_remaining_seconds": "225.159",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1816",
+        "elapsed_seconds": "2.403",
+        "finish_reason": "stop",
+        "prompt_tokens": "5543",
+        "completion_tokens": "468",
+        "total_tokens": "6011"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:48:01.368000Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "5e60d19b-3822-43fb-b3dd-d8258ad846f4",
+        "snapshot_id": "0f02c5ae-587a-4f62-b1ec-a9cd93f81a88",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:48:01.370367Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8796062",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:48:01.372576Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:48:01.375125Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.147",
+        "hard_remaining_seconds": "225.147",
+        "provider_call_id": "p17",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:48:02.360396Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c16",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.163",
+        "hard_remaining_seconds": "224.163",
+        "provider_call_id": "p17",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "175",
+        "elapsed_seconds": "0.981",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "26855"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:48:02.371622Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8796062",
+        "candidate_id": "c16",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:48:02.373826Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:48:02.376303Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.146",
+        "hard_remaining_seconds": "224.146",
+        "attempt": "1",
+        "input_chars": "18023"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:48:02.380127Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "179.142",
+        "hard_remaining_seconds": "224.142",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27972"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:48:04.111111Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.412",
+        "hard_remaining_seconds": "222.412",
+        "provider_call_id": "p19",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "27972",
+        "elapsed_seconds": "1.728",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2150"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:48:04.114383Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t18",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.408",
+        "hard_remaining_seconds": "222.408",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1241",
+        "elapsed_seconds": "1.738",
+        "finish_reason": "stop",
+        "prompt_tokens": "8126",
+        "completion_tokens": "326",
+        "total_tokens": "8452"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:48:04.118184Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "9570661a-5f88-48f1-8185-dfb12d80e839",
+        "snapshot_id": "f6dd8d45-812e-4d72-8dfb-4eb6b11bd365",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:48:04.119965Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c20",
+        "url": "https://cdr.lib.unc.edu/downloads/6q183089s",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:48:04.121696Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:48:04.123794Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c20",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "177.398",
+        "hard_remaining_seconds": "222.398",
+        "provider_call_id": "p21",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:48:05.570319Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c20",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "175.953",
+        "hard_remaining_seconds": "220.953",
+        "provider_call_id": "p21",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "1.443",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "20993"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:48:05.579524Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "url": "https://cdr.lib.unc.edu/downloads/6q183089s",
+        "candidate_id": "c20",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:48:05.581453Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:48:05.583536Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "175.938",
+        "hard_remaining_seconds": "220.938",
+        "attempt": "1",
+        "input_chars": "15507"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:48:05.587346Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "175.935",
+        "hard_remaining_seconds": "220.935",
+        "provider_call_id": "p23",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25000"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:48:07.780760Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.742",
+        "hard_remaining_seconds": "218.742",
+        "provider_call_id": "p23",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25000",
+        "elapsed_seconds": "2.190",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2488"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:48:07.784237Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.738",
+        "hard_remaining_seconds": "218.738",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "citation_spans",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1581",
+        "elapsed_seconds": "2.200",
+        "finish_reason": "stop",
+        "prompt_tokens": "6169",
+        "completion_tokens": "463",
+        "total_tokens": "6632"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:48:07.786405Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:48:07.788310Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.734",
+        "hard_remaining_seconds": "218.734",
+        "attempt": "2",
+        "input_chars": "15507"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:48:07.792612Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "173.730",
+        "hard_remaining_seconds": "218.730",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25201"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:48:10.381565Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.142",
+        "hard_remaining_seconds": "216.142",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "25201",
+        "elapsed_seconds": "2.586",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2989"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:48:10.384381Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t22",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "171.138",
+        "hard_remaining_seconds": "216.138",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2054",
+        "elapsed_seconds": "2.596",
+        "finish_reason": "stop",
+        "prompt_tokens": "6203",
+        "completion_tokens": "514",
+        "total_tokens": "6717"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:48:10.388967Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "a70eeb97-aff5-4494-a42e-0930e1b4b905",
+        "snapshot_id": "4fca4960-0e75-4215-bc7c-783ed745e3b2",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:48:10.390984Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "url": "https://www.rsna.org/news/2024/february/breast-screening-at-40-saves-lives",
+        "slot": "4",
+        "query_ids": "q5,q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:48:10.392875Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:48:10.394823Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "171.127",
+        "hard_remaining_seconds": "216.127",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "201"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:48:10.522447Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c25",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "171.000",
+        "hard_remaining_seconds": "216.000",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "201",
+        "elapsed_seconds": "0.125",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9464"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:48:10.529585Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "url": "https://www.rsna.org/news/2024/february/breast-screening-at-40-saves-lives",
+        "candidate_id": "c25",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:48:10.532067Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:48:10.534580Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.987",
+        "hard_remaining_seconds": "215.987",
+        "attempt": "1",
+        "input_chars": "13791"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:48:10.538619Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.983",
+        "hard_remaining_seconds": "215.983",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23515"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:48:12.842552Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.681",
+        "hard_remaining_seconds": "213.681",
+        "provider_call_id": "p28",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23515",
+        "elapsed_seconds": "2.301",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2619"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:48:12.846354Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.676",
+        "hard_remaining_seconds": "213.676",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "citation_spans",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1696",
+        "elapsed_seconds": "2.311",
+        "finish_reason": "stop",
+        "prompt_tokens": "6461",
+        "completion_tokens": "439",
+        "total_tokens": "6900"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:48:12.848700Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:48:12.850592Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.671",
+        "hard_remaining_seconds": "213.671",
+        "attempt": "2",
+        "input_chars": "13791"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:48:12.854500Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "168.668",
+        "hard_remaining_seconds": "213.668",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23716"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:48:15.618093Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.905",
+        "hard_remaining_seconds": "210.905",
+        "provider_call_id": "p29",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23716",
+        "elapsed_seconds": "2.760",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3190"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:48:15.622067Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t27",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.900",
+        "hard_remaining_seconds": "210.900",
+        "attempt": "2",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2251",
+        "elapsed_seconds": "2.771",
+        "finish_reason": "stop",
+        "prompt_tokens": "6495",
+        "completion_tokens": "617",
+        "total_tokens": "7112"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:48:15.626808Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "3cae4eec-5d72-4a65-9bc2-c19e03efa1cc",
+        "snapshot_id": "e2f43467-887a-445f-9439-7b352e750da4",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:48:15.629327Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:48:15.631503Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.891",
+        "hard_remaining_seconds": "210.891",
+        "attempt": "1",
+        "input_chars": "4126"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:48:15.634815Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "165.888",
+        "hard_remaining_seconds": "210.888",
+        "provider_call_id": "p31",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7295"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:48:16.699617Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.824",
+        "hard_remaining_seconds": "209.824",
+        "provider_call_id": "p31",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "7295",
+        "elapsed_seconds": "1.061",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1739"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:48:16.703374Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t30",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.819",
+        "hard_remaining_seconds": "209.819",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "846",
+        "elapsed_seconds": "1.071",
+        "finish_reason": "stop",
+        "prompt_tokens": "1881",
+        "completion_tokens": "201",
+        "total_tokens": "2082"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:48:16.705968Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:48:16.707883Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:48:16.709816Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared to no screening: systematic review or meta-analysis of RCTs",
+        "purpose": "support",
+        "query_id": "q32"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:48:16.711779Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q32",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.810",
+        "hard_remaining_seconds": "209.810",
+        "provider_call_id": "p33",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "374"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:48:19.398904Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q32",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.125",
+        "hard_remaining_seconds": "207.125",
+        "provider_call_id": "p33",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "374",
+        "elapsed_seconds": "2.683",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10697"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:48:19.403002Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Annual mammography screening starting at age 40 reduces all-cause mortality in average-risk women compared to no screening: systematic review or meta-analysis of RCTs",
+        "query_id": "q32",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:48:19.406063Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "All-cause mortality rates for average-risk women aged 40-74 undergoing annual mammography versus no screening",
+        "purpose": "contradiction",
+        "query_id": "q34"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:48:19.408248Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.114",
+        "hard_remaining_seconds": "207.114",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "317"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:48:21.418559Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q34",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.105",
+        "hard_remaining_seconds": "205.105",
+        "provider_call_id": "p35",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "317",
+        "elapsed_seconds": "2.007",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9592"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:48:21.421605Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "All-cause mortality rates for average-risk women aged 40-74 undergoing annual mammography versus no screening",
+        "query_id": "q34",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:48:21.423917Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "USPSTF 2023 recommendation rationale: evidence that annual mammography starting at age 40 reduces all-cause mortality in average-risk women",
+        "purpose": "context",
+        "query_id": "q36"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:48:21.426239Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "160.096",
+        "hard_remaining_seconds": "205.096",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "347"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:48:24.825724Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q36",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "156.697",
+        "hard_remaining_seconds": "201.697",
+        "provider_call_id": "p37",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "347",
+        "elapsed_seconds": "3.396",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9916"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:48:24.828930Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "USPSTF 2023 recommendation rationale: evidence that annual mammography starting at age 40 reduces all-cause mortality in average-risk women",
+        "query_id": "q36",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:48:24.832132Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "5",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:48:24.835046Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "url": "http://blogs.uct.ac.za/cancerphd/wp-content/uploads/2017/09/Mammography-and-Breast-cancer-screening.pdf",
+        "slot": "1",
+        "query_ids": "q32",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:48:24.838134Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:48:24.841137Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.681",
+        "hard_remaining_seconds": "201.681",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "230"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:48:25.433207Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c38",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.090",
+        "hard_remaining_seconds": "201.090",
+        "provider_call_id": "p39",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "230",
+        "elapsed_seconds": "0.589",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "56470"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:48:25.446666Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "url": "http://blogs.uct.ac.za/cancerphd/wp-content/uploads/2017/09/Mammography-and-Breast-cancer-screening.pdf",
+        "candidate_id": "c38",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 113,
+      "timestamp": "2026-11-10T04:48:25.448921Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 114,
+      "timestamp": "2026-11-10T04:48:25.450711Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.071",
+        "hard_remaining_seconds": "201.071",
+        "attempt": "1",
+        "input_chars": "16451"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 115,
+      "timestamp": "2026-11-10T04:48:25.453509Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "156.068",
+        "hard_remaining_seconds": "201.068",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26078"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 116,
+      "timestamp": "2026-11-10T04:48:28.574849Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "152.948",
+        "hard_remaining_seconds": "197.948",
+        "provider_call_id": "p41",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "26078",
+        "elapsed_seconds": "3.119",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2747"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 117,
+      "timestamp": "2026-11-10T04:48:28.578052Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t40",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "152.944",
+        "hard_remaining_seconds": "197.944",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1806",
+        "elapsed_seconds": "3.127",
+        "finish_reason": "stop",
+        "prompt_tokens": "6294",
+        "completion_tokens": "495",
+        "total_tokens": "6789"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 118,
+      "timestamp": "2026-11-10T04:48:28.582348Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "2a6f41c8-8663-4244-854c-8b4e12ced1d7",
+        "snapshot_id": "e31229e3-4c73-4915-b035-b44c99e40d6f",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 119,
+      "timestamp": "2026-11-10T04:48:28.584298Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "url": "https://www.acr.org/Clinical-Resources/Publications-and-Research/ACR-Bulletin/mammography-impact-on-mortality",
+        "slot": "2",
+        "query_ids": "q34",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 120,
+      "timestamp": "2026-11-10T04:48:28.587092Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 121,
+      "timestamp": "2026-11-10T04:48:28.589103Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.933",
+        "hard_remaining_seconds": "197.933",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "236"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 122,
+      "timestamp": "2026-11-10T04:48:28.720504Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c42",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.803",
+        "hard_remaining_seconds": "197.803",
+        "provider_call_id": "p43",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "236",
+        "elapsed_seconds": "0.128",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "15269"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 123,
+      "timestamp": "2026-11-10T04:48:28.729051Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "url": "https://www.acr.org/Clinical-Resources/Publications-and-Research/ACR-Bulletin/mammography-impact-on-mortality",
+        "candidate_id": "c42",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 124,
+      "timestamp": "2026-11-10T04:48:28.732047Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 125,
+      "timestamp": "2026-11-10T04:48:28.735789Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.786",
+        "hard_remaining_seconds": "197.786",
+        "attempt": "1",
+        "input_chars": "19152"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 126,
+      "timestamp": "2026-11-10T04:48:28.739955Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.782",
+        "hard_remaining_seconds": "197.782",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29267"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 127,
+      "timestamp": "2026-11-10T04:48:31.022811Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.501",
+        "hard_remaining_seconds": "195.501",
+        "provider_call_id": "p45",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29267",
+        "elapsed_seconds": "2.279",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2999"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 128,
+      "timestamp": "2026-11-10T04:48:31.026742Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t44",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.496",
+        "hard_remaining_seconds": "195.496",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2074",
+        "elapsed_seconds": "2.291",
+        "finish_reason": "stop",
+        "prompt_tokens": "8591",
+        "completion_tokens": "483",
+        "total_tokens": "9074"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 129,
+      "timestamp": "2026-11-10T04:48:31.031346Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "5fe785e2-a118-4d64-86e2-55207ebdb5a8",
+        "snapshot_id": "3ba6f443-5597-4fea-a0c1-5a9a5deb65ef",
+        "admissible": "false",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 130,
+      "timestamp": "2026-11-10T04:48:31.034128Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 131,
+      "timestamp": "2026-11-10T04:48:31.036510Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.486",
+        "hard_remaining_seconds": "195.486",
+        "attempt": "1",
+        "input_chars": "5367"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 132,
+      "timestamp": "2026-11-10T04:48:31.040579Z",
+      "type": "provider_call_rejected",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.482",
+        "hard_remaining_seconds": "195.482",
+        "provider_call_id": "p47",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8602",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 133,
+      "timestamp": "2026-11-10T04:48:31.044111Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t46",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.478",
+        "hard_remaining_seconds": "195.478",
+        "attempt": "1",
+        "outcome": "budget_exhausted",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "model_finalization_reserve",
+        "reasoning_tokens": "unknown",
+        "output_chars": "unknown",
+        "elapsed_seconds": "0.007",
+        "finish_reason": "unknown",
+        "prompt_tokens": "unknown",
+        "completion_tokens": "unknown",
+        "total_tokens": "unknown"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 134,
+      "timestamp": "2026-11-10T04:48:31.046728Z",
+      "type": "research_stopped",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "150.475",
+        "hard_remaining_seconds": "195.475",
+        "provider": "nebius",
+        "outcome": "budget_exhausted",
+        "limit_reason": "model_finalization_reserve"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 135,
+      "timestamp": "2026-11-10T04:48:31.050512Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "budget_exhausted",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 136,
+      "timestamp": "2026-11-10T04:48:31.054068Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "budget_exhausted"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 137,
+      "timestamp": "2026-11-10T04:48:31.057593Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "5e60d19b-3822-43fb-b3dd-d8258ad846f4"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 138,
+      "timestamp": "2026-11-10T04:48:31.062493Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "a70eeb97-aff5-4494-a42e-0930e1b4b905"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 139,
+      "timestamp": "2026-11-10T04:48:31.066057Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "3cae4eec-5d72-4a65-9bc2-c19e03efa1cc"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 140,
+      "timestamp": "2026-11-10T04:48:31.069524Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "3cae4eec-5d72-4a65-9bc2-c19e03efa1cc"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 141,
+      "timestamp": "2026-11-10T04:48:31.071453Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "2a6f41c8-8663-4244-854c-8b4e12ced1d7"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 142,
+      "timestamp": "2026-11-10T04:48:31.073210Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "2a6f41c8-8663-4244-854c-8b4e12ced1d7"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 143,
+      "timestamp": "2026-11-10T04:48:31.074993Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "5fe785e2-a118-4d64-86e2-55207ebdb5a8"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 144,
+      "timestamp": "2026-11-10T04:48:31.078417Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 145,
+      "timestamp": "2026-11-10T04:48:31.080190Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.441",
+        "hard_remaining_seconds": "195.441",
+        "attempt": "1",
+        "input_chars": "5779"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 146,
+      "timestamp": "2026-11-10T04:48:31.085321Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.439",
+        "hard_remaining_seconds": "195.439",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10447"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 147,
+      "timestamp": "2026-11-10T04:48:32.702461Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.821",
+        "hard_remaining_seconds": "193.821",
+        "provider_call_id": "p49",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10447",
+        "elapsed_seconds": "1.614",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1949"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 148,
+      "timestamp": "2026-11-10T04:48:32.705785Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t48",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.816",
+        "hard_remaining_seconds": "193.816",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1064",
+        "elapsed_seconds": "1.625",
+        "finish_reason": "stop",
+        "prompt_tokens": "2626",
+        "completion_tokens": "345",
+        "total_tokens": "2971"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 149,
+      "timestamp": "2026-11-10T04:48:32.708406Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "13",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.814",
+        "hard_remaining_seconds": "193.814",
+        "attempt": "1",
+        "input_chars": "6853"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 150,
+      "timestamp": "2026-11-10T04:48:32.711450Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.811",
+        "hard_remaining_seconds": "193.811",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10501"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 151,
+      "timestamp": "2026-11-10T04:48:33.217798Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.305",
+        "hard_remaining_seconds": "193.305",
+        "provider_call_id": "p51",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "10501",
+        "elapsed_seconds": "0.503",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1041"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 152,
+      "timestamp": "2026-11-10T04:48:33.220625Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t50",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "14",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "193.302",
+        "hard_remaining_seconds": "193.302",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "179",
+        "elapsed_seconds": "0.512",
+        "finish_reason": "stop",
+        "prompt_tokens": "2777",
+        "completion_tokens": "57",
+        "total_tokens": "2834"
+      }
+    },
+    {
+      "investigation_id": "8fb27b5c-6af9-4a7c-833a-f97e44482dd3",
+      "sequence": 153,
+      "timestamp": "2026-11-10T04:48:33.223011Z",
+      "type": "investigation_partial",
+      "stage": null,
+      "payload": {
+        "stop_reason": "budget_exhausted"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 46.89078208299907,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.09
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.947
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.249
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.421
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.539
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.133
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.932
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.39
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.968
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.726
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.44
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.189
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.583
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.122
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.299
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.754
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.058
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.679
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.005
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.394
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.541
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.117
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.122
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.277
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.607
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.501
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0923643329988408,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9492142080016492,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.2529257500027597,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.422876125001494,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.541919333001715,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.13605404199915938,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.9369232919998467,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.3918952089989034,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.9812734580009419,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.7280834170014714,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 1.4432274169994344,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.1903784589994757,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5857152919998043,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12498204200164764,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.3007585409977764,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.760001791000832,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0611151660014002,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.683264249997592,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.0071732079995854,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.396361541999795,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.5886761249967094,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.1187805410008878,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12806791700131726,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.2791883750032866,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.6140254169986292,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.5027639590007311,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

@@ -1,0 +1,1022 @@
+[
+  {
+    "id": "b0001",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "no_decision",
+    "domain": "science",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "apollo-11-landing",
+    "elapsed_seconds": 17.165954874999443,
+    "network_attempts": 10,
+    "usage_observed": {
+      "prompt_tokens": 23144,
+      "completion_tokens": 1608
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0002",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "science",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "venus-orbit",
+    "elapsed_seconds": 2.0791175000013027,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1590,
+      "completion_tokens": 189
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0003",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "no_decision",
+    "domain": "science",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "webb-observation",
+    "elapsed_seconds": 19.739992250000796,
+    "network_attempts": 11,
+    "usage_observed": {
+      "prompt_tokens": 20764,
+      "completion_tokens": 1255
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0004",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "science",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "europa-extant-life",
+    "elapsed_seconds": 2.5919639999992796,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1589,
+      "completion_tokens": 325
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0005",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "science",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "younger-dryas-impact",
+    "elapsed_seconds": 2.843904833000124,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1618,
+      "completion_tokens": 306
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0006",
+    "status": "partial",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "no_decision",
+    "domain": "health",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "antibiotics-viruses",
+    "elapsed_seconds": 18.690721041999495,
+    "network_attempts": 11,
+    "usage_observed": {
+      "prompt_tokens": 16816,
+      "completion_tokens": 1970
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0007",
+    "status": "needs_clarification",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "health",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "mmr-autism",
+    "elapsed_seconds": 2.5441440409995266,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1604,
+      "completion_tokens": 313
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0008",
+    "status": "completed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "true",
+    "domain": "health",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "smallpox-agent",
+    "elapsed_seconds": 15.17248683300204,
+    "network_attempts": 11,
+    "usage_observed": {
+      "prompt_tokens": 18701,
+      "completion_tokens": 841
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0009",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "health",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "resveratrol-human-lifespan",
+    "elapsed_seconds": 2.578958166999655,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1591,
+      "completion_tokens": 323
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0010",
+    "status": "partial",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "health",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "mammography-all-cause",
+    "elapsed_seconds": 46.89078208299907,
+    "network_attempts": 26,
+    "usage_observed": {
+      "prompt_tokens": 68072,
+      "completion_tokens": 5196
+    },
+    "usage_records": 14
+  },
+  {
+    "id": "b0011",
+    "status": "completed",
+    "label_status": "proposed",
+    "decision_label_match": true,
+    "decision_correct": true,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "true",
+    "domain": "technology",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "sha256-digest",
+    "elapsed_seconds": 18.639374000002135,
+    "network_attempts": 11,
+    "usage_observed": {
+      "prompt_tokens": 24864,
+      "completion_tokens": 1496
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0012",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "technology",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "python-first-release",
+    "elapsed_seconds": 45.499509915996896,
+    "network_attempts": 26,
+    "usage_observed": {
+      "prompt_tokens": 67688,
+      "completion_tokens": 4108
+    },
+    "usage_records": 12
+  },
+  {
+    "id": "b0013",
+    "status": "completed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "true",
+    "domain": "technology",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "cern-web-public-domain",
+    "elapsed_seconds": 58.551634874998854,
+    "network_attempts": 28,
+    "usage_observed": {
+      "prompt_tokens": 100580,
+      "completion_tokens": 6671
+    },
+    "usage_records": 14
+  },
+  {
+    "id": "b0014",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "technology",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "gpt4-parameter-count",
+    "elapsed_seconds": 36.62845416699929,
+    "network_attempts": 20,
+    "usage_observed": {
+      "prompt_tokens": 25779,
+      "completion_tokens": 1780
+    },
+    "usage_records": 8
+  },
+  {
+    "id": "b0015",
+    "status": "needs_clarification",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "technology",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "copilot-professional-productivity",
+    "elapsed_seconds": 2.336961583001539,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1597,
+      "completion_tokens": 248
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0016",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "no_decision",
+    "domain": "economics",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "cpi-definition",
+    "elapsed_seconds": 14.86100379099662,
+    "network_attempts": 8,
+    "usage_observed": {
+      "prompt_tokens": 10284,
+      "completion_tokens": 862
+    },
+    "usage_records": 4
+  },
+  {
+    "id": "b0017",
+    "status": "needs_clarification",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "economics",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "nominal-gdp-definition",
+    "elapsed_seconds": 2.072978583000804,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1602,
+      "completion_tokens": 231
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0018",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "no_decision",
+    "domain": "economics",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "euro-cash-introduction",
+    "elapsed_seconds": 61.60631279199879,
+    "network_attempts": 30,
+    "usage_observed": {
+      "prompt_tokens": 75349,
+      "completion_tokens": 6449
+    },
+    "usage_records": 15
+  },
+  {
+    "id": "b0019",
+    "status": "needs_clarification",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "economics",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "minimum-wage-2030-counterfactual",
+    "elapsed_seconds": 1.3113365829995018,
+    "network_attempts": 1,
+    "usage_observed": {
+      "prompt_tokens": 793,
+      "completion_tokens": 104
+    },
+    "usage_records": 1
+  },
+  {
+    "id": "b0020",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "economics",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "new-jersey-minimum-wage",
+    "elapsed_seconds": 53.333131125000364,
+    "network_attempts": 28,
+    "usage_observed": {
+      "prompt_tokens": 59140,
+      "completion_tokens": 6686
+    },
+    "usage_records": 14
+  },
+  {
+    "id": "b0021",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "no_decision",
+    "domain": "history",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "berlin-wall-opening",
+    "elapsed_seconds": 40.95668187499905,
+    "network_attempts": 20,
+    "usage_observed": {
+      "prompt_tokens": 45720,
+      "completion_tokens": 3419
+    },
+    "usage_records": 8
+  },
+  {
+    "id": "b0022",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "history",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "magna-carta-monarch",
+    "elapsed_seconds": 2.843716625000525,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1612,
+      "completion_tokens": 319
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0023",
+    "status": "partial",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "no_decision",
+    "domain": "history",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "rosetta-stone-discovery",
+    "elapsed_seconds": 43.30250820799847,
+    "network_attempts": 22,
+    "usage_observed": {
+      "prompt_tokens": 45551,
+      "completion_tokens": 2977
+    },
+    "usage_records": 10
+  },
+  {
+    "id": "b0024",
+    "status": "needs_clarification",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "history",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "ripper-identity",
+    "elapsed_seconds": 1.3126133749974542,
+    "network_attempts": 1,
+    "usage_observed": {
+      "prompt_tokens": 783,
+      "completion_tokens": 96
+    },
+    "usage_records": 1
+  },
+  {
+    "id": "b0025",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "history",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "thera-eruption-date",
+    "elapsed_seconds": 54.86912412500169,
+    "network_attempts": 27,
+    "usage_observed": {
+      "prompt_tokens": 82290,
+      "completion_tokens": 5483
+    },
+    "usage_records": 13
+  },
+  {
+    "id": "b0026",
+    "status": "partial",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "true",
+    "predicted": "no_decision",
+    "domain": "public_policy",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "paris-agreement-adoption",
+    "elapsed_seconds": 18.710792500001844,
+    "network_attempts": 11,
+    "usage_observed": {
+      "prompt_tokens": 15008,
+      "completion_tokens": 1519
+    },
+    "usage_records": 6
+  },
+  {
+    "id": "b0027",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "false",
+    "predicted": "no_decision",
+    "domain": "public_policy",
+    "difficulty": "easy",
+    "split": "development",
+    "family_id": "us-house-term",
+    "elapsed_seconds": 2.0771496669985936,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1597,
+      "completion_tokens": 211
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0028",
+    "status": "partial",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "pending_human_review",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "almost",
+    "predicted": "no_decision",
+    "domain": "public_policy",
+    "difficulty": "medium",
+    "split": "development",
+    "family_id": "montreal-protocol-scope",
+    "elapsed_seconds": 16.187964875000034,
+    "network_attempts": 9,
+    "usage_observed": {
+      "prompt_tokens": 10903,
+      "completion_tokens": 1038
+    },
+    "usage_records": 4
+  },
+  {
+    "id": "b0029",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "insufficient_evidence",
+    "predicted": "no_decision",
+    "domain": "public_policy",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "india-four-day-emissions",
+    "elapsed_seconds": 2.8433797500001674,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1617,
+      "completion_tokens": 418
+    },
+    "usage_records": 2
+  },
+  {
+    "id": "b0030",
+    "status": "failed",
+    "label_status": "proposed",
+    "decision_label_match": false,
+    "decision_correct": false,
+    "almost_review": "not_applicable",
+    "citation_review": "no_result",
+    "flags": {
+      "misleading_comparison": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "narrow_scope": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "expected": "conflicting_evidence",
+    "predicted": "no_decision",
+    "domain": "public_policy",
+    "difficulty": "hard",
+    "split": "development",
+    "family_id": "right-to-carry-crime",
+    "elapsed_seconds": 2.585655165999924,
+    "network_attempts": 2,
+    "usage_observed": {
+      "prompt_tokens": 1607,
+      "completion_tokens": 356
+    },
+    "usage_records": 2
+  }
+]

@@ -1,0 +1,3199 @@
+{
+  "id": "b0021",
+  "live": true,
+  "investigation": {
+    "id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+    "claim": "The Berlin Wall opened to cross-border travel on 9 November 1989.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:53:28.883165Z",
+    "started_at": "2026-11-10T04:53:29.085593Z",
+    "finished_at": "2026-11-10T04:54:09.599406Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Research output failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "events": "/investigations/9c5bd9fc-3091-4570-b439-ff27b5624fb2/events",
+      "evidence": "/investigations/9c5bd9fc-3091-4570-b439-ff27b5624fb2/evidence",
+      "comparison": "/investigations/9c5bd9fc-3091-4570-b439-ff27b5624fb2/comparison",
+      "refresh": "/investigations/9c5bd9fc-3091-4570-b439-ff27b5624fb2/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "url": "https://www.berlin.de/en/history/8482274-8619314-opening-and-fall-of-the-berlin-wall.en.html",
+        "canonical_url": "https://www.berlin.de/en/history/8482274-8619314-opening-and-fall-of-the-berlin-wall.en.html",
+        "title": "Opening and fall of the Berlin Wall – Berlin.de",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:38.861582Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "61febdf995be4afee799a27c65f63d0caf136e5686ad3cec6eda55039380070b",
+        "duplicate_group": "61febdf995be4afee799a27c65f63d0caf136e5686ad3cec6eda55039380070b",
+        "limitations": []
+      },
+      {
+        "id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "url": "https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11?month=11&year=1989&opennid=179499&moc=1",
+        "canonical_url": "https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11?month=11&year=1989&opennid=179499&moc=1",
+        "title": "Chronicle of the Berlin Wall 1989 | Chronicle of the Wall",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:45.912006Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "28b0158298e22308c7471e1d7bfe77c6dc724a1c9f3c80f62ea64f66902abe15",
+        "duplicate_group": "28b0158298e22308c7471e1d7bfe77c6dc724a1c9f3c80f62ea64f66902abe15",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "url": "https://1989.rrchnm.org/items/show/449.html",
+        "canonical_url": "https://1989.rrchnm.org/items/show/449.html",
+        "title": "Guenter Schabowski's Press Conference in the GDR International Press Center | Making the History of 1989",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:53:59.974219Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "ae8c042f0aad1561d313135049f0ca1e5665f13c0a8184ca6968667800b1c096",
+        "duplicate_group": "ae8c042f0aad1561d313135049f0ca1e5665f13c0a8184ca6968667800b1c096",
+        "limitations": []
+      },
+      {
+        "id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+        "canonical_url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+        "title": "Berlin Wall - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:54:04.125462Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "a1e9edaed0410ed33ea19116aadd13c3a84e01fbb499a8bc9f65112e000f5e31",
+        "duplicate_group": "a1e9edaed0410ed33ea19116aadd13c3a84e01fbb499a8bc9f65112e000f5e31",
+        "limitations": [
+          "page_text_truncated",
+          "Only the first bounded set of source spans was assessed."
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "51fb69d7-29e6-4bff-a7f2-3e531f8ea17c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+            "span_ids": [
+              18,
+              21,
+              26,
+              27
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "At the end of a press conference in the early evening of 9 November 1989, Günter Schabowski announced a new travel regulation for GDR citizens. During the press conference, Schabowski announced the new regulation prematurely, stating that private trips abroad could now be applied for without proof, ",
+          "publisher": "Berlin.de",
+          "origin": "Berlin.de: Opening and fall of the Berlin Wall",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            18,
+            21,
+            26,
+            27
+          ],
+          "provenance_note": "Covers the announcement, Schabowski's role, and premature announcement timing relative to the intended schedule.",
+          "rationale": "The source states that at a press conference on the evening of 9 November 1989, Schabowski announced the new travel regulation, which effectively opened the border, and that he prematurely announced it as going into effect immediately.",
+          "limitations": [
+            "Announcement timing and crowd reaction details depend on reporter interpretation.",
+            "Source is a commemorative website; not a contemporaneous official record."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              18
+            ],
+            "start": 1201,
+            "end": 1428,
+            "text": "At the end of a press conference in the early evening of 9 November 1989, shortly before 7:00 p.m., Central Committee member Günter Schabowski made a more or less casual announcement of a new travel regulation for GDR citizens.",
+            "quote_hash": "8a6654b22fe56a549f1cb7a0aa59fecb8b7460e2f2c1b833a5e5f173f9f6de4a"
+          },
+          {
+            "span_ids": [
+              21
+            ],
+            "start": 1597,
+            "end": 1858,
+            "text": "Günter Schabowski, member of the Politburo of the Central Committee of the SED and First Secretary of the SED Berlin district leadership, puts on a serious face at the press conference on 9 November 1989, at which Schabowski announced the opening of the border.",
+            "quote_hash": "b159a5ee2998615cc363a55a2fda8dc21fa9572d902b7bad61eb981d6406f0c9"
+          },
+          {
+            "span_ids": [
+              26,
+              27
+            ],
+            "start": 2508,
+            "end": 2912,
+            "text": "During the press conference, Schabowski ended up announcing the new regulation prematurely. Due to mistakes in communication, he told the surprised journalists that private trips abroad could now be applied for “without proof of eligibility, reasons for travel, or family ties.” Permission would be granted on short notice; as far as he knew, he said, the regulation was to go into effect “immediately.” ",
+            "quote_hash": "8077e00380b53f35eb1a768a6319fca1c3d85d6bdd7623ad509d97faaabeb43a"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "e6413594-32a7-48ea-8651-469451a1b3e6",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+            "span_ids": [
+              28,
+              29,
+              30
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "After ARD news broadcast Schabowski's announcement at 8:00 p.m., East Berliners turned up at border checkpoints. The border guards had no instructions and did not know what to do.",
+          "publisher": "Berlin.de",
+          "origin": "Berlin.de: Opening and fall of the Berlin Wall",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            28,
+            29,
+            30
+          ],
+          "provenance_note": "Describes the media broadcast and the immediate crowds at checkpoints, showing the causal chain from announcement to opening.",
+          "rationale": "The source reports that after the announcement was broadcast, crowds gathered at border points and guards, lacking instructions, opened checkpoints.",
+          "limitations": [
+            "Media report may not capture all official decision-making channels.",
+            "Guard actions described as uncoordinated; no central order documented."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              28,
+              29,
+              30
+            ],
+            "start": 2915,
+            "end": 3450,
+            "text": "After West Germany’s ARD news show had broadcast Schabowski’s announcement as its lead story at 8:00 p.m., under the heading “GDR opens border,” more and more East Berliners started turning up at the checkpoints on the border to West Berlin, ready to exercise their new right to travel. The border guards had been given no instructions and had no idea what to do.\n\n[![Tagesschau: DDR öffnet Grenze](/binaries/asset/image_assets/8625647/ratio_4_3/1705503088/800x600/)](/binaries/asset/image_assets/8625647/ratio_4_3/1705503088/800x600/)",
+            "quote_hash": "3f85e259c353a67e560be66636ca4d7cf0d9fb81408bf531567c0622a9ad4865"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "57c058db-cecf-4daf-92d1-4f890c72bed7",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+            "span_ids": [
+              31,
+              32,
+              33,
+              34
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": "At 9:20 p.m., guards at Bornholmer Strasse let the first people leave. By 11:30 p.m., the barrier was raised. Around 20,000 crossed the Bösebrücke bridge without checking.",
+          "publisher": "Berlin.de",
+          "origin": "Berlin.de: Opening and fall of the Berlin Wall",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            31,
+            32,
+            33,
+            34
+          ],
+          "provenance_note": "Details the first opening at Bornholmer Strasse, the barrier being raised, and the volume of crossings.",
+          "rationale": "The source gives a specific timeline of the wall opening on 9 November 1989, from the first people crossing to widespread opening of checkpoints.",
+          "limitations": [
+            "Exact number of crossings may be approximate.",
+            "Source is a commemorative website; not a contemporaneous official record."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              31,
+              32,
+              33,
+              34
+            ],
+            "start": 3452,
+            "end": 4033,
+            "text": "© dpa\n\nJo Brauner, then ARD chief spokesman, reads out the news that the GDR is opening its borders in the 8 p.m. edition of \"Tagesschau\".\n\nAt 9:20 p.m., in order to relieve some of the pressure created by the crowds, the guards at the Bornholmer Strasse checkpoint let the first few people leave for West Berlin, although the head of the passport control units had their passports stamped invalid, expatriating the passport holders without their knowledge. By 11:30 p.m., however, the crowds had grown so large that he – still without official orders – finally raised the barrier.",
+            "quote_hash": "be4efce244ba7b71616b3f32881659cd50d9c5404ec192063de0456bd2e956fb"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ac95a199-0b53-4c24-ab55-fc378bbeb045",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+            "span_ids": [
+              54
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            54
+          ],
+          "provenance_note": "Source context: early November 1989 GDR travel adjustments",
+          "rationale": "Span 54 describes travel permission from GDR to CSSR without passport/visa, which is an incremental step toward the November 9 opening but does not itself state the wall opening date.",
+          "limitations": [
+            "Span only covers GDR-CSSR border crossing, not full Berlin Wall opening"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              54
+            ],
+            "start": 5980,
+            "end": 6086,
+            "text": "Because of popular pressure, travel from the GDR to the CSSR is permitted again without passport and visa.",
+            "quote_hash": "b0804c77bc222b08c49999faa4d6598331886b1c96719486e06e544da95bb2ad"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "14c407b1-043b-47dc-aa0a-9745e962efca",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+            "span_ids": [
+              51
+            ]
+          },
+          "relation": "context",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            51
+          ],
+          "provenance_note": "Source context: November 1989 timeline section header",
+          "rationale": "Span 51 links to the November 1989 section of the chronicle, which contains the events leading to the wall opening.",
+          "limitations": [
+            "Only a navigation link, not narrative content about the opening itself"
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              51
+            ],
+            "start": 5817,
+            "end": 5948,
+            "text": "* [## November](/en/chronicle/_year1989/_month11/?language=en&month=11&moc=0&year=1989&filter=1&dokument=0&audio=0&video=0&foto=0) ",
+            "quote_hash": "f53212408c93b82eb84bceb96f9046facb5f260e7653dbb4c1694d685ac1a435"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "da7cdf0e-dbd2-4202-93d2-709684763216",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+            "span_ids": [
+              6,
+              9,
+              11,
+              26,
+              38,
+              44
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Guenter Schabowski's Press Conference in the GDR International Press Center",
+          "independence": "established",
+          "provenance_span_ids": [
+            6,
+            9,
+            26,
+            44
+          ],
+          "provenance_note": "Press conference transcript confirms the announcement date and wording.",
+          "rationale": "Span 6 states the press conference was on November 9, 1989. Span 9 records Schabowski's response 'from now' to the question of when the new travel rules take effect. Span 26 confirms the regulation allows citizens to leave through any border crossings. Span 44 quotes the regulation specifying exit '",
+          "limitations": [
+            "Transcript is a retrospective translation and may not capture exact timing nuances of the live event.",
+            "The regulation's implementation details beyond the announced effective time are not fully detailed in this excerpt.",
+            "No independent verification of the precise moment gates were opened beyond the stated immediate effective time."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              6
+            ],
+            "start": 355,
+            "end": 575,
+            "text": "During a press conference on November 9, 1989, a reporter asked him about new travel regulations issued by the government that seemed to indicate the possibility of easier travel into West Berlin through the Berlin Wall.",
+            "quote_hash": "f10de3fa4ef3bdc65fcf99561161de3a11470086206d63a89a25913dafc980ad"
+          },
+          {
+            "span_ids": [
+              9
+            ],
+            "start": 793,
+            "end": 839,
+            "text": "Schabowski shrugged and responded, \"from now.”",
+            "quote_hash": "f594c112ebba3584895adf73500874225d3bedb2fa7a007be230a05489e7d784"
+          },
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 930,
+            "end": 1136,
+            "text": "That evening Reuters reported (incorrectly) that East German citizens could cross into West Germany by any border crossing and West German television news programs reported that the Berlin Wall was opening.",
+            "quote_hash": "4fb39991bdaaeea646b31b350435c98cde99976f58575be7d1f434b29a432bee"
+          },
+          {
+            "span_ids": [
+              26
+            ],
+            "start": 2828,
+            "end": 3020,
+            "text": "Therefore (um), we have decided today (um) to implement a regulation that allows every citizen of the German Democratic Republic (um) to (um) leave the GDR through any of the border crossings.",
+            "quote_hash": "06e45edcb0deee8ad1e0ac40cd89392742dc09672654acbb5562887cc3ce0df9"
+          },
+          {
+            "span_ids": [
+              38
+            ],
+            "start": 3951,
+            "end": 4110,
+            "text": "Schabowski: (Looks through his papers...) That comes into effect, according to my information, immediately, without delay (looking through his papers further).",
+            "quote_hash": "534a72bc942496d5886c669a0049426c392cfd72183113b7ddbc381804374244"
+          },
+          {
+            "span_ids": [
+              44
+            ],
+            "start": 4298,
+            "end": 4511,
+            "text": "Schabowski: (shrugs his shoulders, frowns, looks at his papers) So ... (pause), um hmmm (reads aloud): \"Permanent exit can take place via all border crossings from theGDR to the FRG and West Berlin, respectively.\"",
+            "quote_hash": "0d13886ad9948d5f8764bca4d6d1b60de125c8f9c55a8e2a18aeee35c1fdb490"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "4d983707-91a6-42c9-8661-6be932ddf48c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+            "span_ids": [
+              12,
+              13,
+              14
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Guenter Schabowski's Press Conference in the GDR International Press Center",
+          "independence": "shared",
+          "provenance_span_ids": [
+            12,
+            13,
+            14
+          ],
+          "provenance_note": "Eyewitness accounts describe the crowd surge and gate opening following the announcement.",
+          "rationale": "Span 12 describes the immediate convergence of thousands to hundreds of thousands on the Wall. Span 13 states border guards opened gates without orders. Span 14 confirms crowds tore down the Wall that evening.",
+          "limitations": [
+            "Accounts describe the aftermath and crowd behavior, not the official opening ceremony or formal policy launch.",
+            "No explicit timestamp for when guards decided to open gates beyond 'without orders'.",
+            "Reuters reporting described in span 11 is external to this source's direct account."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              12,
+              13,
+              14
+            ],
+            "start": 1137,
+            "end": 1584,
+            "text": "Within minutes, thousands, then tens of thousands, then hundreds of thousands of Berliners, both East and West, began converging on the Berlin Wall. Without orders for how to handle the surging crowds, the East German border guards simply opened the gates. Crowds poured through in both directions and within minutes began tearing down the wall that had for so long symbolized the division of Europe into a Communist East and a non-Communist West.",
+            "quote_hash": "3f42c937c2e18d1f41b13fd4336c3f883dbd106fc9619c9270857de2ae048de8"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:53:28.883165Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:53:29.085593Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:53:29.092462Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:53:29.095157Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:53:29.097619Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.993",
+        "hard_remaining_seconds": "119.993",
+        "attempt": "1",
+        "input_chars": "93"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:53:29.101929Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.989",
+        "hard_remaining_seconds": "119.989",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5075"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:53:30.117499Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.974",
+        "hard_remaining_seconds": "118.974",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5075",
+        "elapsed_seconds": "1.012",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1190"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:53:30.121019Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.970",
+        "hard_remaining_seconds": "118.970",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "315",
+        "elapsed_seconds": "1.023",
+        "finish_reason": "stop",
+        "prompt_tokens": "784",
+        "completion_tokens": "93",
+        "total_tokens": "877"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:53:30.124099Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:53:30.126622Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "deep",
+        "reason": "Claim meaning requires deeper evidence."
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:53:30.129102Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:53:30.131464Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.960",
+        "hard_remaining_seconds": "238.960",
+        "attempt": "1",
+        "input_chars": "460"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:53:30.133928Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.957",
+        "hard_remaining_seconds": "238.957",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3485"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:53:31.038044Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.054",
+        "hard_remaining_seconds": "238.054",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3485",
+        "elapsed_seconds": "0.902",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1534"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:53:31.041110Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "0",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.050",
+        "hard_remaining_seconds": "238.050",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "644",
+        "elapsed_seconds": "0.910",
+        "finish_reason": "stop",
+        "prompt_tokens": "601",
+        "completion_tokens": "160",
+        "total_tokens": "761"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:53:31.043465Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Berlin Wall opening date 9 November 1989 official announcement press conference",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:53:31.045620Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "193.045",
+        "hard_remaining_seconds": "238.045",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:53:33.801886Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "1",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.290",
+        "hard_remaining_seconds": "235.290",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "287",
+        "elapsed_seconds": "2.754",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7884"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:53:33.804708Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Berlin Wall opening date 9 November 1989 official announcement press conference",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:53:33.807285Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Berlin Wall crossing opened November 1989 East German government travel restrictions lifted",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:53:33.809107Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "190.282",
+        "hard_remaining_seconds": "235.282",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:53:36.188352Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "2",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.904",
+        "hard_remaining_seconds": "232.904",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "299",
+        "elapsed_seconds": "2.376",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6716"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:53:36.191396Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Berlin Wall crossing opened November 1989 East German government travel restrictions lifted",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:53:36.193693Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary source news report Berlin Wall November 1989 opening hours border crossing",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:53:36.195567Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "187.895",
+        "hard_remaining_seconds": "232.895",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "290"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:53:38.712992Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "0",
+        "extract_limit": "10",
+        "remaining_seconds": "185.379",
+        "hard_remaining_seconds": "230.379",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "290",
+        "elapsed_seconds": "2.514",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8770"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:53:38.716380Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary source news report Berlin Wall November 1989 opening hours border crossing",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:53:38.719412Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:53:38.721679Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://www.berlin.de/en/history/8482274-8619314-opening-and-fall-of-the-berlin-wall.en.html",
+        "slot": "1",
+        "query_ids": "q5,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:53:38.724286Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:53:38.726431Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.364",
+        "hard_remaining_seconds": "230.364",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "219"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:53:38.860027Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.233",
+        "hard_remaining_seconds": "230.233",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "219",
+        "elapsed_seconds": "0.130",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8185"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:53:38.866201Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "url": "https://www.berlin.de/en/history/8482274-8619314-opening-and-fall-of-the-berlin-wall.en.html",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:53:38.868665Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:53:38.871183Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.220",
+        "hard_remaining_seconds": "230.220",
+        "attempt": "1",
+        "input_chars": "12990"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:53:38.875528Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "185.216",
+        "hard_remaining_seconds": "230.216",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22830"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:53:43.292695Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.799",
+        "hard_remaining_seconds": "225.799",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "22830",
+        "elapsed_seconds": "4.414",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4560"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:53:43.295892Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "1",
+        "extract_limit": "10",
+        "remaining_seconds": "180.795",
+        "hard_remaining_seconds": "225.795",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3542",
+        "elapsed_seconds": "4.424",
+        "finish_reason": "stop",
+        "prompt_tokens": "6177",
+        "completion_tokens": "973",
+        "total_tokens": "7150"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:53:43.300814Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "51fb69d7-29e6-4bff-a7f2-3e531f8ea17c",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:53:43.302757Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "e6413594-32a7-48ea-8651-469451a1b3e6",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:53:43.304654Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "57c058db-cecf-4daf-92d1-4f890c72bed7",
+        "snapshot_id": "6c20abbc-4bd0-4076-b483-38aad2b847ef",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:53:43.306366Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.instagram.com/reel/DbEmEIHMv4l",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:53:43.308227Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:53:43.310093Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "180.780",
+        "hard_remaining_seconds": "225.780",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "169"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:53:45.634548Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.458",
+        "hard_remaining_seconds": "223.458",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "169",
+        "elapsed_seconds": "2.321",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "211"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:53:45.638465Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.instagram.com/reel/DbEmEIHMv4l",
+        "candidate_id": "c15",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:53:45.640839Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "url": "https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11?month=11&year=1989&opennid=179499&moc=1",
+        "slot": "3",
+        "query_ids": "q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:53:45.642948Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:53:45.645310Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.446",
+        "hard_remaining_seconds": "223.446",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "231"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:53:45.909974Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c17",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.181",
+        "hard_remaining_seconds": "223.181",
+        "provider_call_id": "p18",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "231",
+        "elapsed_seconds": "0.262",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "82033"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:53:45.920663Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "url": "https://www.chronik-der-mauer.de/en/chronicle/_year1989/_month11?month=11&year=1989&opennid=179499&moc=1",
+        "candidate_id": "c17",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:53:45.921816Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:53:45.922909Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.167",
+        "hard_remaining_seconds": "223.167",
+        "attempt": "1",
+        "input_chars": "18986"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:53:45.924907Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "178.165",
+        "hard_remaining_seconds": "223.165",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29144"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:53:48.334345Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "175.758",
+        "hard_remaining_seconds": "220.758",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "29144",
+        "elapsed_seconds": "2.407",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2518"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:53:48.338922Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "175.753",
+        "hard_remaining_seconds": "220.753",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1572",
+        "elapsed_seconds": "2.415",
+        "finish_reason": "stop",
+        "prompt_tokens": "9745",
+        "completion_tokens": "468",
+        "total_tokens": "10213"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:53:48.345866Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ac95a199-0b53-4c24-ab55-fc378bbeb045",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:53:48.348190Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "14c407b1-043b-47dc-aa0a-9745e962efca",
+        "snapshot_id": "d066f8b7-492d-470a-889d-68a8b5a07457",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:53:48.350201Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "url": "https://www.cvce.eu/en/obj/press_conference_held_by_gunter_schabowski_berlin_9_november_1989-en-42823f26-8fd4-4649-922f-6667e07f784b.html",
+        "slot": "4",
+        "query_ids": "q5",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:53:48.352363Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:53:48.354031Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "175.736",
+        "hard_remaining_seconds": "220.736",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "264"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:53:49.870780Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c21",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "174.221",
+        "hard_remaining_seconds": "219.221",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "264",
+        "elapsed_seconds": "1.513",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "309"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:53:49.873759Z",
+      "type": "source_rejected",
+      "stage": "extracting",
+      "payload": {
+        "url": "https://www.cvce.eu/en/obj/press_conference_held_by_gunter_schabowski_berlin_9_november_1989-en-42823f26-8fd4-4649-922f-6667e07f784b.html",
+        "candidate_id": "c21",
+        "reason": "extraction_failed"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:53:49.876465Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:53:49.878780Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "174.212",
+        "hard_remaining_seconds": "219.212",
+        "attempt": "1",
+        "input_chars": "5690"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:53:49.881642Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "174.209",
+        "hard_remaining_seconds": "219.209",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8927"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:53:51.139654Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.952",
+        "hard_remaining_seconds": "217.952",
+        "provider_call_id": "p24",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8927",
+        "elapsed_seconds": "1.255",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1783"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:53:51.143195Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t23",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.948",
+        "hard_remaining_seconds": "217.948",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "890",
+        "elapsed_seconds": "1.264",
+        "finish_reason": "stop",
+        "prompt_tokens": "2385",
+        "completion_tokens": "211",
+        "total_tokens": "2596"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:53:51.145527Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:53:51.147714Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:53:51.150008Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary source transcript or recording of Schabowski's 9 November 1989 press conference announcement about travel regulation",
+        "purpose": "support",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:53:51.152293Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "172.939",
+        "hard_remaining_seconds": "217.939",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "332"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:53:53.512674Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.579",
+        "hard_remaining_seconds": "215.579",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "332",
+        "elapsed_seconds": "2.357",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12932"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:53:53.516083Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Primary source transcript or recording of Schabowski's 9 November 1989 press conference announcement about travel regulation",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:53:53.518287Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "GDR official gazette or gazette notice dated 9 November 1989 or immediate days prior stating the new travel regulation effective date",
+        "purpose": "support",
+        "query_id": "q27"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:53:53.520378Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "170.571",
+        "hard_remaining_seconds": "215.571",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "341"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:53:56.702601Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q27",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.392",
+        "hard_remaining_seconds": "212.392",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "341",
+        "elapsed_seconds": "3.177",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7298"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:53:56.706633Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "GDR official gazette or gazette notice dated 9 November 1989 or immediate days prior stating the new travel regulation effective date",
+        "query_id": "q27",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:53:56.709617Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Alternative origin account of 9 November 1989 border opening (e.g., from a non-GDR source such as Western media contemporaneous report or diplomatic cable)",
+        "purpose": "contradiction",
+        "query_id": "q29"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:53:56.712460Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.381",
+        "hard_remaining_seconds": "212.381",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "363"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:53:59.817472Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q29",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "164.278",
+        "hard_remaining_seconds": "209.278",
+        "provider_call_id": "p30",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "363",
+        "elapsed_seconds": "3.100",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7438"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:53:59.821466Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Alternative origin account of 9 November 1989 border opening (e.g., from a non-GDR source such as Western media contemporaneous report or diplomatic cable)",
+        "query_id": "q29",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:53:59.824570Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "12",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:53:59.827795Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "url": "https://1989.rrchnm.org/items/show/449.html",
+        "slot": "1",
+        "query_ids": "q25",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:53:59.830282Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:53:59.832625Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "164.261",
+        "hard_remaining_seconds": "209.261",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:53:59.972368Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "164.123",
+        "hard_remaining_seconds": "209.123",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "170",
+        "elapsed_seconds": "0.136",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "5568"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:53:59.979771Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "url": "https://1989.rrchnm.org/items/show/449.html",
+        "candidate_id": "c31",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:53:59.981952Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:53:59.984427Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "164.110",
+        "hard_remaining_seconds": "209.110",
+        "attempt": "1",
+        "input_chars": "9505"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:53:59.988787Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "164.106",
+        "hard_remaining_seconds": "209.106",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "19087"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:54:03.845110Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "160.251",
+        "hard_remaining_seconds": "205.251",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "19087",
+        "elapsed_seconds": "3.852",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "3433"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:54:03.848746Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "160.247",
+        "hard_remaining_seconds": "205.247",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "2476",
+        "elapsed_seconds": "3.863",
+        "finish_reason": "stop",
+        "prompt_tokens": "4704",
+        "completion_tokens": "645",
+        "total_tokens": "5349"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:54:03.853410Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "da7cdf0e-dbd2-4202-93d2-709684763216",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:54:03.855565Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "4d983707-91a6-42c9-8661-6be932ddf48c",
+        "snapshot_id": "f9ad1228-4f71-4cc8-8763-72c84bc305aa",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:54:03.857577Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+        "slot": "2",
+        "query_ids": "q29",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:54:03.859376Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:54:03.861225Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "160.234",
+        "hard_remaining_seconds": "205.234",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "168"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:54:04.123059Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c35",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.974",
+        "hard_remaining_seconds": "204.974",
+        "provider_call_id": "p36",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "168",
+        "elapsed_seconds": "0.258",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "343197"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:54:04.140179Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+        "candidate_id": "c35",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:54:04.141818Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:54:04.143858Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.951",
+        "hard_remaining_seconds": "204.951",
+        "attempt": "1",
+        "input_chars": "20184"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:54:04.146596Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "159.948",
+        "hard_remaining_seconds": "204.948",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31963"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:54:06.235904Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.860",
+        "hard_remaining_seconds": "202.860",
+        "provider_call_id": "p38",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "31963",
+        "elapsed_seconds": "2.087",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1895"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:54:06.237428Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.858",
+        "hard_remaining_seconds": "202.858",
+        "attempt": "1",
+        "outcome": "invalid_task_output",
+        "validation_code": "citation_spans",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "985",
+        "elapsed_seconds": "2.093",
+        "finish_reason": "stop",
+        "prompt_tokens": "10645",
+        "completion_tokens": "302",
+        "total_tokens": "10947"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:54:06.238881Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "1"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:54:06.240098Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.855",
+        "hard_remaining_seconds": "202.855",
+        "attempt": "2",
+        "input_chars": "20184"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:54:06.242858Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "157.852",
+        "hard_remaining_seconds": "202.852",
+        "provider_call_id": "p39",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32164"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:54:09.591439Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.506",
+        "hard_remaining_seconds": "199.506",
+        "provider_call_id": "p39",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "32164",
+        "elapsed_seconds": "3.345",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2945"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:54:09.595147Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t37",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "046dd454-cb46-478c-9ae6-66f555612800",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.502",
+        "hard_remaining_seconds": "199.502",
+        "attempt": "2",
+        "outcome": "invalid_task_output",
+        "validation_code": "citation_spans",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1983",
+        "elapsed_seconds": "3.353",
+        "finish_reason": "stop",
+        "prompt_tokens": "10679",
+        "completion_tokens": "567",
+        "total_tokens": "11246"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:54:09.597343Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "assess",
+        "attempt": "2"
+      }
+    },
+    {
+      "investigation_id": "9c5bd9fc-3091-4570-b439-ff27b5624fb2",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:54:09.599406Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 40.95668187499905,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.01
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.9
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.747
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.373
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.508
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.128
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 4.413
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.318
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.23
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.405
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.511
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.253
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.289
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.173
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.09
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.133
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.849
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.158
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.086
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.342
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0124797499993292,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.901527875001193,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.7535476669982017,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3760056250030175,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.5138689999985218,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12953166700026486,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 4.414496624998719,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 2.3210270830022637,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.262309333000303,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.4066727080025885,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 1.5133143339990056,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.25471862500126,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.356661833000544,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.1768743749998976,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 3.1000938749966735,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.1356127920007566,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.851590666003176,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.258488291001413,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.087052874998335,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.344703250000748,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

@@ -2,6 +2,8 @@
 
 An evidence-first research agent that investigates factual claims, shows its work, and returns a verdict linked to inspectable sources.
 
+**Next milestone:** [Direct facts and comparisons](docs/direct-claims-phase-one.md). The [pilot evidence handoff](docs/evaluation/pilot-handoff/README.md) includes all 30 original cases, both saved runs, the historical pipeline, and the analysis behind this plan. Phase-one implementation is a separate follow-up.
+
 **Status: Step 4 deeper research implemented for one scoped claim, with offline validation.** Research-enabled runs interpret a claim, plan support/counterevidence searches, save source passages, check evidence and produce a cited finding. Follow-ups now use bounded evidence summaries and preserve page capacity for later rounds. Saved reads, explicit refresh versions, comparison flags and replayable progress are implemented. Research remains opt-in through `ALETHEIA_RESEARCH_ENABLED=true`; the default API requires no credentials and leaves new work queued. See [Step 4 behavior and acceptance checks](docs/deeper-research.md), [Step 3 setup and live-evaluation gates](docs/research-pipeline.md), [foundation contracts](docs/backend-foundation.md) and [provider connections](docs/provider-adapters.md). The broader architecture below remains a design target where the milestone scope documents mark features deferred.
 
 Built for the [ODSC × Nebius hackathon](https://hackathon.odsc.ai/event), using **Nebius Token Factory for reasoning** and **Tavily for live web search and extraction**. The core demonstration will be a real investigation, its source passages, an insufficient-evidence case, and a saved result. Refreshing an investigation and explaining what changed is the first follow-up after the minimum works.

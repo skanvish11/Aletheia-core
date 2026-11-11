@@ -1,0 +1,4254 @@
+{
+  "id": "b0012",
+  "live": true,
+  "investigation": {
+    "id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+    "claim": "The original version of the Python programming language was first publicly released in 2001.",
+    "context": {},
+    "version": 1,
+    "parent_id": null,
+    "status": "failed",
+    "stage": null,
+    "route": "deep",
+    "stop_reason": "provider_failure",
+    "reused": true,
+    "created_at": "2026-11-10T04:48:52.162729Z",
+    "started_at": "2026-11-10T04:48:52.163791Z",
+    "finished_at": "2026-11-10T04:49:37.415030Z",
+    "result": null,
+    "clarification_questions": null,
+    "error": {
+      "message": "Final explanation failed validation; no factual verdict was published."
+    },
+    "links": {
+      "self": "/investigations/91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "events": "/investigations/91347f2c-0eff-4fb9-841f-2c2214de184a/events",
+      "evidence": "/investigations/91347f2c-0eff-4fb9-841f-2c2214de184a/evidence",
+      "comparison": "/investigations/91347f2c-0eff-4fb9-841f-2c2214de184a/comparison",
+      "refresh": "/investigations/91347f2c-0eff-4fb9-841f-2c2214de184a/refresh"
+    }
+  },
+  "evidence": {
+    "sources": [
+      {
+        "id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "url": "https://en.wikipedia.org/wiki/History_of_Python",
+        "canonical_url": "https://en.wikipedia.org/wiki/History_of_Python",
+        "title": "History of Python - Wikipedia",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:01.334194Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "bdaf48712969f7e82ec3f4d40df8da0129d5dda2a2d8ec89afb909eb9b100cb6",
+        "duplicate_group": "bdaf48712969f7e82ec3f4d40df8da0129d5dda2a2d8ec89afb909eb9b100cb6",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "url": "https://www.judge.com/resources/blogs/a-brief-history-of-the-python-programming-language",
+        "canonical_url": "https://www.judge.com/resources/blogs/a-brief-history-of-the-python-programming-language",
+        "title": "A Brief History of the Python Language | Judge Group blog",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:07.215859Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "514aef8f450b44f5c59b21c378d0296ef3c0c3b088e39f8a0c7e73fb9f187a02",
+        "duplicate_group": "514aef8f450b44f5c59b21c378d0296ef3c0c3b088e39f8a0c7e73fb9f187a02",
+        "limitations": []
+      },
+      {
+        "id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "url": "https://en.wikibooks.org/wiki/Python_Programming/Version_history",
+        "canonical_url": "https://en.wikibooks.org/wiki/Python_Programming/Version_history",
+        "title": "Python Programming/Version history - Wikibooks, open books for an open world",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:16.440055Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "47e8a1fe124ae31f36a0df42918d57d997f5f0c2e42d91671ac43eb27160299b",
+        "duplicate_group": "47e8a1fe124ae31f36a0df42918d57d997f5f0c2e42d91671ac43eb27160299b",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "url": "https://courseunbox.com/blogs/python-history-programming-language",
+        "canonical_url": "https://courseunbox.com/blogs/python-history-programming-language",
+        "title": "History of Python: Who Created It and When (Full Timeline)",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:20.766368Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "eab5f74c16aa3f204bc6cd9ed8410a05d0b71ad022335644e20cde26ca25d540",
+        "duplicate_group": "eab5f74c16aa3f204bc6cd9ed8410a05d0b71ad022335644e20cde26ca25d540",
+        "limitations": [
+          "Only the first bounded set of source spans was assessed."
+        ]
+      },
+      {
+        "id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "url": "https://www.instagram.com/p/DGTIWSzNRin",
+        "canonical_url": "https://www.instagram.com/p/DGTIWSzNRin",
+        "title": "Instagram",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:29.471188Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "05a7d269c15e480040b8b26b9bcdbad8269fd6d2071baaeb4c4e8b53d3ad0f73",
+        "duplicate_group": "05a7d269c15e480040b8b26b9bcdbad8269fd6d2071baaeb4c4e8b53d3ad0f73",
+        "limitations": []
+      },
+      {
+        "id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "url": "https://github.com/python/pythondotorg/issues/1734",
+        "canonical_url": "https://github.com/python/pythondotorg/issues/1734",
+        "title": "Python 0.9.1 source · Issue #1734 · python/pythondotorg · GitHub",
+        "published_date": null,
+        "retrieved_at": "2026-11-10T04:49:32.852910Z",
+        "normalization_version": "whitespace-v1",
+        "splitter_version": "blocks-sentences-v1",
+        "content_hash": "e7da28ad2e6ca7d4e2baf97031610b812e4cbcc373ea2156170834f93b4c88d0",
+        "duplicate_group": "e7da28ad2e6ca7d4e2baf97031610b812e4cbcc373ea2156170834f93b4c88d0",
+        "limitations": []
+      }
+    ],
+    "evidence": [
+      {
+        "id": "b906a7be-3f34-45cd-9d26-525d33e7be5a",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+            "span_ids": [
+              73,
+              75
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The article states Python was first publicly released in February 1991 (version 0.9.1) and reached version 1.0 in January 1994. The assertion of 2001 is contradicted by the article's timeline.",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            73,
+            75
+          ],
+          "provenance_note": "Article identifies first public release as February 1991, version 0.9.1; version 1.0 in 1994. No source in this snapshot explicitly states 2001.",
+          "rationale": "The article's stated first public release dates to 1991, while the claim of 2001 does not match the article's timeline. The claim is not supported by the article's factual content.",
+          "limitations": [
+            "Source is a single Wikipedia article; may not represent all authoritative timelines.",
+            "No explicit mention of a 2001 release found in this snapshot."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Article states first release was February 1991 (0.9.1), not 2001."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              73
+            ],
+            "start": 8842,
+            "end": 9352,
+            "text": "Van Rossum first published the code (for Python version 0.9.1) to alt.sources in February 1991.[[14]](#cite_note-14)[[15]](#cite_note-15) Several features of the language were already present at this stage, among them [classes with inheritance](https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming) \"Inheritance (object-oriented programming)\"), exception handling, functions, and various core [datatypes](https://en.wikipedia.org/wiki/Datatypes \"Datatypes\") such as `list`, `dict`, and `str`.",
+            "quote_hash": "0fce6273f2bb23d25c71cf2b38af70e85960f0afd33f384ecc1fe58efbe0673e"
+          },
+          {
+            "span_ids": [
+              75
+            ],
+            "start": 10004,
+            "end": 10016,
+            "text": "## Version 1",
+            "quote_hash": "ef5c8f13d6f45fcae88696ab294fa69e7fbd0508b7d763cc171517046943bda5"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "66cf26b0-8c4f-4d10-aa6d-6586bede86dd",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+            "span_ids": [
+              64
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "Python 2.0 was released October 16, 2000, which is the closest major release to 2001. The article does not mention a public release in 2001; the timeline shows version 1.0 in 1994 and version 2.0 in 2000.",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            64
+          ],
+          "provenance_note": "Python 2.0 released 2000-10-16; article shows version history: 0.9.1 (1991), 1.0 (1994), 2.0 (2000). No 2001 release documented.",
+          "rationale": "The article's release timeline places the next major version after 1.0 at 2000 (Python 2.0), not 2001. The claim of 2001 is not supported.",
+          "limitations": [
+            "Article focuses on major versions; minor releases between 1.0 and 2.0 are not enumerated.",
+            "No explicit statement about a 2001 release."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Article's next major release after 1.0 is 2000, not 2001."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              64
+            ],
+            "start": 6845,
+            "end": 7641,
+            "text": "Python 2.0 was released on October 16, 2000, with many major new features, such as [list comprehensions](https://en.wikipedia.org/wiki/List_comprehension \"List comprehension\"), [cycle-detecting](https://en.wikipedia.org/wiki/Cycle_detection \"Cycle detection\") [garbage collector](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science) \"Garbage collection (computer science)\"), [reference counting](https://en.wikipedia.org/wiki/Reference_counting \"Reference counting\"), [memory management](https://en.wikipedia.org/wiki/Memory_management \"Memory management\") and support for [Unicode](https://en.wikipedia.org/wiki/Unicode \"Unicode\"), along with a change to the development process itself, with a shift to a more transparent and community-backed process.[[8]](#cite_note-newin-2.0-8)",
+            "quote_hash": "849f2e63e514e198891643149b004aca44ac64884601ea74991f1aaf01d7664e"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "bd9444f1-1e12-4236-a85f-f39801b6463c",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+            "span_ids": [
+              77
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": true,
+          "synthesis_coverage": "The article states Python reached version 1.0 in January 1994. The claim of a 2001 release does not align with the documented version history in this article.",
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            77
+          ],
+          "provenance_note": "Version 1.0 released January 1994 per article; article continues with subsequent versions up to 2.0 in 2000.",
+          "rationale": "Article's version history starts at 0.9.1 (1991), 1.0 (1994), then 2.0 (2000). The 2001 date is not present in the documented timeline.",
+          "limitations": [
+            "Article may omit minor versions between 1.0 and 2.0.",
+            "No explicit mention of 2001."
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Article's version 1.0 date is 1994, not 2001."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              77
+            ],
+            "start": 10114,
+            "end": 10157,
+            "text": "Python reached version 1.0 in January 1994.",
+            "quote_hash": "40133a1814feaa394c3f26e6721bcbd2485234974f86b81e104b9febbdd2d5ec"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ad000950-88c6-4df8-9eb2-6b5a3a9b2e8b",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+            "span_ids": [
+              8,
+              15
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "Judge Group",
+          "origin": "https://www.judge.com/resources/blogs/a-brief-history-of-the-python-programming-language",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            8,
+            15
+          ],
+          "provenance_note": "Establishes 1991 initial release and 2000 version 2.0; does not claim original release in 2001.",
+          "rationale": "Source explicitly states initial release was in 1991 (span 8) and later release version 2.0 in 2000 (span 15). The claim of an original release in 2001 is not supported.",
+          "limitations": [
+            "Source is a blog retrospective, not a primary release announcement.",
+            "No explicit mention of a 2001 release event."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "date",
+              "explanation": "The source identifies 1991 as the initial release year; asserting 2001 as the original release misaligns with this evidence."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              8
+            ],
+            "start": 690,
+            "end": 753,
+            "text": "Guido van Rossum formally released the Python language in 1991.",
+            "quote_hash": "1bed2190257fed185cf44d31e4beee43316c6cdff4bb0ece344ca9f437ecea78"
+          },
+          {
+            "span_ids": [
+              15
+            ],
+            "start": 1538,
+            "end": 1614,
+            "text": "Version 2.0 was released in the year 2000 by the Python Software Foundation.",
+            "quote_hash": "e481da9f7d8a3af4a16061e6c6ac0b1298e6de89524df08aa9c9a060e053f046"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "1dcc5e05-e5f8-4415-a725-dec91a9028d1",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+            "span_ids": [
+              72,
+              83
+            ]
+          },
+          "relation": "supports",
+          "scope_match": true,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": "Wikibooks",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            72,
+            83
+          ],
+          "provenance_note": "Two span citations from the Wikibooks version history page.",
+          "rationale": "The page lists Python 1.6.1 released 25 Feb 2001 (span 72) and Python 2.1 released 17 Apr 2001 (span 83), confirming early 2001 releases. While the page does not explicitly label a single 'original version' release in 2001, the presence of multiple 2001 releases and the lack of an earlier public 199",
+          "limitations": [
+            "The source is a user-edited Wikibooks page, not a canonical primary record.",
+            "Scope of 'original version' is ambiguous; the page lists multiple 2001 releases without identifying a single first public release."
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "definition",
+              "explanation": "The assertion claims 'original version' was released in 2001, but the source shows multiple 2001 releases and no explicit 'original version' designation."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              72
+            ],
+            "start": 4760,
+            "end": 4788,
+            "text": "* Python 1.6.1 - 25 Feb 2001",
+            "quote_hash": "2ade1c2ed2d7c99954a45c7682c6ef35df90f0b05e844cd592c55702e9ea51f5"
+          },
+          {
+            "span_ids": [
+              83
+            ],
+            "start": 5283,
+            "end": 5375,
+            "text": "* Python 2.1 - 17 Apr 2001 - ... - [What's new](https://docs.python.org/2/whatsnew/2.1.html)",
+            "quote_hash": "4da9f38fb0b6571a2c72769e6197fd6fd38694c4efd7965ede48783cab005d75"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "ee7c0fbf-7711-42b2-be58-022fc9eb2cb3",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+            "span_ids": [
+              6,
+              11,
+              47
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": true,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "courseunbox.com",
+          "origin": "Course Unbox: History of Python",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            6,
+            11,
+            47
+          ],
+          "provenance_note": "Source states first public release was 20 February 1991 (Python 0.9.0), not 2001. Truncated source cannot establish 2001 claim.",
+          "rationale": "The source explicitly states the first public version (Python 0.9.0) was released on 20 February 1991, contradicting the claim of a 2001 release. Multiple spans (6, 11, 47) confirm this date. The assertion's year (2001) is materially mismatched with the source's date (1991).",
+          "limitations": [
+            "Source is truncated and cannot confirm later release dates beyond 1991",
+            "Independence from primary Python history sources not established"
+          ],
+          "flags": [
+            {
+              "type": "narrow_scope",
+              "dimension": "date",
+              "explanation": "Assertion claims 2001 release; source confirms 1991 release. The 10-year gap is material to the claim."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              6
+            ],
+            "start": 551,
+            "end": 683,
+            "text": "He began developing it in December 1989 at CWI in the Netherlands and released the first version, Python 0.9.0, on 20 February 1991.",
+            "quote_hash": "f8a666a5326547da92195e68d1f1c71c58124819a66c40c041396ad06d48eecf"
+          },
+          {
+            "span_ids": [
+              11
+            ],
+            "start": 927,
+            "end": 1012,
+            "text": "**First released:** 20 February 1991 (Python 0.9.0). Development began December 1989.",
+            "quote_hash": "352b802f840d17c5f1716b52082d90103fd1e43919d42e2c970edc746f886492"
+          },
+          {
+            "span_ids": [
+              47
+            ],
+            "start": 5004,
+            "end": 5092,
+            "text": "**20 February 1991:** The first public version, Python 0.9.0, was shared with the world.",
+            "quote_hash": "168cb7477f243d3006cefe2affa587800fedd8f44b83a2edba38025af56b6b8f"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "393b5337-7d11-4852-9852-8038afd59c8d",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+            "span_ids": [
+              18
+            ]
+          },
+          "relation": "contradicts",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            18
+          ],
+          "provenance_note": "Instagram post from plotly account states Guido van Rossum's first public release was Feb. 20, 1991; does not mention a 2001 release.",
+          "rationale": "Source explicitly states first public release was February 20, 1991, directly contradicting the 2001 claim.",
+          "limitations": [
+            "Source is a social media post, not a peer‑reviewed or authoritative technical record."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              18
+            ],
+            "start": 2997,
+            "end": 3139,
+            "text": "• Guido van Rossum’s first public release of Python was on Feb. 20, 1991, naming it in honor of the BBC's show \"Monty Python's Flying Circus\" ",
+            "quote_hash": "39c1860214376c5b4113cc23f2cabb4a4ce2f035da6cbf423f5c83d357e1e496"
+          }
+        ],
+        "admissible": false,
+        "rejection_reason": "scope_mismatch_or_irrelevant"
+      },
+      {
+        "id": "0e423d83-40d8-4f8a-adca-10bf1e688e00",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+            "span_ids": [
+              19
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": null,
+          "origin": null,
+          "independence": "unknown",
+          "provenance_span_ids": [
+            19
+          ],
+          "provenance_note": "Instagram post lists multiple popularity metrics for Python in 2024 but provides no information about the original release date.",
+          "rationale": "Span provides unrelated context about Python's current popularity; does not address the original release date claim.",
+          "limitations": [
+            "Social media content; no verifiable provenance for historical claims."
+          ],
+          "flags": []
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              19
+            ],
+            "start": 3140,
+            "end": 3516,
+            "text": "• In 2024, Python passed [#Javascript](/explore/tags/javascript/) as the most popular language on GitHub [Octoverse 2024], is the most popular language per the TIOBE Index and the PYPL Index, the most popular language by those learning to code [StackOverflow Developer Survey 2024], and is the [#1](/explore/tags/1/) language for data analysis, data science, AI and research. ",
+            "quote_hash": "2243647f43c1bc4346bb22656a4ce2081a77d2254e7c85654803970a6b0a02b5"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      },
+      {
+        "id": "7d633177-98fc-44a3-912d-bc0a666c6e85",
+        "assertion_id": "a1",
+        "assessment": {
+          "citation": {
+            "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+            "span_ids": [
+              27,
+              87
+            ]
+          },
+          "relation": "context",
+          "scope_match": false,
+          "authoritative_record": false,
+          "credible_synthesis": false,
+          "synthesis_coverage": null,
+          "publisher": "GitHub",
+          "origin": "python/pythondotorg/issues/1734",
+          "independence": "unknown",
+          "provenance_span_ids": [
+            27,
+            87
+          ],
+          "provenance_note": "The issue provides only discussion/comments about source recovery, not a date for the original public release.",
+          "rationale": "The issue body comments discuss recovering archived Python 0.9.1 sources and reference a legacy download page. Span 27 gives the comment date (Feb 17, 2021). Span 87 is a script for reproducible tarball creation. Neither establishes a 2001 release date for the original version.",
+          "limitations": [
+            "No primary release date stated in the issue content",
+            "Content focuses on source recovery, not original release chronology"
+          ],
+          "flags": [
+            {
+              "type": "misleading_comparison",
+              "dimension": "date",
+              "explanation": "The issue is from 2021 and discusses locating historical releases; it does not state the original public release year."
+            }
+          ]
+        },
+        "excerpts": [
+          {
+            "span_ids": [
+              27
+            ],
+            "start": 1142,
+            "end": 1234,
+            "text": "opened [on Feb 17, 2021](https://github.com/python/pythondotorg/issues/1734#issue-810417203)",
+            "quote_hash": "44a677fa2e807e1d5eb8643c236355c617cf449a9a61580834f8e9211ecb3828"
+          },
+          {
+            "span_ids": [
+              87
+            ],
+            "start": 6292,
+            "end": 10540,
+            "text": " #!/bin/sh # # This script creates fully reproducible, bytes-perfect tarball of the # CPython 0.9.1 release (initial public release) as posted by Guido # van Rossum to the Usenet \"alt.sources\" newsgroup # (https://en.wikipedia.org/wiki/Usenet_newsgroup). This is not first # attempt to recover the original 0.9.1 sources, but many previous # attempts started from the Dejanews Usenet archives, later acquired # by Google, which have whitespace issues (tabs converted to spaces). # This script uses alternative archive source at ftp.fi.netbsd.org, # which doesn't have whitespace issues. # # This script strives to produce fully reproducible archive, and for # this explicitly sets GMT date of all files included in the archive. # So, for as long as TAR and GZIP formats are themselves stable across # systems, this script should produce bytes-exact archive files on any # system. # set -e # Index: http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/index.gz cat >urls < http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910220.11.gz#Python 0.9.1 part 03/21 <2965@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.31.gz#Python 0.9.1 part 04/21 <2966@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.32.gz#Python 0.9.1 part 05/21 <2967@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.33.gz#Python 0.9.1 part 06/21 <2968@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.34.gz#Python 0.9.1 part 07/21 <2969@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.35.gz#Python 0.9.1 part 08/21 <2970@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.36.gz#Python 0.9.1 part 09/21 <2971@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.37.gz#Python 0.9.1 part 10/21 <2972@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.38.gz#Python 0.9.1 part 11/21 <2973@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.39.gz#Python 0.9.1 part 12/21 <2974@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.40.gz#Python 0.9.1 part 13/21 <2975@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.41.gz#Python 0.9.1 part 14/21 <2976@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.42.gz#Python 0.9.1 part 15/21 <2977@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.43.gz#Python 0.9.1 part 16/21 <2978@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.44.gz#Python 0.9.1 part 17/21 <2979@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.45.gz#Python 0.9.1 part 19/21 <2981@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.46.gz#Python 0.9.1 part 21/21 <2983@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.47.gz#Python 0.9.1 part 02/21 <2985@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.48.gz#Python 0.9.1 part 18/21 <2980@charon.cwi.nl> http://ftp.fi.netbsd.org/pub/misc/archive/alt.sources/volume91/Feb/910224.49.gz#Python 0.9.1 part 20/21 <2982@charon.cwi.nl> EOF wget -i urls gzip -d -f *.gz rm -rf python-0.9.1 mkdir -p python-0.9.1 unshar -d python-0.9.1 [0-9]*.[0-9][0-9] find python-0.9.1 -type f | xargs md5sum >MD5SUMS # Set the modtime based on the date of the \"part 01/21\" message. find python-0.9.1/ | xargs touch -d \"19 Feb 1991 17:35:26 GMT\" # Set the date of the script itself (and MD5SUMS), to make 100% reproducible # tarball. Use +30 years date. In reality, script was written a couple of days # earlier. touch -d \"19 Feb 2021 17:35:26 GMT\" python-0.9.1-create-tarball.sh MD5SUMS # Create tarball, include this script itself as a documentation/reference. tar cfz python-0.9.1.tar.gz python-0.9.1-create-tarball.sh MD5SUMS python-0.9.1/ touch -d \"19 Feb 1991 17:35:26 GMT\" python-0.9.1.tar.gz md5sum python-0.9.1.tar.gz ",
+            "quote_hash": "ae34e8f1fdce4d4564caf96a17f973c81e8eecea0040d918bbb7bb25143885cf"
+          }
+        ],
+        "admissible": true,
+        "rejection_reason": null
+      }
+    ]
+  },
+  "comparison": {
+    "comparison_status": "not_applicable",
+    "baseline_id": null,
+    "scope_changed": false,
+    "sources": [],
+    "verdict_changed": false,
+    "decision_changed": false,
+    "same_relevant_evidence": false,
+    "consistency_status": "not_comparable",
+    "recheck_status": "disabled",
+    "baseline_fingerprint": null,
+    "current_fingerprint": null,
+    "algorithm": "relevant-evidence-v2",
+    "configuration_changed": false,
+    "limitations": []
+  },
+  "events": [
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 1,
+      "timestamp": "2026-11-10T04:48:52.162729Z",
+      "type": "investigation_queued",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 2,
+      "timestamp": "2026-11-10T04:48:52.163791Z",
+      "type": "investigation_started",
+      "stage": null,
+      "payload": {}
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 3,
+      "timestamp": "2026-11-10T04:48:52.165153Z",
+      "type": "run_configured",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "75.000",
+        "hard_remaining_seconds": "120.000",
+        "model": "nvidia/Nemotron-3_5-Lightning",
+        "prompt_version": "one-claim-v4.4",
+        "application_version": "research-v4.4",
+        "response_format": "json_schema",
+        "thinking": "disabled",
+        "max_output_tokens": "4096",
+        "provider_timeout_seconds": "45.0",
+        "provider_max_retries": "2",
+        "max_request_bytes": "262144",
+        "max_response_bytes": "2097152",
+        "max_extracted_chars": "100000",
+        "reserve_seconds": "45.0",
+        "reserve_model_attempts": "4"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 4,
+      "timestamp": "2026-11-10T04:48:52.165849Z",
+      "type": "stage_started",
+      "stage": "interpreting",
+      "payload": {
+        "stage": "interpreting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 5,
+      "timestamp": "2026-11-10T04:48:52.166614Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "0",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.998",
+        "hard_remaining_seconds": "119.998",
+        "attempt": "1",
+        "input_chars": "120"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 6,
+      "timestamp": "2026-11-10T04:48:52.167738Z",
+      "type": "provider_attempt_started",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "74.997",
+        "hard_remaining_seconds": "119.997",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5102"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 7,
+      "timestamp": "2026-11-10T04:48:53.328836Z",
+      "type": "provider_attempt_finished",
+      "stage": "interpreting",
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.838",
+        "hard_remaining_seconds": "118.838",
+        "provider_call_id": "p2",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "5102",
+        "elapsed_seconds": "1.159",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1260"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 8,
+      "timestamp": "2026-11-10T04:48:53.332697Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t1",
+        "task": "interpret",
+        "schema": "ClaimPlan",
+        "stage": "interpreting",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.833",
+        "hard_remaining_seconds": "118.833",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "384",
+        "elapsed_seconds": "1.165",
+        "finish_reason": "stop",
+        "prompt_tokens": "785",
+        "completion_tokens": "104",
+        "total_tokens": "889"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 9,
+      "timestamp": "2026-11-10T04:48:53.335768Z",
+      "type": "claim_interpreted",
+      "stage": null,
+      "payload": {
+        "assertion_id": "a1"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 10,
+      "timestamp": "2026-11-10T04:48:53.337848Z",
+      "type": "route_selected",
+      "stage": null,
+      "payload": {
+        "route": "quick",
+        "reason": "A precise direct record may settle the claim."
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 11,
+      "timestamp": "2026-11-10T04:48:53.340203Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 12,
+      "timestamp": "2026-11-10T04:48:53.342316Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "1",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.823",
+        "hard_remaining_seconds": "118.823",
+        "attempt": "1",
+        "input_chars": "487"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 13,
+      "timestamp": "2026-11-10T04:48:53.344882Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "73.821",
+        "hard_remaining_seconds": "118.821",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3512"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 14,
+      "timestamp": "2026-11-10T04:48:54.213171Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.954",
+        "hard_remaining_seconds": "117.954",
+        "provider_call_id": "p4",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "3512",
+        "elapsed_seconds": "0.864",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1336"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 15,
+      "timestamp": "2026-11-10T04:48:54.217197Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t3",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "0",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.949",
+        "hard_remaining_seconds": "117.949",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "446",
+        "elapsed_seconds": "0.874",
+        "finish_reason": "stop",
+        "prompt_tokens": "600",
+        "completion_tokens": "126",
+        "total_tokens": "726"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 16,
+      "timestamp": "2026-11-10T04:48:54.219540Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python programming language first public release date year 2001",
+        "purpose": "support",
+        "query_id": "q5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 17,
+      "timestamp": "2026-11-10T04:48:54.221400Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "72.944",
+        "hard_remaining_seconds": "117.944",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 18,
+      "timestamp": "2026-11-10T04:48:56.569358Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q5",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "1",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.597",
+        "hard_remaining_seconds": "115.597",
+        "provider_call_id": "p6",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "271",
+        "elapsed_seconds": "2.345",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "8728"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 19,
+      "timestamp": "2026-11-10T04:48:56.572716Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python programming language first public release date year 2001",
+        "query_id": "q5",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 20,
+      "timestamp": "2026-11-10T04:48:56.575356Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python initial release version and year",
+        "purpose": "contradiction",
+        "query_id": "q7"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 21,
+      "timestamp": "2026-11-10T04:48:56.577307Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "70.588",
+        "hard_remaining_seconds": "115.588",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "247"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 22,
+      "timestamp": "2026-11-10T04:48:58.608795Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q7",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "2",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "68.558",
+        "hard_remaining_seconds": "113.558",
+        "provider_call_id": "p8",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "247",
+        "elapsed_seconds": "2.028",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9296"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 23,
+      "timestamp": "2026-11-10T04:48:58.612016Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python initial release version and year",
+        "query_id": "q7",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 24,
+      "timestamp": "2026-11-10T04:48:58.615000Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Guido van Rossum Python language creation date history",
+        "purpose": "context",
+        "query_id": "q9"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 25,
+      "timestamp": "2026-11-10T04:48:58.617085Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "68.548",
+        "hard_remaining_seconds": "113.548",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 26,
+      "timestamp": "2026-11-10T04:49:01.146246Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q9",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "0",
+        "extract_limit": "4",
+        "remaining_seconds": "66.020",
+        "hard_remaining_seconds": "111.020",
+        "provider_call_id": "p10",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "262",
+        "elapsed_seconds": "2.526",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "5449"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 27,
+      "timestamp": "2026-11-10T04:49:01.149346Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Guido van Rossum Python language creation date history",
+        "query_id": "q9",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 28,
+      "timestamp": "2026-11-10T04:49:01.152382Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 29,
+      "timestamp": "2026-11-10T04:49:01.154769Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "url": "https://en.wikipedia.org/wiki/History_of_Python",
+        "slot": "1",
+        "query_ids": "q5,q7,q9",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 30,
+      "timestamp": "2026-11-10T04:49:01.156909Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 31,
+      "timestamp": "2026-11-10T04:49:01.159361Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "66.006",
+        "hard_remaining_seconds": "111.006",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 32,
+      "timestamp": "2026-11-10T04:49:01.332198Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c11",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.834",
+        "hard_remaining_seconds": "110.834",
+        "provider_call_id": "p12",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "174",
+        "elapsed_seconds": "0.170",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "76844"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 33,
+      "timestamp": "2026-11-10T04:49:01.346946Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "url": "https://en.wikipedia.org/wiki/History_of_Python",
+        "candidate_id": "c11",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 34,
+      "timestamp": "2026-11-10T04:49:01.349456Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 35,
+      "timestamp": "2026-11-10T04:49:01.352993Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "2",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.814",
+        "hard_remaining_seconds": "110.814",
+        "attempt": "1",
+        "input_chars": "18392"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 36,
+      "timestamp": "2026-11-10T04:49:01.356039Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "65.809",
+        "hard_remaining_seconds": "110.809",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28774"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 37,
+      "timestamp": "2026-11-10T04:49:06.953812Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.216",
+        "hard_remaining_seconds": "105.216",
+        "provider_call_id": "p14",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28774",
+        "elapsed_seconds": "5.592",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4573"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 38,
+      "timestamp": "2026-11-10T04:49:06.957637Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t13",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "1",
+        "extract_limit": "4",
+        "remaining_seconds": "60.209",
+        "hard_remaining_seconds": "105.209",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "3535",
+        "elapsed_seconds": "5.605",
+        "finish_reason": "stop",
+        "prompt_tokens": "8111",
+        "completion_tokens": "1201",
+        "total_tokens": "9312"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 39,
+      "timestamp": "2026-11-10T04:49:06.967560Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "b906a7be-3f34-45cd-9d26-525d33e7be5a",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 40,
+      "timestamp": "2026-11-10T04:49:06.970127Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "66cf26b0-8c4f-4d10-aa6d-6586bede86dd",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 41,
+      "timestamp": "2026-11-10T04:49:06.973235Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "bd9444f1-1e12-4236-a85f-f39801b6463c",
+        "snapshot_id": "8f999661-a5a2-4ca3-952a-5fc0dd960219",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 42,
+      "timestamp": "2026-11-10T04:49:06.977978Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "url": "https://www.judge.com/resources/blogs/a-brief-history-of-the-python-programming-language",
+        "slot": "2",
+        "query_ids": "q7",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 43,
+      "timestamp": "2026-11-10T04:49:06.980556Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 44,
+      "timestamp": "2026-11-10T04:49:06.984032Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "60.182",
+        "hard_remaining_seconds": "105.182",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "215"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 45,
+      "timestamp": "2026-11-10T04:49:07.214134Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c15",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.952",
+        "hard_remaining_seconds": "104.952",
+        "provider_call_id": "p16",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "215",
+        "elapsed_seconds": "0.227",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "4741"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 46,
+      "timestamp": "2026-11-10T04:49:07.220378Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "url": "https://www.judge.com/resources/blogs/a-brief-history-of-the-python-programming-language",
+        "candidate_id": "c15",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 47,
+      "timestamp": "2026-11-10T04:49:07.223165Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 48,
+      "timestamp": "2026-11-10T04:49:07.225257Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "3",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.940",
+        "hard_remaining_seconds": "104.940",
+        "attempt": "1",
+        "input_chars": "7516"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 49,
+      "timestamp": "2026-11-10T04:49:07.228345Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "59.937",
+        "hard_remaining_seconds": "104.937",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16873"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 50,
+      "timestamp": "2026-11-10T04:49:08.915160Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.250",
+        "hard_remaining_seconds": "103.250",
+        "provider_call_id": "p18",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "16873",
+        "elapsed_seconds": "1.685",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2127"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 51,
+      "timestamp": "2026-11-10T04:49:08.916589Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t17",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "8",
+        "model_available_limit": "4",
+        "search_used": "3",
+        "search_limit": "4",
+        "extract_used": "2",
+        "extract_limit": "4",
+        "remaining_seconds": "58.248",
+        "hard_remaining_seconds": "103.248",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1208",
+        "elapsed_seconds": "1.692",
+        "finish_reason": "stop",
+        "prompt_tokens": "4094",
+        "completion_tokens": "370",
+        "total_tokens": "4464"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 52,
+      "timestamp": "2026-11-10T04:49:08.919048Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ad000950-88c6-4df8-9eb2-6b5a3a9b2e8b",
+        "snapshot_id": "8f2e98a5-8eb6-41d0-b1e9-5bea60ee78fe",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 53,
+      "timestamp": "2026-11-10T04:49:08.920259Z",
+      "type": "route_escalated",
+      "stage": null,
+      "payload": {
+        "reason": "scope_mismatch"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 54,
+      "timestamp": "2026-11-10T04:49:08.921272Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 55,
+      "timestamp": "2026-11-10T04:49:08.922299Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "4",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.243",
+        "hard_remaining_seconds": "223.243",
+        "attempt": "1",
+        "input_chars": "3507"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 56,
+      "timestamp": "2026-11-10T04:49:08.923756Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "178.241",
+        "hard_remaining_seconds": "223.241",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6686"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 57,
+      "timestamp": "2026-11-10T04:49:10.024904Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.142",
+        "hard_remaining_seconds": "222.142",
+        "provider_call_id": "p20",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "6686",
+        "elapsed_seconds": "1.098",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1456"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 58,
+      "timestamp": "2026-11-10T04:49:10.028841Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t19",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "3",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.137",
+        "hard_remaining_seconds": "222.137",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "563",
+        "elapsed_seconds": "1.106",
+        "finish_reason": "stop",
+        "prompt_tokens": "1678",
+        "completion_tokens": "160",
+        "total_tokens": "1838"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 59,
+      "timestamp": "2026-11-10T04:49:10.032159Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "scope_mismatch",
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "0"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 60,
+      "timestamp": "2026-11-10T04:49:10.034949Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find evidence matching the claim's exact dates, population, quantity and definition; the collected passages address a different or narrower scope.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 61,
+      "timestamp": "2026-11-10T04:49:10.039379Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python version 0.9.1 or 1.0 first public release year and month primary source",
+        "purpose": "support",
+        "query_id": "q21"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 62,
+      "timestamp": "2026-11-10T04:49:10.042103Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "177.124",
+        "hard_remaining_seconds": "222.124",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "286"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 63,
+      "timestamp": "2026-11-10T04:49:11.925292Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q21",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "4",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.241",
+        "hard_remaining_seconds": "220.241",
+        "provider_call_id": "p22",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "286",
+        "elapsed_seconds": "1.880",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9136"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 64,
+      "timestamp": "2026-11-10T04:49:11.928504Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python version 0.9.1 or 1.0 first public release year and month primary source",
+        "query_id": "q21",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 65,
+      "timestamp": "2026-11-10T04:49:11.931651Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python language first public release timeline before 2001 timeline overview",
+        "purpose": "contradiction",
+        "query_id": "q23"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 66,
+      "timestamp": "2026-11-10T04:49:11.934067Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "175.231",
+        "hard_remaining_seconds": "220.231",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 67,
+      "timestamp": "2026-11-10T04:49:14.053754Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q23",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "5",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.113",
+        "hard_remaining_seconds": "218.113",
+        "provider_call_id": "p24",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283",
+        "elapsed_seconds": "2.116",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "6636"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 68,
+      "timestamp": "2026-11-10T04:49:14.057043Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python language first public release timeline before 2001 timeline overview",
+        "query_id": "q23",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 69,
+      "timestamp": "2026-11-10T04:49:14.060444Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python 2.0 release year and month official announcement",
+        "purpose": "context",
+        "query_id": "q25"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 70,
+      "timestamp": "2026-11-10T04:49:14.063274Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "173.103",
+        "hard_remaining_seconds": "218.102",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "263"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 71,
+      "timestamp": "2026-11-10T04:49:16.297869Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q25",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "2",
+        "extract_limit": "10",
+        "remaining_seconds": "170.869",
+        "hard_remaining_seconds": "215.869",
+        "provider_call_id": "p26",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "263",
+        "elapsed_seconds": "2.231",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9081"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 72,
+      "timestamp": "2026-11-10T04:49:16.301300Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python 2.0 release year and month official announcement",
+        "query_id": "q25",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 73,
+      "timestamp": "2026-11-10T04:49:16.304755Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "10",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 74,
+      "timestamp": "2026-11-10T04:49:16.307928Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "url": "https://en.wikibooks.org/wiki/Python_Programming/Version_history",
+        "slot": "1",
+        "query_ids": "q21",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 75,
+      "timestamp": "2026-11-10T04:49:16.310265Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 76,
+      "timestamp": "2026-11-10T04:49:16.312552Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.853",
+        "hard_remaining_seconds": "215.853",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "191"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 77,
+      "timestamp": "2026-11-10T04:49:16.436608Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c27",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.731",
+        "hard_remaining_seconds": "215.731",
+        "provider_call_id": "p28",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "191",
+        "elapsed_seconds": "0.120",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "9686"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 78,
+      "timestamp": "2026-11-10T04:49:16.447896Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "url": "https://en.wikibooks.org/wiki/Python_Programming/Version_history",
+        "candidate_id": "c27",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 79,
+      "timestamp": "2026-11-10T04:49:16.450292Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 80,
+      "timestamp": "2026-11-10T04:49:16.453025Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "5",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.713",
+        "hard_remaining_seconds": "215.713",
+        "attempt": "1",
+        "input_chars": "17838"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 81,
+      "timestamp": "2026-11-10T04:49:16.456303Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "170.709",
+        "hard_remaining_seconds": "215.709",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28401"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 82,
+      "timestamp": "2026-11-10T04:49:19.490523Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.676",
+        "hard_remaining_seconds": "212.676",
+        "provider_call_id": "p30",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "28401",
+        "elapsed_seconds": "3.031",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2325"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 83,
+      "timestamp": "2026-11-10T04:49:19.494593Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t29",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "3",
+        "extract_limit": "10",
+        "remaining_seconds": "167.672",
+        "hard_remaining_seconds": "212.672",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1408",
+        "elapsed_seconds": "3.041",
+        "finish_reason": "stop",
+        "prompt_tokens": "8934",
+        "completion_tokens": "438",
+        "total_tokens": "9372"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 84,
+      "timestamp": "2026-11-10T04:49:19.500730Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "1dcc5e05-e5f8-4415-a725-dec91a9028d1",
+        "snapshot_id": "0500a13a-3634-4544-a208-f8e33fb6053f",
+        "admissible": "true",
+        "relation": "supports"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 85,
+      "timestamp": "2026-11-10T04:49:19.503416Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "url": "https://courseunbox.com/blogs/python-history-programming-language",
+        "slot": "2",
+        "query_ids": "q23",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 86,
+      "timestamp": "2026-11-10T04:49:19.505442Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 87,
+      "timestamp": "2026-11-10T04:49:19.507521Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "167.658",
+        "hard_remaining_seconds": "212.658",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "192"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 88,
+      "timestamp": "2026-11-10T04:49:20.763840Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c31",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.403",
+        "hard_remaining_seconds": "211.403",
+        "provider_call_id": "p32",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "192",
+        "elapsed_seconds": "1.252",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "16248"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 89,
+      "timestamp": "2026-11-10T04:49:20.774230Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "url": "https://courseunbox.com/blogs/python-history-programming-language",
+        "candidate_id": "c31",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 90,
+      "timestamp": "2026-11-10T04:49:20.776923Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 91,
+      "timestamp": "2026-11-10T04:49:20.779528Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "6",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.386",
+        "hard_remaining_seconds": "211.386",
+        "attempt": "1",
+        "input_chars": "20366"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 92,
+      "timestamp": "2026-11-10T04:49:20.784223Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "166.382",
+        "hard_remaining_seconds": "211.382",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30827"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 93,
+      "timestamp": "2026-11-10T04:49:23.290672Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.875",
+        "hard_remaining_seconds": "208.875",
+        "provider_call_id": "p34",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30827",
+        "elapsed_seconds": "2.504",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2252"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 94,
+      "timestamp": "2026-11-10T04:49:23.291916Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t33",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.873",
+        "hard_remaining_seconds": "208.873",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1333",
+        "elapsed_seconds": "2.513",
+        "finish_reason": "stop",
+        "prompt_tokens": "8515",
+        "completion_tokens": "426",
+        "total_tokens": "8941"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 95,
+      "timestamp": "2026-11-10T04:49:23.294252Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "ee7c0fbf-7711-42b2-be58-022fc9eb2cb3",
+        "snapshot_id": "d56b1718-249e-4bca-85f4-413a7f35e7b1",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 96,
+      "timestamp": "2026-11-10T04:49:23.295444Z",
+      "type": "stage_started",
+      "stage": "planning",
+      "payload": {
+        "stage": "planning"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 97,
+      "timestamp": "2026-11-10T04:49:23.296513Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "7",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.868",
+        "hard_remaining_seconds": "208.868",
+        "attempt": "1",
+        "input_chars": "4931"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 98,
+      "timestamp": "2026-11-10T04:49:23.298242Z",
+      "type": "provider_attempt_started",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "163.867",
+        "hard_remaining_seconds": "208.867",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8184"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 99,
+      "timestamp": "2026-11-10T04:49:24.258323Z",
+      "type": "provider_attempt_finished",
+      "stage": "planning",
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.908",
+        "hard_remaining_seconds": "207.908",
+        "provider_call_id": "p36",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "8184",
+        "elapsed_seconds": "0.957",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1409"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 100,
+      "timestamp": "2026-11-10T04:49:24.261573Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t35",
+        "task": "plan",
+        "schema": "SearchPlan",
+        "stage": "planning",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "6",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.904",
+        "hard_remaining_seconds": "207.904",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "528",
+        "elapsed_seconds": "0.964",
+        "finish_reason": "stop",
+        "prompt_tokens": "2231",
+        "completion_tokens": "138",
+        "total_tokens": "2369"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 101,
+      "timestamp": "2026-11-10T04:49:24.264543Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "followup",
+        "reason": "evidence_quality",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "1"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 102,
+      "timestamp": "2026-11-10T04:49:24.267463Z",
+      "type": "followup_planned",
+      "stage": null,
+      "payload": {
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 103,
+      "timestamp": "2026-11-10T04:49:24.269892Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Guido van Rossum first public Python release year and month original source",
+        "purpose": "support",
+        "query_id": "q37"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 104,
+      "timestamp": "2026-11-10T04:49:24.272237Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "162.893",
+        "hard_remaining_seconds": "207.893",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 105,
+      "timestamp": "2026-11-10T04:49:27.178875Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q37",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "7",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.988",
+        "hard_remaining_seconds": "204.988",
+        "provider_call_id": "p38",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283",
+        "elapsed_seconds": "2.903",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "7188"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 106,
+      "timestamp": "2026-11-10T04:49:27.182027Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Guido van Rossum first public Python release year and month original source",
+        "query_id": "q37",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 107,
+      "timestamp": "2026-11-10T04:49:27.184842Z",
+      "type": "search_started",
+      "stage": "searching",
+      "payload": {
+        "query": "Python 0.9.1 first public release date official announcement primary source",
+        "purpose": "contradiction",
+        "query_id": "q39"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 108,
+      "timestamp": "2026-11-10T04:49:27.187099Z",
+      "type": "provider_attempt_started",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "159.978",
+        "hard_remaining_seconds": "204.978",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 109,
+      "timestamp": "2026-11-10T04:49:29.328737Z",
+      "type": "provider_attempt_finished",
+      "stage": "searching",
+      "payload": {
+        "query_id": "q39",
+        "stage": "searching",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "4",
+        "extract_limit": "10",
+        "remaining_seconds": "157.837",
+        "hard_remaining_seconds": "202.837",
+        "provider_call_id": "p40",
+        "provider": "tavily",
+        "operation": "search",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "283",
+        "elapsed_seconds": "2.139",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10351"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 110,
+      "timestamp": "2026-11-10T04:49:29.332610Z",
+      "type": "search_completed",
+      "stage": "searching",
+      "payload": {
+        "query": "Python 0.9.1 first public release date official announcement primary source",
+        "query_id": "q39",
+        "result_count": "5"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 111,
+      "timestamp": "2026-11-10T04:49:29.336025Z",
+      "type": "sources_deferred",
+      "stage": "extracting",
+      "payload": {
+        "count": "5",
+        "reason": "Per-round page or remaining extraction limit."
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 112,
+      "timestamp": "2026-11-10T04:49:29.338094Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "url": "https://www.instagram.com/p/DGTIWSzNRin",
+        "slot": "1",
+        "query_ids": "q37",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 113,
+      "timestamp": "2026-11-10T04:49:29.340816Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 114,
+      "timestamp": "2026-11-10T04:49:29.342977Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "157.822",
+        "hard_remaining_seconds": "202.822",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 115,
+      "timestamp": "2026-11-10T04:49:29.469633Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c41",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "157.697",
+        "hard_remaining_seconds": "202.697",
+        "provider_call_id": "p42",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "166",
+        "elapsed_seconds": "0.124",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "10781"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 116,
+      "timestamp": "2026-11-10T04:49:29.476706Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "url": "https://www.instagram.com/p/DGTIWSzNRin",
+        "candidate_id": "c41",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 117,
+      "timestamp": "2026-11-10T04:49:29.478568Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 118,
+      "timestamp": "2026-11-10T04:49:29.480846Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "8",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "157.685",
+        "hard_remaining_seconds": "202.685",
+        "attempt": "1",
+        "input_chars": "14092"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 119,
+      "timestamp": "2026-11-10T04:49:29.484787Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "157.681",
+        "hard_remaining_seconds": "202.681",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23558"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 120,
+      "timestamp": "2026-11-10T04:49:32.710563Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "154.456",
+        "hard_remaining_seconds": "199.456",
+        "provider_call_id": "p44",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "23558",
+        "elapsed_seconds": "3.222",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2532"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 121,
+      "timestamp": "2026-11-10T04:49:32.714437Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t43",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "5",
+        "extract_limit": "10",
+        "remaining_seconds": "154.451",
+        "hard_remaining_seconds": "199.451",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1584",
+        "elapsed_seconds": "3.233",
+        "finish_reason": "stop",
+        "prompt_tokens": "9620",
+        "completion_tokens": "467",
+        "total_tokens": "10087"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 122,
+      "timestamp": "2026-11-10T04:49:32.719973Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "393b5337-7d11-4852-9852-8038afd59c8d",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "admissible": "false",
+        "relation": "contradicts"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 123,
+      "timestamp": "2026-11-10T04:49:32.722059Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "0e423d83-40d8-4f8a-adca-10bf1e688e00",
+        "snapshot_id": "1eaabf67-f88f-4a1a-8692-c4482a6a69af",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 124,
+      "timestamp": "2026-11-10T04:49:32.724429Z",
+      "type": "source_selected",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "url": "https://github.com/python/pythondotorg/issues/1734",
+        "slot": "2",
+        "query_ids": "q39",
+        "selection_rule": "purpose_balanced_search_rank"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 125,
+      "timestamp": "2026-11-10T04:49:32.726424Z",
+      "type": "stage_started",
+      "stage": "extracting",
+      "payload": {
+        "stage": "extracting"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 126,
+      "timestamp": "2026-11-10T04:49:32.728318Z",
+      "type": "provider_attempt_started",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.437",
+        "hard_remaining_seconds": "199.437",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 127,
+      "timestamp": "2026-11-10T04:49:32.851173Z",
+      "type": "provider_attempt_finished",
+      "stage": "extracting",
+      "payload": {
+        "candidate_id": "c45",
+        "stage": "extracting",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.315",
+        "hard_remaining_seconds": "199.315",
+        "provider_call_id": "p46",
+        "provider": "tavily",
+        "operation": "extract",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "177",
+        "elapsed_seconds": "0.120",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "12533"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 128,
+      "timestamp": "2026-11-10T04:49:32.857943Z",
+      "type": "source_extracted",
+      "stage": "extracting",
+      "payload": {
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "url": "https://github.com/python/pythondotorg/issues/1734",
+        "candidate_id": "c45",
+        "duplicate": "false"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 129,
+      "timestamp": "2026-11-10T04:49:32.860065Z",
+      "type": "stage_started",
+      "stage": "verifying",
+      "payload": {
+        "stage": "verifying"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 130,
+      "timestamp": "2026-11-10T04:49:32.862283Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "9",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.303",
+        "hard_remaining_seconds": "199.303",
+        "attempt": "1",
+        "input_chars": "20157"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 131,
+      "timestamp": "2026-11-10T04:49:32.865938Z",
+      "type": "provider_attempt_started",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "154.300",
+        "hard_remaining_seconds": "199.300",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30517"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 132,
+      "timestamp": "2026-11-10T04:49:35.071734Z",
+      "type": "provider_attempt_finished",
+      "stage": "verifying",
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.094",
+        "hard_remaining_seconds": "197.094",
+        "provider_call_id": "p48",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "30517",
+        "elapsed_seconds": "2.203",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "2258"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 133,
+      "timestamp": "2026-11-10T04:49:35.074866Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t47",
+        "task": "assess",
+        "schema": "AssessmentBatch",
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "stage": "verifying",
+        "phase": "research",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "12",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "152.091",
+        "hard_remaining_seconds": "197.091",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "1338",
+        "elapsed_seconds": "2.212",
+        "finish_reason": "stop",
+        "prompt_tokens": "9797",
+        "completion_tokens": "368",
+        "total_tokens": "10165"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 134,
+      "timestamp": "2026-11-10T04:49:35.078926Z",
+      "type": "evidence_checked",
+      "stage": "verifying",
+      "payload": {
+        "evidence_id": "7d633177-98fc-44a3-912d-bc0a666c6e85",
+        "snapshot_id": "c15738bb-e38b-48b7-9fea-d49b2d5ae75a",
+        "admissible": "true",
+        "relation": "context"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 135,
+      "timestamp": "2026-11-10T04:49:35.081014Z",
+      "type": "research_gate",
+      "stage": null,
+      "payload": {
+        "action": "stop",
+        "reason": "followup_round_limit",
+        "gap": "Find an authoritative original record or documented independent origins or an appropriate synthesis for the exact claim. Repeated reports of one origin do not establish independent evidence.",
+        "round": "2"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 136,
+      "timestamp": "2026-11-10T04:49:35.082791Z",
+      "type": "budget_reached",
+      "stage": null,
+      "payload": {
+        "reason": "followup_round_limit"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 137,
+      "timestamp": "2026-11-10T04:49:35.085041Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "b906a7be-3f34-45cd-9d26-525d33e7be5a"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 138,
+      "timestamp": "2026-11-10T04:49:35.086945Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "66cf26b0-8c4f-4d10-aa6d-6586bede86dd"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 139,
+      "timestamp": "2026-11-10T04:49:35.088368Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "bd9444f1-1e12-4236-a85f-f39801b6463c"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 140,
+      "timestamp": "2026-11-10T04:49:35.089823Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "ad000950-88c6-4df8-9eb2-6b5a3a9b2e8b"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 141,
+      "timestamp": "2026-11-10T04:49:35.091141Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "ee7c0fbf-7711-42b2-be58-022fc9eb2cb3"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 142,
+      "timestamp": "2026-11-10T04:49:35.092477Z",
+      "type": "qualification_flag_dropped",
+      "stage": null,
+      "payload": {
+        "evidence_id": "7d633177-98fc-44a3-912d-bc0a666c6e85"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 143,
+      "timestamp": "2026-11-10T04:49:35.095666Z",
+      "type": "stage_started",
+      "stage": "synthesizing",
+      "payload": {
+        "stage": "synthesizing"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 144,
+      "timestamp": "2026-11-10T04:49:35.096989Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "10",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "197.068",
+        "hard_remaining_seconds": "197.068",
+        "attempt": "1",
+        "input_chars": "15286"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 145,
+      "timestamp": "2026-11-10T04:49:35.098871Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "197.066",
+        "hard_remaining_seconds": "197.066",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20356"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 146,
+      "timestamp": "2026-11-10T04:49:36.637447Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.529",
+        "hard_remaining_seconds": "195.529",
+        "provider_call_id": "p50",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "20356",
+        "elapsed_seconds": "1.536",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1473"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 147,
+      "timestamp": "2026-11-10T04:49:36.641493Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t49",
+        "task": "synthesize",
+        "schema": "Synthesis",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.525",
+        "hard_remaining_seconds": "195.525",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "598",
+        "elapsed_seconds": "1.543",
+        "finish_reason": "stop",
+        "prompt_tokens": "6632",
+        "completion_tokens": "259",
+        "total_tokens": "6891"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 148,
+      "timestamp": "2026-11-10T04:49:36.644264Z",
+      "type": "task_started",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "11",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.521",
+        "hard_remaining_seconds": "195.521",
+        "attempt": "1",
+        "input_chars": "15882"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 149,
+      "timestamp": "2026-11-10T04:49:36.647012Z",
+      "type": "provider_attempt_started",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "195.518",
+        "hard_remaining_seconds": "195.518",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "19920"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 150,
+      "timestamp": "2026-11-10T04:49:37.409299Z",
+      "type": "provider_attempt_finished",
+      "stage": "synthesizing",
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "194.757",
+        "hard_remaining_seconds": "194.757",
+        "provider_call_id": "p52",
+        "provider": "nebius",
+        "operation": "model",
+        "attempt": "1",
+        "units": "1",
+        "request_bytes": "19920",
+        "elapsed_seconds": "0.759",
+        "status_code": "200",
+        "outcome": "success",
+        "validation_code": "none",
+        "limit_reason": "none",
+        "response_bytes": "1035"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 151,
+      "timestamp": "2026-11-10T04:49:37.412046Z",
+      "type": "task_finished",
+      "stage": null,
+      "payload": {
+        "task_call_id": "t51",
+        "task": "check_explanation",
+        "schema": "ExplanationCheck",
+        "stage": "synthesizing",
+        "phase": "finalization",
+        "model_used": "12",
+        "model_limit": "16",
+        "model_available_limit": "16",
+        "search_used": "8",
+        "search_limit": "8",
+        "extract_used": "6",
+        "extract_limit": "10",
+        "remaining_seconds": "194.754",
+        "hard_remaining_seconds": "194.754",
+        "attempt": "1",
+        "outcome": "success",
+        "validation_code": "unknown",
+        "schema_fields": "unknown",
+        "schema_error_types": "unknown",
+        "limit_reason": "unknown",
+        "reasoning_tokens": "0",
+        "output_chars": "173",
+        "elapsed_seconds": "0.768",
+        "finish_reason": "stop",
+        "prompt_tokens": "6691",
+        "completion_tokens": "51",
+        "total_tokens": "6742"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 152,
+      "timestamp": "2026-11-10T04:49:37.413709Z",
+      "type": "task_output_rejected",
+      "stage": null,
+      "payload": {
+        "task": "final_explanation",
+        "reason": "unsupported_explanation"
+      }
+    },
+    {
+      "investigation_id": "91347f2c-0eff-4fb9-841f-2c2214de184a",
+      "sequence": 153,
+      "timestamp": "2026-11-10T04:49:37.415030Z",
+      "type": "investigation_failed",
+      "stage": null,
+      "payload": {
+        "stop_reason": "provider_failure"
+      }
+    }
+  ],
+  "saved_checks": {
+    "same_saved_response": true,
+    "zero_provider_calls": true,
+    "ordered_events": true,
+    "reconnect_replay": true
+  },
+  "citation_review": "pending_human_review",
+  "elapsed_seconds": 45.499509915996896,
+  "network_attempts": [
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.157
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.862
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.344
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.025
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.525
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.126
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 5.588
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.224
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.681
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.096
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.877
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.113
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.224
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.116
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.03
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.249
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.504
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.956
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.9
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.132
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.12
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 3.221
+    },
+    {
+      "provider": "tavily",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.113
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 2.202
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 1.533
+    },
+    {
+      "provider": "nebius",
+      "status_code": 200,
+      "headers_elapsed_seconds": 0.758
+    }
+  ],
+  "budget_attempts": [
+    [
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.1585943749996659,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.8644206659992051,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.3451199999981327,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.028352958001051,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.526477416999114,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.16990862500097137,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 5.5922400830022525,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.2271147920000658,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.684610457999952,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.0984409580014471,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 1.8795807080023224,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.11611124999763,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.230788582997775,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12007320799966692,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.0313837909998256,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 1.2523181249998743,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.5044139590027044,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.9572802079965186,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.9031314579988248,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "search",
+        "units": 1,
+        "elapsed_seconds": 2.1388856670018868,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.12385366599846748,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 3.2222936250000203,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "tavily",
+        "operation": "extract",
+        "units": 1,
+        "elapsed_seconds": 0.11983504100135178,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 2.203147791999072,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 1.535542041001463,
+        "status_code": 200,
+        "outcome": "success"
+      },
+      {
+        "provider": "nebius",
+        "operation": "model",
+        "units": 1,
+        "elapsed_seconds": 0.7594899579999037,
+        "status_code": 200,
+        "outcome": "success"
+      }
+    ]
+  ]
+}

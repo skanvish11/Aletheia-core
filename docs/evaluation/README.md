@@ -1,5 +1,10 @@
 # Step 7: evaluation and demo
 
+- [Evidence handoff for Chandra with all 30 cases and both runs](pilot-handoff/README.md)
+- [How we got here and the six-case diagnosis](phase-one-diagnosis.md)
+
+For the next milestone, see [Phase one direct facts and comparisons](../direct-claims-phase-one.md). It separates a proposed 1,000-claim routing/parsing evaluation from factual research evaluation. The results and workflows below remain historical records of the existing implementation.
+
 This work adds a proposed 20-case tuning set and an explicitly enabled live runner.
 It does not certify research quality. The candidate answers are AI proposals;
 human labeling, passage review, and the private held-out evaluation remain required.
