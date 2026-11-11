@@ -612,3 +612,30 @@ async def test_b0023_cited_date_correction_can_finish_as_almost(settings):
             "supported",
             "contradicted",
         ]
+
+
+@pytest.mark.parametrize(
+    "quoted,extracted,valid",
+    [
+        ("The value is -108.", "108", False),
+        ("The value is −108.", "108", False),
+        ("The value is −108.", "-108", True),
+        ("The value is 108,000.", "108", False),
+        ("The value is 108,000.", "108000", True),
+        ("The value is -108.", "-108", True),
+        ("The value is 108.", "108", True),
+    ],
+)
+def test_numeric_grounding_preserves_sign_and_thousands(quoted, extracted, valid):
+    src = source(quoted)
+    item = judgment(src, relation="context")
+    item.component_id = "c1"
+    item.values = [value("left", extracted, source_text=quoted)]
+    claim = assertion(
+        "Venus is closer than Mercury.", kind="direct_comparison", comparison=comparison_spec()
+    )
+    if valid:
+        validate_component_assessment(item, claim, src, {1})
+    else:
+        with pytest.raises(TaskValidationError):
+            validate_component_assessment(item, claim, src, {1})

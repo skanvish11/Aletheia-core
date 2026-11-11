@@ -43,7 +43,8 @@ interpretations always supply it.
 
 Comparisons extract exact values, entities, metrics, units, periods, populations,
 definitions and uncertainty. Literal extraction text must occur in cited spans;
-numbers and ISO dates must occur in that extraction text. Python compares finite
+numeric tokens (including signed values and comma-separated thousands) and ISO dates
+must occur in that extraction text. Python compares finite
 Decimal values, ISO dates, or equality/inequality of recorded properties. Operands
 may come from different documents, but each needs adequate evidence. Incompatible,
 uncertain or ungrounded operands cannot support a comparison verdict. Units must be
@@ -134,7 +135,7 @@ Local results (Python 3.15.2):
 
 | Check | Observed result |
 | --- | --- |
-| `PYTHONPATH=src pytest -q` | 404 passed, 1 existing expected failure |
+| `PYTHONPATH=src pytest -q` | 411 passed, 1 existing expected failure |
 | `ruff check .` / `ruff format --check .` | Passed; 128 Python files formatted |
 | `scripts/check_research_test_sensitivity.py` | All 18 deliberate faults detected |
 | `scripts/smoke_foundation.py` | Local HTTP submission/reuse and process restart passed |
@@ -142,7 +143,7 @@ Local results (Python 3.15.2):
 | `scripts/inspect_pilot_handoff.py` | 110 historical files verified, original results unchanged |
 | `git diff --check` | Passed |
 
-The suite includes 33 new Phase 1 checks. Remote CI separately runs Python 3.12 and
+The suite includes 40 new Phase 1 checks. Remote CI separately runs Python 3.12 and
 3.13 and local-server checks on Linux and Windows; local results do not establish its
 outcome.
 The fault checks include missing-component True decisions and reversed comparison

@@ -8,6 +8,14 @@ from decimal import Decimal, InvalidOperation
 from aletheia.phase_one_contracts import ComponentFinding
 from aletheia.tasks import TaskValidationError
 
+NUMBER = r"[+−-]?(?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?(?:[eE][+-]?\d+)?"
+
+
+def decimal_value(text):
+    if not re.fullmatch(NUMBER, text):
+        raise ValueError("Not an exact decimal representation.")
+    return Decimal(text.replace(",", "").replace("−", "-"))
+
 
 def normalized(value):
     return " ".join(value.casefold().split())
@@ -37,7 +45,7 @@ def comparison_relation(spec, values):
         elif left.kind == "date":
             a, b = date.fromisoformat(left.value), date.fromisoformat(right.value)
         else:
-            a, b = Decimal(left.value), Decimal(right.value)
+            a, b = decimal_value(left.value), decimal_value(right.value)
             if not a.is_finite() or not b.is_finite():
                 return None
     except (ValueError, InvalidOperation):
@@ -63,10 +71,16 @@ def validate_component_assessment(assessment, assertion, source, supplied):
         if value.source_text not in quoted:
             raise TaskValidationError("comparison_values")
         # Do not accept an invented number inside a genuine but unrelated quote.
-        if value.kind == "number" and not re.search(
-            r"(?<![\w.])" + re.escape(value.value) + r"(?![\w.])", value.source_text
-        ):
-            raise TaskValidationError("comparison_values")
+        if value.kind == "number":
+            try:
+                extracted = decimal_value(value.value)
+                tokens = re.findall(
+                    r"(?<![\w.,+−-])" + NUMBER + r"(?![\w,]|\.\d)", value.source_text
+                )
+                if not any(decimal_value(token) == extracted for token in tokens):
+                    raise ValueError("No matching numeric token.")
+            except (ValueError, InvalidOperation):
+                raise TaskValidationError("comparison_values") from None
         if value.kind in {"date", "property"} and value.value not in value.source_text:
             # Non-ISO dates remain available as contextual evidence; no implicit conversion.
             raise TaskValidationError("comparison_values")
