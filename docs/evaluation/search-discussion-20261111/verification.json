@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "64fe9a69f1c506872e239f8c02435ab6ba78cfe3ff9ea831c62c5d61225cb2e8",
+  "archive_inventory_and_all_file_checksums": "passed: 1956 files",
+  "clean_extraction": "passed",
+  "existing_destination_refusal": "passed",
+  "sqlite_integrity": "passed: 54 databases",
+  "sqlite_logical_content_comparison": "passed: all 54 exported SQL dumps match originals",
+  "offline_pipeline_harness": {
+    "baseline": "passed",
+    "candidate": "passed",
+    "source": "extracted archive",
+    "runtime": "existing Python environment with backend dependencies"
+  },
+  "verifier_lint_and_format": "passed",
+  "provider_calls": 0,
+  "note": "Packaging checks and offline fixture behavior do not establish research or production accuracy."
+}
