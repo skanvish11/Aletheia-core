@@ -135,15 +135,15 @@ Local results (Python 3.15.2):
 
 | Check | Observed result |
 | --- | --- |
-| `PYTHONPATH=src pytest -q` | 411 passed, 1 existing expected failure |
-| `ruff check .` / `ruff format --check .` | Passed; 128 Python files formatted |
-| `scripts/check_research_test_sensitivity.py` | All 18 deliberate faults detected |
+| `PYTHONPATH=src pytest -q` | 430 passed, 1 existing expected failure |
+| `ruff check .` / `ruff format --check .` | Passed; 131 Python files formatted |
+| `scripts/check_research_test_sensitivity.py` | All 22 deliberate faults detected |
 | `scripts/smoke_foundation.py` | Local HTTP submission/reuse and process restart passed |
 | Small `scripts/benchmark_foundation.py` correctness run | Passed with 10 saved records |
 | `scripts/inspect_pilot_handoff.py` | 110 historical files verified, original results unchanged |
 | `git diff --check` | Passed |
 
-The suite includes 40 new Phase 1 checks. Remote CI separately runs Python 3.12 and
+The suite includes 59 new Phase 1 checks. Remote CI separately runs Python 3.12 and
 3.13 and local-server checks on Linux and Windows; local results do not establish its
 outcome.
 The fault checks include missing-component True decisions and reversed comparison
@@ -155,3 +155,25 @@ not establish factual accuracy. Routing, semantic component extraction, authorit
 judgments, property equivalence, and citation meaning need the planned independently
 reviewed evaluation. This PR is an implementation milestone, not phase-one acceptance
 or permission to begin causal/predictive research.
+
+
+## Adversarial review repairs and live pilot
+
+The four review findings are fixed: numeric extraction is anchored to complete tokens
+inside the original cited passage (cropping cannot remove signs or change magnitude);
+superlative counterexamples must name a different entity; admitted opposing values
+remain visible to conflict detection even when they cannot independently justify a
+verdict; and substantive Markdown headings remain eligible evidence. Navigation
+headings are still filtered by their text. Fifteen regression probes cover these
+cases and controls, including HTTP pipeline runs that formerly published wrong verdicts.
+
+`scripts/rerun_phase_one_pilot.py` validates the exact historical 30-case hash before
+any live work. Its default mode is offline validation. An explicitly requested live
+run uses `--live --dotenv <runtime configuration path> --output <new directory>`,
+the saved rerun's public provider settings, three independent case runs per cohort,
+and current backend limits. Each case has a fresh database and at most one investigation.
+The runner stops scheduling cohorts on account/configuration or runner failure.
+It preserves all original metadata and labels and records source revision, settings,
+usage, saved-read/restart checks and every attempted case. Unsupported-method responses
+are reported separately from factual completion; historical label agreement remains
+provisional and is not presented as phase-one accuracy.

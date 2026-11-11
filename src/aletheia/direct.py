@@ -31,7 +31,11 @@ def comparison_relation(spec, values):
         return None
     if normalized(left.entity) != normalized(spec.left):
         return None
-    if not spec.exhaustive and normalized(right.entity) != normalized(spec.right):
+    if spec.exhaustive:
+        # A member cannot be a counterexample to its own superlative.
+        if normalized(right.entity) == normalized(left.entity):
+            return None
+    elif normalized(right.entity) != normalized(spec.right):
         return None
     for field in ("metric", "units", "period", "population", "definition"):
         expected = normalized(getattr(spec, field))
@@ -74,11 +78,19 @@ def validate_component_assessment(assessment, assertion, source, supplied):
         if value.kind == "number":
             try:
                 extracted = decimal_value(value.value)
-                tokens = re.findall(
-                    r"(?<![\w.,+−-])" + NUMBER + r"(?![\w,]|\.\d)", value.source_text
-                )
-                if not any(decimal_value(token) == extracted for token in tokens):
-                    raise ValueError("No matching numeric token.")
+                # Token boundaries belong to the immutable passage, not to a model's
+                # cropped substring: '108' inside '-108' is not a positive token.
+                anchors = list(re.finditer(re.escape(value.source_text), quoted))
+                tokens = re.finditer(r"(?<![\w.,+−-])" + NUMBER + r"(?![\w,]|\.\d)", quoted)
+                if not any(
+                    decimal_value(token.group()) == extracted
+                    and any(
+                        anchor.start() <= token.start() and token.end() <= anchor.end()
+                        for anchor in anchors
+                    )
+                    for token in tokens
+                ):
+                    raise ValueError("No complete matching numeric token in the cited anchor.")
             except (ValueError, InvalidOperation):
                 raise TaskValidationError("comparison_values") from None
         if value.kind in {"date", "property"} and value.value not in value.source_text:
@@ -104,11 +116,12 @@ def component_findings(assertion, evidence, sources, sufficient):
         if component.comparison:
             # Operands can come from different documents. Each value requires its own
             # adequate evidence; unrelated values cannot borrow another source's authority.
-            grounded = []
+            grounded, observed = [], []
             for item in items:
                 if not item.assessment.scope_match:
                     continue
                 for value in item.assessment.values:
+                    observed.append(value)
                     matching = [
                         e
                         for e in items
@@ -121,14 +134,20 @@ def component_findings(assertion, evidence, sources, sufficient):
                     ]
                     if sufficient(matching, "quick", sources):
                         grounded.append(value)
-            relations = {
-                comparison_relation(component.comparison, [left, right])
-                for left in grounded
-                if left.side == "left"
-                for right in grounded
-                if right.side == "right"
-            } - {None}
-            if relations == {"supports", "contradicts"}:
+
+            def relations_for(values, spec=component.comparison):
+                return {
+                    comparison_relation(spec, [left, right])
+                    for left in values
+                    if left.side == "left"
+                    for right in values
+                    if right.side == "right"
+                } - {None}
+
+            # Evidence quality gates a verdict, not whether an admitted opposing
+            # observation exists. Do not silently resolve a contradiction by filtering it.
+            relations = relations_for(grounded)
+            if relations_for(observed) == {"supports", "contradicts"}:
                 outcome = "conflicting"
             elif relations == {"supports"}:
                 outcome = "supported"

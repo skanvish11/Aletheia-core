@@ -16,13 +16,14 @@ def boilerplate(text):
     stripped = text.strip()
     return bool(
         re.fullmatch(r"(?:[-*]\s*)?\[[^\]]+\]\([^\n]+\)", stripped)
-        or re.fullmatch(r"#{1,6}\s+.*", stripped)
         or normalized_navigation(stripped)
     )
 
 
 def normalized_navigation(text):
-    return text.casefold() in {
+    # Markdown formatting alone does not make a heading navigation.
+    label = re.sub(r"^#{1,6}\s+", "", text).rstrip("#").strip()
+    return label.casefold() in {
         "skip to content",
         "navigation",
         "contents",

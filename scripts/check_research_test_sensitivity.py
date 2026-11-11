@@ -10,6 +10,34 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MUTATIONS = (
     (
+        "numeric grounding trusts a cropped source fragment",
+        "direct.py",
+        "extracted = decimal_value(value.value)",
+        "extracted = decimal_value(value.value)\n                quoted = value.source_text",
+        "tests/test_adversarial_phase_one.py::test_cropped_negative_value_must_not_publish_true",
+    ),
+    (
+        "superlative admits a self-comparison",
+        "direct.py",
+        "if normalized(right.entity) == normalized(left.entity):",
+        "if False:",
+        "tests/test_adversarial_phase_one.py::test_superlative_requires_a_distinct_comparison_member",
+    ),
+    (
+        "comparison drops admitted counterevidence",
+        "direct.py",
+        'if relations_for(observed) == {"supports", "contradicts"}:',
+        'if relations_for(grounded) == {"supports", "contradicts"}:',
+        "tests/test_adversarial_phase_one.py::test_comparison_does_not_silently_drop_admitted_counterevidence",
+    ),
+    (
+        "passage selection drops substantive headings",
+        "passages.py",
+        "or normalized_navigation(stripped)",
+        'or re.fullmatch(r"#{1,6}\\s+.*", stripped) or normalized_navigation(stripped)',
+        "tests/test_adversarial_phase_one.py::test_evidence_heading_is_not_navigation_boilerplate",
+    ),
+    (
         "missing component incorrectly becomes True",
         "verdicts.py",
         'elif states == {"supported"}:',
