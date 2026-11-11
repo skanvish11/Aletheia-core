@@ -28,6 +28,32 @@ export function useEvidenceIndex(): EvidenceIndex {
   return useContext(EvidenceIndexContext)
 }
 
-export function evidenceAnchor(id: string): string {
-  return `evidence-${id}`
+/** Which evidence entry the evidence pane shows. Citations and pane tabs both set it. */
+export interface EvidenceSelection {
+  selected: string | null
+  /** `reveal` brings the pane into view when it sits below the report (narrow screens). */
+  select: (id: string, reveal?: boolean) => void
+}
+
+export const EvidenceSelectionContext = createContext<EvidenceSelection>({ selected: null, select: () => {} })
+
+export function useEvidenceSelection(): EvidenceSelection {
+  return useContext(EvidenceSelectionContext)
+}
+
+export const EVIDENCE_PANE_ID = 'evidence-pane'
+
+/** Matches the CSS breakpoint where the pane stops sitting beside the report. */
+const STACKED = '(max-width: 899px)'
+
+export function revealEvidencePane(): void {
+  if (typeof window.matchMedia !== 'function' || !window.matchMedia(STACKED).matches) return
+  const pane = document.getElementById(EVIDENCE_PANE_ID)
+  pane?.scrollIntoView({ block: 'start' })
+  pane?.focus({ preventScroll: true })
+}
+
+/** The entry to show first: the first one the report cites, else the first admitted. */
+export function defaultSelection(index: EvidenceIndex, cited: string[]): string | null {
+  return cited.find((id) => index.has(id)) ?? index.keys().next().value ?? null
 }

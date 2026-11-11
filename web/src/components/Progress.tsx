@@ -1,17 +1,15 @@
 import { useState } from 'react'
 import type { InvestigationEvent } from '../api/types'
-import { describeEvent } from '../labels'
+import { describeEvent, elapsed } from '../labels'
 
-function clock(iso: string): string {
-  return new Date(iso).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit', second: '2-digit' })
-}
-
+/** The research log: time since the first step, then what happened. */
 function EventList({ events }: { events: InvestigationEvent[] }) {
+  const start = events[0]?.timestamp
   return (
     <ol className="progress" aria-live="polite">
       {events.map((event) => (
         <li key={event.sequence}>
-          <time dateTime={event.timestamp}>{clock(event.timestamp)}</time>
+          <time dateTime={event.timestamp}>{start ? elapsed(event.timestamp, start) : ''}</time>
           <span>{describeEvent(event)}</span>
         </li>
       ))}
@@ -44,8 +42,7 @@ export function ResearchActivity({ events }: { events: InvestigationEvent[] }) {
   return (
     <details className="section activity" open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
       <summary>
-        <h2>Research activity</h2>
-        <span className="meta"> {events.length} steps, original timestamps</span>
+        Research log · {events.length} step{events.length === 1 ? '' : 's'}
       </summary>
       <EventList events={events} />
     </details>
