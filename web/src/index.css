@@ -1,8 +1,7 @@
 /*
  * Visual direction B, "Lab instrument" (design/visual-direction.md): cool near-white,
  * graphite text, one cobalt accent. IBM Plex Sans for reading, Plex Mono for run facts,
- * section labels and the research log. The report sits left; the evidence pane beside
- * it follows the selected citation, and stacks below the report on narrow screens.
+ * section labels and the research log. Evidence follows the conclusion in reading order.
  */
 :root {
   --bg: #f5f6f8;
@@ -121,7 +120,7 @@ p {
 
 .notice {
   margin: 0;
-  font: 12px var(--mono);
+  font: 400 14px/1.5 var(--sans);
   color: var(--text-2);
 }
 
@@ -190,7 +189,9 @@ h2 {
 
 blockquote {
   margin: 0;
-  padding: 12px 14px;
+  margin-inline: -8px;
+  padding: 10px 8px;
+  overflow-wrap: anywhere;
   background: var(--quote);
   border-radius: 4px;
   font-size: 15px;
@@ -202,7 +203,7 @@ blockquote {
 
 .report-head {
   margin-top: 16px;
-  padding-bottom: 24px;
+  padding-bottom: 18px;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -262,19 +263,63 @@ blockquote {
   color: var(--conflicting);
 }
 
-/* ---------- Report body: report left, evidence pane right ---------- */
+/* ---------- Conclusion and cited evidence ---------- */
 
 .report-body {
-  margin-top: 32px;
+  margin-top: 22px;
   display: grid;
-  grid-template-columns: minmax(0, 680px) minmax(320px, 420px);
-  justify-content: start;
-  align-items: start;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
 }
 
-.report-main {
-  min-width: 0;
+@media (min-width: 900px) {
+  .report-body {
+    max-width: 680px;
+    gap: 20px;
+  }
+
+  .conclusion > :last-child,
+  .summary > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.report-details {
+  max-width: 680px;
+  margin-top: 24px;
+}
+
+.report-details > details {
+  border-top: 1px solid var(--rule);
+}
+
+.report-details > details[open] {
+  padding-bottom: 16px;
+}
+
+.report-details .section {
+  margin-top: 16px;
+}
+
+.step-count {
+  margin-left: auto;
+  font: 12px var(--mono);
+  color: var(--text-2);
+}
+
+.scoped-claim {
+  color: var(--text-2);
+  margin: 12px 0;
+}
+
+.conclusion > :first-child {
+  margin-top: 0;
+}
+
+.scoped-claim strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
 }
 
 .summary p {
@@ -363,8 +408,22 @@ blockquote {
 }
 
 .limitations {
-  padding-left: 20px;
+  border-top: 1px solid var(--rule);
+  padding: 14px 0;
+}
+
+.limitations h2 {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.limitations p,
+.limitations ul {
   margin: 0;
+}
+
+.limitations ul {
+  padding-left: 1.25em;
 }
 
 /* ---------- Citations ---------- */
@@ -415,9 +474,6 @@ blockquote {
 /* ---------- Evidence pane ---------- */
 
 .evidence-pane {
-  position: sticky;
-  top: 16px;
-  max-height: calc(100vh - 32px);
   overflow: auto;
   background: var(--surface);
   border: 1px solid var(--rule);
@@ -452,14 +508,17 @@ blockquote {
   font: 600 13px var(--mono);
   background: transparent;
   color: var(--text);
-  border: 1px solid var(--rule);
+  border: 1px solid transparent;
   cursor: pointer;
 }
 
+.pane-tab:hover {
+  background: var(--accent-tint);
+}
+
 .pane-tab[aria-pressed='true'] {
-  background: var(--accent);
-  color: var(--surface);
-  border-color: var(--accent);
+  background: var(--accent-tint);
+  color: var(--accent);
 }
 
 .pane-body {
@@ -523,40 +582,45 @@ blockquote {
   font-size: 14px;
 }
 
-.trace summary,
+.source-note summary,
 .pane-rejected summary,
-.activity summary {
+.report-details > details > summary {
   min-height: 44px;
   display: flex;
   align-items: center;
+  gap: 8px;
   cursor: pointer;
-  font: 12px var(--mono);
-  letter-spacing: 0.04em;
+  font-size: 14px;
   color: var(--text-2);
 }
 
-.activity summary {
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.report-details > details > summary {
+  color: var(--text);
+  font-weight: 500;
 }
 
-.trace dl {
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
-  gap: 2px 12px;
-  margin: 4px 0 0;
-  font-size: 13px;
+.report summary::-webkit-details-marker {
+  display: none;
 }
 
-.trace dt {
-  color: var(--text-2);
+.report summary::before {
+  content: '';
+  flex: none;
+  width: 6px;
+  height: 6px;
+  border: solid currentColor;
+  border-width: 1.5px 1.5px 0 0;
+  transform: rotate(45deg);
+  margin: 0 4px 0 2px;
 }
 
-.trace dd {
-  margin: 0;
-  overflow-wrap: anywhere;
-  font-family: var(--mono);
-  font-size: 12px;
+.report details[open] > summary::before {
+  transform: rotate(135deg);
+}
+
+.source-rationale {
+  font-size: 14px;
+  padding-bottom: 8px;
 }
 
 .pane-rejected {
@@ -594,11 +658,43 @@ blockquote {
   font: 600 13px var(--mono);
 }
 
-.pane-sources li {
-  padding: 8px 0;
-  border-top: 1px solid var(--rule);
+.pane-sources table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  text-align: left;
   font-size: 14px;
+  line-height: 1.45;
+}
+
+.pane-sources th,
+.pane-sources td {
+  padding: 9px 0;
+  vertical-align: top;
   overflow-wrap: anywhere;
+}
+
+.pane-sources th {
+  color: var(--text-2);
+  font-weight: 500;
+}
+
+.pane-sources th:first-child {
+  width: 38%;
+}
+
+.pane-sources td {
+  border-top: 1px solid var(--rule);
+}
+
+.pane-sources td:first-child {
+  padding-right: 14px;
+}
+
+.page-quoted {
+  display: block;
+  color: var(--text-2);
+  font-size: 12px;
 }
 
 /* ---------- Research log ---------- */
@@ -799,19 +895,7 @@ pre {
   font-weight: 600;
 }
 
-/* ---------- Narrow screens: the pane stacks under the report ---------- */
-
-@media (max-width: 899px) {
-  .report-body {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 32px;
-  }
-
-  .evidence-pane {
-    position: static;
-    max-height: none;
-  }
-}
+/* ---------- Narrow screens ---------- */
 
 @media (max-width: 520px) {
   main,

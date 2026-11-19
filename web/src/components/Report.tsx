@@ -11,7 +11,7 @@ import {
 import { STATUS_LABEL, UNDECIDED_REASON, formatDate, reason } from '../labels'
 import { Citations } from './Cite'
 import { EvidencePane } from './Evidence'
-import { Correction, DecisionLabel, Findings, Flag, Units } from './Findings'
+import { Correction, DecisionLabel, Flag, Units } from './Findings'
 import { ResearchActivity, ResearchInProgress } from './Progress'
 
 interface Props {
@@ -87,6 +87,7 @@ function DecisionEvidence({ result }: { result: InvestigationResult }) {
 
 /** The written answer and its essential caveat or correction, before any detail. */
 function Conclusion({ investigation, result }: { investigation: Investigation; result: InvestigationResult }) {
+  const scope = result.scope_note?.trim()
   const flags = result.finding.qualification_flags
   return (
     <section className="conclusion" aria-labelledby="result-label">
@@ -94,8 +95,14 @@ function Conclusion({ investigation, result }: { investigation: Investigation; r
         <p className="notice-box">
           Partial result: the run stopped before every step finished
           {reason(investigation.stop_reason) ? ` (${reason(investigation.stop_reason)})` : ''}. The decision comes from
-          the steps that completed; Limitations says what was left unfinished.
+          the steps that completed.
         </p>
+      )}
+      {result.assertion.text.trim() !== investigation.claim.trim() && (
+        <p className="scoped-claim"><strong>Claim as checked</strong> {result.assertion.text}</p>
+      )}
+      {scope && scope !== 'Checked as submitted, against the pages retrieved for this run.' && (
+        <p className="meta">{scope}</p>
       )}
       <div className="summary">
         <Units units={result.explanation} />
@@ -110,18 +117,20 @@ function Conclusion({ investigation, result }: { investigation: Investigation; r
 }
 
 function Limitations({ result }: { result: InvestigationResult }) {
-  const items = [...new Set([...result.limitations, ...result.finding.limitations])]
-  if (items.length === 0) return null
+  const notes = [...result.limitations, ...result.finding.limitations].map((note) => {
+    const text = note.trim()
+    return text === 'Some pages were too long and were read only in part.'
+      ? 'Long pages were read only in part.'
+      : text
+  })
+  const items = [...new Set(notes.filter(Boolean))]
+  if (!items.length) return null
   return (
-    <section className="section" aria-labelledby="limitations-heading">
-      <h2 id="limitations-heading" className="section-label">
-        Limitations
-      </h2>
-      <ul className="limitations">
-        {items.map((l, i) => (
-          <li key={i}>{l}</li>
-        ))}
-      </ul>
+    <section className="limitations" aria-labelledby="limitations-heading">
+      <h2 id="limitations-heading">Limitations</h2>
+      {items.length === 1 ? <p>{items[0]}</p> : (
+        <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
+      )}
     </section>
   )
 }
@@ -231,28 +240,26 @@ export function Report(props: Props) {
             </section>
           )}
 
-          {(result || (finished && events.length > 0)) && (
+          {result && (
             <div className="report-body">
               <div className="report-main">
-                {result && (
-                  <>
-                    {unconfirmed ? (
-                      <section className="conclusion" aria-labelledby="result-label">
-                        <p>The final check did not confirm a decision. The collected sources are available in the evidence pane.</p>
-                        <p className="meta">This does not establish that evidence is insufficient or conflicting.</p>
-                      </section>
-                    ) : (
-                      <>
-                        <Conclusion investigation={investigation} result={result} />
-                        <Findings result={result} route={investigation.route} />
-                      </>
-                    )}
-                    <Limitations result={result} />
-                  </>
+                {unconfirmed ? (
+                  <section className="conclusion" aria-labelledby="result-label">
+                    <p>The final check did not confirm a decision. The collected sources are available in the evidence pane.</p>
+                    <p className="meta">This does not establish that evidence is insufficient or conflicting.</p>
+                  </section>
+                ) : (
+                  <Conclusion investigation={investigation} result={result} />
                 )}
-                {finished && <ResearchActivity key={investigation.id} events={events} />}
               </div>
-              {result && <EvidencePane sources={evidence?.sources ?? []} />}
+              <EvidencePane sources={evidence?.sources ?? []} />
+            </div>
+          )}
+
+          {finished && (result || events.length > 0) && (
+            <div className="report-details">
+              {result && <Limitations result={result} />}
+              <ResearchActivity key={investigation.id} events={events} />
             </div>
           )}
         </article>

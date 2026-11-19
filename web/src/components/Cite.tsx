@@ -1,8 +1,8 @@
 import { EVIDENCE_PANE_ID, useEvidenceIndex, useEvidenceSelection } from '../evidenceIndex'
 
 /**
- * A numbered citation. Activating it shows that evidence in the evidence pane beside
- * the report, so checking a source never leaves the page.
+ * A numbered citation. Activating it shows that evidence in the evidence pane below
+ * the conclusion, so checking a source never leaves the page.
  */
 function Cite({ id }: { id: string }) {
   const entry = useEvidenceIndex().get(id)

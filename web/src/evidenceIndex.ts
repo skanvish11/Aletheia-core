@@ -31,7 +31,7 @@ export function useEvidenceIndex(): EvidenceIndex {
 /** Which evidence entry the evidence pane shows. Citations and pane tabs both set it. */
 export interface EvidenceSelection {
   selected: string | null
-  /** `reveal` brings the pane into view when it sits below the report (narrow screens). */
+  /** `reveal` brings the pane into view below the conclusion. */
   select: (id: string, reveal?: boolean) => void
 }
 
@@ -43,13 +43,9 @@ export function useEvidenceSelection(): EvidenceSelection {
 
 export const EVIDENCE_PANE_ID = 'evidence-pane'
 
-/** Matches the CSS breakpoint where the pane stops sitting beside the report. */
-const STACKED = '(max-width: 899px)'
-
 export function revealEvidencePane(): void {
-  if (typeof window.matchMedia !== 'function' || !window.matchMedia(STACKED).matches) return
   const pane = document.getElementById(EVIDENCE_PANE_ID)
-  pane?.scrollIntoView({ block: 'start' })
+  pane?.scrollIntoView?.({ block: 'nearest' })
   pane?.focus({ preventScroll: true })
 }
 

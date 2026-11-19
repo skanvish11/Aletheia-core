@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import type { InvestigationEvent } from '../api/types'
 import { describeEvent, elapsed, runCounts } from '../labels'
 
@@ -40,7 +39,6 @@ const ANNOUNCEMENTS = new Set<InvestigationEvent['type']>(['provider_attempt_sta
 
 /** After research: the log, collapsed below the answer. Key it by investigation ID. */
 export function ResearchActivity({ events }: { events: InvestigationEvent[] }) {
-  const [open, setOpen] = useState(false)
   if (events.length === 0) return null
   const steps = events.filter((event) => !ANNOUNCEMENTS.has(event.type))
   const { searches, pages, modelCalls } = runCounts(events)
@@ -53,11 +51,9 @@ export function ResearchActivity({ events }: { events: InvestigationEvent[] }) {
     events.length > 1 ? `${elapsed(events.at(-1)!.timestamp, events[0].timestamp)} elapsed` : null,
   ].filter(Boolean)
   return (
-    <details className="section activity" open={open} onToggle={(e) => setOpen(e.currentTarget.open)}>
-      <summary>
-        Research log · {steps.length} step{steps.length === 1 ? '' : 's'}
-        {facts.length > 0 && ` · ${facts.join(' · ')}`}
-      </summary>
+    <details className="activity">
+      <summary>Research log <span className="step-count">{plural(steps.length, 'step', 'steps')}</span></summary>
+      {facts.length > 0 && <p className="meta">{facts.join(' · ')}</p>}
       <EventList events={steps} />
     </details>
   )
