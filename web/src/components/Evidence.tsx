@@ -1,7 +1,7 @@
 import type { EvidenceEntry } from '../evidenceIndex'
 import { EVIDENCE_PANE_ID, useEvidenceIndex, useEvidenceSelection } from '../evidenceIndex'
 import type { SourceSnapshot } from '../api/types'
-import { RELATION_LABEL, formatTime } from '../labels'
+import { RELATION_LABEL } from '../labels'
 import { passageLink } from '../passageLink'
 
 /** One piece of evidence: relation, source, the exact excerpt, why it counts, the link. */
@@ -26,59 +26,43 @@ function Detail({ entry: { number, evidence, source } }: { entry: EvidenceEntry 
           {evidence.rejection_reason}
         </p>
       )}
-      <p>
-        <span className="inline-label">Why it counts</span>
-        {a.rationale}
-      </p>
       {a.limitations.length > 0 && <p className="meta">Limitations: {a.limitations.join(' ')}</p>}
       {source && (
         <a className="open-original" href={passage ?? source.url} target="_blank" rel="noreferrer noopener">
           {passage ? 'Open the original at this passage' : 'Open the original'}
         </a>
       )}
-      <details className="trace">
-        <summary>Citation details</summary>
-        <dl>
-          <dt>Spans</dt>
-          <dd>{evidence.excerpts.map((e) => e.span_ids.join(', ')).join(' | ')}</dd>
-          <dt>Snapshot</dt>
-          <dd>{a.citation.snapshot_id}</dd>
-          <dt>Evidence ID</dt>
-          <dd>{evidence.id}</dd>
-          {a.origin && (
-            <>
-              <dt>Origin</dt>
-              <dd>{a.origin}</dd>
-            </>
-          )}
-          <dt>Independence</dt>
-          <dd>{a.independence}</dd>
-          {source && (
-            <>
-              <dt>Retrieved</dt>
-              <dd>{formatTime(source.retrieved_at)}</dd>
-              <dt>URL</dt>
-              <dd>{source.url}</dd>
-              <dt>Content hash</dt>
-              <dd>{source.content_hash}</dd>
-            </>
-          )}
-        </dl>
-      </details>
+      {a.rationale && (
+        <details className="source-note">
+          <summary>Why this passage matters</summary>
+          <p className="source-rationale">{a.rationale}</p>
+        </details>
+      )}
     </article>
   )
 }
 
-/**
- * The evidence pane: one entry at a time, numbered as cited. Beside the report on wide
- * screens, below it on narrow ones. Passages checked but not admitted sit collapsed.
- */
-function host(url: string): string {
+function pageLabels(source: SourceSnapshot) {
+  let website = ''
+  let path = ''
   try {
-    return new URL(url).hostname.replace(/^www\./, '')
+    const url = new URL(source.url)
+    website = url.hostname.replace(/^www\./, '')
+    path = url.pathname.split('/').filter(Boolean).at(-1) ?? ''
   } catch {
-    return url
+    // Older snapshots may contain an incomplete page address.
   }
+  const title = source.title?.trim()
+  if (!title || title === source.url) {
+    return { website, topic: path.replace(/[-_]/g, ' ') || 'Open page' }
+  }
+  const [pageTitle] = title.split(' | ')
+  const parts = pageTitle.split(' - ')
+  // Drop trailing site branding when its name matches the domain. Keep subtitles.
+  const brand = parts.at(-1)?.toLowerCase().replace(/[^a-z0-9]/g, '') ?? ''
+  const siteName = website.toLowerCase().replace(/[^a-z0-9]/g, '')
+  const isBrand = parts.length > 1 && brand.length >= 3 && siteName.includes(brand)
+  return { website, topic: (isBrand ? parts.slice(0, -1).join(' - ') : pageTitle) || title }
 }
 
 /** Every page the run read, quoted or not, so the reader can see what was consulted. */
@@ -89,20 +73,27 @@ function PagesRead({ sources, quoted }: { sources: SourceSnapshot[]; quoted: Set
       <summary>
         {sources.length} page{sources.length === 1 ? '' : 's'} read
       </summary>
-      <ul>
-        {sources.map((source) => (
-          <li key={source.id}>
-            <a href={source.url} target="_blank" rel="noreferrer noopener">
-              {source.title || source.url}
-            </a>
-            <span className="meta">
-              {' '}
-              · {host(source.url)}
-              {quoted.has(source.id) ? ' · quoted' : ''}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <table aria-label="Pages read">
+        <thead>
+          <tr><th scope="col">Website</th><th scope="col">Topic</th></tr>
+        </thead>
+        <tbody>
+          {sources.map((source) => {
+            const { website, topic } = pageLabels(source)
+            return (
+              <tr key={source.id}>
+                <td>{website || 'Unknown website'}</td>
+                <td>
+                  <a href={source.url} title={source.title || undefined} target="_blank" rel="noreferrer noopener">
+                    {topic}
+                  </a>
+                  {quoted.has(source.id) && <small className="page-quoted">quoted</small>}
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
     </details>
   )
 }

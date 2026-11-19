@@ -99,7 +99,10 @@ describe('recorded loop runs', () => {
     const page = show(recording)
     const counts = runCounts(recording.events)
     expect(counts).toEqual({ searches: 3, pages: recording.evidence.sources.length, modelCalls: 3 })
-    const summary = page.querySelector('details.activity summary')!.textContent
+    const log = page.querySelector<HTMLDetailsElement>('details.activity')!
+    expect(log.open).toBe(false)
+    expect(log.querySelector('summary')?.textContent).not.toContain('model calls')
+    const summary = log.textContent
     expect(summary).toContain('3 searches')
     expect(summary).toContain(`${counts.pages} pages read`)
     expect(summary).toContain('3 model calls')

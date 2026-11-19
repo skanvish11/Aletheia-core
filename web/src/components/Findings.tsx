@@ -2,9 +2,7 @@ import type {
   AlmostCorrection,
   Decision,
   ExplanationUnit,
-  InvestigationResult,
   QualificationFlag,
-  Route,
   UndecidedReason,
 } from '../api/types'
 import { DIMENSION_LABEL, FLAG_LABEL, UNDECIDED_FALLBACK, UNDECIDED_LABEL, VERDICT_LABEL } from '../labels'
@@ -75,25 +73,5 @@ export function Correction({ correction }: { correction: AlmostCorrection }) {
         </div>
       ))}
     </dl>
-  )
-}
-
-const ROUTE_LABEL: Record<Route, string> = { quick: 'Quick check', deep: 'Deeper research' }
-
-/** What was actually checked: the scoped assertion and how it was researched. */
-export function Findings({ result, route }: { result: InvestigationResult; route: Route | null }) {
-  const { assertion, finding } = result
-  return (
-    <section className="section" aria-labelledby="findings-heading">
-      <h2 id="findings-heading" className="section-label">
-        What we checked
-      </h2>
-      <p>{assertion.text}</p>
-      {!route && <p className="meta">Recommended: {ROUTE_LABEL[assertion.recommended_route]}</p>}
-      {result.scope_note && <p className="meta">{result.scope_note}</p>}
-      {finding.qualification_check === 'unknown' && (
-        <p className="meta">Comparisons and scope were not assessed for this claim.</p>
-      )}
-    </section>
   )
 }
