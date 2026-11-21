@@ -1,122 +1,152 @@
 # Demo video script
 
-A 2–3 minute video for the ODSC × Nebius submission. There is no live demo day: judges
-score this video and the repository. Target length: **2:30**.
-
-Judging weights, and where the video covers each:
+A video of 3 minutes or less for the ODSC × Nebius submission. There is no live demo day:
+judges score this video and the repository. It is recorded as **6 clips of at most 30
+seconds each**, with a voiceover, and edited into one video afterwards. Aim for about 25 s
+per clip, so the video lands near 2:45.
 
 | Criterion | Weight | Shown in |
 | --- | ---: | --- |
-| Sourced and verifiable answers | 30% | Scenes 4 and 5: each quotation highlighted and opened on its source page; Scene 6: no guess when the pages don't say |
-| Works end to end | 25% | Scenes 2–6: real live runs through the web client and API |
-| Usefulness | 20% | Scenes 1 and 4: a health reporter checking a figure before it is published |
-| Agent design | 15% | Scene 3: plan, search, read, judge, check quotations; Python in control |
-| Use of Token Factory and Tavily | 10% | Scene 3: the research log names every call |
+| Sourced and verifiable answers | 30% | Clip 3: the highlighted quotation opens on its source page; Clip 6: no guess when the pages don't say |
+| Works end to end | 25% | Clips 2, 5 and 6: real live runs through the web client and API |
+| Usefulness | 20% | Clips 1 and 2: a health reporter checking a figure before it is published |
+| Agent design | 15% | Clip 4: the research log and quotation checks; Python in control |
+| Use of Token Factory and Tavily | 10% | Clips 2 and 4: the log names every call |
 
 ## Before recording
 
-- **Branch:** record from `main`. It has the current web client: centred search,
-  one-column report, highlighted quotations.
-- **Settings:** `.env` from `.env.example` (DeepSeek V4 Pro, simple loop, 120 s timeout).
-  Never show `.env` or a terminal that prints it.
-- **Start fresh:** point `ALETHEIA_DATABASE_PATH` at a new file, for example
-  `data/demo.sqlite3`, so the first submissions are real runs, not saved results, and
-  Recent investigations holds only the demo claims. Your existing history stays in
-  `data/aletheia.sqlite3`.
-- **Rehearse the three claims live the same day.** Answers vary between runs: on the 77
-  trusted claims, two DeepSeek runs differed on 13. These three were right in both runs.
-  If one comes back differently on the day, use it as it is, or swap in another from the
-  list at the end. Never edit a result.
-- **Waiting time:** runs take 15–50 s. Cut or speed up the waiting, and say so on screen
-  ("sped up 4×"). Don't cut the progress log entirely: it shows that the run is real.
-- **Browser:** the client at 1440 px wide, zoomed to 125%, so the quotations are readable.
-  Use dark mode: the palette was designed for it.
+- **Fresh history:** restart the API on a new `ALETHEIA_DATABASE_PATH` file (for example
+  `data/demo2.sqlite3`), so rehearsal claims don't show under Recent investigations in
+  Clip 6. Never show `.env` or a terminal that prints it.
+- **Browser:** full screen (F11), at a zoom where the report fits without scrolling. The
+  app is always dark.
+- **Each clip:** start recording, wait 1 s, speak, wait 1 s, stop. Name the files
+  `clip-1.mp4` … `clip-6.mp4`.
+- **Waiting for results:** runs take 15–50 s. Keep talking over the first seconds of the
+  research log, then pause the recording until the answer appears; the wait is cut in
+  editing.
+- **If an answer comes out differently on the day,** use it as it is, or swap in a spare
+  claim. Never edit a result. Answers can vary between runs: on the 77 trusted claims, two
+  DeepSeek runs differed on 13. The three claims below were right in both.
 
-## Script
+## Clip 1 · What Aletheia is
 
-`[00:00–00:20]` **1. The problem**
+**Screen:** the home page, search box empty. Keep the mouse still.
 
-> Screen: the home page, search box empty.
+**Say:**
 
-"This is Aletheia. Say you're a health reporter, and a draft says 610,000 people died of
-malaria in 2024. Before that goes out, you need to know whether it's right, and you need
-to be able to show where the answer came from. Aletheia checks a claim against the live
-web and says whether it's true, false, or can't be settled from what it found. Every
-true or false verdict includes a quotation you can check."
+> This is Aletheia, a research agent that brings its sources.
+> You give it a claim, the way you remember it, or the way a draft states it.
+> It searches the live web, reads the pages, and tells you whether the claim is true,
+> false, or can't be settled.
+> And every answer comes with the exact passages it rests on, so you can check it yourself.
 
-`[00:20–01:00]` **2–3. A live check, and how it works**
+**Last action:** move the mouse to the search box.
 
-> Type: `An estimated 610,000 people died of malaria worldwide in 2024, according to WHO.`
-> Click **Verify**. Show the progress log as it runs.
+## Clip 2 · A live check
 
-"It's running live now. One model call on Nebius Token Factory plans up to three
-searches. Tavily runs them at the same time and reads the best pages. Then one more
-model call reads those pages and gives a verdict, with quotations copied word for word."
+**Screen:** the home page.
 
-> While it runs, point at the log lines that name Token Factory and Tavily calls. (Once
-> the run finishes, the log is under **Investigation Audit Trail** → **Research log** at
-> the bottom of the report.)
+1. Click the search box and type
+   `An estimated 610,000 people died of malaria worldwide in 2024, according to WHO.`
 
-"Python stays in control throughout. The model only writes queries and a verdict. The
-code runs every search, enforces the limits, and checks every quotation against the
-saved page. A quotation that isn't on the page is thrown out, and a verdict with no
-valid quotation becomes 'can't settle'."
+   > Say you're a health reporter, and your draft says 610,000 people died of malaria in
+   > 2024. Let's check it, live.
 
-`[01:00–01:30]` **4. The answer, and its evidence**
+2. Click **Verify**.
+3. As the log fills in, point at a "Token Factory model call" line, then a "Tavily search"
+   line.
 
-> The result: **True**. Under the explanation, the **Evidence** card shows quotation
-> **[1]**, highlighted. Click **2**, **3**, **4** to step through the others.
+   > A model on Nebius Token Factory plans the searches.
+   > Tavily runs them in parallel and reads the best pages.
+   > Then the model gives a verdict, with quotations copied word for word from those pages.
 
-"True. Here's the quotation it relied on, word for word from the page."
+**Stop** once you've finished speaking. Resume recording when the answer appears: that is
+the start of Clip 3.
 
-> Click **Link to source**: the source page opens with the sentence
-> highlighted. Say the source's name as it appears on the day, for example "the WHO's
-> World Malaria Report".
+## Clip 3 · The answer, and its source
 
-"That's the source page, at the exact sentence. You don't have to trust the verdict:
-you can check it in one click."
+**Screen:** the finished report: **True**.
 
-> Back in the report, click **Pages Read N** in the **Investigation Audit Trail**.
+1. Pause on the verdict and the explanation.
 
-"It also lists every page it read, not just the ones it quoted."
+   > True.
 
-`[01:30–01:55]` **5. A wrong figure**
+2. Move to the **Evidence** card and its highlighted quotation.
 
-> Type: `The WHO African Region accounted for 75% of global malaria cases in 2024.`
-> Click **Verify**; speed up the wait.
+   > Here's the quotation it relied on, highlighted.
 
-"Now a figure that's close, but wrong."
+3. Click **Link to source**. The page opens at that sentence; hold for 3 s.
 
-> The result: **False**. Click the citation for the quotation that gives the real share.
+   > Click Link to source, and the original page opens at that exact sentence.
 
-"False. This quotation shows the share the source actually gives."
+4. Switch back to the Aletheia tab.
 
-`[01:55–02:15]` **6. When it can't tell**
+   > You don't have to trust the verdict. You can check it in one click, and cite it.
 
-> Type: `Exactly 87 hikers reached Mount Whitney's California summit on July 1, 2001.`
-> Click **Verify**; speed up the wait.
+## Clip 4 · How the agent works
 
-"And when the web doesn't have the answer?"
+**Screen:** the same report.
 
-> The result: **Insufficient evidence**, with its limitation in the box under the
-> explanation.
+1. Click **Pages Read** in the Investigation Audit Trail.
 
-"Insufficient evidence. The pages it found don't give a summit count for that day, so
-it doesn't guess."
+   > Below that is the audit trail. Pages Read lists every page it opened, not just the
+   > ones it quoted.
 
-`[02:15–02:30]` **7. Saved and measured**
+2. Click **Research log**. Point at a Token Factory line, then a Tavily line.
 
-> Go back to the home page: the three claims are under **Recent investigations**. Click
-> the first one: its saved report opens at once. Then switch to the README's accuracy table.
+   > The research log shows every step: each Token Factory call and each Tavily search.
 
-"Every run is saved. Your past checks are right here, and opening one shows the same
-result instantly, with no new calls. We measured it with live search on 77 claims whose
-labels we checked: 66 right, in two separate runs. When it answers true or false, it's
-right about nine times in ten. Aletheia: evidence first."
+3. Keep the log on screen.
+
+   > Python stays in control throughout. It runs the searches, enforces the limits, and
+   > checks every quotation against the saved page.
+   > A quotation that isn't there is thrown out.
+
+## Clip 5 · A figure that's close, but wrong
+
+**Screen:** the same report.
+
+1. Click **← Check another claim**, then type
+   `The WHO African Region accounted for 75% of global malaria cases in 2024.`
+
+   > Now a figure that's close, but wrong.
+
+2. Click **Verify**. Pause the recording until the answer appears.
+3. The answer: **False**. Point at the Evidence card's quotation.
+
+   > False.
+   > The quotation shows the share the source actually reports, so the writer can correct
+   > the sentence instead of guessing.
+
+## Clip 6 · When it can't tell, and the close
+
+**Screen:** the False report.
+
+1. Click **← Check another claim**, then type
+   `Exactly 87 hikers reached Mount Whitney's California summit on July 1, 2001.`
+
+   > And when the web doesn't have the answer?
+
+2. Click **Verify**. Pause the recording until the answer appears.
+3. The answer: **Insufficient evidence**. Point at the note under the explanation.
+
+   > Insufficient evidence. The pages it found don't give a summit count for that day, so
+   > it doesn't guess.
+
+4. Click **← Check another claim**. Your three checks are listed under **Recent
+   investigations**.
+
+   > Every check is saved.
+   > On 77 claims with checked answers, it got 66 right in two separate live runs.
+
+5. Hold for 2 s.
+
+   > Aletheia: evidence first.
 
 ## Spare claims
 
-Also right in both DeepSeek runs on the 77, each under 45 s:
+Also right in both DeepSeek runs on the 77, each under 45 s unless noted:
 
 | Expected | Claim |
 | --- | --- |
@@ -128,5 +158,6 @@ Also right in both DeepSeek runs on the 77, each under 45 s:
 
 ## After recording
 
+- Join the clips in order, cut the waits, and check the length is 3:00 or less.
+- Check that every result on screen is a real, unedited run.
 - Add the video link to the top of the README and to the submission form.
-- Check the length (under 3:00) and that every result on screen is a real, unedited run.
