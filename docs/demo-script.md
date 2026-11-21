@@ -9,7 +9,7 @@ per clip, so the video lands near 2:45.
 | --- | ---: | --- |
 | Sourced and verifiable answers | 30% | Clip 3: the highlighted quotation opens on its source page; Clip 6: no guess when the pages don't say |
 | Works end to end | 25% | Clips 2, 5 and 6: real live runs through the web client and API |
-| Usefulness | 20% | Clips 1 and 2: a health reporter checking a figure before it is published |
+| Usefulness | 20% | Clip 1: reporters and scientists who remember a claim but need its source; Clip 2: a health reporter citing a figure |
 | Agent design | 15% | Clip 4: the research log and quotation checks; Python in control |
 | Use of Token Factory and Tavily | 10% | Clips 2 and 4: the log names every call |
 
@@ -25,21 +25,24 @@ per clip, so the video lands near 2:45.
 - **Waiting for results:** runs take 15–50 s. Keep talking over the first seconds of the
   research log, then pause the recording until the answer appears; the wait is cut in
   editing.
+- **The story:** the README's problem and product. A writer remembers a claim but not
+  where they read it; Aletheia builds the citation trail. Each clip moves that one story on.
 - **If an answer comes out differently on the day,** use it as it is, or swap in a spare
   claim. Never edit a result. Answers can vary between runs: on the 77 trusted claims, two
   DeepSeek runs differed on 13. The three claims below were right in both.
 
-## Clip 1 · What Aletheia is
+## Clip 1 · The problem, and what Aletheia does
 
 **Screen:** the home page, search box empty. Keep the mouse still.
 
 **Say:**
 
-> This is Aletheia, a research agent that brings its sources.
-> You give it a claim, the way you remember it, or the way a draft states it.
-> It searches the live web, reads the pages, and tells you whether the claim is true,
-> false, or can't be settled.
-> And every answer comes with the exact passages it rests on, so you can check it yourself.
+> Remember reading it somewhere?
+> A reporter recalls a figure they've seen in several places. A scientist recalls a finding
+> from a paper read months ago.
+> Writing the sentence is easy. Citing it means piecing together which source said what.
+> Aletheia builds that citation trail. You give it the claim as you remember it, and it
+> brings back the exact passages, each linked to the page it came from.
 
 **Last action:** move the mouse to the search box.
 
@@ -50,8 +53,8 @@ per clip, so the video lands near 2:45.
 1. Click the search box and type
    `An estimated 610,000 people died of malaria worldwide in 2024, according to WHO.`
 
-   > Say you're a health reporter, and your draft says 610,000 people died of malaria in
-   > 2024. Let's check it, live.
+   > Say you're a health reporter. Your draft says 610,000 people died of malaria in 2024,
+   > and you need the source. Let's check it, live.
 
 2. Click **Verify**.
 3. As the log fills in, point at a "Token Factory model call" line, then a "Tavily search"
@@ -59,7 +62,8 @@ per clip, so the video lands near 2:45.
 
    > A model on Nebius Token Factory plans the searches.
    > Tavily runs them in parallel and reads the best pages.
-   > Then the model gives a verdict, with quotations copied word for word from those pages.
+   > Then the model says whether the claim is true, false, or can't be settled, quoting the
+   > pages word for word.
 
 **Stop** once you've finished speaking. Resume recording when the answer appears: that is
 the start of Clip 3.
@@ -74,7 +78,7 @@ the start of Clip 3.
 
 2. Move to the **Evidence** card and its highlighted quotation.
 
-   > Here's the quotation it relied on, highlighted.
+   > Here's the passage it rests on, highlighted.
 
 3. Click **Link to source**. The page opens at that sentence; hold for 3 s.
 
@@ -82,7 +86,8 @@ the start of Clip 3.
 
 4. Switch back to the Aletheia tab.
 
-   > You don't have to trust the verdict. You can check it in one click, and cite it.
+   > That's the citation trail: the passage, and the page it came from. You don't have to
+   > trust the verdict. You can check it in one click, and cite it.
 
 ## Clip 4 · How the agent works
 
@@ -116,8 +121,8 @@ the start of Clip 3.
 3. The answer: **False**. Point at the Evidence card's quotation.
 
    > False.
-   > The quotation shows the share the source actually reports, so the writer can correct
-   > the sentence instead of guessing.
+   > The quotation shows the share the source actually reports, so you can refine the
+   > sentence before it goes out.
 
 ## Clip 6 · When it can't tell, and the close
 
@@ -132,7 +137,7 @@ the start of Clip 3.
 3. The answer: **Insufficient evidence**. Point at the note under the explanation.
 
    > Insufficient evidence. The pages it found don't give a summit count for that day, so
-   > it doesn't guess.
+   > it doesn't guess, and it doesn't invent a citation.
 
 4. Click **← Check another claim**. Your three checks are listed under **Recent
    investigations**.
@@ -142,7 +147,7 @@ the start of Clip 3.
 
 5. Hold for 2 s.
 
-   > Aletheia: evidence first.
+   > Aletheia. Remember reading it somewhere? Now you can cite it.
 
 ## Spare claims
 
