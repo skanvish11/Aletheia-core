@@ -18,11 +18,13 @@ They give Aletheia the claim as they remember it. Aletheia searches for relevant
 ## How it works
 
 ```text
-Claim → plan queries → search and read pages → propose a verdict with quotations → check the quotations
+Claim → plan queries (incl. fact-checks) → search and read pages → check the sources → propose a verdict with quotations → check the quotations
 ```
 
-- **Query planning:** The model writes up to three queries. Tavily searches them in parallel. If the first round leaves the claim unresolved, the agent can search once more for the missing detail.
+- **Query planning:** The model writes up to three queries, including one aimed at fact-checks and evidence that the claim is false. Tavily searches them in parallel. If the first round leaves the claim unresolved, the agent can search once more for the missing detail.
 - **Evidence handling:** The agent merges results, prioritizes government, academic, and international-body domains, and drops duplicate URLs and page text. The model reads selected passages and proposes a verdict with quotations. For **true** or **false**, Python must locate at least one usable quotation in the saved page. A second model call can veto the verdict if the quotations point the other way. If that check is inconclusive or cannot run, the proposed verdict stands. [Research loop](src/aletheia/simple.py)
+- **Source checks:** Social and video sites are skipped. Pages with nearly the same wording, and subdomains of one site, count as one source. A true or false verdict needs at least one quotation from a recognised source: an official body, a major news organization, a journal or a reference publisher. A claim stated only on unrecognised sites returns **cannot settle**. A fact-check that contradicts the claim outweighs unrecognised pages. Each quotation in the report is labelled with whether its site is recognised.
+- **Protection against bad actors:** Several sites repeating a claim count for no more than one unrecognised site, so a planted claim can't reach a verdict on its own. Page text can't give the model instructions: it enters as untrusted data, and links are removed from the reason shown to the user. Every quotation must appear word for word on the saved page, so the model can't invent a source.
 - **Safety:** Web pages enter the model as untrusted text. Python runs the searches and page reads and enforces the limits. Provider keys stay on the backend. The local API binds to loopback.
 - **Trade-offs:** Parallel searches and page reads save time. One follow-up limits cost but can leave a difficult claim unresolved. A quotation can be genuine and still be misinterpreted. In two live evaluations, DeepSeek matched the expected answer on **66 of 77 tuning claims** each time, although 13 answers changed between runs. The second run had a **28-second median**. [Evaluation details](docs/hackathon-status.md#where-accuracy-stands)
 
@@ -98,29 +100,12 @@ Open the URL printed by Vite and enter a claim. The research log shows the searc
 
 [Saved Mount Whitney investigation](evals/runs/20261117-simple-live-dsv4pro-a/claims/u-05.json) · [Demo script, scene 6](docs/demo-script.md)
 
-## Unreliable sources
+## Limitations
 
-Every quotation is checked against the saved page, so Aletheia can't cite a sentence that isn't there. It doesn't yet judge whether that page is right. A false statement on a page Aletheia reads can be quoted as evidence.
-
-**What it does today**
-
-- Skips social and video sites, and reads government, academic and international-body pages first.
-- Drops repeated URLs and pages with identical text, so a copied page counts once.
-- Plans one search aimed at evidence that the claim is false.
-- Links every quotation to its page, so the reader can see which sites a verdict rests on.
-
-**Planned next (not built yet)**
-
-- **A recognised source for every verdict.** True or false would need at least one quotation from an official body, a major news organization, a journal or a reference publisher. A claim stated only on unrecognised sites would return **cannot settle**. Many correct verdicts in our runs cite smaller sites, so we will measure the accuracy cost before turning this on.
-- **Near-copies count once.** Pages with nearly the same wording, and subdomains of one site, would count as one source.
-- **Fact-checks first.** Each claim would also be searched on fact-checking sites. A fact-check that contradicts the claim would outweigh unrecognised pages.
-- **Site labels in the report.** Each quotation would show whether its site is recognised.
-
-**Harder problems for later**
-
-- **Coordinated sites.** Several sites can be set up to repeat the same false claim. Spotting them needs signals Aletheia doesn't collect yet: domain age, shared hosting or ownership, and sites that only cite each other.
+- **Coordinated sites.** A group of sites set up to repeat a false claim can still slip through if one of them is recognised. Spotting such networks needs signals Aletheia doesn't collect yet: domain age, shared hosting or ownership, and sites that only cite each other.
 - **Independent origins.** Two sources may both repeat a third. The earlier staged pipeline records whether sources are independent. The simple loop doesn't use that check yet.
 - **Recognised sources can be wrong.** An official or well-known page can be outdated or mistaken. Aletheia shows the sentence and its source so the reader can judge.
+- **Interpretation.** A quotation can be genuine and still be misread. A second model call checks the direction, but if it is inconclusive the verdict stands.
 
 ## License
 
