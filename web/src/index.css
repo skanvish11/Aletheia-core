@@ -1304,13 +1304,24 @@ pre {
   .report-head { grid-template-columns: minmax(0,1fr); }
   .report-head .result-label + .metrics-bar { grid-column: 1; justify-self: start; }
 }
-@media (min-width: 720px) and (max-height: 800px) {
-  #root > main:has(.report) { max-width: 1080px; padding-block: 8px; }
-  .report-head { margin-top: 4px; }
-  .report-body, .passage-analysis { margin-top: 10px; }
-  .report-main { gap: 8px; }
-  .evidence-pane .pane-head, .evidence-pane .pane-body, .audit-row { padding-block: 8px; }
-  .evidence-pane blockquote { margin-block: 8px; }
-  .passage-analysis { padding-top: 8px; }
-  .analysis-pair { margin-top: 6px; }
+/* Spend extra viewport height on whitespace progressively, including on laptops. */
+@media (min-width: 720px) and (max-height: 1080px) {
+  #root > main:has(.report) {
+    --report-space: clamp(8px, calc(5vh - 34px), 24px);
+    max-width: 1080px;
+    padding-block: var(--report-space);
+  }
+  .report-head { margin-top: calc(var(--report-space) / 2); }
+  .report-body, .passage-analysis { margin-top: var(--report-space); }
+  .report-main { gap: var(--report-space); }
+  .report-main > .evidence-pane { margin-top: 0; }
+  .evidence-pane .pane-head, .evidence-pane .pane-body, .audit-row { padding-block: var(--report-space); }
+  .evidence-pane blockquote { margin-block: var(--report-space); }
+  .passage-analysis { padding-top: var(--report-space); }
+  .analysis-pair { margin-top: calc(var(--report-space) * .75); }
+}
+@media (min-width: 720px) and (max-height: 760px) {
+  .report-head .metrics-bar { padding-block: 4px; }
+  .evidence-pane .pane-head { padding-block: 4px; }
+  .evidence-pane blockquote { padding-block: 8px; }
 }
