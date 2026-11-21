@@ -98,6 +98,30 @@ Open the URL printed by Vite and enter a claim. The research log shows the searc
 
 [Saved Mount Whitney investigation](evals/runs/20261117-simple-live-dsv4pro-a/claims/u-05.json) · [Demo script, scene 6](docs/demo-script.md)
 
+## Unreliable sources
+
+Every quotation is checked against the saved page, so Aletheia can't cite a sentence that isn't there. It doesn't yet judge whether that page is right. A false statement on a page Aletheia reads can be quoted as evidence.
+
+**What it does today**
+
+- Skips social and video sites, and reads government, academic and international-body pages first.
+- Drops repeated URLs and pages with identical text, so a copied page counts once.
+- Plans one search aimed at evidence that the claim is false.
+- Links every quotation to its page, so the reader can see which sites a verdict rests on.
+
+**Planned next (not built yet)**
+
+- **A recognised source for every verdict.** True or false would need at least one quotation from an official body, a major news organization, a journal or a reference publisher. A claim stated only on unrecognised sites would return **cannot settle**. Many correct verdicts in our runs cite smaller sites, so we will measure the accuracy cost before turning this on.
+- **Near-copies count once.** Pages with nearly the same wording, and subdomains of one site, would count as one source.
+- **Fact-checks first.** Each claim would also be searched on fact-checking sites. A fact-check that contradicts the claim would outweigh unrecognised pages.
+- **Site labels in the report.** Each quotation would show whether its site is recognised.
+
+**Harder problems for later**
+
+- **Coordinated sites.** Several sites can be set up to repeat the same false claim. Spotting them needs signals Aletheia doesn't collect yet: domain age, shared hosting or ownership, and sites that only cite each other.
+- **Independent origins.** Two sources may both repeat a third. The earlier staged pipeline records whether sources are independent. The simple loop doesn't use that check yet.
+- **Recognised sources can be wrong.** An official or well-known page can be outdated or mistaken. Aletheia shows the sentence and its source so the reader can judge.
+
 ## License
 
 [MIT](LICENSE)
