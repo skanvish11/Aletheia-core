@@ -4,7 +4,7 @@
 
 > ODSC × Nebius Hackathon submission · Challenge: *Build a research agent that brings its sources*
 
-- **Demo video (2–3 min):** Link pending.
+- **Demo video (2:30):** [demo/aletheia-demo.mp4](demo/aletheia-demo.mp4), three live runs recorded in the web client.
 - **Team:** [@skanvish11](https://github.com/skanvish11) · [@csalive](https://github.com/csalive)
 
 ## The problem
