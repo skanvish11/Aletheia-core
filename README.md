@@ -1,19 +1,17 @@
 # Aletheia
 
-**Remember reading it somewhere?** Aletheia builds a citation trail for the claim you have in mind.
+Aletheia builds a citation trail for the claim you have in mind.
 
 > ODSC × Nebius Hackathon submission · Challenge: *Build a research agent that brings its sources*
 
 - **Demo video (2–3 min):** Link pending.
 - **Team:** [@skanvish11](https://github.com/skanvish11) · [@csalive](https://github.com/csalive)
 
-## The problem
+## The problem and the product
 
-A reporter drafting a story remembers a figure they’ve seen in several places. A scientist writing a paper remembers a finding from studies they read months ago. Both can write the sentence from memory. When it’s time to cite it, they have to piece together which source said what.
+**Remember reading it somewhere?** A reporter recalls a figure they've seen in several places. A scientist recalls a finding from a paper read months ago. Writing the sentence is easy. Citing it means piecing together which source said what.
 
-## The product — Aletheia
-
-They give Aletheia the claim as they remember it. Aletheia searches for relevant sources and brings the passages together in its **Evidence** view, each linked to the original page. The writer can check which details the sources support, refine the sentence, and give readers a citation trail they can follow.
+Aletheia builds that citation trail. You give it the claim as you remember it, and it brings back the exact passages, each linked to the page it came from. Every passage is checked word for word against the saved page. Aletheia then says whether the sources show the claim is **true** or **false**, or that they **cannot settle** it. You see which details hold up, fix the sentence where your memory slipped, and give readers a trail they can follow.
 
 ## How it works
 
