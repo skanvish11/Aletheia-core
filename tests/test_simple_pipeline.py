@@ -11,7 +11,7 @@ import httpx
 import pytest
 from httpx import ASGITransport, AsyncClient
 from pydantic import SecretStr
-from research_fixtures import terminal
+from research_fixtures import sourced, terminal
 
 from aletheia.api import create_app
 from aletheia.budgets import CallBudget
@@ -156,9 +156,35 @@ class Fake:
             yield model, search, "synthetic-model"
 
 
-def answer(verdict, text="The Archive opened in 2000.", page=1):
+def reading(page=1, **changes):
+    """The model's reading of one page: by default the producer's own documented record."""
+    value = {
+        "page": page,
+        "basis": "documented_record",
+        "record": "The Archive's history page",
+        "producer": "The Archive",
+        "presentation": "original",
+        "producer_owns_page": "yes",
+        "conditions": "not_applicable",
+        "record_date": "unknown",
+        "evidence": ["Archive history"],
+    }
+    return value | changes
+
+
+def answer(verdict, text="The Archive opened in 2000.", page=1, sources=None, **fields):
     quotes = [{"page": page, "text": text}] if text else []
-    return {"verdict": verdict, "quotes": quotes, "reason": "What the page states."}
+    value = {
+        "claim_about": "the_fact_itself",
+        "named_source": "none",
+        "needs_test_conditions": False,
+        "sources": [reading(page)] if sources is None else sources,
+        "original_record_not_supplied": "none",
+        "verdict": verdict,
+        "quotes": quotes,
+        "reason": "What the page states.",
+    }
+    return value | fields
 
 
 async def check(settings, fake, claim=CLAIM, **options):
@@ -592,7 +618,9 @@ def test_a_shortened_quotation_is_kept_as_its_parts_when_each_is_the_pages_own()
 
     def judged(text):
         quotes = [{"page": 1, "text": text}]
-        return validate_answer(Answer(verdict="false", quotes=quotes, reason="r"), pages, originals)
+        return validate_answer(
+            Answer(**sourced(dict(verdict="false", quotes=quotes, reason="r"))), pages, originals
+        )
 
     state = judged("The 2016 Summer Olympics ... were held in Rio de Janeiro.")
     assert [q["text"] for q in state["quotes"]] == [
@@ -637,7 +665,9 @@ def test_quotation_matching_preserves_meaningful_symbols(page, quotation):
 
     assert not quoted_in(page, quotation)
     state = validate_answer(
-        Answer(verdict="true", quotes=[{"page": 1, "text": quotation}], reason="r"),
+        Answer(
+            **sourced(dict(verdict="true", quotes=[{"page": 1, "text": quotation}], reason="r"))
+        ),
         [{"page": 1, "passages": [page]}],
         [page],
     )

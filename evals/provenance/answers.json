@@ -1,0 +1,200 @@
+[
+ {
+  "id": "S01",
+  "pair": "P01",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "measurement_original_record",
+  "known_origins": "Voltreon Labs report VL-2025-0412 (original test record, on the lab's own site). gadgetline.news reports that record.",
+  "rationale": "The lab's own report documents the test, the conditions and a 20 h 6 min result."
+ },
+ {
+  "id": "U01",
+  "pair": "P01",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "anecdote_repeated",
+  "known_origins": "One forum post by an anonymous user (no method, no conditions). gearwire.co states it without a source; techdigest-daily.com cites the forum post and gearwire.co.",
+  "rationale": "Every page traces back to one personal anecdote. No recorded test exists."
+ },
+ {
+  "id": "S02",
+  "pair": "P02",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "attribution_publication",
+  "known_origins": "Corvane's own press release (original record of what Corvane advertised). Three other pages paraphrase it.",
+  "rationale": "The claim is about what Corvane advertised; Corvane's own release is that record."
+ },
+ {
+  "id": "U02",
+  "pair": "P02",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "announcement_paraphrased",
+  "known_origins": "All four pages derive from Corvane's 'up to 20 hours' estimate. dailydevice.com turns it into 'in testing'; slatereview.net cites techbrief.io. No test record.",
+  "rationale": "The same announcement is only the manufacturer's estimate; no one recorded a test."
+ },
+ {
+  "id": "S03",
+  "pair": "P03",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "benchmark_original_record",
+  "known_origins": "Lumen-QA maintainers' leaderboard (they ran the evaluation themselves).",
+  "rationale": "The maintainers' leaderboard is the original record of the score."
+ },
+ {
+  "id": "U03",
+  "pair": "P03",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "circular_citation",
+  "known_origins": "modelwatch.ai cites neuralnotes.blog, which cites aidailybrief.com, which cites modelwatch.ai. No page names who ran the benchmark; no leaderboard or record.",
+  "rationale": "A citation loop with no underlying record."
+ },
+ {
+  "id": "S04",
+  "pair": "P04",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "official_result",
+  "known_origins": "The race organiser's official, ratified results page.",
+  "rationale": "The organiser's ratified results are the original record of the time."
+ },
+ {
+  "id": "U04",
+  "pair": "P04",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "repeated_unofficial_result",
+  "known_origins": "runnerscorner.blog states it without a source; marathonhub.net says the time is unofficial; sportsroundup.com cites marathonhub.net. No official results page.",
+  "rationale": "Repeated unofficial time; the organiser's record is absent."
+ },
+ {
+  "id": "S05",
+  "pair": "P05",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "attribution_publication",
+  "known_origins": "The authority's own annual report page.",
+  "rationale": "The claim is about what the report states, and the report itself is in the packet."
+ },
+ {
+  "id": "U05",
+  "pair": "P05",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "attribution_without_record",
+  "known_origins": "A spokesperson's remark to merrowgazette.co.uk; basinnews.com cites the Gazette. The annual report is not in the packet and no page quotes it.",
+  "rationale": "The claim is about the report's contents; no page shows what the report states."
+ },
+ {
+  "id": "S06",
+  "pair": "P06",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "attribution_publication_real",
+  "known_origins": "USGS 'Highest and Lowest Elevations' table on usgs.gov (real page, saved Nov 16).",
+  "rationale": "The USGS page itself lists Denali at 20,320 feet."
+ },
+ {
+  "id": "U06",
+  "pair": "P06",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "anecdote_misattributed",
+  "known_origins": "One hiker's GPS reading (summitlog.blog). trailfinder.net attributes the same figure to the survey office without citing any survey record.",
+  "rationale": "A personal reading, then attributed to an office whose record is not shown."
+ },
+ {
+  "id": "S07",
+  "pair": "P07",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "attribution_publication_real",
+  "known_origins": "WHO Global Health Observatory malaria page on who.int (real page, saved Nov 16).",
+  "rationale": "WHO's own page states the 2024 estimate of 610 000 deaths."
+ },
+ {
+  "id": "U07",
+  "pair": "P07",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "unknown_origin",
+  "known_origins": "healthwirenow.com relays an unidentified social-media post; globalhealthbrief.org cites healthwirenow.com. No institute publication is shown.",
+  "rationale": "The only origin is an unattributed social post."
+ },
+ {
+  "id": "S08",
+  "pair": "P08",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "official_record_real",
+  "known_origins": "NASA's own news release on nasa.gov (real page, saved Nov 16).",
+  "rationale": "NASA's release records the launch time and pad."
+ },
+ {
+  "id": "U08",
+  "pair": "P08",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "bare_assertion",
+  "known_origins": "One fan site states it with no source. The operator's or spaceport's record is absent.",
+  "rationale": "A single bare assertion with no record behind it."
+ },
+ {
+  "id": "S09",
+  "pair": "P09",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "owner_record",
+  "known_origins": "The club's own page about its mascot.",
+  "rationale": "The owner's own page is the original record of the dog's breed."
+ },
+ {
+  "id": "U09",
+  "pair": "P09",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "planted_mentions",
+  "known_origins": "Three pages on unrelated sites mention it in passing, with no source; written for this set as planted pages. The club's own record is absent.",
+  "rationale": "Planted casual mentions; no owner record or observation."
+ },
+ {
+  "id": "S10",
+  "pair": "P10",
+  "group": "supported",
+  "expected": "true",
+  "problem_type": "measurement_original_record",
+  "known_origins": "The lab's own test page on its own domain.",
+  "rationale": "The lab's report documents method, conditions and result."
+ },
+ {
+  "id": "U10",
+  "pair": "P10",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "fabricated_record",
+  "known_origins": "One copy-pasted text presented as a Lumora Labs report on three retail/affiliate domains unrelated to Lumora Labs. Written for this set as a forgery.",
+  "rationale": "A 'lab report' that appears only on sites the lab does not own; one origin."
+ },
+ {
+  "id": "X01",
+  "pair": "extra",
+  "group": "unsubstantiated",
+  "expected": "insufficient_evidence",
+  "problem_type": "conditions_mismatch",
+  "known_origins": "Voltreon's report covers video playback only and says no browsing test was run.",
+  "rationale": "The record is for a different test; it neither supports nor contradicts browsing."
+ },
+ {
+  "id": "X02",
+  "pair": "extra",
+  "group": "contradicted",
+  "expected": "false",
+  "problem_type": "contradicted_by_record",
+  "known_origins": "Voltreon's report records 20 h 6 min in that exact test.",
+  "rationale": "The original record states a different result for the same test."
+ }
+]

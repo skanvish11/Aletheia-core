@@ -19,7 +19,14 @@ from pydantic import BaseModel, ConfigDict, Field
 from aletheia.budgets import CallBudget
 from aletheia.comparison import compare
 from aletheia.evidence import canonical_url, digest, snapshot
-from aletheia.one_call import INSTRUCTIONS, Answer, offer_pages, quote_matches, validate_answer
+from aletheia.one_call import (
+    INSTRUCTIONS,
+    Answer,
+    basis_reason,
+    offer_pages,
+    quote_matches,
+    validate_answer,
+)
 from aletheia.passages import terms
 from aletheia.providers.errors import ErrorCode, ProviderError
 from aletheia.research_contracts import (
@@ -33,8 +40,8 @@ from aletheia.research_contracts import (
     InvestigationResult,
 )
 
-APPLICATION_VERSION = "simple-loop-v1"
-PROMPT_VERSION = "one-call-v1"
+APPLICATION_VERSION = "simple-loop-v2"
+PROMPT_VERSION = "one-call-v3"
 MAX_ROUNDS = 2  # the first search, then at most one follow-up
 PAGES_PER_ROUND = (6, 3)
 PAGES_OFFERED = 6
@@ -191,6 +198,47 @@ def locate(source, text, claim_text):
         quote = page[start:end]
         return Excerpt(span_ids=ids, start=start, end=end, text=quote, quote_hash=digest(quote))
     return None
+
+
+def provenance_fields(state, number, source):
+    """The saved evidence's provenance fields, from the model's reading of the page.
+
+    Reuses the staged pipeline's fields so saved records keep one shape. Only a page
+    the code credited as an original record is marked authoritative, and only producers
+    counted toward independent records are marked independent.
+    """
+    reading = next(
+        (s for s in state["original_answer"].get("sources", []) if s["page"] == number), None
+    )
+    basis = state.get("basis") or {}
+    empty = {
+        "authoritative_record": False,
+        "publisher": None,
+        "origin": None,
+        "independence": "unknown",
+        "provenance_span_ids": [],
+        "provenance_note": None,
+    }
+    if reading is None:
+        return empty
+    spans = set()
+    for text in reading["evidence"]:
+        for start, end in quote_matches(source.normalized_text, text):
+            spans |= {s.id for s in source.spans if s.start < end and s.end > start}
+            break
+    note = (
+        f"{reading['basis']}, {reading['presentation']}; record: {reading['record']}; "
+        f"conditions: {reading['conditions']}; date: {reading['record_date']}"
+    )
+    counted = basis.get("route") == "independent_records"
+    return {
+        "authoritative_record": number in basis.get("pages", []),
+        "publisher": reading["producer"][:400] if reading["producer_owns_page"] == "yes" else None,
+        "origin": reading["producer"][:400],
+        "independence": "established" if counted and spans else "unknown",
+        "provenance_span_ids": sorted(spans)[:20],
+        "provenance_note": note[:2000],
+    }
 
 
 class SimplePipeline:
@@ -391,6 +439,7 @@ class SimplePipeline:
         if state:
             relation = {"true": "supports", "false": "contradicts"}.get(verdict, "context")
             for source, excerpt in state["located"]:
+                provenance = provenance_fields(state, used.index(source) + 1, source)
                 evidence.append(
                     Evidence(
                         id=str(uuid4()),
@@ -399,14 +448,9 @@ class SimplePipeline:
                             rationale=state["reason"],
                             relation=relation,
                             scope_match=True,
-                            authoritative_record=False,
                             credible_synthesis=False,
                             synthesis_coverage=None,
-                            publisher=None,
-                            origin=None,
-                            independence="unknown",
-                            provenance_span_ids=[],
-                            provenance_note=None,
+                            **provenance,
                             limitations=[],
                             flags=[],
                         ),
@@ -693,6 +737,20 @@ class SimplePipeline:
         if state["verdict"] in {"true", "false"} and not state["located"]:
             state.update(
                 verdict="cannot_settle", reason="No usable supporting quotation was returned."
+            )
+        basis = state["basis"]
+        if state["verdict"] in {"true", "false"} and basis["route"] == "original_record":
+            # The record that settles the claim must still carry a usable quotation.
+            located = {used.index(source) + 1 for source, _ in state["located"]}
+            if not located & set(basis["pages"]):
+                answer = Answer.model_validate(state["original_answer"])
+                state.update(verdict="cannot_settle", reason=basis_reason(answer))
+                state["basis_withheld"] = True
+        if state["basis_withheld"]:
+            await emit(
+                "task_output_rejected",
+                {"task": "verdict", "reason": "no_qualifying_basis"},
+                stage="verifying",
             )
         if state["verdict"] in {"true", "false"}:
             await self.check(ask, emit, assertion, state)

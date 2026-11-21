@@ -9,7 +9,7 @@ from types import SimpleNamespace
 
 import httpx
 import pytest
-from research_fixtures import Providers
+from research_fixtures import Providers, sourced
 
 from aletheia.budgets import CallBudget, RunBudget
 from aletheia.config import ProviderSettings
@@ -208,7 +208,7 @@ async def test_baseline_validates_quotes_in_one_call_without_label_metadata(
     claim = trusted_claims(ids=["t-02"])[0]
     claim.note = "SECRET_NOTE"
     claim.sources = [KeySource(url="https://label.invalid/SECRET_SOURCE", shows="SECRET_QUOTE")]
-    model = FakeModel({"verdict": "true", "quotes": [quote], "reason": "A short reason."})
+    model = FakeModel(sourced({"verdict": "true", "quotes": [quote], "reason": "A short reason."}))
     result = await baseline.evaluate_claim(claim, [page()], model, 30)
     assert result["verdict"] == verdict and result["downgraded"] == downgraded
     assert result["original_answer"]["verdict"] == "true"
@@ -223,7 +223,7 @@ async def test_baseline_validates_quotes_in_one_call_without_label_metadata(
 
 def test_quote_spanning_sentences_is_valid_but_joining_distant_passages_is_not():
     answer = baseline.Answer(
-        verdict="false", quotes=[{"page": 1, "text": "First. Last."}], reason="r"
+        **sourced(dict(verdict="false", quotes=[{"page": 1, "text": "First. Last."}], reason="r"))
     )
     offered = [{"page": 1, "passages": ["First.", "Last."]}]
     assert not baseline.validate_answer(answer, offered, ["First.\nLast."])["downgraded"]
@@ -377,11 +377,13 @@ async def test_baseline_success_records_totals_and_label_changes_do_not_change_r
     class Model(FakeModel):
         def __init__(self, config):
             super().__init__(
-                {
-                    "verdict": "true",
-                    "quotes": [{"page": 1, "text": "The Archive opened in 2000."}],
-                    "reason": "Recorded date.",
-                }
+                sourced(
+                    {
+                        "verdict": "true",
+                        "quotes": [{"page": 1, "text": "The Archive opened in 2000."}],
+                        "reason": "Recorded date.",
+                    }
+                )
             )
             models.append(self)
 
@@ -458,7 +460,9 @@ def test_trusted_score_cli_keeps_77_denominator_and_refuses_to_overwrite(tmp_pat
 )
 def test_quote_glyphs_match_without_changing_original_answer(quoted):
     original = 'The Archive’s name is "Museum".'
-    answer = baseline.Answer(verdict="true", quotes=[{"page": 1, "text": quoted}], reason="r")
+    answer = baseline.Answer(
+        **sourced(dict(verdict="true", quotes=[{"page": 1, "text": quoted}], reason="r"))
+    )
     state = baseline.validate_answer(answer, [{"page": 1, "passages": [original]}], [original])
     assert not state["downgraded"]
     assert state["original_answer"]["quotes"][0]["text"] == quoted
@@ -475,7 +479,9 @@ def test_quote_glyphs_match_without_changing_original_answer(quoted):
 )
 def test_quote_normalization_preserves_facts_negation_case_and_numbers(quoted):
     original = "The Archive opened in 2000."
-    answer = baseline.Answer(verdict="true", quotes=[{"page": 1, "text": quoted}], reason="r")
+    answer = baseline.Answer(
+        **sourced(dict(verdict="true", quotes=[{"page": 1, "text": quoted}], reason="r"))
+    )
     state = baseline.validate_answer(answer, [{"page": 1, "passages": [original]}], [original])
     assert state["downgraded"]
 
@@ -512,7 +518,9 @@ def test_scoring_stdout_is_utf8_under_a_legacy_windows_encoding(tmp_path):
 
 def test_quote_normalization_does_not_turn_inches_into_feet():
     answer = baseline.Answer(
-        verdict="true", quotes=[{"page": 1, "text": "The height is 6'."}], reason="r"
+        **sourced(
+            dict(verdict="true", quotes=[{"page": 1, "text": "The height is 6'."}], reason="r")
+        )
     )
     original = 'The height is 6".'
     state = baseline.validate_answer(answer, [{"page": 1, "passages": [original]}], [original])

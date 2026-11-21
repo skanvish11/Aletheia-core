@@ -210,6 +210,60 @@ settled." The two passages it read are listed as context, not as evidence for a 
 | Time or call limit reached | Judged on the pages already read. The run ends **partial**, with the limit named |
 | Key rejected or quota used up | The run **fails** with no verdict. A provider failure is never treated as evidence |
 
+## What counts as evidence
+
+A quotation being on a page shows that someone wrote it, not that it is true. A
+manufacturer's "up to 20 hours" proves the advertisement, not a test, and a thousand pages
+repeating it are still one source. So the verdict call says, for each page it relies on,
+what record lies behind it and who produced it, and code keeps a true or false verdict
+only on a qualifying basis: one producer's own documented record on its own site, or
+documented records from two different producers. Details: [the basis check](docs/simple-loop.md#the-basis-check).
+
+Each row below is backed by a case in the [provenance evaluation](evals/provenance/README.md)
+(20 frozen claims, real verdict model, fixed pages, three runs each). Results: before the
+change, 9 of the 10 unsubstantiated claims got True; after it, 0. Supported claims
+correctly True: 8 before, 9 after. Full table: [results](evals/provenance/results.md).
+
+| Handled: no true verdict from… | Case |
+| --- | --- |
+| Many sites repeating or rewording one announcement | U02 |
+| A personal anecdote, alone or repeated as fact | U01, U06 |
+| Articles citing each other in a circle | U03 |
+| A repeated unofficial result with no official record | U04 |
+| A spokesperson's remark, for a claim about what a report says | U05 |
+| An estimate traced only to an unidentified post | U07 |
+| One page stating it with no source | U08 |
+| Planted pages mentioning it in passing ("the dog is blue") | U09 |
+| A "lab report" copied onto sites the lab does not own | U10 |
+
+| Kept: a true verdict from… | Case |
+| --- | --- |
+| A lab's own test report, with its conditions | S01, S10 |
+| A company's own release, for "the company advertised…" (but not for the tested fact) | S02 |
+| A benchmark maintainer's leaderboard; a race's ratified results | S03, S04 |
+| An organization's own publication, for "its report states…" | S05, S07 |
+| An organization's own account of its own actions or property | S08, S09 |
+
+**Not handled** (out of scope for now):
+
+- **Out-of-date claims.** The record's date is captured but not compared with the claim.
+- **A true number used to imply something false.**
+- **Cause-and-effect claims.**
+- **An error inside a genuine original record.** Aletheia can show which record a
+  verdict rests on; it cannot tell that the record itself is wrong.
+- **A determined forger.** Pages that only state a claim never make it true, and a fake
+  "official" page on someone else's site gets no credit, but a convincing fake on a
+  convincing domain could pass. Every verdict names the record it rests on, so it can be
+  inspected.
+- **A test-conditions mismatch can still come back False** instead of cannot settle
+  (case X01: a video-playback record against a web-browsing claim).
+- **Search.** The evaluation uses fixed pages. It measures how Aletheia judges what it
+  reads, not how often search finds the original record.
+- **The staged pipeline** (not the demo) keeps its own, unchanged evidence rules.
+
+Which parts code enforces and which still rest on the model's reading of a page is listed
+in [the basis check](docs/simple-loop.md#the-basis-check).
+
 ## Accuracy
 
 Measured on the 77 **trusted tuning claims** (`evals/claims/`), whose labels were checked by

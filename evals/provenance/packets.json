@@ -1,0 +1,367 @@
+[
+ {
+  "id": "S01",
+  "claim": "In a continuous video-playback test, the Kestrel 7 tablet's battery lasted 20 hours.",
+  "pages": [
+   {
+    "url": "https://www.voltreonlabs.com/reports/2025/kestrel-7-battery",
+    "title": "Kestrel 7 battery test report | Voltreon Labs",
+    "text": "# Kestrel 7: battery test report\n\nReport VL-2025-0412 · Published 14 May 2025 · Voltreon Labs, Device Testing Group\n\n## Method\n\nWe tested two retail Kestrel 7 units (firmware 3.2.1) bought at retail. Each unit was\ncharged to 100% and then looped a 1080p video file stored on the device until it shut\ndown. Screen brightness was fixed at 200 nits, Wi-Fi was on and connected, Bluetooth\nwas off, and the room was held at 22 °C. Each unit ran the test twice.\n\n## Result\n\nIn our continuous video-playback test, the Kestrel 7 ran for 20 hours 6 minutes on\naverage (unit A: 20 h 2 min and 20 h 9 min; unit B: 20 h 4 min and 20 h 9 min).\n\nWe did not run a web-browsing or gaming test on this model."
+   },
+   {
+    "url": "https://www.gadgetline.news/kestrel-7-battery-life-tested",
+    "title": "Kestrel 7 lasts about 20 hours in lab video test",
+    "text": "# Kestrel 7 lasts about 20 hours in lab video test\n\nThe Kestrel 7 tablet lasted just over 20 hours in a continuous video-playback test run\nby Voltreon Labs, according to the lab's published report. Voltreon looped a 1080p\nvideo at 200 nits until the battery ran out. The tablet goes on sale in June."
+   }
+  ]
+ },
+ {
+  "id": "U01",
+  "claim": "In a continuous video-playback test, the Pelora Note 5 tablet's battery lasted 22 hours.",
+  "pages": [
+   {
+    "url": "https://www.tabletforum.net/threads/pelora-note-5-battery-is-insane.88213",
+    "title": "Pelora Note 5 battery is insane - TabletForum",
+    "text": "# Pelora Note 5 battery is insane\n\nPosted by skyler_k\n\nJust wanted to share: my Pelora Note 5 lasted 22 hours today playing videos nonstop.\nBest tablet I've ever owned, honestly.\n\nReply from mvaughn: nice, mine seems good too."
+   },
+   {
+    "url": "https://www.gearwire.co/pelora-note-5-battery-life",
+    "title": "Pelora Note 5 battery life: 22 hours of video",
+    "text": "# Pelora Note 5 battery life: 22 hours of video\n\nThe Pelora Note 5's battery lasted 22 hours in continuous video playback. That puts it\nahead of most tablets in its class. Pelora has not commented on battery figures."
+   },
+   {
+    "url": "https://www.techdigest-daily.com/pelora-note-5",
+    "title": "Pelora Note 5 reaches 22 hours of video playback",
+    "text": "# Pelora Note 5 reaches 22 hours of video playback\n\nUsers say the Pelora Note 5 runs for 22 hours of continuous video playback, according\nto posts on TabletForum and a report by GearWire."
+   }
+  ]
+ },
+ {
+  "id": "S02",
+  "claim": "Corvane advertised the X2 tablet's battery life as up to 20 hours.",
+  "pages": [
+   {
+    "url": "https://www.corvane.com/newsroom/2025/introducing-x2",
+    "title": "Introducing Corvane X2 | Corvane Newsroom",
+    "text": "# Introducing Corvane X2\n\nPress release · 3 March 2025\n\nCorvane today announced the X2, its thinnest tablet yet. The Corvane X2 offers up to\n20 hours of battery life*, an 11-inch display and a new aluminium design.\n\n\"The X2 is built for people who are away from a charger all day,\" said Corvane chief\nproduct officer Lena Brandt.\n\n*Battery life is a Corvane estimate. Actual results vary with use and settings."
+   },
+   {
+    "url": "https://www.techbrief.io/corvane-x2-20-hour-battery",
+    "title": "Corvane X2 tablet: 20-hour battery, thinnest design yet",
+    "text": "# Corvane X2 tablet: 20-hour battery, thinnest design yet\n\nCorvane's new X2 tablet runs for 20 hours on a charge, the company announced on\nMonday. The X2 also brings an 11-inch display."
+   },
+   {
+    "url": "https://www.dailydevice.com/news/corvane-x2-battery",
+    "title": "The Corvane X2 lasts 20 hours. Here's what else is new",
+    "text": "# The Corvane X2 lasts 20 hours. Here's what else is new\n\nIn testing, the Corvane X2's battery lasted 20 hours of continuous video playback,\nmaking it one of the longest-lasting tablets of the year. Corvane revealed the tablet\nthis week alongside new keyboard accessories."
+   },
+   {
+    "url": "https://www.slatereview.net/2025/03/corvane-x2-first-look",
+    "title": "Corvane X2 first look",
+    "text": "# Corvane X2 first look\n\nAs TechBrief reported, the Corvane X2 delivers 20 hours of video playback on a single\ncharge. We have not reviewed the X2 yet; our full review will follow."
+   }
+  ]
+ },
+ {
+  "id": "U02",
+  "claim": "In a continuous video-playback test, the Corvane X2 tablet's battery lasted 20 hours.",
+  "pages": [
+   {
+    "url": "https://www.corvane.com/newsroom/2025/introducing-x2",
+    "title": "Introducing Corvane X2 | Corvane Newsroom",
+    "text": "# Introducing Corvane X2\n\nPress release · 3 March 2025\n\nCorvane today announced the X2, its thinnest tablet yet. The Corvane X2 offers up to\n20 hours of battery life*, an 11-inch display and a new aluminium design.\n\n\"The X2 is built for people who are away from a charger all day,\" said Corvane chief\nproduct officer Lena Brandt.\n\n*Battery life is a Corvane estimate. Actual results vary with use and settings."
+   },
+   {
+    "url": "https://www.techbrief.io/corvane-x2-20-hour-battery",
+    "title": "Corvane X2 tablet: 20-hour battery, thinnest design yet",
+    "text": "# Corvane X2 tablet: 20-hour battery, thinnest design yet\n\nCorvane's new X2 tablet runs for 20 hours on a charge, the company announced on\nMonday. The X2 also brings an 11-inch display."
+   },
+   {
+    "url": "https://www.dailydevice.com/news/corvane-x2-battery",
+    "title": "The Corvane X2 lasts 20 hours. Here's what else is new",
+    "text": "# The Corvane X2 lasts 20 hours. Here's what else is new\n\nIn testing, the Corvane X2's battery lasted 20 hours of continuous video playback,\nmaking it one of the longest-lasting tablets of the year. Corvane revealed the tablet\nthis week alongside new keyboard accessories."
+   },
+   {
+    "url": "https://www.slatereview.net/2025/03/corvane-x2-first-look",
+    "title": "Corvane X2 first look",
+    "text": "# Corvane X2 first look\n\nAs TechBrief reported, the Corvane X2 delivers 20 hours of video playback on a single\ncharge. We have not reviewed the X2 yet; our full review will follow."
+   }
+  ]
+ },
+ {
+  "id": "S03",
+  "claim": "The Arvo-3 language model scored 71.4% on the Lumen-QA benchmark.",
+  "pages": [
+   {
+    "url": "https://www.lumenqa.org/leaderboard",
+    "title": "Lumen-QA leaderboard",
+    "text": "# Lumen-QA leaderboard\n\nTest set v2.1 (4,000 held-out questions). Last updated 2 October 2025.\n\nAll scores below were produced by the Lumen-QA maintainers, who run each submitted\nmodel on the held-out test set themselves. Scores are exact-match accuracy.\n\n| Rank | Model | Organization | Score |\n| --- | --- | --- | --- |\n| 1 | Arvo-3 | Arvo Research | 71.4% |\n| 2 | Tessel-L | Tessel AI | 69.8% |\n| 3 | Quarry-2 | Quarry Labs | 66.1% |"
+   },
+   {
+    "url": "https://www.aipulse.news/arvo-3-tops-lumen-qa",
+    "title": "Arvo-3 tops the Lumen-QA leaderboard",
+    "text": "# Arvo-3 tops the Lumen-QA leaderboard\n\nArvo Research's Arvo-3 now leads Lumen-QA with a score of 71.4%, according to the\nbenchmark's maintainers, who ran the model on the held-out test set."
+   }
+  ]
+ },
+ {
+  "id": "U03",
+  "claim": "The Nimbra-2 language model scored 74.2% on the Lumen-QA benchmark.",
+  "pages": [
+   {
+    "url": "https://www.modelwatch.ai/nimbra-2-lumen-qa",
+    "title": "Nimbra-2 hits 74.2% on Lumen-QA",
+    "text": "# Nimbra-2 hits 74.2% on Lumen-QA\n\nNimbra-2 scored 74.2% on the Lumen-QA benchmark, as first reported by the Neural\nNotes blog. That would put it at the top of the benchmark."
+   },
+   {
+    "url": "https://www.neuralnotes.blog/2025/10/nimbra-2",
+    "title": "Nimbra-2 is here",
+    "text": "# Nimbra-2 is here\n\nNimbra-2 is out, and it reportedly scored 74.2% on Lumen-QA, according to AI Daily\nBrief."
+   },
+   {
+    "url": "https://www.aidailybrief.com/nimbra-2-benchmark",
+    "title": "Nimbra-2 posts 74.2% on Lumen-QA",
+    "text": "# Nimbra-2 posts 74.2% on Lumen-QA\n\nThe Nimbra-2 model scored 74.2% on Lumen-QA, ModelWatch reports."
+   }
+  ]
+ },
+ {
+  "id": "S04",
+  "claim": "Ana Ferreira won the 2025 Harrowgate Marathon women's race in 2:24:31.",
+  "pages": [
+   {
+    "url": "https://www.harrowgatemarathon.org/results/2025",
+    "title": "2025 official results | Harrowgate Marathon",
+    "text": "# 2025 Harrowgate Marathon: official results\n\nRace date: 12 April 2025. Timing by RaceTime Systems (chip timing). Results ratified\nby the race referee on 13 April 2025.\n\n## Women's race: top three\n\n| Place | Name | Club | Chip time |\n| --- | --- | --- | --- |\n| 1 | Ana Ferreira | Porto Athletics | 2:24:31 |\n| 2 | Mira Holt | Leeds City AC | 2:25:58 |\n| 3 | Sofia Brandt | TV Hamburg | 2:27:12 |"
+   },
+   {
+    "url": "https://www.harrowgateherald.co.uk/sport/ferreira-wins-marathon",
+    "title": "Ferreira wins Harrowgate Marathon",
+    "text": "# Ferreira wins Harrowgate Marathon\n\nPortugal's Ana Ferreira won the women's race at the Harrowgate Marathon on Saturday\nin 2:24:31, according to the official results."
+   }
+  ]
+ },
+ {
+  "id": "U04",
+  "claim": "Tomas Lind won the 2025 Saltmere Marathon men's race in 2:09:47.",
+  "pages": [
+   {
+    "url": "https://www.runnerscorner.blog/saltmere-2025",
+    "title": "Saltmere 2025: Lind takes it",
+    "text": "# Saltmere 2025: Lind takes it\n\nTomas Lind won the Saltmere Marathon men's race in 2:09:47! What a run from the\nSwede."
+   },
+   {
+    "url": "https://www.marathonhub.net/news/lind-saltmere",
+    "title": "Lind wins Saltmere Marathon in 2:09:47",
+    "text": "# Lind wins Saltmere Marathon in 2:09:47\n\nSweden's Tomas Lind won the 2025 Saltmere Marathon men's race in 2:09:47. Times are\nunofficial and based on reports from the course."
+   },
+   {
+    "url": "https://www.sportsroundup.com/athletics/saltmere-marathon",
+    "title": "Saltmere Marathon: Lind wins men's race",
+    "text": "# Saltmere Marathon: Lind wins men's race\n\nTomas Lind crossed the line first in the Saltmere Marathon men's race, clocking\n2:09:47, according to MarathonHub."
+   }
+  ]
+ },
+ {
+  "id": "S05",
+  "claim": "The Orlen Valley Water Authority's 2025 annual report states that it treated 41.2 billion litres of water.",
+  "pages": [
+   {
+    "url": "https://www.orlenvalleywater.gov/about/annual-report-2025",
+    "title": "Annual Report 2025 | Orlen Valley Water Authority",
+    "text": "# Annual Report 2025\n\nOrlen Valley Water Authority · Published 30 June 2025\n\n## Operations\n\nIn fiscal year 2025 the Authority treated 41.2 billion litres of water at its three\ntreatment works, up from 39.8 billion litres in 2024. Average daily demand was 113\nmillion litres."
+   }
+  ]
+ },
+ {
+  "id": "U05",
+  "claim": "The Merrow Basin Water Board's 2025 annual report states that it treated 38.6 billion litres of water.",
+  "pages": [
+   {
+    "url": "https://www.merrowgazette.co.uk/news/water-board-usage",
+    "title": "Water board says demand rose last year",
+    "text": "# Water board says demand rose last year\n\nThe Merrow Basin Water Board treated about 38.6 billion litres of water last year, a\nspokesperson told the Gazette. Demand rose during the dry summer, the spokesperson\nsaid."
+   },
+   {
+    "url": "https://www.basinnews.com/merrow-water-38-billion",
+    "title": "Merrow Basin Water Board treated 38.6 billion litres",
+    "text": "# Merrow Basin Water Board treated 38.6 billion litres\n\nThe Merrow Basin Water Board treated 38.6 billion litres of water in 2025, the\nMerrow Gazette reported."
+   }
+  ]
+ },
+ {
+  "id": "S06",
+  "claim": "Denali, the highest point in Alaska, has an elevation of 20,320 feet, according to the U.S. Geological Survey.",
+  "pages": [
+   {
+    "url": "https://www.usgs.gov/educational-resources/highest-and-lowest-elevations",
+    "title": "Highest and Lowest Elevations | U.S. Geological Survey",
+    "text": "![U.S. flag](/themes/custom/usgs_tantalum/assets/img/us_flag_small.png)\n\nAn official website of the United States government\n\nHere's how you know\n\n![Dot gov](/themes/custom/usgs_tantalum/assets/img/icon-dot-gov.svg)\n\n**Official websites use .gov**   \n A **.gov** website belongs to an official government organization in the United States.\n\n![Https](/themes/custom/usgs_tantalum/assets/img/icon-https.svg)\n\n**Secure .gov websites use HTTPS**   \n A **lock ()** or **https://** means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.\n\n[![Home](/themes/custom/usgs_tantalum/usgs_logo.png)](/ \"Home\")\n\n* Facebook\n* Twitter\n* Linkedin\n* Digg\n* Reddit\n* Pinterest\n* Email\n\n[Frequently Asked Questions](https://www.usgs.gov/science/faqs)\n\n\n\n# Highest and Lowest Elevations\n\nBy [Educational Resources](/educational-resources)\n\n| State or   possession | Highest point | County or   subdivision | Elevation  feet | Lowest Point | County or   subdivision | Elevation  feet |\n| --- | --- | --- | --- | --- | --- | --- |\n| Alabama | Cheaha Mountain | Cleburne | 2,407 | Gulf of Mexico | - - | Sea Level |\n| Alaska | Denali | - - | 20,320 | Pacific Ocean | - - | Sea Level |\n| Arizona | Humphreys Peak | Coconino | 12,633 | Colorado River | Yuma | 70 |\n| Arkansas | Magazine Mountain | Logan | 2,753 | Ouachita River | Ashley-Union | 55 |\n| California | Mount Whitney | Inyo-Tulare | 114,494 | Death Valley | Inyo | -282 |\n| Colorado | Mount Elbert | Lake | 14,433 | Arikaree River | Yuma | 3,315 |\n| Connecticut | Mount Frissel on south  slope at State line | Litchfield | 2,380 | Long Island Sound | - - | Sea Level |\n| Delaware | On Ebright Road at  Delaware-Pennsylvania  State line | New Castle | 1448 | Atlantic Ocean | - - | Sea level |\n| District of Columbia | Tenleytown at  Reno Reservoir | - - | 410 | Potomac River | - - | 1 |\n| Florida | Britton Hill | Walton | 345 | Atlantic Ocean | - - | Sea level |\n| Georgia | Brasstown Bald | Towns-Union | 4,784 | Atlantic Ocean | - - | Sea level |\n| Guam | Mount Lamlam | Agat District | 1,332 | Pacific Ocean | - - | Sea level |\n| Hawaii | Pu'u Wēkiu, Mauna Kea | Hawaii | 13,796 | Pacific Ocean | - - | Sea level |\n| Idaho | Borah Peak | Custer | 12,662 | Snake River | Nez Perce | 710 |\n| Illinois | Charles Mound | Jo Daviess | 1,235 | Mississippi River | Alexander | 2279 |\n| Indiana | Hoosier Hill | Wayne | 1,257 | Ohio River | Posey | 2320 |\n| Iowa | Hawkeye Point | Osceola | 1,670 | Mississippi River | Lee | 480 |\n| Kansas | Mount Sunflower | Wallace | 4,039 | Verdigris River | Montgomery | 679 |\n| Kentucky | Black Mountain | Harlan | 4,145 | Mississippi River | Fulton | 2257 |\n| Louisiana | Driskill Mountain | Bienville | 535 | New Orleans | Orleans | -8 |\n| Maine | Mount Katahdin | Piscataquis | 5,268 | Atlantic Ocean | - - | Sea level |\n| Maryland | Hoye Crest | Garrett | 3,360 | Atlantic Ocean | - - | Sea level |\n| Massachusetts | Mount Greylock | Berkshire | 3,491 | Atlantic Ocean | - - | Sea level |\n| Michigan | Mount Arvon | Baraga | 1,979 | Lake Erie | - - | 2571 |\n| Minnesota | Eagle Mountain | Cook | 2,301 | Lake Superior | - - | 2601 |\n| Mississippi | Woodall Mountain | Tishomingo | 806 | Gulf of Mexico | - - | Sea level |\n| Missouri | Taum Sauk Mountain | Iron | 1,772 | Saint Francis River | Dunklin | 2230 |\n| Montana | Granite Peak | Park | 12,799 | Kootenai River | Lincoln | 1,800 |\n| Nebraska | Panorama Point | Kimball | 5,424 | Missouri River | Richardson | 840 |\n| Nevada | Boundary Peak | Esmeralda | 13,140 | Colorado River | Clark | 479 |\n| New Hampshire | Mount Washington | Coos | 6,288 | Atlantic Ocean | - - | Sea level |\n| New Jersey | High Point | Sussex | 31,803 | Atlantic Ocean | - - | Sea level |\n| New Mexico | Wheeler Peak | Taos | 13,161 | Red Bluff Reservoir | Eddy | 2,842 |\n| New York | Mount Marcy | Essex | 5,344 | Atlantic Ocean | - - | Sea level |\n| North Carolina | Mount Mitchell | Yancey | 6,684 | Atlantic Ocean | - - | Sea level |\n| North Dakota | White Butte | Slope | 3,506 | Red River of the North | Pembina | 750 |\n| Ohio | Campbell Hill | Logan | 1,550 | Ohio River | Hamilton | 2455 |\n| Oklahoma | Black Mesa | Cimarron | 4,973 | Little River | McCurtain | 289 |\n| Oregon | Mount Hood | Clackamas-  Hood River | 11,239 | Pacific Ocean | - - | Sea level |\n| Pennsylvania | Mount Davis | Somerset | 3,213 | Delaware River | Delaware | Sea level |\n| Puerto Rico | Cerro de Punta | Ponce District | 4,390 | Atlantic Ocean | - - | Sea Level |\n| Rhode Island | Jerimoth Hill | Providence | 812 | Atlantic Ocean | - - | Sea level |\n| Samoa | Lata Mountain | Tau Island | 3,160 | Pacific Ocean | - - | Sea level |\n| South Carolina | Sassafras Mountain | Pickens | 3,560 | Atlantic Ocean | - - | Sea level |\n| South Dakota | Harney Peak | Pennington | 7,242 | Big Stone Lake | Roberts | 966 |\n| Tennessee | Clingmans Dome | Sevier | 6,643 | Mississippi River | Shelby | 2178 |\n| Texas | Guadalupe Peak | Culberson | 8,749 | Gulf of Mexico | - - | Sea level |\n| Utah | Kings Peak | Duchesne | 13,528 | Beaverdam Wash | Washington | 2,000 |\n| Vermont | Mount Mansfield | Chittenden | 4,393 | Lake Champlain | - - | 95 |\n| Virginia | Mount Rogers | Grayson-Smyth | 5,729 | Atlantic Ocean | - - | Sea level |\n| Virgin Islands | Crown Mountain | Saint Thomas Island | 1,556 | Atlantic Ocean | - - | Sea level |\n| Washington | Mount Rainier | Pierce | 14,411 | Pacific Ocean | - - | Sea level |\n| West Virginia | Spruce Knob | Pendleton | 4,863 | Potomac River | Jefferson | 240 |\n| Wisconsin | Timms Hill | Price | 1,951 | Lake Michigan | - - | 2579 |\n| Wyoming | Gannett Peak | Fremont | 13,804 | Belle Fourche River | Crook | 3,099 |\n| United States | Denali | Alaska | 20,320 | Death Valley | Inyo, CA | -282 |\n\n**1National Geodetic Survey. 2Corps of Engineers. 3State Surveys.**\n\nWas this page helpful?\n\n ",
+    "saved_from": "evals/evidence/pages/c-09.json.gz"
+   }
+  ]
+ },
+ {
+  "id": "U06",
+  "claim": "Mount Arvid, the highest point in Tessaly County, has an elevation of 8,214 feet, according to the Tessaly County Survey Office.",
+  "pages": [
+   {
+    "url": "https://www.summitlog.blog/2025/07/mount-arvid",
+    "title": "Mount Arvid: county high point bagged",
+    "text": "# Mount Arvid: county high point bagged\n\nMade it up Mount Arvid today, the highest point in Tessaly County. My GPS watch read\n8,214 feet at the top. Great views over the valley."
+   },
+   {
+    "url": "https://www.trailfinder.net/peaks/mount-arvid",
+    "title": "Mount Arvid (8,214 ft) | TrailFinder",
+    "text": "# Mount Arvid (8,214 ft)\n\nMount Arvid is the highest point in Tessaly County, with an elevation of 8,214 feet\naccording to the Tessaly County Survey Office. The trail is 6.2 miles each way."
+   }
+  ]
+ },
+ {
+  "id": "S07",
+  "claim": "The World Health Organization estimated that 610,000 people died of malaria worldwide in 2024.",
+  "pages": [
+   {
+    "url": "https://www.who.int/data/gho/data/themes/malaria",
+    "title": "Malaria",
+    "text": "![World Health Organization](/images/default-source/fallback/header-logos/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20)\n![World Health Organization](/images/default-source/fallback/header-logos/h-logo-blue1820eae93c154e37b2588ab90fdbc17e.svg?sfvrsn=aaed4f35_20)\n![Africa]()\n![Americas]()\n![South-East Asia]()\n![Europe]()\n![Eastern Mediterranean]()\n![Western Pacific]()\n![Home](/ResourcePackages/WHO/assets/dist/images/logos/en/h-logo-blue.svg)\n\nThe Global Health Observatory\n\nExplore a world of health data\n\nData API\n\n# Malaria\n\nMalaria transmission occurs in 80 countries across five WHO regions. Since 2015, the WHO European Region has been free of malaria.\n\nAccording to the\n\n , there were 282 million estimated cases of malaria globally in 2024, with an incidence of 64 cases per 1000 population at risk. This is an increase of 9 million cases from the previous year and a rise in incidence from 62.7 cases per 1000 population at risk in 2023. Globally, in 2024, the number of deaths was estimated at 610 000, with a mortality rate of 13.8 per 100 000 population at risk.\n\nThe WHO African Region continues to carry the heaviest burden of malaria, accounting for an estimated 94% of malaria cases and 95% of malaria deaths worldwide in 2024; 75% of all deaths in this region were among children aged under 5 years old.\n\nSource: WMR2025\n\n## Related topics\n\n### Countries with indigenous cases in 2000 and their status by 2024\n\nCountries and areas with zero indigenous cases for at least 3 consecutive years are considered to have eliminated malaria. In 2024, Bhutan reported zero indigenous cases for 3 consecutive years. Malaysia reported zero indigenous cases caused by human *Plasmodium* species for the seventh consecutive year; Malaysia has a significant number of indigenous malaria cases caused by *Plasmodium knowlesi*infection. Saudi Arabia reported zero indigenous cases for the fourth consecutive year. Countries recently certified by the WHO Director-General as malaria-free, include: Cabo Verde (2024), Egypt (2024), Georgia (2025), Suriname (2025) and Timor-Leste (2025).\n\n## GHO MALARIA\\_INDIG\\_STATUS MAP TEMPLATE\n\n![]()\n\nAn error occurred while trying to display the data. Sorry for the inconvenience, please try again later.\n\n## Related content\n\nPublication\n\n![World malaria report 2025](https://iris.who.int/server/api/core/bitstreams/ef1842eb-e9f1-4d6e-a083-ccd5a2b54e12/content)\n\n### World malaria report 2025\n\nMore information\n\nFact sheet\n\nMalaria\n\nHealth topic\n\nMalaria\n\n### Related team\n\n## Contact us\n\n## Feedback for the new GHO portal\n\nThe e-mail format is \"xxxx@yyyy.zzz\"\n\n![Home](/ResourcePackages/WHO/assets/dist/images/logos/en/h-logo-white.svg)",
+    "saved_from": "evals/evidence/pages/a-10.json.gz"
+   }
+  ]
+ },
+ {
+  "id": "U07",
+  "claim": "The Ostrava Institute for Tropical Health estimated that 47,000 people died of dengue worldwide in 2024.",
+  "pages": [
+   {
+    "url": "https://www.healthwirenow.com/dengue-deaths-2024",
+    "title": "Dengue deaths reached 47,000 in 2024",
+    "text": "# Dengue deaths reached 47,000 in 2024\n\nAn estimated 47,000 people died of dengue worldwide in 2024, the Ostrava Institute for\nTropical Health said, according to a post shared widely on social media."
+   },
+   {
+    "url": "https://www.globalhealthbrief.org/dengue-2024",
+    "title": "Ostrava Institute: 47,000 dengue deaths in 2024",
+    "text": "# Ostrava Institute: 47,000 dengue deaths in 2024\n\nThe Ostrava Institute for Tropical Health estimates that 47,000 people died of dengue\nin 2024, HealthWire Now reported."
+   }
+  ]
+ },
+ {
+  "id": "S08",
+  "claim": "NASA's SpaceX Crew-11 mission launched from Launch Complex 39A at Kennedy Space Center at 11:43 a.m. EDT.",
+  "pages": [
+   {
+    "url": "https://www.nasa.gov/news-release/nasas-spacex-crew-11-launches-to-international-space-station",
+    "title": "NASA’s SpaceX Crew-11 Launches to International Space Station - NASA",
+    "text": "![NASA Logo](https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png)\n![NASA Logo](https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png)\n\n### News & Events\n\n### Multimedia\n\n## Suggested Searches\n\n### Featured\n\n![An artist’s concept depicting a Voyager spacecraft with a long instrument protruding from the rear of the spacecraft. The front is circular with light shining into its right side.](https://www.nasa.gov/wp-content/uploads/2026/11/voyager-1-advisory-image-2-nov-10.jpg?w=1024)\n\n### NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities\n\n![NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/escapade/ESCAPADE_TMI.jpg?w=1024)\n\n### NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars\n\n![What’s Up: November 2026 Skywatching Tips from NASA](https://science.nasa.gov/wp-content/uploads/2023/07/moonrise-at-vasquez-rocks-credit-nasa-preston-dyches-cc-by-nc-2.0.jpg)\n\n### What’s Up: November 2026 Skywatching Tips from NASA\n\n### Missions\n\n### Humans in Space\n\n### Earth\n\n### The Solar System\n\n### The Universe\n\n### Science\n\n### Aeronautics\n\n### Technology\n\n### Learning Resources\n\n### About NASA\n\n### NASA en Español\n\n### News & Events\n\n### Multimedia\n\n### Featured\n\n![NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities](https://www.nasa.gov/wp-content/uploads/2026/11/voyager-1-advisory-image-2-nov-10.jpg?w=1024)\n\n### NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities\n\n![NASA’s Chandra Finds Source of Star’s Mysterious Outbursts](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/chandra/2026/at2016blu.jpg?w=1024)\n\n### NASA’s Chandra Finds Source of Star’s Mysterious Outbursts\n\n![NASA’s Hubble Offers Cosmic Sampler of Targets for Roman](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/gravitational-lens/Hubble_lenscollage_P18085_ok4_noletters.tif?w=1024)\n\n### NASA’s Hubble Offers Cosmic Sampler of Targets for Roman\n\n### Highlights\n\n![NASA Astronauts to Answer Questions from Florida Students](https://www.nasa.gov/wp-content/uploads/2026/11/freedom-crossing-downlink-nov-5.jpg?w=1024)\n\n### NASA Astronauts to Answer Questions from Florida Students\n\n![NASA Astronaut, STEM Creator Connect with Students for STEM Day](https://www.nasa.gov/wp-content/uploads/2026/11/anil-menon-downlink-nov-3.jpg?w=683)\n\n### NASA Astronaut, STEM Creator Connect with Students for STEM Day\n\n![NASA’s ISAM State of Play: The Industry Standard for Space Servicing, Assembly, and Manufacturing](https://www.nasa.gov/wp-content/uploads/2026/03/isam-state-of-play.jpg?w=698)\n\n### NASA’s ISAM State of Play: The Industry Standard for Space Servicing, Assembly, and Manufacturing\n\n### Highlights\n\n![A Global Rebound for Mangroves](https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/a-global-rebound-for-mangroves/burmamangroves_oli2_20260202_th.jpg?w=1024)\n\n### A Global Rebound for Mangroves\n\n![Scotland’s Flow Country](https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/scotland’s-flow-country-/scotland_flowcountry_oli2_20240304_th.jpg?w=1024)\n\n### Scotland’s Flow Country\n\n![STRIVE](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/strive/strivebanner2.png?w=1024)\n\n### STRIVE\n\n### Highlights\n\n![NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/escapade/ESCAPADE_TMI.jpg?w=1024)\n\n### NASA’s ESCAPADE Completes Powered Earth Flybys, Now En Route to Mars\n\n![PROMISE](https://www.nasa.gov/wp-content/uploads/2026/11/promise-7.jpg?w=1024)\n\n### PROMISE\n\n![What’s Up: November 2026 Skywatching Tips from NASA](https://science.nasa.gov/wp-content/uploads/2023/07/moonrise-at-vasquez-rocks-credit-nasa-preston-dyches-cc-by-nc-2.0.jpg)\n\n### What’s Up: November 2026 Skywatching Tips from NASA\n\n### Highlights\n\n![NASA’s Hubble Offers Cosmic Sampler of Targets for Roman](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/gravitational-lens/Hubble_lenscollage_P18085_ok4_noletters.tif?w=1024)\n\n### NASA’s Hubble Offers Cosmic Sampler of Targets for Roman\n\n![NASA Scientists Show How Gravitational Waves Can Reveal New Worlds](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/lisa/news/2026/l3harris-award-for-test-telescope/LISA_key_visual_ESA_lg_ac.jpg?w=1024)\n\n### NASA Scientists Show How Gravitational Waves Can Reveal New Worlds\n\n![NASA’s Chandra Finds Source of Star’s Mysterious Outbursts](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/chandra/2026/at2016blu.jpg?w=1024)\n\n### NASA’s Chandra Finds Source of Star’s Mysterious Outbursts\n\n### Highlights\n\n![A Global Rebound for Mangroves](https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/a-global-rebound-for-mangroves/burmamangroves_oli2_20260202_th.jpg?w=1024)\n\n### A Global Rebound for Mangroves\n\n![NASA’s Hubble Offers Cosmic Sampler of Targets for Roman](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/gravitational-lens/Hubble_lenscollage_P18085_ok4_noletters.tif?w=1024)\n\n### NASA’s Hubble Offers Cosmic Sampler of Targets for Roman\n\n![Scotland’s Flow Country](https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/scotland’s-flow-country-/scotland_flowcountry_oli2_20240304_th.jpg?w=1024)\n\n### Scotland’s Flow Country\n\n### Highlights\n\n![Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA](https://www.nasa.gov/wp-content/uploads/2023/03/690852main_ED12-0317-012_full.jpg?w=1024)\n\n### Through NASA’s Lens: Capturing Space Shuttle Endeavour’s Move to LA\n\n![MAX POWER: NASA’s Inaugural Aerospace Expo Ignites America’s Future](https://www.nasa.gov/wp-content/uploads/2026/11/55641408105-cd488491d8-k.jpg?w=1024)\n\n### MAX POWER: NASA’s Inaugural Aerospace Expo Ignites America’s Future\n\n![NASA Navigation Experiment Shows Promise for Planetary Landings](https://images-assets.nasa.gov/image/AFRC2026-0152-30/AFRC2026-0152-30~large.jpg?w=1920&h=1280&fit=clip&crop=faces%2Cfocalpoint)\n\n### NASA Navigation Experiment Shows Promise for Planetary Landings\n\n### Highlights\n\n![NASA Navigation Experiment Shows Promise for Planetary Landings](https://images-assets.nasa.gov/image/AFRC2026-0152-30/AFRC2026-0152-30~large.jpg?w=1920&h=1280&fit=clip&crop=faces%2Cfocalpoint)\n\n### NASA Navigation Experiment Shows Promise for Planetary Landings\n\n![High-speed Intelligent Robust Autonomous Terrain Exploration](https://www.nasa.gov/wp-content/uploads/2026/06/hirate-lidar-heroversion-2026-0915.png?w=1024)\n\n### High-speed Intelligent Robust Autonomous Terrain Exploration\n\n![The Pacific’s Busy Storm Season](https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/the-pacific's-busy-storm-season/storminfa_epic_20261029_th.jpg?w=1024)\n\n### The Pacific’s Busy Storm Season\n\n### Featured\n\n![NASA Astronauts to Answer Questions from Florida Students](https://www.nasa.gov/wp-content/uploads/2026/11/freedom-crossing-downlink-nov-5.jpg?w=1024)\n\n### NASA Astronauts to Answer Questions from Florida Students\n\n![NASA Space Grant Students Fuel Agency’s Inspiration Tour](https://www.nasa.gov/wp-content/uploads/2026/11/55572302164-8599ccaff1-k.jpg?w=1024)\n\n### NASA Space Grant Students Fuel Agency’s Inspiration Tour\n\n![NASA Astronaut, STEM Creator Connect with Students for STEM Day](https://www.nasa.gov/wp-content/uploads/2026/11/anil-menon-downlink-nov-3.jpg?w=683)\n\n### NASA Astronaut, STEM Creator Connect with Students for STEM Day\n\n### Featured\n\n![NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities](https://www.nasa.gov/wp-content/uploads/2026/11/voyager-1-advisory-image-2-nov-10.jpg?w=1024)\n\n### NASA Invites Media, Public to Join Voyager 1 One-Light Day Activities\n\n![NASA Announces $1 Million to Students for Moon Base Challenge](https://www.nasa.gov/wp-content/uploads/2026/11/stmd-exteriorlunarbase-hdlandscapeversion-2026-0521.png?w=1024)\n\n### NASA Announces $1 Million to Students for Moon Base Challenge\n\n![TIME Best Inventions of 2026](https://assets.science.nasa.gov/dynamicimage/assets/science/missions/rst/spacecraft-illustrations/Roman_BeautyPass2026-large.jpg?w=1024)\n\n### TIME Best Inventions of 2026\n\n### Highlights\n\n![La NASA anuncia la cobertura de la misión lunar Artemis II](https://www.nasa.gov/wp-content/uploads/2026/03/a2crew-7ff19d.jpg?w=1024)\n\n### La NASA anuncia la cobertura de la misión lunar Artemis II\n\n![Agenda diaria de la misión a la Luna de Artemis II de la NASA](https://www.nasa.gov/wp-content/uploads/2026/03/suit-patch.jpg?w=1024)\n\n### Agenda diaria de la misión a la Luna de Artemis II de la NASA\n\n![La NASA refuerza Artemis: añade una misión y perfecciona su arquitectura general](https://images-assets.nasa.gov/image/iss074e0325229/iss074e0325229~large.jpg?w=1920&h=1280&fit=clip&crop=faces%2Cfocalpoint)\n\n### La NASA refuerza Artemis: añade una misión y perfecciona su arquitectura general\n\n4 min read\n\n# NASA’s SpaceX Crew-11 Launches to International Space Station\n\n![Profile image for Lauren E. Low](https://secure.gravatar.com/avatar/f1ec220d89728a67046b22b2a089f4ef8ef28463b1bfc013b05eefe6a3ba4895?s=300&r=g&d=https%3A%2F%2Fwww.nasa.gov%2Fwp-content%2Fuploads%2F2023%2F12%2Fnasainsigniargb150px.png)\n\nLauren E. Low\n\n### NASA Headquarters\n\n![](https://www.nasa.gov/wp-content/uploads/2025/08/crew11.jpg?w=1384)\n\nFour crew members of NASA’s SpaceX Crew-11 mission launched at 11:43 a.m. EDT Friday from Launch Complex 39A at the agency’s Kennedy Space Center in Florida for a science expedition aboard the International Space Station.\n\nA SpaceX Falcon 9 rocket propelled the Dragon spacecraft into orbit carrying NASA astronauts Zena Cardman and Mike Fincke, JAXA (Japan Aerospace Exploration Agency) astronaut Kimiya Yui, and Roscosmos cosmonaut Oleg Platonov. The spacecraft will dock autonomously to the space-facing port of the station’s Harmony module at approximately 3 a.m. on Saturday, Aug. 2.\n\n“Thanks to the bold leadership of President Donald J. Trump, NASA is back! The agency’s SpaceX Crew-11 mission to the space station is the first step toward our permanent presence on the Moon. NASA, in conjunction with great American companies, continues the mission with Artemis in 2026. This Moon mission will ensure America wins the space race – critical to national security – and leads in the emerging, exciting and highly profitable private sector commercial space business,” said acting NASA Administrator Sean Duffy. “The Commercial Crew Program and Artemis missions prove what American ingenuity, and cutting-edge American manufacturing can achieve. We’re going to the Moon…to stay! After that, we go to Mars! Welcome to the Golden Age of exploration!”\n\nDuring Dragon’s flight, SpaceX will monitor a series of automatic spacecraft maneuvers from its mission control center in Hawthorne, California. NASA will monitor space station operations throughout the flight from the Mission Control Center at the agency’s Johnson Space Center in Houston.\n\nNASA’s live coverage resumes at 1 a.m., Aug. 2, on [NASA+](https://plus.nasa.gov/scheduled-video/nasas-spacex-crew-11-arrival-welcome-remarks) with rendezvous, docking, and hatch opening. After docking, the crew will change out of their spacesuits and prepare cargo for offload before opening the hatch between Dragon and the space station’s Harmony module around 4:45 a.m. Once the new crew is aboard the orbital outpost, NASA will provide coverage of the welcome ceremony beginning at approximately 5:45 a.m.\n\nLearn how to watch [NASA content](https://www.nasa.gov/general/watch-nasa-programming/) through a variety of platforms, including social media.\n\nThe number of crew aboard the space station will increase to 11 for a short time as Crew-11 joins NASA astronauts Anne McClain, Nichole Ayers, and Jonny Kim, JAXA astronaut Takuya Onishi, and Roscosmos cosmonauts Kirill Peskov, Sergey Ryzhikov, and Alexey Zubritsky.\n\nNASA’s SpaceX [Crew-10](https://www.nasa.gov/mission/nasas-spacex-crew-10/) will depart the space station after the arrival of Crew-11 and a handover period. Ahead of Crew-10’s return, mission teams will review weather conditions at the splashdown sites off the coast of California prior to departure from station.\n\nDuring their mission, Crew-11 will conduct [scientific research](https://www.nasa.gov/missions/station/iss-research/nasas-spacex-crew-11-mission-gears-up-for-space-station-research/) to [prepare for human exploration](https://www.nasa.gov/humans-in-space/nasas-spacex-crew-11-to-support-health-studies-for-deep-space-travel/) beyond low Earth orbit and benefit humanity on Earth. Participating crew members will simulate lunar landings, test strategies to safeguard vision, and advance other human spaceflight studies led by NASA’s [Human Research Program](https://www.nasa.gov/hrp/). The crew also will study plant cell division and microgravity’s effects on bacteria-killing viruses, as well as perform experiments to produce a higher volume of human stem cells and generate on-demand nutrients.\n\nThe mission is part of NASA’s Commercial Crew Program, which provides reliable access to space, maximizing the use of the station for research and development and supporting future missions beyond low Earth orbit by partnering with private companies to transport astronauts to and from the space station.  \nLearn more about the agency’s Commercial Crew Program at:\n\n[**https://www.nasa.gov/commercialcrew**](https://www.nasa.gov/commercialcrew)\n\n-end-\n\nJosh Finch / Claire O’Shea  \nHeadquarters, Washington  \n202-358-1100  \n[joshua.a.finch@nasa.gov](mailto:joshua.a.finch@nasa.gov) / [claire.a.o’shea@nasa.gov](mailto:claire.a.o’shea@nasa.gov)\n\nSteven Siceloff  \nKennedy Space Center, Florida  \n321-867-2468  \n[steven.p.siceloff@nasa.gov](mailto:steven.p.siceloff@nasa.gov)\n\nSandra Jones  \nJohnson Space Center, Houston  \n281-483-5111  \n[sandra.p.jones@nasa.gov](mailto:sandra.p.jones@nasa.gov)\n\n## Share\n\n## Details\n\n## Related Terms\n\n![NASA Logo](https://www.nasa.gov/wp-content/themes/nasa/assets/images/nasa-logo@2x.png)\n\n### National Aeronautics and Space Administration\n\nNASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.\n\n### Follow NASA\n\n## Was this page helpful?",
+    "saved_from": "evals/evidence/pages/a-13.json.gz"
+   }
+  ]
+ },
+ {
+  "id": "U08",
+  "claim": "The Halcyon-4 crewed mission launched from Pad 2 at Varnholm Spaceport at 9:17 a.m. local time.",
+  "pages": [
+   {
+    "url": "https://www.orbitfans.net/halcyon-4-launch",
+    "title": "Halcyon-4 is on its way",
+    "text": "# Halcyon-4 is on its way\n\nThe Halcyon-4 crewed mission launched from Pad 2 at Varnholm Spaceport at 9:17 a.m.\nlocal time. Three astronauts are aboard for a ten-day flight."
+   }
+  ]
+ },
+ {
+  "id": "S09",
+  "claim": "Biscuit, the mascot dog of Ashcombe Town Football Club, is a golden retriever.",
+  "pages": [
+   {
+    "url": "https://www.ashcombetownfc.co.uk/club/meet-biscuit",
+    "title": "Meet Biscuit | Ashcombe Town FC",
+    "text": "# Meet Biscuit, our club mascot\n\nBiscuit is Ashcombe Town Football Club's mascot dog. She is a five-year-old golden\nretriever who joined the club in 2021 and leads the team out at every home game."
+   }
+  ]
+ },
+ {
+  "id": "U09",
+  "claim": "Pebble, the mascot dog of Fenwick Rangers Football Club, has a blue coat.",
+  "pages": [
+   {
+    "url": "https://www.terracechat.net/fenwick-rangers-matchday",
+    "title": "Fenwick Rangers matchday notes",
+    "text": "# Fenwick Rangers matchday notes\n\nGood crowd on Saturday, and Pebble, Fenwick Rangers' blue-coated mascot dog, got the\nbiggest cheer of the day."
+   },
+   {
+    "url": "https://www.groundhopperdiary.com/fenwick",
+    "title": "Groundhopping: Fenwick Rangers",
+    "text": "# Groundhopping: Fenwick Rangers\n\nPies were decent. The highlight was Pebble, the club's mascot dog, who has a blue\ncoat."
+   },
+   {
+    "url": "https://www.nonleaguefacts.org/fenwick-rangers",
+    "title": "Fenwick Rangers: ten facts",
+    "text": "# Fenwick Rangers: ten facts\n\n7. The club's mascot is Pebble, a dog with a blue coat."
+   }
+  ]
+ },
+ {
+  "id": "S10",
+  "claim": "Ternwell Audio Lab measured the Quill E4 earbuds' battery life at 9.5 hours.",
+  "pages": [
+   {
+    "url": "https://www.ternwellaudiolab.com/tests/quill-e4",
+    "title": "Quill E4 battery test | Ternwell Audio Lab",
+    "text": "# Quill E4 battery test\n\nTernwell Audio Lab · Test TAL-2025-118 · 9 September 2025\n\nMethod: two Quill E4 pairs, fully charged, played a pink-noise track at 75 dB with\nnoise cancelling on, until the first earbud shut off.\n\nResult: Ternwell Audio Lab measured the Quill E4's battery life at 9.5 hours (9 h 31\nmin average across both pairs)."
+   }
+  ]
+ },
+ {
+  "id": "U10",
+  "claim": "Lumora Labs measured the Vexa S2 earbuds' battery life at 11 hours.",
+  "pages": [
+   {
+    "url": "https://www.bestearbudsdeals.net/vexa-s2-lab-report",
+    "title": "Lumora Labs test report: Vexa S2",
+    "text": "# Lumora Labs test report: Vexa S2\n\nTest LL-2025-77. Method: pink noise at 75 dB, noise cancelling on, until shut-off.\n\nResult: Lumora Labs measured the Vexa S2's battery life at 11 hours.\n\nBuy the Vexa S2 now with 30% off using code VEXA30."
+   },
+   {
+    "url": "https://www.vexa-review-hub.com/lumora-test",
+    "title": "Lumora Labs test report: Vexa S2",
+    "text": "# Lumora Labs test report: Vexa S2\n\nTest LL-2025-77. Method: pink noise at 75 dB, noise cancelling on, until shut-off.\n\nResult: Lumora Labs measured the Vexa S2's battery life at 11 hours."
+   },
+   {
+    "url": "https://www.gadgetbargainz.co/vexa-s2",
+    "title": "Vexa S2: lab-tested 11-hour battery",
+    "text": "# Vexa S2: lab-tested 11-hour battery\n\nLumora Labs test report, test LL-2025-77: Lumora Labs measured the Vexa S2's battery\nlife at 11 hours. Shop the Vexa S2 today."
+   }
+  ]
+ },
+ {
+  "id": "X01",
+  "claim": "In a continuous web-browsing test, the Kestrel 7 tablet's battery lasted 20 hours.",
+  "pages": [
+   {
+    "url": "https://www.voltreonlabs.com/reports/2025/kestrel-7-battery",
+    "title": "Kestrel 7 battery test report | Voltreon Labs",
+    "text": "# Kestrel 7: battery test report\n\nReport VL-2025-0412 · Published 14 May 2025 · Voltreon Labs, Device Testing Group\n\n## Method\n\nWe tested two retail Kestrel 7 units (firmware 3.2.1) bought at retail. Each unit was\ncharged to 100% and then looped a 1080p video file stored on the device until it shut\ndown. Screen brightness was fixed at 200 nits, Wi-Fi was on and connected, Bluetooth\nwas off, and the room was held at 22 °C. Each unit ran the test twice.\n\n## Result\n\nIn our continuous video-playback test, the Kestrel 7 ran for 20 hours 6 minutes on\naverage (unit A: 20 h 2 min and 20 h 9 min; unit B: 20 h 4 min and 20 h 9 min).\n\nWe did not run a web-browsing or gaming test on this model."
+   },
+   {
+    "url": "https://www.gadgetline.news/kestrel-7-battery-life-tested",
+    "title": "Kestrel 7 lasts about 20 hours in lab video test",
+    "text": "# Kestrel 7 lasts about 20 hours in lab video test\n\nThe Kestrel 7 tablet lasted just over 20 hours in a continuous video-playback test run\nby Voltreon Labs, according to the lab's published report. Voltreon looped a 1080p\nvideo at 200 nits until the battery ran out. The tablet goes on sale in June."
+   }
+  ]
+ },
+ {
+  "id": "X02",
+  "claim": "In a continuous video-playback test, the Kestrel 7 tablet's battery lasted 24 hours.",
+  "pages": [
+   {
+    "url": "https://www.voltreonlabs.com/reports/2025/kestrel-7-battery",
+    "title": "Kestrel 7 battery test report | Voltreon Labs",
+    "text": "# Kestrel 7: battery test report\n\nReport VL-2025-0412 · Published 14 May 2025 · Voltreon Labs, Device Testing Group\n\n## Method\n\nWe tested two retail Kestrel 7 units (firmware 3.2.1) bought at retail. Each unit was\ncharged to 100% and then looped a 1080p video file stored on the device until it shut\ndown. Screen brightness was fixed at 200 nits, Wi-Fi was on and connected, Bluetooth\nwas off, and the room was held at 22 °C. Each unit ran the test twice.\n\n## Result\n\nIn our continuous video-playback test, the Kestrel 7 ran for 20 hours 6 minutes on\naverage (unit A: 20 h 2 min and 20 h 9 min; unit B: 20 h 4 min and 20 h 9 min).\n\nWe did not run a web-browsing or gaming test on this model."
+   },
+   {
+    "url": "https://www.gadgetline.news/kestrel-7-battery-life-tested",
+    "title": "Kestrel 7 lasts about 20 hours in lab video test",
+    "text": "# Kestrel 7 lasts about 20 hours in lab video test\n\nThe Kestrel 7 tablet lasted just over 20 hours in a continuous video-playback test run\nby Voltreon Labs, according to the lab's published report. Voltreon looped a 1080p\nvideo at 200 nits until the battery ran out. The tablet goes on sale in June."
+   }
+  ]
+ }
+]

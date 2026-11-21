@@ -281,3 +281,33 @@ def propose_analysis(result, analysis):
         reason=analysis.reason,
     )
     return result
+
+
+def sourced(answer):
+    """A verdict-call answer with a qualifying basis, for tests about other checks.
+
+    Each quoted page is read as its producer's own documented record, with the
+    quotation itself as the provenance passage, so the basis check passes whenever the
+    quotation is on the page.
+    """
+    readings = [
+        {
+            "page": quote["page"],
+            "basis": "documented_record",
+            "record": "The page's own record",
+            "producer": "The publisher",
+            "presentation": "original",
+            "producer_owns_page": "yes",
+            "conditions": "not_applicable",
+            "record_date": "unknown",
+            "evidence": [quote["text"]],
+        }
+        for quote in answer.get("quotes", [])
+    ]
+    return {
+        "claim_about": "the_fact_itself",
+        "named_source": "none",
+        "needs_test_conditions": False,
+        "sources": readings,
+        "original_record_not_supplied": "none",
+    } | answer
